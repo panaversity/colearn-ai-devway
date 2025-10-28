@@ -337,7 +337,7 @@ subprocess.run(
 - Explicit user invocation only: Loses model-invoked convenience
 - Regex patterns: Over-engineered and doesn't leverage LLM semantic understanding
 
-**Source**: Claude Code skills documentation (https://docs.claude.com/en/docs/claude-code/skills)
+**Source**: Claude Code skills documentation (https://docs.claude.com/en/history/claude-code/skills)
 
 ---
 

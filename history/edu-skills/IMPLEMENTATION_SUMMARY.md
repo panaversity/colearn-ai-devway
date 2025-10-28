@@ -98,7 +98,7 @@ tests/
 
 ### Documentation
 ```
-docs/
+history/
 ├── skill-activation-reference.md     # Detailed semantic activation guide
 ├── prompts/                          # Prompt History Records (PHRs)
 └── adr/                             # Architecture Decision Records (ADRs)
@@ -188,7 +188,7 @@ Each skill integrates established educational research:
    - Describes all 8 skills with examples
    - Usage principles and best practices
 
-2. **skill-activation-reference.md** (docs/)
+2. **skill-activation-reference.md** (history/)
    - Detailed semantic activation guide
    - 15+ activation examples per skill
    - Troubleshooting and pattern recognition

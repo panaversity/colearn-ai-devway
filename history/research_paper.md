@@ -386,7 +386,7 @@ Write complete draft of Part 1, Chapter 1
 
 Deliverable:
 Complete markdown file: 
-  docs/part-01/01-ai-revolution.md
+  history/part-01/01-ai-revolution.md
 
 Constraints:
 - Follow exact chapter structure from constitution
@@ -845,7 +845,7 @@ The future of technical writing is neither fully automated nor traditionally man
 
 References
 AI Platforms and Tools:
-Anthropic. (2024-2025). Claude Code Documentation. Retrieved from https://docs.anthropic.com/claude/docs/claude-code
+Anthropic. (2024-2025). Claude Code Documentation. Retrieved from https://docs.anthropic.com/claude/history/claude-code
 GitHub. (2025). Spec-Kit: Toolkit for Spec-Driven Development. Retrieved from https://github.com/github/spec-kit
 GitHub Blog. (2025). Spec-driven development with AI: Get started with a new open source toolkit. Retrieved from https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
 Microsoft Developer. (2025). Diving Into Spec-Driven Development With GitHub Spec Kit. Retrieved from https://developer.microsoft.com/blog/spec-driven-development-spec-kit

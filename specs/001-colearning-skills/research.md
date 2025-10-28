@@ -28,7 +28,7 @@
 - **External API calls**: Fetch data dynamically → Rejected due to "no external dependencies" constraint (spec FR-033)
 
 **Source**:
-- https://docs.claude.com/en/docs/claude-code/skills
+- https://docs.claude.com/en/history/claude-code/skills
 - https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
 
 ---

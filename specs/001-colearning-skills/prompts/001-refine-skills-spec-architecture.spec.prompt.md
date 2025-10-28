@@ -24,7 +24,7 @@ tests:
 
 ## Prompt
 
-The spec looks to abstract @specs/001-colearning-skills/spec.md We are building specialized skills for claude to equip it for writing books in this AI disruption era for the new future. First understand the concept of skills: https://docs.claude.com/en/docs/claude-code/skills and how to actually build effective skills https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills and reiterate. you can suggest new skills or edit them as well. These 4 are just a high level.
+The spec looks to abstract @specs/001-colearning-skills/spec.md We are building specialized skills for claude to equip it for writing books in this AI disruption era for the new future. First understand the concept of skills: https://docs.claude.com/en/history/claude-code/skills and how to actually build effective skills https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills and reiterate. you can suggest new skills or edit them as well. These 4 are just a high level.
 
 ## Response snapshot
 

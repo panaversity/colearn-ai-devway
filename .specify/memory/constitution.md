@@ -192,7 +192,7 @@ Projects MUST reflect realistic development scenarios, not contrived academic ex
 
 **What This Means:**
 - Projects use real tools: git, virtual environments, package managers, CI/CD concepts
-- File organization matches professional conventions (src/, tests/, docs/, .env)
+- File organization matches professional conventions (src/, tests/, history/, .env)
 - Projects published to GitHub with README, license, documentation
 - Integration with real APIs and data sources (with appropriate error handling)
 - Deployment considerations addressed (even if simplified)

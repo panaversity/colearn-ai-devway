@@ -13,7 +13,7 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 ## Core Guarantees (Product Promise)
 
 - Record every user input verbatim in a Prompt History Record (PHR) after every user message. Do not truncate; preserve full multiline input.
-- PHR routing: default `docs/prompts/`; if feature context or feature branch, also `specs/<feature>/prompts/`.
+- PHR routing: default `history/prompts/`; if feature context or feature branch, also `specs/<feature>/prompts/`.
 - ADR suggestions: when an architecturally significant decision is detected, suggest: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`." Never auto‑create ADRs; require user consent.
 
 ## Development Guidelines
@@ -34,8 +34,8 @@ As the main request completes, you **MUST** create and complete a PHR (Prompt Hi
    - 3–7 words; create a slug for the filename.
 
 2a) Resolve route
-  - If feature context is detected (explicit marker, branch name, or touched specs/<name>/), target specs/<name>/prompts/; else target docs/prompts/.
-  - Use this route when computing the output path in step 3. If you later detect feature context after writing to docs/, move the file to specs/<name>/prompts/ and update feature/branch in front‑matter.
+  - If feature context is detected (explicit marker, branch name, or touched specs/<name>/), target specs/<name>/prompts/; else target history/prompts/.
+  - Use this route when computing the output path in step 3. If you later detect feature context after writing to history/, move the file to specs/<name>/prompts/ and update feature/branch in front‑matter.
 
 3) Prefer agent‑native flow (no shell)
    - Read the PHR template from one of:
@@ -43,7 +43,7 @@ As the main request completes, you **MUST** create and complete a PHR (Prompt Hi
      - `templates/phr-template.prompt.md`
    - Allocate an ID (increment; on collision, increment again).
    - Compute output path, use the route from 2a:
-     - Pre‑feature → docs → docs/prompts/<ID>-<slug>.<stage>.prompt.md
+     - Pre‑feature → docs → history/prompts/<ID>-<slug>.<stage>.prompt.md
      - feature → specs/<feature>/prompts/<ID>-<slug>.<stage>.prompt.md
    - Fill ALL placeholders in YAML and body:
      - ID, TITLE, STAGE, DATE_ISO (YYYY‑MM‑DD), SURFACE="agent"
@@ -67,7 +67,7 @@ As the main request completes, you **MUST** create and complete a PHR (Prompt Hi
    - Then open/patch the created file to ensure all placeholders are filled and prompt/response are embedded.
 
 6) Routing (branch‑aware)
-   - Default target: `docs/prompts/`
+   - Default target: `history/prompts/`
    - If a feature branch or feature context is detected, also route to `specs/<feature>/prompts/` and set FEATURE/BRANCH fields accordingly.
 
 7) Post‑creation validations (must pass)
@@ -110,7 +110,7 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 2) List constraints, invariants, non‑goals.
 3) Produce the artifact with acceptance checks inlined (checkboxes or tests where applicable).
 4) Add follow‑ups and risks (max 3 bullets).
-5) Trigger implicit PHR by creating a new Markdown file in the appropriate directory (`docs/prompts/` or `specs/<feature>/prompts/`), named with a timestamp and prompt identifier.
+5) Trigger implicit PHR by creating a new Markdown file in the appropriate directory (`history/prompts/` or `specs/<feature>/prompts/`), named with a timestamp and prompt identifier.
 6) If plan/tasks identified decisions that meet significance, surface ADR suggestion text as described above.
 
 ### Minimum acceptance criteria
@@ -184,8 +184,8 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 - `specs/<feature>/spec.md` — Feature requirements
 - `specs/<feature>/plan.md` — Architecture decisions
 - `specs/<feature>/tasks.md` — Testable tasks with cases
-- `docs/prompts/` — Prompt History Records
-- `docs/adr/` — Architecture Decision Records
+- `history/prompts/` — Prompt History Records
+- `history/adr/` — Architecture Decision Records
 - `.specify/` — SpecKit Plus templates and scripts
 
 ## Code Standards

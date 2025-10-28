@@ -60,7 +60,7 @@ Researched 7 critical areas using official sources:
 7. **Output Format Flexibility**: No prescribed format per clarification #4; each skill uses optimal structure
 
 **Key Research Sources**:
-- Anthropic Claude Code Skills docs: https://docs.claude.com/en/docs/claude-code/skills
+- Anthropic Claude Code Skills docs: https://docs.claude.com/en/history/claude-code/skills
 - Anthropic engineering blog: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
 - ACL 2025: "LLMs meet Bloom's Taxonomy"
 - ResearchGate: "Managing Cognitive Load in Introductory Programming Courses"

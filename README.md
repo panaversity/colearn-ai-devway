@@ -2,7 +2,9 @@
 
 ## Vision
 
-"CoLearning Python: The AI-Driven Way" is a 26-chapter technical book that teaches modern Python programming (3.13+) through systematic collaboration between human learners and AI assistants. Our vision is to pioneer a new paradigm of technical education where AI is a co-learner and a collaborator, reflecting the reality of modern software development.
+"CoLearning Python: The AI-Driven Way" is a 26-chapter technical book that teaches modern AI-driven development using Python (3.13+) through systematic collaboration between human learners and AI assistants. 
+
+Our vision is to pioneer a new agent-native paradigm of CS education where AI is a co-learner and a collaborator, reflecting the reality of modern software development.
 
 ## Core Philosophy
 

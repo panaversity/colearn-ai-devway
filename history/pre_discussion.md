@@ -22,7 +22,7 @@ technical-reviewer sub-agent (verifies accuracy)
      ↓
 human (final approval & editorial polish)
      ↓
-published chapter in book-site/docs/
+published chapter in book-site/history/
 ```
 
 ---
@@ -731,7 +731,7 @@ Generate complete, publication-ready chapter content from specifications.
 - [ ] All sections present
 
 ## Output
-Complete markdown file: `book-site/docs/part-XX/chapter-YY.md`
+Complete markdown file: `book-site/history/part-XX/chapter-YY.md`
 
 ## Handoff
 → Pass to code-validator sub-agent

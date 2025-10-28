@@ -17,7 +17,7 @@ links:
   pr: null
 files:
   - .specify/memory/constitution.md
-  - docs/pre_plan.md
+  - history/pre_plan.md
 tests:
   - null
 ---
@@ -86,7 +86,7 @@ Additionally, finalize the infrastructure architecture:
 
 - ✅ Impact: Architecture is now complete, documented, and ready for implementation. All ambiguities resolved (skills vs sub-agents, human roles vs AI roles, scope boundaries)
 - 🧪 Tests: No automated tests required for planning/architecture work
-- 📁 Files: 2 files created/modified (.specify/memory/constitution.md, docs/pre_plan.md)
+- 📁 Files: 2 files created/modified (.specify/memory/constitution.md, history/pre_plan.md)
 - 🔁 Next prompts: Create 14 remaining infrastructure files (4 skills + 4 output styles + 5 sub-agents + 1 pre-setup spec)
 - 🧠 Reflection: The architecture successfully captures the insight that AI should be treated as a collaborative partner (not a tool to manage), with humans staying immersed in the creative/iterative process. The 5-agent pipeline with clear handoff criteria enables this model while maintaining quality gates.
 
