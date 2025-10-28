@@ -8,11 +8,12 @@ Returns: Exit code 0 on success, 1 on failure
 Outputs: JSON with validation results
 """
 
-import sys
 import json
-import yaml
+import sys
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Any, Dict, List
+
+import yaml
 
 
 def validate_assessment(assessment: Dict[str, Any]) -> Dict[str, Any]:

@@ -8,11 +8,11 @@ Returns: Exit code 0 on success, 1 on failure
 Outputs: JSON with syntax validation results
 """
 
-import sys
 import ast
 import json
+import sys
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Any, Dict, List
 
 
 def validate_syntax(code: str, filename: str = "<string>") -> Dict[str, Any]:

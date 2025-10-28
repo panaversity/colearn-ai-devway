@@ -8,11 +8,11 @@ Returns: Exit code 0 on success, 1 on failure
 Outputs: JSON with completeness analysis
 """
 
-import sys
 import json
 import re
+import sys
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 
 def check_completeness(text: str, filename: str = "") -> Dict[str, Any]:

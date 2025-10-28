@@ -8,10 +8,11 @@ Returns: Exit code 0 on success, 1 on failure
 Outputs: JSON with cognitive load assessment and warnings
 """
 
-import sys
 import json
+import sys
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Any, Dict, List
+
 import yaml
 
 
