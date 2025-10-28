@@ -262,15 +262,21 @@ tests/                        # Test suite for skills
 - Reduces token cost and improves performance
 
 **Implementation**:
-- **Layer 1**: SKILL.md frontmatter (loaded at startup for all skills)
-- **Layer 2**: Full SKILL.md body (loaded when skill activates)
-- **Layer 3**: Supporting files (loaded when SKILL.md references them)
+- **Layer 1**: SKILL.md frontmatter (loaded at startup for all skills) - includes `name`, `description` (semantic, contextual), `allowed-tools`
+- **Layer 2**: Full SKILL.md body (loaded when skill activates) - contains instructions that explicitly reference Layer 3 files
+- **Layer 3**: Supporting files (loaded ONLY when SKILL.md references them) - includes reference docs, templates, and scripts
+
+**Key Pattern**: SKILL.md instructions explicitly direct Claude:
+- When to load reference docs: "Read [reference/blooms-taxonomy.md](reference/blooms-taxonomy.md) for guidance"
+- When to invoke scripts via Bash tool: `python scripts/validate-objectives.py <file>`
+- How to interpret script outputs and proceed
 
 **Alternatives Rejected**:
 - Monolithic SKILL.md: Would bloat context, violate progressive disclosure principle
 - External API calls: Violates "no external dependencies" constraint (FR-033)
+- Auto-executing scripts: Not supported by Claude Code skills architecture
 
-**Source**: research.md §1, Anthropic engineering blog
+**Source**: research.md §1, Anthropic engineering blog, Claude Code skills documentation
 
 ---
 
@@ -310,19 +316,44 @@ subprocess.run(
 
 ---
 
-### 3. Skill Conflict Resolution
+### 3. Semantic Skill Activation (NOT Keyword-Based)
 
-**Decision**: Mutually exclusive descriptions + sequential activation when multiple skills serve different purposes
+**Decision**: Skills use semantic activation based on contextual understanding, NOT keyword/trigger phrase matching
+
+**Rationale**:
+- Claude Code skills are model-invoked: Claude understands context semantically
+- Descriptions should explain WHEN and WHY to use skill (contextual scenarios)
+- Keyword lists don't work and create brittle activation patterns
+- Aligns with Anthropic's official skills documentation
+
+**Implementation**:
+- Description field contains semantic explanation: "Generate measurable learning outcomes aligned with Bloom's taxonomy for educational content. Use when educators need to define what students will achieve..."
+- NO keyword trigger lists: ❌ "Triggers: 'define objectives', 'learning goals', 'prerequisites'"
+- Claude evaluates entire request context against semantic description
+- Integration tests validate semantic activation with varied phrasings
+
+**Alternatives Rejected**:
+- Keyword/trigger phrase matching: Not how Claude Code skills work
+- Explicit user invocation only: Loses model-invoked convenience
+- Regex patterns: Over-engineered and doesn't leverage LLM semantic understanding
+
+**Source**: Claude Code skills documentation (https://docs.claude.com/en/docs/claude-code/skills)
+
+---
+
+### 4. Skill Conflict Resolution
+
+**Decision**: Mutually exclusive semantic descriptions + sequential activation when multiple skills serve different purposes
 
 **Rationale**:
 - User chose A + D (clarification #5)
-- Aligns with Anthropic guidance on specific terminology
+- Aligns with Anthropic guidance on specific contextual differentiation
 - Enables powerful multi-skill workflows
 
 **Implementation**:
-- Each SKILL.md description uses distinct trigger terms
-- Example: "generate example" (code-example-generator) vs "review clarity" (technical-clarity)
-- Claude's model-invocation logic handles sequential activation automatically
+- Each SKILL.md description uses distinct contextual scenarios
+- Example: "generate runnable teaching examples" (code-example-generator) vs "review explanations for clarity and accessibility" (technical-clarity)
+- Claude's model-invocation logic handles sequential activation automatically when multiple skills address different aspects
 - Outputs combined coherently in single response
 
 **Alternatives Rejected**:
@@ -334,7 +365,7 @@ subprocess.run(
 
 ---
 
-### 4. Output Format Flexibility
+### 5. Output Format Flexibility
 
 **Decision**: No prescribed format - each skill uses structure optimal for its purpose
 
@@ -359,7 +390,7 @@ subprocess.run(
 
 ---
 
-### 5. Pedagogical Foundation Selection
+### 6. Pedagogical Foundation Selection
 
 **Decision**: Evidence-based strategies from Bloom's Taxonomy and Cognitive Load Theory
 
@@ -388,7 +419,7 @@ subprocess.run(
 
 ---
 
-### 6. File Organization Pattern
+### 7. File Organization Pattern
 
 **Decision**: Type-based directories (reference/, templates/, scripts/) within each skill
 
