@@ -1,0 +1,119 @@
+# YAML Schema: Code Example Output
+# Validates output from code-example-generator skill
+
+$schema: "http://json-schema.org/draft-07/schema#"
+title: CodeExample
+description: Runnable Python code example with validation results
+type: object
+required:
+  - concept
+  - difficulty
+  - code
+  - explanation
+  - demonstrates
+  - validation
+  - style_compliance
+properties:
+  concept:
+    type: string
+    description: "Python concept this example demonstrates"
+    examples: ["list comprehensions", "context managers", "decorators"]
+
+  difficulty:
+    type: string
+    enum: ["beginner", "intermediate", "advanced"]
+
+  code:
+    type: string
+    minLength: 10
+    description: "Actual Python 3.13+ code (validated via sandbox)"
+
+  explanation:
+    type: object
+    required:
+      - what
+      - how
+      - why
+    properties:
+      what:
+        type: string
+        description: "High-level: what does this code do?"
+      how:
+        type: string
+        description: "Step-by-step: how does it work?"
+      why:
+        type: string
+        description: "Design rationale: why this approach?"
+
+  comments_inline:
+    type: boolean
+    description: "true if code includes inline comments"
+
+  demonstrates:
+    type: array
+    minItems: 1
+    maxItems: 3
+    items:
+      type: string
+    description: "List of concepts shown (focused examples)"
+
+  avoids:
+    type: array
+    items:
+      type: string
+    description: "Concepts intentionally excluded for focus"
+
+  validation:
+    type: object
+    required:
+      - syntax_valid
+      - executed_successfully
+    properties:
+      syntax_valid:
+        type: boolean
+        description: "Passed AST parsing"
+      executed_successfully:
+        type: boolean
+        description: "Ran without errors in sandbox"
+      output:
+        type: ["string", "null"]
+        description: "Expected output if applicable"
+      execution_time_ms:
+        type: ["integer", "null"]
+        description: "Execution duration in milliseconds"
+
+  style_compliance:
+    type: object
+    required:
+      - pep8
+      - type_hints
+      - docstrings
+    properties:
+      pep8:
+        type: boolean
+        description: "Passed PEP 8 style checks"
+      type_hints:
+        type: boolean
+        description: "All functions have type hints"
+      docstrings:
+        type: boolean
+        description: "Functions have docstrings"
+
+# All validation fields must be true for valid example
+allOf:
+  - properties:
+      validation:
+        properties:
+          syntax_valid:
+            const: true
+          executed_successfully:
+            const: true
+  - properties:
+      style_compliance:
+        properties:
+          pep8:
+            const: true
+          type_hints:
+            const: true
+          docstrings:
+            const: true
