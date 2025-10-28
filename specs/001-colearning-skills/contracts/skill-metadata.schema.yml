@@ -1,0 +1,55 @@
+# YAML Schema: Skill Metadata (SKILL.md Frontmatter)
+# Validates Layer 1 metadata for Claude Code skills
+
+$schema: "http://json-schema.org/draft-07/schema#"
+title: SkillMetadata
+description: Required frontmatter for SKILL.md files
+type: object
+required:
+  - name
+  - description
+properties:
+  name:
+    type: string
+    pattern: "^[a-z0-9-]{1,64}$"
+    description: "Skill identifier: lowercase, hyphens, numbers only (max 64 chars)"
+    examples:
+      - "learning-objectives"
+      - "code-example-generator"
+      - "technical-clarity"
+
+  description:
+    type: string
+    minLength: 50
+    maxLength: 1024
+    description: |
+      Activation trigger text. Must include:
+      - Specific contexts ("when educator requests...")
+      - Concrete use cases
+      - Domain-specific terminology
+      - When to activate this skill vs others
+
+    examples:
+      - |
+        Generate measurable learning outcomes when educator requests "define objectives",
+        "create learning goals", or "identify prerequisites" for Python concepts.
+        Applies Bloom's taxonomy levels and maps objectives to assessment methods.
+
+  allowed-tools:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      enum:
+        - Read
+        - Write
+        - Edit
+        - Bash
+        - Grep
+        - Glob
+        - WebFetch
+        - WebSearch
+    description: "Optional: Restrict which tools Claude can use when skill is active"
+    examples:
+      - ["Read", "Write"]
+      - ["Read", "Grep", "Glob"]
