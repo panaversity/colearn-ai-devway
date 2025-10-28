@@ -1,41 +1,39 @@
-# Website
+# CoLearning Python Documentation Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator for the CoLearning Python book project.
 
-## Installation
+## Quick Setup
 
+1. **Install dependencies:**
 ```bash
-yarn
+npm install
 ```
 
-## Local Development
-
+2. **Start local development server:**
 ```bash
-yarn start
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server and opens up a browser window at `http://localhost:3000`. Most changes are reflected live without having to restart the server.
 
-## Build
+## Available Scripts
 
+### Development
 ```bash
-yarn build
+npm start
 ```
+Starts the development server with hot reload.
 
+### Build
+```bash
+npm run build
+```
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Deployment
-
-Using SSH:
-
+### Serve Build
 ```bash
-USE_SSH=true yarn deploy
+npm run serve
 ```
+Serves the built site locally for testing the production build.
 
-Not using SSH:
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
