@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Chapter 3: Setting Up Your Environment"
+title: "Chapter 3: How to Make a Billion Dollars in the AI Era?"
 ---
 
-# Chapter 3: Setting Up Your Environment
+# Chapter 3: How to Make a Billion Dollars in the AI Era?
 
 **Learning Outcomes:**
 - [To be completed in chapter spec]
