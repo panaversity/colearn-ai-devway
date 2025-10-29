@@ -185,71 +185,6 @@ An engineer who can direct AI to build a system in two weeks that solves a $100K
 
 **Orchestration skills compound value. Code generation alone doesn't.**
 
-## How This Book Is Structured
-
-Now that you understand the WITH vs. FROM distinction, here's how we'll apply it throughout the book:
-
-### Part 1 (You Just Finished This)
-**Foundation**: Understanding the transformation, your role, and the learning model.
-
-### Part 2: Setup and Tools
-**Goal**: Get your AI development environment working.
-
-**Your role:**
-- Install and configure Claude Code (or alternative AI coding tools)
-- Learn to write effective prompts
-- Practice specification writing
-- Understand what AI can and can't do reliably
-
-**Key principle**: You're learning to direct tools, not just use them.
-
-### Part 3: Your First Program
-**Goal**: Build a complete, working program from specification to deployment.
-
-**Your role:**
-- Define the problem (what should this program do?)
-- Write detailed specifications
-- Direct AI to implement it
-- Review and iterate
-- Test and validate
-- Deploy
-
-**Key principle**: End-to-end ownership. You're responsible for every decision.
-
-### Parts 4-7: Progressive Complexity
-**Goal**: Build increasingly sophisticated systems using AI agents.
-
-**Your role:**
-- Design architectures
-- Make trade-off decisions
-- Integrate multiple components
-- Handle real-world complexity
-- Manage technical debt
-- Balance speed vs. quality
-
-**Key principle**: Judgment becomes more important as complexity increases.
-
-Throughout every chapter, **you're making decisions.** The AI executes them. But you're never passive. You're never just consuming.
-
-## The Learning Cycle
-
-Here's the pattern you'll follow repeatedly:
-
-1. **Specify**: Write clear requirements for what you need
-2. **Generate**: Use AI to implement initial version
-3. **Evaluate**: Review output—does it meet requirements?
-4. **Refine**: Identify gaps, provide feedback, iterate
-5. **Decide**: Is this good enough? Ship or continue refining?
-6. **Reflect**: What did you learn? What would you do differently next time?
-
-This cycle repeats throughout the book. Each iteration, you're practicing:
-- Clarity (better specifications)
-- Judgment (better evaluation)
-- Communication (better feedback)
-- Decision-making (better trade-offs)
-
-**By the end, you won't just have built projects. You'll have developed orchestration skills.**
-
 ## What You Should (and Shouldn't) Expect
 
 Let me set clear expectations about what this book will and won't do:
@@ -269,14 +204,9 @@ Let me set clear expectations about what this book will and won't do:
 ### What This Book Won't Do
 
 ❌ **Teach you to memorize syntax**—AI handles syntax; you handle concepts and judgment
-
-❌ **Make you an AI/ML engineer**—you're learning to USE AI tools, not build them
-
 ❌ **Give you copy-paste solutions**—every project requires your decisions; no shortcuts
 
 ❌ **Let you skip thinking**—this model requires MORE thinking, not less (different thinking, though)
-
-❌ **Replace traditional learning entirely**—you'll still learn fundamentals, but through a different path
 
 ## The First Test
 
