@@ -16,9 +16,9 @@ function HomepageHeader() {
         <div className={styles.heroContent}>
           <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
           <Heading as="h1" className={styles.heroTitle}>
-            Learning to Code
+            CoLearning Programming
             <br />
-            <span className={styles.heroTitleAccent}>With AI, Not From It</span>
+            <span className={styles.heroTitleAccent}>The AI Driven Way</span>
           </Heading>
           <p className={styles.heroSubtitle}>
             Build production-ready agentic AI systems while learning Python & TypeScript.
