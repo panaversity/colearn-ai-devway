@@ -60,22 +60,7 @@ When AI disruption comes up, the first fear is always: "Won't this eliminate job
 
 Let me show you what's actually happening:
 
-### Evidence 1: Hiring Is Accelerating
-
-In 2023-2024, surveys of enterprises showed something unexpected: **The majority are accelerating developer hiring, not slowing it.**
-
-Why? Because AI tools unlocked projects that were previously too expensive:
-
-- Legacy code migrations that took 2-3 years can now happen in 6-12 months
-- Technical debt that teams avoided (too costly to address) is now feasible to tackle
-- Internal tools that never made the priority list (not enough ROI) can now be built quickly
-- Prototypes that took weeks can be validated in days, allowing faster experimentation
-
-Result: **More work, not less.**
-
-Companies aren't reducing engineering teams. They're expanding them to capitalize on newly viable projects.
-
-### Evidence 2: Solo Founders Are Thriving
+### Evidence 1: Solo Founders Are Thriving
 
 A developer in Brazil built a SaaS product single-handedly in six weeks. It generates $15,000 monthly recurring revenue. Five years ago, that product would have required:
 
@@ -91,7 +76,7 @@ Think about it: How many problems exist that are worth $10K-$50K annually to sol
 
 AI tools make those problems addressable. That's market expansion.
 
-### Evidence 3: Vibe Coding Boom
+### Evidence 2: Vibe Coding Boom
 
 Remember the Stanford researcher who said: "I vibe code my own email filter, you know... things like that"?
 
