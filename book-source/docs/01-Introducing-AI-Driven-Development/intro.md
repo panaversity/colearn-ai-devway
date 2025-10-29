@@ -41,7 +41,6 @@ This part answers:
 
 - ❌ Prior AI experience
 - ❌ Prior Claude Code or Gemini CLI experience
-- ❌ Prior Development experience
 - ❌ Prior Programming experience
 
 ---
