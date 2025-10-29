@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CoLearn - AI Dev Way',
-  tagline: 'Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
+  title: 'The Panaversity AI-Driven Way',
+  tagline: 'CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://colearn-aidevway.panaversity.org',
+  url: 'https://aidd.panaversity.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearn-ai-devway', // Usually your repo name.
+  projectName: 'colearning-python', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
@@ -57,7 +57,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/book-cover.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -67,10 +67,12 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'CoLearn',
+      title: 'CoLearn Programming',
       // logo: {
-      //   alt: 'CoLearn Logo',
-      //   src: 'img/logo.svg',
+      //   alt: 'Panaversity Logo',
+      //   src: 'img/book-cover.png',
+      //   width: 32,
+      //   height: 32,
       // },
       hideOnScroll: false,
       items: [
@@ -78,13 +80,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Curriculum',
-        },
-        {
-          to: '/docs/Introducing-AI-Driven-Development/intro',
-          label: 'Start Learning',
-          position: 'right',
-          className: 'navbar-cta-button',
+          label: 'Book',
         },
         {
           href: 'https://github.com/panaversity/colearning-python',

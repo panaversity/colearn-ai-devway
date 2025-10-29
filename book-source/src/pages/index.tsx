@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className={styles.heroGradient} />
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={styles.heroLabel}>The Future of CS Education</div>
+          <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
           <Heading as="h1" className={styles.heroTitle}>
             Learning to Code
             <br />
@@ -213,8 +213,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={siteConfig.title}
-      description="Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way">
+      title="The Panaversity AI-Driven Way Book Series"
+      description="CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way">
       <HomepageHeader />
       <FeaturesSection />
       <ParadigmShift />

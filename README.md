@@ -1,8 +1,14 @@
-# 🧠 CoLearn – AI Dev Way
+# 🧠 The Panaversity AI-Driven Way Book Series
 
-### *CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way*
+## CoLearning Programming & Agentic AI with Python and TypeScript
+
+<p align="center">
+  <img src="book_cover.png" alt="CoLearning Programming & Agentic AI - The AI-Driven Way" width="600" />
+</p>
 
 > **Empowering developers to learn, build, and collaborate with AI — not just through it.**
+
+📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
 
 ---
 
@@ -23,7 +29,7 @@
 
 ## 🎯 Vision
 
-**CoLearn – AI Dev Way** is a **46-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
+**The Panaversity AI-Driven Way** is a **46-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
 It teaches **AI-driven development** through *systematic collaboration between human learners and AI assistants*, using **Python (3.13+)** and **TypeScript** as the foundation.
 
 The learning journey flows from fundamentals to advanced AI systems — including:
@@ -91,5 +97,6 @@ To pioneer an **agent-native model of computer science education** where AI is:
 
 ---
 
-🧠 *Part of the CoLearn Initiative — advancing AI-Driven Learning for the next generation of developers.*
-- **Scalable book expansion** with consistent numbering
+🧠 *Part of **The Panaversity AI-Driven Way Book Series** — advancing AI-Driven Learning for the next generation of developers.*
+
+📘 **Read the book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
