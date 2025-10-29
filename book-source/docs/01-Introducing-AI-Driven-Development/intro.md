@@ -41,7 +41,31 @@ This part answers:
 
 - ❌ Prior AI experience
 - ❌ Prior Claude Code or Gemini CLI experience
-- ❌ Prior Programming experience
+- ❌ Prior Spec-Kit Plus experience
+- ❌ Prior Programming Experience
+
+## How to Use This Part
+
+**For self-directed learners**: Read chapters in order. Each builds on the previous. Don't skip. Chapter 1 is foundational—it reframes everything that follows.
+
+**For instructors**: This book uses agent-native pedagogy throughout. Check the Constitution (in the repo) for principles and pedagogical approach.
+
+**For practitioners**: You can jump ahead to Part 2 if you understand agent-native development already. But we recommend reading Chapter 1—it reframes assumptions about AI and learning that might trip you up later.
+
+---
+
+## Part 1 at a Glance
+
+| Metric | Value |
+|--------|-------|
+| **Chapters** | 5 |
+| **Estimated Reading Time** | 6-8 hours |
+| **Estimated Hands-On Time** | 4-6 hours |
+| **Cognitive Load** | Light (foundational, heavy scaffolding) |
+| **Scaffolding Level** | Heavy (show-then-explain, guided walkthroughs) |
+| **Concept Density** | 3-4 per chapter (time to absorb) |
+| **Prerequisites** | None |
+| **Review Cycles** | 2-3 |
 
 ---
 
