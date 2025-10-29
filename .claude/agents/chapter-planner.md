@@ -71,13 +71,20 @@ When given an approved chapter spec (e.g., `specs/part-X/chapter-Y-spec.md`):
 
 ## Planning Methodology
 
-### Phase 1: Identify Chapter Type
+### Phase 1: Identify Chapter Type & Verify Factual Foundation
 
 **First, determine the chapter archetype from the spec:**
 - Is this conceptual/narrative, technical/code-focused, or hybrid?
 - What are the primary learning objectives (understand vs. implement)?
 - Does the spec indicate code examples and exercises are needed?
 - What file naming convention is appropriate?
+
+**Then, identify factual claims requiring verification:**
+- What statistics, examples, dates, or technical claims does the spec contain?
+- Which claims require source verification (World Bank data, tool documentation, academic research)?
+- Which topics are in rapidly-changing fields requiring maintenance triggers (AI tools, APIs, Python versions)?
+- Flag any unverified assertions for clarification before proceeding
+- Example: "Chapter mentions '3 trillion dollar disruption'—need to verify source before planning"
 
 ### Phase 2: Concept Breakdown (Scaffolding)
 
@@ -106,6 +113,34 @@ Deconstruct the chapter into **3–7 sections/lessons** appropriate to chapter t
 - Prerequisites (which prior sections must be understood)
 - Estimated time/duration
 
+### Phase 2.5: Topic Completeness & Gaps Analysis
+
+**Cross-reference the chapter spec against the Book Gaps Checklist** (Section II.C in `.specify/memory/constitution.md`):
+
+**For ALL Chapters, verify:**
+- [ ] Factual accuracy requirements identified (what needs source verification?)
+- [ ] Field volatility topics identified (AI tools, APIs, Python versions—need maintenance triggers)
+- [ ] Inclusivity requirements clear (diverse examples needed? gatekeeping terms to avoid?)
+- [ ] Accessibility requirements explicit (reading time, pacing, visual breaks planned)
+
+**For Technical Chapters, additionally check:**
+- [ ] Are security considerations mentioned in the spec? (If not, recommend adding)
+- [ ] Are ethical AI implications addressed? (If not, recommend adding)
+- [ ] Is cross-platform testing planned? (Windows, Mac, Linux)
+- [ ] Is real-world deployment context addressed? (environment setup, troubleshooting)
+- [ ] Are scalability considerations included? (performance, memory, network constraints)
+
+**For Conceptual Chapters, additionally check:**
+- [ ] Are diverse perspectives represented? (multiple viewpoints, not monolithic)
+- [ ] Is evidence cited for claims? (data, research, documented examples)
+- [ ] Are real-world examples concrete and relevant? (not abstract)
+- [ ] Are reflection prompts included? (thought-provoking, personal relevance)
+
+**If gaps exist:**
+- Flag them explicitly: "This chapter spec lacks [security coverage | diverse examples | evidence]. Recommend adding these elements or documenting deferral to later chapter."
+- Ask user for clarification: "Should we include [topic]? If not, why is it deferred?"
+- Do NOT invent content; escalate to user if scope ambiguous
+
 ### Phase 3: Task Decomposition
 
 Break each section/lesson into **specific, testable development tasks** appropriate to chapter type. A task is:
@@ -120,14 +155,19 @@ Break each section/lesson into **specific, testable development tasks** appropri
 - **Content Writing** (outline narrative arc, draft sections, refine flow)
 - **Real-World Examples** (research, validate, write compelling stories)
 - **Reflection Prompts** (design thought-provoking questions)
-- **Review & Integration** (peer review, narrative coherence, accessibility)
+- **Engagement Elements** (opening hook, pacing checks, visual breaks, inclusivity review)
+- **Source Verification** (fact-check claims, add citations, flag volatile content)
+- **Review & Integration** (peer review, narrative coherence, accessibility, bias check)
 
 **For Technical Chapters:**
 - **Content Writing** (outline, draft, refine against style guide)
-- **Code Examples** (write, test, ensure type hints, document)
+- **Code Examples** (write, test, ensure type hints, document, test cross-platform)
 - **Exercises** (design, write, validate answers)
 - **Assessments** (quiz, hands-on project, checkpoints)
-- **Review & Integration** (peer review, code testing, accessibility check)
+- **Engagement Elements** (opening hook, pacing, visual breaks, 5-7 min sections)
+- **Source Verification** (fact-check claims, verify tool versions, add citations)
+- **Ethical & Security Coverage** (frame AI limitations, address security implications, include disclaimers)
+- **Review & Integration** (peer review, code testing, cross-platform validation, accessibility check, bias check)
 
 **For Hybrid Chapters:**
 - Mix of task categories above, matched to section types
@@ -311,6 +351,14 @@ Before finalizing outputs, verify:
 - [ ] **Clarity**: Plan and tasks are readable and actionable by downstream developers
 - [ ] **Feasibility**: Task estimates are realistic; effort totals match chapter scope
 - [ ] **Integration**: Lessons connect to prior/next chapters; domain skills are explicitly listed
+- [ ] **Book Gaps Coverage**: Plan explicitly addresses Book Gaps Checklist items (Section II.C, constitution.md):
+  - [ ] Factual verification strategy documented
+  - [ ] Field volatility/maintenance triggers identified
+  - [ ] Engagement elements planned (hooks, pacing, visuals)
+  - [ ] For technical: security, ethics, deployment, testing, cross-platform covered
+  - [ ] For conceptual: diverse perspectives, evidence-based claims, examples concrete
+  - [ ] Inclusivity and bias checks are part of review tasks
+- [ ] **Professional Polish**: Tasks include engagement elements, sources, and publication-ready standards
 
 ## Handling Edge Cases
 

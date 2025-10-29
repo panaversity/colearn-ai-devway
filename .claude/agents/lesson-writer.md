@@ -109,11 +109,19 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 
 **Code Quality Standards (when code is included)**:
 - All Python code must use type hints on functions and complex variables
-- All code examples must be runnable and tested
+- All code examples must be runnable and tested on multiple platforms (Windows, Mac, Linux)
 - Include docstrings in PEP 257 format
 - Use PEP 8 naming conventions
 - No hardcoded secrets, tokens, or sensitive data
 - Include comments explaining non-obvious logic
+- Include disclaimers for AI-generated code (limitations, security implications)
+- Security: Demonstrate secure practices (error handling, input validation, no exposed credentials)
+
+**Source Citation and Factual Accuracy (all chapters)**:
+- All factual claims, statistics, and examples MUST include inline citations (e.g., [World Bank, 2023], [PyPI docs, 2024])
+- For rapidly-changing topics (AI tools, APIs, Python versions), include update maintenance notes (e.g., "Review annually for AI changes")
+- Ethical AI Use (especially for chapters teaching with AI): Frame AI's limitations, responsible use cases, and potential biases
+- Example: "AI-generated code may contain security vulnerabilities. Always review generated code for: proper error handling, no exposed credentials, input validation."
 
 **Pedagogical Requirements (all chapters)**:
 - Learning objectives must use measurable verbs from Bloom's taxonomy (appropriate to chapter type)
@@ -121,6 +129,8 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 - Practice elements must match chapter type (exercises for technical, reflection for conceptual)
 - Real-world applications must be genuinely relevant
 - Technical clarity: avoid jargon without definition; use analogies for complex ideas
+- Engagement: Include opening hook (2-3 paragraphs), visual breaks (lists, bold, code), appropriate pacing (5-7 min per major section)
+- Inclusivity: No gatekeeping language ("easy", "simple", "obvious"); diverse example names and contexts; gender-neutral language
 
 ## Execution Workflow
 
@@ -149,7 +159,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 4. **Write Content**: Produce the lesson markdown with all required sections
 
 5. **Self-Validate** (adapt checklist to chapter type):
-   
+
    **All Chapters:**
    - [ ] Learning objectives are measurable and use appropriate Bloom's taxonomy verbs
    - [ ] Concepts are scaffolded with clear progression
@@ -157,18 +167,33 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - [ ] Connections to previous and next lessons are explicit
    - [ ] AI's role is framed appropriately for chapter type
    - [ ] Markdown follows appropriate template structure
-   
+   - [ ] Opening hook present and engages reader within 2-3 paragraphs
+   - [ ] All factual claims include inline citations (sources, dates)
+   - [ ] Pacing is appropriate (5-7 min per major section for technical; 15-30 min total for conceptual)
+   - [ ] No gatekeeping language ("easy", "simple", "obvious")
+   - [ ] Diverse example names and inclusive contexts
+   - [ ] Visual breaks present (headings, lists, code blocks, bold)
+
    **Technical Chapters Only:**
    - [ ] All code examples include type hints and docstrings
+   - [ ] Code tested on multiple platforms (Windows, Mac, Linux if applicable)
    - [ ] At least 3 coding exercises with increasing difficulty
    - [ ] Assessments validate understanding at multiple cognitive levels
    - [ ] Technical accuracy verified (all code tested)
-   
+   - [ ] Security implications addressed (no exposed secrets, proper error handling)
+   - [ ] Ethical AI use framed (if chapter involves AI-generated code)
+   - [ ] Cross-platform compatibility verified
+   - [ ] Environment setup, dependencies, and troubleshooting documented
+   - [ ] "Common Pitfalls" section addressing real-world issues included
+
    **Conceptual Chapters Only:**
    - [ ] Narrative flows naturally and maintains engagement
-   - [ ] Real-world examples are relevant and clear
-   - [ ] Reflection prompts encourage critical thinking
+   - [ ] Real-world examples are specific, concrete, and relevant
+   - [ ] Reflection prompts encourage critical thinking and personal relevance
    - [ ] Content establishes necessary context/motivation
+   - [ ] Evidence-based claims with sources cited
+   - [ ] Multiple perspectives represented (not monolithic narrative)
+   - [ ] Professional tone (no hype, balanced assessment of risks/opportunities)
 
 ## Quality Guardrails
 
