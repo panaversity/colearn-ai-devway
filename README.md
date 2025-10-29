@@ -73,37 +73,6 @@ To pioneer an **agent-native model of computer science education** where AI is:
 *   **Primary:** Programming beginners with no prior coding experience.
 *   **Secondary:** Professional developers transitioning to AI-driven development.
 
-## Key Features
-
-*   **AI-First Learning:** Learn Python with AI as a partner from day one.
-*   **Modern Python:** All code uses Python 3.13+ features with mandatory type hints.
-*   **Pedagogically Sound:** Content is guided by 8 specialized "co-learning skills" based on educational research.
-*   **Structured and Consistent:** A project constitution and defined output styles ensure a high-quality, consistent reading experience.
-*   **Tool Diversity:** Learn to work with a variety of AI tools, including Claude Code, Gemini CLI, and OpenAI Codex.
-
-## The Seven-Part Book Structure
-
-**Part 1: Introducing AI-Driven Development (5 chapters)**
-- Foundation for learning Python with AI tools
-
-**Part 2: AI Tool Landscape (4 chapters)**
-- Deep dive into Gemini, Claude, GitHub Codex, and modern editors
-
-**Part 3: Prompt & Context Engineering (4 chapters)**
-- Master effective prompting and context management
-
-**Part 4: Modern Python with Type Hints (8 chapters)**
-- Production-quality Python programming with type safety
-
-**Part 5: Spec-Kit Methodology (5 chapters)**
-- Professional development workflow and specifications
-
-**Part 6: Agentic AI Fundamentals (3 chapters)**
-- Building autonomous AI agents and agent orchestration
-
-**Part 7: MCP Fundamentals (3 chapters)**
-- Model Context Protocol integration and custom tools
-
 ---
 
 ## The 8 CoLearning Skills
@@ -122,27 +91,5 @@ To pioneer an **agent-native model of computer science education** where AI is:
 
 ---
 
-## 📘 Book Structure & Organization
-
-This book follows an ai collaboration driven progressive structure published on site.
-
-### 📚 Content Organization
-
-**For detailed book structure information, see**:
-
-- **`specs/book/chapter-index.md`** — All 46 chapters across 13 parts with titles, numbers, and topics
-- **`specs/book/directory-structure.md`** — Complete file organization, paths, and naming conventions
-- **`.specify/memory/constitution.md`** — Project principles, vision, and quality standards
-
-**Published to**: `book-source/docs/` (Docusaurus-compatible Markdown)
-
-**For agents/developers**: Consult `specs/book/directory-structure.md` for exact file paths and folder naming rules.
-=======
-- **3-level hierarchy**: Part → Chapter → Lesson
-- **Automatic sidebar ordering** using Docusaurus number prefixes
-- **Clean URLs** with automatic prefix removal
-- **Simple file management** without complex configuration files
-
----
 🧠 *Part of the CoLearn Initiative — advancing AI-Driven Learning for the next generation of developers.*
 - **Scalable book expansion** with consistent numbering
