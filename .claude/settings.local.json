@@ -12,7 +12,10 @@
       "Bash(python3:*)",
       "Bash(test:*)",
       "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
-      "Bash(.specify/scripts/bash/setup-plan.sh:*)"
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(git fetch:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)"
     ],
     "deny": [],
     "ask": []
