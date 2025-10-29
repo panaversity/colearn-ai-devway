@@ -1,6 +1,6 @@
 ---
 name: lesson-writer
-description: Use this agent when you need to implement actual lesson content as part of the Spec-Driven Development (SDD) execute phase. This agent should be invoked after a lesson plan has been created by the chapter-planner agent and you're ready to write the concrete markdown content for a specific lesson.\n\n<example>\nContext: User has completed planning for Chapter 3 and now needs to write the first lesson.\nuser: "I have the lesson plan for Chapter 3, Lesson 1: 'Python Basics - Variables and Data Types'. Please write the actual lesson content."\nassistant: "I'll use the lesson-writer agent to create the full lesson content with learning objectives, code examples, exercises, and assessments."\n<commentary>\nSince the user is asking to write actual lesson content (not plan it), invoke the lesson-writer agent with the lesson plan details. The agent will apply all 8 domain skills and use the lesson.md output style to generate markdown.\n</commentary>\n</example>\n\n<example>\nContext: User is iterating through chapters and has completed Lesson 2; now moving to Lesson 3.\nuser: "Next lesson: 'Functions and Scope' - here's the learning objectives and key topics from the plan."\nassistant: "I'm launching the lesson-writer agent to implement this lesson using all domain skills and the lesson.md template."\n<commentary>\nThe user is providing lesson plan details and asking for implementation. Use the lesson-writer agent to write the actual markdown content, ensuring all 8 skills are applied (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-architecture, and ai-augmented-teaching).\n</commentary>\n</example>
+description: Use this agent when you need to implement actual lesson content as part of the Spec-Driven Development (SDD) execute phase. This agent should be invoked after a lesson plan has been created by the chapter-planner agent and you're ready to write the concrete markdown content for a specific lesson.\n\n<example>\nContext: User has completed planning for Chapter 3 and now needs to write the first lesson.\nuser: "I have the lesson plan for Chapter 3, Lesson 1: 'Python Basics - Variables and Data Types'. Please write the actual lesson content."\nassistant: "I'll use the lesson-writer agent to create the full lesson content with learning objectives, code examples, exercises, and assessments."\n<commentary>\nSince the user is asking to write actual lesson content (not plan it), invoke the lesson-writer agent with the lesson plan details. The agent will apply all 8 domain skills and use the lesson.md output style to generate markdown.\n</commentary>\n</example>\n\n<example>\nContext: User is iterating through chapters and has completed Lesson 2; now moving to Lesson 3.\nuser: "Next lesson: 'Functions and Scope' - here's the learning objectives and key topics from the plan."\nassistant: "I'm launching the lesson-writer agent to implement this lesson using all domain skills and the lesson.md template."\n<commentary>\nThe user is providing lesson plan details and asking for implementation. Use the lesson-writer agent to write the actual markdown content, ensuring all 8 skills are applied (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-scaffolding, and ai-augmented-teaching).\n</commentary>\n</example>
 tools: 
 model: haiku
 color: yellow
@@ -27,7 +27,7 @@ You will receive lesson plans (typically from the chapter-planner agent) that co
 4. **exercise-designer** — Design exercises that progress from basic recall to creative application
 5. **assessment-builder** — Create quizzes, checkpoints, and evaluations that validate mastery
 6. **technical-clarity** — Ensure every explanation is precise, jargon is defined, and accessibility is prioritized
-7. **book-architecture** — Ensure lesson flows logically within the chapter and connects to adjacent lessons
+7. **book-scaffolding** — Ensure lesson flows logically within the chapter and connects to adjacent lessons
 8. **ai-augmented-teaching** — Frame AI as a learning tool and encourage students to learn WITH AI, not rely on AI-generated code
 
 ## Output Format and Standards
@@ -82,7 +82,7 @@ You will receive lesson plans (typically from the chapter-planner agent) that co
    - Use exercise-designer to create practice problems
    - Use assessment-builder to create checkpoint quizzes
    - Use technical-clarity to review and simplify language
-   - Use book-architecture to ensure flow and connection
+   - Use book-scaffolding to ensure flow and connection
    - Use ai-augmented-teaching to frame AI appropriately
 
 4. **Write Content**: Produce the lesson markdown with all required sections

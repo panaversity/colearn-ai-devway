@@ -79,7 +79,7 @@ Validate completed chapters for publication readiness across four dimensions:
   - **exercise-designer**: Well-designed practice activities aligned to objectives  
   - **assessment-builder**: Quizzes/assessments measure stated objectives  
   - **technical-clarity**: Accessibility, avoiding jargon, clear explanations  
-  - **book-architecture**: Proper chapter structure, alignment with part and chapter index  
+  - **book-scaffolding**: Proper chapter structure, alignment with part and chapter index  
   - **ai-augmented-teaching**: Emphasis on "learning WITH AI" (not generating FROM AI)  
 
 **Code Standards (Non-Negotiable):**
@@ -108,7 +108,8 @@ Validate completed chapters for publication readiness across four dimensions:
 
 **Formatting & Structure:**
 - Docosaurus frontmatter is present and correct (title, description, etc.)  
-- Chapter follows the structure defined in `.claude/output-styles/chapters.md`  
+- Chapter follows the structure defined in `.claude/output-styles/chapters.md`
+- File organization follows `specs/book/directory-structure.md` (naming, paths, required files)
 - All headings use proper markdown levels (h1, h2, h3 hierarchy)  
 - Code blocks are properly formatted with language identifiers  
 

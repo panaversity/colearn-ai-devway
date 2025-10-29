@@ -13,10 +13,10 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 📍 **Location**: `.specify/memory/constitution.md`
 
 **What it contains**:
-- Project vision and philosophy (AI-first, learner-centered education)
-- 11 core non-negotiable principles
-- The 8 mandatory CoLearning Domain Skills
-- 7-part book structure (32 chapters total)
+- Project vision and philosophy
+- Core non-negotiable principles
+- Domain skills and capabilities
+- Project structure and architecture
 - Quality standards and governance
 
 **Why it matters**:
@@ -25,16 +25,13 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 - When unsure about direction: check the constitution
 - When proposing changes: reference constitutional alignment
 
-**Key sections for developers**:
-- **Section I**: Project Vision & Philosophy
-- **Section II**: 11 Core Principles + 8 Domain Skills
-- **Section IV**: Non-Negotiable Rules (ALWAYS DO / NEVER DO)
-- **Section VI**: Infrastructure (shared skills, templates, sub-agents)
-
-**For book content creators**:
-- **Section III**: 7-Part Book Structure (32 chapters)
-- **Section II.B**: 8 CoLearning Skills (mandatory for all chapters)
-- **Section IV**: Quality rules (type hints, testing, accessibility)
+**Key sections to review**:
+- Project Vision & Philosophy
+- Core Principles & Domain Skills
+- Non-Negotiable Rules (ALWAYS DO / NEVER DO)
+- Infrastructure (shared skills, templates, sub-agents)
+- Project structure and content architecture
+- Quality rules and standards
 
 ---
 
@@ -242,253 +239,236 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 - `specs/<feature>/plan.md` — Architecture decisions
 - `specs/<feature>/tasks.md` — Testable tasks with cases
 
+**Book Content Organization** (for educational content projects):
+- `specs/book/chapter-index.md` — Chapter titles, numbers, and topics (WHAT to write)
+- `specs/book/directory-structure.md` — File paths and folder organization (WHERE to put it)
+
 **Templates & Infrastructure**:
 - `.specify/` — SpecKit Plus templates and scripts
-- `.claude/output-styles/` — Chapter, lesson, and Docusaurus formatting guides
-- `.claude/skills/` — The 8 mandatory CoLearning Domain Skills
+- `.claude/output-styles/` — Content formatting guides (HOW to format)
+- `.claude/skills/` — Generic reusable pedagogical skills library
 
-## The 8 Mandatory Domain Skills
+## Domain Skills Library
 
-All book content MUST be created using these 8 skills. Located in `.claude/skills/`:
+**Important**: The skills in `.claude/skills/` are **generic, reusable pedagogical tools** designed for any educational content project. They are NOT project-specific; they are part of our core reusable toolkit that can be applied across different domains, subjects, and content types.
+
+### About the Skills Library
+
+Located in `.claude/skills/`, this library contains 8 specialized pedagogical skills:
 
 1. **learning-objectives** — Define measurable learning outcomes (Bloom's taxonomy)
 2. **concept-scaffolding** — Break complex topics into progressive steps
-3. **code-example-generator** — Create high-quality Python examples (type hints, tested)
+3. **code-example-generator** — Create high-quality code examples with best practices
 4. **exercise-designer** — Design effective practice exercises
 5. **assessment-builder** — Build quizzes and evaluations
 6. **technical-clarity** — Ensure accessibility and clarity
-7. **book-architecture** — Structure chapters for logical flow (includes awareness of chapter-index.md)
+7. **book-architecture** — Structure content for logical flow
 8. **ai-augmented-teaching** — Teach "learning WITH AI" (not generating FROM AI)
 
-**When creating chapters or lessons**: Invoke these skills explicitly and reference them in your work.
+These skills are **semantically activated** based on your educational needs and can be used for any content creation project (books, courses, tutorials, documentation).
+
+**When creating content**: The constitution specifies which skills are mandatory for this project. Invoke skills explicitly and reference them in your work.
 
 ---
 
-## The 3 Strategic Subagents
+## Strategic Subagents
 
-When creating book content, you work with 3 specialized subagents that execute specific phases of the SpecKit SDD loop:
+**Note**: The constitution defines which subagents are available for this project. Subagents are specialized, isolated assistants that execute specific phases of the SpecKit SDD loop.
 
 **Located in:** `.claude/agents/`
 
-### 1. chapter-planner
-**Executes:** Plan + Tasks phases of SDD loop
-**Input:** Approved chapter spec (specs/part-X/chapter-Y-spec.md)
-**Output:**
-- Detailed lesson-by-lesson plan (specs/part-X/chapter-Y-plan.md)
-- Task checklist (specs/part-X/chapter-Y-tasks.md)
-**Skills Used:** learning-objectives, concept-scaffolding, book-architecture
-**When to use:** After spec is approved, to break down chapter into implementable lessons
+### Common Subagent Patterns
 
-### 2. lesson-writer
-**Executes:** Implement phase of SDD loop (iterative, lesson by lesson)
-**Input:** Lesson plan from chapter-planner
-**Output:** Actual lesson content (markdown sections)
-**Skills Used:** All 8 skills (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-architecture, ai-augmented-teaching)
-**When to use:** To write actual content for each lesson, one at a time
-**Output Style:** Uses lesson.md formatting
+Subagents typically handle:
+- **Planning**: Transform specs into detailed implementation plans
+- **Implementation**: Execute content creation following approved plans
+- **Validation**: Review and verify quality against project standards
 
-### 3. technical-reviewer
-**Executes:** Validate phase of SDD loop
-**Input:** Complete lesson or chapter content
-**Output:** Validation report with technical accuracy review
-**Skills Used:** technical-clarity, code-example-generator (for testing)
-**When to use:** After chapter is complete, to catch issues before publication
+Each subagent:
+- Has isolated context (prevents pollution of main conversation)
+- Can read shared files (constitution, skills, templates, specs)
+- Uses domain skills from the `.claude/skills/` library
+- Follows output styles from `.claude/output-styles/`
+
+**When to use subagents**: Refer to the constitution for project-specific subagent definitions, their responsibilities, and invocation patterns.
 
 ---
 
-## SpecKit SDD Loop for Chapter Development
+## SpecKit SDD Loop (Generic Workflow)
 
-Each of the chapters follows this workflow:
+**Note**: The constitution defines the specific workflow for this project. Below is the generic SpecKit SDD pattern that can be adapted:
 
-### Phase 1: SPEC (You + Main Claude)
+### Phase 1: SPEC
 **Who:** Human collaborates with main Claude orchestrator
 **Subagent:** None (strategic planning requires human judgment)
-**Output:** `specs/part-X/chapter-Y-spec.md`
+**Output:** Feature/content specification document
 **Contents:**
-- Chapter overview and learning objectives
-- Topics to cover
+- Overview and objectives
+- Scope (in/out)
 - Prerequisites
 - Success criteria
-- What's out of scope
+- Constraints and non-goals
 
-### Phase 2: PLAN + TASKS (chapter-planner subagent)
-**Who:** chapter-planner subagent
+### Phase 2: PLAN + TASKS
+**Who:** Planning subagent (if defined in constitution)
 **Input:** Approved spec from Phase 1
 **Output:**
-- `specs/part-X/chapter-Y-plan.md` (detailed lesson breakdown)
-- `specs/part-X/chapter-Y-tasks.md` (implementation checklist)
+- Detailed implementation plan
+- Task checklist with acceptance criteria
 **Contents:**
-- Lesson-by-lesson breakdown
-- For each lesson: learning objectives, code examples needed, key concepts, practice exercises
-- Time estimates
-- Implementation order
+- Breakdown of work units
+- Dependencies and sequencing
+- Time/effort estimates
+- Required resources
 
-### Phase 3: IMPLEMENT (lesson-writer subagent)
-**Who:** lesson-writer subagent (iterative)
-**Input:** Lesson plans from Phase 2
-**Process:** Write lessons one at a time, with human review after each
-**Output:** `docs/part-X/chapter-Y.mdx` (complete chapter)
+### Phase 3: IMPLEMENT
+**Who:** Implementation subagent(s) (if defined in constitution)
+**Input:** Plan and tasks from Phase 2
+**Process:** Iterative creation with human review checkpoints
+**Output:** Completed content/feature artifacts
 **Workflow:**
-1. Write Lesson 1 → Human reviews → Approve
-2. Write Lesson 2 → Human reviews → Approve
-3. [Continue for all lessons...]
-4. Integrate all lessons into final chapter
+1. Implement work unit → Human reviews → Approve
+2. Implement next unit → Human reviews → Approve
+3. [Continue until complete...]
+4. Integration and finalization
 
-### Phase 4: VALIDATE (technical-reviewer subagent)
-**Who:** technical-reviewer subagent
-**Input:** Complete chapter from Phase 3
+### Phase 4: VALIDATE
+**Who:** Validation/review subagent (if defined in constitution)
+**Input:** Complete artifact from Phase 3
 **Output:** Validation report
 **Checks:**
-- All code examples run correctly
-- Technical accuracy of explanations
-- Pedagogical effectiveness
-- Constitution compliance
+- Technical correctness
+- Standards compliance
+- Quality requirements
+- Constitution alignment
+
+**Refer to the constitution** for the specific SDD loop configuration, phase definitions, subagent assignments, and workflow details for your project.
 
 ---
 
-## Book Structure: Separation of Concerns
+## Content Structure: Separation of Concerns
 
-The project uses a **three-layer structure** for managing the 32-chapter book:
+**Note**: This is a generic three-layer pattern. The constitution defines the specific structure for your project.
+
+The project uses a **three-layer structure** for managing content:
 
 ### Layer 1: Philosophy & Vision
 📍 **Location**: `.specify/memory/constitution.md`
-- Section III: The 7-part book structure
-- Educational philosophy and pedagogy
-- Non-negotiable principles
+- Project structure and architecture (defined in constitution)
+- Philosophy, principles, and requirements
+- Non-negotiable rules and standards
 
-### Layer 2: Chapter Specifications (WHAT to write)
-📍 **Location**: `specs/book/chapter-index.md`
-- All 32 chapters mapped to 7 parts
-- Chapter numbers, titles, filenames
-- Key topics for each chapter
-- **This is THE AUTHORITATIVE SOURCE for chapter assignments**
+### Layer 2: Content Specifications (WHAT to create)
+📍 **Location**: Varies by project (e.g., `specs/content-index.md`, `specs/book/chapter-index.md`)
+- Content inventory and organization
+- Content units mapped to structure
+- Titles, identifiers, filenames
+- Key topics for each unit
+- **This is THE AUTHORITATIVE SOURCE for content assignments**
 
-### Layer 3: Output Styles (HOW to write)
+### Layer 3: Output Styles (HOW to create)
 📍 **Location**: `.claude/output-styles/`
-- `chapter-plan.md` — Formatting for chapter plans (used by chapter-planner subagent)
-- `lesson.md` — Formatting for lesson content (used by lesson-writer subagent)
-- **These are REUSABLE TEMPLATES, not chapter-specific**
+- Formatting templates for different content types
+- Style guides for consistent output
+- **These are REUSABLE TEMPLATES, not content-specific**
 
-### Workflow for Content Creators (4-Phase SDD Loop)
+### Generic Content Creation Workflow
 
-When creating a chapter, follow the SpecKit SDD loop:
+Refer to the constitution for the specific workflow. The generic pattern is:
 
-#### Phase 1: SPEC (You + Main Claude)
+#### Phase 1: SPEC
 **Consult:**
-- `specs/book/chapter-index.md` → Find which chapter to write
-- Constitution principles → Understand requirements
+- Constitution → Understand requirements and principles
+- Content index → Identify what to create
 
 **Actions:**
-- Collaborate with main Claude (NOT a subagent)
-- Use learning-objectives and concept-scaffolding skills
-- Create: `specs/part-X/chapter-Y-spec.md`
+- Collaborate with main Claude
+- Use relevant domain skills
+- Create specification document
 - Get approval before proceeding
 
-#### Phase 2: PLAN (chapter-planner subagent)
-**Command:** `"Use chapter-planner subagent to create plan from [spec file]"`
+#### Phase 2: PLAN
+**Process:**
+- Use planning subagent (if defined)
+- Break content into implementable units
+- Define required artifacts and resources
+- Create plan and task checklist
 
-**Subagent Actions:**
-- Reads approved spec
-- Uses concept-scaffolding, book-architecture skills
-- Breaks chapter into 5-7 lessons
-- Defines code examples, key concepts, exercises for each lesson
-- Creates:
-  - `specs/part-X/chapter-Y-plan.md`
-  - `specs/part-X/chapter-Y-tasks.md`
+#### Phase 3: IMPLEMENT
+**Process:**
+- Use implementation subagent(s) (if defined)
+- Follow approved plan and output styles
+- Apply required domain skills
+- Iterative creation with review checkpoints
 
-**You Review:** Plan structure, lesson breakdown, time estimates
-**You Approve:** Before moving to implementation
-
-#### Phase 3: IMPLEMENT (lesson-writer subagent, iterative)
-**Command:** `"Use lesson-writer subagent to write Lesson N from chapter plan"`
-
-**Subagent Actions:**
-- Reads lesson plan
-- Uses ALL 8 domain skills
-- Follows `.claude/output-styles/lesson.md` formatting
-- Writes complete lesson content
-
-**You Review:** Each lesson individually
-**You Iterate:** Revise specific sections as needed
-**You Approve:** Each lesson before moving to next
-
-**After All Lessons:**
-- Integrate into final chapter file
-- Output: `docs/part-X/chapter-Y.mdx`
-
-#### Phase 4: VALIDATE (technical-reviewer subagent, optional)
-**Command:** `"Use technical-reviewer subagent to validate [chapter file]"`
-
-**Subagent Actions:**
-- Tests all code examples
-- Checks technical accuracy
-- Verifies pedagogical effectiveness
-- Reviews constitution compliance
-- Generates validation report
-
-**You Review:** Validation report
-**If Issues:** Use lesson-writer to fix
-**If Approved:** Chapter ready for publication
+#### Phase 4: VALIDATE
+**Process:**
+- Use validation subagent (if defined)
+- Verify quality and standards compliance
+- Generate validation report
+- Address issues before finalization
 
 ### Key Benefits
 
 This separation means:
 - ✅ Output styles remain **generic and reusable** (can be used for other projects)
-- ✅ Chapter assignments are **centralized** (single source of truth)
-- ✅ Easy to **update chapter titles or order** without changing templates
+- ✅ Content assignments are **centralized** (single source of truth)
+- ✅ Easy to **update structure or organization** without changing templates
 - ✅ Clear **separation between WHAT and HOW**
 - ✅ Measurable progress with phase artifacts
 - ✅ Resumable work after breaks (all state in files)
 
 ---
 
-## File Organization Per Chapter
+## File Organization (Generic Pattern)
 
-Each chapter produces these artifacts:
+**Note**: The constitution defines the specific file structure for your project. Below is a generic pattern:
+
+Each content unit produces these artifacts:
 
 ```
 specs/
-└── part-X/
-    ├── chapter-Y-spec.md      [Phase 1: Requirements and scope]
-    ├── chapter-Y-plan.md      [Phase 2: Detailed lesson breakdown]
-    └── chapter-Y-tasks.md     [Phase 2: Implementation checklist]
+└── <content-area>/
+    ├── <unit-id>-spec.md      [Phase 1: Requirements and scope]
+    ├── <unit-id>-plan.md      [Phase 2: Detailed implementation plan]
+    └── <unit-id>-tasks.md     [Phase 2: Implementation checklist]
 
-docs/
-└── part-X/
-    └── chapter-Y-title.mdx     [Phase 3: Final published chapter]
+<output-dir>/
+└── <content-area>/
+    └── <unit-output-file>     [Phase 3: Final deliverable]
 ```
 
-### Example for Chapter 5:
+### Example (Generic):
 ```
 specs/
-└── part-2/
-    ├── chapter-05-spec.md
-    ├── chapter-05-plan.md
-    └── chapter-05-tasks.md
+└── feature-a/
+    ├── unit-05-spec.md
+    ├── unit-05-plan.md
+    └── unit-05-tasks.md
 
-docs/
-└── part-2/
-    └── 05-functions-type-hints.mdx
+output/
+└── feature-a/
+    └── unit-05-deliverable.md
 ```
 
 ### Resuming Work After Break
 
-To resume work on a chapter:
+To resume work on a content unit:
 
 1. **Check what's done:**
    ```bash
-   cat specs/part-2/chapter-05-tasks.md
+   cat specs/<content-area>/<unit-id>-tasks.md
    # Shows checkboxes: [x] = done, [ ] = todo
    ```
 
 2. **Read context:**
-   - Spec: `specs/part-2/chapter-05-spec.md` (requirements)
-   - Plan: `specs/part-2/chapter-05-plan.md` (lesson breakdown)
-   - Tasks: `specs/part-2/chapter-05-tasks.md` (checklist)
+   - Spec: `specs/<content-area>/<unit-id>-spec.md` (requirements)
+   - Plan: `specs/<content-area>/<unit-id>-plan.md` (implementation breakdown)
+   - Tasks: `specs/<content-area>/<unit-id>-tasks.md` (checklist)
 
 3. **Continue from checkpoint:**
-   - If tasks show "Lesson 3" incomplete
-   - Command: `"Use lesson-writer to write Lesson 3 from chapter-05-plan.md"`
+   - Review incomplete tasks
+   - Resume using appropriate subagent or tools
 
 **No context loss** — all state is in files.
 
@@ -532,9 +512,14 @@ To resume work on a chapter:
 
 ## Code Standards
 
-All code MUST follow standards in `.specify/memory/constitution.md`:
-- Python 3.13+ with mandatory type hints on all functions
-- Comprehensive testing (80%+ coverage minimum)
-- PEP 8 compliance
-- No hardcoded secrets or tokens
-- Accessibility-first design philosophy
+All code MUST follow standards defined in `.specify/memory/constitution.md`.
+
+**Common standards** (verify in constitution for project-specific requirements):
+- Language version and features
+- Type safety requirements (type hints, annotations, etc.)
+- Testing requirements (coverage thresholds, test types)
+- Code style compliance (linting, formatting)
+- Security requirements (no hardcoded secrets, secure practices)
+- Accessibility requirements (if applicable)
+
+**Always refer to the constitution** for the exact code standards and quality gates for your project.
