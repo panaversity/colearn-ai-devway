@@ -20,5 +20,6 @@
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "outputStyle": "lesson"
 }
