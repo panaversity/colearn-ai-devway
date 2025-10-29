@@ -302,41 +302,41 @@ Phase 8 (Polish & Validation) ←── Waits for all user stories
 
 ### Tasks
 
-- [ ] T025 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-6/part-6-spec.md`
+- [x] T025 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-6/part-6-spec.md`
   - Copy structure from `specs/part-1/part-1-spec.md` as template
   - Part title: "Agentic AI Fundamentals with OpenAI Agents SDK in Python"
   - 3 chapters (use part-6-outline.md from T004)
   - Define learning outcomes, prerequisites, pedagogical approach
 
-- [ ] T026 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-7/part-7-spec.md`
+- [x] T026 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-7/part-7-spec.md`
   - Part title: "MCP Fundamentals with FastMCP"
   - 3 chapters (use part-7-outline.md from T004)
 
-- [ ] T027 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-8/part-8-spec.md`
+- [x] T027 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-8/part-8-spec.md`
   - Part title: "TypeScript: The Language of Realtime and Interaction"
   - 3 chapters (use part-8-outline.md from T004)
 
-- [ ] T028 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-9/part-9-spec.md`
+- [x] T028 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-9/part-9-spec.md`
   - Part title: "Building Realtime and Voice Agents"
   - 3 chapters (use part-9-outline.md from T004)
 
-- [ ] T029 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-10/part-10-spec.md`
+- [x] T029 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-10/part-10-spec.md`
   - Part title: "Containerization & Orchestration using Docker and Kubernetes"
   - 3 chapters (use part-10-outline.md from T004)
 
-- [ ] T030 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-11/part-11-spec.md`
+- [x] T030 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-11/part-11-spec.md`
   - Part title: "Data, State, and Memory using PostgreSQL, Graph, and Vector Databases"
   - 3 chapters (use part-11-outline.md from T004)
 
-- [ ] T031 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-12/part-12-spec.md`
+- [x] T031 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-12/part-12-spec.md`
   - Part title: "Event-Driven Architecture using Kafka and Dapr"
   - 2 chapters (use part-12-outline.md from T004)
 
-- [ ] T032 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-13/part-13-spec.md`
+- [x] T032 [P] [US3] Create `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/specs/part-13/part-13-spec.md`
   - Part title: "Stateful Agents using Dapr Actors and Dapr Workflows"
   - 2 chapters (use part-13-outline.md from T004)
 
-- [ ] T033 [US3] Commit US3 changes with descriptive message
+- [x] T033 [US3] Commit US3 changes with descriptive message
   - Git add all 8 new part spec files
   - Commit message: "US3: Create scaffolding specs for Parts 6-13"
   - Include chapter count summary in commit message
@@ -360,14 +360,14 @@ Phase 8 (Polish & Validation) ←── Waits for all user stories
 
 ### Tasks
 
-- [ ] T034 [P] [US5] Update `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/README.md`
+- [x] T034 [P] [US5] Update `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/README.md`
   - Update "Structure Overview" section (lines ~48-62)
   - Replace 7-part list with 13-part list
   - Use exact part titles from chapter-index.md
   - Include chapter counts in parentheses
   - Update any other references to "7 parts" or "32 chapters"
 
-- [ ] T035 [P] [US5] Verify `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/CLAUDE.md` defers to constitution
+- [x] T035 [P] [US5] Verify `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/CLAUDE.md` defers to constitution
   - Check: CLAUDE.md does NOT hardcode chapter/part counts
   - Check: CLAUDE.md references constitution.md for structure details
   - If hardcoded: Replace with references to constitution/chapter-index
@@ -389,23 +389,23 @@ Phase 8 (Polish & Validation) ←── Waits for all user stories
 
 ### Tasks
 
-- [ ] T036 [P] [Polish] Create Docusaurus scaffolding for Parts 8-13 in `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/book-source/docs/`
+- [x] T036 [P] [Polish] Create Docusaurus scaffolding for Parts 8-13 in `/Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python/book-source/docs/`
   - Create folders: `08-TypeScript-Realtime-Interaction/` through `13-Dapr-Stateful-Agents/`
   - Each folder: `intro.md` + placeholder chapter folders with `README.md`
   - Use directory-structure.md naming conventions
 
-- [ ] T037 [P] [Polish] Run full Docusaurus build validation
+- [x] T037 [P] [Polish] Run full Docusaurus build validation
   - Run: `cd book-source && npm run build`
   - Verify: Build succeeds with zero errors
   - Verify: All 13 parts visible in sidebar
   - Verify: All 46 chapters navigable (placeholder content OK)
 
-- [ ] T038 [Polish] Validate all internal cross-references using validation checklist (from T005)
+- [x] T038 [Polish] Validate all internal cross-references using validation checklist (from T005)
   - Check all files that reference chapter numbers
   - Update any hardcoded references to old chapter numbers
   - Verify no broken internal links in Markdown files
 
-- [ ] T039 [Polish] Final review and merge preparation
+- [x] T039 [Polish] Final review and merge preparation
   - Review all changed files for consistency
   - Verify all 5 user stories meet acceptance criteria
   - Create pull request summary with before/after comparison
