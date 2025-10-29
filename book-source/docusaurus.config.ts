@@ -67,17 +67,24 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'CoLearning Python',
+      title: 'CoLearn',
       // logo: {
-      //   alt: 'My Site Logo',
+      //   alt: 'CoLearn Logo',
       //   src: 'img/logo.svg',
       // },
+      hideOnScroll: false,
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Curriculum',
+        },
+        {
+          to: '/docs/Introducing-AI-Driven-Development/intro',
+          label: 'Start Learning',
+          position: 'right',
+          className: 'navbar-cta-button',
         },
         {
           href: 'https://github.com/panaversity/colearning-python',
@@ -90,16 +97,20 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learn',
           items: [
             {
-              label: 'Start Learning',
-              to: '/docs/intro',
+              label: 'Start Your Journey',
+              to: '/docs/Introducing-AI-Driven-Development/intro',
+            },
+            {
+              label: 'Curriculum',
+              to: '/docs/Introducing-AI-Driven-Development/intro',
             },
           ],
         },
         {
-          title: 'Follow Us',
+          title: 'Community',
           items: [
             {
               label: 'YouTube',
@@ -120,7 +131,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
               label: 'GitHub',
@@ -129,7 +140,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Panaversity. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Panaversity. 100% Free & Open Source.`,
     },
     prism: {
       theme: prismThemes.github,
