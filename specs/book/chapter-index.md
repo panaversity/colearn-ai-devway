@@ -6,16 +6,16 @@ Reference this document when naming and organizing chapter files. Use the chapte
 
 ---
 
-## Part 1: Introducing AI-Driven Development (Chapters 1-3)
+## Part 1: Introducing AI-Driven Development (Chapters 1-4)
 
-Foundation building: orientation, setup, first programs with AI
+Foundation building: orientation, setup, first programs with AI, complete AIDD methodology
 
 | # | Chapter Title | File Name | Key Topics |
 |---|---------------|-----------|------------|
-| 1 | Welcome to AI-Driven Development | `01-welcome-to-ai-driven-development.md` | AI as collaborative partner, course overview, brief intro to AI transformation |
-| 2 | Understanding AI Tools: The Nine Revolutions That Made This Possible | `02-understanding-ai-tools.md` | Nine technological revolutions, three-layer stack, AI coding agents (Claude Code, Gemini CLI, Codex, Qwen), vibe coding vs SDD, Snakes & Ladders competitive dynamics, evidence-based inflection point |
-| 3 | Your First AI-Assisted Program | `03-your-first-ai-assisted-program.md` | Tool installation (Claude Code, Gemini CLI, Spec-Kit Plus), first spec-driven cycle |
-| 4 | Debugging and Iterating with AI | `04-debugging-and-iterating-with-ai.md` | Error handling, iteration cycles, AI assistance |
+| 1 | Welcome to AI-Driven Development | `01-ai-development-revolution/` | AI as collaborative partner, the $3T disruption, your new role as agent orchestrator, economic transformation |
+| 2 | Understanding AI Tools: The Nine Revolutions That Made This Possible | `02-ai-turning-point/` | Nine technological revolutions, inflection point evidence, AI coding agents, development patterns, DORA perspective |
+| 3 | Your First AI-Assisted Program | `03-billion-dollar-ai/` | Billion-dollar potential markets, PPP strategy (Prototype-Prove-Productize), real-world examples, stack building |
+| 4 | The Nine Pillars of AI-Driven Development (AIDD) | `04-nine-pillars/` | Complete AIDD methodology, nine pillars detailed (AI CLI, Markdown as Programming, MCP, AI-First IDEs, Linux, TDD, SDD, Composable Skills, Cloud Deployment), M-Shaped developer profile, competitive urgency |
 
 ---
 
