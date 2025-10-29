@@ -1,675 +1,414 @@
-# Implementation Plan: Chapter 2 - Understanding AI Tools
+---
+branch: "001-chapter-2"
+date: "2025-10-29"
+spec: "./spec.md"
+---
 
-**Branch**: `001-chapter-2` | **Date**: 2025-10-29 | **Spec**: [spec.md](./spec.md)
-**Input**: Feature specification from `specs/001-chapter-2/spec.md`
+# Implementation Plan: Chapter 2 - AI Turning Point
 
-## Summary
+## Executive Summary
 
-Chapter 2, titled **"Understanding AI Tools: The Nine Revolutions That Made This Possible"**, bridges the conceptual understanding from Chapter 1 (mindset shift) with the hands-on tool setup in Chapter 3. It provides readers with a comprehensive yet accessible explanation of the technological foundations that enabled AI-driven development, combining:
+Chapter 2 ("AI Turning Point: The New Wave of AI Coding Agents Has Changed Everything for Developers") is a NARRATIVE/CONCEPTUAL chapter that bridges the mindset shift from Chapter 1 with hands-on tool installation in Chapter 3. It provides readers with:
 
-1. **The Nine Technological Revolutions** (2020-2025) - Historical breakthroughs that converged to make AI-assisted development possible
-2. **The New Wave of AI Coding Agents** - Practical understanding of Claude Code, Gemini CLI, OpenAI Codex, and Qwen Code
+1. **Evidence-based proof** that summer 2025 is a genuine inflection point (not hype)
+2. **Understanding of two methodologies** (vibe coding vs. Spec-Driven Development) and when each is appropriate
+3. **Practical tool knowledge** (Claude Code, Gemini CLI, OpenAI Codex, Qwen Code) to make informed choices
+4. **Organizational perspective** (DORA findings) on why discipline matters with AI
+5. **Strategic context** (three-layer stack, Snakes and Ladders pattern) for future learning
 
-**Technical Approach**: Use concept scaffolding to break 9 revolutions + 4 tools into digestible lessons with progressive disclosure, visual aids, and clear learning objectives. Maintain Part 1 philosophy (LIGHT cognitive load, HEAVY scaffolding, zero gatekeeping language). Target 4,000-5,000 words across 3-4 lessons with simple English and concise explanations per user guidance.
+**Content Type**: No code, no exercises, narrative-driven with visual aids, Quick Checks, and reflection prompts.
 
-## Pedagogical Context
+**Target Reading Time**: 25-35 minutes
+**Word Count Target**: 4,000-5,000 words
+**Structure**: 4 interconnected lessons (Inflection Point → Patterns → Perspective → Tools)
 
-**Content Type**: Educational book chapter (Part 1, Chapter 2 of 46-chapter book)
-**Target Audience**: Absolute beginners, professionals pivoting to AI-driven development, solo entrepreneurs
-**Prerequisites**: Chapter 1 completed (mindset shift from "coder to orchestrator")
-**Learning Philosophy**: Show-then-explain, heavy scaffolding, evidence-based reasoning
-**Cognitive Load**: LIGHT (3-4 key concepts per lesson maximum)
-**Word Count Target**: 4,000-5,000 words total (per Part 1 spec)
-**Reading Time**: 20-30 minutes (completable in one sitting)
-**Visual Aids Required**: 2-3 timeline diagrams, 1 Snakes and Ladders visualization, 2-3 comparison tables
-**Accessibility Requirements**: Alt text for all images, high contrast, clear language (Constitution Principle 8)
+---
 
-## Constitution Check
+## Pedagogical Context & Constitutional Alignment
 
-*GATE: Must pass before lesson writing begins.*
+### Chapter Type Identification
+- **NARRATIVE CHAPTER** (not technical)
+- No code examples required
+- Reflection prompts instead of exercises
+- Focus on conceptual understanding and evidence-based reasoning
+- Learning objectives emphasize recognize, understand, explain (Bloom's: Remember, Understand, Analyze)
 
-### ✅ Principle 1: AI-First Teaching Philosophy
-- **Status**: PASS
-- **Evidence**: Chapter explains how AI tools became viable for professional development, setting foundation for later hands-on AI usage
-- **Application**: Chapter 2 demonstrates AI-first philosophy by explaining the technological infrastructure that enables AI collaboration
+### Constitution Principles Applied
+- ✅ **Principle 1** (AI-First): Explains AI infrastructure and capabilities
+- ✅ **Principle 6** (Clear Writing): Simple English, zero gatekeeping, all jargon defined
+- ✅ **Principle 7** (Progressive Complexity): Part 1 heavy scaffolding applied
+- ✅ **Principle 8** (Inclusivity): Alt text, multiple reading paths, accessible language
+- ✅ **Principle 9** (Show-Then-Explain): Evidence-first approach throughout
 
-### ✅ Principle 2: Spec-Kit Methodology as Foundation
-- **Status**: PASS
-- **Evidence**: Chapter introduces "vibe coding vs. SDD" distinction, preparing readers for Part 5's formal Spec-Kit methodology
-- **Application**: Conceptual introduction to specification-driven workflows as superior to undisciplined prompting
+### Domain Skills Applied
+1. **learning-objectives** — Clear, measurable LOs for each lesson using appropriate Bloom's levels
+2. **concept-scaffolding** — Breaking 4 complex parts into progressive, digestible lessons
+3. **technical-clarity** — All jargon defined; accessible analogies; zero gatekeeping
+4. **assessment-builder** — Quick Checks after major concepts; end-of-chapter exercises
+5. **exercise-designer** — 3 optional exercises reinforcing chapter outcomes
+6. **book-scaffolding** — Clear connections to Chapter 1 (mindset shift) and Chapter 3 (tool setup)
+7. **ai-augmented-teaching** — Chapter explains AI capabilities and infrastructure
 
-### ✅ Principle 3: Modern Python Standards (3.13+)
-- **Status**: N/A (no code in Chapter 2)
-- **Evidence**: Chapter 2 is conceptual/explanatory; Python coding begins in Chapter 4
+---
 
-### ✅ Principle 4: Production-Quality Code Standards
-- **Status**: N/A (no code in Chapter 2)
-- **Evidence**: Chapter 2 is conceptual/explanatory; code quality standards apply starting Chapter 4
+## Lesson Structure (4 Lessons)
 
-### ✅ Principle 5: Test-Driven Mindset
-- **Status**: PASS (conceptual introduction)
-- **Evidence**: Chapter introduces TDD as part of "vibe coding vs. SDD" comparison, explaining why tests matter when AI generates code
-- **Application**: Sets expectation that testing is essential even (especially) when AI writes code
-
-### ✅ Principle 6: Clear, Accessible Technical Writing
-- **Status**: PASS
-- **Evidence**: Spec requires zero gatekeeping language, technical clarity skill application, simple English per user guidance
-- **Application**: All 12 functional requirements emphasize accessible explanation with visual aids
-
-### ✅ Principle 7: Incremental Complexity Through Book-Scaffolding
-- **Status**: PASS
-- **Evidence**: Chapter 2 is in Part 1 (chapters 1-9, HEAVY scaffolding per constitution v2.2.0)
-- **Application**: Concept hierarchy (4 levels) ensures progressive disclosure; visual aids reduce cognitive load
-
-### ✅ Principle 8: Inclusivity & Universal Design
-- **Status**: PASS
-- **Evidence**: Spec mandates alt text for all images, high contrast, clear language, multiple reading paths (narrative + bullet points)
-- **Application**: Edge case handling addresses non-technical readers, skeptical readers, visual learners
-
-### ✅ Principle 9: Show-Then-Explain Pedagogy
-- **Status**: PASS
-- **Evidence**: Chapter structure leads with evidence (ICPC World Finals, adoption metrics) before explaining implications
-- **Application**: Each revolution presented with real-world examples before abstract explanation
-
-### ✅ Principle 10: Progressive Real-World Projects
-- **Status**: N/A (Chapter 2 is foundational knowledge)
-- **Evidence**: Real-world projects begin in Chapter 4; Chapter 2 provides context for why those projects use AI tools
-
-### ✅ Principle 11: Community & Continuous Improvement
-- **Status**: PASS
-- **Evidence**: Chapter includes references to open-source tools (Gemini CLI, Qwen Code), community-driven MCP ecosystem
-- **Application**: Emphasizes community contribution and learning from others
-
-**Gate Result**: ✅ **PASS** - All applicable principles satisfied. Ready for lesson design.
-
-## Lesson Structure
-
-Chapter 2 will be broken into **4 lessons** to maintain digestibility while covering all required content:
+Chapter 2 is organized into 4 interconnected lessons that can stand alone but build progressively:
 
 ### Lesson 1: "The AI Inflection Point" (1,000-1,200 words)
-**Purpose**: Hook readers with compelling evidence and establish that 2025 is genuinely different
 
-**Key Concepts (3)**:
-1. The 2025 AI Inflection Point - AI moved from experimental to default mode
-2. Mainstream Adoption Evidence - 84% Stack Overflow, 95% DORA, enterprise reorganization
-3. Capability Milestones - ICPC World Finals perfect score, GDPval benchmarks
+**Purpose**: Hook readers with compelling evidence; establish that 2025 is genuinely different.
 
-**Content Flow**:
-- **Hook**: ICPC World Finals 2025 - AI perfect score beats all human teams
-- **Evidence Section**: Quantitative data from surveys and benchmarks
-- **"Why This Matters for YOU"**: Personal relevance for readers
-- **Preview**: What enabled this moment (tease the 9 revolutions)
+**Learning Objectives**:
+- LO-1.1: Cite at least 2 pieces of quantitative evidence (adoption metrics, capability milestones) for the 2025 inflection point
+- LO-1.2: Explain why mainstream adoption (84%+) signals a genuine paradigm shift (not just incremental improvement)
+- LO-1.3: Recognize AI capability milestones (ICPC perfect score, GDPval benchmarks) and understand their significance
+
+**Key Concepts** (3 maximum):
+1. **The Inflection Point** — AI transitioned from experimental to default mode in 2025
+2. **Mainstream Adoption Evidence** — Quantitative metrics (84% developers, 95% organizations) proving this is real
+3. **Capability Milestones** — Concrete demonstrations (ICPC World Finals, GDPval benchmarks) that AI reached new threshold
+
+**Content Outline**:
+- **Hook** (100-150 words): ICPC World Finals 2025 — AI systems achieved perfect score, beating all human teams
+- **Adoption Evidence** (300-400 words): Stack Overflow (84%), DORA study (95%), enterprise ARR growth (Claude Code $500M+), adoption curve visualization
+- **Capability Milestones** (250-350 words): GDPval benchmarks (GPT-4o 13.7% → GPT-5 40.6%), ICPC results (both AI systems and Google DeepMind's modeling), why these matter
+- **Why This Matters for YOU** (150-200 words): Personal relevance box — shifts reader mindset from "nice tech" to "infrastructure"
+- **Quick Check** (50-100 words): 2 questions validating understanding
 
 **Visual Aids**:
-- Timeline showing adoption curve (2020-2025)
-- Bar chart comparing AI performance metrics (2024 vs 2025)
+- Timeline: AI Adoption Curve (2020-2025) showing exponential growth, key milestones
+- Chart: AI Performance Milestones (2024 vs 2025) with benchmark scores
 
-**Learning Objectives** (skill 1):
-- LO-1.1: Cite at least two pieces of quantitative evidence for the 2025 inflection point
-- LO-1.2: Explain why mainstream adoption (84%+) signals genuine paradigm shift
-- LO-1.3: Recognize AI capability milestones (ICPC, GDPval) and their significance
+**Scaffolding Strategy**:
+- Lead with the most compelling hook (ICPC), which naturally invites the question "How did this happen?"
+- Present evidence first, then frame its significance
+- Use "Why This Matters" box to connect abstract metrics to reader's situation
+- Avoid technical jargon about models; focus on observable outcomes
 
-**Assessment** (skill 5):
-- Quick Check: "Can you name two surveys showing 80%+ AI adoption among developers?"
-- Reflection: "Why does the ICPC perfect score matter more than autocomplete improvements?"
+**Assessment Method** (Skill 5):
+- Quick Check 1: "Name one piece of evidence showing mainstream AI adoption"
+- Quick Check 2: "Why is an AI perfect score at ICPC significant for developers?"
+
+**Connections**:
+- **From Chapter 1**: Reinforces "orchestrator" mindset — AI capability makes orchestration possible
+- **To Lesson 2**: "Now that you've seen the evidence, let's understand what made this moment possible..."
 
 ---
 
-### Lesson 2: "The Nine Technological Revolutions" (1,500-1,800 words)
-**Purpose**: Explain the technological foundation with structured, evidence-based breakdown
+### Lesson 2: "Two Development Patterns" (1,200-1,400 words)
 
-**Key Concepts (4)**:
-1. Technological Convergence - Nine distinct breakthroughs that worked together
-2. Three-Layer AI Development Stack - Frontier Models → AI-First IDEs → Development Agents
-3. Critical Thresholds - What changed to make AI viable for production development
-4. Snakes and Ladders Pattern - Why vertical market opportunities exist in Layer 3
+**Purpose**: Introduce the critical distinction between vibe coding (learning) and Spec-Driven Development (production).
 
-**Content Flow**:
-- **Introduction**: Why nine revolutions, not one big breakthrough
-- **The Nine Revolutions** (structured presentation):
-  - **Layer 1: Foundation Models & Adoption**
-    1. Frontier LLMs Crossed Critical Thresholds (2023-2025)
-    2. Mainstream Adoption Among Developers (2024-2025)
-    3. AI Coding Agents Emerged (Late 2024-2025)
-  - **Layer 2: Infrastructure & Standards**
-    4. Natural Language Specifications Became Executable (2024-2025)
-    5. Model Context Protocol (MCP) Standardized Tool Integration (2024)
-    6. AI-Native IDEs Matured (2023-2025)
-  - **Layer 3: Production Readiness**
-    7. Cloud-Native Infrastructure Became Production-Ready (2020-2025)
-    8. Composable Architectures Enabled Modular AI Systems (2024-2025)
-    9. Universal Deployment Platforms Simplified Distribution (2023-2025)
-- **The Three-Layer Stack**: How the layers interoperate
-- **Snakes and Ladders**: Competitive dynamics and vertical opportunities
-- **Synthesis**: Why convergence matters more than any single revolution
+**Learning Objectives**:
+- LO-2.1: Define vibe coding and Spec-Driven Development; identify their key characteristics
+- LO-2.2: Explain failure modes of vibe coding in production contexts (ambiguous requirements, missing tests, architecture drift)
+- LO-2.3: Understand when each approach is appropriate (learning vs. production; solo vs. team; exploration vs. delivery)
+- LO-2.4: Recognize that AI amplifies both good and bad practices (DORA perspective)
 
-**Visual Aids**:
-- Timeline diagram showing all 9 revolutions (2020-2025)
-- Three-layer stack architecture illustration
-- Snakes and Ladders competitive pattern diagram
+**Key Concepts** (4 maximum):
+1. **Vibe Coding** — Exploration mode; valid for learning, problematic for production
+2. **Spec-Driven Development** — Production mode with specification, tests, review guardrails
+3. **Team A/B Comparative Example** — Concrete illustration of consequences
+4. **AI as Amplifier** — Why discipline becomes MORE critical, not less, with AI
 
-**Scaffolding Strategy** (skill 2):
-- Present revolutions in logical groups (3+3+3) rather than overwhelming list
-- Use "Why This Matters" boxes after each group
-- Provide concrete examples for each revolution (not abstract)
-- Progressive disclosure: overview → details → synthesis
-
-**Learning Objectives** (skill 1):
-- LO-2.1: Name and briefly explain at least 3 of the 9 revolutions
-- LO-2.2: Describe the three-layer AI development stack and how layers work together
-- LO-2.3: Identify at least one vertical market opportunity using Snakes and Ladders pattern
-- LO-2.4: Explain why technological convergence created unprecedented conditions
-
-**Code Examples** (skill 3):
-- No code in this lesson (conceptual explanation only)
-- Future reference: "In Chapter 4, you'll use these tools to write your first AI-assisted program"
-
-**Assessment** (skill 5):
-- Quick Check: "Match each revolution to its layer (Foundation/Infrastructure/Production)"
-- Reflection: "Which revolution surprised you most? Why?"
-- Exercise Preview: Identify one industry vertical you could target
-
----
-
-### Lesson 3: "The New Wave of AI Coding Agents" (1,200-1,400 words)
-**Purpose**: Provide practical understanding of the four major tools readers will encounter
-
-**Key Concepts (4)**:
-1. What Makes AI Coding Agents Different - Autonomous execution vs. autocomplete
-2. The Four Major Agents - Claude Code, Gemini CLI, OpenAI Codex, Qwen Code
-3. Tool Selection Criteria - Pricing, licensing, capabilities, use cases
-4. Model Context Protocol (MCP) - Why standardization enables interoperability
-
-**Content Flow**:
-- **The Shift**: From autocomplete (GitHub Copilot) to autonomous agents
-- **The Four Major Tools** (structured comparison):
-  - **Claude Code**: Best for deep contextual understanding and autonomous refactoring
-    - Capabilities: Subagents, skills, hooks, checkpoints
-    - Pricing: Pro/Max subscribers
-    - Best for: Complex refactoring, large codebases
-  - **Gemini CLI**: Most generous free tier and Google ecosystem integration
-    - Capabilities: 1M token context, Google Search grounding, MCP-based
-    - Pricing: 60 requests/min, 1,000/day free
-    - Best for: Beginners, cost-conscious developers
-  - **OpenAI Codex**: Strongest team collaboration and enterprise tooling
-    - Capabilities: Slack integration, mobile support, admin tools
-    - Pricing: ChatGPT Plus/Pro/Business/Enterprise
-    - Best for: Team workflows, enterprise environments
-  - **Qwen Code**: Most cost-effective and fully open for customization
-    - Capabilities: 256K context (expandable to 1M), state-of-the-art open model
-    - Pricing: 2,000 requests/day free, Apache 2.0 license
-    - Best for: Customization, cost savings, transparency
-- **Tool Selection Decision Framework**: How to choose based on needs
-- **MCP Standard**: Why interoperability matters and how it works
-- **The Open Source Advantage**: Community innovation, no vendor lock-in
-
-**Visual Aids**:
-- Comparison table: 4 tools across pricing, capabilities, use cases, context windows
-- Decision tree: "Which tool should I use?" based on needs
-- MCP ecosystem diagram showing tool interoperability
-
-**Scaffolding Strategy** (skill 2):
-- Present tools with consistent structure (capabilities, pricing, best for)
-- Use comparison table for quick reference
-- Provide decision framework before overwhelming with details
-- Emphasize that readers can choose ONE tool initially (reduce anxiety)
-
-**Learning Objectives** (skill 1):
-- LO-3.1: Identify the key differentiator for each of the four major AI coding agents
-- LO-3.2: Match tool capabilities to specific use cases (e.g., "I need free tier" → Gemini/Qwen)
-- LO-3.3: Explain the advantages of open-source tools (Gemini CLI, Qwen Code) vs. proprietary
-- LO-3.4: Understand how Model Context Protocol (MCP) enables tool interoperability
-
-**Assessment** (skill 5):
-- Quick Check: "Match each tool to its key strength (free tier, enterprise, customization, context)"
-- Scenario: "You're a solo developer on a budget. Which tool should you try first? Why?"
-- Preview Chapter 3: "In the next chapter, you'll install your chosen tool"
-
----
-
-### Lesson 4: "Vibe Coding vs. Spec-Driven Development" (800-1,000 words)
-**Purpose**: Introduce the methodological distinction and DORA perspective on discipline
-
-**Key Concepts (3)**:
-1. Two Development Patterns - Vibe coding (exploration) vs. SDD (production)
-2. DORA Perspective - AI amplifies existing organizational capabilities (good or bad)
-3. When to Use Each Approach - Learning/prototyping vs. production systems
-
-**Content Flow**:
-- **Introduction**: Speed without method accelerates defects
-- **Vibe Coding** (Alexandr Wang's term):
-  - Definition: Intuition-led, prompt-and-iterate exploration
-  - Strengths: Rapid prototyping, low cognitive overhead, creative leaps
-  - Failure modes: Ambiguous requirements, missing tests, architecture drift
-  - Appropriate contexts: Learning, exploration, proof-of-concept
-- **Spec-Driven Development**:
-  - Definition: Specification-first workflow (spec → plan → tasks → implement)
-  - Strengths: Predictable delivery, maintainable code, team collaboration
-  - Guardrails: TDD (tests first), ADRs (document decisions), PRs (review)
-  - Appropriate contexts: Production systems, multi-person projects
-- **The Comparative Example**: Team A (vibe coding) vs. Team B (SDD + TDD)
+**Content Outline**:
+- **Introduction** (100 words): Speed without method accelerates defects
+- **Section 1: Vibe Coding** (250-300 words):
+  - Definition: Intuition-led, prompt-and-iterate without upfront specs
+  - Strengths: Low cognitive overhead, fast feedback, creative discovery
+  - Failure modes: Ambiguous requirements, missing tests, architecture drift, refactoring cost explosion
+  - Best for: Learning, exploration, proof-of-concept
+- **Section 2: Spec-Driven Development** (250-300 words):
+  - Definition: Spec → plan → tests → code → review workflow
+  - Three guardrails: TDD, ADRs, PR review
+  - Strengths: Predictable delivery, maintainable code, sustainable velocity, team collaboration
+  - Best for: Production systems, multi-person teams, systems with longevity requirements
+- **Section 3: Comparative Example — Team A vs. Team B** (300-400 words):
   - Task: Add `/summarize` endpoint for PDF documents
-  - Team A: Ships fast, breaks in staging, accumulates tech debt
-  - Team B: Specs first, tests first, ships smoothly, extends confidently
-- **DORA Findings**: AI amplifies strengths AND friction
-  - High performers: Use AI for throughput AND stability
-  - Strugglers: AI accelerates existing dysfunction
-- **The Balanced Approach**: Vibe coding for discovery, SDD for delivery
-- **Preview Part 5**: "Later in the book, you'll learn Spec-Kit Plus methodology in detail"
+  - Team A (vibe coding): Fast ship, breaks in staging, impossible to extend, tech debt spirals
+  - Team B (SDD): Specs first, tests first, reliable ship, easy to extend, velocity sustainable
+  - Key insight: SDD doesn't slow you down; it accelerates sustainable delivery
+- **Why This Matters for YOU** (150-200 words): Frames both approaches as valid tools with different contexts
+- **Quick Check** (50-100 words): 3 questions on appropriate contexts and failure modes
 
 **Visual Aids**:
-- Comparison table: Vibe Coding vs. SDD (strengths, failure modes, contexts)
-- Team A vs. Team B workflow diagrams showing process differences
+- Comparison table: Vibe Coding vs. SDD (Definition, Strengths, Failure Modes, Best For)
+- Workflow diagram: Team A (reactive cycle) vs. Team B (proactive progression)
 
-**Scaffolding Strategy** (skill 2):
-- Present both approaches neutrally (avoid "bad vs. good")
-- Use concrete example (Team A/B) before abstract principles
+**Scaffolding Strategy**:
+- Present vibe coding neutrally (not as "bad"), emphasizing its valid use cases
+- Use concrete Team A/B example BEFORE abstract principles
 - Emphasize "when to use each" rather than prescriptive judgment
-- Frame as "both have value" but production requires discipline
+- Frame SDD not as slower, but as aligning human intent with AI implementation
 
-**Learning Objectives** (skill 1):
-- LO-4.1: Describe the failure modes of vibe coding in production contexts
-- LO-4.2: Explain when vibe coding is valuable (learning, exploration, prototyping)
-- LO-4.3: Understand why specifications become more important when AI generates code faster
-- LO-4.4: Recognize that AI amplifies existing organizational capabilities (DORA perspective)
+**Assessment Method** (Skill 5):
+- Quick Check 1 (T/F): "Vibe coding is bad and should never be used." (Answer: False)
+- Quick Check 2: "You're learning a new Python library. Should you use vibe coding or SDD? Why?"
+- Quick Check 3: "What happens when Team A tries to extend the /summarize endpoint for Word documents?"
 
-**Assessment** (skill 5):
-- Quick Check: "True or False: Vibe coding is bad and should never be used." (Answer: False)
-- Scenario: "You're learning a new Python library. Should you use vibe coding or SDD? Why?"
-- Reflection: "Think of a time you moved fast and broke things. What would specs have prevented?"
-
-**Exercise Designer** (skill 4):
-- **Exercise 1**: "What vertical could YOU dominate?" (connects to Snakes and Ladders)
-- **Exercise 2**: "Match tools to use cases" (reinforces Lesson 3 learning)
-- **Exercise 3**: "Explain to a skeptical colleague why 2025 is different" (synthesizes all lessons)
+**Connections**:
+- **From Lesson 1**: Uses evidence from inflection point to explain why AI throughput amplifies importance of discipline
+- **To Part III (DORA)**: "This distinction matters because AI amplifies both good and bad practices..."
+- **To Chapter 4**: Foreshadows "You'll practice TDD throughout this book"
 
 ---
 
-## Chapter-Level Learning Outcomes (Consolidated)
+### Lesson 3: "The DORA Perspective: AI Amplifies Organizational Capabilities" (800-1,000 words)
 
-By the end of Chapter 2, readers will be able to:
+**Purpose**: Explain why discipline matters more (not less) when AI increases throughput; provide organizational context.
 
-1. **Foundation Knowledge** (Lesson 1):
-   - Cite quantitative evidence (surveys, benchmarks) proving 2025 is an inflection point
-   - Recognize AI capability milestones (ICPC, GDPval) and their significance
+**Learning Objectives**:
+- LO-3.1: Explain the DORA finding that "AI amplifies existing capabilities" (both strengths and friction)
+- LO-3.2: Distinguish between high-performing and struggling organizations using AI
+- LO-3.3: Understand why velocity gains without stability create negative ROI
+- LO-3.4: Recognize that good practices are MORE critical with AI, not less
 
-2. **Technological Understanding** (Lesson 2):
-   - Name and explain at least 3 of the 9 technological revolutions
-   - Describe the three-layer AI development stack (Frontier Models → IDEs → Agents)
-   - Identify vertical market opportunities using Snakes and Ladders pattern
+**Key Concepts** (3 maximum):
+1. **AI as Force Multiplier** — Amplifies existing strengths and existing dysfunction
+2. **High-Performing Organizations** — Combine AI + TDD + review → velocity + stability
+3. **Struggling Organizations** — AI without discipline → velocity + instability (negative ROI)
 
-3. **Practical Tool Knowledge** (Lesson 3):
-   - Compare the four major AI coding agents (Claude Code, Gemini CLI, Codex, Qwen)
-   - Match tool capabilities to specific use cases based on needs
-   - Understand the Model Context Protocol (MCP) and why standardization matters
+**Content Outline**:
+- **Introduction** (100-150 words): DORA research on organizational impact of AI
+- **High-Performing Organizations** (250-300 words):
+  - Use AI to increase throughput AND maintain stability
+  - Combine TDD, code review, continuous deployment
+  - Result: 10%+ velocity gains without increased defect rates
+  - Example: Google's measured 10% velocity improvement with zero stability degradation
+- **Struggling Organizations** (250-300 words):
+  - Use AI without discipline
+  - Velocity increases but stability decreases
+  - Ship more broken code faster
+  - Example: Teams with 70% faster shipping but proportionally more bugs (negative ROI)
+- **Why This Matters** (150-200 words): AI is not a substitute for discipline; it's a multiplier. Good practices become essential.
+- **Quick Check** (50-100 words): 2-3 questions on amplification effect
 
-4. **Methodological Awareness** (Lesson 4):
-   - Distinguish between vibe coding (exploration) and SDD (production)
-   - Recognize when each approach is appropriate
-   - Understand that AI amplifies existing capabilities (DORA perspective)
+**Visual Aids**:
+- Comparison matrix: High-performing vs. struggling organizations (Practices, Velocity Gain, Stability Impact)
+- Illustration of "amplifier" concept with arrows showing positive and negative outcomes
 
-5. **Readiness for Chapter 3**:
-   - Feel motivated to install tools with confidence in their technological foundation
-   - Have tool selection criteria to make informed decisions
-   - Understand that discipline (specs, tests, reviews) makes AI collaboration sustainable
+**Scaffolding Strategy**:
+- Lead with the DORA research (evidence-based framing)
+- Present both organization types neutrally (not as "right vs. wrong")
+- Use concrete metrics (10% velocity, zero stability loss) to illustrate possibilities
+- Emphasize that TDD, review, and CI/CD are now MORE important, not optional
 
-## Content Quality Standards
+**Assessment Method** (Skill 5):
+- Quick Check 1: "True or False: AI allows you to skip TDD because the code is generated correctly." (Answer: False)
+- Quick Check 2: "Why does Google's 10% velocity gain WITHOUT stability loss matter?"
 
-All lessons MUST meet these requirements per constitution and Part 1 spec:
+**Connections**:
+- **From Lesson 2**: Explains why SDD matters — AI amplifies consequences of good/bad practices
+- **To Lesson 4**: "Now let's look at the specific tools and how to use them effectively..."
 
-### Language & Clarity (Principle 6 + User Guidance)
-- ✅ Use simple English (per user: "keep the lessons concise to keep readers engaged")
-- ✅ Define all jargon on first use with accessible analogies
-- ✅ Zero gatekeeping language ("simple," "obvious," "just")
-- ✅ Avoid superlatives and promotional language
-- ✅ Maintain neutral, evidence-based tone
+---
 
-### Cognitive Load (Part 1 Philosophy)
-- ✅ Maximum 3-4 key concepts per lesson
-- ✅ Progressive disclosure (overview → details → synthesis)
-- ✅ Visual aids to reduce text-heavy cognitive load
-- ✅ Clear section headings for skimming
-- ✅ "Why This Matters" context boxes for personalization
+### Lesson 4: "The New Wave of AI Coding Agents" (1,000-1,200 words)
 
-### Pedagogical Consistency (Principle 9)
-- ✅ Show-then-explain pattern (examples before abstractions)
-- ✅ Real-world evidence before claims
-- ✅ Concrete scenarios before general principles
-- ✅ Learning objectives stated upfront in each lesson
+**Purpose**: Introduce the four major AI coding agents; help readers understand tool selection; explain MCP standardization.
 
-### Accessibility (Principle 8)
-- ✅ Alt text for ALL images
-- ✅ High contrast colors in diagrams
-- ✅ Text descriptions as fallbacks for visual content
-- ✅ Multiple reading paths (narrative + bullet points + tables)
+**Learning Objectives**:
+- LO-4.1: Identify the key differentiator for each of the four major AI coding agents
+- LO-4.2: Match tool capabilities to specific use cases based on pricing, licensing, and features
+- LO-4.3: Explain advantages of open-source tools (Gemini CLI, Qwen Code) vs. proprietary tools
+- LO-4.4: Understand Model Context Protocol (MCP) and why standardization enables interoperability
 
-### Assessment & Practice (Principle 5 + Skill 5)
-- ✅ Quick Check questions after each major concept
-- ✅ Reflection prompts connecting to reader experience
-- ✅ End-of-chapter exercises reinforcing key learning
-- ✅ Preview of next chapter to maintain continuity
+**Key Concepts** (4 maximum):
+1. **Shift from Autocomplete to Autonomous Agents** — Modern capabilities go beyond line completion
+2. **Four Major Agents** — Claude Code, Gemini CLI, OpenAI Codex, Qwen Code with distinct strengths
+3. **Tool Selection Criteria** — Budget, ecosystem, licensing, best-for use cases
+4. **MCP & Interoperability** — Why standardization matters; prevents vendor lock-in
+
+**Content Outline**:
+- **Introduction** (150-200 words): Transition from GitHub Copilot (autocomplete) to AI coding agents (autonomous execution)
+- **Section 1: Four Major Agents** (500-600 words):
+  - **Claude Code (Anthropic)**: Deep contextual understanding, excellent refactoring, subagents; Pro/Max pricing; best for complex codebases
+  - **Gemini CLI (Google)**: Most generous free tier, 1M token context, web grounding; 60 req/min, 1K/day free; best for budget-conscious learners
+  - **OpenAI Codex (OpenAI)**: Team collaboration, Slack integration, mobile; ChatGPT Plus/Pro/Business; best for team workflows
+  - **Qwen Code (Alibaba)**: Fully open-source Apache 2.0, most cost-effective, customizable; 2K req/day free; best for transparency and customization
+- **Section 2: Tool Selection Framework** (200-250 words):
+  - Decision criteria: Budget, ecosystem preference, team size, use case
+  - Emphasize: Choose one tool initially; don't need all four
+  - Mention MCP enables mixing tools later
+- **Section 3: MCP Standardization** (150-200 words):
+  - What MCP is: Standardization protocol for tool integration
+  - Why it matters: Enables seamless tool cooperation; prevents lock-in
+  - Example: Gemini CLI and Claude Code can both use same MCP-based tools
+- **Section 4: Open vs. Proprietary** (150-200 words):
+  - Proprietary: Cutting-edge, opaque training, vendor dependency
+  - Open Source: Transparent, customizable, community-driven, no lock-in
+  - Both have legitimate value
+- **Why This Matters for YOU** (150-200 words): Encourages confidence in tool selection; emphasizes your choice is valid
+- **Quick Check** (50-100 words): 2-3 questions on tool selection and licensing
+
+**Visual Aids**:
+- Comparison table: Four AI Coding Agents (Agent, Vendor, Pricing, Context Window, Best For)
+- Decision tree: Which tool should I choose? (based on budget, ecosystem, use case)
+- Diagram: MCP interoperability concept
+
+**Scaffolding Strategy**:
+- Present all four tools with consistent structure (Vendor, Strengths, Pricing, Best For)
+- Use comparison table for quick reference
+- Provide decision framework BEFORE detailed comparisons
+- Emphasize that readers can choose ONE tool initially (reduce decision anxiety)
+- Focus on enduring principles (three-layer stack, MCP, open vs. proprietary) that won't become outdated
+
+**Assessment Method** (Skill 5):
+- Quick Check 1: "Match each tool to its key differentiator (free tier, enterprise, customization, autonomous tasks)"
+- Quick Check 2: Scenario: "You're a solo developer on a budget. Which tool should you try first? Why?"
+- Quick Check 3: "What is MCP and why does it matter?"
+
+**Connections**:
+- **From Lesson 3**: Emphasizes these tools work best within disciplined practices
+- **To Chapter 3**: "In the next chapter, you'll install your chosen tool and start using it"
+- **To Chapter 4**: "You'll use these tools throughout the book for hands-on Python development"
+
+---
+
+## Integrated Learning Narrative
+
+The four lessons form a coherent narrative arc:
+
+1. **Lesson 1** answers "Why now?" with evidence
+2. **Lesson 2** answers "How should I approach AI-assisted development?" by contrasting vibe coding and SDD
+3. **Lesson 3** answers "Why does methodology matter?" through the DORA organizational lens
+4. **Lesson 4** answers "Which tools should I use?" with practical comparison and selection framework
+
+Each lesson builds on previous understanding; readers who complete all four have both "why" (Lessons 1-3) and "what" (Lesson 4) foundations for Chapter 3.
+
+---
+
+## Visual Assets Strategy
+
+**Approach**: Use visual PLACEHOLDERS during content writing; create actual graphics in a separate design phase.
+
+**Placeholder Benefits**:
+- Allows content writing to proceed without blocking on visual design
+- Placeholder text serves triple duty: placeholder content, design specification, and alt text
+- Enables parallel workflows: writers create content while designers plan visuals
+
+**Visual Assets Needed**:
+
+| # | Lesson | Asset | Purpose | Format |
+|---|--------|-------|---------|--------|
+| 1 | Lesson 1 | Timeline: AI Adoption Curve (2020-2025) | Show mainstream adoption acceleration | Timeline diagram |
+| 2 | Lesson 1 | Chart: AI Performance Milestones | Compare 2024 vs 2025 benchmark scores | Bar chart |
+| 3 | Lesson 2 | Comparison Table: Vibe vs. SDD | Side-by-side workflow comparison | Markdown table |
+| 4 | Lesson 2 | Workflow Diagram: Team A vs. Team B | Illustrate process differences | Flow diagram |
+| 5 | Lesson 3 | Matrix: High-Performing vs. Struggling | Compare organizational outcomes | Comparison matrix |
+| 6 | Lesson 4 | Comparison Table: Four Agents | Tool capabilities and pricing | Markdown table |
+| 7 | Lesson 4 | Decision Tree: Which Tool? | Guide tool selection | Decision tree |
+| 8 | Lesson 4 | Architecture Diagram: Three-Layer Stack | Show Frontier Models → IDEs → Agents | Architecture diagram |
+
+**Markdown Tables** (Assets 3, 6) can be implemented as functional tables immediately; graphical diagrams can be created later.
+
+---
+
+## Pedagogical Scaffolding Strategy
+
+### Cognitive Load Management
+- **Maximum 3-4 key concepts per lesson** (never more)
+- **Progressive disclosure**: Overview → details → synthesis
+- **"Why This Matters" context boxes** after each major section
+- **Visual aids** reduce text-heavy cognitive load
+- **Quick Checks** validate understanding before moving forward
+
+### Learning Progression
+- **Lesson 1** activates prior knowledge (Chapter 1's orchestrator mindset) and motivates
+- **Lesson 2** introduces two contrasting approaches (vibe vs. SDD) to frame methodology
+- **Lesson 3** provides organizational context that explains why methodology matters
+- **Lesson 4** presents practical toolkit (specific tools and how to choose)
+
+### Show-Then-Explain Pattern
+- Present evidence FIRST (ICPC results, adoption metrics), THEN explain significance
+- Present Team A/B example BEFORE abstract SDD principles
+- Present all four tools BEFORE decision framework
+- This approach aligns with Principle 9 (Show-Then-Explain)
+
+---
 
 ## Success Metrics (From Spec)
 
-Chapter 2 will be validated against these measurable outcomes:
-
-| Metric | Target | Validation Method |
-|--------|--------|-------------------|
-| SC-001 | 85% can name/explain 3+ revolutions | Post-chapter quiz or reflection exercise |
-| SC-002 | 80% can match tools to use cases | Scenario-based assessment in Lesson 3 |
-| SC-003 | 90% cite 2+ evidence points for inflection | Quick check in Lesson 1 |
-| SC-004 | 80% distinguish vibe coding vs. SDD | Scenario question in Lesson 4 |
-| SC-005 | 85% explain Snakes and Ladders + identify vertical | Exercise 1 completion |
-| SC-006 | 90% recognize AI amplifies capabilities | DORA perspective explanation |
-| SC-007 | 80% describe three-layer stack | Quick check in Lesson 2 |
-| SC-008 | 85% feel motivated for Chapter 3 | Reader feedback or survey |
-| SC-009 | 90% report chapter was accessible | Reader feedback (no cognitive overload) |
-| SC-010 | 80% complete end-of-chapter exercises | Exercise completion tracking |
-
-## Visual Assets Required
-
-**Note**: Visual assets will be created later. For initial lesson writing, use **placeholders** at appropriate locations in the content. Placeholders will be replaced with actual visuals in a subsequent phase.
-
-**Placeholder Format**:
-```markdown
-<!-- VISUAL PLACEHOLDER: [Asset Name] -->
-**[Asset Title]**
-
-[Text description of what the visual will show - this serves as both placeholder and alt text]
-
-*[Visual will be added in design phase]*
-<!-- END VISUAL PLACEHOLDER -->
-```
-
-**Example**:
-```markdown
-<!-- VISUAL PLACEHOLDER: Timeline-AI-Adoption-Curve -->
-**Timeline: AI Adoption Curve (2020-2025)**
-
-This timeline shows the mainstream adoption acceleration of AI coding tools from 2020 (experimental phase) to 2025 (mainstream adoption). Key milestones include: GitHub Copilot launch (2021), Cursor rapid growth (2023-2024), Claude Code reaching $500M ARR (2025), and Stack Overflow survey showing 84% developer adoption (2025).
-
-*[Visual will be added in design phase]*
-<!-- END VISUAL PLACEHOLDER -->
-```
-
-### Lesson 1 Visuals
-1. **Timeline: AI Adoption Curve (2020-2025)** - Shows mainstream adoption acceleration
-   - Data points: GitHub Copilot launch, Cursor growth, Claude Code $500M ARR, 84% Stack Overflow survey
-   - Alt text: "Timeline showing AI coding tool adoption from 2020 (experimental) to 2025 (mainstream)"
-
-2. **Bar Chart: AI Performance Milestones** - Compares 2024 vs 2025 capability benchmarks
-   - Data: GDPval scores (GPT-4o 13.7% → GPT-5 40.6%), ICPC results (human teams vs AI)
-   - Alt text: "Bar chart comparing AI coding performance 2024 vs 2025 showing 3x improvement"
-
-### Lesson 2 Visuals
-3. **Timeline: The Nine Revolutions (2020-2025)** - Shows when each revolution occurred
-   - Groups revolutions by layer (Foundation, Infrastructure, Production)
-   - Alt text: "Timeline showing nine technological revolutions grouped by infrastructure layer"
-
-4. **Architecture Diagram: Three-Layer Stack** - Illustrates how layers interoperate
-   - Layer 1: Frontier Models (GPT-5, Claude 4.5+, Gemini 2.5+)
-   - Layer 2: AI-First IDEs (Cursor, VS Code, Claude Code CLI)
-   - Layer 3: Development Agents (Claude Code, Gemini CLI, Codex, Qwen)
-   - Alt text: "Three-layer architecture showing Frontier Models feeding AI-First IDEs feeding Development Agents"
-
-5. **Snakes and Ladders Diagram** - Shows competitive dynamics across three layers
-   - Layer 1: Consumer AI → 2 winners (OpenAI 800M, Google Gemini)
-   - Layer 2: Horizontal Agents → 2 winners per domain (Claude Code #1, Gemini CLI #2)
-   - Layer 3: Vertical Agents → Unlimited winners across industry verticals
-   - Alt text: "Competitive pattern showing market consolidation in layers 1-2 but unlimited opportunities in layer 3 vertical markets"
-
-### Lesson 3 Visuals
-6. **Comparison Table: Four Major AI Coding Agents** - Side-by-side comparison
-   - Columns: Agent, Vendor, Pricing, Context Window, Key Capabilities, Best For
-   - Rows: Claude Code, Gemini CLI, OpenAI Codex, Qwen Code
-   - Alt text: "Comparison table of four AI coding agents showing pricing, capabilities, and ideal use cases"
-
-7. **Decision Tree: Which Tool Should I Use?** - Guides tool selection
-   - Branches: Budget (free tier needed?), Ecosystem (Google/OpenAI/Open Source?), Use Case (solo/team/enterprise?)
-   - Alt text: "Decision tree helping readers choose between Claude Code, Gemini CLI, Codex, and Qwen Code based on needs"
-
-### Lesson 4 Visuals
-8. **Comparison Table: Vibe Coding vs. SDD** - Side-by-side workflow comparison
-   - Columns: Approach, Definition, Strengths, Failure Modes, Appropriate Contexts
-   - Rows: Vibe Coding, Spec-Driven Development
-   - Alt text: "Comparison showing vibe coding suits exploration while SDD suits production"
-
-9. **Workflow Diagram: Team A vs. Team B** - Illustrates process differences
-   - Team A: Prompt → Code → Ship → Break → Fix (cycle repeats)
-   - Team B: Spec → Tests → Code → Review → Ship (smooth progression)
-   - Alt text: "Workflow comparison showing Team A's reactive cycle vs Team B's proactive process"
-
-## Lesson Writing Guidelines (For lesson-writer subagent)
-
-### Lesson Template Structure
-Each lesson MUST follow this structure:
-
-```markdown
-# Lesson [N]: [Title]
-
-## Learning Objectives
-- [LO statements from plan]
-
-## Introduction (Hook)
-[Compelling opening that connects to reader's experience]
-
-## [Section 1: Main Concept A]
-[Content with scaffolding]
-
-### Why This Matters for YOU
-[Personalization box]
-
-## [Section 2: Main Concept B]
-[Content with scaffolding]
-
-### Quick Check
-[Assessment questions]
-
-## [Section 3: Main Concept C]
-[Content with scaffolding]
-
-## Summary
-[Key takeaways - 3-4 bullet points maximum]
-
-## What's Next
-[Preview next lesson with continuity]
-```
-
-### Visual Placeholder Guidelines
-
-**IMPORTANT**: Visual assets are not yet created. Use placeholders at appropriate locations in lessons.
-
-**When to Insert Visual Placeholders**:
-- After introducing a concept that would benefit from visualization
-- Before or after complex explanations (timelines, architectures, comparisons)
-- At natural breaking points in the narrative flow
-- Where specified in the lesson plan (see Visual Assets Required section)
-
-**Placeholder Insertion Rules**:
-1. **Always use the standard placeholder format** (see Visual Assets Required section above)
-2. **Write comprehensive text descriptions** - These serve dual purposes:
-   - Act as placeholder content so readers can understand the concept even without the visual
-   - Provide specifications for future visual design
-   - Serve as alt text when visuals are added
-3. **Include all key information** - Data points, relationships, flow directions, labels
-4. **Use consistent naming**: Match the asset names from the Visual Assets Required section
-5. **Position strategically**: Place placeholders where they enhance understanding, not interrupt flow
-
-**Example Placement in Lesson Flow**:
-```markdown
-## The 2025 AI Inflection Point
-
-In the summer of 2025, something remarkable happened at the ICPC World Finals...
-
-[narrative explanation of ICPC results]
-
-<!-- VISUAL PLACEHOLDER: Timeline-AI-Adoption-Curve -->
-**Timeline: AI Adoption Curve (2020-2025)**
-
-This timeline shows the mainstream adoption acceleration...
-[full description as specified in plan]
-
-*[Visual will be added in design phase]*
-<!-- END VISUAL PLACEHOLDER -->
-
-This rapid adoption isn't just hype—it's backed by enterprise investment...
-[continue narrative]
-```
-
-**Comparison Tables** (Lesson 3, Lesson 4):
-- These can be implemented as **markdown tables immediately** (they don't require graphical design)
-- Still use placeholder comments for consistency, but include the working table
-- Example:
-```markdown
-<!-- VISUAL PLACEHOLDER: Comparison-Table-Four-AI-Agents -->
-**Comparison: Four Major AI Coding Agents**
-
-| Agent | Vendor | Pricing | Context Window | Best For |
-|-------|--------|---------|----------------|----------|
-| Claude Code | Anthropic | Pro/Max subscribers | 200K+ tokens | Complex refactoring, large codebases |
-| Gemini CLI | Google | 60 req/min free | 1M tokens | Beginners, cost-conscious developers |
-| OpenAI Codex | OpenAI | ChatGPT Plus/Pro | Varies | Team workflows, enterprise |
-| Qwen Code | Alibaba | 2,000 req/day free | 256K-1M tokens | Customization, open source |
-
-*[Table above is functional; graphical version may be added in design phase for enhanced readability]*
-<!-- END VISUAL PLACEHOLDER -->
-```
-
-### Tone & Voice Guidelines
-- **Conversational but authoritative**: "You might be wondering..." not "One might wonder..."
-- **Evidence-based**: Lead with data, cite sources, let facts speak
-- **Encouraging without condescending**: "This is complex, and that's okay" not "Don't worry, it's simple!"
-- **Transparent about complexity**: Acknowledge when concepts are challenging
-- **Future-focused**: "When you use Claude Code in Chapter 4..." creates anticipation
-
-### Integration Points Between Lessons
-- **Lesson 1 → Lesson 2**: "Now that you've seen the evidence, let's understand what made this possible..."
-- **Lesson 2 → Lesson 3**: "These nine revolutions created the foundation. Now let's meet the tools you'll actually use..."
-- **Lesson 3 → Lesson 4**: "You understand the tools. Now let's talk about how to use them effectively..."
-- **Lesson 4 → Chapter 3**: "You're ready to install your chosen tool and start your hands-on journey..."
-
-## Source Material Integration
-
-**Primary Sources** (available in `context/03_chap2_spec/`):
-1. **readme.md**: Complete combined content (Parts I + II)
-2. **readme1.md**: Academic-style paper on AI Turning Point with DORA perspective
-3. **readme2.md**: Developer-focused narrative on AI coding agents revolution
-4. **Images**: `typist.jpg`, `shift.png`, `coding_agents.png`, `claude_code.png`, `gemini.png`, `codex.png`, `qwen.png`
-
-**Content Extraction Strategy**:
-- **Lesson 1**: Extract from readme1.md sections 1-2 (Introduction, Evidence)
-- **Lesson 2**: Extract from readme1.md sections 2-3 (Evidence subsections, Modern Stack) + readme.md Part I sections
-- **Lesson 3**: Extract from readme2.md (Tool-specific sections: Claude Code, Gemini CLI, Codex, Qwen)
-- **Lesson 4**: Extract from readme1.md section 4 (Vibe Coding vs. SDD) + section 6 (DORA Perspective)
-
-**Synthesis Approach**:
-- Use readme1.md for evidence-based framing and DORA perspective
-- Use readme2.md for practical tool details and developer narrative
-- Combine both sources to create balanced, accessible lessons
-- Simplify academic language while preserving factual accuracy
-- Add pedagogical scaffolding not present in source material
-
-## Domain Skills Application Matrix
-
-| Skill | Lesson 1 | Lesson 2 | Lesson 3 | Lesson 4 | Chapter-Level |
-|-------|----------|----------|----------|----------|---------------|
-| **1. Learning Objectives** | 3 LOs stated upfront | 4 LOs stated upfront | 4 LOs stated upfront | 4 LOs stated upfront | 5 consolidated outcomes |
-| **2. Concept Scaffolding** | Hook → Evidence → Personal relevance | Overview → 3 groups → Synthesis | Shift → 4 tools → Decision framework | Both approaches → Example → Balance | Progressive 4-lesson sequence |
-| **3. Code Example Generator** | N/A (no code) | N/A (no code) | N/A (no code) | N/A (no code) | Code begins Chapter 4 |
-| **4. Exercise Designer** | Quick checks + reflection | Quick checks + reflection | Scenario + preview | Scenario + reflection | 3 end-of-chapter exercises |
-| **5. Assessment Builder** | 2 quick checks | 2 quick checks | 2 quick checks | 3 quick checks | Chapter-level validation metrics |
-| **6. Technical Clarity** | Define "inflection point", "mainstream adoption" | Define "context window", "token", "MCP" | Define "autonomous", "licensing", "open source" | Define "TDD", "ADR", "PR" | All jargon defined on first use |
-| **7. Book Scaffolding** | Part 1 Ch 2 position; references Ch 1 mindset | References Ch 1 context; previews Ch 3 tools | References Ch 1-2 foundation; sets up Ch 3 install | Synthesizes Ch 1-2; transitions to Ch 3 | Clear narrative arc across 4 lessons |
-| **8. AI-Augmented Teaching** | Shows AI capabilities advancing | Explains AI-enabling infrastructure | Introduces actual AI tools | Teaches AI collaboration discipline | Prepares readers for AI partnership |
-
-## Next Steps After Planning
-
-Once this plan is approved:
-
-1. ✅ **Phase 0 Complete**: Research complete (source materials in `context/03_chap2_spec/`)
-2. ✅ **Phase 1 Complete**: Lesson structure defined, visual assets specified, content extraction strategy documented
-3. ⏭️ **Next: /sp.tasks**: Generate task checklist for implementing all 4 lessons + exercises (with visual placeholders)
-4. ⏭️ **Then: Invoke lesson-writer subagent**: Write Lessons 1-4 following plan structure and applying all 8 domain skills
-   - **Note**: Lessons will use **visual placeholders** as specified in this plan
-   - Actual visual assets will be created in a separate design phase after content is complete
-5. ⏭️ **Then: Invoke technical-reviewer subagent**: Validate completed chapter content against constitution and quality standards
-6. 🎨 **Future: Visual Asset Creation Phase** (separate workflow):
-   - Design and create the 9 visual assets based on placeholder specifications
-   - Replace placeholders with actual images/diagrams
-   - Validate visual accessibility (alt text, high contrast, mobile rendering)
-   - This phase can proceed in parallel with other chapters or after Chapter 2 content approval
-
-## Notes & Decisions
-
-### Stakeholder Questions Addressed (From Spec)
-
-**Q1 (Depth vs. Breadth)**: Hybrid approach (1-C) - Main narrative accessible + optional "Deep Dive" context boxes for interested readers
-- **Implementation**: Lessons use simple language in main flow; "Why This Matters" boxes provide deeper context
-- **Rationale**: Serves both eager learners (main narrative) and skeptics/decision-makers (evidence boxes)
-
-**Q2 (Tool Coverage)**: Focus on two main tools (2-B) - Claude Code and Gemini CLI prioritized, others covered concisely
-- **Implementation**: Lesson 3 presents all four but emphasizes Claude Code (used in book examples) and Gemini CLI (best free tier)
-- **Rationale**: Reduces cognitive load while ensuring readers can make informed choices
-
-**Q3 (Chapter Length)**: Enforce 5,000-word limit (3-A) through judicious editing
-- **Implementation**: Lesson 1 (1,000-1,200), Lesson 2 (1,500-1,800), Lesson 3 (1,200-1,400), Lesson 4 (800-1,000) = ~4,500-5,400 words
-- **Rationale**: Respects Part 1 cognitive load philosophy; ensures 20-30 minute reading time
-
-**Q4 (Exercise Design)**: All three optional exercises (4-D)
-- **Implementation**: End-of-chapter section with three exercises readers can choose based on interests
-- **Rationale**: Maximum learning opportunity without overwhelming; reader autonomy
-
-**Q5 ("Vibe Coding" Emphasis)**: Brief mention (5-B) - Introduce conceptually, full treatment in Part 5
-- **Implementation**: Lesson 4 explains both approaches neutrally; references Part 5 for Spec-Kit Plus methodology
-- **Rationale**: Prevents bad habits early without overwhelming with methodology details
-
-### User Guidance Integration
-
-**"Use simple English and keep lessons concise"**:
-- ✅ Word count targets ensure brevity (4,500-5,400 words total)
-- ✅ Language guidelines emphasize accessibility (zero gatekeeping, define all jargon)
-- ✅ Lesson structure prioritizes clarity (3-4 concepts maximum per lesson)
-- ✅ Visual aids reduce text-heavy explanations
-
-### Technical Clarity Targets
-
-Terms requiring definition on first use:
-- **Lesson 1**: Inflection point, mainstream adoption, capability benchmark, ARR (Annual Recurring Revenue)
-- **Lesson 2**: Context window, token, frontier model, MCP, composable architecture, deployment platform
-- **Lesson 3**: Autonomous agent, licensing (open vs. proprietary), Apache 2.0, context window, subagent
-- **Lesson 4**: TDD (Test-Driven Development), ADR (Architecture Decision Record), PR (Pull Request), vibe coding, SDD
-
-### Risk Mitigation (From Spec Risk Analysis)
-
-**Risk 1 (Information Overload)**: Mitigated by 4-lesson structure, visual aids, progressive disclosure
-**Risk 2 (Tool Obsolescence)**: Mitigated by focusing on enduring principles (three-layer stack, MCP, selection criteria)
-**Risk 3 (Readers Skipping)**: Mitigated by strong hook (ICPC), "Why This Matters" boxes, clear Chapter 3 preview
-**Risk 4 (Skepticism)**: Mitigated by evidence-first approach, acknowledging past hype cycles, balanced perspective
-**Risk 5 (Visual Accessibility)**: Mitigated by alt text mandate, high contrast requirement, text fallbacks
-
-### Visual Asset Strategy
-
-**Decision**: Use placeholders for initial lesson writing; create actual visuals in separate design phase
-
-**Rationale**:
-- Allows content writing to proceed immediately without blocking on visual design
-- Placeholder text descriptions serve triple purpose: placeholder content, design specifications, and alt text
-- Enables parallel workflows: content team can write lessons while design team plans visual assets
-- Reduces iteration risk: finalize content first, then create visuals to match approved narrative
-- Comparison tables (Lessons 3-4) can be implemented as functional markdown tables immediately
-
-**Implementation**:
-- Standardized placeholder format specified in Visual Placeholder Guidelines section
-- 9 visual assets identified with comprehensive specifications
-- Comparison tables will be functional markdown (not graphical) in initial version
-- Visual creation phase documented as future step (can run parallel to other chapters)
-
-**Benefits**:
-- ✅ No blocking dependencies on visual design resources
-- ✅ Content can be validated and approved before visual investment
-- ✅ Placeholder descriptions ensure readers understand concepts even without graphics
-- ✅ Visual specifications embedded in placeholders guide future design work
+| Criterion | Measurement | Target |
+|-----------|-------------|--------|
+| SC-001 | Readers can name/explain 3+ evidence points | 85% |
+| SC-002 | Readers match tools to use cases correctly | 80% |
+| SC-003 | Readers articulate inflection point using evidence | 90% |
+| SC-004 | Readers distinguish vibe coding vs. SDD | 80% |
+| SC-005 | Readers identify vertical market opportunity | 85% |
+| SC-006 | Readers recognize AI amplifies capabilities | 90% |
+| SC-007 | Readers describe three-layer stack | 80% |
+| SC-008 | Readers feel motivated for Chapter 3 | 85% |
+| SC-009 | Readers report chapter was accessible | 90% |
+| SC-010 | Readers complete end-of-chapter exercises | 80% |
+
+**Measurement Methods**:
+- **Quick Checks** embedded in lessons (immediate feedback)
+- **End-of-chapter exercises** with rubrics
+- **Optional reader survey** (post-chapter reflection)
 
 ---
 
-**Plan Status**: ✅ Ready for task generation (`/sp.tasks`) and lesson writing (lesson-writer subagent)
+## Integration with Book Structure
+
+### Connection to Chapter 1
+- **Chapter 1** establishes: "You are now an orchestrator, not just a coder"
+- **Chapter 2** provides context: "Here's why that shift is happening now, what tools enable it, and how to use them effectively"
+- **Explicit reference**: "In Chapter 1, we talked about shifting your mindset from coder to orchestrator. Chapter 2 explains why this moment is different and introduces the tools that make orchestration possible."
+
+### Connection to Chapter 3
+- **Chapter 2** prepares: Readers understand the technology, tools, and methodology
+- **Chapter 3** begins: "Now let's install your chosen tool and write your first AI-assisted program"
+- **Explicit preview**: "In the next chapter, you'll install your chosen tool from Lesson 4 and start using it to build real Python programs."
+
+### Reference to Part 5 (Spec-Kit Methodology)
+- **Chapter 2** introduces: Vibe coding vs. SDD distinction (conceptual)
+- **Part 5** teaches: Full Spec-Kit Plus workflow with practice
+- **Explicit note**: "We'll dive much deeper into Spec-Kit Plus methodology in Part 5. For now, understand that production systems benefit from specifications, tests, and peer review."
+
+---
+
+## Timeline & Effort Estimates
+
+**Phase 1: Setup & Foundation** (10-12 hours)
+- Create lesson outlines
+- Develop learning objectives, concept map, terminology guide
+- Design Quick Checks and exercises
+- Specify visual asset requirements
+
+**Phase 2: Content Writing** (15-18 hours)
+- Write Lesson 1 (4-5 hours)
+- Write Lesson 2 (4-5 hours)
+- Write Lesson 3 (3-4 hours)
+- Write Lesson 4 (4-5 hours)
+
+**Phase 3: Integration & Exercises** (4-6 hours)
+- Create end-of-chapter exercises with solutions
+- Write transitions between lessons
+- Create chapter index and navigation
+
+**Phase 4: Review & Validation** (6-8 hours)
+- Accessibility review (alt text, readability)
+- Coherence review (transitions, integration with other chapters)
+- Success criteria validation
+- Constitution alignment verification
+
+**Total Effort**: 35-44 hours
+
+---
+
+## Next Steps
+
+Once this plan is approved:
+
+1. ✅ **Phase 0 & 1 Complete**: Research and planning done
+2. ⏭️ **Invoke lesson-writer subagent**: Implement all 4 lessons following this plan
+3. ⏭️ **Invoke technical-reviewer subagent**: Validate completed chapter
+4. 📦 **Integration**: Commit to feature branch; merge to main after approval
+
+---
+
+**Plan Status**: ✅ **READY FOR IMPLEMENTATION**
+
+This plan provides sufficient detail for lesson implementation without additional clarification.
