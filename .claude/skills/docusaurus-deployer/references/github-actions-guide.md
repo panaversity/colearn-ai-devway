@@ -6,7 +6,7 @@ GitHub Actions automates Docusaurus site building and deployment to GitHub Pages
 
 ## Workflow Configuration
 
-Create `.github/workflows/deploy.yml` in your repository root using the template in `references/deploy-workflow.yml`.
+Create `.github/workflows/deploy.yml` in your repository root using eactly the template in `references/deploy-workflow.yml`.
 
 ### Key Workflow Features
 
@@ -85,14 +85,14 @@ build:
 4. Builds the site
 5. Uploads build artifacts for deployment
 
-**Working Directory**: `website` - Adjust if Docusaurus is in different subdirectory
+**Working Directory**: `book-soruce` - Adjust if Docusaurus is in different subdirectory
 
 #### 2. Deploy Job
 ```yaml
 deploy:
   name: Deploy to GitHub Pages
   needs: build
-  if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+  if: github.event_name == 'push' && (github.ref == 'refs/heads/main')
   environment:
     name: github-pages
     url: ${{ steps.deployment.outputs.page_url }}
@@ -105,7 +105,7 @@ deploy:
 
 **What it does**:
 1. Waits for build job to complete successfully
-2. Only runs on pushes to main/master branches
+2. Only runs on pushes to main branch
 3. Sets deployment environment
 4. Deploys to GitHub Pages
 
@@ -122,21 +122,21 @@ mkdir -p .github/workflows
 
 ### Step 2: Adjust Working Directory (if needed)
 
-If Docusaurus is not in a `website/` subdirectory, update workflow:
+If Docusaurus is not in a `book-source/` subdirectory, update workflow:
 
 ```yaml
 - name: Install dependencies
-  working-directory: ./  # or your actual directory
+  working-directory: ./book-source  # or your actual directory
   run: npm ci
 
 - name: Build website
-  working-directory: ./
+  working-directory: ./book-source
   run: npm run build
 
 - name: Upload build artifact
   uses: actions/upload-pages-artifact@v3
   with:
-    path: build/  # Adjust path based on location
+    path: ./book-source/build/  # Adjust path based on location
 ```
 
 ### Step 3: Commit and Push

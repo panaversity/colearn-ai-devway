@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CoLearning Python: The AI-Driven Way',
-  tagline: 'Master modern Python with AI-assisted development',
+  title: 'CoLearn - AI Dev Way',
+  tagline: 'Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://panaversity.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/colearning-python/',
+  baseUrl: '/colearn-ai-devway/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearning-python', // Usually your repo name.
+  projectName: 'colearn-ai-devway', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',

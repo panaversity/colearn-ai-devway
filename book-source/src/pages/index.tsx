@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/Introducing-AI-Driven-Development/intro">
             Start Learning Now
           </Link>
         </div>
@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Master modern Python with AI-assisted development">
+      description="Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way">
       <HomepageHeader />
     </Layout>
   );
