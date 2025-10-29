@@ -264,6 +264,88 @@ All book content MUST be created using these 8 skills. Located in `.claude/skill
 
 ---
 
+## The 3 Strategic Subagents
+
+When creating book content, you work with 3 specialized subagents that execute specific phases of the SpecKit SDD loop:
+
+**Located in:** `.claude/agents/`
+
+### 1. chapter-planner
+**Executes:** Plan + Tasks phases of SDD loop
+**Input:** Approved chapter spec (specs/part-X/chapter-Y-spec.md)
+**Output:**
+- Detailed lesson-by-lesson plan (specs/part-X/chapter-Y-plan.md)
+- Task checklist (specs/part-X/chapter-Y-tasks.md)
+**Skills Used:** learning-objectives, concept-scaffolding, book-architecture
+**When to use:** After spec is approved, to break down chapter into implementable lessons
+
+### 2. lesson-writer
+**Executes:** Implement phase of SDD loop (iterative, lesson by lesson)
+**Input:** Lesson plan from chapter-planner
+**Output:** Actual lesson content (markdown sections)
+**Skills Used:** All 8 skills (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-architecture, ai-augmented-teaching)
+**When to use:** To write actual content for each lesson, one at a time
+**Output Style:** Uses lesson.md formatting
+
+### 3. technical-reviewer
+**Executes:** Validate phase of SDD loop
+**Input:** Complete lesson or chapter content
+**Output:** Validation report with technical accuracy review
+**Skills Used:** technical-clarity, code-example-generator (for testing)
+**When to use:** After chapter is complete, to catch issues before publication
+
+---
+
+## SpecKit SDD Loop for Chapter Development
+
+Each of the chapters follows this workflow:
+
+### Phase 1: SPEC (You + Main Claude)
+**Who:** Human collaborates with main Claude orchestrator
+**Subagent:** None (strategic planning requires human judgment)
+**Output:** `specs/part-X/chapter-Y-spec.md`
+**Contents:**
+- Chapter overview and learning objectives
+- Topics to cover
+- Prerequisites
+- Success criteria
+- What's out of scope
+
+### Phase 2: PLAN + TASKS (chapter-planner subagent)
+**Who:** chapter-planner subagent
+**Input:** Approved spec from Phase 1
+**Output:**
+- `specs/part-X/chapter-Y-plan.md` (detailed lesson breakdown)
+- `specs/part-X/chapter-Y-tasks.md` (implementation checklist)
+**Contents:**
+- Lesson-by-lesson breakdown
+- For each lesson: learning objectives, code examples needed, key concepts, practice exercises
+- Time estimates
+- Implementation order
+
+### Phase 3: IMPLEMENT (lesson-writer subagent)
+**Who:** lesson-writer subagent (iterative)
+**Input:** Lesson plans from Phase 2
+**Process:** Write lessons one at a time, with human review after each
+**Output:** `docs/part-X/chapter-Y.mdx` (complete chapter)
+**Workflow:**
+1. Write Lesson 1 → Human reviews → Approve
+2. Write Lesson 2 → Human reviews → Approve
+3. [Continue for all lessons...]
+4. Integrate all lessons into final chapter
+
+### Phase 4: VALIDATE (technical-reviewer subagent)
+**Who:** technical-reviewer subagent
+**Input:** Complete chapter from Phase 3
+**Output:** Validation report
+**Checks:**
+- All code examples run correctly
+- Technical accuracy of explanations
+- Pedagogical effectiveness
+- Constitution compliance
+
+---
+
 ## Book Structure: Separation of Concerns
 
 The project uses a **three-layer structure** for managing the 32-chapter book:
@@ -283,39 +365,170 @@ The project uses a **three-layer structure** for managing the 32-chapter book:
 
 ### Layer 3: Output Styles (HOW to write)
 📍 **Location**: `.claude/output-styles/`
-- `chapters.md` — Generic chapter formatting template
-- `lesson.md` — Generic lesson formatting template
+- `chapter-plan.md` — Formatting for chapter plans (used by chapter-planner subagent)
+- `lesson.md` — Formatting for lesson content (used by lesson-writer subagent)
 - **These are REUSABLE TEMPLATES, not chapter-specific**
 
-### Workflow for Content Creators
+### Workflow for Content Creators (4-Phase SDD Loop)
 
-When creating a chapter:
+When creating a chapter, follow the SpecKit SDD loop:
 
-1. **Consult `specs/book/chapter-index.md`** → Find which chapter to write
-   - What is the chapter number?
-   - What is the exact title?
-   - What filename should it have?
-   - What part does it belong to?
+#### Phase 1: SPEC (You + Main Claude)
+**Consult:**
+- `specs/book/chapter-index.md` → Find which chapter to write
+- Constitution principles → Understand requirements
 
-2. **Follow `.claude/output-styles/chapters.md`** → Learn how to structure and format
-   - Chapter structure requirements
-   - Docosaurus frontmatter format
-   - Writing standards for the part
-   - Validation checklist
+**Actions:**
+- Collaborate with main Claude (NOT a subagent)
+- Use learning-objectives and concept-scaffolding skills
+- Create: `specs/part-X/chapter-Y-spec.md`
+- Get approval before proceeding
 
-3. **Apply domain skills** → Ensure quality
-   - Use learning-objectives skill to define outcomes
-   - Use code-example-generator for examples
-   - Use book-architecture skill for flow
-   - etc.
+#### Phase 2: PLAN (chapter-planner subagent)
+**Command:** `"Use chapter-planner subagent to create plan from [spec file]"`
 
-### Key Benefit
+**Subagent Actions:**
+- Reads approved spec
+- Uses concept-scaffolding, book-architecture skills
+- Breaks chapter into 5-7 lessons
+- Defines code examples, key concepts, exercises for each lesson
+- Creates:
+  - `specs/part-X/chapter-Y-plan.md`
+  - `specs/part-X/chapter-Y-tasks.md`
+
+**You Review:** Plan structure, lesson breakdown, time estimates
+**You Approve:** Before moving to implementation
+
+#### Phase 3: IMPLEMENT (lesson-writer subagent, iterative)
+**Command:** `"Use lesson-writer subagent to write Lesson N from chapter plan"`
+
+**Subagent Actions:**
+- Reads lesson plan
+- Uses ALL 8 domain skills
+- Follows `.claude/output-styles/lesson.md` formatting
+- Writes complete lesson content
+
+**You Review:** Each lesson individually
+**You Iterate:** Revise specific sections as needed
+**You Approve:** Each lesson before moving to next
+
+**After All Lessons:**
+- Integrate into final chapter file
+- Output: `docs/part-X/chapter-Y.mdx`
+
+#### Phase 4: VALIDATE (technical-reviewer subagent, optional)
+**Command:** `"Use technical-reviewer subagent to validate [chapter file]"`
+
+**Subagent Actions:**
+- Tests all code examples
+- Checks technical accuracy
+- Verifies pedagogical effectiveness
+- Reviews constitution compliance
+- Generates validation report
+
+**You Review:** Validation report
+**If Issues:** Use lesson-writer to fix
+**If Approved:** Chapter ready for publication
+
+### Key Benefits
 
 This separation means:
 - ✅ Output styles remain **generic and reusable** (can be used for other projects)
 - ✅ Chapter assignments are **centralized** (single source of truth)
 - ✅ Easy to **update chapter titles or order** without changing templates
 - ✅ Clear **separation between WHAT and HOW**
+- ✅ Measurable progress with phase artifacts
+- ✅ Resumable work after breaks (all state in files)
+
+---
+
+## File Organization Per Chapter
+
+Each chapter produces these artifacts:
+
+```
+specs/
+└── part-X/
+    ├── chapter-Y-spec.md      [Phase 1: Requirements and scope]
+    ├── chapter-Y-plan.md      [Phase 2: Detailed lesson breakdown]
+    └── chapter-Y-tasks.md     [Phase 2: Implementation checklist]
+
+docs/
+└── part-X/
+    └── chapter-Y-title.mdx     [Phase 3: Final published chapter]
+```
+
+### Example for Chapter 5:
+```
+specs/
+└── part-2/
+    ├── chapter-05-spec.md
+    ├── chapter-05-plan.md
+    └── chapter-05-tasks.md
+
+docs/
+└── part-2/
+    └── 05-functions-type-hints.mdx
+```
+
+### Resuming Work After Break
+
+To resume work on a chapter:
+
+1. **Check what's done:**
+   ```bash
+   cat specs/part-2/chapter-05-tasks.md
+   # Shows checkboxes: [x] = done, [ ] = todo
+   ```
+
+2. **Read context:**
+   - Spec: `specs/part-2/chapter-05-spec.md` (requirements)
+   - Plan: `specs/part-2/chapter-05-plan.md` (lesson breakdown)
+   - Tasks: `specs/part-2/chapter-05-tasks.md` (checklist)
+
+3. **Continue from checkpoint:**
+   - If tasks show "Lesson 3" incomplete
+   - Command: `"Use lesson-writer to write Lesson 3 from chapter-05-plan.md"`
+
+**No context loss** — all state is in files.
+
+---
+
+## Subagent Invocation Guidelines
+
+### When to Use Subagents
+
+**✅ Use subagents when:**
+- Executing specific SDD phases (Plan, Implement, Validate)
+- Generating content following approved plans
+- Need isolated context for focused work
+- Want to preserve main conversation context
+
+**❌ Don't use subagents when:**
+- Having strategic discussions (use main Claude)
+- Making architectural decisions (human-led)
+- Clarifying requirements (collaborative dialogue)
+- Quick questions or brief edits
+
+### Subagent Context Management
+
+**Each subagent has isolated context:**
+- Prevents pollution of main conversation
+- Can run intensive operations without bloating main thread
+- Fresh perspective for review (technical-reviewer)
+
+**But they can read shared files:**
+- Constitution (`.specify/memory/constitution.md`)
+- Skills (`.claude/skills/`)
+- Output styles (`.claude/output-styles/`)
+- Specs, plans, tasks (all in `specs/`)
+
+**Best Practice:**
+- Use main Claude for strategy and decisions
+- Use subagents for execution and validation
+- Keep main conversation focused on high-level orchestration
+
+---
 
 ## Code Standards
 
