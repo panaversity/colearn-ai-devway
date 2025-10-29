@@ -69,7 +69,7 @@ After break or reset:
     ├── exercise-designer/
     ├── technical-clarity/
     ├── assessment-builder/
-    ├── book-architecture/
+    ├── book-scaffolding/
     └── ai-augmented-teaching/
 ```
 
