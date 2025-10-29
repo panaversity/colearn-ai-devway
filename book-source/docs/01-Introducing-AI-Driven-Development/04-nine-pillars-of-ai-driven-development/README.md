@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
-title: "Chapter 1: Welcome to AI-Driven Development"
+sidebar_position: 4
+title: "Chapter 4: The Nine Pillar of AI Driven Development (AIDD)"
 ---
 
-# Chapter 1: Welcome to AI-Driven Development
+# Chapter 4: The Nine Pillar of AI Driven Development (AIDD)
 
 **Learning Outcomes:**
 - [To be completed in chapter spec]

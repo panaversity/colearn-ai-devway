@@ -1,9 +1,9 @@
 ---
-sidebar_position: 4
-title: "Chapter 4: Your First Program with AI"
+sidebar_position: 2
+title: "Chapter 2: AI Turning Point?"
 ---
 
-# Chapter 4: Your First Program with AI
+# Chapter 2: Understanding AI Tools
 
 **Learning Outcomes:**
 - [To be completed in chapter spec]
