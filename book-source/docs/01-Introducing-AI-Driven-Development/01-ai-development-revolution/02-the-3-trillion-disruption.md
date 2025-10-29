@@ -24,40 +24,13 @@ And it's being disrupted right now.
 
 Before we go further, let's address the obvious question: Where does $3 trillion come from? Is it real, or is it inflated marketing hype?
 
-Here's the straightforward calculation:
+Here's the calculation:
 
 ```
 Developer Economy Scale:
 
-30,000,000 developers worldwide
-×  $100,000 value per developer annually
-──────────────────────────────────────
-$3,000,000,000,000 (3 trillion)
+Estimates for the global developer population vary by source and definition. Industry trackers put the current professional developer population in the high-20 millions; for example, Evans Data and similar surveys estimate roughly ~26–28 million active developers in recent years. Because 'developer' definitions differ (professional vs. active contributors vs. hobbyists), we present a range rather than a single point estimate. Similarly, using a per-developer value to estimate market size requires a clear methodology: if one assumes a conservative per-developer economic impact (not salary) of $50k–$150k, the resulting market range would be roughly $1.3T–$4.1T — an order-of-magnitude estimate that illustrates scale but depends strongly on assumptions. State your assumptions when presenting a headline figure.
 ```
-
-Let's break down each component:
-
-**30 million developers worldwide** — This is a conservative estimate. It includes:
-- Professional software engineers at tech companies
-- Developers in non-tech industries (finance, healthcare, manufacturing)
-- Independent contractors and freelancers
-- Open-source contributors who generate economic value
-- DevOps engineers, site reliability engineers, and infrastructure specialists
-
-Not "people who have written code once," but people whose work primarily involves building or maintaining software systems.
-
-**$100,000 value per developer annually** — This isn't salary. It's the economic value each developer generates through their work:
-- The systems they build that enable business operations
-- The products they create that generate revenue
-- The automation they implement that reduces costs
-- The infrastructure they maintain that supports other value creation
-- The problems they solve that unlock new opportunities
-
-Think about it: If a developer builds a system that processes $50 million in transactions annually, or creates automation that saves a company $500,000 per year in manual work, or maintains infrastructure supporting a $100 million business—what's that worth? Far more than their salary.
-
-The $100,000 figure is actually conservative. Top developers in major markets generate millions in value annually. The global average balances high-value creation in developed economies with lower (but still substantial) value creation elsewhere.
-
-**$3 trillion is the result.** Not speculative. Not aspirational. A straightforward calculation of economic activity.
 
 ## What Does $3 Trillion Actually Mean?
 
