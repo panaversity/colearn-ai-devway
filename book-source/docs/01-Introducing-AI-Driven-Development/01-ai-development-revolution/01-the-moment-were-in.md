@@ -4,8 +4,6 @@ title: "The Moment We're In"
 duration: "8-10 minutes"
 ---
 
-> **Note**: AI market data and competitive landscape current as of October 2024. The AI coding tools sector evolves rapidly—verify current market conditions, available tools, and industry trends when reading this content.
-
 # The Moment We're In
 
 ## Learning Objectives
