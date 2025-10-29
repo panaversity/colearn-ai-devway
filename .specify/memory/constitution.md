@@ -1,9 +1,18 @@
 <!--
 Sync Impact Report:
-Version: 2.1.0 (Decoupled from project specifics, aligned with actual infrastructure)
+Version: 2.2.0 (Book structure expansion: 7 parts → 13 parts, 32 chapters → 46 chapters)
 Created: 2025-10-28
-Refactored: 2025-10-29
-Rationale: Removed hardcoded project details; now defers to authoritative sources (chapter-index.md). Updated infrastructure to match actual files. Replaced book-architecture with book-scaffolding skill based on proven learnings.
+Last Refactored: 2025-10-29
+Rationale: Expanded book to cover full stack (Python + TypeScript) and production deployment (Docker, Kubernetes, Databases, Kafka, Dapr). Added 14 new chapters covering advanced topics while consolidating foundational content for better flow.
+
+Changes in v2.2.0:
+- Expanded from 7 parts to 13 parts (added Parts 8-13)
+- Expanded from 32 chapters to 46 chapters (added 14 new advanced topic chapters)
+- Updated scaffolding ranges for 46 chapters: (1-9 heavy, 10-30 moderate, 31-46 minimal)
+- Added new parts: TypeScript, Realtime/Voice Agents, Docker/Kubernetes, Databases, Kafka/Dapr, Stateful Agents
+- Consolidated foundational content: Part 1 (5→3 ch), Part 3 (4→2 ch), Part 5 (5→3 ch)
+- Expanded Python coverage: Part 4 (8→12 chapters) with async, decorators, advanced types, packaging
+- All references now point to specs/book/chapter-index.md for 46-chapter structure
 
 Changes in v2.1.0:
 - Replaced book-architecture skill with book-scaffolding (skill 7)
@@ -25,7 +34,7 @@ Templates Aligned:
 
 # CoLearning Python & Agentic AI: The AI-Driven Way — Project Constitution
 
-**Version:** 2.1.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-29
+**Version:** 2.2.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-29
 
 ---
 
@@ -33,7 +42,7 @@ Templates Aligned:
 
 ### Vision
 
-"CoLearning Python & Agentic AI: The AI-Driven Way" is a 32-chapter technical book that teaches modern Python programming (3.13+) through systematic collaboration between human learners and AI assistants. It progresses from foundational AI-driven development through advanced topics including agentic AI systems and MCP (Model Context Protocol) frameworks. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
+"CoLearning Python & Agentic AI: The AI-Driven Way" is a 46-chapter technical book that teaches modern Python programming (3.13+) and TypeScript through systematic collaboration between human learners and AI assistants. It progresses from foundational AI-driven development through advanced topics including agentic AI systems and MCP (Model Context Protocol) frameworks. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
 
 ### Core Philosophy
 
@@ -119,7 +128,7 @@ Content difficulty MUST increase gradually with no sudden jumps. Earlier chapter
 **Why This Matters:** Beginners need scaffolding. Jumping complexity levels loses readers. Clear prerequisite chains allow modular learning and reference. Progressive complexity reduces frustration and increases completion rates.
 
 **What This Means:**
-- Progressive scaffolding: Early chapters (1-10) heavy support, middle chapters (11-20) moderate, later chapters (21-32) minimal
+- Progressive scaffolding: Early chapters (1-9) heavy support, middle chapters (10-30) moderate, later chapters (31-46) minimal
 - Concepts introduced once, then referenced by name
 - Explicit prerequisite chains documented
 - No forward references to unexplained concepts without saying "Chapter X covers this"
@@ -130,7 +139,7 @@ Content difficulty MUST increase gradually with no sudden jumps. Earlier chapter
 
 ### Principle 6: Consistent Structure Across All Chapters
 
-All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across 32 chapters.
+All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across 46 chapters.
 
 **Why This Matters:** Consistency in form allows readers to focus on content. It also makes chapters replaceable and updatable without cascading changes. Shared infrastructure enables AI and humans to collaborate effectively.
 
@@ -228,7 +237,7 @@ Multiple AI tools MUST be covered with honest comparison, not single-tool lock-i
 
 ## II.B Domain Skills (The 8 CoLearning Skills)
 
-All book development MUST leverage these 8 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all 32 chapters and 7 parts:
+All book development MUST leverage these 8 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all 46 chapters and 13 parts:
 
 ### 1. **learning-objectives** Skill
 Generate measurable learning outcomes aligned with Bloom's taxonomy. Ensures every chapter/lesson has clear, testable objectives that guide content creation and assessment. Critical for parts 6-7 (agentic AI, MCP) where emerging topics require careful scaffolding.
@@ -445,10 +454,10 @@ Three specialized agents manage the SDD loop phases (located in `.claude/agents/
 
 The book is complete and successful when:
 
-- [ ] All 32 chapters written and validated
+- [ ] All 46 chapters written and validated
 - [ ] All code examples tested and working
 - [ ] All chapters follow Constitution principles
-- [ ] Pedagogical flow coherent across all 7 parts
+- [ ] Pedagogical flow coherent across all 13 parts
 - [ ] No contradictions across chapters
 - [ ] All cross-references valid
 - [ ] Technical accuracy verified by domain experts

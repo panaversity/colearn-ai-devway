@@ -23,7 +23,7 @@ All book content follows a strict 3-level hierarchy:
 
 ```
 book-source/docs/
-├── [Part Level]          → Part folders (01-07)
+├── [Part Level]          → Part folders (01-13)
 │   ├── [Chapter Level]   → Chapter folders (directories, not files)
 │   │   └── [Lesson Level] → Lesson files (.md files)
 ```
@@ -39,23 +39,31 @@ book-source/docs/
 ├── 01-Introducing-AI-Driven-Development/
 ├── 02-AI-Tool-Landscape/
 ├── 03-Prompt-and-Context-Engineering/
-├── 04-Modern-Python-with-Type-Hints/
-├── 05-Spec-Kit-Methodology/
+├── 04-Python-The-Language-of-AI-Agents/
+├── 05-Spec-Kit-Plus-Methodology/
 ├── 06-Agentic-AI-Fundamentals/
-└── 07-MCP-Fundamentals/
+├── 07-MCP-Fundamentals/
+├── 08-TypeScript-Fundamentals/
+├── 09-Realtime-Voice-Agents/
+├── 10-Docker-Kubernetes/
+├── 11-Data-State-Memory/
+├── 12-Event-Driven-Architecture/
+└── 13-Stateful-Agents/
 ```
 
 ### Naming Convention
 
 **Format**: `NN-Part-Name/`
 
-- `NN` = Two-digit part number (01-07)
+- `NN` = Two-digit part number (01-13)
 - `Part-Name` = Capitalized words separated by hyphens
 - **Must be a directory** (not a file)
 
 **Examples**:
 - ✅ `01-Introducing-AI-Driven-Development/`
 - ✅ `06-Agentic-AI-Fundamentals/`
+- ✅ `08-TypeScript-Fundamentals/`
+- ✅ `13-Stateful-Agents/`
 - ❌ `1-Introduction/` (single digit)
 - ❌ `01_Introduction/` (underscores)
 - ❌ `01-introduction/` (lowercase)

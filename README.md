@@ -23,7 +23,7 @@
 
 ## 🎯 Vision
 
-**CoLearn – AI Dev Way** is a **32-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
+**CoLearn – AI Dev Way** is a **46-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
 It teaches **AI-driven development** through *systematic collaboration between human learners and AI assistants*, using **Python (3.13+)** and **TypeScript** as the foundation.
 
 The learning journey flows from fundamentals to advanced AI systems — including:
@@ -130,7 +130,7 @@ This book follows an ai collaboration driven progressive structure published on 
 
 **For detailed book structure information, see**:
 
-- **`specs/book/chapter-index.md`** — All 32 chapters with titles, numbers, and topics
+- **`specs/book/chapter-index.md`** — All 46 chapters across 13 parts with titles, numbers, and topics
 - **`specs/book/directory-structure.md`** — Complete file organization, paths, and naming conventions
 - **`.specify/memory/constitution.md`** — Project principles, vision, and quality standards
 
