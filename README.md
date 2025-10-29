@@ -1,15 +1,5 @@
 # 🧠 The Panaversity AI-Driven Way Book Series
 
-## CoLearning Programming & Agentic AI with Python and TypeScript
-
-<p align="center">
-  <img src="book_cover.png" alt="CoLearning Programming & Agentic AI - The AI-Driven Way" width="600" />
-</p>
-
-> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
-
-📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
-
 ---
 
 <p align="center">
@@ -26,6 +16,16 @@
 </p>
 
 ---
+
+## CoLearning Programming & Agentic AI with Python and TypeScript
+
+<p align="center">
+  <img src="book_cover.png" alt="CoLearning Programming & Agentic AI - The AI-Driven Way" width="600" />
+</p>
+
+> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
+
+📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
 
 ## 🎯 Vision
 
@@ -81,7 +81,7 @@ To pioneer an **agent-native model of computer science education** where AI is:
 
 ---
 
-## The 8 CoLearning Skills
+## The 9 CoLearning Skills
 
 1.  **learning-objectives:** Generate measurable learning outcomes.
 2.  **concept-scaffolding:** Break down complex topics into manageable steps.
@@ -91,9 +91,12 @@ To pioneer an **agent-native model of computer science education** where AI is:
 6.  **technical-clarity:** Ensure all explanations are clear and accessible.
 7.  **book-scaffolding:** Plan and structure multi-part educational content with cognitive load management.
 8.  **ai-augmented-teaching:** Design lessons that effectively integrate AI tools.
-
+9.  **evaluation-framework:** A comprehensive curriculm content designing framework.
 
 ## 3 Specialized Sub Agents
+- Chapter Planner
+- Lesson writer
+- Technical reviewer
 
 ---
 
