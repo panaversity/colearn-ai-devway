@@ -56,28 +56,35 @@ Validate completed chapters for publication readiness across four dimensions (ad
 - Look for exercises vs. reflection prompts
 - Identify as: Conceptual, Technical, or Hybrid
 
-### Phase 1: Content Accuracy Review
+### Phase 1: Content Accuracy & Source Verification
 
 **For Technical Chapters with Python code:**
 - Execute each code block to verify it runs without errors
+- Test on multiple platforms (Windows, Mac, Linux) where applicable
 - Confirm Python 3.13+ syntax is used throughout
 - Check that every function and class has comprehensive type hints (no `Any` unless justified)
 - Verify PEP 8 compliance (naming conventions, line length, imports, spacing)
 - Confirm output is clearly shown and matches expected results
 - Verify imports are complete and no dependencies are missing
 - Check for edge cases or potential runtime errors
+- **Verify source citations**: Factual claims include inline citations; tool versions are current
+- **Security check**: No hardcoded secrets, proper error handling, secure practices demonstrated
 
 **For Conceptual Chapters without code:**
-- Verify all factual claims are accurate (statistics, quotes, dates)
-- Check that real-world examples are relevant and current
+- **Verify all factual claims against reliable sources**: statistics (World Bank, academic databases), quotes (original sources), dates, technical terminology
+- Use web-fetch tools to verify claims are accurate and current
+- Check that real-world examples are relevant and current (not outdated)
 - Ensure analogies are appropriate and not misleading
 - Verify any technical terminology is used correctly
+- **Flag field volatility**: If chapter addresses rapidly-changing topics (AI tools, APIs), check for maintenance trigger notes
 
 **For All Chapters:**
-- Verify all claims are factually accurate
+- Verify all claims are factually accurate with sources cited
 - Check that concepts are explained with precision
 - Ensure terminology is consistent and correct
 - Identify any misleading comparisons or analogies
+- **Verify citations present**: All statistics, dates, technical claims must have inline citations
+- **Check for source citations**: Examples should reference the chapter or chapter index where appropriate
 
 ### Phase 2: Pedagogical Effectiveness Review
 
@@ -118,7 +125,40 @@ Validate completed chapters for publication readiness across four dimensions (ad
 - Can a learner complete this chapter in one sitting (conceptual: 20-30 min reading; technical: 45-90 min with practice)?  
 - Is the content density appropriate (not overwhelming)?  
 
-### Phase 3: Constitution Alignment Review
+### Phase 3: Topic Completeness & Book Gaps Checklist Review
+
+**Validate chapter against Book Gaps Checklist** (Section II.C in `.specify/memory/constitution.md`):
+
+**For ALL Chapters:**
+- [ ] **Factual Accuracy**: Are sources cited inline for all claims? (e.g., [World Bank, 2023])
+- [ ] **Field Volatility**: Do chapters addressing AI tools, APIs, Python versions include maintenance triggers?
+- [ ] **Inclusive Language**: No gatekeeping terms ("easy", "simple", "obvious")? Diverse examples? Gender-neutral?
+- [ ] **Accessibility**: Clear terminology? Concepts explained multiple ways? Appropriate pacing?
+- [ ] **Bias & Representation**: Diverse perspectives? No cultural stereotypes? Inclusive names and contexts?
+
+**For Technical Chapters:**
+- [ ] **Code Security**: No hardcoded secrets? Secure practices demonstrated? Disclaimers for AI-generated code?
+- [ ] **Ethical AI Use**: AI's limitations framed? Responsible use cases addressed? Biases acknowledged?
+- [ ] **Testing & Quality**: Code tested? Cross-platform compatibility verified? Error cases handled?
+- [ ] **Deployment Readiness**: Environment setup documented? Dependencies clear? Troubleshooting guide included?
+- [ ] **Scalability Awareness**: Real-world constraints mentioned? Production considerations addressed?
+- [ ] **Real-World Context**: Examples realistic (not toy problems)? Proper error handling?
+- [ ] **Engagement**: Opening hook present? Visual breaks? Appropriate pacing (5-7 min sections)?
+
+**For Conceptual Chapters:**
+- [ ] **Evidence-Based Claims**: All assertions backed by data/research? Sources cited inline?
+- [ ] **Diverse Perspectives**: Multiple viewpoints? Objections addressed? Not monolithic?
+- [ ] **Real-World Relevance**: Examples specific and concrete? Relevant to reader context?
+- [ ] **Narrative Flow**: Engaging hook? Natural progression? Compelling storytelling?
+- [ ] **Reflection Prompts**: Thought-provoking questions? Personal relevance?
+- [ ] **Professional Polish**: No hype? Balanced tone? Realistic opportunities and risks?
+
+**If gaps exist:**
+- Flag as critical if checklist items missing from spec
+- Provide specific recommendations for addressing gaps
+- Note whether gaps are content issues or minor polish items
+
+### Phase 3.5: Constitution Alignment Review
 
 **Domain Skills Coverage (Apply Contextually):**
 
@@ -126,15 +166,15 @@ Are all 8 CoLearning Domain Skills applied appropriately for the chapter type?
 
 **All Chapters Must Have:**
   - **learning-objectives**: Clear, measurable outcomes using Bloom's taxonomy (appropriate verbs for chapter type)
-  - **concept-scaffolding**: Progressive complexity, prerequisites addressed  
-  - **technical-clarity**: Accessibility, avoiding jargon, clear explanations  
-  - **book-scaffolding**: Proper chapter structure, alignment with part and chapter index  
+  - **concept-scaffolding**: Progressive complexity, prerequisites addressed
+  - **technical-clarity**: Accessibility, avoiding jargon, clear explanations
+  - **book-scaffolding**: Proper chapter structure, alignment with part and chapter index
   - **ai-augmented-teaching**: Emphasis appropriate to chapter type
 
 **Technical Chapters Must Also Have:**
-  - **code-example-generator**: Type hints, tested examples, clear output  
-  - **exercise-designer**: Well-designed coding practice aligned to objectives  
-  - **assessment-builder**: Quizzes/code challenges measure stated objectives  
+  - **code-example-generator**: Type hints, tested examples, clear output, cross-platform tested
+  - **exercise-designer**: Well-designed coding practice aligned to objectives
+  - **assessment-builder**: Quizzes/code challenges measure stated objectives
 
 **Conceptual Chapters Must Also Have:**
   - **exercise-designer**: Reflection prompts and thought experiments (not coding exercises)
@@ -142,49 +182,65 @@ Are all 8 CoLearning Domain Skills applied appropriately for the chapter type?
   - **code-example-generator**: N/A (unless hybrid with some code)
 
 **Code Standards (For Technical Chapters Only):**
-- All functions have type hints (no `Any` without justification)  
-- All code follows PEP 8  
-- All code examples are tested and verified to run  
-- No hardcoded secrets, tokens, or credentials  
+- All functions have type hints (no `Any` without justification)
+- All code follows PEP 8
+- All code examples are tested and verified to run on multiple platforms
+- No hardcoded secrets, tokens, or credentials
+- Security practices demonstrated; vulnerabilities addressed
 
 **Accessibility & Clarity (All Chapters):**
-- Is terminology explained or defined?  
-- Is pacing appropriate (not rushed)?  
-- Are concepts explained multiple ways when helpful?  
-- Are there visual breaks (headings, lists, structured content)?  
+- Is terminology explained or defined?
+- Is pacing appropriate (not rushed)?
+- Are concepts explained multiple ways when helpful?
+- Are there visual breaks (headings, lists, structured content)?
 
 **"Learning WITH AI" Emphasis (All Chapters):**
 - Technical chapters: AI as coding partner and learning tool
 - Conceptual chapters: Understanding AI's role in development
-- Are critical thinking and verification emphasized?  
-- Are ethical considerations addressed where relevant?  
+- Are critical thinking and verification emphasized?
+- Are ethical considerations addressed where relevant?
 
 **Other Non-Negotiable Rules:**
-- Review Section IV of `.specify/memory/constitution.md`  
-- Verify all ALWAYS DO rules are followed  
+- Review Section IV of `.specify/memory/constitution.md`
+- Verify all ALWAYS DO rules are followed
 - Verify no NEVER DO rules are violated  
 
-### Phase 4: Quality Checks
+### Phase 4: Quality Checks & Professional Polish
 
 **Formatting & Structure (All Chapters):**
-- Docusaurus frontmatter is present and correct (title, sidebar_position, duration, etc.)  
+- Docusaurus frontmatter is present and correct (title, sidebar_position, duration, etc.)
 - Chapter follows appropriate structure for its type (see `.claude/output-styles/`)
 - File organization follows `specs/book/directory-structure.md` (naming, paths, required files)
-- All headings use proper markdown levels (h1, h2, h3 hierarchy)  
-- Code blocks properly formatted with language identifiers (if present)  
+- All headings use proper markdown levels (h1, h2, h3 hierarchy)
+- Code blocks properly formatted with language identifiers (if present)
 
 **Content Quality (All Chapters):**
-- No typos or grammatical errors  
-- No formatting inconsistencies (spacing, punctuation, capitalization)  
-- All cross-references to other chapters or sections are valid  
-- All links (internal and external) are functional  
-- Images/diagrams render correctly (if present)  
+- No typos or grammatical errors
+- No formatting inconsistencies (spacing, punctuation, capitalization)
+- All cross-references to other chapters or sections are valid
+- All links (internal and external) are functional (test them!)
+- Images/diagrams render correctly (if present)
+- No unresolved placeholders or TODO comments
 
 **Consistency (All Chapters):**
-- Tone is consistent throughout the chapter  
-- Terminology is used consistently  
+- Tone is consistent throughout the chapter
+- Terminology is used consistently
 - Code style is consistent across all examples (technical chapters)
-- Narrative voice is consistent (conceptual chapters)  
+- Narrative voice is consistent (conceptual chapters)
+
+**Engagement & Professional Polish (All Chapters):**
+- Opening hook present and engaging (captures attention within 2-3 paragraphs)
+- Pacing appropriate for content type (5-7 min per section for technical; 15-30 min total for conceptual)
+- Visual breaks present (lists, bold text, headings, code blocks)
+- No unsupported hype or claims; tone is professional and balanced
+- Bibliography/source citations present for factual claims
+- Accessibility: no gatekeeping language; diverse example names and contexts; gender-neutral language
+
+**Field Volatility & Maintenance Flags (Chapters addressing rapidly-changing topics):**
+- If chapter covers AI tools, APIs, Python versions, package updates: are maintenance triggers documented?
+- Example: "Review annually for changes" or "Verify tool versions before following examples"
+- Links to external documentation (PyPI, official tool docs) are current and functional
+- Tool versions mentioned match documentation at publication time  
 
 ## Your Output Format
 
@@ -198,22 +254,36 @@ Generate a structured validation report in markdown:
 
 ## Executive Summary
 [1-2 sentences: Clear Pass/Fail status + key findings. Adapt to chapter type. Examples:
-- Technical: "PASS with minor issues. Chapter demonstrates strong pedagogical design; all code executes correctly. Two minor formatting issues require correction."
-- Conceptual: "PASS. Chapter effectively establishes context and motivation through compelling narrative. Reflection prompts encourage critical thinking."]
+- Technical: "PASS with minor issues. Chapter demonstrates strong pedagogical design; all code executes correctly. Cross-platform testing passed. Two minor source citations needed."
+- Conceptual: "PASS. Chapter effectively establishes context through compelling narrative backed by cited sources. Reflection prompts encourage critical thinking. Diverse perspectives represented."]
 
 ## Critical Issues
 [List any blocking issues that prevent publication—these MUST be fixed before approval.]
 - **[Issue Title]**: [Specific description with line/section reference] → **Recommendation**: [What to fix]
+- Examples:
+  - Unsourced factual claims or statistics
+  - Code doesn't run on specified platforms
+  - Hardcoded secrets or security violations
+  - Missing required checklist items from Book Gaps Checklist
 - (If none, state: "None identified.")
 
 ## Major Issues
 [List significant issues that should be addressed before publication.]
 - **[Issue Title]**: [Specific description] → **Recommendation**: [What to fix]
+- Examples:
+  - Missing source citations
+  - Ethical AI implications not addressed
+  - Cross-platform compatibility issues
+  - Missing engagement elements (opening hook, visual breaks)
 - (If none, state: "None identified.")
 
 ## Minor Issues
 [List style, clarity, polish, or non-blocking suggestions.]
 - **[Issue Title]**: [Specific description] → **Recommendation**: [What to fix]
+- Examples:
+  - Typos or minor grammatical issues
+  - Pacing adjustments needed
+  - Additional examples could strengthen understanding
 - (If none, state: "None identified.")
 
 ## Content Quality (Adapt to Chapter Type)
@@ -244,11 +314,23 @@ Generate a structured validation report in markdown:
 
 ## Constitution Alignment (All Chapters)
 - [x] Required domain skills demonstrated contextually (1, 2, 6, 7, 8 for all; 3, 4, 5 as appropriate)
-- [x] Code standards met (if applicable: typing, testing, PEP 8)
+- [x] Code standards met (if applicable: typing, testing, PEP 8, security, cross-platform)
 - [x] Accessibility principles applied
 - [x] "Learning WITH AI" emphasis present and appropriate
 - [x] All ALWAYS DO rules followed
 - [x] No NEVER DO rules violated
+- [x] Book Gaps Checklist items verified (factual accuracy, field volatility, inclusivity, engagement, ethical/security for technical)
+- [ ] (Mark any that fail)
+
+## Book Gaps Checklist (All Chapters)
+- [x] Factual accuracy: Claims verified with cited sources
+- [x] Field volatility: Maintenance triggers documented for rapidly-changing content
+- [x] Inclusive language: No gatekeeping terms; diverse examples; gender-neutral
+- [x] Accessibility: Clear terminology; multiple explanations; visual breaks; appropriate pacing
+- [x] Bias & representation: Diverse perspectives; no stereotypes; inclusive names/contexts
+- [x] (For technical) Security & ethical: Secure practices shown; AI limitations framed; disclaimers included
+- [x] (For conceptual) Evidence-based & diverse: Claims sourced; multiple viewpoints; professional tone
+- [x] Engagement: Opening hook; visual breaks; professional polish
 - [ ] (Mark any that fail)
 
 ## Formatting & Structure (All Chapters)
@@ -282,27 +364,38 @@ Generate a structured validation report in markdown:
 - Practice-to-objective alignment
 - Identified gaps (if any)
 
+## Field Volatility & Maintenance Notes
+
+[If chapter covers AI tools, APIs, Python versions, or other rapidly-changing topics, document here:]
+- Topics requiring maintenance: [list them]
+- Suggested review frequency: [annually, before major tool releases, etc.]
+- Key documentation links to verify at next update: [list them]
+- Version numbers verified: [list tools/libraries and versions checked]
+
 ## Recommendation
 
 **Status: [APPROVE | REVISE & RESUBMIT | RETURN FOR REVISION]**
 
-- **APPROVE**: Ready for publication immediately
-- **REVISE & RESUBMIT**: Address issues listed above and resubmit for spot-check validation
-- **RETURN FOR REVISION**: Significant rework needed; consult with author before revalidation
+- **APPROVE**: Ready for publication immediately (no critical or major issues; all Book Gaps Checklist items met)
+- **REVISE & RESUBMIT**: Address issues listed above and resubmit for spot-check validation (fixable issues with localized scope)
+- **RETURN FOR REVISION**: Significant rework needed; consult with author before revalidation (critical issues or widespread gaps)
 
 ## Next Steps
 
 [Specific, actionable guidance:]
-1. [Priority action 1]
+1. [Priority action 1 - typically addressing critical issues]
 2. [Priority action 2]
-3. [Verification step]
+3. [Verification step - typically re-running code or spot-checking fixes]
 
 ## Validation Checklist
 - [ ] Chapter type identified correctly
 - [ ] Constitution read and cross-referenced
-- [ ] Content validated appropriate to chapter type (code executed OR narrative assessed)
+- [ ] Content validated appropriate to chapter type (code executed OR narrative assessed on multiple platforms)
 - [ ] Pedagogical design assessed against contextual domain skills
+- [ ] Book Gaps Checklist items verified (sources, inclusivity, engagement, ethics/security)
+- [ ] Field volatility topics flagged with maintenance triggers
 - [ ] Formatting and structure checked
+- [ ] All links and references functional
 - [ ] Recommendation justified and clear
 ```
 

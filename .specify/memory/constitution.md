@@ -235,6 +235,67 @@ Multiple AI tools MUST be covered with honest comparison, not single-tool lock-i
 
 ---
 
+## II.C Book Gaps Checklist (Required Coverage by Chapter Type)
+
+All chapters MUST be validated against this checklist before publication. Subagents reference this checklist during planning, writing, and validation phases.
+
+### For ALL Chapters (Regardless of Type)
+
+- [ ] **Factual Accuracy**: All claims, statistics, examples verified against reliable sources with inline citations (e.g., [World Bank, 2023], [PyPI docs, 2024])
+- [ ] **Field Volatility**: Content addressing rapidly-changing topics (AI tools, APIs, package versions) includes maintenance triggers (e.g., "Review annually for AI changes")
+- [ ] **Inclusive Language**: No gatekeeping terms ("easy", "simple", "obvious"); diverse examples; gender-neutral language; free/open-source alternatives provided
+- [ ] **Accessibility**: Clear terminology with definitions; concepts explained multiple ways; visual breaks (headings, lists, code blocks); appropriate reading/engagement pacing
+- [ ] **Bias & Representation**: Examples represent diverse perspectives; no cultural stereotypes; inclusive references (names, contexts, use cases)
+- [ ] **Technical Accuracy**: All technical claims verified; best practices demonstrated; no deprecated syntax or tools used
+
+### For Technical Chapters (Code-Focused)
+
+**Must Include:**
+- [ ] **Code Security**: All examples avoid hardcoded secrets, demonstrate secure practices (error handling, input validation), include disclaimers for generated code
+- [ ] **Ethical AI Use**: Frame AI's limitations, responsible use cases, and potential biases; address ethical implications of generated code
+- [ ] **Testing & Quality**: Every code example includes corresponding tests; error cases handled; cross-platform compatibility verified (Windows/Mac/Linux)
+- [ ] **Deployment Readiness**: Environment setup instructions; dependency management; troubleshooting guide; fallback strategies for missing tools/APIs
+- [ ] **Scalability Awareness**: Real-world constraints mentioned (performance, memory, network); scalability considerations for production contexts
+- [ ] **Real-World Context**: Examples use realistic scenarios with proper error handling, not toy problems
+- [ ] **Engagement**: Opening hook present; visual breaks; realistic complexity progression; 5-7 minute section pacing where applicable
+- [ ] **Practicality**: Cross-platform setup documented; common pitfalls section addressing real-world issues; environment requirements explicit
+
+### For Conceptual/Narrative Chapters (Non-Code)
+
+**Must Include:**
+- [ ] **Evidence-Based Claims**: All assertions backed by data, research, or documented examples; sources cited inline
+- [ ] **Diverse Perspectives**: Multiple viewpoints presented on transformative topics; objections/skepticism addressed; not monolithic narrative
+- [ ] **Real-World Relevance**: Examples specific, concrete, relevant to readers' context and experience; not abstract
+- [ ] **Narrative Flow**: Engaging opening hook; natural progression of ideas; compelling storytelling with emotional resonance
+- [ ] **Reflection Prompts**: Thought-provoking questions encouraging critical thinking; personal relevance to reader situation
+- [ ] **Contextual Grounding**: Explains why the topic matters NOW; historical parallels showing patterns; forward-looking implications
+- [ ] **Professional Polish**: No hype or unsupported claims; realistic assessment of opportunities and risks; balanced tone
+- [ ] **Accessibility**: Concepts explained with analogies; no jargon gatekeeping; pacing allows comprehension; 15-30 minute reading time realistic
+
+### For Hybrid Chapters (Mixed Content)
+
+**Must Include:**
+- All items from "For ALL Chapters"
+- Technical items for code-containing sections
+- Narrative items for conceptual sections
+- Clear section-type identification so readers know what to expect
+
+### Update Triggers (Field Volatility Management)
+
+Chapters addressing these topics MUST include update mechanism notes:
+- **AI Tools** (Claude, Gemini, Copilot, etc.): "Review annually or when major version released"
+- **Package Versions** (Python 3.x, libraries, frameworks): "Verify compatibility with latest version before following examples"
+- **API Endpoints** and external services: "Test links and endpoints at publication time; flag endpoints that may change"
+- **Best Practices** in rapidly evolving fields: "This reflects best practices as of [date]; AI field evolves rapidly"
+
+### Constitutional Enforcement
+
+- **During Planning** (chapter-planner): Validate spec against this checklist; flag gaps for clarification
+- **During Writing** (lesson-writer): Incorporate checklist items into task requirements; cite sources; frame AI appropriately
+- **During Validation** (technical-reviewer): Verify all checklist items met before approval; test code on multiple platforms; verify facts against sources
+
+---
+
 ## II.B Domain Skills (The 8 CoLearning Skills)
 
 All book development MUST leverage these 8 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all 46 chapters and 13 parts:
