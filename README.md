@@ -1,8 +1,8 @@
-# CoLearning Python: The AI-Driven Way
+# CoLearning Python & Agentic AI: The AI-Driven Way
 
 ## Vision
 
-"CoLearning Python: The AI-Driven Way" is a 26-chapter technical book that teaches modern AI-driven development using Python (3.13+) through systematic collaboration between human learners and AI assistants. 
+"CoLearning Python & Agentic AI: The AI-Driven Way" is a 32-chapter technical book that teaches modern AI-driven development using Python (3.13+) through systematic collaboration between human learners and AI assistants. It progresses from foundational concepts through advanced topics including agentic AI systems and the Model Context Protocol (MCP). 
 
 Our vision is to pioneer a new agent-native paradigm of CS education where AI is a co-learner and a collaborator, reflecting the reality of modern software development.
 
@@ -25,6 +25,31 @@ Our vision is to pioneer a new agent-native paradigm of CS education where AI is
 *   **Pedagogically Sound:** Content is guided by 8 specialized "co-learning skills" based on educational research.
 *   **Structured and Consistent:** A project constitution and defined output styles ensure a high-quality, consistent reading experience.
 *   **Tool Diversity:** Learn to work with a variety of AI tools, including Claude Code, Gemini CLI, and OpenAI Codex.
+
+## The Seven-Part Book Structure
+
+**Part 1: Introducing AI-Driven Development (5 chapters)**
+- Foundation for learning Python with AI tools
+
+**Part 2: AI Tool Landscape (4 chapters)**
+- Deep dive into Gemini, Claude, GitHub Codex, and modern editors
+
+**Part 3: Prompt & Context Engineering (4 chapters)**
+- Master effective prompting and context management
+
+**Part 4: Modern Python with Type Hints (8 chapters)**
+- Production-quality Python programming with type safety
+
+**Part 5: Spec-Kit Methodology (5 chapters)**
+- Professional development workflow and specifications
+
+**Part 6: Agentic AI Fundamentals (3 chapters)**
+- Building autonomous AI agents and agent orchestration
+
+**Part 7: MCP Fundamentals (3 chapters)**
+- Model Context Protocol integration and custom tools
+
+---
 
 ## The 8 CoLearning Skills
 

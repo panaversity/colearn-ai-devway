@@ -526,6 +526,82 @@ ai_assistance_balance:
 
 ---
 
+## Teaching Agentic AI and Advanced Topics
+
+As curriculum evolves to include agentic AI systems and Model Context Protocol (MCP), teaching strategies shift:
+
+### Special Considerations for Agentic AI
+
+**Agentic AI differs from traditional AI assistance:**
+- Students are designing AGENTS (goal-seeking systems), not just using AI as a code generator
+- Agency and autonomy introduce new concepts: agent goals, decision-making, state management, tool selection
+- Students must understand agent behavior at a deeper level (not just "give it a prompt")
+
+**Teaching Agentic AI Effectively:**
+
+1. **Start with Agent Concepts** (Not Just Prompting)
+   - Begin with what agents ARE and why they differ from traditional AI use
+   - Use diagrams showing agent loops: perceive → decide → act → repeat
+   - Compare agents with traditional chatbots (students often conflate them)
+
+2. **Build Agent Design Gradually**
+   - First agents: simple goal-seeking with 2-3 available tools
+   - Mid-level: agents with state management and complex goals
+   - Advanced: agent orchestration and multi-agent systems
+
+3. **Include Failure Analysis**
+   - Agents often fail or loop - teach students to recognize and debug these
+   - Log analysis exercises: "Why did the agent pick the wrong tool?"
+   - Improvement exercises: "How would you change the goal/tools to fix this?"
+
+4. **Emphasize Agent Testing and Safety**
+   - Simple prompts can work fine; complex agents need careful testing
+   - Teach students to set boundaries and constraints for agents
+   - Include cost monitoring (API calls can add up with agents!)
+
+5. **Real-World Agent Projects**
+   - Research assistant agent
+   - Data processing agent
+   - System administration agent
+   - Customer support agent
+   - Each demonstrates different agent patterns and challenges
+
+### Special Considerations for MCP (Model Context Protocol)
+
+**MCP extends traditional AI assistance:**
+- MCP servers provide tools/resources that models can access
+- Students learn to integrate external capabilities into AI systems
+- Bridge between application development and AI enhancement
+
+**Teaching MCP Effectively:**
+
+1. **Start with Architecture Understanding**
+   - Draw diagrams: Client ← Protocol → Server
+   - Explain what servers can provide (tools, resources, data access)
+   - Compare with traditional APIs (similar but bidirectional communication)
+
+2. **Learn Existing MCP Servers First**
+   - Install and integrate established MCP servers
+   - Understand how applications use MCP
+   - Build confidence with known tools before creating custom ones
+
+3. **Build Custom MCP Servers**
+   - Start simple: single-purpose server with 2-3 tools
+   - Progress to complex: multi-tool servers with state management
+   - Industry example: build an MCP server for your domain (database access, API wrapper, etc.)
+
+4. **Integrate MCP + Agents**
+   - Advanced students can build agents that use MCP servers
+   - Students appreciate how MCP provides reliable tool access for agents
+   - Real problem-solving: agent + MCP creates powerful combinations
+
+5. **Emphasize Reusability**
+   - Well-designed MCP servers are reusable across projects
+   - Teach documentation: others should be able to use your server
+   - Portfolio value: publishing MCP servers shows engineering maturity
+
+---
+
 ## Integration with Other Skills
 
 This skill works well with:

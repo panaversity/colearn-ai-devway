@@ -2,7 +2,41 @@
 
 This file is generated during init for the selected agent.
 
-You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architext to build products.
+You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architect to build products aligned with this project's constitution.
+
+---
+
+## 🏛️ CONSTITUTION: THE SOURCE OF TRUTH
+
+**READ THIS FIRST**: All project decisions resolve to the project constitution.
+
+📍 **Location**: `.specify/memory/constitution.md`
+
+**What it contains**:
+- Project vision and philosophy (AI-first, learner-centered education)
+- 11 core non-negotiable principles
+- The 8 mandatory CoLearning Domain Skills
+- 7-part book structure (32 chapters total)
+- Quality standards and governance
+
+**Why it matters**:
+- Every feature, chapter, and decision MUST align with this constitution
+- Before starting work: read the relevant sections
+- When unsure about direction: check the constitution
+- When proposing changes: reference constitutional alignment
+
+**Key sections for developers**:
+- **Section I**: Project Vision & Philosophy
+- **Section II**: 11 Core Principles + 8 Domain Skills
+- **Section IV**: Non-Negotiable Rules (ALWAYS DO / NEVER DO)
+- **Section VI**: Infrastructure (shared skills, templates, sub-agents)
+
+**For book content creators**:
+- **Section III**: 7-Part Book Structure (32 chapters)
+- **Section II.B**: 8 CoLearning Skills (mandatory for all chapters)
+- **Section IV**: Quality rules (type hints, testing, accessibility)
+
+---
 
 ## Task context
 
@@ -198,13 +232,96 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Basic Project Structure
 
-- `.specify/memory/constitution.md` — Project principles
+**Governance & Artifacts**:
+- `.specify/memory/constitution.md` — **SOURCE OF TRUTH**: Project principles, vision, 11 core principles, 8 domain skills, quality standards
+- `history/prompts/` — Prompt History Records (captured after every user interaction)
+- `history/adr/` — Architecture Decision Records (for significant decisions)
+
+**Development Artifacts** (when building features):
 - `specs/<feature>/spec.md` — Feature requirements
 - `specs/<feature>/plan.md` — Architecture decisions
 - `specs/<feature>/tasks.md` — Testable tasks with cases
-- `history/prompts/` — Prompt History Records
-- `history/adr/` — Architecture Decision Records
+
+**Templates & Infrastructure**:
 - `.specify/` — SpecKit Plus templates and scripts
+- `.claude/output-styles/` — Chapter, lesson, and Docusaurus formatting guides
+- `.claude/skills/` — The 8 mandatory CoLearning Domain Skills
+
+## The 8 Mandatory Domain Skills
+
+All book content MUST be created using these 8 skills. Located in `.claude/skills/`:
+
+1. **learning-objectives** — Define measurable learning outcomes (Bloom's taxonomy)
+2. **concept-scaffolding** — Break complex topics into progressive steps
+3. **code-example-generator** — Create high-quality Python examples (type hints, tested)
+4. **exercise-designer** — Design effective practice exercises
+5. **assessment-builder** — Build quizzes and evaluations
+6. **technical-clarity** — Ensure accessibility and clarity
+7. **book-architecture** — Structure chapters for logical flow (includes awareness of chapter-index.md)
+8. **ai-augmented-teaching** — Teach "learning WITH AI" (not generating FROM AI)
+
+**When creating chapters or lessons**: Invoke these skills explicitly and reference them in your work.
+
+---
+
+## Book Structure: Separation of Concerns
+
+The project uses a **three-layer structure** for managing the 32-chapter book:
+
+### Layer 1: Philosophy & Vision
+📍 **Location**: `.specify/memory/constitution.md`
+- Section III: The 7-part book structure
+- Educational philosophy and pedagogy
+- Non-negotiable principles
+
+### Layer 2: Chapter Specifications (WHAT to write)
+📍 **Location**: `specs/book/chapter-index.md`
+- All 32 chapters mapped to 7 parts
+- Chapter numbers, titles, filenames
+- Key topics for each chapter
+- **This is THE AUTHORITATIVE SOURCE for chapter assignments**
+
+### Layer 3: Output Styles (HOW to write)
+📍 **Location**: `.claude/output-styles/`
+- `chapters.md` — Generic chapter formatting template
+- `lesson.md` — Generic lesson formatting template
+- **These are REUSABLE TEMPLATES, not chapter-specific**
+
+### Workflow for Content Creators
+
+When creating a chapter:
+
+1. **Consult `specs/book/chapter-index.md`** → Find which chapter to write
+   - What is the chapter number?
+   - What is the exact title?
+   - What filename should it have?
+   - What part does it belong to?
+
+2. **Follow `.claude/output-styles/chapters.md`** → Learn how to structure and format
+   - Chapter structure requirements
+   - Docosaurus frontmatter format
+   - Writing standards for the part
+   - Validation checklist
+
+3. **Apply domain skills** → Ensure quality
+   - Use learning-objectives skill to define outcomes
+   - Use code-example-generator for examples
+   - Use book-architecture skill for flow
+   - etc.
+
+### Key Benefit
+
+This separation means:
+- ✅ Output styles remain **generic and reusable** (can be used for other projects)
+- ✅ Chapter assignments are **centralized** (single source of truth)
+- ✅ Easy to **update chapter titles or order** without changing templates
+- ✅ Clear **separation between WHAT and HOW**
 
 ## Code Standards
-See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+All code MUST follow standards in `.specify/memory/constitution.md`:
+- Python 3.13+ with mandatory type hints on all functions
+- Comprehensive testing (80%+ coverage minimum)
+- PEP 8 compliance
+- No hardcoded secrets or tokens
+- Accessibility-first design philosophy

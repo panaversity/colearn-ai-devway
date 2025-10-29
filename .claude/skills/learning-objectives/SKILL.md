@@ -357,6 +357,108 @@ This skill works well with:
 
 **→ code-example-generator skill**: Use to create examples that demonstrate Apply-level objectives
 
+## Emerging Topics: Agentic AI & Model Context Protocol (MCP)
+
+As books increasingly cover advanced AI topics, use this skill to define learning objectives for:
+
+### Agentic AI Learning Objectives Example
+
+**Topic**: "Building Autonomous AI Agents"
+
+```yaml
+topic: "Agentic AI Fundamentals"
+objectives:
+  - id: "LO-AGENT-001"
+    statement: "Define autonomous agents, distinguish them from traditional chatbots, and explain key characteristics (goal-seeking, state management, tool use)"
+    blooms_level: "Understand"
+    context: "Introduction to agentic AI concepts"
+    prerequisites:
+      - "Understand AI basics and language models"
+    assessment_method: "Short answer or concept mapping"
+    success_criteria:
+      - "Can list key differences between agents and chatbots"
+      - "Can explain goal-directed behavior and autonomy"
+
+  - id: "LO-AGENT-002"
+    statement: "Implement a simple autonomous agent that uses tools to accomplish a specified goal"
+    blooms_level: "Apply"
+    context: "Building working agents with Python"
+    prerequisites:
+      - "Understand agent architecture and tool-use patterns"
+      - "Can write Python functions and handle API calls"
+    assessment_method: "Code exercise: implement agent from requirements"
+    success_criteria:
+      - "Agent autonomously reaches its goal"
+      - "Correctly selects and uses available tools"
+      - "Handles tool responses and iterates"
+
+  - id: "LO-AGENT-003"
+    statement: "Analyze agent behavior and identify when agents succeed, fail, or enter loops; propose fixes"
+    blooms_level: "Analyze"
+    context: "Debugging and improving agent performance"
+    prerequisites:
+      - "Can implement basic agents"
+      - "Understand agent decision-making patterns"
+    assessment_method: "Debug exercise: analyze agent logs and improve behavior"
+    success_criteria:
+      - "Identifies root causes of agent failures"
+      - "Proposes specific improvements (better prompts, new tools, constraints)"
+```
+
+### MCP (Model Context Protocol) Learning Objectives Example
+
+**Topic**: "Integrating MCP into Python Applications"
+
+```yaml
+topic: "Model Context Protocol (MCP) Integration"
+objectives:
+  - id: "LO-MCP-001"
+    statement: "Explain MCP architecture, the role of servers and clients, and how MCP extends model capabilities"
+    blooms_level: "Understand"
+    context: "Introduction to MCP concepts"
+    prerequisites:
+      - "Understand Python modules and client-server patterns"
+    assessment_method: "Diagram exercise: draw MCP client-server relationship"
+    success_criteria:
+      - "Can explain what MCP servers provide"
+      - "Can describe the client-server protocol flow"
+
+  - id: "LO-MCP-002"
+    statement: "Install and configure existing MCP servers and integrate them into a Python application"
+    blooms_level: "Apply"
+    context: "Using MCP in real applications"
+    prerequisites:
+      - "Understand MCP architecture"
+      - "Can write Python clients and manage dependencies"
+    assessment_method: "Code exercise: integrate MCP server into working application"
+    success_criteria:
+      - "Correctly configures MCP client"
+      - "Application successfully calls MCP server tools"
+      - "Responses are properly handled and integrated"
+
+  - id: "LO-MCP-003"
+    statement: "Design and implement a custom MCP server that provides tools for a specific domain"
+    blooms_level: "Create"
+    context: "Building reusable MCP tools"
+    prerequisites:
+      - "Can integrate existing MCP servers"
+      - "Understand server-side architecture and tool definitions"
+    assessment_method: "Project: implement MCP server with documentation"
+    success_criteria:
+      - "Server correctly implements MCP protocol"
+      - "Tools are well-defined with clear descriptions"
+      - "Client can successfully call server tools"
+      - "Code is documented and maintainable"
+```
+
+**Key Considerations for Advanced Topics**:
+- These topics may require deeper prerequisites (solid Python, API design knowledge)
+- Use spiral learning: revisit concepts at increasing depth (basic agent → advanced orchestration)
+- Include both theory (understanding architecture) and practice (implementing tools)
+- Assessment should emphasize real problem-solving, not just definitions
+
+---
+
 ## Tips for Success
 
 1. **Start with the end in mind**: What should learners be able to DO, not what will you teach?

@@ -37,6 +37,42 @@ Use this skill when:
 - Deciding between different organizational patterns
 - Balancing beginner-friendly progression with experienced-user reference needs
 
+---
+
+## CoLearning Python & Agentic AI: Book Architecture
+
+This project uses a specific architecture for managing book structure:
+
+### Structure Documents
+
+**1. Constitution (`.specify/memory/constitution.md`)**
+- Section III: 7-part book structure (32 chapters total)
+- Parts: 1-5 foundational, 6-7 advanced specializations
+- High-level educational philosophy and pedagogy
+
+**2. Chapter Index (`specs/book/chapter-index.md`)**
+- Authoritative source for all 32 chapters
+- Chapter numbers, titles, filenames, key topics
+- Organized by part
+- **This is the SPEC for what chapters exist and their relationships**
+
+**3. Output Styles (`.claude/output-styles/`)**
+- `chapters.md` — Generic template for HOW to format/structure a chapter (reusable)
+- `lesson.md` — Generic template for lesson sections within chapters (reusable)
+- **These are TEMPLATES, not chapter-specific**
+
+### Key Principle: Separation of Concerns
+
+- **Constitution + Chapter Index** = WHAT (the book's structure and content map)
+- **Output Styles** = HOW (formatting and quality standards, generic templates)
+
+**When creating a chapter**:
+1. Check `specs/book/chapter-index.md` for what chapter to write (title, number, filename, context)
+2. Use `.claude/output-styles/chapters.md` for formatting and structure guidelines
+3. Follow the template but fill in content specific to that chapter
+
+This allows output styles to remain **truly generic and reusable** while chapter assignments are **centralized and maintainable**.
+
 ## Process
 
 ### Step 1: Understand the Scope and Audience
@@ -527,6 +563,264 @@ dependency_graph: |
 
 **Validation**: validate-structure.py → Flat structure, no complex dependencies
 **Flow Analysis**: analyze-flow.py → Balanced concept density across chapters
+
+---
+
+### Example 4: CoLearning Python & Agentic AI (Seven-Part Hybrid Pattern)
+
+**Book Structure**: "CoLearning Python & Agentic AI: The AI-Driven Way" (32 chapters)
+
+**Analysis**:
+- Audience: Beginners to intermediate developers
+- Purpose: Learning + hands-on development with AI
+- Flow pattern: Hybrid (foundation → applied topics → advanced specializations)
+
+**Recommended Structure**:
+
+```yaml
+book_title: "CoLearning Python & Agentic AI: The AI-Driven Way"
+subtitle: "Learn Modern Python and AI-Driven Development Together"
+target_audience: "Beginners with no programming experience, professionals transitioning to AI-driven development"
+prerequisites: "Basic computer literacy; no programming experience required"
+flow_pattern: "Hybrid (Foundation + Applied + Specializations)"
+total_chapters: 32
+
+parts:
+  - id: "part-01"
+    title: "Introducing AI-Driven Development"
+    purpose: "Foundation"
+    chapter_count: 5
+    description: "Orientation, setup, first programs with AI tools. Build foundational understanding and comfort with AI-assisted development."
+    learning_outcomes:
+      - "Understand AI as a collaborative partner in development"
+      - "Set up Python and AI development environment"
+      - "Write first Python programs with AI assistance"
+      - "Understand AI tool basics (Claude, Gemini, Codex)"
+    chapters:
+      - title: "Welcome to AI-Driven Development"
+        purpose: "Core"
+        dependencies: {required: []}
+      - title: "Setting Up Your Development Environment"
+        purpose: "Core"
+        dependencies: {required: ["01"]}
+      - title: "Your First Program with AI"
+        purpose: "Core"
+        dependencies: {required: ["02"]}
+      - title: "Understanding AI Tools and Workflows"
+        purpose: "Core"
+        dependencies: {required: ["03"]}
+      - title: "Debugging and Iterating with AI"
+        purpose: "Core"
+        dependencies: {required: ["04"]}
+
+  - id: "part-02"
+    title: "AI Tool Landscape"
+    purpose: "Application"
+    chapter_count: 4
+    description: "Deep dive into specific AI platforms (Gemini, Claude, GitHub Codex) and modern editors. Understand tool strengths and choose appropriate tools."
+    learning_outcomes:
+      - "Understand Claude Code and its capabilities"
+      - "Understand Gemini CLI and when to use it"
+      - "Understand GitHub Codex and copilot features"
+      - "Choose appropriate tool for different tasks"
+    chapters:
+      - title: "Claude Code: Features and Workflows"
+        purpose: "Core"
+        dependencies: {required: ["part-01"]}
+      - title: "Gemini CLI: Installation and Basics"
+        purpose: "Core"
+        dependencies: {required: ["part-01"]}
+      - title: "GitHub Codex and Copilot Integration"
+        purpose: "Core"
+        dependencies: {required: ["part-01"]}
+      - title: "Choosing the Right Tool for the Task"
+        purpose: "Core"
+        dependencies: {required: ["06", "07", "08"]}
+
+  - id: "part-03"
+    title: "Prompt & Context Engineering"
+    purpose: "Application"
+    chapter_count: 4
+    description: "Effective prompting, context management, and debugging with AI. Master communication with AI systems."
+    learning_outcomes:
+      - "Write effective prompts for code generation"
+      - "Manage context for complex projects"
+      - "Debug AI-generated code systematically"
+      - "Handle AI limitations and errors"
+    chapters:
+      - title: "Writing Effective Prompts"
+        purpose: "Core"
+        dependencies: {required: ["part-01"]}
+      - title: "Context Management and Memory"
+        purpose: "Core"
+        dependencies: {required: ["11"]}
+      - title: "Debugging AI-Generated Code"
+        purpose: "Core"
+        dependencies: {required: ["11", "12"]}
+      - title: "Advanced Prompt Techniques"
+        purpose: "Core"
+        dependencies: {required: ["11", "12", "13"]}
+
+  - id: "part-04"
+    title: "Modern Python with Type Hints"
+    purpose: "Application"
+    chapter_count: 8
+    description: "Deep Python language features with type safety and testing. Write production-quality Python code."
+    learning_outcomes:
+      - "Write Python with complete type annotations"
+      - "Understand and use modern Python syntax"
+      - "Implement comprehensive testing"
+      - "Debug and optimize Python code"
+      - "Handle errors and exceptions professionally"
+      - "Work with APIs and external data"
+      - "Design clean, maintainable code"
+      - "Build real-world Python projects"
+    chapters:
+      - title: "Functions, Types, and Type Hints"
+        purpose: "Core"
+        dependencies: {required: ["part-01"]}
+      - title: "Data Structures with Type Safety"
+        purpose: "Core"
+        dependencies: {required: ["16"]}
+      - title: "Object-Oriented Programming (Modern)"
+        purpose: "Core"
+        dependencies: {required: ["17"]}
+      - title: "Testing and Quality Assurance"
+        purpose: "Core"
+        dependencies: {required: ["16", "17", "18"]}
+      - title: "Error Handling and Debugging"
+        purpose: "Core"
+        dependencies: {required: ["18", "19"]}
+      - title: "Working with APIs and Data"
+        purpose: "Core"
+        dependencies: {required: ["17", "20"]}
+      - title: "Clean Code and Design Patterns"
+        purpose: "Core"
+        dependencies: {required: ["18", "19", "21"]}
+      - title: "Building Your First Real Project"
+        purpose: "Core"
+        dependencies: {required: ["16", "17", "18", "19", "20", "21", "22"]}
+
+  - id: "part-05"
+    title: "Spec-Kit Methodology"
+    purpose: "Advanced"
+    chapter_count: 5
+    description: "Professional development workflow, specifications, and planning. Structure projects using Spec-Kit principles."
+    learning_outcomes:
+      - "Understand Spec-Driven Development (SDD)"
+      - "Write effective specifications"
+      - "Create comprehensive plans"
+      - "Organize work into testable tasks"
+      - "Coordinate AI and human work"
+    chapters:
+      - title: "Specification-Driven Development Fundamentals"
+        purpose: "Core"
+        dependencies: {required: ["part-04"]}
+      - title: "Writing Effective Specifications"
+        purpose: "Core"
+        dependencies: {required: ["24"]}
+      - title: "Planning and Tasking"
+        purpose: "Core"
+        dependencies: {required: ["25"]}
+      - title: "Real-World Spec-Kit Workflows"
+        purpose: "Core"
+        dependencies: {required: ["24", "25", "26"]}
+      - title: "Scaling Spec-Kit for Teams"
+        purpose: "Optional"
+        dependencies: {required: ["24", "25", "26", "27"]}
+
+  - id: "part-06"
+    title: "Agentic AI Fundamentals"
+    purpose: "Advanced"
+    chapter_count: 3
+    description: "Building autonomous AI agents, agent orchestration, and real-world applications."
+    learning_outcomes:
+      - "Understand agentic AI patterns and concepts"
+      - "Build simple autonomous agents"
+      - "Design agent workflows and orchestration"
+    chapters:
+      - title: "Introduction to Agentic AI"
+        purpose: "Core"
+        dependencies: {required: ["part-05"]}
+      - title: "Building Your First Agent"
+        purpose: "Core"
+        dependencies: {required: ["29"]}
+      - title: "Agent Orchestration and Real-World Applications"
+        purpose: "Core"
+        dependencies: {required: ["29", "30"]}
+
+  - id: "part-07"
+    title: "MCP Fundamentals"
+    purpose: "Advanced"
+    chapter_count: 3
+    description: "Model Context Protocol integration and building custom tools."
+    learning_outcomes:
+      - "Understand MCP architecture and concepts"
+      - "Integrate MCP into Python applications"
+      - "Build custom MCP servers and clients"
+    chapters:
+      - title: "Introduction to Model Context Protocol"
+        purpose: "Core"
+        dependencies: {required: ["part-06"]}
+      - title: "Integrating MCP into Your Applications"
+        purpose: "Core"
+        dependencies: {required: ["31"]}
+      - title: "Building Custom MCP Servers"
+        purpose: "Core"
+        dependencies: {required: ["31", "32"]}
+
+reading_paths:
+  - name: "Linear Path (Recommended for Beginners)"
+    description: "Read all chapters in sequence for comprehensive learning"
+    chapters: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32"]
+
+  - name: "Experienced Developer Fast Track"
+    description: "Skip introduction chapters, focus on Python and advanced topics"
+    chapters: ["16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32"]
+    skip_chapters: ["01", "02", "03", "04", "05"]
+
+  - name: "AI Tool Specialist"
+    description: "Focus on AI tools and prompting without deep Python"
+    chapters: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"]
+    skip_chapters: ["16-28"]
+
+  - name: "Agent and MCP Focus"
+    description: "Foundation + Python + Agentic AI + MCP"
+    chapters: ["01", "02", "03", "04", "05", "16", "17", "18", "19", "20", "21", "22", "23", "29", "30", "31", "32"]
+
+dependency_graph: |
+  Part 1: Foundation
+    ↓
+  Part 2 ← Parts 3, 4, 5 (can be learned in parallel)
+  Part 3 ↙ ↖
+  Part 4 ↙ ↖
+  Part 5 → Part 6 (Spec-Kit enables Agent design)
+           ↓
+         Part 6 → Part 7 (Agents enhanced by MCP)
+```
+
+**Key Design Decisions**:
+1. **Foundation First (Part 1)**: Builds comfort with AI and Python basics before tool specialization
+2. **Tool Landscape Early (Part 2)**: After foundation, learners choose and understand tools
+3. **Prompt Engineering (Part 3)**: Essential across all subsequent work
+4. **Python Core (Part 4)**: Substantial Python learning with AI integration
+5. **Spec-Kit Before Agents (Part 5)**: Professional methodology enables better agent design
+6. **Advanced Topics (Parts 6-7)**: Only after solid foundation in Python and methodology
+
+**Validation**:
+- No circular dependencies (Parts form a DAG)
+- Clear prerequisites cascade
+- Reading paths serve multiple audience types
+- Balance of core (24 chapters) vs. optional (8 chapters)
+
+**Flow Analysis**:
+- Part 1: Cognitive load gentle (orientation + basics)
+- Part 2: Moderate (tool comparison and selection)
+- Part 3: Moderate (prompting skills)
+- Part 4: High (deep Python learning) — longest part, most content
+- Part 5: Moderate (methodology + planning)
+- Part 6: Moderate (agentic concepts) — builds on methodology
+- Part 7: Moderate-High (MCP protocol + implementation)
 
 ---
 

@@ -15,7 +15,7 @@ Follow-up TODOs:
   - Create code standards specification separate from constitution
 -->
 
-# CoLearning Python: The AI-Driven Way — Project Constitution
+# CoLearning Python & Agentic AI: The AI-Driven Way — Project Constitution
 
 **Version:** 2.0.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-28
 
@@ -25,7 +25,7 @@ Follow-up TODOs:
 
 ### Vision
 
-"CoLearning Python: The AI-Driven Way" is a 26-chapter technical book that teaches modern Python programming (3.13+) through systematic collaboration between human learners and AI assistants. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
+"CoLearning Python & Agentic AI: The AI-Driven Way" is a 32-chapter technical book that teaches modern Python programming (3.13+) through systematic collaboration between human learners and AI assistants. It progresses from foundational AI-driven development through advanced topics including agentic AI systems and MCP (Model Context Protocol) frameworks. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
 
 ### Core Philosophy
 
@@ -216,29 +216,69 @@ Multiple AI tools MUST be covered with honest comparison, not single-tool lock-i
 
 ---
 
-## III. Mandatory Five-Part Book Structure
+## II.B Domain Skills (The 8 CoLearning Skills)
 
-The book MUST consist of exactly five parts with these chapter counts and focus areas:
+All book development MUST leverage these 8 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all 32 chapters and 7 parts:
+
+### 1. **learning-objectives** Skill
+Generate measurable learning outcomes aligned with Bloom's taxonomy. Ensures every chapter/lesson has clear, testable objectives that guide content creation and assessment. Critical for parts 6-7 (agentic AI, MCP) where emerging topics require careful scaffolding.
+
+### 2. **concept-scaffolding** Skill
+Break down complex topics into manageable, progressive steps. Essential for Parts 1-3 (foundation building) and Parts 6-7 (advanced topics like agents and MCP protocols).
+
+### 3. **code-example-generator** Skill
+Create high-quality, runnable code examples with type hints, docstrings, and testing. All Python code in the book must follow this skill's standards (Python 3.13+, type hints, tested).
+
+### 4. **exercise-designer** Skill
+Design effective practice exercises aligned with learning objectives. Balances repetition, challenge, and application across all 32 chapters.
+
+### 5. **assessment-builder** Skill
+Build meaningful quizzes, review questions, and evaluations. Ensures learners can verify understanding at multiple Bloom's levels.
+
+### 6. **technical-clarity** Skill
+Ensure all explanations are clear, accessible, and free of jargon gatekeeping. Critical for our commitment to Principle 8 (Accessibility & Inclusivity).
+
+### 7. **book-architecture** Skill
+Structure the 32-chapter book for logical flow, managing dependencies, and progressive complexity. Essential for maintaining the 7-part structure and ensuring prerequisites are clear.
+
+### 8. **ai-augmented-teaching** Skill
+Design lessons that effectively integrate AI tools as learning partners (not code generators). Ensures the book itself demonstrates the "learning WITH AI" philosophy it teaches.
+
+**Governance**: All chapter content MUST be validated against these 8 skills before publication. Content creators (human authors and AI agents) should reference and apply these skills throughout development.
+
+---
+
+## III. Mandatory Seven-Part Book Structure
+
+The book MUST consist of exactly seven parts with these chapter counts and focus areas:
 
 **Part 1: Introducing AI-Driven Development (5 chapters)**
 - Focus: Orientation, setup, first programs with AI
 - Outcome: Comfortable using AI tools for basic Python tasks
 
-**Part 2: Spec-Kit Methodology (5 chapters)**
-- Focus: Professional workflow, specifications, planning, Spec-Kit practices
-- Outcome: Can structure a project using Spec-Kit principles
-
-**Part 3: AI Tool Landscape (4 chapters)**
-- Focus: Deep dive into each AI platform and modern editors
+**Part 2: AI Tool Landscape (4 chapters)**
+- Focus: Deep dive into each AI platform (Gemini, Claude, GitHub Codex) and modern editors
 - Outcome: Understands tool strengths, can choose appropriate tool for task
 
-**Part 4: Prompt & Context Engineering (4 chapters)**
+**Part 3: Prompt & Context Engineering (4 chapters)**
 - Focus: Effective prompting, context management, debugging with AI
 - Outcome: Writes high-quality prompts, manages AI interactions effectively
 
-**Part 5: Modern Python with Type Hints (8 chapters)**
+**Part 4: Modern Python with Type Hints (8 chapters)**
 - Focus: Deep Python language features with type safety and testing
 - Outcome: Writes production-quality Python code with full type annotations
+
+**Part 5: Spec-Kit Methodology (5 chapters)**
+- Focus: Professional workflow, specifications, planning, Spec-Kit practices
+- Outcome: Can structure a project using Spec-Kit principles
+
+**Part 6: Agentic AI Fundamentals (3 chapters)**
+- Focus: Building autonomous AI agents, agent orchestration, real-world applications
+- Outcome: Understands agentic patterns, can design and implement AI agents
+
+**Part 7: MCP Fundamentals (3 chapters)**
+- Focus: Model Context Protocol, building MCP servers and clients
+- Outcome: Can integrate MCP into applications and extend AI capabilities
 
 ---
 
@@ -396,10 +436,10 @@ Five specialized agents MUST be created to manage the SDD loop:
 
 The book is complete and successful when:
 
-- [ ] All 26 chapters written and validated
+- [ ] All 32 chapters written and validated
 - [ ] All code examples tested and working
 - [ ] All chapters follow Constitution principles
-- [ ] Pedagogical flow coherent across all 5 parts
+- [ ] Pedagogical flow coherent across all 7 parts
 - [ ] No contradictions across chapters
 - [ ] All cross-references valid
 - [ ] Technical accuracy verified by domain experts
