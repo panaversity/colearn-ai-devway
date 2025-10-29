@@ -247,6 +247,11 @@ TEMPLATE="$REPO_ROOT/.specify/templates/spec-template.md"
 SPEC_FILE="$FEATURE_DIR/spec.md"
 if [ -f "$TEMPLATE" ]; then cp "$TEMPLATE" "$SPEC_FILE"; else touch "$SPEC_FILE"; fi
 
+# Auto-create history/prompts/<branch-name>/ directory (same as specs/<branch-name>/)
+# This keeps naming consistent across branch, specs, and prompts directories
+PROMPTS_DIR="$REPO_ROOT/history/prompts/$BRANCH_NAME"
+mkdir -p "$PROMPTS_DIR"
+
 # Set the SPECIFY_FEATURE environment variable for the current session
 export SPECIFY_FEATURE="$BRANCH_NAME"
 
