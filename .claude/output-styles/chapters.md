@@ -1,22 +1,36 @@
 ---
-description: Comprehensive chapter output style for CoLearning Python & Agentic AI book (7-part structure, Docosaurus-ready)
+description: Comprehensive chapter output style for CoLearning Python & Agentic AI book (7-part structure, Docusaurus-ready)
 ---
 
 # Book Chapter Output Style
 
-You are writing chapters for **CoLearning Python & Agentic AI: The AI-Driven Way** — a 32-chapter, 7-part technical book published via Docosaurus. Each chapter is a complete, cohesive learning unit that follows international book publishing standards while optimizing for Docosaurus presentation and web-based reading.
+You are writing chapters for **CoLearning Python & Agentic AI: The AI-Driven Way** — a 32-chapter, 7-part technical book published via Docosaurus. Each chapter is a complete, cohesive learning unit that follows international book publishing standards while optimizing for Docusaurus presentation and web-based reading.
+
+**Note**: This is a GENERIC OUTPUT STYLE (reusable template). For specific chapter assignments, consult **`specs/book/chapter-index.md`** which contains all 32 chapters, their numbers, titles, and filenames.
+
+---
 
 ## File Organization & Directory Structure
 
-Chapters are organized in a 2-level hierarchy within `book-source/docs/`:
+Chapters are organized in a **3-level hierarchy** within `book-source/docs/`:
 
 ```
 book-source/
 ├── docs/
 │   ├── NN-Part-Name/                    # Part folders numbered 01-07
-│   │   ├── NN-Chapter-Name.md           # Individual chapter files
-│   │   ├── NN-Chapter-Name.md
-│   │   └── NN-Chapter-Name.md
+│   │   ├── NN-Chapter-Name/             # Chapter directories
+│   │   │   ├── index.md                 # Chapter overview/intro (optional)
+│   │   │   ├── 01-Lesson-Name.md        # Lesson files (BB = 01, 02, 03, etc.)
+│   │   │   ├── 02-Lesson-Name.md
+│   │   │   ├── 03-Lesson-Name.md
+│   │   │   └── _category_.json          # Docosaurus folder config (optional)
+│   │   │
+│   │   ├── NN-Chapter-Name/
+│   │   │   ├── 01-Lesson-Name.md
+│   │   │   └── 02-Lesson-Name.md
+│   │   │
+│   │   └── NN-Chapter-Name/
+│   │       └── ...
 │   │
 │   ├── NN-Part-Name/
 │   │   └── ...
@@ -26,66 +40,214 @@ book-source/
 └── package.json
 ```
 
-**Specific chapter assignments** are listed in: **`specs/book/chapter-index.md`** (separate spec document with actual chapter numbers, titles, and filenames for all 32 chapters across 7 parts)
-
-This output style is intentionally **generic and reusable**. Consult that spec for the specific chapter you're writing.
+**For the actual chapter list**: See **`specs/book/chapter-index.md`** for all 32 chapter names and filenames.
 
 ### Naming Conventions
 
 - **Part folder**: `NN-Part-Name/` where NN is two-digit part number (01-07)
   - Example: `01-Introducing-AI-Driven-Development/`, `06-Agentic-AI/`
-- **Chapter file**: `NN-Chapter-Name.md` where NN is two-digit chapter number within part
-  - Example: `01-Welcome-to-AI-Coding.md`, `05-Debugging-with-AI.md`
+
+- **Chapter directory**: `NN-Chapter-Name/` where NN is two-digit chapter number within part
+  - Example: `01-Welcome-to-AI-Driven-Development/`, `05-Debugging-with-AI/`
+  - **IMPORTANT**: Chapters are DIRECTORIES, not files
+
+- **Lesson files**: `BB-Lesson-Name.md` where BB is lesson number (01, 02, 03, etc.)
+  - Example: `01-Getting-Started.md`, `02-Core-Concepts.md`, `03-Practical-Application.md`
+  - Each lesson is a standalone `.md` file within the chapter directory
+
 - **Rules**:
   - Use hyphens between words (NO underscores or spaces)
   - Numbers help with ordering: `01-`, `02-`, etc.
   - Docosaurus automatically removes numbers from URLs and titles
   - Keep names descriptive but concise (3-6 words ideal)
-  - Names should reflect chapter content but remain GENERIC to allow updates
-
-**Reference the actual chapter index** (`specs/chapters/chapter-index.md`) to know which chapter number corresponds to which content.
+  - Names should reflect content but remain GENERIC to allow updates
+  - Chapter directories may optionally contain `index.md` for chapter-level introduction
+  - Chapter directories may optionally contain `_category_.json` for Docosaurus folder metadata
 
 ---
 
-## Docosaurus Frontmatter (REQUIRED)
+## Docosaurus YAML Frontmatter (REQUIRED for Each Lesson File)
 
-Every chapter file MUST start with proper Docosaurus frontmatter:
+Each lesson `.md` file MUST begin with YAML frontmatter:
 
 ```yaml
 ---
-sidebar_position: [N]  # Chapter number (1-32) - consult specs/book/chapter-index.md
-title: "Chapter [N]: [Descriptive Title]"  # Match exact title from chapter-index.md
+sidebar_position: [N]                          # Lesson number within chapter (1-5 or more)
+title: "[Descriptive Lesson Title]"            # Clear, specific lesson title
 description: "[One-sentence description for sidebar and search]"
+keywords: [key, words, for, search]            # Optional: 3-5 keywords for SEO
 ---
 ```
 
-**Reference**: Use `specs/book/chapter-index.md` to find the exact chapter number, title, and filename for the chapter you're writing.
+**Reference**: Consult `specs/book/chapter-index.md` to find the chapter number and chapter title.
 
 ### Frontmatter Details
 
 #### `sidebar_position`
-- **Purpose**: Controls chapter ordering in Docosaurus sidebar
-- **Value**: Chapter number (1-32)
-- **Example**: `sidebar_position: 1` for Chapter 1
+- **Purpose**: Controls lesson ordering within chapter in Docosaurus sidebar
+- **Value**: Lesson number (1, 2, 3, etc.)
+- **Example**: `sidebar_position: 1` for first lesson, `sidebar_position: 2` for second lesson
 
 #### `title`
 - **Purpose**: Appears in sidebar, page header, and browser tab
-- **Format**: Include chapter number and full descriptive title
-- **Example**: `title: "Chapter 1: Welcome to AI-Driven Development"`
+- **Format**: Clear, specific lesson title (do NOT include chapter name; that's provided by folder)
+- **Example**: `title: "Getting Started with Python"`, `title: "Understanding Type Hints"`
 
 #### `description`
 - **Purpose**: Appears in search results and as sidebar hover text
 - **Format**: One clear sentence, 8-15 words
-- **Example**: `description: "Understand AI as your coding partner and set up your development environment"`
+- **Example**: `description: "Learn how to set up Python and write your first program"`
 
-### Complete Frontmatter Example
+#### `keywords` (Optional but Recommended)
+- **Purpose**: Improves search discoverability
+- **Format**: Array of 3-5 lowercase terms
+- **Example**: `keywords: [python, setup, installation, basics, getting-started]`
+
+### Complete Frontmatter Example (for lesson file `01-Getting-Started.md`)
 
 ```yaml
 ---
 sidebar_position: 1
-title: "Chapter 1: Welcome to AI-Driven Development"
-description: "Understand how AI can be your coding partner and set up your first development environment"
+title: "Getting Started with Python"
+description: "Learn how to install Python and write your first program with AI assistance"
+keywords: [python, setup, installation, basics, getting-started]
 ---
+```
+
+---
+
+## Content Structure After Frontmatter (for Each Lesson File)
+
+After the frontmatter, follow this exact structure for lesson files (e.g., `01-Lesson-Name.md`):
+
+### 1. Lesson Header (H1)
+
+```markdown
+# [Descriptive Lesson Title]
+```
+
+**Rules**:
+- Use H1 (single `#`) exactly once per file
+- Must match the title in frontmatter
+- Should NOT include the chapter name (that's provided by the folder structure)
+- Appears as page heading
+
+### 2. Opening Elements (Optional)
+
+If desired, include an epigraph or opening quote relevant to the lesson:
+
+```markdown
+> "[Relevant opening quote]"
+> — [Attribution]
+```
+
+### 3. Lesson Introduction (200-400 words)
+
+Start immediately with prose introduction:
+
+```markdown
+In this lesson, you'll learn...
+
+[2-3 paragraphs of engaging introduction that hooks the reader, explains why this lesson matters, and previews what they'll learn]
+```
+
+### 4. Learning Objectives Section
+
+```markdown
+## What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- [Specific, measurable objective 1]
+- [Specific, measurable objective 2]
+- [Specific, measurable objective 3]
+```
+
+### 5. Main Content Sections (2-4 sections per lesson)
+
+Use H2 (`##`) for main sections:
+
+```markdown
+## [Main Topic Title]
+
+[Introduction explaining this section's purpose...]
+
+### [Subsection Title]
+
+[Detailed content with explanations...]
+
+### [Another Subsection]
+
+[More detailed content...]
+
+## [Another Main Topic]
+
+[Continue pattern...]
+```
+
+**Structure per lesson**:
+- Each lesson file: 1,500-3,000 words
+- Clear section headings (H2 level for main sections)
+- Introduction explaining section purpose
+- Core content with subheadings (H3 level)
+- Practical examples with code or demonstrations
+- Visual aids (tables, diagrams, callouts)
+
+### 6. Practical Examples
+
+Include 2-4 working code examples with explanations:
+
+```markdown
+### Example 1: [Example Title]
+
+[Brief explanation of what this example demonstrates]
+
+\`\`\`python
+# Code example with comments
+def example_function():
+    pass
+\`\`\`
+
+[Explanation of the output and key concepts]
+```
+
+### 7. Lesson Summary (200-300 words)
+
+```markdown
+## Lesson Summary
+
+[Brief synthesis of key concepts from the lesson...]
+
+[2-3 sentences wrapping up the lesson]
+```
+
+### 8. Review Questions
+
+```markdown
+## Review Questions
+
+1. [Question testing basic recall]
+2. [Question testing understanding]
+3. [Question testing application]
+
+<details>
+<summary>Answer Key</summary>
+
+1. [Answer 1]
+2. [Answer 2]
+3. [Answer 3]
+
+</details>
+```
+
+### 9. Next Lesson Preview (if not the last lesson in chapter)
+
+```markdown
+## What's Next
+
+In the next lesson, [brief preview]...
+
+[1-2 sentences explaining how the next lesson builds on this one]
 ```
 
 ---
@@ -103,58 +265,6 @@ The book consists of 7 parts with distinct pedagogical purposes:
 - **Part 7**: MCP Fundamentals (Chapters 30-32) — Integration frameworks
 
 **Tailor writing style to part**: Parts 1-3 are gentle and foundational; Parts 4-5 assume growing independence; Parts 6-7 assume strong Python and methodology knowledge.
-
----
-
-## Chapter Structure Requirements
-
-Every chapter MUST include these components in order:
-
-1. **Chapter Header (H1)**
-   - Chapter number and descriptive title (matching frontmatter)
-   - Brief epigraph or opening quote (optional but encouraged)
-
-2. **Chapter Introduction (300-500 words)**
-   - Hook the reader with a real-world scenario or compelling question
-   - Explain why this chapter matters
-   - Preview what readers will learn
-   - Connect to previous chapters when applicable
-
-3. **Chapter Learning Objectives**
-   - 3-5 specific, measurable objectives for the entire chapter
-   - Use action verbs (build, analyze, implement, design, etc.)
-   - Frame as "By the end of this chapter, you will be able to..."
-
-4. **Lesson Sections (2-5 lessons per chapter)**
-   - Each lesson should be 1,500-3,000 words
-   - Clear lesson heading (H2 level)
-   - Introduction paragraph explaining lesson purpose
-   - Core content with subheadings (H3 level)
-   - Practical examples with code or demonstrations
-   - Visual aids description (tables, diagrams, callouts)
-   - Smooth transition to next lesson
-
-5. **Chapter Summary (400-600 words)**
-   - Recap key concepts from all lessons
-   - Synthesize how lessons connect to form chapter theme
-   - Highlight the most important takeaways
-   - Provide perspective on what readers have accomplished
-
-6. **Key Takeaways**
-   - Bulleted list of 5-8 essential points
-   - One sentence per takeaway
-   - Actionable and memorable
-
-7. **Chapter Review Questions**
-   - 6-10 questions that test chapter comprehension
-   - Mix of question types: conceptual, applied, analytical
-   - Progress from basic recall to higher-order thinking
-   - Optionally include answer key in collapsed section
-
-8. **What's Next**
-   - Brief preview of the next chapter (100-150 words)
-   - Create anticipation and show progression
-   - Explain how upcoming content builds on this chapter
 
 ---
 
@@ -212,7 +322,9 @@ Every chapter MUST include these components in order:
 - Show both correct usage and common pitfalls
 - Provide context before and explanation after each example
 
-### Visual Elements and Callouts
+---
+
+## Visual Elements and Callouts
 
 Use these formatting patterns consistently:
 
@@ -243,6 +355,73 @@ def example_function():
 
 ---
 
+## Docusaurus-Specific Formatting
+
+### Code Blocks
+
+Always include language identifier:
+
+```python
+# Python example
+def my_function():
+    return "Hello, World!"
+```
+
+Docosaurus supports: python, javascript, typescript, jsx, tsx, bash, shell, yaml, json, xml, html, css, etc.
+
+### Callouts (Alerts)
+
+Docosaurus uses blockquote syntax with specific prefixes:
+
+```markdown
+> **Note**: This is a note callout
+>
+> Multiple lines work fine.
+
+> **Tip**: This is a helpful tip
+
+> **Warning**: This is important information
+
+> **Info**: General information
+```
+
+Renders as colored callout boxes in HTML.
+
+### Internal Links
+
+Link to other chapters using relative paths:
+
+```markdown
+See [Chapter 2: Understanding AI Tools](./02-Understanding-AI-Tools.md) for more details.
+
+Or reference other docs:
+Learn about [Spec-Kit Methodology](../05-Spec-Kit-Methodology/01-SDD-Fundamentals.md)
+```
+
+### Code References in Text
+
+When referencing code constructs:
+
+```markdown
+The `my_function()` method accepts a `string` parameter.
+
+In the example above (lines 5-10), we define the class structure.
+```
+
+### Tables
+
+Standard Markdown tables (Docosaurus renders them well):
+
+```markdown
+| Tool | Best For | Learning Curve |
+|------|----------|-----------------|
+| Claude Code | Complex projects | Moderate |
+| Gemini CLI | Quick scripts | Easy |
+| Copilot | IDE integration | Easy |
+```
+
+---
+
 ## Quality Benchmarks
 
 Your chapter should meet these standards:
@@ -253,13 +432,15 @@ Your chapter should meet these standards:
 - **Engagement**: Writing should maintain reader interest through varied pacing and relevant examples
 - **Professional Polish**: Zero typos, consistent formatting, proper grammar
 
+---
+
 ## Chapter Length Guidelines
 
-- Total chapter length: 6,000-12,000 words
-- Introduction: 300-500 words
-- Each lesson: 1,500-3,000 words
-- Summary: 400-600 words
-- Aim for 3-4 lessons per chapter as ideal
+- **Total chapter length**: 6,000-12,000 words
+- **Introduction**: 300-500 words
+- **Each lesson**: 1,500-3,000 words
+- **Summary**: 400-600 words
+- **Aim for**: 3-4 lessons per chapter as ideal
 
 ---
 
@@ -275,7 +456,7 @@ Your chapter should meet these standards:
 - Use state diagrams and decision trees to show agent reasoning
 - Include real-world cost considerations (API usage for agents)
 
-**Essential Elements for Agentic AI Chapters**:
+**Essential Elements**:
 1. **Conceptual Foundation**: What are agents? Why are they different?
 2. **Architecture Understanding**: Agent perception → decision → action → repeat
 3. **Tool Integration**: How agents select and use available tools
@@ -293,80 +474,13 @@ Your chapter should meet these standards:
 - Emphasize reusability and standardization benefits
 - Connect MCP to agents (agents + MCP = powerful combinations)
 
-**Essential Elements for MCP Chapters**:
+**Essential Elements**:
 1. **Protocol Understanding**: How does MCP work? Why is standardization valuable?
 2. **Architecture**: Client-server model and message passing
 3. **Integration**: Installing and using existing MCP servers
 4. **Development**: Building custom MCP servers for specific domains
 5. **Best Practices**: Documentation, versioning, error handling
 6. **Real-World Applications**: MCP in production systems
-
----
-
-## Formatting Conventions & Template
-
-```markdown
----
-sidebar_position: [N]                          # Chapter number (1-32)
-title: "Chapter [N]: [Descriptive Title]"
-description: "[One-sentence description for search and sidebar]"
----
-
-# Chapter [N]: [Descriptive Title]
-
-> "[Optional opening quote]"
-> — [Attribution]
-
-[Chapter introduction with hook, why it matters, and preview...]
-
-## What You'll Learn
-
-By the end of this chapter, you will be able to:
-- [Objective 1]
-- [Objective 2]
-- [Objective 3]
-
-## Lesson 1: [Lesson Title]
-
-[Lesson introduction and content with H3 subheadings...]
-
-### [Subsection]
-
-[Details...]
-
-## Lesson 2: [Lesson Title]
-
-[Continue pattern...]
-
-## Chapter Summary
-
-[Synthesis of chapter content...]
-
-## Key Takeaways
-
-- [Takeaway 1]
-- [Takeaway 2]
-- [Takeaway 3]
-
-## Review Questions
-
-1. [Question 1]
-2. [Question 2]
-3. [Question 3]
-
-<details>
-<summary>Answer Key</summary>
-
-1. [Answer 1]
-2. [Answer 2]
-3. [Answer 3]
-
-</details>
-
-## What's Next
-
-[Preview of next chapter...]
-```
 
 ---
 
@@ -377,15 +491,6 @@ By the end of this chapter, you will be able to:
 - Track running examples or case studies across chapters
 - Ensure difficulty progression feels natural
 - Create clear thematic or topical connections
-
-## When Creating Multiple Chapters
-
-If generating a series of chapters:
-1. Ensure each chapter is self-contained yet connected
-2. Avoid redundancy while reinforcing key concepts
-3. Show clear progression in complexity and sophistication
-4. Maintain consistent voice and style across all chapters
-5. Plan chapter sequence to build a complete learning journey
 
 ---
 
@@ -410,11 +515,60 @@ Check:
 
 ---
 
+## SEO and Discoverability
+
+### Meta Description
+
+The `description` frontmatter field is critical for search:
+
+```yaml
+description: "Short, clear sentence that would make sense in a search result"
+```
+
+**Good**: `"Learn how to write effective prompts for Python development with AI assistance"`
+**Bad**: `"Chapter about prompting"`, `"Various prompt engineering concepts"`
+
+### Keywords
+
+Optional but improves search:
+
+```yaml
+keywords: [prompt-engineering, python, ai-driven-development, coding-tips, best-practices]
+```
+
+### Heading Hierarchy
+
+Proper heading hierarchy helps Docosaurus generate accurate table of contents:
+
+```markdown
+# Chapter Title (H1 - one per file)
+
+## Major Section (H2)
+
+### Subsection (H3)
+
+#### Details (H4, use sparingly)
+```
+
+DON'T skip heading levels (e.g., don't jump from H1 to H3).
+
+---
+
+## File Size and Performance
+
+Docosaurus performs best with:
+
+- **Ideal file size**: 6,000-12,000 words per chapter
+- **Maximum recommended**: 15,000 words (consider splitting if larger)
+- **Maximum heading depth**: H3 is recommended, H4 acceptable, avoid H5+
+
+---
+
 ## Validation Checklist
 
 Before submitting a chapter, verify:
 
-- [ ] Frontmatter is complete (sidebar_position, title, description)
+- [ ] Frontmatter is complete (sidebar_position, title, description, keywords)
 - [ ] H1 title matches frontmatter title
 - [ ] File is named correctly: `NN-Chapter-Name.md` (consult chapter-index.md for actual chapter number)
 - [ ] File is in correct directory: `book-source/docs/NN-Part-Name/` (per chapter-index.md assignment)
@@ -423,8 +577,8 @@ Before submitting a chapter, verify:
 - [ ] No broken Markdown syntax
 - [ ] Heading hierarchy is proper (H1 > H2 > H3)
 - [ ] Chapter length is 6,000-12,000 words
-- [ ] All 8 sections present: Intro, Objectives, Lessons, Summary, Takeaways, Review, Next
-- [ ] For advanced topics: Includes required diagrams/elements
+- [ ] All 9 sections present: Intro, Objectives, Lessons, Summary, Takeaways, Review, Next
+- [ ] For advanced topics (Parts 6-7): Includes required diagrams/elements
 - [ ] Writing aligns with Part-specific standards
 - [ ] All code examples tested and working
 - [ ] Technical accuracy verified
