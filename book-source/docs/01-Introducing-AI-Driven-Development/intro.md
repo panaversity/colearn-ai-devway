@@ -21,7 +21,7 @@ You are no longer a **coder**—someone who writes code line by line. You are no
 
 This isn't displacement. **It's ascension.** Orchestrators create more value, solve harder problems, and build billion-dollar solutions that would take teams of traditional coders years to deliver.
 
-The numbers prove it: Within the first two months, Claude Code achieved $500M in annualized recurring revenue. Gemini CLI acquired 1 million developers. Solo entrepreneurs are already building unicorns using AI-assisted development. This is happening now, and you're positioned to be part of it.
+The numbers prove it: Claude Code has quickly taken off—already generating over $500 million in run-rate revenue with usage growing more than 10x in just three months. Gemini CLI acquired 1 million developers. Solo entrepreneurs are already building unicorns using AI-assisted development. This is happening now, and you're positioned to be part of it.
 
 ## Why This Part Exists
 
