@@ -84,9 +84,9 @@ This chapter motivates readers by revealing real opportunities available to solo
 ---
 
 ### Lesson 2: Real Money and Architecture — Integration, Subagents, and the Super Orchestrator
-**Duration**: 12-14 minutes (consolidates original Lessons 3-4)
+**Duration**: 13-15 minutes (consolidates original Lessons 3-4 + includes early design scaffolding)
 
-**Objective**: Understand why deep integration and subagent architecture create defensible businesses, and how solo operators can compete (Bloom: Understand)
+**Objective**: Understand why deep integration and subagent architecture create defensible businesses, how solo operators can compete, and identify your own vertical opportunity (Bloom: Understand & Apply)
 
 **Key Concepts**:
 - Three elements of a successful vertical solution (fine-tuning, integration, UX)
@@ -94,6 +94,7 @@ This chapter motivates readers by revealing real opportunities available to solo
 - Super orchestrator definition and role
 - Intelligence reuse vs. code reuse
 - Solo scaling in the AI era
+- **NEW**: Early personal application (identifying your vertical)
 
 **Prerequisites**:
 - Lesson 1 (competitive layers, agentic tier)
@@ -136,6 +137,18 @@ This chapter motivates readers by revealing real opportunities available to solo
      - Structure: Each subagent = system prompt + skills + MCP connections (no manual code per customer)
      - Proof: Claude Code founders are already building $10M+ ARR companies; this is happening NOW
 
+4. **Your Turn: Identify Your Vertical** (1.5-2 min) — **NEW SECTION FOR EARLY ENGAGEMENT**
+   - **Purpose**: Start thinking personally about opportunities NOW (not waiting until Lesson 5)
+   - **Reflection Prompt**: "Think of an industry you know well or could learn quickly. What frustrates customers there? What legacy systems could use a modern AI layer?"
+   - **Examples to spark thinking**:
+     - Healthcare: "Doctors spend 4 hours daily on admin; scheduling, coding, insurance claims are painful"
+     - Manufacturing: "Supply chain planning uses 30-year-old systems; lots of manual spreadsheets"
+     - Legal: "Paralegals manually review contracts; discovery process is expensive and slow"
+     - Real Estate: "Agents spend hours on paperwork; property valuation and market analysis could be instant"
+   - **Why this matters**: This early prompt seeds your thinking and increases engagement through later lessons
+   - **This is NOT the full worksheet yet**: Full design exercise comes in Lesson 5 (after you understand strategy)
+   - **Result**: Readers feel personally invested in Chapter 3's concepts
+
 **Code Examples**: None (conceptual)
 
 **Visuals**:
@@ -150,73 +163,58 @@ This chapter motivates readers by revealing real opportunities available to solo
 ---
 
 ### Lesson 3: Building the Stack — Subagents, Skills, and MCP
-**Duration**: 8-9 minutes (keeps original Lesson 5 with minor consolidation)
+**Duration**: 6-7 minutes (streamlined from 8-9; defers implementation details to Part 6)
 
-**Objective**: Explain how subagents, skills, and MCP create competitive advantages and enable rapid iteration (Bloom: Understand)
+**Objective**: Explain why subagent architecture, skills, and MCP create competitive advantages (Bloom: Understand)
 
 **Key Concepts**:
-- Subagent anatomy (system prompt, skills, MCP connections)
-- Horizontal vs. vertical skills
-- MCP as the integration standard
-- Composable architecture and modularity
+- Subagent architecture enables modularity and specialization
+- MCP as the integration standard (protocol, not coding)
+- Why this design pattern creates defensible moats
+- How solo builders leverage pre-built integrations
 
 **Prerequisites**:
 - Lesson 2 (super orchestrator, reusable intelligence)
-- Chapter 1 (subagents, skills, MCP mentioned)
+- Chapter 1 (subagents, skills, MCP mentioned briefly)
 
 **Content Structure**:
-1. **Subagent Anatomy: What Each Agent Contains** (2.5-3 min):
-   - **System Prompt**: Instructions defining role, scope, constraints
-     - Example: "You are a financial reconciliation specialist. You ONLY reconcile invoices. You NEVER modify customer data."
-   - **Horizontal Skills**: Infrastructure, DevOps, testing, deployment (Docker, Kubernetes, CI/CD)
-   - **Vertical Skills**: Domain expertise (accounting rules, legal compliance, medical terminology)
-   - **MCP Horizontal**: Integration with dev tools (GitHub, AWS, cloud services)
-   - **MCP Vertical**: Integration with industry systems (QuickBooks, Salesforce, EHR systems)
-   - Composability: Each subagent is independent but coordinated by the super orchestrator (you)
 
-2. **Why This Architecture Wins** (2-2.5 min):
-   - **Modularity**: Replace one skill without rewriting others
-   - **Specialization**: Each subagent becomes very good at its specific domain task
-   - **Reusability**: Same skill library used across all your customers
-   - **Defensibility**: Deep skill + integration knowledge creates competitive moat
-   - **Rapid Iteration**: Improve one skill and ALL customers benefit (no per-customer deployment)
+**BRIDGE SECTION** (0.5-1 min) — **NEW: "Connecting the Dots"**:
+   - "You now understand WHY layers exist and HOW solo builders compete. But WHAT makes this architecture work? Three design patterns enable solo scaling..."
+   - Purpose: Smooth transition from motivational (L1-2) to technical (L3); activates prior knowledge
 
-3. **MCP as the Connective Tissue** (1.5-2 min):
-   - Standard protocol (led by Anthropic, adopted by OpenAI, Google, Microsoft)
-   - 200+ pre-built integrations available now
-   - Community-driven growth (exponential—new integrations added daily)
-   - Why it matters: You don't build integrations from scratch; you compose existing ones
-   - Vision: By year-end, 1000+ integrations will exist (no-code assembly possible)
+1. **Why This Architecture Wins** (2.5-3 min):
+   - **Modularity**: Build specialized agents for specific tasks; improve one without rewriting others
+   - **Specialization**: Each agent becomes excellent at its domain task (not trying to do everything)
+   - **Reusability**: Same skill library scales across all customers automatically (no per-customer coding)
+   - **Defensibility**: Deep domain expertise + integration knowledge = competitors can't easily copy
+   - **Rapid Iteration**: Improve one skill and ALL customers benefit instantly (no manual deployments)
+   - **Example**: Finance agent with 4 specialized roles (reader, mapper, auditor, notifier) beats monolithic solution
 
-4. **Real Example: Invoice Reconciliation Pipeline** (2-2.5 min):
-   - Vertical: Finance (Invoice Reconciliation)
-   - **Subagent 1: InvoiceReader** (skills: OCR, document parsing, PDF extraction)
-     - Input: PDF invoice files
-   - **Subagent 2: DataMapper** (skills: data normalization, format standardization)
-     - Input: Extracted invoice data; Output: Standardized GL entry format
-   - **Subagent 3: Auditor** (skills: validation, rule checking, discrepancy detection)
-     - Input: Standardized data; Output: Validation report + flagged issues
-   - **Subagent 4: CustomerNotifier** (skills: communication, reporting, escalation)
-     - Input: Validation results; Output: Customer reports and alerts
-   - **Together**: An "end-to-end invoice reconciliation pipeline" that customers pay $5K+/month for
-   - **Your role (orchestrator)**: Specify the workflow, set constraints, validate quality, iterate based on feedback
+2. **MCP: The Integration Standard** (1.5-2 min):
+   - **What is MCP?** A protocol (not code) that connects agents to industry systems
+   - **Who's behind it?** Anthropic (creator), OpenAI, Google, Microsoft (all adopting it)
+   - **Current state**: 200+ pre-built integrations available now (QuickBooks, Salesforce, GitHub, AWS, etc.)
+   - **Growth trajectory**: Exponential — new integrations added daily, vision of 1000+ by year-end
+   - **Why it matters**: YOU don't build integrations from scratch; you compose existing ones (no-code assembly)
+   - **The payoff**: Instead of spending months on API integration, you focus on domain logic and orchestration
 
-**Code Examples**: Pseudo-code structure of a subagent definition:
-```
-Subagent: InvoiceReconciler
-├── System Prompt: "You are a financial reconciliation expert..."
-├── Horizontal Skills: ["Document Processing", "Error Handling", "Logging"]
-├── Vertical Skills: ["Accounting Rules", "Invoice Formats", "GL Mappings"]
-├── MCP Horizontal: ["GitHub", "AWS S3", "Datadog"]
-└── MCP Vertical: ["QuickBooks API", "SAP ERP", "Excel Connectors"]
-```
+3. **How It All Works Together** (1.5-2 min):
+   - **You (Super Orchestrator)**: Specify what you want done (using specs/prompts)
+   - **Subagents**: Specialized workers handling different tasks (reader, mapper, auditor, notifier)
+   - **Skills**: Domain knowledge reused across customers (accounting rules, legal terms, medical knowledge)
+   - **MCP**: Integration layer connecting agents to existing systems (QuickBooks, Salesforce, legacy software)
+   - **Result**: End-to-end automation of complex workflows without writing traditional code
+   - **Example**: Reader agent extracts invoices (MCP: document handling) → Mapper normalizes data (skill: accounting rules) → Auditor validates (skill: GL mappings) → Notifier alerts customers (MCP: communication)
+
+**Code Examples**: None in this streamlined version (defer to Part 6)
 
 **Visuals**:
-- Diagram: Subagent anatomy (system prompt + skills + MCP connections radiating outward)
-- Architecture diagram: 4 subagents coordinating on invoice reconciliation task (pipeline flow)
+- Diagram: Simplified "How It Works" showing Orchestrator → Subagents → Skills + MCP (single diagram, not multiple)
+- (Detailed pseudo-code and 4-agent pipeline diagram deferred to Part 6 "Building Agentic Systems")
 
 **Practice/Reflection Prompt**:
-- "Design the 3-4 subagents you'd need for your vertical. What skill does each need? How do they coordinate?"
+- "For the vertical you identified in Lesson 2: What 3-4 specialized tasks would your agents handle? What existing systems would they need to connect to (via MCP)?"
 
 ---
 
@@ -538,17 +536,22 @@ Lesson 5: Real-World Examples and Your Path Forward
 
 ---
 
-## Estimated Time Breakdown (CONSOLIDATED)
+## Estimated Time Breakdown (UPDATED WITH OPTION 1 OPTIMIZATIONS)
 
 | Lesson | Duration | Content Type | Interactive Elements |
 |--------|----------|--------------|----------------------|
 | 1 | 10-12 min | Market opportunity + layers + motivation | Reflection prompt |
-| 2 | 12-14 min | Architecture + proof + super orchestrator | Reflection prompt |
-| 3 | 8-9 min | Technical stack + subagent anatomy | Reflection prompt |
+| 2 | 13-15 min | Architecture + proof + super orchestrator + **early design scaffolding** | Reflection prompt + "Identify Your Vertical" |
+| 3 | 6-7 min | Why architecture matters + MCP (streamlined; defers implementation to Part 6) | Reflection prompt |
 | 4 | 9-10 min | PPP strategic framework | Reflection prompt |
-| 5 | 10-12 min | Real-world patterns + design exercise | Worksheet completion |
+| 5 | 10-12 min | Real-world patterns + capstone design exercise | Worksheet completion |
 | **Quiz & Review** | 5-8 min | Assessment + reflection | 5 quiz questions |
-| **TOTAL** | **30-45 min** | Mix of narrative, visual, interactive | 5 reflection prompts + 1 design worksheet + quiz |
+| **TOTAL** | **33-46 min** | Mix of narrative, visual, interactive | 5 reflection prompts + 1 design worksheet + quiz + early engagement |
+
+**Change Summary**:
+- Lesson 2 +1-2 min (early design scaffolding for engagement)
+- Lesson 3 -2 min (streamlined; defers technical details to Part 6)
+- Net change: +3 min to 33-46 min (justified by improved pedagogical scaffolding)
 
 ---
 
