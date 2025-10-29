@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://panaversity.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/colearning-python/',
+  baseUrl: '/colearn-ai-devway/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearning-python', // Usually your repo name.
+  projectName: 'colearn-ai-devway', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
