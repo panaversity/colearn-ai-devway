@@ -1,7 +1,7 @@
 ---
 name: docusaurus-deployer
-description: This skill should be used when deploying a Docusaurus site to GitHub Pages. It automates the configuration, building, and deployment process, handling GitHub Pages setup, environment configuration, and CI/CD automation. Includes local validation before GitHub Actions triggering.
 version: 1.0
+description: This skill should be used when deploying a Docusaurus site to GitHub Pages. It automates the configuration, building, and deployment process, handling GitHub Pages setup, environment configuration, and CI/CD automation. Includes local validation before GitHub Actions triggering.
 ---
 
 # Docusaurus GitHub Pages Deployer

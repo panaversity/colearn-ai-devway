@@ -37,16 +37,141 @@ Our vision is to pioneer a new agent-native paradigm of CS education where AI is
 7.  **book-architecture:** Structure the book's content for a logical flow.
 8.  **ai-augmented-teaching:** Design lessons that effectively integrate AI tools.
 
-## Book Structure
+## 📘 Book Directory & Generation Structure
 
-The book is divided into five parts:
+This book is structured as a technical guide. Each part contains multiple **chapters**, which in turn contain multiple **topics**. This hierarchy ensures clarity, modularity, and scalability.
 
-1.  **Part 1: Introducing AI-Driven Development (5 chapters):** Get started with AI tools and basic Python.
-2.  **Part 2: Spec-Kit Methodology (5 chapters):** Learn a professional workflow for AI-assisted development.
-3.  **Part 3: AI Tool Landscape (4 chapters):** A deep dive into various AI platforms and editors.
-4.  **Part 4: Prompt & Context Engineering (4 chapters):** Master the art of effective communication with AI.
-5.  **Part 5: Modern Python with Type Hints (8 chapters):** Learn advanced Python features with a focus on type safety and testing.
+All content is published as a [Docusaurus](https://docusaurus.io/) site, with auto-generated sidebars and strict adherence to Docusaurus-compatible Markdown.
 
-## Getting Started
+The content is organized under:
 
-This repository contains the source code and infrastructure for the "CoLearning Python" book. To contribute or learn more about our process, please refer to the `CONTRIBUTING.md` file.
+- `docs/`: All book content (chapters, lessons, topics, projects, appendices)
+
+---
+
+### 📂 Folder Structure
+
+```
+book-source/
+├── docs/
+│   ├── 01-Intro.md                           # Book introduction
+│   │
+│   ├── 02-AI-Driven-Development/
+│   │   ├── 01-Welcome-to-AI-Coding       # Chapter overview
+│   │   ├── 02-Understanding-AI-Tools     # Chapter overview
+│   │   └── 03-Collaboration-Basics       # Chapter overview
+│   │
+│   ├── 03-Python-Fundamentals/
+│   │   ├── 01-Python-Basics/
+│   │   │   ├── 01-Getting-Started.md       # Lesson
+│   │   │   ├── 02-Variables-and-Types.md   # Lesson
+│   │   │   └── 03-Basic-Operations.md      # Lesson
+│   │   ├── 02-Data-Structures/
+│   │   │   ├── 01-Lists-and-Tuples.md      # Lesson
+│   │   │   ├── 02-Dictionaries.md          # Lesson
+│   │   │   └── 03-Sets.md                  # Lesson
+│   │   └── 03-Control-Flow/
+│   │       ├── 01-Conditionals.md          # Lesson
+│   │       ├── 02-Loops.md                 # Lesson
+│   │       └── 03-Functions.md             # Lesson
+│   │
+│   ├── 04-Real-World-Projects/
+│   │   ├── 01-Todo-CLI-Application/
+│   │   │   ├── 01-Project-Setup.md        # Lesson
+│   │   │   ├── 02-Core-Features.md        # Lesson
+│   │   │   └── 03-Advanced-Features.md   # Lesson
+│   │   ├── 02-API-Client-Project/
+│   │   │   ├── 01-HTTP-Requests.md       # Lesson
+│   │   │   ├── 02-Data-Parsing.md        # Lesson
+│   │   │   └── 03-Error-Handling.md       # Lesson
+│   │   └── 03-Data-Analysis-Tool/
+│   │       ├── 01-Data-Loading.md         # Lesson
+│   │       ├── 02-Data-Processing.md     # Lesson
+│   │       └── 03-Visualization.md       # Lesson
+│   │
+│   ├── 06-Best-Practices/
+│   │   ├── 01-Code-Quality/
+│   │   │   ├── 01-Coding-Standards.md    # Lesson
+│   │   │   ├── 02-Documentation.md       # Lesson
+│   │   │   └── 03-Code-Review.md        # Lesson
+│   │   ├── 02-Testing-Strategies/
+│   │   │   ├── 01-Unit-Testing.md       # Lesson
+│   │   │   ├── 02-Integration-Testing.md # Lesson
+│   │   │   └── 03-Test-Automation.md    # Lesson
+│   │   └── 03-Deployment-Guide/
+│   │       ├── 01-Environment-Setup.md  # Lesson
+│   │       ├── 02-Deployment-Options.md  # Lesson
+│   │       └── 03-Monitoring.md         # Lesson
+│   │
+│   ├── 07-Appendix/
+│   │   ├── 01-Glossary.md
+│   │   └── 02-Troubleshooting.md
+│   │
+│   └── 08-Projects/
+│       ├── 01-Todo-CLI.md
+│       └── 02-API-Client.md
+│
+
+```
+
+---
+
+### 🏷️ Naming Conventions
+
+| Level          | Format                | Example                                  |
+| -------------- | --------------------- | ---------------------------------------- |
+| Part folder    | `##-Name/`            | `02-AI-Driven-Development/`      |
+| Chapter folder | `##-Chapter-Name/`    | `01-Python-Basics/`                      |
+| Lesson file    | `##-Lesson-Name.md`   | `01-Getting-Started.md`                 |
+
+---
+
+### 📐 Docusaurus Compatibility
+
+This structure uses **Docusaurus number prefixes** for automatic sidebar ordering.
+
+- Each folder/file uses `##-Name` format for automatic ordering
+- Docusaurus automatically removes number prefixes from URLs and titles
+- Folders become sidebar categories, files become sidebar items
+
+#### 🔗 Internal Linking
+
+Use relative links between topics:
+
+```md
+See [Variables and Types](./02-Variables-and-Types.md) for more details.
+```
+
+---
+
+### ✅ Book Agent Output Rules
+
+The book-generation agent must:
+
+1. Write Docusaurus-compatible Markdown with frontmatter
+2. Follow strict numbered naming conventions (`##-Name` format)
+3. Use number prefixes for automatic sidebar ordering
+4. Include the 3-level hierarchy:
+   - **Part folders** (`##-Part-##-Name/`)
+   - **Chapter folders** (`##-Chapter-Name/`)
+   - **Lesson files** (`##-Lesson-Name.md`)
+5. Avoid duplicate names or invalid characters
+
+---
+
+### 💡 Best Practices
+
+- Use consistent number prefixes (`01-`, `02-`, etc.) for proper ordering
+- Keep folder/file names descriptive but concise
+- Use hyphens instead of underscores for better URL readability
+---
+
+## 🔍 Summary
+
+This structure supports:
+
+- **3-level hierarchy**: Part → Chapter → Lesson
+- **Automatic sidebar ordering** using Docusaurus number prefixes
+- **Clean URLs** with automatic prefix removal
+- **Simple file management** without complex configuration files
+- **Scalable book expansion** with consistent numbering
