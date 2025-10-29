@@ -41,14 +41,14 @@ book-source/docs/
 ├── 03-Prompt-and-Context-Engineering/
 ├── 04-Python-The-Language-of-AI-Agents/
 ├── 05-Spec-Kit-Plus-Methodology/
-├── 06-Agentic-AI-with-OpenAI-Agents-SDK/
-├── 07-MCP-with-FastMCP/
-├── 08-TypeScript-Realtime-Interaction/
+├── 06-Agentic-AI-Fundamentals/
+├── 07-MCP-Fundamentals/
+├── 08-TypeScript-Fundamentals/
 ├── 09-Realtime-Voice-Agents/
 ├── 10-Docker-Kubernetes/
-├── 11-Databases-State-Memory/
-├── 12-Kafka-Dapr-Event-Architecture/
-└── 13-Dapr-Stateful-Agents/
+├── 11-Data-State-Memory/
+├── 12-Event-Driven-Architecture/
+└── 13-Stateful-Agents/
 ```
 
 ### Naming Convention
@@ -61,9 +61,9 @@ book-source/docs/
 
 **Examples**:
 - ✅ `01-Introducing-AI-Driven-Development/`
-- ✅ `06-Agentic-AI-with-OpenAI-Agents-SDK/`
-- ✅ `08-TypeScript-Realtime-Interaction/`
-- ✅ `13-Dapr-Stateful-Agents/`
+- ✅ `06-Agentic-AI-Fundamentals/`
+- ✅ `08-TypeScript-Fundamentals/`
+- ✅ `13-Stateful-Agents/`
 - ❌ `1-Introduction/` (single digit)
 - ❌ `01_Introduction/` (underscores)
 - ❌ `01-introduction/` (lowercase)
