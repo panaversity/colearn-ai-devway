@@ -1,12 +1,45 @@
-# 📘 CoLearning Python Book Directory & Generation Structure
+# CoLearning Python: The AI-Driven Way
 
-This document defines the canonical folder structure and file organization strategy for the "CoLearning Python: The AI-Driven Way" technical book project. It serves as the reference for all contributors, especially book generation agents and Docusaurus site maintainers.
+## Vision
 
----
+"CoLearning Python: The AI-Driven Way" is a 26-chapter technical book that teaches modern AI-driven development using Python (3.13+) through systematic collaboration between human learners and AI assistants. 
 
-## 🧭 Overview
+Our vision is to pioneer a new agent-native paradigm of CS education where AI is a co-learner and a collaborator, reflecting the reality of modern software development.
 
-This book is structured as a 5-part technical guide. Each part contains multiple **chapters**, which include multiple **lessons**, which in turn contain multiple **topics**. This three-tier hierarchy (Chapter → Lesson → Topic) ensures clarity, modularity, and scalability.
+## Core Philosophy
+
+*   **AI as a Collaborative Partner:** We treat AI tools as intelligent co-workers, working together within shared constraints.
+*   **Specification-First Methodology:** Clear requirements precede all work. We use the "Spec-Kit" methodology for iterative, AI-friendly development.
+*   **Learning by Doing:** Every concept is practiced through realistic, AI-assisted hands-on work.
+*   **Transparency:** We teach our methodology and demonstrate it throughout the book.
+
+## Target Audience
+
+*   **Primary:** Programming beginners with no prior coding experience.
+*   **Secondary:** Professional developers transitioning to AI-driven development.
+
+## Key Features
+
+*   **AI-First Learning:** Learn Python with AI as a partner from day one.
+*   **Modern Python:** All code uses Python 3.13+ features with mandatory type hints.
+*   **Pedagogically Sound:** Content is guided by 8 specialized "co-learning skills" based on educational research.
+*   **Structured and Consistent:** A project constitution and defined output styles ensure a high-quality, consistent reading experience.
+*   **Tool Diversity:** Learn to work with a variety of AI tools, including Claude Code, Gemini CLI, and OpenAI Codex.
+
+## The 8 CoLearning Skills
+
+1.  **learning-objectives:** Generate measurable learning outcomes.
+2.  **concept-scaffolding:** Break down complex topics into manageable steps.
+3.  **code-example-generator:** Create high-quality, runnable code examples.
+4.  **exercise-designer:** Design effective practice exercises.
+5.  **assessment-builder:** Build meaningful quizzes and assessments.
+6.  **technical-clarity:** Ensure all explanations are clear and accessible.
+7.  **book-architecture:** Structure the book's content for a logical flow.
+8.  **ai-augmented-teaching:** Design lessons that effectively integrate AI tools.
+
+## 📘 Book Directory & Generation Structure
+
+This book is structured as a technical guide. Each part contains multiple **chapters**, which in turn contain multiple **topics**. This hierarchy ensures clarity, modularity, and scalability.
 
 All content is published as a [Docusaurus](https://docusaurus.io/) site, with auto-generated sidebars and strict adherence to Docusaurus-compatible Markdown.
 
@@ -16,7 +49,7 @@ The content is organized under:
 
 ---
 
-## 📂 Folder Structure
+### 📂 Folder Structure
 
 ```
 book-source/
@@ -24,9 +57,9 @@ book-source/
 │   ├── 01-Intro.md                           # Book introduction
 │   │
 │   ├── 02-AI-Driven-Development/
-│   │   ├── 01-Welcome-to-AI-Coding.md       # Chapter overview
-│   │   ├── 02-Understanding-AI-Tools.md     # Chapter overview
-│   │   └── 03-Collaboration-Basics.md       # Chapter overview
+│   │   ├── 01-Welcome-to-AI-Coding       # Chapter overview
+│   │   ├── 02-Understanding-AI-Tools     # Chapter overview
+│   │   └── 03-Collaboration-Basics       # Chapter overview
 │   │
 │   ├── 03-Python-Fundamentals/
 │   │   ├── 01-Python-Basics/
@@ -42,21 +75,7 @@ book-source/
 │   │       ├── 02-Loops.md                 # Lesson
 │   │       └── 03-Functions.md             # Lesson
 │   │
-│   ├── 04-Advanced-Python/
-│   │   ├── 01-Functions-and-Modules/
-│   │   │   ├── 01-Function-Basics.md       # Lesson
-│   │   │   ├── 02-Advanced-Functions.md   # Lesson
-│   │   │   └── 03-Modules-and-Packages.md # Lesson
-│   │   ├── 02-Object-Oriented-Programming/
-│   │   │   ├── 01-Classes-and-Objects.md # Lesson
-│   │   │   ├── 02-Inheritance.md          # Lesson
-│   │   │   └── 03-Polymorphism.md        # Lesson
-│   │   └── 03-Error-Handling/
-│   │       ├── 01-Exceptions.md           # Lesson
-│   │       ├── 02-Debugging.md            # Lesson
-│   │       └── 03-Logging.md              # Lesson
-│   │
-│   ├── 05-Real-World-Projects/
+│   ├── 04-Real-World-Projects/
 │   │   ├── 01-Todo-CLI-Application/
 │   │   │   ├── 01-Project-Setup.md        # Lesson
 │   │   │   ├── 02-Core-Features.md        # Lesson
@@ -97,7 +116,7 @@ book-source/
 
 ---
 
-## 🏷️ Naming Conventions
+### 🏷️ Naming Conventions
 
 | Level          | Format                | Example                                  |
 | -------------- | --------------------- | ---------------------------------------- |
@@ -107,7 +126,7 @@ book-source/
 
 ---
 
-## 📐 Docusaurus Compatibility
+### 📐 Docusaurus Compatibility
 
 This structure uses **Docusaurus number prefixes** for automatic sidebar ordering.
 
@@ -115,7 +134,7 @@ This structure uses **Docusaurus number prefixes** for automatic sidebar orderin
 - Docusaurus automatically removes number prefixes from URLs and titles
 - Folders become sidebar categories, files become sidebar items
 
-### 🔗 Internal Linking
+#### 🔗 Internal Linking
 
 Use relative links between topics:
 
@@ -125,7 +144,7 @@ See [Variables and Types](./02-Variables-and-Types.md) for more details.
 
 ---
 
-## ✅ Book Agent Output Rules
+### ✅ Book Agent Output Rules
 
 The book-generation agent must:
 
@@ -140,7 +159,7 @@ The book-generation agent must:
 
 ---
 
-## 💡 Best Practices
+### 💡 Best Practices
 
 - Use consistent number prefixes (`01-`, `02-`, etc.) for proper ordering
 - Keep folder/file names descriptive but concise
@@ -156,6 +175,3 @@ This structure supports:
 - **Clean URLs** with automatic prefix removal
 - **Simple file management** without complex configuration files
 - **Scalable book expansion** with consistent numbering
-
-
-
