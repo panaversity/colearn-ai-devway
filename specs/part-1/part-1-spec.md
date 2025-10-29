@@ -46,54 +46,93 @@ By the end of Part 1, readers will be able to:
 
 ## Chapter Breakdown
 
-### Chapter 1: Welcome to AI-Driven Development
-**Subtitle**: "Why Orchestration Beats Coding"
+### Chapter 1: Welcome to Agent-Native Education
+**Subtitle**: "The Paradigm Shift from Code Writer to Agent Orchestrator"
 
 #### Purpose
-Establish the foundational mindset shift. Answer: "What changed, and why should I care?"
+Introduce readers to the **agent-native model of computer science education** where AI is a **co-learner**, **collaborator**, and **creative partner**. Establish the foundational mindset shift from viewing oneself as a "code writer" to an "agent orchestrator." Ground the vision in the economic and technological reality of the AI coding revolution.
 
 #### Learning Outcomes
 By the end of this chapter, readers will:
-- Understand why the "coder" role is evolving into the "orchestrator" role
-- Grasp the concept of "super orchestrators" (architects, specification writers, agent directors)
-- See why solo developers can now build billion-dollar solutions
-- Know the three core mechanisms of vertical intelligence: subagents, skills, and MCP integration
-- Feel motivated to engage with the AI-driven paradigm (not threatened by it)
+- Understand that AI augments rather than replaces human capability and judgment
+- Grasp the concept of "agent orchestrator" (specification writer, system architect, agent director, quality arbiter)
+- See why solo developers can now build significant solutions with AI assistance
+- Understand the $3 trillion software development market and why this moment is unprecedented
+- Know the major technological and economic forces enabling AI-driven development
+- Recognize vertical markets (finance, healthcare, education, legal, real estate) as the real opportunity
+- Feel motivated and included, not threatened, by the AI-driven paradigm shift
+- Understand what "agent-native education" means and what to expect in this book
+
+#### Content Source & Grounding
+- **Primary**: AI Coding Revolution Paper (https://github.com/panaversity/spec-kit-plus/blob/main/docs-plus/ai_coding_revolution_paper.md)
+- **Secondary**: Project Constitution (Principles 1, 8, 9)
+- **Pedagogical Model**: Agent-native education (AI as co-learner, collaborator, creative partner)
 
 #### Key Topics to Cover
-1. **The Old Mental Model**: Write code → Debug → Deploy (limitations, what breaks)
-2. **The New Mental Model**: Write specs → AI generates → AI tests → AI deploys (advantages, what enables it)
-3. **Why Now?** The convergence of 9 technological revolutions (teaser for Chapter 2)
-4. **Real Numbers**: Claude Code $500M ARR, Gemini CLI 1M developers, solo unicorns already existing
-5. **The Three Mechanisms**:
-   - **Subagents**: Self-contained AI agents with domain expertise and clear interfaces
-   - **Skills**: Reusable capabilities (horizontal: Docker, Kubernetes; vertical: domain-specific)
-   - **MCP**: Deep integration with existing systems (creating defensible moats)
-6. **Why This Matters for YOU**: You're not being replaced. You're ascending. (Reframe anxiety → opportunity)
+1. **The Paradigm Shift**: From "code writer" to "agent orchestrator"
+   - The fear narrative: "Will AI replace me?" (acknowledge directly)
+   - The reality: AI amplifies human judgment, taste, and design choices
+   - Real examples: Solo builders creating valuable solutions with AI
+   - The new role: Four dimensions of an agent orchestrator
+
+2. **The Economic & Technological Foundation**: Why THIS moment matters
+   - The $3 trillion software development industry and 30 million developers
+   - AI coding revolution as the first truly large market for AI
+   - Autonomous agents vs. copilots (autonomy vs. assistance)
+   - Key enablers: context engineering, sandbox execution, version control for machine-generated code
+   - Infrastructure evolution: cloud-native systems enabling large-scale AI
+
+3. **The Competitive Landscape**: Where the REAL opportunity is
+   - The "snakes and ladders" pattern (Layer 1: consumer AI, Layer 2: horizontal agents, Layer 3: vertical specialists)
+   - Why limited winners at Layers 1-2, unlimited winners at Layer 3
+   - Vertical examples: Finance, healthcare, education, legal, real estate
+   - How deep domain integration + fine-tuned models + existing software connections = defensible advantage
+
+4. **Agent-Native Education**: The Model Behind This Book
+   - What "agent-native" means: AI participates actively (co-learner, collaborator, creative partner)
+   - Learning WITH AI vs. Learning FROM AI (critical distinction)
+   - How this book embodies the model throughout
+   - What to expect: specifications, directing AI partners, understanding reasoning
+
+5. **Your Role as Agent Orchestrator**: Four Dimensions
+   - Specification writer: Clear requirements precede implementation
+   - System architect: Design intelligent system topology
+   - Agent director: Guide AI partners toward good solutions
+   - Quality arbiter: Evaluate and refine AI-generated work
+
+6. **Preview of the Journey**: Parts 2-7 Overview
+   - Part 1: Mindset shift and agent-native education foundations
+   - Part 2: Tools (Claude Code, Gemini CLI, Spec-Kit Plus)
+   - Part 3-7: Python, agentic systems, MCP integration, production deployment
 
 #### Prerequisites
-None. This is the entry point.
+None. This is the entry point to the book.
 
 #### Success Criteria
-- Readers can articulate (in their own words) why orchestration > coding
-- Readers understand the three mechanisms (subagents, skills, MCP)
-- Readers have seen real ARR numbers and startup examples
-- Readers feel motivated, not threatened
-- Readers are ready for "Understanding the 9 revolutions" (Chapter 2)
+- 90%+ of readers articulate (in their own words) that AI amplifies rather than replaces human capability
+- 85%+ of readers can name and explain at least 3 major technological/economic shifts from the AI coding revolution
+- 80%+ of readers identify at least one vertical market where they could build specialized solutions
+- 85%+ of readers understand what "agent-native education" means and what to expect in the book
+- 90%+ of readers feel motivated (not threatened) by the AI-driven paradigm shift
+- 80%+ of readers can explain what an "agent orchestrator" does and why it's a valuable role
+- Readers complete chapter without significant confusion (measured by comprehension check)
+- 75%+ of readers report readiness to engage with AI as a co-learner in subsequent chapters
 
 #### Pedagogical Approach
-- **Show first**: Real examples (Claude Code ARR, unicorn founders, subagent architectures)
-- **Then explain**: Why these examples matter and what enables them
-- **Heavy scaffolding**: Use analogies (orchestrator vs. musician, architect vs. construction worker)
-- **Narrative continuity**: Use "Coder to Super Orchestrator" as the unifying theme
-- **Zero gatekeeping**: Avoid "it's simple" or "obvious"—explain every assumption
+- **Show → Explain → Practice → Assess**: Start with examples, connect to patterns, practice with reflection exercise, assess with comprehension check
+- **Heavy Scaffolding**: Define every term on first use, use analogies, avoid gatekeeping language
+- **Multiple Entry Points**: Narrative flow, bullet points, visuals (diagrams), examples (solo builders, verticals)
+- **Emotional Intelligence**: Acknowledge fears directly, validate existing skills, use inclusive language, celebrate opportunity
+- **Constitutional Alignment**: Principle 1 (AI-First), Principle 8 (Inclusivity), Principle 9 (Show-then-Explain)
 
 #### Approximate Content
-- 3,000-4,000 words
-- 2-3 code/architecture diagrams showing subagent structures
-- 1-2 real startup examples (ARR, team size)
-- 3-4 analogies to reframe the mindset
-- 1 end-of-chapter reflection exercise (not graded, personal)
+- 3,500-4,500 words total
+- 6 major sections with defined word counts (600-1,200 per section)
+- 3 diagrams: (1) Snakes & Ladders pattern, (2) Agent Orchestrator roles, (3) Agent-Native Education model
+- 3-4 real examples: 2 solo builder examples, 3+ vertical specialization examples
+- 4 analogies: orchestrator vs. musician, architect vs. construction worker, coach vs. player, conductor vs. performer
+- 1 comprehension check (formative, not graded)
+- 1 reflection exercise (personal, non-graded)
 
 ---
 
