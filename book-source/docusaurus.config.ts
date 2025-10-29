@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CoLearning Python: The AI-Driven Way',
-  tagline: 'Master modern Python with AI-assisted development',
+  title: 'CoLearn - AI Dev Way',
+  tagline: 'Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

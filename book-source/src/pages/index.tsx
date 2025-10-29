@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Master modern Python with AI-assisted development">
+      description="Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way">
       <HomepageHeader />
     </Layout>
   );
