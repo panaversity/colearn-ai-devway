@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearning-python', // Usually your repo name.
+  projectName: 'colearn-aidd', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/panaversity/colearning-python/tree/main/website/',
+            'https://github.com/panaversity/colearn-aidd/tree/main/website/',
         },
         blog: false,
         theme: {
@@ -83,7 +83,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/panaversity/colearning-python',
+          href: 'https://github.com/panaversity/colearn-aidd',
           label: 'GitHub',
           position: 'right',
         },
