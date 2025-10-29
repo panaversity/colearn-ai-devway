@@ -103,12 +103,20 @@ Integration frameworks: Model Context Protocol
 
 ## Directory Structure Reference
 
-Each chapter file should be placed in `book-source/docs/[NN-Part-Name]/[NN-Chapter-Name].md`
+**For complete directory structure specification**: See **`specs/book/directory-structure.md`**
+
+This document provides chapter titles and topics. For exact file paths, naming conventions, and folder organization, consult `directory-structure.md`.
+
+**Quick Reference**:
+- Chapters are **directories** (not files): `book-source/docs/NN-Part-Name/NN-chapter-name/`
+- Each chapter contains lesson files: `01-lesson-1.md`, `02-lesson-2.md`, etc.
+- Chapter folders use **lowercase-with-hyphens**
+- Part folders use **Title-Case-With-Hyphens**
 
 **Examples**:
-- Chapter 1: `book-source/docs/01-Introducing-AI-Driven-Development/01-Welcome-to-AI-Driven-Development.md`
-- Chapter 6: `book-source/docs/02-AI-Tool-Landscape/01-Claude-Code-Features-and-Workflows.md`
-- Chapter 27: `book-source/docs/06-Agentic-AI/01-Introduction-to-Agentic-AI.md`
+- Chapter 1: `book-source/docs/01-Introducing-AI-Driven-Development/01-welcome-to-ai-driven-development/`
+- Chapter 6: `book-source/docs/02-AI-Tool-Landscape/01-claude-code--features-and-workflows/`
+- Chapter 27: `book-source/docs/06-Agentic-AI-Fundamentals/01-introduction-to-agentic-ai/`
 
 ---
 

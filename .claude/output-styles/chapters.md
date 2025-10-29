@@ -12,35 +12,36 @@ You are writing chapters for **CoLearning Python & Agentic AI: The AI-Driven Way
 
 ## File Organization & Directory Structure
 
+**AUTHORITATIVE REFERENCE**: See **`specs/book/directory-structure.md`** for complete specification.
+
+**Quick Summary**:
+
 Chapters are organized in a **3-level hierarchy** within `book-source/docs/`:
 
 ```
-book-source/
-├── docs/
-│   ├── NN-Part-Name/                    # Part folders numbered 01-07
-│   │   ├── NN-Chapter-Name/             # Chapter directories
-│   │   │   ├── index.md                 # Chapter overview/intro (optional)
-│   │   │   ├── 01-Lesson-Name.md        # Lesson files (BB = 01, 02, 03, etc.)
-│   │   │   ├── 02-Lesson-Name.md
-│   │   │   ├── 03-Lesson-Name.md
-│   │   │   └── _category_.json          # Docosaurus folder config (optional)
-│   │   │
-│   │   ├── NN-Chapter-Name/
-│   │   │   ├── 01-Lesson-Name.md
-│   │   │   └── 02-Lesson-Name.md
-│   │   │
-│   │   └── NN-Chapter-Name/
-│   │       └── ...
+book-source/docs/
+├── NN-Part-Name/                        # Part folders (Title Case, 01-07)
+│   ├── intro.md                         # Part introduction (required)
+│   ├── NN-chapter-name/                 # Chapter directories (lowercase)
+│   │   ├── README.md                    # Chapter overview (required)
+│   │   ├── 01-lesson-1.md               # Lesson files
+│   │   ├── 02-lesson-2.md
+│   │   └── 03-lesson-3.md
 │   │
-│   ├── NN-Part-Name/
-│   │   └── ...
-│   │
-├── docusaurus.config.js
-├── sidebars.js
-└── package.json
+│   └── NN-chapter-name/
+│       ├── README.md
+│       └── ...
 ```
 
-**For the actual chapter list**: See **`specs/book/chapter-index.md`** for all 32 chapter names and filenames.
+**Key Rules**:
+- Part folders: **Title-Case-With-Hyphens** (e.g., `01-Introducing-AI-Driven-Development/`)
+- Chapter folders: **lowercase-with-hyphens** (e.g., `01-welcome-to-ai-driven-development/`)
+- Each part has `intro.md`
+- Each chapter has `README.md`
+- Lesson files are numbered: `01-lesson-1.md`, `02-lesson-2.md`, etc.
+
+**For detailed specifications**: Consult `specs/book/directory-structure.md`  
+**For chapter titles/topics**: See `specs/book/chapter-index.md`
 
 ### Naming Conventions
 

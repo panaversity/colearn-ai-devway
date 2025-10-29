@@ -522,7 +522,7 @@ Intentionally break the code from Chapter 4 and fix it:
 ## Part 1 Quality Standards
 
 All Part 1 content MUST:
-- ✅ Use the 8 domain skills (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-architecture, ai-augmented-teaching)
+- ✅ Use the 8 domain skills (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-scaffolding, ai-augmented-teaching)
 - ✅ Include type hints on all Python code
 - ✅ Show pedagogical principle: Show → Explain → Practice → Assess
 - ✅ Zero gatekeeping language ("simple", "obvious", "just")

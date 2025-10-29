@@ -1,23 +1,31 @@
 <!--
 Sync Impact Report:
-Version: 2.0.0 (Principle-driven governance constitution)
+Version: 2.1.0 (Decoupled from project specifics, aligned with actual infrastructure)
 Created: 2025-10-28
-Refactored: 2025-10-28
-Rationale: Separated principle-level governance from implementation details. Technical specifications and procedural details moved to templates/specs. This document now focuses on WHY and WHAT; templates define HOW.
+Refactored: 2025-10-29
+Rationale: Removed hardcoded project details; now defers to authoritative sources (chapter-index.md). Updated infrastructure to match actual files. Replaced book-architecture with book-scaffolding skill based on proven learnings.
+
+Changes in v2.1.0:
+- Replaced book-architecture skill with book-scaffolding (skill 7)
+- Fixed chapter count: 26 → 32 throughout
+- Removed Part 2 vs Part 5 Spec-Kit contradiction (now refers to chapter-index.md)
+- Fixed scaffolding ranges to cover all 32 chapters (1-10 heavy, 11-20 moderate, 21-32 minimal)
+- Section III: Book Structure now defers to specs/book/chapter-index.md (authoritative source)
+- Section VI: Infrastructure updated to match actual files (.claude/agents, .claude/output-styles, .claude/skills)
+- Section V: Workflow updated to reflect actual 3 subagents (chapter-planner, lesson-writer, technical-reviewer)
+- Made constitution truly generic and maintainable (follows same pattern as CLAUDE.md refactor)
+
 Templates Aligned:
   - spec-template.md (references these principles)
   - plan-template.md (governance-aware planning)
   - tasks-template.md (task decomposition aligned with principles)
   - output-styles/ (follow principle-based constraints, not this document)
-  - skills/ (reference and apply these principles)
-Follow-up TODOs:
-  - Create technical specification template for chapter implementation
-  - Create code standards specification separate from constitution
+  - skills/ (reference and apply these principles, now includes book-scaffolding)
 -->
 
 # CoLearning Python & Agentic AI: The AI-Driven Way — Project Constitution
 
-**Version:** 2.0.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-28
+**Version:** 2.1.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-29
 
 ---
 
@@ -61,15 +69,16 @@ Every concept, example, and exercise MUST demonstrate AI-assisted development as
 
 ### Principle 2: Spec-Kit Methodology as Foundation
 
-Spec-Kit methodology MUST be introduced early (Part 2) and applied to all subsequent projects and examples.
+Spec-Kit methodology MUST be introduced progressively and applied to all projects and examples.
 
-**Why This Matters:** Specification-Driven Development (SDD) is a scalable, AI-friendly methodology. Early exposure builds better software engineering habits and enables collaborative workflows with AI agents.
+**Why This Matters:** Specification-Driven Development (SDD) is a scalable, AI-friendly methodology. Progressive exposure builds better software engineering habits and enables collaborative workflows with AI agents.
 
 **What This Means:**
-- Part 2 (5 chapters) exclusively dedicated to Spec-Kit methodology
-- All projects from Part 3 onward use Spec-Kit structure: spec → plan → tasks → implementation
+- Spec-Kit concepts introduced early (foundational parts) and formalized in dedicated part (see book structure)
+- All significant projects use Spec-Kit structure: spec → plan → tasks → implementation
 - Students practice writing specifications and plans WITH AI assistance
 - Constitution, ADR, and PHR concepts are explained and practiced as real artifacts, not theory
+- Refer to `specs/book/chapter-index.md` for specific chapter assignments and sequencing
 
 ---
 
@@ -110,17 +119,18 @@ Content difficulty MUST increase gradually with no sudden jumps. Earlier chapter
 **Why This Matters:** Beginners need scaffolding. Jumping complexity levels loses readers. Clear prerequisite chains allow modular learning and reference. Progressive complexity reduces frustration and increases completion rates.
 
 **What This Means:**
-- Part 1-5: Chapters 1-5 (heavy scaffolding), 6-15 (moderate), 16-26 (minimal)
+- Progressive scaffolding: Early chapters (1-10) heavy support, middle chapters (11-20) moderate, later chapters (21-32) minimal
 - Concepts introduced once, then referenced by name
 - Explicit prerequisite chains documented
 - No forward references to unexplained concepts without saying "Chapter X covers this"
 - Related concepts taught together, not scattered across chapters
+- Refer to `specs/book/chapter-index.md` for specific chapter progression and `book-scaffolding` skill for cognitive load management
 
 ---
 
 ### Principle 6: Consistent Structure Across All Chapters
 
-All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across 26 chapters.
+All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across 32 chapters.
 
 **Why This Matters:** Consistency in form allows readers to focus on content. It also makes chapters replaceable and updatable without cascading changes. Shared infrastructure enables AI and humans to collaborate effectively.
 
@@ -238,8 +248,8 @@ Build meaningful quizzes, review questions, and evaluations. Ensures learners ca
 ### 6. **technical-clarity** Skill
 Ensure all explanations are clear, accessible, and free of jargon gatekeeping. Critical for our commitment to Principle 8 (Accessibility & Inclusivity).
 
-### 7. **book-architecture** Skill
-Structure the 32-chapter book for logical flow, managing dependencies, and progressive complexity. Essential for maintaining the 7-part structure and ensuring prerequisites are clear.
+### 7. **book-scaffolding** Skill
+Plan and structure multi-part educational content with cognitive load management, narrative continuity, and just-in-time specification. Essential for planning book structure in collaboration with the user, managing progressive complexity, and ensuring clear prerequisite chains. Use the scaffolding workflow (reference/chapter-flow-patterns.md) for detailed structural planning.
 
 ### 8. **ai-augmented-teaching** Skill
 Design lessons that effectively integrate AI tools as learning partners (not code generators). Ensures the book itself demonstrates the "learning WITH AI" philosophy it teaches.
@@ -248,37 +258,32 @@ Design lessons that effectively integrate AI tools as learning partners (not cod
 
 ---
 
-## III. Mandatory Seven-Part Book Structure
+## III. Book Structure
 
-The book MUST consist of exactly seven parts with these chapter counts and focus areas:
+The book MUST follow a multi-part progressive structure that builds from foundational concepts through advanced topics.
 
-**Part 1: Introducing AI-Driven Development (5 chapters)**
-- Focus: Orientation, setup, first programs with AI
-- Outcome: Comfortable using AI tools for basic Python tasks
+**Authoritative Reference**: `specs/book/chapter-index.md` defines all chapters, their part assignments, titles, key topics, and file names. This is THE definitive source for chapter organization.
 
-**Part 2: AI Tool Landscape (4 chapters)**
-- Focus: Deep dive into each AI platform (Gemini, Claude, GitHub Codex) and modern editors
-- Outcome: Understands tool strengths, can choose appropriate tool for task
+**Structural Philosophy**:
+1. **Foundation Building (Early Parts)**: Heavy scaffolding, AI-first introduction, tool literacy, and basic skills
+2. **Core Skills Development (Middle Parts)**: Python mastery, professional workflows, specification methodology  
+3. **Advanced Topics (Final Parts)**: Agentic AI systems, integration frameworks, real-world applications
 
-**Part 3: Prompt & Context Engineering (4 chapters)**
-- Focus: Effective prompting, context management, debugging with AI
-- Outcome: Writes high-quality prompts, manages AI interactions effectively
+**Each part MUST**:
+- Build on previous parts with clear prerequisite chains
+- Follow progressive complexity (gradual difficulty increase)
+- Maintain consistent structure using the 8 domain skills and output styles
+- Demonstrate AI-augmented learning throughout
 
-**Part 4: Modern Python with Type Hints (8 chapters)**
-- Focus: Deep Python language features with type safety and testing
-- Outcome: Writes production-quality Python code with full type annotations
+**Planning New Parts**:
+- Use the `book-scaffolding` skill to plan part structure in collaboration with the user
+- Create part specs just-in-time (when prior parts are in implementation)
+- Define narrative continuity, cognitive load strategy, and hands-on exercises
+- Map connections to subsequent parts
 
-**Part 5: Spec-Kit Methodology (5 chapters)**
-- Focus: Professional workflow, specifications, planning, Spec-Kit practices
-- Outcome: Can structure a project using Spec-Kit principles
-
-**Part 6: Agentic AI Fundamentals (3 chapters)**
-- Focus: Building autonomous AI agents, agent orchestration, real-world applications
-- Outcome: Understands agentic patterns, can design and implement AI agents
-
-**Part 7: MCP Fundamentals (3 chapters)**
-- Focus: Model Context Protocol, building MCP servers and clients
-- Outcome: Can integrate MCP into applications and extend AI capabilities
+**Key References**:
+- **`specs/book/chapter-index.md`** — All 32 chapters with titles, numbers, and topics
+- **`specs/book/directory-structure.md`** — File paths, folder organization, and naming conventions (authoritative source)
 
 ---
 
@@ -335,25 +340,27 @@ The book MUST consist of exactly seven parts with these chapter counts and focus
 
 ### Specification-Driven Development Loop
 
-All chapter development MUST follow this iterative SDD loop:
+All content development MUST follow this iterative SDD loop:
 
 ```
-Source Material / Requirements
+Source Material / Requirements / Vision
     ↓
-Planner (AI) + Human → Create chapter specification
+Human + Main Claude → Create specification
     ↓ (iterate until spec approved)
-Chapter-Writer (AI) + Human → Create outline and structure
-    ↓ (iterate until structure approved)
-Lesson-Writer (AI) + Human → Implement lesson content
-    ↓
-Code-Validator (AI) → Verify all code works, types check, style compliant
-    ↓
-Technical-Reviewer (AI) → Verify accuracy and best practices
-    ↓
+Chapter-Planner (AI subagent) → Create detailed lesson plans and task checklists
+    ↓ (iterate until plans approved)
+Lesson-Writer (AI subagent) + Human → Implement lesson content (one lesson at a time)
+    ↓ (iterate per lesson with human review)
+Technical-Reviewer (AI subagent) → Validate technical accuracy, pedagogy, constitution alignment
+    ↓ (iterate if issues found)
 Human → Final editorial polish and publication approval
 ```
 
-**Key Principle:** Every stage can iterate. Handoff criteria define when work moves to the next stage. Failure at any stage returns to specification refinement, not manual override.
+**Key Principles:** 
+- Every stage can iterate with human oversight
+- Handoff criteria define when work moves to the next stage
+- Failure at any stage returns to refinement, not manual override
+- Use `book-scaffolding` skill for structural planning in collaboration with user
 
 ### Quality Gates
 
@@ -366,33 +373,35 @@ Each stage MUST include:
 
 ## VI. Infrastructure
 
-### Shared Skills (Not Separate Agents)
+### Domain Skills (The 8 CoLearning Skills)
 
-All content creators MUST reference and apply four shared skills:
+All content creators MUST apply the 8 domain skills defined in Section II.B. These skills are located in `.claude/skills/` and provide pedagogical best practices for:
 
-1. **planning.md** — How to create detailed specifications from source material
-2. **technical-writing.md** — Voice, tone, readability standards for the book
-3. **pedagogy.md** — Teaching methodologies (show-then-explain, progressive complexity)
-4. **ai-collaboration.md** — Responsible AI usage, verification patterns, iteration strategies
+1. **learning-objectives** — Measurable outcomes with Bloom's taxonomy
+2. **concept-scaffolding** — Progressive complexity management
+3. **code-example-generator** — High-quality, tested code with type hints
+4. **exercise-designer** — Effective practice exercises
+5. **assessment-builder** — Meaningful quizzes and evaluations
+6. **technical-clarity** — Accessibility and clear explanations
+7. **book-scaffolding** — Multi-part content structure planning
+8. **ai-augmented-teaching** — AI tools as learning partners
 
 ### Output Styles (Format Specifications)
 
-All content MUST conform to four output styles:
+All content MUST conform to output styles located in `.claude/output-styles/`:
 
-1. **docusaurus-chapter.md** — Chapter structure + Docusaurus frontmatter format
-2. **lesson.md** — Individual lesson section formatting (teaching structure)
-3. **code-example.md** — Python code formatting with type hints, docstrings, testing
-4. **exercise.md** — AI Exercise formatting (scenario, prompt, reflection questions)
+1. **chapters.md** — Chapter structure and Docusaurus frontmatter format
+2. **lesson.md** — Individual lesson section formatting and teaching structure
+
+These are **generic, reusable templates** applicable to any educational content project.
 
 ### Sub-Agents (Orchestrators)
 
-Five specialized agents MUST be created to manage the SDD loop:
+Three specialized agents manage the SDD loop phases (located in `.claude/agents/`):
 
-1. **planner** — Takes source material → creates detailed chapter specs
-2. **chapter-writer** — Takes spec → creates outline and learning objectives
-3. **lesson-writer** — Takes outline → writes actual lesson content with examples
-4. **code-validator** — Takes chapter → tests code (python, mypy, black, execution)
-5. **technical-reviewer** — Takes validated chapter → fact-checks and verifies best practices
+1. **chapter-planner** — Takes approved spec → creates detailed lesson plans and task checklists
+2. **lesson-writer** — Takes lesson plan → writes complete lesson content with all 8 domain skills applied
+3. **technical-reviewer** — Takes completed chapter → validates technical accuracy, pedagogical effectiveness, and constitutional alignment
 
 ---
 
