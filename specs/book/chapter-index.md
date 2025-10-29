@@ -31,14 +31,16 @@ Tool literacy and comparison: deep dive into specific platforms
 
 ---
 
-## Part 3: Prompt & Context Engineering (Chapters 8-9)
+## Part 3: Prompt & Context Engineering (Chapters 10-13)
 
 Effective AI communication: prompting and context management
 
 | # | Chapter Title | File Name | Key Topics |
 |---|---------------|-----------|------------|
-| 8 | The Architect Toolkit: Prompting Foundations | `08-the-architect-toolkit-prompting-foundations.md` | Prompt structure, clarity, specificity, context management, memory |
-| 9 | Advanced Prompt Techniques | `09-advanced-prompt-techniques.md` | Debugging AI-generated code, few-shot learning, chaining, refinement |
+| 10 | The Architect Toolkit: Prompting Foundations | `10-the-architect-toolkit-prompting-foundations.md` | Prompt structure, clarity, specificity, good/bad examples |
+| 11 | Six-Part Prompting Framework | `11-six-part-prompting-framework.md` | Structured approach to crafting powerful prompts |
+| 12 | Multimodal and Advanced Input | `12-multimodal-and-advanced-input.md` | Images, videos, function calling, tool invocation |
+| 13 | Advanced Prompt Techniques | `13-advanced-prompt-techniques.md` | Few-shot learning, chain-of-thought, prompt chaining, debugging AI code |
 
 ---
 
