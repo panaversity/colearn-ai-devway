@@ -15,7 +15,8 @@
       "Bash(.specify/scripts/bash/setup-plan.sh:*)",
       "Bash(git fetch:*)",
       "WebFetch(domain:github.com)",
-      "Bash(.specify/scripts/bash/create-phr.sh:*)"
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(git -C /Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python log --oneline 003-chapter-1-spec -20)"
     ],
     "deny": [],
     "ask": []

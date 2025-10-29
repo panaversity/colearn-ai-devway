@@ -1,315 +1,284 @@
-# Chapter 1 Specification: Welcome to Agent-Native Education
+# Chapter 1 Specification: The AI Development Revolution
 
 **Feature Branch**: `003-chapter-1-spec`
-**Created**: 2025-10-29
+**Created**: 2025-10-29 | **Revised**: 2025-10-29
 **Status**: Ready for Review
-**Input**: Part 1 spec (part-1-spec.md) + AI Coding Revolution Paper + Agent-Native Education Vision
-**Output**: Chapter 1 complete specification with learning outcomes, pedagogical approach, and content structure
+**Input**: AI Coding Revolution Context (`@context/02_chap1_spec/readme.md`) + Video Transcript + Project Constitution
+**Output**: Tight, compelling Chapter 1 that hooks readers in 15-20 minutes
+
+**Source Materials**:
+- Video: "The $3 Trillion AI Coding Opportunity" (https://www.youtube.com/watch?v=VlOAWvvjThU)
+- Context Document: `/context/02_chap1_spec/readme.md`
+
+---
 
 ## Overview & Purpose
 
-Chapter 1 introduces readers to an **agent-native model of computer science education** where AI is a:
-- **Co-learner**: Participating in exploration and debugging
-- **Collaborator**: Shaping ideas and architectures
-- **Creative partner**: Empowering learners to create meaningful solutions
+**Chapter 1 answers three core questions in 15-20 minutes**:
+1. **Why now?** Software itself is being disrupted by AI. This is happening right now.
+2. **What does it mean?** Your role is shifting from "code writer" to "agent orchestrator."
+3. **Why should you care?** This is the best time in history to build with AI.
 
-This chapter establishes the foundational mindset shift from "code writer" to "agent orchestrator" — someone who designs intelligent systems, directs AI partners, and creates meaningful computational solutions. The vision is grounded in the economic and technological reality of the AI coding revolution while remaining accessible and motivating to beginners.
+Rather than overwhelming readers with comprehensive analysis, this chapter **hooks them emotionally** with the reality of disruption, clarifies their new role, and invites them into the learning journey without exhaustion.
 
 ---
 
 ## User Scenarios & Testing *(mandatory)*
 
-### User Story 1: Beginner Overcomes AI Anxiety (Priority: P1)
+### User Story 1: Beginner Shifts from Fear to Opportunity (Priority: P1)
 
-A high school student or career changer who fears AI will make programming obsolete learns that AI augments rather than replaces human capability.
+A programmer or student fears "AI will replace me" and needs immediate reframing backed by evidence.
 
-**Why this priority**: This is the emotional foundation for engagement. Readers must feel motivated and included, not threatened. Without this, subsequent chapters lose their audience.
+**Why P1**: Emotional foundation. Without psychological safety, readers won't engage with rest of book.
 
-**Independent Test**: Reader understands AI as a collaborative tool, not a replacement. Success = reader articulates "AI is a partner, not competition" in their own words.
+**Independent Test**: Reader shifts from "AI threatens me" to "AI is a tool I can master."
 
 **Acceptance Scenarios**:
-
-1. **Given** a reader with anxiety about AI replacing programmers, **When** they read sections on "agent orchestrators" and "human-AI partnership," **Then** they understand AI amplifies rather than replaces human judgment
-2. **Given** a reader learning about economic opportunity, **When** they see examples of solo builders creating valuable solutions with AI, **Then** they feel inspired rather than intimidated
-3. **Given** a reader encountering "agent-native education," **When** the chapter explains its meaning, **Then** they can envision themselves as an agent orchestrator
+1. **Given** a reader with displacement anxiety, **When** they see software production is accelerating (not contracting), **Then** they feel permission to engage
+2. **Given** a reader learning their role shifts to "orchestrator," **When** they understand this makes them MORE valuable, **Then** anxiety transforms to opportunity
+3. **Given** a reader encountering real market data ($3T), **When** they see it grounded in evidence, **Then** they trust the vision isn't hype
 
 ---
 
-### User Story 2: Reader Understands the Technological Foundation (Priority: P1)
+### User Story 2: Reader Understands What They're Becoming (Priority: P1)
 
-A reader explores the economic and technological forces reshaping software development and recognizes this is a genuine paradigm shift, not hype.
+A reader needs clarity: "What is an agent orchestrator and why is this my role?"
 
-**Why this priority**: Understanding WHY this moment exists is critical for long-term motivation. Without this context, the book feels disconnected from reality.
+**Why P1**: Role clarity enables everything else. Readers need to see themselves in this new paradigm.
 
-**Independent Test**: Reader can explain at least 3 major technological or economic shifts (from the AI coding revolution paper) that make this moment possible.
+**Independent Test**: Reader can articulate: "I direct AI systems. I write clear specs. I evaluate their work. I make decisions."
 
 **Acceptance Scenarios**:
-
-1. **Given** a reader encountering the $3 trillion software development industry, **When** they learn 30 million developers power it, **Then** they grasp the scale of what AI coding affects
-2. **Given** a reader learning about autonomous agents, **When** they see examples of agents implementing features with minimal oversight, **Then** they understand shift from "assistance" to "autonomy"
-3. **Given** a reader encountering "context engineering," **When** the chapter explains how AI maintains understanding of large codebases, **Then** they recognize a technical enabler
-4. **Given** a reader learning about infrastructure evolution, **When** they see how sandboxing and version control adapt for machine-generated code, **Then** they appreciate systemic changes
+1. **Given** a reader encountering "agent orchestrator," **When** they see the 4 dimensions (Spec Writer, Architect, Director, Evaluator), **Then** they recognize these are skills they already have or can develop
+2. **Given** a reader seeing examples of orchestration, **When** they understand it's different from writing every line of code, **Then** they grasp the paradigm shift
 
 ---
 
-### User Story 3: Reader Recognizes Vertical Market Opportunity (Priority: P2)
+### User Story 3: Reader Prepares for Agent-Native Learning (Priority: P2)
 
-A reader explores the "snakes and ladders" competitive dynamic and identifies a domain where they could build a vertical agentic solution.
+A reader needs to know: This book teaches you to **work WITH agents**, not **learn FROM them**.
 
-**Why this priority**: This prepares readers for Parts 2-7 and connects abstract concepts to personal possibility.
+**Why P2**: Sets expectations for pedagogy throughout rest of book.
 
-**Independent Test**: Reader can name at least one industry vertical where specialized agentic solutions could create value.
-
-**Acceptance Scenarios**:
-
-1. **Given** a reader learning about hyperscaler consolidation, **When** they see the "snakes and ladders" pattern showing limited winners at each layer, **Then** they understand why Layer 3 (vertical specialists) is the opportunity
-2. **Given** a reader exploring vertical examples (finance, education, healthcare), **When** they see how deep domain integration creates defensible advantages, **Then** they recognize patterns in their own domain
-
----
-
-### User Story 4: Reader Understands Agent-Native Education Model (Priority: P2)
-
-A reader learns what "agent-native" means in the context of the book and this part, preparing them to see AI as an active teaching partner throughout.
-
-**Why this priority**: This sets expectations for the pedagogical approach and prepares readers to interact with AI as a co-learner.
-
-**Independent Test**: Reader can explain what "agent-native education" means and how AI serves as co-learner, collaborator, and creative partner.
+**Independent Test**: Reader understands their active role in directing AI systems.
 
 **Acceptance Scenarios**:
-
-1. **Given** a reader encountering "agent-native education," **When** the chapter explains the three roles, **Then** they understand AI is active, not passive
-2. **Given** a reader seeing examples of AI participating in debugging and exploration, **When** they understand this is the learning model, **Then** they feel prepared for this approach
+1. **Given** a reader encountering "agent-native education," **When** they see examples of directing agents, **Then** they feel empowered (not passive)
+2. **Given** a reader understanding specs enable agents, **When** they see why clear writing matters, **Then** they accept responsibility for collaboration
 
 ---
 
 ### Edge Cases
 
-- What if a reader has already built software and feels threatened by AI agents? → The chapter must validate existing skills while showing how AI extends them
-- What if a reader has unrealistic expectations about AI capability? → Be honest about current limitations and realistic about what agents can do
-- What if a reader from non-technical background feels overwhelmed by economic scale? → Use analogies and examples to make it relatable
+- **Experienced developer feeling threatened**: Validate that judgment, architecture, problem-framing are MORE valuable than ever
+- **Non-technical reader**: Use concrete analogies; no gatekeeping language
+- **Reader with AI skepticism**: Ground all claims in evidence from context document
+
+---
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements (Content Must Include)
 
-- **FR-001**: Chapter MUST explain the $3 trillion software development market and why AI coding represents a transformative force
-- **FR-002**: Chapter MUST define "agent-native education" clearly, explaining AI's three roles: co-learner, collaborator, creative partner
-- **FR-003**: Chapter MUST articulate the shift from "code writer" to "agent orchestrator" with concrete examples
-- **FR-004**: Chapter MUST present the AI coding revolution as grounded in real economic and technological forces (from AI Coding Revolution Paper)
-- **FR-005**: Chapter MUST introduce the "snakes and ladders" competitive pattern showing why vertical markets are the opportunity
-- **FR-006**: Chapter MUST include at least 2-3 examples of solo builders or small teams creating significant value with AI assistance
-- **FR-007**: Chapter MUST establish psychological safety—explicitly addressing and reframing AI anxiety as opportunity
-- **FR-008**: Chapter MUST explain how this book embodies agent-native education philosophy and what readers should expect
-- **FR-009**: Chapter MUST preview how specification-first development enables human-AI partnership (preview of Part 2+)
-- **FR-010**: Chapter MUST include multiple pedagogical entry points: narrative, bullet points, visuals, and examples
+- **FR-001**: Chapter MUST establish $3 trillion market and why disruption is real (grounded in context document)
+- **FR-002**: Chapter MUST clearly define "agent orchestrator" with 4 dimensions
+- **FR-003**: Chapter MUST address psychological anxiety directly and reframe as opportunity
+- **FR-004**: Chapter MUST explain "agent-native education" and reader's active role
+- **FR-005**: Chapter MUST include concrete examples (not abstract theory)
+- **FR-006**: Chapter MUST be readable in 15-20 minutes (1,700-2,200 words max)
+- **FR-007**: Chapter MUST use Show-Then-Explain pedagogy (examples first, then concepts)
 
 ### Key Concepts *(Content Entities)*
 
-- **Agent Orchestrator**: A developer who designs intelligent systems, directs AI partners, and creates solutions through specification-first methodology
-- **Agent-Native Education**: An educational model where AI participates actively as co-learner, collaborator, and creative partner throughout learning
-- **Vertical Agentic Solution**: Specialized, domain-specific AI system solving problems in particular industries (finance, healthcare, education, legal)
-- **Context Engineering**: Practice of providing AI agents with sufficient code context to reason about large systems and make architectural decisions
-- **Specification-First Development**: Methodology where clear requirements precede implementation, enabling AI agents to generate, test, and refine code autonomously
+- **$3 Trillion Developer Economy**: Software development market worth ~$3T annually (30M developers × $100k value)
+- **Agent Orchestrator**: Developer who directs AI systems; focuses on specifications, architecture, direction, evaluation (not syntax)
+- **Agent-Native Education**: Learning model where reader directs agents (WITH), not consumes from agents (FROM)
+- **Software Disrupting Itself**: Software has disrupted every industry; now AI is disrupting software itself
+- **The Four Dimensions of Orchestration**:
+  - **Specification Writer**: Write clear requirements
+  - **System Architect**: Design system topology
+  - **Agent Director**: Guide AI toward solutions
+  - **Quality Arbiter**: Evaluate and decide
+
+### Key Claims & Evidence (From Context Document)
+
+| Claim | Evidence | Source |
+|-------|----------|--------|
+| $3T is software industry value | 30M developers × $100k value = $3T | Context doc, video transcript |
+| Disruption is happening now | Fastest-growing startup sector in history | Video transcript |
+| Developer role is shifting to orchestrator | "You direct multiple agents" + higher-level thinking | Video transcript |
+| Software production is accelerating | Vibe coding explosion + enterprise hiring acceleration | Context doc section 2.2 |
+| This is the best time to build | Incumbent vulnerability + entry barriers lowering | Context doc section 5 |
+
+---
 
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
 
-- **SC-001**: 90%+ of readers articulate (in their own words) that AI amplifies rather than replaces human capability
-- **SC-002**: 85%+ of readers can name and explain at least 3 major technological/economic shifts from the AI coding revolution
-- **SC-003**: 80%+ of readers identify at least one vertical market where they could build specialized solutions
-- **SC-004**: 85%+ of readers understand what "agent-native education" means and what to expect in the book
-- **SC-005**: 90%+ of readers feel motivated (not threatened) by the AI-driven paradigm shift
-- **SC-006**: 80%+ of readers can explain what an "agent orchestrator" does and why it's a valuable role
-- **SC-007**: Readers complete Chapter 1 without significant confusion (measured by comprehension check at end)
-- **SC-008**: 75%+ of readers report readiness to engage with AI as a co-learner in subsequent chapters
+- **SC-001**: 85%+ of readers feel motivated (not threatened) by AI disruption
+- **SC-002**: 80%+ can explain what an "agent orchestrator" is
+- **SC-003**: 90%+ understand they'll direct agents, not consume from them
+- **SC-004**: 75%+ feel ready to proceed to Chapter 2
+- **SC-005**: Readers complete Chapter 1 in 15-20 minutes without feeling rushed or exhausted
 
 ---
 
 ## Content Structure & Organization
 
-### Section 1: The Paradigm Shift (Motivation & Reframing)
-**Purpose**: Establish emotional engagement and psychological safety.
-- The fear narrative: "Will AI replace me?"
-- The reality: AI amplifies, not replaces
-- Real examples: Solo builders creating valuable solutions
-- The new role: "Agent orchestrator"
-- **Length**: 600-800 words
+### 5-Lesson Architecture (1,700-2,200 words | 15-20 minutes)
 
-### Section 2: The Economic & Technological Foundation
-**Purpose**: Ground the vision in reality—this is a genuine $3 trillion market in transition.
-- The $3 trillion software development industry and 30 million developers
-- AI coding revolution as the first truly large market for AI
-- Autonomous agents vs. copilots (autonomy vs. assistance)
-- Key enablers: context engineering, sandbox execution, version control
-- Infrastructure evolution: cloud-native systems making large-scale AI possible
-- **Content Source**: Primary content from AI Coding Revolution Paper
-- **Length**: 1,000-1,200 words
+#### **Lesson 1: The Moment We're In** (3-4 min | 300-400 words)
+**Purpose**: Hook readers with the reality that disruption is happening now
 
-### Section 3: The Competitive Landscape (Vertical Opportunity)
-**Purpose**: Show that real opportunity is in vertical specialization, not competing with hyperscalers.
-- The "snakes and ladders" pattern: Layer 1 (consumer AI) → Layer 2 (horizontal coding agents) → Layer 3 (vertical specialists)
-- Why limited winners at Layers 1-2, unlimited winners at Layer 3
-- Examples: Finance, healthcare, education, legal, real estate
-- How deep domain integration + fine-tuned models + existing software connections = defensible advantage
-- **Length**: 800-1,000 words
+- **Hook**: "Software has disrupted every industry. Now software itself is being disrupted."
+- **Proof**: This is happening right now, at scale, generating fastest startup growth in history
+- **Stakes**: You're learning to develop in a fundamentally different era
+- **Transition**: "But here's what most people get wrong..."
 
-### Section 4: Agent-Native Education (The Model Behind This Book)
-**Purpose**: Prepare readers to see AI as an active teaching partner throughout their learning.
-- What "agent-native" means: AI participates actively, not passively
-- The three roles: Co-learner (exploring with you), Collaborator (shaping ideas), Creative Partner (amplifying capability)
-- Learning WITH AI vs. Learning FROM AI (critical distinction)
-- How this book embodies the model
-- What readers should expect: specifications, directing AI partners, understanding reasoning
-- **Length**: 600-800 words
+**Domain Skills**: learning-objectives, ai-augmented-teaching (reframe anxiety)
 
-### Section 5: Your Role as an Agent Orchestrator
-**Purpose**: Concretely define what readers will become and why it matters.
-- Four dimensions of an agent orchestrator:
-  1. Specification writer (clear requirements precede implementation)
-  2. System architect (design intelligent system topology)
-  3. Agent director (guide AI partners toward good solutions)
-  4. Quality arbiter (evaluate and refine AI-generated work)
-- Why these skills are more valuable than syntax knowledge
-- How they apply across domains
-- **Length**: 500-700 words
+---
 
-### Section 6: Preview of the Journey Ahead
-**Purpose**: Set expectations for Parts 2-7 and show the progression.
-- Part 1: Mindset shift and agent-native education foundations
-- Part 2: Tools (Claude Code, Gemini CLI, Spec-Kit Plus)
-- Part 3-7: Deep learning in Python, agentic systems, MCP integration, production deployment
-- The building arc: understanding → tools → hands-on projects → advanced systems
-- **Length**: 400-500 words
+#### **Lesson 2: The $3 Trillion Disruption** (4-5 min | 400-500 words)
+**Purpose**: Ground disruption in economic reality so readers know it's real
+
+- **The Number**: $3 trillion annual value in software development
+- **The Calculation**: 30 million developers × $100,000 value per developer
+- **The Scale**: Equivalent to France's GDP (7th largest national economy)
+- **The Speed**: This market is being reshaped in months, not decades
+- **Why It Matters**: When trillion-dollar markets shift, it's not hype—it's structural change
+
+**Domain Skills**: concept-scaffolding, technical-clarity, book-scaffolding
+
+---
+
+#### **Lesson 3: Your New Role — Agent Orchestrator** (3-4 min | 400-500 words)
+**Purpose**: Clarity on who they're becoming and why it makes them MORE valuable
+
+- **The Shift**: From "code writer" (execution) → "agent orchestrator" (direction, evaluation, judgment)
+- **Four Dimensions** (brief explanation each):
+  - **Specification Writer**: Write clear requirements so agents generate better code
+  - **System Architect**: Design system topology, decide what agents do
+  - **Agent Director**: Guide agents toward good solutions through iteration
+  - **Quality Arbiter**: Evaluate AI work, make trade-off decisions
+- **Why It Matters**: Syntax changes; orchestration principles endure. Your judgment is irreplaceable.
+
+**Domain Skills**: concept-scaffolding, learning-objectives, technical-clarity
+
+---
+
+#### **Lesson 4: Why This Is Your Moment** (3-4 min | 300-400 words)
+**Purpose**: Opportunity framing + psychological permission to engage
+
+- **Market Expansion**: Software production is accelerating, not contracting (proof: vibe coding, enterprise hiring)
+- **Incumbent Struggle**: Even Microsoft (with GitHub, OpenAI) faces intense startup competition
+- **Barriers Lowering**: Easier to start building now than at any point in 3-4 decades
+- **Your Advantage**: If you understand AI capabilities, you see problems others miss
+- **Message**: "This is the best time in history to start building with AI"
+
+**Domain Skills**: ai-augmented-teaching, book-scaffolding
+
+---
+
+#### **Lesson 5: How You'll Learn** (2-3 min | 300-400 words)
+**Purpose**: Set expectations for pedagogical model throughout book
+
+- **The Model**: You work WITH agents, not FROM agents
+  - You write specifications
+  - You direct agents
+  - You evaluate their work
+  - You make decisions
+- **What This Means**: AI is a tool you control and collaborate with, not a teacher you absorb from
+- **Next Steps**: Chapter 2 teaches you actual tools. Chapter 3 shows you your first agent-assisted program.
+- **Closing**: "You're about to become an agent orchestrator. Let's start."
+
+**Domain Skills**: ai-augmented-teaching, book-scaffolding, learning-objectives
 
 ---
 
 ## Pedagogical Approach
 
-### Core Teaching Principles
+### Core Principles
 
-**1. Show → Explain → Practice → Assess**
-- **Show**: Open with real examples (solo builders, ARR numbers, agent capabilities)
-- **Explain**: Connect examples to larger patterns and principles
-- **Practice**: Reflection exercise: "What vertical could YOU serve?"
-- **Assess**: Comprehension check at chapter end (formative, not graded)
+1. **Show First, Explain After**: Start with concrete examples, then extract concepts
+2. **Heavy Scaffolding**: Define every term; use analogies; no gatekeeping language
+3. **Emotional Intelligence**: Acknowledge anxiety directly; validate with evidence
+4. **Psychological Safety**: Make clear readers have valuable skills that are BECOMING more important
+5. **Brevity as Respect**: 15-20 minutes means every paragraph earns its place
 
-**2. Heavy Scaffolding for Beginners**
-- Define every term on first use
-- Use analogies (orchestrator vs. conductor, architect vs. construction worker)
-- Avoid gatekeeping language ("it's simple," "obviously")
-- Acknowledge that the model is unusual and explain why
+### Visual/Narrative Resources Needed
 
-**3. Multiple Entry Points**
-- Narrative flow: Read start to finish for cohesion
-- Bullet points: Skim key concepts quickly
-- Visuals: Diagrams for snakes-and-ladders, agent orchestrator roles
-- Examples: Concrete stories (solo builders, vertical patterns)
+**Diagrams (Placeholders for later design)**:
+- **Diagram 1**: $3T Scale Comparison (France GDP visual)
+- **Diagram 2**: Orchestrator's Four Dimensions (visual representation)
 
-**4. Emotional Intelligence**
-- Acknowledge fears directly (job displacement, inadequacy)
-- Validate existing skills while showing how AI extends them
-- Use inclusive language ("you could," "you might," not "you will")
-- Celebrate the opportunity, not the disruption
+**Real Examples** (Text-based, embedded in lessons):
+- **Vibe coding example**: "I built my email filter in one afternoon" (personal story)
+- **Enterprise example**: Legacy code migration 2x speedup
+- **Market signal**: Cursor beating GitHub Copilot (underdog wins)
 
-### Visual Resources Needed
+**Analogies**:
+- Orchestrator/Conductor: Directs without playing every instrument
+- Coach/Player: Strategizes without executing every play
+- Architect/Construction: Designs; construction is a tool
 
-- **Diagram 1**: "Snakes and Ladders" competitive pattern (Layer 1: Consumer AI, Layer 2: Horizontal agents, Layer 3: Vertical specialists)
-- **Diagram 2**: "Agent Orchestrator" four dimensions (Spec Writer, System Architect, Agent Director, Quality Arbiter)
-- **Diagram 3**: "Agent-Native Education" model (Co-learner, Collaborator, Creative Partner)
+### Assessment Strategy
 
-### Examples Needed
+**Formative** (Throughout chapter):
+- Lesson 1: "Does this feel real to you?" (reflection)
+- Lesson 2: "Can you calculate the $3T number?" (comprehension)
+- Lesson 3: "Which orchestrator dimension resonates with you?" (reflection)
+- Lesson 4: "Do you see this as opportunity or threat?" (sentiment check)
+- Lesson 5: "What does 'working WITH agents' mean?" (understanding)
 
-- **Solo Builder 1**: Example with ARR/team size (e.g., automation tool, SaaS)
-- **Solo Builder 2**: Different domain example
-- **Vertical Specialization**: Example in specific domain (e.g., healthcare, finance)
-
-### Analogies to Develop
-
-- Orchestrator vs. musician (directing instruments vs. playing one)
-- Architect vs. construction worker (designing vs. building)
-- Coach vs. player (directing vs. executing)
-- Conductor vs. orchestra member (coordinating vs. performing)
-
-### Assessment & Reflection
-
-**Comprehension Check** (formative, at end of chapter):
-1. What does "agent-native education" mean?
-2. Name 2 reasons why this moment in software development is unique
-3. Explain the "snakes and ladders" pattern in your own words
-4. What is an "agent orchestrator" and what do they do?
-
-**Reflection Exercise** (personal, not graded):
-- Identify an industry or domain you know well
-- Describe one problem in that domain that could be solved by a vertical agentic solution
-- What would you need to learn to build it?
+**Summative** (End of chapter):
+- 3-question comprehension check:
+  1. "Why is the $3 trillion figure important?"
+  2. "What are the four dimensions of an agent orchestrator?"
+  3. "What does 'agent-native education' mean to you?"
+- Reflection: "Identify one thing you currently do that's 'orchestration' work (not syntax)."
 
 ---
 
-## Approximate Specifications
+## Quality Standards (Constitution Alignment)
 
-### Length & Structure
-- **Total**: 3,500-4,500 words
-- **Format**: 6 major sections with subsections
-- **Visual density**: 3 diagrams + 3-4 examples + 4 analogies
-
-### Content Quality Standards
-- ✅ Grounded in AI Coding Revolution Paper
-- ✅ Explains economic reality: $3 trillion market, 30 million developers
-- ✅ Addresses psychological concerns directly
-- ✅ Includes 2-3 concrete solo builder examples
-- ✅ Includes 3-4 industry vertical examples
-- ✅ Defines all key terms (orchestrator, agent-native, context engineering)
-- ✅ Uses accessible language—zero gatekeeping
-- ✅ Acknowledges complexity without over-explaining
-
-### Quality Standards (Constitution Alignment)
-- ✅ Uses 8 domain skills (learning-objectives, concept-scaffolding, code-example-generator, exercise-designer, assessment-builder, technical-clarity, book-scaffolding, ai-augmented-teaching)
-- ✅ Aligns with Constitution Principle 1 (AI-First), Principle 8 (Inclusivity), Principle 9 (Show-then-Explain)
-- ✅ Multiple reading paths: narrative, bullet points, visuals, examples
-- ✅ Accessibility: alt text for all diagrams, clear language, visual contrast
-- ✅ Reflection exercise (not graded, personal)
-- ✅ Formative comprehension check at end
+- ✅ **Principle 1 (AI-First)**: Agents as tools, not replacement
+- ✅ **Principle 5 (Progressive Complexity)**: Builds from emotional → economic → role → opportunity
+- ✅ **Principle 8 (Accessibility)**: Heavy scaffolding, all terms defined, multiple analogies
+- ✅ **Principle 9 (Show-Then-Explain)**: Examples before concepts
+- ✅ **All 8 Domain Skills**: Distributed across 5 lessons
 
 ---
 
-## Key Content Sources & References
+## Specifications
 
-### Primary Source
-**AI Coding Revolution Paper**: https://github.com/panaversity/spec-kit-plus/blob/main/docs-plus/ai_coding_revolution_paper.md
-- Economic scale: $3 trillion industry, 30 million developers
-- Technological shifts: autonomous agents, context engineering, infrastructure evolution
-- Market dynamics: hyperscaler consolidation, vertical opportunities
+### Length & Time Budget
+- **Total**: 1,700-2,200 words across 5 lessons
+- **Reading time**: 15-20 minutes
+- **Lesson breakdown**:
+  - L1: 300-400 words (3-4 min)
+  - L2: 400-500 words (4-5 min)
+  - L3: 400-500 words (3-4 min)
+  - L4: 300-400 words (3-4 min)
+  - L5: 300-400 words (2-3 min)
 
-### Secondary Sources
-- **Part 1 Spec**: Learning outcomes, pedagogical approach, chapter progression
-- **Project Constitution**: Principle 1 (AI-First), Principle 8 (Inclusivity), Principle 9 (Show-then-Explain)
+### Quality Standards
+- ✅ Grounded in AI Coding Revolution context document (every claim backed)
+- ✅ Concise and punchy (respect reader attention)
+- ✅ Show-Then-Explain pedagogy
+- ✅ All terms defined on first use
+- ✅ Multiple entry points (narrative, numbers, examples, analogies)
+- ✅ Psychological safety prioritized
 
 ---
 
 ## Next Steps
 
 1. **Spec Validation**: Review against quality checklist
-2. **Clarification Round**: Address any clarifications with user input (if needed)
-3. **Planning Phase**: Invoke chapter-planner subagent with this spec
-4. **Implementation**: Invoke lesson-writer subagent with approved plan
-5. **Review**: Invoke technical-reviewer subagent with completed chapter
-6. **Publishing**: Integrate Chapter 1 into Part 1 documentation
+2. **Planning Phase**: Create detailed lesson plan (plan.md)
+3. **Task Breakdown**: Create implementation tasks (tasks.md)
+4. **Implementation**: Invoke chapter-writer subagent when ready
+5. **Review**: Human review of each lesson as written
 
 ---
-
-## Implementation Notes for Content Creators
-
-### Tone & Voice
-- **Accessible**: Write for people with no prior AI or coding knowledge
-- **Motivating**: Balance realism with opportunity
-- **Inclusive**: Validate diverse backgrounds and concerns
-- **Direct**: Avoid corporate jargon; be specific and concrete
-- **Transparent**: Acknowledge limitations and unknowns
-
-### Content Development Constraints
-- No forward references to unexplained concepts
-- Define all new terminology on first use
-- Use analogies to make abstract concepts concrete
-- Include real data and numbers (ARR, team size, market size)
-- Acknowledge counterarguments and limitations honestly
