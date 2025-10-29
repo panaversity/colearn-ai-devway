@@ -299,11 +299,6 @@ To create engaging, publication-quality lessons, apply these 7 patterns througho
 ### Pattern 1: Rich Storytelling (5-8 examples per lesson)
 **What**: Concrete narratives with characters, context, and outcomes
 **Why**: Makes abstract concepts tangible and memorable
-**Examples from Chapter 1**:
-- Sarah (product manager building MVP in 2 weeks)
-- Marcus (senior engineer discovering value in decision-making)
-- Brazil SaaS founder (solo developer, $15K MRR, 6 weeks)
-- Doctor building medical scheduling system ($40K MRR in 6 months)
 
 **How to apply**:
 - Use real or realistic examples with specific details

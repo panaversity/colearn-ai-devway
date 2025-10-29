@@ -12,22 +12,23 @@ Foundation building: orientation, setup, first programs with AI
 
 | # | Chapter Title | File Name | Key Topics |
 |---|---------------|-----------|------------|
-| 1 | Welcome to AI-Driven Development | `01-welcome-to-ai-driven-development.md` | AI as collaborative partner, course overview, 9 revolutions (brief intro) |
-| 2 | Your First AI-Assisted Program | `02-your-first-ai-assisted-program.md` | Tool installation (Claude Code, Gemini CLI, Spec-Kit Plus), first spec-driven cycle |
-| 3 | Debugging and Iterating with AI | `03-debugging-and-iterating-with-ai.md` | Error handling, iteration cycles, AI assistance |
+| 1 | Welcome to AI-Driven Development | `01-welcome-to-ai-driven-development.md` | AI as collaborative partner, course overview, brief intro to AI transformation |
+| 2 | Understanding AI Tools: The Nine Revolutions That Made This Possible | `02-understanding-ai-tools.md` | Nine technological revolutions, three-layer stack, AI coding agents (Claude Code, Gemini CLI, Codex, Qwen), vibe coding vs SDD, Snakes & Ladders competitive dynamics, evidence-based inflection point |
+| 3 | Your First AI-Assisted Program | `03-your-first-ai-assisted-program.md` | Tool installation (Claude Code, Gemini CLI, Spec-Kit Plus), first spec-driven cycle |
+| 4 | Debugging and Iterating with AI | `04-debugging-and-iterating-with-ai.md` | Error handling, iteration cycles, AI assistance |
 
 ---
 
-## Part 2: AI Tool Landscape (Chapters 4-7)
+## Part 2: AI Tool Landscape (Chapters 5-8)
 
 Tool literacy and comparison: deep dive into specific platforms
 
 | # | Chapter Title | File Name | Key Topics |
 |---|---------------|-----------|------------|
-| 4 | Claude Code: Features and Workflows | `04-claude-code-features-and-workflows.md` | Claude capabilities, IDE integration |
-| 5 | Gemini CLI: Installation and Basics | `05-gemini-cli-installation-and-basics.md` | Gemini setup, command-line usage |
-| 6 | GitHub Copilot and Code Editors | `06-github-copilot-and-code-editors.md` | Copilot integration, editor support |
-| 7 | Choosing the Right Tool for the Task | `07-choosing-the-right-tool-for-the-task.md` | Tool comparison, selection criteria |
+| 5 | Claude Code: Features and Workflows | `05-claude-code-features-and-workflows.md` | Claude capabilities, IDE integration |
+| 6 | Gemini CLI: Installation and Basics | `06-gemini-cli-installation-and-basics.md` | Gemini setup, command-line usage |
+| 7 | GitHub Copilot and Code Editors | `07-github-copilot-and-code-editors.md` | Copilot integration, editor support |
+| 8 | Choosing the Right Tool for the Task | `08-choosing-the-right-tool-for-the-task.md` | Tool comparison, selection criteria |
 
 ---
 
