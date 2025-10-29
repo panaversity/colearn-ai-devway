@@ -10,7 +10,7 @@ duration: "8-10 minutes"
 
 Here's a pattern you've seen before: A new technology emerges. At first, only specialists understand it. Then it spreads—slowly at first, then suddenly. And once it reaches critical mass, entire industries transform in ways that seem obvious in hindsight but impossible to predict beforehand.
 
-Think about what software did to retail. In 1994, Amazon was a startup selling books from a garage. By 2024, it had reshaped not just bookstores, but grocery stores, logistics, cloud computing, and entertainment. Or consider what software did to photography: Kodak invented the digital camera in 1975, but film seemed permanent. By 2012, Kodak was bankrupt and Instagram—founded just two years earlier—sold for $1 billion.
+Think about what software did to retail. In 1994, Amazon was a startup selling books from a garage. By 2024, it had reshaped not just bookstores, but grocery stores, logistics, cloud computing, and entertainment. Or consider what software did to photography: Kodak engineer Steven Sasson built one of the earliest digital-camera prototypes at Kodak in 1975, demonstrating the technology's feasibility. However, commercial digital cameras and mass consumer adoption came decades later; Kodak's strategic choices meant the company did not translate early invention into sustained competitive advantage in the digital era. By 2012, Kodak was bankrupt and Instagram—founded just two years earlier—sold for $1 billion.
 
 **Software has disrupted every industry.** Banking moved from physical branches to mobile apps. Entertainment shifted from video stores to streaming services. Transportation transformed from taxis to ride-sharing platforms. Communication evolved from letters to instant global connectivity. Every sector felt software's transformative power.
 
@@ -24,7 +24,7 @@ You might be thinking: "This sounds like hype. Every year brings 'revolutionary'
 
 Fair skepticism. Let's look at the evidence.
 
-AI coding tools represent **the fastest-growing startup sector in the history of startups**. Not "one of the fastest"—the fastest. Revenue growth in this category is outpacing every previous startup boom, including the early days of cloud computing, mobile apps, and social media.
+AI developer tools have shown rapid growth in venture funding, ARR, and user adoption during 2023–2025, with notable startups achieving exceptional revenue expansion and valuations.
 
 Think about what that means. Venture capitalists have seen it all: dot-com boom, mobile revolution, cloud computing, cryptocurrency, and countless other "next big things." Yet they're describing AI coding tools in superlatives they've never used before.
 

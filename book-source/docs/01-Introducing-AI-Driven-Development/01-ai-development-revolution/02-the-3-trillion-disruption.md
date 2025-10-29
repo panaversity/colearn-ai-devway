@@ -38,10 +38,10 @@ Numbers at this scale can feel abstract. Let's make it concrete.
 
 **Comparison to national economies:**
 
-- **France**: $3.0 trillion GDP (2023)
-- **United Kingdom**: $3.1 trillion GDP
-- **India**: $3.7 trillion GDP
-- **Software Development**: $3.0 trillion annual value
+- **France**: $2.8 trillion GDP (2023)
+- **United Kingdom**: $3.1 trillion GDP (2023)
+- **India**: $3.6 trillion GDP (2023)
+- **Software Development**: $3.0 trillion annual value (2023)
 
 The software development economy matches the entire economic output of a major industrialized nation. Every baguette sold in Paris, every financial transaction in London, every manufacturing operation, every service sector job—all of it.
 
@@ -51,10 +51,10 @@ France's GDP represents direct economic activity. Software development creates s
 
 **Comparison to major industries:**
 
-- Global airline industry: ~$800 billion annually
-- Global automotive industry: ~$3 trillion annually
-- Global pharmaceuticals: ~$1.5 trillion annually
-- Software development: $3 trillion annually
+- Global airline industry: ~$800 billion annually (2023)
+- Global automotive industry: ~$3 trillion annually (2023)
+- Global pharmaceuticals: ~$1.5 trillion annually (2023)
+- Software development: $3 trillion annually (2023)
 
 Software development is comparable to the entire global automotive industry in economic scale. Every car manufactured, every dealership, every repair shop, every supply chain component—matched by software development.
 
@@ -71,8 +71,7 @@ Consider historical precedents:
 **The Mobile Revolution (2007-2015)**
 
 When the iPhone launched in 2007, the mobile phone market was already massive—around $300 billion annually. Within eight years:
-- Nokia (41% market share in 2007) collapsed
-- BlackBerry (20% market share) became irrelevant
+
 - Entire new categories emerged (mobile apps, app stores)
 - $100+ billion in value shifted from incumbents to new players
 
