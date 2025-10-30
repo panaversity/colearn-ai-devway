@@ -244,7 +244,12 @@ Structure (adapt task categories to chapter type):
 
 ### Phase 1: Content Structure & Core Elements
 
-[For Technical Chapters:]
+- [ ] **MUST**: Create chapter README.md (overview, learning outcomes, structure)
+  - Acceptance: README.md exists (uppercase), follows the canonical output style template
+  - Reference: `.claude/output-styles/chapter-readme.md` for all required sections and content fields
+  - Section headings must use descriptive titles (never "Lesson N")
+  - Effort: 1-2h
+
 - [ ] **MUST**: Lesson 1 outline (content structure, code example list)
   - Acceptance: Outline approved, matches pedagogy guidelines
   - Reference: chapter-Y-plan.md, Lesson 1 section
