@@ -5,6 +5,10 @@ title: "The Evidence — Why 2025 Is Different"
 
 # Section 1: The Evidence — Why 2025 Is Different
 
+:::info Maintenance Note
+Statistics and benchmarks in this chapter reflect 2025 data. 
+:::
+
 You might be thinking: "Is this just hype? Haven't we heard these claims before?"
 
 Fair question. The AI world has no shortage of breathless predictions. But 2025 is genuinely different—not because of marketing narratives, but because three independent trends are converging simultaneously:
@@ -35,9 +39,9 @@ To put this in perspective: 18 months ago, the best AI coding models scored belo
 
 ### Leadership Perspectives Confirm the Shift
 
-When Dario Amodei, CEO of Anthropic, stated that AI may eventually write 90% of software code, he wasn't making a prediction about distant future possibilities [Amodei, 2025]. He was describing a trajectory already visible in how his own engineering teams work.
+When Dario Amodei, CEO of Anthropic, stated that AI may eventually write 90% of software code, he wasn't making a prediction about distant future possibilities [Amodei Interview, 2025]. He was describing a trajectory already visible in how his own engineering teams work.
 
-Sundar Pichai, Google's CEO, reported that AI tools have increased developer productivity by 10% across Google's engineering organization [Pichai, 2025]. At Google's scale—with over 50,000 engineers—that's equivalent to adding 5,000 full-time developers overnight.
+Sundar Pichai, Google's CEO, reported that AI tools have increased developer productivity by 10% across Google's engineering organization [Pichai Keynote, 2025]. At Google's scale—with over 50,000 engineers—that's equivalent to adding 5,000 full-time developers overnight.
 
 These aren't aspirational claims from startups seeking funding. These are statements from leaders running the world's most sophisticated software organizations, describing measurable changes already happening.
 

@@ -8,11 +8,11 @@ duration: "8-10 minutes"
 
 # Section 3: The DORA Perspective — AI as Amplifier
 
-Two engineering teams at different companies both adopt the same AI coding assistant in January 2025. Same tool, same budget, same training materials.
+Two engineering organizations at different companies both adopt the same AI coding assistant in January 2025. Same tool, same budget, same training materials.
 
-**Team A**, six months later: deploying 35% faster than before, with change failure rate unchanged at 2.8%. Developers report higher satisfaction. Leadership is planning to expand AI adoption.
+**Organization A**, six months later: deploying 35% faster than before, with change failure rate unchanged at 2.8%. Developers report higher satisfaction. Leadership is planning to expand AI adoption.
 
-**Team B**, six months later: deploying 40% faster than before, but change failure rate has climbed from 6% to 14%. Developers are burning out from firefighting production issues. Leadership is questioning whether the AI investment was worth it.
+**Organization B**, six months later: deploying 40% faster than before, but change failure rate has climbed from 6% to 14%. Developers are burning out from firefighting production issues. Leadership is questioning whether the AI investment was worth it.
 
 Same tool. Opposite outcomes. What happened?
 
