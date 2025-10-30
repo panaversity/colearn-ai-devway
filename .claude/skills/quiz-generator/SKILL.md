@@ -1,65 +1,136 @@
 ---
 name: quiz-generator
 description: |
-  Generate interactive, college-level quizzes with exactly 25 multiple-choice questions for book chapters.
-  Activate when educators need chapter quizzes, want balanced coverage across lessons, require college-level
-  conceptual questions (not recall), need consistent component integration, or want randomized correct answer
-  distribution. Produces MDX-formatted quizzes using Quiz component with meaningful distractors based on
-  misconceptions, 72% passing score, and comprehensive answer explanations.
+  Generate college-level MCQ quizzes (20-30 questions) with equal/random option lengths to prevent
+  length-based guessing. Produces MDX quizzes with conceptual questions, meaningful distractors,
+  randomly distributed answers (a/b/c/d), and answer key at quiz end. Follows ##_chapter_##_quiz.md
+  naming convention.
 allowed-tools: [Read, Bash, Write, Glob]
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Quiz Generator: College-Level Interactive Chapter Assessments
 
-**Version:** 1.0.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching)
+**Version:** 2.0.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching)
 
 ---
 
 ## Purpose
 
-Generate high-quality, interactive quizzes for CoLearning Python book chapters with exactly 25 multiple-choice questions. Each quiz measures conceptual understanding at college level, integrates seamlessly with the Docusaurus Quiz component, and provides comprehensive learning feedback through explanations.
+Generate high-quality, college-level MCQ quizzes (20-30 questions) that comprehensively cover all chapter material. Each quiz measures conceptual understanding, prevents cheating through equal/random option length, randomizes correct answer positions, and places the answer key at quiz end for independent assessment.
 
-**Core Principle:** Quizzes test understanding and application, not memorization. Every question should require thinking, not recall.
+**Core Principles:**
+- Test understanding and application, not memorization
+- Prevent length-based guessing (equal or random option lengths)
+- Randomize correct answer distribution across a/b/c/d
+- Answer key at end of quiz (not inline) for true assessment
+- Comprehensive coverage of all chapter material
 
 ---
 
 ## When to Activate
 
 Use this skill when:
-- Creating end-of-chapter assessments for the book
-- Need exactly 25 college-level conceptual questions
+- Creating end-of-chapter assessments covering all chapter material
+- Need college-level conceptual questions (20-30 recommended, max 30)
 - Want balanced coverage across all chapter lessons
-- Require consistent Quiz component integration
-- Need meaningful distractors based on common misconceptions
-- Want randomized correct answer distribution (no patterns)
-- Creating MDX-compatible quiz files for Docusaurus
+- Need equal or randomly varied option lengths (preventing length-based guessing)
+- Require randomly distributed correct answers (no patterns)
+- Want answer key at quiz end (not inline) for true assessment
+- Creating MDX-compatible quiz files with proper naming conventions
 
 **Trigger phrases:**
-- "Create a quiz for Chapter X"
-- "Generate chapter assessment with 25 questions"
-- "Build quiz testing Chapter X concepts"
-- "Create end-of-chapter quiz for [topic]"
+- "Create a quiz for Chapter X covering all material"
+- "Generate chapter assessment with 20-30 questions"
+- "Build college-level quiz for [chapter] with answer key at end"
+- "Create comprehensive chapter quiz preventing length-based guessing"
 
 ---
 
-## The Quiz-Generator Mindset
+## Key Concepts
 
-### Shift from Testing Recall to Testing Understanding
+### College-Level Conceptual Questions
 
-**Traditional Approach:**
-> "What is a Python list?" → Tests memorization of definitions
+**Shift from Recall to Understanding:**
 
-**College-Level Approach (This Skill):**
-> "Given this code with list operations, what misconception does this error reveal?" → Tests conceptual understanding and debugging skills
+❌ **Recall (Avoid):**
+> "What is a Python list?" → Tests memorization
 
-### Why College-Level Conceptual Questions?
+✅ **Conceptual (Target):**
+> "Given this code with list operations, what misconception does this error reveal?" → Tests understanding
 
-1. **Job Readiness:** Professional developers must understand WHY, not just WHAT
-2. **AI-Era Skills:** With AI generating code, understanding concepts matters more than syntax recall
-3. **Transfer Learning:** Conceptual knowledge transfers to new situations; memorized facts don't
-4. **Engagement:** Thoughtful questions are more interesting than "What does 'def' mean?"
-5. **Assessment Validity:** Conceptual questions better predict actual programming competence
+**Why College-Level?**
+1. Job readiness: Professional developers need to understand WHY, not just WHAT
+2. AI-era skills: With AI generating code, understanding concepts matters more than syntax recall
+3. Transfer learning: Conceptual knowledge transfers; memorized facts don't
+4. Better assessment: Conceptual questions predict programming competence
+
+**Cognitive Level Target:**
+- 75%+ questions at Apply level or higher
+- Focus on debugging, prediction, analysis (not recall)
+
+---
+
+### Anti-Cheating Design (Critical)
+
+**v1.0 Critical Flaw:** All correct answers were longest options → Students achieved 100% by always choosing longest option.
+
+**v2.0 Solution:** Equal or randomly varied option lengths
+
+**Choose ONE strategy per quiz:**
+
+**Approach 1: Equal Length (Recommended)**
+- All four options approximately same word count (±2 words)
+- Example: Each option 8-10 words
+- Prevents any length-based guessing
+
+**Approach 2: Randomly Varied Length**
+- Options deliberately varied: some 5 words, some 15 words
+- Correct answer distributed equally across length categories
+- Use when equal length creates awkward phrasing
+
+**What NOT to Do:**
+- ❌ Correct answers consistently longest
+- ❌ One option 50+ words while others 5 words
+- ❌ Ignoring length variation (allows shortcuts)
+
+📖 **Reference:** [option-length-strategy.md](./references/option-length-strategy.md) for detailed implementation
+
+---
+
+### Answer Randomization
+
+**Requirements:**
+- Correct answers distributed evenly across a/b/c/d
+- For 25 questions: ~6-7 per letter (24-28% each)
+- No patterns (not a, b, c, d, a, b, c, d...)
+- Maximum 2 consecutive same answers
+
+**How to Randomize:**
+1. Write questions first (don't worry about position)
+2. After ALL questions written, shuffle answer positions
+3. Verify distribution is roughly equal
+4. Ensure no 3+ consecutive same answers
+
+📖 **Reference:** [answer-distribution.md](./references/answer-distribution.md) for verification methods
+
+---
+
+### Two-Part Format (No Inline Answers)
+
+**v1.0 Problem:** Explanations inline → Students saw answers while taking quiz
+
+**v2.0 Solution:** Two-part format
+
+**Part 1: Questions Section (No Explanations)**
+- Display 20-30 questions without correct answer indicators
+- No inline explanations
+- Options at equal or random length
+
+**Part 2: Answer Key Section (At Quiz End)**
+- Comprehensive answer key with explanations
+- Shown AFTER students complete quiz
+- 60-150 words per explanation
 
 ---
 
@@ -68,475 +139,184 @@ Use this skill when:
 ### Fixed Constraints (Non-Negotiable)
 
 ```yaml
-question_count: 25  # Exactly, no exceptions
-options_per_question: 4  # Always A, B, C, D
+question_count: 20-30  # Flexible for comprehensive coverage (max 30)
+options_per_question: 4  # Always a, b, c, d
+option_length_strategy: equal_or_random  # CRITICAL: Prevent length-based guessing
 question_format: multiple_choice  # Only MCQ
-passing_score: 72  # 18/25 questions (college rigor)
-file_naming: ##_quiz.md  # e.g., 05_quiz.md for Chapter 5
-output_format: MDX  # Docusaurus-compatible markdown
-component: Quiz  # Globally registered, no imports
-answer_location: end  # No inline answers
+correct_answer_distribution: random_equal  # a/b/c/d equally distributed
+answer_key_location: end_of_quiz  # NOT inline
+passing_score: 72  # ~72% (18/25 or 21/30)
+file_naming: ##_chapter_##_quiz.md  # e.g., 05_chapter_02_quiz.md
+output_format: MDX  # Plain markdown with answer key section
 ```
 
-### Quiz Component Integration
+**CRITICAL ANTI-PATTERNS:**
+- ❌ Correct answer always/usually has longest option
+- ❌ Inline answer explanations
+- ❌ Obvious patterns in correct answers
+- ❌ Options of vastly different lengths
+- ❌ Exactly 25 questions (be flexible: 20-30)
+- ❌ File naming like `##_quiz.md` (use `##_chapter_##_quiz.md`)
 
-The Quiz component is globally registered in Docusaurus. Use exactly this structure:
+---
 
-```jsx
-<Quiz
-  title="Chapter X: [Topic] Assessment"
-  questions={[
-    {
-      question: "Question text here?",
-      options: ["Option A", "Option B", "Option C", "Option D"],
-      correctOption: 0,  // Index: 0=A, 1=B, 2=C, 3=D
-      explanation: "Detailed explanation of correct answer and why distractors are incorrect"
-    },
-    // ... 24 more questions
-  ]}
-  passingScore={72}
-/>
+### File Structure
+
+```markdown
+---
+title: "Chapter X: [Topic] Quiz"
+description: "College-level assessment covering all material from Chapter X"
+---
+
+# Chapter X: [Topic] Quiz
+
+[Instructions about quiz purpose and expected time]
+
+---
+
+## Questions
+
+1. Question text here?
+   a) Option A (similar length)
+   b) Option B (similar length)
+   c) Option C (similar length)
+   d) Option D (similar length)
+
+2. Another question?
+   a) Option A
+   b) Option B
+   c) Option C
+   d) Option D
+
+[... 18-28 more questions ...]
+
+---
+
+## Answer Key
+
+**1.** Correct answer: **a**
+
+[Comprehensive explanation: why correct, why others wrong, additional context - 60-150 words]
+
+**2.** Correct answer: **c**
+
+[Comprehensive explanation for question 2]
+
+[... all remaining answers ...]
 ```
 
-**Critical Details:**
-- `correctOption` uses **zero-based array index** (0, 1, 2, 3)
-- `options` must be **array of exactly 4 strings**
-- `explanation` is **required** for every question
-- No imports needed (component is globally available)
-- Entire quiz is one `<Quiz>` block with 25 questions
+📖 **Reference:** [file-naming.md](./references/file-naming.md) for naming conventions
 
 ---
 
-## The Quiz Generation Process
+## The Generation Process (Overview)
 
 ```
-Chapter Content (docs/) + Lessons
-    ↓
-1. Analyze Chapter Structure
-2. Map Concepts to Question Distribution
-3. Generate 25 Conceptual Questions
-4. Design Meaningful Distractors
-5. Randomize Correct Answers
-6. Write Explanations
-7. Format as MDX
-8. Validate Structure
-    ↓
-##_quiz.md (ready for Docusaurus)
+Chapter Content → Analyze → Map Concepts → Generate Questions →
+Design Distractors → Randomize Answers → Write Explanations →
+Format MDX → Validate → ##_chapter_##_quiz.md
 ```
 
----
+### 8-Stage Process Summary
 
-### Stage 1: Analyze Chapter Structure
+1. **Analyze Chapter Structure:** Identify lessons, concepts, learning objectives
+2. **Map Concepts to Question Distribution:** Allocate questions proportionally across lessons
+3. **Generate 20-30 Conceptual Questions:** Write understanding-focused questions
+4. **Design Meaningful Distractors:** Create distractors testing specific misconceptions with equal/random lengths
+5. **Randomize Correct Answers:** Shuffle positions; verify even distribution (a/b/c/d)
+6. **Write Comprehensive Explanations:** 60-150 words each explaining why correct/wrong
+7. **Format as MDX:** Two-part structure (questions + answer key)
+8. **Validate Structure:** Check all requirements before saving
 
-**Goal:** Understand chapter scope, identify all lessons, and map key concepts.
-
-**Process:**
-
-1. **Read chapter content:**
-   - Examine book-source/docs/[chapter-path]/ directory
-   - List all lesson files (lesson-1.md, lesson-2.md, etc.)
-
-2. **Identify lessons:**
-   - Note key concepts taught in each lesson
-   - Identify prerequisite chapters referenced
-   - Map which concepts are foundational vs. advanced
-
-3. **Extract learning objectives:**
-   - What can students do after this chapter?
-   - What concepts are foundational vs. advanced?
-   - What common mistakes are mentioned?
-
-**Artifacts:**
-- Chapter outline with lessons
-- Concept map (which lessons teach what)
-- Learning objectives list
-- Common mistakes inventory
+📖 **Reference:** [generation-process.md](./references/generation-process.md) for detailed stage-by-stage workflow
 
 ---
 
-### Stage 2: Map Concepts to Question Distribution
+## Quality Standards
 
-**Goal:** Ensure balanced coverage across all lessons with fair weighting.
+### Content Quality
+- ✅ 20-30 questions (comprehensive coverage of ALL material)
+- ✅ College-level conceptual (75%+ Apply or higher)
+- ✅ Realistic scenarios (debugging, prediction, analysis)
+- ✅ Balanced across all lessons (no omissions)
 
-**Distribution Strategy:**
+### Anti-Cheating Quality (CRITICAL)
+- ✅ Equal or random option lengths (ONE strategy consistently applied)
+- ✅ Longest option ≠ always correct (manually verified)
+- ✅ Correct answers evenly distributed (a/b/c/d: ~25% each)
+- ✅ No 3+ consecutive same answers
+- ✅ Questions/answers separated (no inline explanations)
 
-For a chapter with N lessons:
-- **Base allocation:** 25 ÷ N questions per lesson (rounded)
-- **Adjust for importance:** +1 for complex/critical lessons
-- **Adjust for length:** +1 for longer lessons with more content
-- **Final balance:** Must sum to exactly 25
+### Explanation Quality
+- ✅ 60-150 words each (comprehensive, not rushed)
+- ✅ Explain WHY correct (2-3 sentences)
+- ✅ Address why distractors wrong (1-2 sentences each)
+- ✅ Additional context (examples, connections)
 
-**Cognitive Level Distribution (College Standard):**
+### Format Quality
+- ✅ Plain markdown (no JSX)
+- ✅ Two-part structure (questions + answer key)
+- ✅ File named: `##_chapter_##_quiz.md`
+- ✅ Correct answer format: **Correct answer: [a/b/c/d]** (bold)
 
-Target:
-- **Remember:** 0-2 questions (0-8%) - Minimal recall
-- **Understand:** 5-7 questions (20-28%) - Concept grasp
-- **Apply:** 10-12 questions (40-48%) - Use in context
-- **Analyze:** 5-7 questions (20-28%) - Debug, compare
-- **Evaluate:** 1-2 questions (4-8%) - Judge quality
-- **Create:** 0-1 questions (0-4%) - Design solutions
-
-**Requirement:** 75%+ questions at Apply level or higher (college standard)
-
----
-
-### Stage 3: Generate 25 Conceptual Questions
-
-**Goal:** Write questions testing understanding, not memorization.
-
-**Question Quality Criteria:**
-
-✅ **Good Conceptual Questions:**
-- Require understanding WHY, not just WHAT
-- Present realistic code scenarios
-- Test debugging or prediction skills
-- Ask about tradeoffs or best practices
-- Require analysis of behavior
-- Connect multiple concepts
-
-❌ **Poor Recall Questions:**
-- "What is a Python list?" (definition)
-- "Which file stores configuration?" (memorization)
-- "What is OAuth?" (terminology)
-- "List three CLI commands" (recall)
-
-**Writing Process:**
-
-For each question:
-1. **Identify concept:** What specific understanding to test?
-2. **Choose scenario:** Realistic context for the concept
-3. **Write question:** Clear, specific, unambiguous
-4. **Determine correct answer:** The one demonstrating understanding
-5. **Draft distractors:** Based on common misconceptions
-6. **Write explanation:** Why correct, why distractors wrong
+📖 **Reference:** [quality-checklist.md](./references/quality-checklist.md) for complete validation criteria
 
 ---
 
-### Stage 4: Design Meaningful Distractors
+## Common Pitfalls (Top 5)
 
-**Goal:** Create plausible wrong answers that diagnose specific misconceptions.
+1. **Length-Based Guessing:** All correct answers longest → Students guess without learning
+   - Fix: Equal or random lengths; verify manually
 
-**Distractor Design Philosophy:**
+2. **Inline Explanations:** Answers visible during quiz → Defeats assessment
+   - Fix: Answer key section AFTER quiz (separated by `---`)
 
-Distractors should:
-- **Test specific misconceptions** (not random wrong answers)
-- **Be plausible** (student with partial knowledge might choose them)
-- **Diagnose thinking errors** (reveal what student misunderstands)
-- **Avoid obvious incorrectness** (no joke options)
+3. **Testing Recall:** "What is X?" questions → Memorization
+   - Fix: "Why does X fail here?" → Understanding
 
-**Distractor Sources:**
+4. **Random Distractors:** Joke options → No diagnostic value
+   - Fix: Every distractor tests specific misconception
 
-1. **Common Student Errors:** Check chapter's "Common Mistakes" section
-2. **Partial Understanding:** Mixing up related but distinct concepts
-3. **Opposite Logic:** Inverse of correct answer
-4. **Off-by-One Errors:** Close to correct but subtly wrong
+5. **No Validation:** Assume lengths equal → Patterns emerge
+   - Fix: Count words manually; verify distributions
 
-**Key Principle:** Every distractor must have PURPOSE — it tests a specific misconception.
+📖 **Reference:** [pitfalls-and-solutions.md](./references/pitfalls-and-solutions.md) for all 10 common mistakes
 
 ---
 
-### Stage 5: Randomize Correct Answers
+## File Naming Convention
 
-**Goal:** Eliminate answer patterns; prevent "always C" test-taking strategies.
+### Pattern: `##_chapter_##_quiz.md`
 
-**Requirements:**
+Where:
+- First `##` = sidebar_position (lesson count + 1)
+- Second `##` = chapter number (zero-padded)
 
-- **No patterns:** Correct answer should appear randomly
-- **Balanced distribution:** Each option (A/B/C/D) correct ~6-7 times
-- **No runs:** Avoid 3+ consecutive same answers
-- **Realistic randomness:** Use actual randomization, not forced symmetry
+**Examples:**
+- Chapter 2 (4 lessons): `05_chapter_02_quiz.md`
+- Chapter 5 (6 lessons): `07_chapter_05_quiz.md`
+- Chapter 14 (5 lessons): `06_chapter_14_quiz.md`
 
-**Distribution Target (25 questions):**
+**Why this naming:**
+- Matches lesson naming convention
+- Clear chapter identification
+- Natural sorting places quiz at chapter end
 
-```
-Option A correct: 6-7 times (24-28%)
-Option B correct: 6-7 times (24-28%)
-Option C correct: 6-7 times (24-28%)
-Option D correct: 5-6 times (20-24%)
-Total: 25 questions ✓
-
-Max consecutive same answer: 2
-```
-
----
-
-### Stage 6: Write Explanations
-
-**Goal:** Provide learning value through comprehensive answer explanations.
-
-**Explanation Requirements:**
-
-Every explanation must:
-1. **Confirm correct answer** with reasoning
-2. **Explain WHY it's correct** (concept reinforcement)
-3. **Address common distractors** (misconception correction)
-4. **Provide additional context** (extend learning)
-
-**Explanation Template:**
-
-```
-The correct answer is [X]: [Brief confirmation].
-
-[Why this is correct - 1-2 sentences explaining the concept]
-
-[Why distractors are wrong - 1 sentence each for key misconceptions]
-
-[Additional insight or reference - 1 sentence]
-```
-
-**Explanation Length:**
-- **Minimum:** 40 words (enough to teach)
-- **Maximum:** 100 words (avoid overwhelming)
-- **Target:** 50-70 words (clear, comprehensive)
-
----
-
-### Stage 7: Format as MDX
-
-**Goal:** Create valid MDX file compatible with Docusaurus Quiz component.
-
-**File Structure:**
-
-```mdx
----
-title: "Chapter X Quiz"
-description: "Test your understanding of [topic]"
----
-
-# Chapter X: [Topic] Assessment
-
-Test your understanding of the concepts covered in Chapter X. This quiz contains 25 questions covering all lessons.
-
-**Passing Score:** 72% (18/25 questions)
-**Time Estimate:** 30-40 minutes
-
----
-
-<Quiz
-  title="Chapter X: [Topic] Assessment"
-  questions={[
-    {
-      question: "Question 1 text here?",
-      options: [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      correctOption: 2,
-      explanation: "Detailed explanation here..."
-    },
-    // ... 23 more questions
-  ]}
-  passingScore={72}
-/>
-```
-
-**Formatting Rules:**
-
-1. **Frontmatter:** Valid YAML with title and description
-2. **Heading:** Clear chapter identification
-3. **Instructions:** Passing score and time estimate
-4. **Quiz Block:** Single `<Quiz>` component with all 25 questions
-5. **Questions Array:** Valid JavaScript object syntax
-6. **String Escaping:** Use proper escaping for quotes in questions/options
-7. **Explanation Text:** Single string (can include technical terms)
-
----
-
-### Stage 8: Validate Structure
-
-**Goal:** Ensure quiz meets all requirements before saving.
-
-**Validation Checklist:**
-
-**Content Validation:**
-- [ ] Exactly 25 questions (no more, no fewer)
-- [ ] All questions are conceptual (75%+ Apply or higher)
-- [ ] Balanced coverage across all lessons
-- [ ] No recall-only questions
-- [ ] All scenarios are realistic and relevant
-
-**Component Validation:**
-- [ ] Each question has exactly 4 options
-- [ ] Each correctOption is 0, 1, 2, or 3
-- [ ] Correct answers distributed evenly (6-7 per option)
-- [ ] No 3+ consecutive same answers
-- [ ] All explanations present and substantive (40+ words)
-
-**Technical Validation:**
-- [ ] Valid MDX syntax
-- [ ] Proper YAML frontmatter
-- [ ] Correct Quiz component structure
-- [ ] No unescaped quotes breaking strings
-- [ ] Proper comma placement in arrays
-- [ ] File named correctly (##_quiz.md)
-
----
-
-## Output Deliverable
-
-### File Location
-
-Save quiz file to:
-```
-book-source/docs/[part-folder]/[chapter-folder]/##_quiz.md
-```
-
-### File Naming Convention
-
-Pattern: `##_quiz.md` where `##` is zero-padded chapter number
-
-Examples:
-- Chapter 5: `05_quiz.md`
-- Chapter 14: `14_quiz.md`
-- Chapter 32: `32_quiz.md`
-
----
-
-## The 72% Passing Score Rationale
-
-### Why 72% (18/25 questions)?
-
-**College-Level Rigor:**
-- Standard "C" grade in many institutions: 70-79%
-- 72% = 18/25 questions = demonstrable competency
-- Below 70% indicates insufficient understanding for progression
-
-**Not Too High:**
-- 80%+ (20/25) would be too strict for conceptual questions
-- Allows for reasonable uncertainty on edge cases
-- Permits advancement with strong but imperfect understanding
-
-**Not Too Low:**
-- 60% (15/25) is too lenient for critical concepts
-- Students must demonstrate clear majority understanding
-- Prevents progression with major knowledge gaps
-
-**Pedagogical Alignment:**
-- Encourages review and retaking (learning opportunity)
-- Realistic for first attempt on conceptual questions
-- Motivates thoroughness without being punitive
-
----
-
-## Quality Checklist
-
-Before finalizing quiz:
-
-**Content Quality:**
-- [ ] All 25 questions test conceptual understanding (not recall)
-- [ ] Questions span all chapter lessons proportionally
-- [ ] 75%+ questions at Apply level or higher (college standard)
-- [ ] Realistic scenarios that mirror real development tasks
-- [ ] No trivial "What does X mean?" questions
-- [ ] Technical accuracy verified against chapter content
-
-**Distractor Quality:**
-- [ ] Every distractor tests a specific misconception
-- [ ] Distractors are plausible (not obviously wrong)
-- [ ] Based on common student errors from chapter
-- [ ] No "joke" or filler options
-- [ ] Diagnostic value (reveals thinking errors)
-
-**Answer Distribution:**
-- [ ] Correct answers distributed evenly (6-7 per option A/B/C/D)
-- [ ] No patterns (e.g., all "C" in a row)
-- [ ] Maximum 2 consecutive same answers
-- [ ] Randomness verified manually
-
-**Explanation Quality:**
-- [ ] All 25 explanations present
-- [ ] Each explanation 40-100 words (avg 50-70)
-- [ ] Confirms correct answer clearly
-- [ ] Explains WHY correct (concept teaching)
-- [ ] Addresses key misconceptions from distractors
-- [ ] Provides additional learning value
-
-**Technical Correctness:**
-- [ ] Valid MDX syntax (no JSX errors)
-- [ ] Proper YAML frontmatter
-- [ ] Exactly 4 options per question
-- [ ] All correctOption values are 0-3
-- [ ] No unescaped quotes breaking strings
-- [ ] File named correctly (##_quiz.md)
-- [ ] Saved to correct directory path
-
----
-
-## Common Pitfalls & Solutions
-
-### Pitfall 1: Testing Recall Instead of Understanding
-
-**Problem:** "What is the MCP protocol acronym?" → Memorization
-
-**Solution:** "Given this MCP configuration error, what architectural principle is being violated?" → Conceptual understanding
-
----
-
-### Pitfall 2: Random Distractors Without Purpose
-
-**Problem:** Options are obviously wrong or unrelated
-
-**Solution:** Every distractor tests a specific misconception from the chapter
-
----
-
-### Pitfall 3: Unbalanced Lesson Coverage
-
-**Problem:** 20 questions from Lesson 1, 5 questions from Lessons 2-6
-
-**Solution:** Proportional allocation based on lesson importance and content
-
----
-
-### Pitfall 4: Answer Patterns
-
-**Problem:** Correct answers: A, B, C, D, A, B, C, D... (obvious pattern)
-
-**Solution:** Randomize actual answer positions to eliminate patterns
-
----
-
-### Pitfall 5: Weak Explanations
-
-**Problem:** "The correct answer is B. Option A is wrong."
-
-**Solution:** Full explanation of why correct, why distractors are wrong, additional context
-
----
-
-### Pitfall 6: Incorrect Component Syntax
-
-**Problem:** Missing fields, wrong data types, invalid JSX
-
-**Solution:** Follow TypeScript interface exactly (array of objects with question, options, correctOption, explanation)
-
----
-
-### Pitfall 7: Too Many Easy Questions
-
-**Problem:** 20 Understand-level, 5 Apply-level (below college standard)
-
-**Solution:** 75%+ at Apply level or higher to meet college-level rigor
+📖 **Reference:** [file-naming.md](./references/file-naming.md) for complete guidance
 
 ---
 
 ## Integration with Book Workflow
 
 ### Related Skills
-
-This skill works with:
 - **learning-objectives:** Align questions to chapter objectives
 - **assessment-builder:** General assessment principles
 - **technical-clarity:** Ensure question language is accessible
-- **content-evaluation-framework:** Validate quiz quality before deployment
+- **content-evaluation-framework:** Validate quiz quality
 
 ### Related Infrastructure
-
-- **Quiz Component:** `book-source/src/components/Quiz.tsx` (TypeScript interface)
-- **Chapter Structure:** Defined in `specs/book/chapter-index.md`
 - **Constitution:** Aligns with Principle 1 (AI-First Teaching) and Principle 5 (Progressive Complexity)
+- **Chapter Index:** `specs/book/chapter-index.md`
 
 ---
 
@@ -544,32 +324,53 @@ This skill works with:
 
 The quiz is ready for human review when:
 
-✅ **Content Complete:**
-- [ ] Exactly 25 questions generated
-- [ ] All questions are conceptual (not recall)
-- [ ] Balanced coverage across all lessons
-- [ ] 75%+ questions at Apply level or higher
+**Content Complete:**
+- [ ] 20-30 questions generated
+- [ ] ALL major topics covered
+- [ ] All questions conceptual (not recall)
+- [ ] 75%+ at Apply level or higher
 
-✅ **Quality Verified:**
-- [ ] All distractors test specific misconceptions
-- [ ] Explanations teach concepts (40-100 words each)
-- [ ] Correct answers randomized (no patterns)
-- [ ] Technical accuracy confirmed against chapter
+**Anti-Cheating Verified:**
+- [ ] Option lengths equal (±2) OR deliberately random (consistent strategy)
+- [ ] Word counts verified for all questions
+- [ ] Longest option ≠ correct answer pattern
+- [ ] Correct answers evenly distributed (a/b/c/d)
+- [ ] No 3+ consecutive same answers
 
-✅ **Format Valid:**
-- [ ] MDX syntax correct (no JSX errors)
-- [ ] Quiz component structure matches TypeScript interface
-- [ ] File named correctly (##_quiz.md)
-- [ ] Saved to correct directory path
-- [ ] passingScore set to 72
+**Quality Verified:**
+- [ ] Distractors test specific misconceptions
+- [ ] Explanations comprehensive (60-150 words each)
+- [ ] Technical accuracy confirmed
 
-✅ **Human Review Needed:**
-- [ ] Spot-check 5-10 questions for quality
+**Format Valid:**
+- [ ] Plain markdown (no JSX)
+- [ ] Questions SEPARATE from answer key
+- [ ] File named: `##_chapter_##_quiz.md`
+- [ ] Saved to correct directory
+
+**Human Review:**
+- [ ] Spot-check 5-10 questions for option length
 - [ ] Verify distractor plausibility
-- [ ] Confirm technical accuracy of scenarios
-- [ ] Test Quiz component renders correctly
+- [ ] Confirm technical accuracy
 - [ ] Approve for deployment
+
+📖 **Reference:** [quality-checklist.md](./references/quality-checklist.md) for complete validation
 
 ---
 
-**Quiz-generator creates assessments that measure what matters: conceptual understanding, not memorized facts. Every question teaches, every distractor diagnoses, every explanation deepens learning.**
+## Bundled Resources
+
+This skill includes detailed reference documentation:
+
+- **[generation-process.md](./references/generation-process.md)** - Complete 8-stage workflow with examples
+- **[option-length-strategy.md](./references/option-length-strategy.md)** - Equal vs. random approaches; anti-cheating measures
+- **[answer-distribution.md](./references/answer-distribution.md)** - Randomization and verification methods
+- **[file-naming.md](./references/file-naming.md)** - Naming conventions with examples
+- **[pitfalls-and-solutions.md](./references/pitfalls-and-solutions.md)** - 10 common mistakes and fixes
+- **[quality-checklist.md](./references/quality-checklist.md)** - Complete validation checklist
+
+Use `Read` tool to access references as needed during quiz generation.
+
+---
+
+**Quiz Generator v2.0 creates assessments that measure what matters: conceptual understanding without cheating shortcuts. Options prevent length-based guessing, answers are randomized, assessment is true (not inline answers), and every explanation deepens learning.**
