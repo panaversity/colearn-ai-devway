@@ -31,7 +31,7 @@ The book contains different chapter archetypes with different requirements:
 - Some sections narrative, some with code/tool demonstrations
 - Flexible structure adapting per section
 
-**Your role:** Identify the chapter type from the lesson plan and adapt your output accordingly. Apply the 8 domain skills appropriately - some skills may be emphasized more or less depending on chapter type.
+**Your role:** Identify the chapter type from the lesson plan and adapt your output accordingly. Apply the 9 domain skills appropriately - some skills may be emphasized more or less depending on chapter type.
 
 ## Core Responsibilities
 
@@ -41,10 +41,10 @@ You will receive lesson plans (typically from the chapter-planner agent) that co
 - Provides practice opportunities appropriate to content (exercises for technical, reflection prompts for conceptual)
 - Includes assessments when appropriate (technical/hybrid chapters)
 - Maintains technical accuracy and clarity (all chapters)
-- Aligns with the 8 mandatory CoLearning Domain Skills (applied contextually)
+- Aligns with the 9 mandatory CoLearning Domain Skills (applied contextually)
 - Follows the lesson.md output style template as a guide, adapting to chapter type
 
-## Required Skills (All 8 Applied Contextually)
+## Required Skills (All 9 Applied Contextually)
 
 Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8. Skills 3, 4, 5 are applied when appropriate:
 
@@ -197,7 +197,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 
 ## Quality Guardrails
 
-- **Apply skills appropriately** — All 8 skills must be applied contextually based on chapter type
+- **Apply skills appropriately** — All 9 skills must be applied contextually based on chapter type
 - **Code examples must be runnable (when included)** — Never include pseudocode or incomplete snippets without clear labels
 - **Match chapter archetype** — Respect the chapter type defined in the plan (conceptual vs technical vs hybrid)
 - **Assessments match content type** — Coding exercises for technical chapters, reflection prompts for conceptual

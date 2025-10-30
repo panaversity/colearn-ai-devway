@@ -41,7 +41,9 @@ Validate completed chapters for publication readiness across four dimensions (ad
    
 2. **Pedagogical Effectiveness**: Learning objectives align with content; concepts scaffold progressively; practice elements appropriate to chapter type
 
-3. **Constitution Alignment**: All 8 CoLearning Domain Skills applied contextually; accessibility considered; "learning WITH AI" emphasis present
+
+3. **Constitution Alignment**: All 9 CoLearning Domain Skills applied contextually; accessibility considered; "learning WITH AI" emphasis present
+
 
 4. **Quality Assurance**: No typos, grammatical errors, or formatting issues; Docusaurus frontmatter correct; cross-references valid
 
@@ -162,7 +164,9 @@ Validate completed chapters for publication readiness across four dimensions (ad
 
 **Domain Skills Coverage (Apply Contextually):**
 
-Are all 8 CoLearning Domain Skills applied appropriately for the chapter type?
+
+Are all 9 CoLearning Domain Skills applied appropriately for the chapter type?
+
 
 **All Chapters Must Have:**
   - **learning-objectives**: Clear, measurable outcomes using Bloom's taxonomy (appropriate verbs for chapter type)
@@ -397,7 +401,32 @@ Generate a structured validation report in markdown:
 - [ ] Formatting and structure checked
 - [ ] All links and references functional
 - [ ] Recommendation justified and clear
-```
+
+### Phase 4.5: Chapter README.md Validation
+
+**README.md File Check**:
+- [ ] **CRITICAL**: README.md exists in chapter directory
+- [ ] **CRITICAL**: File is named `README.md` (uppercase), NOT `readme.md` or `index.md`
+- [ ] **CRITICAL**: README.md does NOT use "Lesson N" in section headings (use descriptive titles only)
+
+**README.md Content Validation**:
+- [ ] Front matter present with required fields (title, chapter, sidebar_position)
+- [ ] Chapter overview present (what, why, who it's for)
+- [ ] Learning outcomes listed (measurable, Bloom's taxonomy appropriate to chapter type)
+- [ ] Prerequisites clearly stated
+- [ ] Chapter structure described with descriptive section titles
+
+**README.md Accuracy Check**:
+- [ ] All lesson files referenced in README actually exist
+- [ ] Learning outcomes in README align with individual lesson objectives
+- [ ] README accurately represents chapter content and structure
+- [ ] No broken internal links or references
+
+**Quality Standards**:
+- [ ] No typos or grammatical errors in README
+- [ ] Consistent terminology between README and lessons
+- [ ] Professional tone and formatting
+- [ ] Engaging overview that motivates the reader
 
 ## Your Decision Rules (Adapted to Chapter Type)
 

@@ -72,12 +72,12 @@ book-source/docs/
 
 Each part folder MUST contain:
 
-1. **`intro.md`** — Part introduction (overview, learning outcomes, connection to other parts)
+1. **`README.md`** — Part introduction (overview, learning outcomes, connection to other parts)
 
 **Example**:
 ```
 01-Introducing-AI-Driven-Development/
-├── intro.md              ← Required part introduction
+├── README.md              ← Required part introduction
 ├── 01-welcome-to-ai-driven-development/
 ├── 02-understanding-ai-tools/
 └── ...
@@ -91,7 +91,7 @@ Each part folder MUST contain:
 
 ```
 01-Introducing-AI-Driven-Development/
-├── intro.md
+├── README.md
 ├── 01-welcome-to-ai-driven-development/
 ├── 02-understanding-ai-tools/
 ├── 03-setting-up-your-environment/
@@ -188,7 +188,7 @@ description: "Learn the fundamentals of working with AI as a development partner
 book-source/docs/
 │
 ├── 01-Introducing-AI-Driven-Development/
-│   ├── intro.md                                    [Part intro]
+│   ├── README.md                                    [Part intro]
 │   │
 │   ├── 01-welcome-to-ai-driven-development/        [Chapter 1]
 │   │   ├── README.md                               [Chapter overview]
@@ -221,7 +221,7 @@ book-source/docs/
 │       └── 03-lesson-3.md
 │
 ├── 02-AI-Tool-Landscape/
-│   ├── intro.md
+│   ├── README.md
 │   │
 │   ├── 06-claude-code--features-and-workflows/     [Chapter 6]
 │   │   ├── README.md
@@ -292,7 +292,7 @@ Chapters are numbered **globally (1-32)** in chapter-index.md, but folders use *
 | Level | Format | Case | Example |
 |-------|--------|------|---------|
 | **Part folder** | `NN-Part-Name/` | Title Case (Capitalized) | `01-Introducing-AI-Driven-Development/` |
-| **Part intro** | `intro.md` | Lowercase | `intro.md` |
+| **Part intro** | `README.md` | UPPERCASE | `README.md` |
 | **Chapter folder** | `NN-chapter-name/` | lowercase-with-hyphens | `01-welcome-to-ai-driven-development/` |
 | **Chapter overview** | `README.md` | UPPERCASE | `README.md` |
 | **Lesson file** | `NN-lesson-name.md` | lowercase-with-hyphens | `01-lesson-1.md` |
@@ -383,7 +383,7 @@ When creating content:
 Before committing content, verify:
 
 - [ ] Part folder is capitalized (Title Case)
-- [ ] Part folder has `intro.md`
+- [ ] Part folder has `README.md`
 - [ ] Chapter folder is lowercase-with-hyphens
 - [ ] Chapter folder has `README.md`
 - [ ] Lesson files are numbered sequentially (01, 02, 03...)
@@ -430,7 +430,7 @@ ls book-source/docs/01-Introducing-AI-Driven-Development/01-welcome-to-ai-driven
 **v1.0** (2025-10-29): Initial specification based on actual book-source/docs/ structure
 - Documented 3-level hierarchy (Part → Chapter → Lesson)
 - Defined naming conventions (capitalized parts, lowercase chapters)
-- Specified required files (intro.md, README.md)
+- Specified required files (README.md, README.md)
 - Provided conversion formula from chapter-index.md to directory paths
 
 ---

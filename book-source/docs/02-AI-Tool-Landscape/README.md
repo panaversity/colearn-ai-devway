@@ -5,7 +5,6 @@ title: "Part 2: AI Tool Landscape"
 
 # Part 2: AI Tool Landscape
 
-**Chapters**: 4 | **Cognitive Load**: Moderate | **Scaffolding**: Heavy (2-3 review cycles expected)
 
 ## Purpose
 
