@@ -8,7 +8,7 @@ duration: "8-10 min"
 
 ## The Development Tool That Nobody Meant to Build
 
-In October 2024, a small team at Anthropic shipped what they thought was a modest developer experiment. They called it "Claude Code"—a command-line interface that let developers chat with Claude AI directly from their terminal. The team expected a niche audience: maybe a few thousand command-line enthusiasts who preferred `vim` over VS Code, developers comfortable with scripts and shell commands.
+In February 2025, a small team at Anthropic shipped what they thought was a modest developer experiment. They called it "Claude Code"—a command-line interface that let developers chat with Claude AI directly from their terminal. The team expected a niche audience: maybe a few thousand command-line enthusiasts who preferred `vim` over VS Code, developers comfortable with scripts and shell commands.
 
 What happened next surprised everyone.
 
