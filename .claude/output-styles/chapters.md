@@ -21,7 +21,7 @@ Chapters are organized in a **3-level hierarchy** within `book-source/docs/`:
 ```
 book-source/docs/
 ├── NN-Part-Name/                        # Part folders (Title Case, 01-07)
-│   ├── intro.md                         # Part introduction (required)
+│   ├── README.md                         # Part introduction (required)
 │   ├── NN-chapter-name/                 # Chapter directories (lowercase)
 │   │   ├── README.md                    # Chapter overview (required)
 │   │   ├── 01-lesson-1.md               # Lesson files
@@ -36,7 +36,7 @@ book-source/docs/
 **Key Rules**:
 - Part folders: **Title-Case-With-Hyphens** (e.g., `01-Introducing-AI-Driven-Development/`)
 - Chapter folders: **lowercase-with-hyphens** (e.g., `01-welcome-to-ai-driven-development/`)
-- Each part has `intro.md`
+- Each part has `README.md`
 - Each chapter has `README.md`
 - Lesson files are numbered: `01-lesson-1.md`, `02-lesson-2.md`, etc.
 
