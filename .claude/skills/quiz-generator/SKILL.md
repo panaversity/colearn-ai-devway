@@ -13,13 +13,19 @@ version: 3.1.0
 
 # Quiz Generator: College-Level Interactive Chapter Assessments
 
-**Version:** 3.1.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching) | **CRITICAL:** Always use Quiz component, EQUAL LENGTH options (±2 words), 20-30 questions
+**Version:** 3.1.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching) | **CRITICAL:** Always use Quiz component, EQUAL LENGTH options (±2 words), 20-30 comprehensive questions
+
+**Quiz Component Location:** `book-source/src/components/Quiz.tsx` (globally registered—no imports needed)
+**Usage Reference:** `book-source/src/components/QUIZ_USAGE.md` (example structure + best practices)
+**Example Quiz:** `book-source/src/components/references/example-quiz.md` (full working example with all patterns)
 
 ---
 
 ## Purpose
 
-Generate high-quality, college-level MCQ quizzes (20-30 comprehensive questions) using the globally-registered Quiz component. Each quiz measures conceptual understanding with built-in interactive features including progress tracking, answer validation, instant explanations, and results scoring. **CRITICAL: All options MUST have equal length (±2 words maximum difference) to prevent length-based guessing.** The Quiz component automatically handles theme switching and mobile responsiveness.
+Generate high-quality, college-level MCQ quizzes (20-30 comprehensive questions) using the globally-registered Quiz component (`<Quiz />`). Each quiz measures conceptual understanding with built-in interactive features including progress tracking, answer validation, instant explanations, results scoring, and color-coded feedback. **CRITICAL: All options MUST have equal length (±2 words maximum difference) to prevent length-based guessing.** The Quiz component automatically handles theme switching and mobile responsiveness.
+
+**Output is ALWAYS a Quiz component, NEVER static markdown quizzes.** See example-quiz.md for complete working pattern.
 
 **Core Principles:**
 - Test understanding and application, not memorization
@@ -87,22 +93,24 @@ Activate this skill when:
 
 **Built-in Features (No Manual Implementation Needed):**
 - ✅ Progress bar showing completion percentage
-- ✅ Question navigation (Back/Next buttons + number dots)
+- ✅ Question navigation (Back/Next buttons + dot navigation for jumping)
 - ✅ Answer counter (X/Y answered)
-- ✅ Validation: Can't submit until all answered
-- ✅ Results page with score and review option
+- ✅ Validation: Can't submit until all questions answered
+- ✅ Results page with score, statistics, and review option
 - ✅ Color-coded feedback (green = correct, red = incorrect)
 - ✅ Instant explanations shown after submission
+- ✅ Question review with all answers and explanations visible
 - ✅ Retake button to try again
 - ✅ Light/Dark theme auto-switching
 - ✅ Fully responsive (mobile, tablet, desktop)
 
-**Why Fewer Questions (5-10)?**
-- Quiz component excels at interactive, focused assessments
-- 5-10 questions allows deeper explanations and engagement
-- Mobile-friendly (scrolling 20+ questions frustrates users)
-- Better learning outcomes: focused questions > quantity
-- Matches pedagogical best practices (Bloom's taxonomy levels)
+**Why 20-30 Questions (Comprehensive Assessment)?**
+- Comprehensive coverage of all chapter material (not just highlights)
+- Quiz component handles navigation well with dot interface + Back/Next
+- Progressive disclosure: one question per screen (not overwhelming)
+- Mobile-friendly: progressive scrolling through one question at a time
+- Thorough assessment ensures mastery before moving forward
+- Matches college-level standards: comprehensive, not quick-check
 
 ---
 
@@ -183,52 +191,69 @@ component_globally_registered: true  # No imports needed
 
 ---
 
-### File Structure
+### File Structure (Quiz Component Format)
 
 ```markdown
 ---
-sidebar_position: X  # e.g., 06 (lessons + 1)
+sidebar_position: X  # e.g., 05 (lesson count + 1)
 title: "Chapter X: [Topic] Quiz"
 ---
 
 # Chapter X: [Topic] Quiz
 
-Brief introduction about what students should test (1-2 sentences).
+Brief introduction (1-2 sentences describing what students will assess).
 
 <Quiz
   title="Chapter X: [Topic] Assessment"
   questions={[
     {
-      question: "Question 1 text here?",
+      question: "Question 1 text here? (Conceptual, not recall)",
       options: [
-        "Option A",
-        "Option B",
-        "Option C (correct)",
-        "Option D"
+        "Option A (8-12 words, equal length)",
+        "Option B (8-12 words, equal length)",
+        "Option C (8-12 words, equal length) ← CORRECT",
+        "Option D (8-12 words, equal length)"
       ],
-      correctOption: 2,  // Index 0-3
-      explanation: "Comprehensive explanation (60-150 words) explaining why correct,
-        addressing why distractors are wrong, and providing additional context."
+      correctOption: 2,  // Index 0-3 (NOT 1-4!)
+      explanation: "Why correct (2-3 sentences). Why each distractor is wrong (1-2 sentences each).
+        Additional context or real-world connection (1-2 sentences). Total: 80-150 words."
     },
     {
       question: "Question 2 text?",
-      options: ["Option A", "Option B", "Option C", "Option D"],
-      correctOption: 0,
-      explanation: "..."
-    }
-    // ... 6-8 more questions
+      options: [
+        "Option A (equal length: 10 words)",
+        "Option B (equal length: 11 words)",
+        "Option C (equal length: 10 words)",
+        "Option D (equal length: 9 words) ← CORRECT"
+      ],
+      correctOption: 3,
+      explanation: "Comprehensive explanation here..."
+    },
+    // ... 18-28 more questions (total: 20-30 questions)
   ]}
-  passingScore={70}
+  passingScore={72}
 />
 ```
 
-**Key Requirements:**
+**Key Requirements (CRITICAL):**
 - ✅ Exactly 4 options per question (no more, no less)
-- ✅ `correctOption` uses 0-3 index (NOT 1-4)
-- ✅ Explanations address why each distractor is wrong
-- ✅ No imports needed for `<Quiz />` (globally registered)
+- ✅ **ALL options MUST be equal length (±2 words maximum) - MANUALLY COUNT WORDS**
+- ✅ `correctOption` uses 0-3 index (NOT 1-4!)
+- ✅ Explanations address why correct AND why each distractor is wrong
+- ✅ No imports needed for `<Quiz />` (globally registered component)
+- ✅ 20-30 questions total (comprehensive assessment)
+- ✅ `passingScore={72}` (approximately 72% = 14/20 or 21/30)
 
-📖 **Reference:** [file-naming.md](./references/file-naming.md) for naming conventions
+**Word Count Verification Example:**
+```
+Option A: "Lists are mutable objects in Python" = 6 words ❌ Too short
+Option A: "Lists are mutable objects in Python that can be changed" = 10 words ✅ Good
+Option B: "Tuples are immutable sequences that cannot be modified" = 8 words ✅ Good (8-10 range)
+Option C: "Dictionaries store key-value pairs for efficient lookups" = 7 words ❌ Too short (5-7 words off)
+Option C: "Dictionaries store key-value pairs and enable efficient lookups" = 9 words ✅ Good (8-10 range)
+```
+
+📖 **Reference:** [file-naming.md](./references/file-naming.md) for naming conventions | [example-quiz.md](./references/example-quiz.md) for complete working example
 
 ---
 
@@ -374,39 +399,54 @@ Where:
 The quiz is ready for human review when:
 
 **Content Complete:**
-- [ ] 5-10 questions generated (focused, not comprehensive)
-- [ ] All questions conceptual (not recall)
-- [ ] 75%+ at Apply level or higher
-- [ ] Each question tests a distinct concept
+- [ ] 20-30 questions generated (comprehensive chapter coverage)
+- [ ] ALL major topics covered (proportional across all lessons)
+- [ ] 75%+ at Apply level or higher (conceptual, not recall)
+- [ ] Each question tests distinct concept from chapter material
+- [ ] No "What is...?" recall questions
+- [ ] Realistic scenarios (debugging, analysis, prediction)
+
+**Option Length Verified (CRITICAL - Prevents Length-Based Guessing):**
+- [ ] **MANUALLY COUNTED WORDS for ALL options in ALL questions**
+- [ ] ALL options within ±2 words of each other per question
+- [ ] If option is 10 words, all others are 8-12 words (max variance ±2)
+- [ ] No option visually stands out as significantly longer/shorter
+- [ ] Longest option ≠ always correct (spot-checked distribution)
 
 **Answer Randomization Verified:**
 - [ ] correctOption uses 0-3 indices only (NOT 1-4)
-- [ ] Correct answers evenly distributed (0-3: ~25% each)
+- [ ] Correct answers evenly distributed (~25% each index for 20-30 Q)
 - [ ] No 3+ consecutive same correctOption values
-- [ ] No obvious patterns detected
+- [ ] No obvious patterns (0,1,2,3,0,1,2,3... is bad)
 - [ ] All 4 indices (0,1,2,3) represented in distribution
 
-**Quality Verified:**
-- [ ] Distractors test specific misconceptions
-- [ ] Explanations comprehensive (60-150 words each)
-- [ ] Each explanation addresses why EACH distractor is wrong
-- [ ] Technical accuracy confirmed
-- [ ] No recall questions ("What is...?" avoided)
+**Explanation Quality Verified:**
+- [ ] All explanations 80-150 words (comprehensive, not rushed)
+- [ ] Each explanation explains WHY correct (2-3 sentences)
+- [ ] Each explanation addresses WHY EACH distractor is wrong (1 sentence each)
+- [ ] Additional context/examples provided (real-world connection)
+- [ ] Distractors test specific misconceptions (not joke answers)
 
-**Component Format Valid:**
-- [ ] Valid JSX syntax in markdown file
-- [ ] Exactly 4 options per question
-- [ ] Quiz component used correctly (no imports needed - globally registered)
-- [ ] passingScore property set (60-70)
-- [ ] File named: `##_chapter_##_quiz.md`
+**Quiz Component Format Valid:**
+- [ ] Valid JSX syntax in markdown file (proper braces, quotes)
+- [ ] Exactly 4 options per question (no more, no less)
+- [ ] correctOption values use 0-3 indices (spot-checked accuracy)
+- [ ] Questions array contains all 20-30 questions
+- [ ] passingScore property set to 72
+- [ ] Quiz component used with correct props: title, questions, passingScore
+- [ ] No imports needed - `<Quiz />` is globally registered
+- [ ] File named: `##_chapter_##_quiz.md` (correct numbering)
 - [ ] File uses `.md` extension
-- [ ] Saved to correct directory
+- [ ] YAML frontmatter correct: sidebar_position, title
+- [ ] Saved to correct chapter directory
 
-**Human Review:**
-- [ ] Spot-check all 5-10 questions for conceptual rigor
-- [ ] Verify distractor plausibility and misconception testing
-- [ ] Confirm technical accuracy
-- [ ] Test Quiz component rendering in Docusaurus
+**Human Review Checklist:**
+- [ ] Spot-check 5-10 questions for: option length equality, misconception testing, conceptual rigor
+- [ ] Verify word counts are truly equal (±2 max) - can't be visual estimate
+- [ ] Confirm technical accuracy of all explanations against chapter content
+- [ ] Test Quiz component rendering in Docusaurus (actual interactive test)
+- [ ] Verify navigation works (Back/Next, dots, submit, results)
+- [ ] Check color-coded feedback displays correctly (green/red)
 - [ ] Approve for deployment
 
 📖 **Reference:** [quality-checklist.md](./references/quality-checklist.md) for complete validation
