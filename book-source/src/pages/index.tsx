@@ -14,6 +14,13 @@ function HomepageHeader() {
       <div className={styles.heroGradient} />
       <div className="container">
         <div className={styles.heroContent}>
+          <div className={styles.heroImageContainer}>
+            <img 
+              src="/img/book-cover.png" 
+              alt="CoLearning Programming Book Cover" 
+              className={styles.heroBookCover}
+            />
+          </div>
           <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
           <Heading as="h1" className={styles.heroTitle}>
             CoLearning Programming
@@ -21,9 +28,9 @@ function HomepageHeader() {
             <span className={styles.heroTitleAccent}>The AI Driven Way</span>
           </Heading>
           <p className={styles.heroSubtitle}>
-            Build production-ready agentic AI systems while learning Python & TypeScript.
+            Master Python & TypeScript by building production-ready AI systems.
             <br />
-            AI as your co-learner, collaborator, and creative partner.
+            Transform how you learn with AI as your co-learner and collaborator.
           </p>
           <div className={styles.heroBadges}>
             <span className={styles.badge}>
@@ -52,8 +59,18 @@ function HomepageHeader() {
               className={clsx('button button--outline button--lg', styles.secondaryButton)}
               to="/docs/Introducing-AI-Driven-Development/intro">
               <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>View Curriculum</span>
+                <span className={styles.buttonText}>View Book</span>
                 <span className={styles.buttonIcon}>📖</span>
+              </span>
+            </Link>
+            <Link
+              className={clsx('button button--outline button--lg', styles.coursesButton)}
+              href="https://panaversity.org/flagship-program/courses"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span className={styles.buttonContent}>
+                <span className={styles.buttonText}>Take Panaversity Courses</span>
+                <span className={styles.buttonIcon}>🎓</span>
               </span>
             </Link>
           </div>
@@ -90,7 +107,7 @@ function FeaturesSection() {
           />
           <Feature
             icon="🧠"
-            title="Spec-Kit Methodology"
+            title="Spec-Kit Plus Methodology"
             description="Specification-driven development designed for AI collaboration. Plan, iterate, and scale systematically."
           />
           <Feature
@@ -190,19 +207,31 @@ function FinalCTA() {
       <div className="container">
         <div className={styles.ctaContent}>
           <Heading as="h2" className={styles.ctaTitle}>
-            Ready to Redefine How You Learn?
+            Ready to Start Your AI-Driven Learning Journey?
           </Heading>
           <p className={styles.ctaSubtitle}>
-            Join the movement toward AI-native computer science education
+            Access the complete free book and explore our comprehensive courses
           </p>
-          <Link
-            className={clsx('button button--primary button--lg', styles.ctaButtonLarge)}
-            to="/docs/Introducing-AI-Driven-Development/intro">
-            <span className={styles.buttonContent}>
-              <span className={styles.buttonText}>Begin Learning Free</span>
-              <span className={styles.buttonIcon}>→</span>
-            </span>
-          </Link>
+          <div className={styles.ctaButtons}>
+            <Link
+              className={clsx('button button--primary button--lg', styles.ctaButtonLarge)}
+              to="/docs/Introducing-AI-Driven-Development/intro">
+              <span className={styles.buttonContent}>
+                <span className={styles.buttonText}>Read the Book Free</span>
+                <span className={styles.buttonIcon}>→</span>
+              </span>
+            </Link>
+            <Link
+              className={clsx('button button--outline button--lg', styles.ctaButtonSecondary)}
+              href="https://panaversity.org/flagship-program/courses"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span className={styles.buttonContent}>
+                <span className={styles.buttonText}>Explore Courses</span>
+                <span className={styles.buttonIcon}>🎓</span>
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -213,8 +242,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="The Panaversity AI-Driven Way Book Series"
-      description="CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way">
+      title="CoLearning Programming: The AI-Driven Way | Free Book"
+      description="Master Python & TypeScript by building production-ready AI systems. Free comprehensive guide with 46 chapters. AI as your co-learner and collaborator.">
       <HomepageHeader />
       <FeaturesSection />
       <ParadigmShift />
