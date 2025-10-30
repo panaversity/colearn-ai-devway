@@ -162,11 +162,11 @@ const config: Config = {
           items: [
             {
               label: 'Panaversity',
-              href: 'https://panaversity.com',
+              href: 'https://panaversity.org/',
             },
             {
               label: 'Our Mission',
-              href: 'https://panaversity.com/about',
+              href: 'https://panaversity.org/#about',
             },
           ],
         },

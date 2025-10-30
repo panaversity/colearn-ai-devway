@@ -236,6 +236,31 @@ pre code {
   margin-bottom: 3rem !important;
 }
 
+/* Horizontal 4-column layout for footer columns */
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.footer__col {
+  flex: 1 1 0;
+  min-width: 160px;
+  max-width: 240px;
+}
+
+@media screen and (max-width: 996px) {
+  .footer__links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__col {
+    max-width: unset;
+    min-width: 0;
+  }
+}
+
 /* Footer Column Title */
 .footer__title {
   color: #FFFFFF !important;
@@ -294,40 +319,13 @@ pre code {
   display: none !important;
 }
 
-/* Social Media Icons - Using Emoji as fallback */
-.footer__link-item[href*="youtube.com"]::before {
-  content: '▶️ ';
-  font-size: 1.1rem !important;
-  margin-right: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__link-item[href*="linkedin.com"]::before {
-  content: '🔗 ';
-  font-size: 1.1rem !important;
-  margin-right: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__link-item[href*="instagram.com"]::before {
-  content: '📷 ';
-  font-size: 1.1rem !important;
-  margin-right: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__link-item[href*="facebook.com"]::before {
-  content: '👥 ';
-  font-size: 1.1rem !important;
-  margin-right: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Remove old emoji before-icon rules for social links */
+.footer__link-item[href*="youtube.com"]::before,
+.footer__link-item[href*="linkedin.com"]::before,
+.footer__link-item[href*="instagram.com"]::before,
+.footer__link-item[href*="facebook.com"]::before,
 .footer__link-item[href*="github.com"]::before {
-  content: '💻 ';
-  font-size: 1.1rem !important;
-  margin-right: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  content: none !important;
 }
 
 .footer__link-item:hover {
@@ -436,6 +434,30 @@ pre code {
 
 /* Footer Social Icons - removed arrows, using Font Awesome icons instead */
 
+/* Font Awesome Social Icon Overrides */
+.footer-social-icon {
+  margin-right: 0.5em;
+  font-size: 1.1em;
+  vertical-align: middle;
+  transition: color 0.3s;
+}
+.footer__link-social .footer-social-icon.youtube { color: #FF0000; }
+.footer__link-social .footer-social-icon.linkedin { color: #0077B5; }
+.footer__link-social .footer-social-icon.instagram { color: #E1306C; }
+.footer__link-social .footer-social-icon.facebook { color: #1877F3; }
+.footer__link-social .footer-social-icon.github { color: #181717; }
+/* Vibrant color even on dark mode */
+[data-theme='dark'] .footer__link-social .footer-social-icon.youtube { color: #FF3C3C; }
+[data-theme='dark'] .footer__link-social .footer-social-icon.linkedin { color: #2997F7; }
+[data-theme='dark'] .footer__link-social .footer-social-icon.instagram { color: #FF68A3; }
+[data-theme='dark'] .footer__link-social .footer-social-icon.facebook { color: #3B93F7; }
+[data-theme='dark'] .footer__link-social .footer-social-icon.github { color: #F3F3F3; }
+/* Add some hover flair */
+.footer__link-social:hover .footer-social-icon {
+  filter: brightness(1.1) drop-shadow(0 0 6px rgba(0,0,0,0.12));
+  transform: scale(1.15);
+}
+
 /* Footer Responsive Design */
 @media screen and (max-width: 996px) {
   .footer {
@@ -465,4 +487,32 @@ pre code {
     width: 30px;
     height: 2px;
   }
+}
+
+/* ----------- Social row for Community column --------------- */
+.footer__items--social-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__items--social-row .footer__item {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__items--social-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+/* Remove bullets from footer lists for a clean look */
+.footer__items {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }
