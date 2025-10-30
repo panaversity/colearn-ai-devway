@@ -44,7 +44,7 @@ const config: Config = {
     {
       tagName: 'script',
       attributes: {
-        defer: true,
+        defer: 'true',
         'data-domain': 'aidd.panaversity.org',
         src: 'https://plausible.io/js/script.js',
       },
