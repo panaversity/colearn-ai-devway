@@ -1,5 +1,8 @@
 # 🧠 The Panaversity AI-Driven Way Book Series
 
+> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
+📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
+
 ---
 
 <p align="center">
@@ -22,10 +25,6 @@
 <p align="center">
   <img src="book_cover.png" alt="CoLearning Programming & Agentic AI - The AI-Driven Way" width="600" />
 </p>
-
-> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
-
-📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
 
 ## 🎯 Vision
 

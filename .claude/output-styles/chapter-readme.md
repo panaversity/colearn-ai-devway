@@ -1,25 +1,29 @@
 ---
-description: Template for chapter-level README.md files
+description: Standardized template for chapter-level README.md files across all parts and chapter types
 ---
 
-# Chapter README.md Template
+# Chapter README.md Template: Standardized Structure
 
-Use this template when creating chapter-level README.md files. Adapt structure based on chapter type (Conceptual, Technical, or Hybrid).
+Use this template when creating or updating **chapter-level README.md files**. This ensures consistent structure and professional quality across all chapters in the book, whether they are Conceptual (Part 1), Practical (Parts 2-3), or Technical (Parts 4+).
 
 ---
 
 ## File Location
+
 ```
 book-source/docs/
 └── NN-Part-Name/
     └── NN-chapter-name/
         ├── README.md        ← This file (MUST be uppercase)
-        ├── 01-lesson-1.md
-        ├── 02-lesson-2.md
+        ├── 01-lesson-name.md
+        ├── 02-lesson-name.md
         └── ...
 ```
 
 ## Template Structure
+=======
+---
+
 
 ```yaml
 ---
@@ -143,6 +147,7 @@ This chapter transforms you from a passive consumer of AI outputs to an active o
 
 ---
 ```
+---
 
 ## Validation Checklist
 
