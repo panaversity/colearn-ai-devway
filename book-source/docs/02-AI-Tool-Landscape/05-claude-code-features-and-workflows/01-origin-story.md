@@ -48,7 +48,7 @@ Engineers started using it for *more* than just Q&A. They'd ask Claude to analyz
 
 **The key insight emerged gradually**: When AI has direct access to your codebase—when it can read, write, and execute within your actual project context—the quality of assistance transforms. Instead of generic advice, Claude could give project-specific solutions. Instead of guessing at your setup, it could *see* your dependencies, your folder structure, your existing code patterns.
 
-By October 2024, the internal tool had matured enough to share publicly. Anthropic released "Claude Code" as a free CLI tool, expecting modest adoption from terminal-savvy developers.
+By early 2025, the internal tool had matured enough to share publicly. Anthropic released "Claude Code" as a free CLI tool, expecting modest adoption from terminal-savvy developers.
 
 What they got was a phenomenon.
 
