@@ -1,6 +1,6 @@
-# Quality Checklist v2.0 - Complete Validation
+# Quality Checklist v3.0 - Quiz Component Validation
 
-This document provides a comprehensive checklist for validating quiz quality before submission.
+This document provides a comprehensive checklist for validating quiz quality when using the globally-registered Quiz component.
 
 ---
 
@@ -15,11 +15,11 @@ This document provides a comprehensive checklist for validating quiz quality bef
 
 ## Content Quality
 
-### Question Count and Coverage
-- [ ] 20-30 questions total (flexible based on chapter complexity)
-- [ ] ALL major topics and lessons represented (no omissions)
-- [ ] Balanced distribution across lessons (proportional to importance/depth)
-- [ ] No rigid adherence to exactly 25 questions (comprehensive coverage prioritized)
+### Question Count and Focus
+- [ ] 5-10 questions total (focused assessment, not comprehensive)
+- [ ] Key concepts selected for highest impact
+- [ ] Balanced distribution across major topics
+- [ ] No attempt at comprehensive coverage (5-10 is by design)
 
 ### Question Type and Cognitive Level
 - [ ] All questions test conceptual understanding (not recall)
@@ -37,7 +37,71 @@ This document provides a comprehensive checklist for validating quiz quality bef
 
 ---
 
-## Option Design Quality (CRITICAL ANTI-CHEATING)
+## Quiz Component Format Quality (CRITICAL)
+
+### Component Syntax
+- [ ] Valid JSX syntax (proper JavaScript object format)
+- [ ] No syntax errors in questions array
+- [ ] Proper curly braces and comma placement
+- [ ] Question objects properly formatted
+- [ ] No missing colons or semicolons in object properties
+
+### Question Structure
+- [ ] `question` property: Clear, specific question text
+- [ ] `options` property: Exactly 4 options (no more, no less)
+- [ ] `correctOption` property: Uses 0-3 index (NOT 1-4!)
+- [ ] `explanation` property: Present for every question
+
+### Critical: correctOption Index Values
+- [ ] ALL correctOption values are 0, 1, 2, or 3 (never 4 or higher)
+- [ ] No correctOption values use letters (not "a", "b", "c", "d")
+- [ ] Index 0 = first option, 1 = second, 2 = third, 3 = fourth
+- [ ] Every question has exactly ONE correctOption value
+
+### Component Props
+- [ ] `title` prop: Descriptive quiz name
+- [ ] `questions` prop: Array with 5-10 question objects
+- [ ] `passingScore` prop: Set to 60-70 (60% for beginners, 70% for intermediate)
+
+---
+
+## Answer Randomization Quality (CRITICAL)
+
+### Distribution Targets
+- [ ] Correct answers distributed evenly across indices 0-3
+- [ ] For 8 questions: ~2 per index (25% each)
+- [ ] For 10 questions: 2-3 per index (20-30% each)
+- [ ] Total adds up to expected question count
+
+### Index Distribution Verification Table
+
+| Index | Count | Percentage | Target (10Q) | Status |
+|-------|-------|------------|--------------|--------|
+| 0     | __    | __%        | 20-30%       | ☐ Pass |
+| 1     | __    | __%        | 20-30%       | ☐ Pass |
+| 2     | __    | __%        | 20-30%       | ☐ Pass |
+| 3     | __    | __%        | 20-30%       | ☐ Pass |
+| Total | __    | 100%       | 100%         | ☐ Pass |
+
+**Fill in counts manually and verify targets.**
+
+### Pattern Checks
+- [ ] No patterns (never 0,1,2,3,0,1,2,3...)
+- [ ] Maximum 2 consecutive same indices (no 3+ consecutive)
+- [ ] Distribution verified manually (count each index)
+- [ ] Randomness is TRUE (not forced or artificial)
+
+### Consecutive Index Check
+
+List correctOption sequence: __, __, __, __, __, __, __, __, __, __
+
+- [ ] No 3+ consecutive same indices in first 5
+- [ ] No 3+ consecutive same indices in last 5
+- [ ] No 3+ consecutive same indices anywhere in quiz
+
+---
+
+## Option Design Quality
 
 ### Distractor Quality
 - [ ] Every distractor tests a specific misconception
@@ -46,159 +110,118 @@ This document provides a comprehensive checklist for validating quiz quality bef
 - [ ] No "joke" or filler options
 - [ ] Diagnostic value (reveals thinking errors)
 
-### Option Length Strategy (CRITICAL)
-- [ ] ONE consistent strategy applied throughout quiz (equal OR random)
-- [ ] For equal length: all options within ±2 words of each other
-- [ ] For random variation: correct answer distributed across all length categories
-- [ ] **Longest option ≠ always correct** (verified manually)
-- [ ] **Shortest option ≠ always correct** (verified manually)
-- [ ] **Word counts per question option verified** (counted manually, not assumed)
-- [ ] No option >50 words (too long, creates obvious difference)
-- [ ] No option <3 words (too short, seems incomplete)
-
-### Option Length Validation Checklist
-For EVERY question, verify:
-- [ ] Q1: Word counts checked (a: __, b: __, c: __, d: __)
-- [ ] Q2: Word counts checked (a: __, b: __, c: __, d: __)
-- [ ] Q3: Word counts checked (a: __, b: __, c: __, d: __)
-- [ ] ... (continue for all 20-30 questions)
-
-**Quick validation method:**
-1. List all questions (1-25 or 1-30)
-2. For each question, count words for options a, b, c, d
-3. Mark questions where longest option = correct answer
-4. If more than 3 questions have longest = correct, FAIL (fix required)
+### Option Clarity
+- [ ] All 4 options are distinct and different
+- [ ] Options avoid near-duplicates or subtle variations
+- [ ] Options are clear, concise, and specific
+- [ ] No grammatical or spelling errors in options
 
 ---
 
-## Answer Distribution Quality
-
-### Distribution Targets
-- [ ] Correct answers distributed evenly across a/b/c/d
-- [ ] For 20 Qs: ~5 per letter (20-30% each)
-- [ ] For 25 Qs: 6-7 per letter (24-28% each)
-- [ ] For 30 Qs: 7-8 per letter (23-27% each)
-- [ ] Total adds up to expected question count
-
-### Pattern Checks
-- [ ] No patterns (never a, b, c, d, a, b, c, d...)
-- [ ] Maximum 2 consecutive same answers (no 3+ consecutive)
-- [ ] Distribution verified manually (count each letter)
-- [ ] Randomness is TRUE (not forced or artificial)
-
-### Answer Distribution Verification Table
-
-| Letter | Count | Percentage | Target (25Q) | Status |
-|--------|-------|------------|--------------|--------|
-| a      | __    | __%        | 24-28%       | ☐ Pass |
-| b      | __    | __%        | 24-28%       | ☐ Pass |
-| c      | __    | __%        | 24-28%       | ☐ Pass |
-| d      | __    | __%        | 20-24%       | ☐ Pass |
-| Total  | __    | 100%       | 100%         | ☐ Pass |
-
-**Fill in counts manually and verify targets.**
-
-### Consecutive Answer Check
-
-List first 10 correct answers: __, __, __, __, __, __, __, __, __, __
-
-- [ ] No 3+ consecutive same answers in first 10
-- [ ] No 3+ consecutive same answers in last 10
-- [ ] No 3+ consecutive same answers anywhere in quiz
-
----
-
-## Explanation Quality (Answer Key Only)
+## Explanation Quality (CRITICAL)
 
 ### Explanation Presence
-- [ ] All explanations present in answer key section (one per question)
-- [ ] Each explanation 60-150 words (comprehensive, not rushed)
-- [ ] No explanations visible in questions section (true assessment)
+- [ ] All explanations present (one per question)
+- [ ] Each explanation 60-150 words (comprehensive teaching)
+- [ ] Explanations are immediate feedback (after student answers)
 
-### Explanation Content
-- [ ] Confirms correct answer clearly (**a/b/c/d** bold)
-- [ ] Explains WHY correct (concept teaching, 2-3 sentences)
-- [ ] Addresses why distractors are wrong (specific misconceptions, 1-2 sentences each)
-- [ ] Provides additional context (examples, connections, application, 1-2 sentences)
+### Explanation Content Structure
+- [ ] **Explains WHY correct** (2-3 sentences explaining concept deeply)
+- [ ] **Addresses EACH distractor** (1 sentence per option explaining misconception)
+- [ ] **Provides additional context** (examples, connections, application, 1-2 sentences)
+- [ ] **Total addresses all 4 options** (correct + 3 distractors)
+
+### Explanation Quality Template
+
+Each explanation should follow this pattern:
+
+```
+[Why the correct option is right - 2-3 sentences]
+Why not the others? [Option A misconception]. [Option B misconception].
+[Option C misconception]. [Additional insight or connection]
+```
 
 ### Explanation Quality Spot-Check
 
-Check 5 random explanations in detail:
+Check ALL 5-10 explanations for quality:
 
-**Explanation 1 (Q__):**
+**Questions 1-3:**
 - [ ] 60+ words
 - [ ] Explains WHY correct
-- [ ] Addresses distractors
+- [ ] Addresses all 3 distractors
 - [ ] Additional context provided
 
-**Explanation 2 (Q__):**
+**Questions 4-6:**
 - [ ] 60+ words
 - [ ] Explains WHY correct
-- [ ] Addresses distractors
+- [ ] Addresses all 3 distractors
 - [ ] Additional context provided
 
-**Explanation 3 (Q__):**
+**Questions 7-10 (if applicable):**
 - [ ] 60+ words
 - [ ] Explains WHY correct
-- [ ] Addresses distractors
-- [ ] Additional context provided
-
-**Explanation 4 (Q__):**
-- [ ] 60+ words
-- [ ] Explains WHY correct
-- [ ] Addresses distractors
-- [ ] Additional context provided
-
-**Explanation 5 (Q__):**
-- [ ] 60+ words
-- [ ] Explains WHY correct
-- [ ] Addresses distractors
+- [ ] Addresses all 3 distractors
 - [ ] Additional context provided
 
 ---
 
-## Format and Structure Quality
+## File Format Quality
 
-### File Format
-- [ ] Valid MDX/Markdown syntax (plain markdown, no JSX)
-- [ ] Proper YAML frontmatter (title, description, sidebar_position)
-- [ ] No syntax errors (renders correctly in Docusaurus)
+### YAML Frontmatter
+- [ ] Valid YAML syntax
+- [ ] `sidebar_position` property included (number, e.g., 06)
+- [ ] `title` property included (string, e.g., "Chapter X: Topic - Quiz")
+- [ ] Optional: `description` property
 
-### Structure
-- [ ] Questions section SEPARATE from answer key (clear `---` divider)
-- [ ] NO explanations visible in questions section (true assessment)
-- [ ] Answer key section clearly labeled "## Answer Key"
-- [ ] Correct answer format: **Correct answer: [a/b/c/d]** (bold, clear)
-
-### File Naming and Location
-- [ ] File named correctly: `##_chapter_##_quiz.md`
+### File Location and Naming
+- [ ] File named: `##_chapter_##_quiz.md`
 - [ ] First `##` = sidebar_position (lesson count + 1)
 - [ ] Second `##` = chapter number (zero-padded)
-- [ ] Saved to correct directory (chapter folder, after all lessons)
+- [ ] Saved to correct chapter directory
 - [ ] Sidebar_position in frontmatter matches first `##` in filename
+
+### Markdown Structure
+- [ ] H1 title matches YAML title
+- [ ] Brief introduction (1-2 sentences) before `<Quiz />` component
+- [ ] Quiz component properly indented and formatted
+- [ ] No syntax errors
+
+### Component Rendering
+- [ ] Quiz component tag opens: `<Quiz`
+- [ ] Quiz component tag closes: `/>`
+- [ ] All props properly formatted
+- [ ] No missing quotes around string values
+- [ ] Proper spacing and indentation
 
 ---
 
 ## Pre-Submission Validation
 
 ### Final Content Review
-- [ ] Read through all 20-30 questions for clarity and accuracy
+- [ ] Read through all 5-10 questions for clarity and accuracy
 - [ ] Verify all questions are conceptual (not recall)
 - [ ] Check all scenarios are realistic and relevant
-- [ ] Ensure ALL chapter material is covered (no omissions)
+- [ ] Ensure high-impact topics are covered
 
-### Final Anti-Cheating Review
-- [ ] Spot-check 10 questions: count word lengths for options
-- [ ] Verify longest option ≠ correct answer pattern
-- [ ] Verify correct answer distribution: a(__), b(__), c(__), d(__)
-- [ ] Ensure no 3+ consecutive same answers
+### Final Component Syntax Review
+- [ ] Spot-check first 3 question objects: syntax valid
+- [ ] Spot-check last 2 question objects: syntax valid
+- [ ] Verify all correctOption values are 0-3
+- [ ] Verify all options arrays have exactly 4 items
+- [ ] Verify all explanations are present
+
+### Final Randomization Review
+- [ ] Count correct answer indices (0, 1, 2, 3): ____, ____, ____, ____
+- [ ] Verify distribution is roughly balanced
+- [ ] Ensure no 3+ consecutive same indices
+- [ ] Verify no obvious patterns
 
 ### Final Format Review
-- [ ] Questions section has NO explanations visible
-- [ ] Answer key section clearly separated by `---`
-- [ ] All explanations present and comprehensive (60-150 words)
+- [ ] YAML frontmatter complete and valid
 - [ ] File naming follows convention: `##_chapter_##_quiz.md`
-- [ ] YAML frontmatter correct and complete
+- [ ] `.md` extension (not `.mdx`)
+- [ ] Markdown renders without errors
+- [ ] Quiz component would work in Docusaurus
 
 ---
 
@@ -207,63 +230,74 @@ Check 5 random explanations in detail:
 After completing all checks above, the following require human review:
 
 ### Content Review
-- [ ] Spot-check 5-10 questions for technical accuracy
+- [ ] Spot-check 3-5 questions for technical accuracy
 - [ ] Verify distractor plausibility and misconception alignment
 - [ ] Confirm scenarios match chapter difficulty level
 - [ ] Review cognitive level distribution (75%+ Apply or higher)
 
-### Anti-Cheating Review
-- [ ] Verify option length consistency (spot-check 10 questions)
-- [ ] Check answer distribution manually (count a/b/c/d)
-- [ ] Verify no obvious patterns in correct answers
-- [ ] Confirm longest options don't reveal correct answers
-
-### Format Review
-- [ ] Test markdown rendering in Docusaurus (if possible)
-- [ ] Verify proper separation of questions/answers
-- [ ] Check that quiz appears at chapter end (sidebar_position)
-- [ ] Confirm file naming matches lesson convention
+### Component Review
+- [ ] Test Quiz component rendering in Docusaurus (if possible)
+- [ ] Verify explanations display correctly after answer selection
+- [ ] Check color-coded feedback (green/red) works as expected
+- [ ] Test on mobile to verify responsive design
 
 ### Final Approval
 - [ ] All validation checks passed
 - [ ] All human review items completed
-- [ ] Quiz ready for deployment
-- [ ] Approve for student use
+- [ ] Component displays and functions correctly
+- [ ] Quiz ready for student use
 
 ---
 
 ## Validation Failure: Common Issues and Fixes
 
-### Issue 1: Option Length Imbalance
+### Issue 1: Incorrect Index Values
 
 **Symptoms:**
-- [ ] Longest option is correct in 5+ questions
-- [ ] Word counts vary wildly (5 words vs. 30 words)
+- [ ] correctOption uses 1-4 instead of 0-3
+- [ ] Syntax error when rendering
 
 **Fixes:**
-1. Identify questions where longest = correct
-2. Adjust wording to equalize option lengths
-3. Re-verify word counts for all options
-4. Ensure consistent strategy (equal or random)
+1. Convert all indices: 1→0, 2→1, 3→2, 4→3
+2. Example: `correctOption: 4` becomes `correctOption: 3`
+3. Verify all 5-10 questions use 0-3 indices
+4. Test component rendering after fix
 
 ---
 
-### Issue 2: Uneven Answer Distribution
+### Issue 2: Wrong Options Count
 
 **Symptoms:**
-- [ ] One letter appears 10+ times (for 25 questions)
-- [ ] One letter appears <4 times
-- [ ] 3+ consecutive same answers
+- [ ] Some questions have 3 options
+- [ ] Some questions have 5 options
+- [ ] Quiz component breaks or displays incorrectly
 
 **Fixes:**
-1. List all correct answer positions
-2. Identify over-represented and under-represented letters
-3. Swap correct answer positions for 2-3 questions
-4. Re-verify distribution and consecutive checks
+1. Identify questions with wrong option count
+2. Add missing options (creating meaningful distractors)
+3. Remove extra options
+4. Ensure EVERY question has exactly 4 options
+5. Test component rendering
 
 ---
 
-### Issue 3: Weak Explanations
+### Issue 3: Uneven Index Distribution
+
+**Symptoms:**
+- [ ] One index appears 5+ times (for 8 questions)
+- [ ] One index never appears
+- [ ] 3+ consecutive same indices
+
+**Fixes:**
+1. List all correctOption values in order
+2. Identify over-represented and under-represented indices
+3. Swap correctOption values for 2-3 questions
+4. Shuffle question order if helpful
+5. Re-verify distribution
+
+---
+
+### Issue 4: Weak Explanations
 
 **Symptoms:**
 - [ ] Explanations <60 words
@@ -271,75 +305,84 @@ After completing all checks above, the following require human review:
 - [ ] Doesn't address distractors
 
 **Fixes:**
-1. Identify weak explanations (spot-check all)
+1. Identify all weak explanations
 2. Expand to 80-120 words per explanation
 3. Add WHY reasoning (2-3 sentences)
-4. Add distractor analysis (1-2 sentences each)
+4. Add distractor analysis (1 sentence each for all 3 wrong answers)
 5. Add additional context (1-2 sentences)
 
 ---
 
-### Issue 4: Incomplete Coverage
+### Issue 5: Distractor Problems
 
 **Symptoms:**
-- [ ] One or more lessons have zero questions
-- [ ] Major topics omitted
-- [ ] Heavy focus on early lessons, light on later lessons
+- [ ] Options are obviously wrong (not plausible)
+- [ ] Options don't test misconceptions
+- [ ] Options are duplicative
 
 **Fixes:**
-1. List all lessons and major topics
-2. Count questions per lesson
-3. Add questions for under-represented lessons
-4. Remove or consolidate questions from over-represented lessons
-5. Re-verify total stays within 20-30 range
+1. Identify weak distractors
+2. Research common student misconceptions for concept
+3. Replace with plausible wrong answers
+4. Ensure each tests different misconception
+5. Verify all options are distinct
 
 ---
 
 ## Checklist Summary
 
 **Critical checks (must pass):**
-1. ✅ Option lengths validated (equal or random, no longest = correct pattern)
-2. ✅ Answer distribution verified (a/b/c/d evenly distributed)
-3. ✅ Questions/answers separated (no inline explanations)
-4. ✅ File naming correct (`##_chapter_##_quiz.md`)
-5. ✅ ALL material covered (no omissions)
+1. ✅ correctOption uses 0-3 indices (NOT 1-4 or letters)
+2. ✅ Every question has exactly 4 options
+3. ✅ Index distribution verified (0-3 evenly distributed)
+4. ✅ No 3+ consecutive same indices
+5. ✅ All explanations present (60-150 words)
+6. ✅ File named correctly (`##_chapter_##_quiz.md`)
 
 **Secondary checks (important):**
 1. ✅ 75%+ questions at Apply level or higher
-2. ✅ Explanations 60-150 words each
-3. ✅ Distractors test specific misconceptions
-4. ✅ No 3+ consecutive same answers
-5. ✅ Technical accuracy verified
+2. ✅ Distractors test specific misconceptions
+3. ✅ Explanations address all 3 distractors
+4. ✅ Quiz component syntax valid
+5. ✅ YAML frontmatter complete
 
 **If all critical checks pass:** Quiz ready for human review
 **If any critical check fails:** Fix immediately before proceeding
 
 ---
 
-## Passing Score: 72% Rationale
+## Passing Score Rationale
 
-### Why 72% (18/25 questions)?
+### Default: 70%
 
 **College-Level Rigor:**
-- Standard "C" grade in many institutions: 70-79%
-- 72% = 18/25 questions = demonstrable competency
+- 70% = demonstrated competency
 - Below 70% indicates insufficient understanding for progression
+- 60% acceptable for beginners, 70-80% for intermediate/advanced
 
-**Not Too High:**
-- 80%+ (20/25) would be too strict for conceptual questions
+**Why These Targets:**
+- 70% (7/10 questions) = 3 wrong answers acceptable
 - Allows for reasonable uncertainty on edge cases
-- Permits advancement with strong but imperfect understanding
-
-**Not Too Low:**
-- 60% (15/25) is too lenient for critical concepts
-- Students must demonstrate clear majority understanding
-- Prevents progression with major knowledge gaps
-
-**Pedagogical Alignment:**
-- Encourages review and retaking (learning opportunity)
+- Permits advancement with strong understanding
 - Realistic for first attempt on conceptual questions
-- Motivates thoroughness without being punitive
+
+**When to Adjust:**
+- **Beginners:** 60% (6/10) to encourage first attempts
+- **Intermediate:** 70% (7/10) standard for most chapters
+- **Advanced:** 80% (8/10) for critical concepts
 
 ---
 
-**Keywords for grep:** quality, checklist, validation, verification, review, standards, criteria, requirements, checks, anti-cheating, distribution, option-length, explanations, format
+## Example Implementation
+
+See `example-quiz.md` for a fully-worked example with:
+- Proper YAML frontmatter
+- 8 conceptual questions at Apply/Analyze levels
+- Exactly 4 options per question
+- Randomized correctOption indices (0-3)
+- Comprehensive explanations addressing all distractors
+- Proper Quiz component syntax
+
+---
+
+**Keywords for grep:** quality, checklist, validation, verification, review, standards, criteria, requirements, checks, component, correctOption, index, distribution, explanations, format, Quiz

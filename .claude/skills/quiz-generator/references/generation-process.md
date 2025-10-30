@@ -1,6 +1,6 @@
-# Quiz Generation Process - 8 Stages
+# Quiz Generation Process - 7 Stages
 
-This document details the complete 8-stage process for generating college-level quizzes.
+This document details the complete 7-stage process for generating college-level quizzes using the globally-registered Quiz component.
 
 ---
 
@@ -10,15 +10,14 @@ This document details the complete 8-stage process for generating college-level 
 Chapter Content (docs/) + Lessons
     ↓
 1. Analyze Chapter Structure
-2. Map Concepts to Question Distribution
-3. Generate 20-30 Conceptual Questions
+2. Select 5-10 Key Topics
+3. Generate Conceptual Questions
 4. Design Meaningful Distractors
-5. Randomize Correct Answers
-6. Write Explanations
-7. Format as MDX
-8. Validate Structure
+5. Randomize Correct Answers (indices 0-3)
+6. Write Comprehensive Explanations
+7. Format Quiz Component
     ↓
-##_chapter_##_quiz.md (ready for Docusaurus)
+##_chapter_##_quiz.md (with <Quiz /> component)
 ```
 
 ---
@@ -30,7 +29,7 @@ Chapter Content (docs/) + Lessons
 **Process:**
 
 1. **Read chapter content:**
-   - Examine book-source/docs/[chapter-path]/ directory
+   - Examine docs/[chapter-path]/ directory
    - List all lesson files (lesson-1.md, lesson-2.md, etc.)
 
 2. **Identify lessons:**
@@ -51,35 +50,41 @@ Chapter Content (docs/) + Lessons
 
 ---
 
-## Stage 2: Map Concepts to Question Distribution
+## Stage 2: Select 5-10 Key Topics
 
-**Goal:** Achieve comprehensive coverage of all chapter material with fair weighting across lessons.
+**Goal:** Choose highest-impact concepts for focused assessment (not comprehensive coverage).
 
-**Distribution Strategy:**
+**Selection Strategy:**
 
-For a chapter with N lessons and target of Q questions (20-30):
-- **Base allocation:** Q ÷ N questions per lesson (rounded)
-- **Adjust for importance:** +1 for complex/critical lessons
-- **Adjust for length/depth:** +1 for longer lessons with more content
-- **Final balance:** Sum to Q questions (within 20-30 range)
-- **Comprehensive coverage:** Ensure ALL major topics and lessons are represented (no omissions)
+For a chapter with N lessons, choose 5-10 questions targeting:
+- **Foundational concepts:** Topics that unlock understanding of other topics
+- **Complex topics:** Concepts students struggle with most
+- **Application scenarios:** Real-world usage demonstrating mastery
+- **Misconception-prone areas:** Topics with documented common errors
+
+**Why 5-10 Questions (Not 20-30)?**
+
+The Quiz component is optimized for focused, interactive assessments:
+- Better user experience (no excessive scrolling on mobile)
+- Deeper explanations per question (60-150 words each)
+- Higher engagement (instant feedback, progress tracking)
+- Better learning outcomes (focused assessment > quantity)
+- Pedagogically sound (Bloom's taxonomy emphasizes depth over breadth)
 
 **Cognitive Level Distribution (College Standard):**
 
 Target:
-- **Remember:** 0-2 questions (0-8%) - Minimal recall
-- **Understand:** 5-7 questions (20-28%) - Concept grasp
-- **Apply:** 10-15 questions (40-50%) - Use in context
-- **Analyze:** 5-8 questions (20-28%) - Debug, compare, diagnose
-- **Evaluate:** 1-2 questions (4-8%) - Judge quality, tradeoffs
-- **Create:** 0-1 questions (0-4%) - Design solutions
+- **Remember:** 0-1 questions (0-10%) - Minimal recall
+- **Understand:** 1-2 questions (10-20%) - Concept grasp
+- **Apply:** 3-5 questions (40-60%) - Use in context
+- **Analyze:** 1-2 questions (10-20%) - Debug, compare, diagnose
+- **Evaluate:** 0-1 questions (0-10%) - Judge quality, tradeoffs
 
 **Requirement:** 75%+ questions at Apply level or higher (college standard)
-**Flexibility:** Use 20-30 questions as needed for comprehensive coverage (not rigid 25)
 
 ---
 
-## Stage 3: Generate 20-30 Conceptual Questions (Comprehensive Coverage)
+## Stage 3: Generate Conceptual Questions
 
 **Goal:** Write questions testing understanding, not memorization.
 
@@ -111,9 +116,9 @@ For each question:
 
 ---
 
-## Stage 4: Design Meaningful Distractors with Equal/Random Option Lengths
+## Stage 4: Design Meaningful Distractors
 
-**Goal:** Create plausible wrong answers that diagnose specific misconceptions WITHOUT allowing guessing based on option length.
+**Goal:** Create plausible wrong answers that diagnose specific misconceptions.
 
 **Distractor Design Philosophy:**
 
@@ -122,7 +127,6 @@ Distractors should:
 - **Be plausible** (student with partial knowledge might choose them)
 - **Diagnose thinking errors** (reveal what student misunderstands)
 - **Avoid obvious incorrectness** (no joke options)
-- **CRITICAL: Match option length strategy** (equal length or randomly varied)
 
 **Distractor Sources:**
 
@@ -131,218 +135,190 @@ Distractors should:
 3. **Opposite Logic:** Inverse of correct answer
 4. **Off-by-One Errors:** Close to correct but subtly wrong
 
-**Key Principle:** Every distractor must have PURPOSE — it tests a specific misconception. Option length must NOT be a clue. See [option-length-strategy.md](./option-length-strategy.md) for detailed implementation.
+**Key Principle:** Every distractor must have PURPOSE — it tests a specific misconception.
 
 ---
 
-## Stage 5: Randomize Correct Answers Across A/B/C/D
+## Stage 5: Randomize Correct Answers (Indices 0-3)
 
-**Goal:** Eliminate answer patterns and prevent test-taking strategies like "always choose longest" or "always C."
+**Goal:** Eliminate answer patterns and prevent test-taking shortcuts.
 
 **Requirements:**
 
-- **No patterns:** Correct answer must appear randomly (not A, B, C, D, A, B, C, D...)
-- **Equal distribution:** Each option (a/b/c/d) correct roughly equal times
-- **No runs:** Avoid 3+ consecutive same answer positions
-- **True randomness:** Shuffle answer positions after writing questions (then verify distribution)
+- **No patterns:** Correct answer must appear randomly (not 0,1,2,3,0,1,2,3...)
+- **Equal distribution:** Each index (0/1/2/3) correct roughly equal times
+- **No runs:** Avoid 3+ consecutive same answer indices
+- **True randomness:** Shuffle correctOption values after writing questions (then verify distribution)
 
 **Distribution Targets:**
 
-For 20 questions:
+For 8 questions:
 ```
-Option a correct: 5 times (25%)
-Option b correct: 5 times (25%)
-Option c correct: 5 times (25%)
-Option d correct: 5 times (25%)
+Index 0 correct: 2 times (25%)
+Index 1 correct: 2 times (25%)
+Index 2 correct: 2 times (25%)
+Index 3 correct: 2 times (25%)
 Max consecutive same: 2
 ```
 
-For 25 questions:
+For 10 questions:
 ```
-Option a correct: 6-7 times (24-28%)
-Option b correct: 6-7 times (24-28%)
-Option c correct: 6-7 times (24-28%)
-Option d correct: 5-6 times (20-24%)
-Max consecutive same: 2
-```
-
-For 30 questions:
-```
-Option a correct: 7-8 times (23-27%)
-Option b correct: 7-8 times (23-27%)
-Option c correct: 7-8 times (23-27%)
-Option d correct: 7-8 times (23-27%)
+Index 0 correct: 2-3 times (20-30%)
+Index 1 correct: 2-3 times (20-30%)
+Index 2 correct: 2-3 times (20-30%)
+Index 3 correct: 2-3 times (20-30%)
 Max consecutive same: 2
 ```
 
 **How to Randomize:**
 1. Write all questions with correct answer in any position (don't overthink it)
 2. After writing ALL questions, identify which position is correct for each
-3. Shuffle the answer positions (move correct answer randomly to a/b/c/d)
+3. Shuffle the answer indices (move correct answer randomly to 0/1/2/3)
 4. Verify distribution is roughly equal
-5. Ensure no 3+ consecutive same answers
-6. Document the randomization in answer key section
+5. Ensure no 3+ consecutive same correctOption values
+6. Document the randomization in the questions array
 
 See [answer-distribution.md](./answer-distribution.md) for verification methods.
 
 ---
 
-## Stage 6: Write Comprehensive Explanations for Answer Key
+## Stage 6: Write Comprehensive Explanations
 
-**Goal:** Provide learning value through detailed answer explanations (shown only AFTER quiz, in answer key section).
+**Goal:** Provide learning value through detailed answer explanations shown immediately after submission.
 
-**Explanation Requirements (Answer Key Only):**
+**Explanation Requirements:**
 
 Every explanation must:
-1. **Confirm correct answer clearly** with single letter (a/b/c/d)
-2. **Explain WHY it's correct** - 2-3 sentences explaining the concept deeply
-3. **Address why distractors are wrong** - 1-2 sentences each for major misconceptions
-4. **Provide additional context** - Reference lesson, provide examples, extend learning
+1. **Explain WHY it's correct** - 2-3 sentences explaining the concept deeply
+2. **Address why EACH distractor is wrong** - 1 sentence each for each option explaining the misconception
+3. **Provide additional context** - Reference lesson, provide examples, extend learning
 
 **Explanation Template:**
 
-```
-**Q[number].** Correct answer: [a/b/c/d]
-
-[Why this is correct - 2-3 sentences explaining the concept and reasoning]
-
-[Why option [X] is wrong - 1 sentence per key distractor - 3-4 sentences total]
-
-[Additional insight, connection to other lessons, or real-world application - 1-2 sentences]
+```javascript
+explanation: "This is correct because [concept explanation - 2-3 sentences].
+Why not the others? Option [X] [addresses misconception]. Option [Y] [addresses misconception].
+Option [Z] [addresses misconception]. [Additional insight or connection to other lessons]."
 ```
 
 **Explanation Length and Depth:**
 - **Minimum:** 60 words (comprehensive teaching)
 - **Target:** 80-120 words (thorough, educational)
 - **Maximum:** 150 words (avoid overwhelming, but depth matters more than brevity)
-- Explanations are shown AFTER students complete quiz, so length doesn't affect assessment time
+- Explanations are shown AFTER students answer, enabling deeper learning content
 
-**Critical Difference from v1.0:**
-- v1.0 had inline explanations with Quiz component (defeated assessment purpose)
-- v2.0 uses answer key section AFTER quiz (allows true independent assessment)
-- Explanations should be MORE detailed now (not rushed due to component constraints)
+**Critical Feature of Quiz Component:**
+- Shows explanation immediately after student submits an answer
+- Enables instant feedback and learning reinforcement
+- Allows more detailed explanations than traditional quizzes
+- Color-coded: green for correct, red for incorrect
 
 ---
 
-## Stage 7: Format as MDX with Questions + Answer Key
+## Stage 7: Format Quiz Component
 
-**Goal:** Create valid MDX file with two-part structure: questions section (no answers) + answer key section.
+**Goal:** Create valid markdown file with Quiz component JSX.
 
 **File Structure:**
 
-```mdx
+```markdown
 ---
+sidebar_position: X  # e.g., 06 (lessons + 1)
 title: "Chapter X: [Topic] Quiz"
-description: "College-level assessment covering all material from Chapter X"
 ---
 
 # Chapter X: [Topic] Quiz
 
-Test your understanding of the concepts covered in Chapter X. Complete this quiz independently before reviewing the answer key below.
+Brief introduction about what students should test (1-2 sentences).
 
-**Number of Questions:** 20-30
-**Time Estimate:** 30-45 minutes
-**Passing Score:** ~72% (understanding demonstrated)
-
----
-
-## Questions
-
-1. Question text here?
-   a) Option A text here
-   b) Option B text here
-   c) Option C text here
-   d) Option D text here
-
-2. Another question here?
-   a) Option A text here
-   b) Option B text here
-   c) Option C text here
-   d) Option D text here
-
-[... continue 18-28 more questions ...]
-
----
-
-## Answer Key
-
-**1.** Correct answer: **a**
-
-[Comprehensive explanation: why correct, why others wrong, additional context]
-
-**2.** Correct answer: **c**
-
-[Comprehensive explanation for question 2]
-
-[... continue for all questions ...]
+<Quiz
+  title="Chapter X: [Topic] Assessment"
+  questions={[
+    {
+      question: "Question 1 text here?",
+      options: [
+        "Option A",
+        "Option B",
+        "Option C (correct)",
+        "Option D"
+      ],
+      correctOption: 2,  // Index 0-3
+      explanation: "Comprehensive explanation (60-150 words) explaining why correct,
+        addressing why each distractor is wrong, and providing additional context."
+    },
+    {
+      question: "Question 2 text?",
+      options: ["Option A", "Option B", "Option C", "Option D"],
+      correctOption: 0,
+      explanation: "Explanation for question 2..."
+    }
+    // ... 6-8 more questions
+  ]}
+  passingScore={70}
+/>
 ```
 
 **Formatting Rules:**
 
-1. **YAML Frontmatter:** title and description
+1. **YAML Frontmatter:** sidebar_position and title (description optional)
 2. **Header:** Clear chapter and topic identification
-3. **Instructions:** Question count, time estimate, passing score guidance
-4. **Questions Section:**
-   - Numbered list (1, 2, 3, ...)
-   - Options labeled a/b/c/d (lowercase, not A/B/C/D)
-   - No explanations or correct answers visible
-   - Equal or randomly varied option lengths (apply consistently)
-5. **Answer Key Section:**
-   - Clearly separated after horizontal rule `---`
-   - Numbered to match questions
-   - Correct answer letter in bold
-   - Comprehensive explanation (60-150 words)
-6. **String Formatting:** Plain markdown (no JSX components needed)
-7. **Answer Distribution:** Verified as equal/random across a/b/c/d
+3. **Introduction:** 1-2 sentences about what to expect
+4. **Quiz Component:**
+   - title prop: Quiz name/description
+   - questions array: Array of 5-10 question objects
+   - Each question has: question, options (exactly 4), correctOption (0-3), explanation
+   - passingScore prop: 60-70 (60% for beginners, 70% for intermediate)
+5. **No imports needed:** Quiz component is globally registered
+6. **Valid JSX syntax:** Proper JavaScript object syntax within the component
+
+**Key Requirements:**
+
+✅ Exactly 4 options per question
+✅ correctOption uses 0-3 index (NOT 1-4!)
+✅ Explanations address why each distractor is wrong
+✅ No imports needed for `<Quiz />`
+✅ File named: `##_chapter_##_quiz.md`
 
 See [file-naming.md](./file-naming.md) for naming conventions.
 
 ---
 
-## Stage 8: Validate Structure
-
-**Goal:** Ensure quiz meets all requirements before saving.
-
-**Validation Checklist:**
+## Validation Checklist
 
 **Content Validation:**
-- [ ] 20-30 questions total (comprehensive coverage, not rigid 25)
-- [ ] ALL major topics and lessons covered (no omissions)
+- [ ] 5-10 questions total (focused assessment)
 - [ ] All questions are conceptual (75%+ Apply or higher)
-- [ ] Balanced distribution across lessons
 - [ ] No recall-only questions ("What is X?")
 - [ ] All scenarios are realistic and relevant
+- [ ] Each question tests a distinct concept
 
-**Option Design Validation (CRITICAL):**
-- [ ] Each question has exactly 4 options (a/b/c/d)
-- [ ] Option lengths are equal OR randomly varied (apply ONE strategy consistently)
-- [ ] ✅ Longest option is NOT always correct
-- [ ] ✅ Shortest option is NOT always correct
-- [ ] ✅ No option is >50 words while others are 5 words (creates obvious patterns)
-- [ ] Word count per option roughly equal (±3 words) OR deliberately varied (5, 8, 12, 15 word distribution)
+**Component Format Validation (CRITICAL):**
+- [ ] Valid JSX syntax in markdown file
+- [ ] Exactly 4 options per question
+- [ ] correctOption uses 0-3 indices only (NOT 1-4!)
+- [ ] All question objects properly formatted
+- [ ] explanations address all distractors
+- [ ] passingScore property set (60-70)
+- [ ] No syntax errors in options array
 
 **Answer Distribution Validation:**
-- [ ] Correct answers distributed evenly across a/b/c/d
-- [ ] For 20 Qs: each letter correct ~5 times (25%)
-- [ ] For 25 Qs: each letter correct 6-7 times (24-28%)
-- [ ] For 30 Qs: each letter correct 7-8 times (23-27%)
-- [ ] No patterns (e.g., a, b, c, d, a, b, c, d...)
-- [ ] No 3+ consecutive same answer positions
+- [ ] Correct answers distributed evenly across 0-3 indices
+- [ ] For 8 Qs: each index correct ~2 times (25%)
+- [ ] For 10 Qs: each index correct 2-3 times (20-30%)
+- [ ] No patterns (e.g., 0,1,2,3,0,1,2,3...)
+- [ ] No 3+ consecutive same correctOption values
 - [ ] Verified manually (not assumed)
 
 **Format Validation:**
-- [ ] Valid MDX syntax (plain markdown, no JSX)
+- [ ] Valid markdown syntax
 - [ ] Proper YAML frontmatter
-- [ ] Questions section BEFORE answer key (clear separation)
-- [ ] Answer key section AFTER `---` divider
-- [ ] Correct answer format: **Correct answer: [a/b/c/d]** (bold, clear)
-- [ ] All explanations present (60-150 words each)
-- [ ] No inline explanations mixed with questions
+- [ ] Quiz component properly formatted
 - [ ] File named correctly: ##_chapter_##_quiz.md
-- [ ] Saved to correct lesson directory (below other lessons)
+- [ ] File uses `.md` extension
+- [ ] Saved to correct lesson directory
 
 See [quality-checklist.md](./quality-checklist.md) for complete validation criteria.
 
 ---
 
-**Keywords for grep:** process, stages, workflow, generation, analyze, map, generate, design, randomize, write, format, validate, step-by-step, methodology
+**Keywords for grep:** process, stages, workflow, generation, analyze, select, generate, design, randomize, write, format, validate, step-by-step, methodology, Quiz component
