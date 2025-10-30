@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Lesson 1: The Game Begins"
+title: "The Game Begins"
 duration: "10-12 minutes"
 ---
 

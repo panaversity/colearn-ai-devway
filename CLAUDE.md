@@ -230,7 +230,7 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 ## Basic Project Structure
 
 **Governance & Artifacts**:
-- `.specify/memory/constitution.md` — **SOURCE OF TRUTH**: Project principles, vision, 11 core principles, 8 domain skills, quality standards
+- `.specify/memory/constitution.md` — **SOURCE OF TRUTH**: Project principles, vision, 11 core principles, 9 domain skills, quality standards
 - `history/prompts/` — Prompt History Records (captured after every user interaction)
 - `history/adr/` — Architecture Decision Records (for significant decisions)
 
@@ -254,16 +254,28 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ### About the Skills Library
 
-Located in `.claude/skills/`, this library contains 8 specialized pedagogical skills:
+
+Located in `.claude/skills/`, this library contains 9 specialized pedagogical skills:
+
+
 
 1. **learning-objectives** — Define measurable learning outcomes (Bloom's taxonomy)
+
 2. **concept-scaffolding** — Break complex topics into progressive steps
+
 3. **code-example-generator** — Create high-quality code examples with best practices
+
 4. **exercise-designer** — Design effective practice exercises
+
 5. **assessment-builder** — Build quizzes and evaluations
+
 6. **technical-clarity** — Ensure accessibility and clarity
-7. **book-architecture** — Structure content for logical flow
+
+7. **book-scaffolding** — Structure content for logical flow
+
 8. **ai-augmented-teaching** — Teach "learning WITH AI" (not generating FROM AI)
+9. **content-evaluation-framework** — Evaluate content quality using a structured rubric
+
 
 These skills are **semantically activated** based on your educational needs and can be used for any content creation project (books, courses, tutorials, documentation).
 

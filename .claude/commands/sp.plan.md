@@ -8,7 +8,7 @@ description: Execute the implementation planning workflow using the plan templat
 $ARGUMENTS
 ```
 
-You **MUST** consider the user input before proceeding (if not empty).
+You **MUST** consider the user input before proceeding (if not empty) and use the chapter-planner subagent to generate the plan. 
 
 ## Outline
 

@@ -1,8 +1,4 @@
-# 🧠 CoLearn – AI Dev Way
-
-### *CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way*
-
-> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
+# 🧠 The Panaversity AI-Driven Way Book Series
 
 ---
 
@@ -21,9 +17,19 @@
 
 ---
 
+## CoLearning Programming & Agentic AI with Python and TypeScript
+
+<p align="center">
+  <img src="book_cover.png" alt="CoLearning Programming & Agentic AI - The AI-Driven Way" width="600" />
+</p>
+
+> **Empowering developers to learn, build, and collaborate with AI — not just through it.**
+
+📚 **Live Book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)
+
 ## 🎯 Vision
 
-**CoLearn – AI Dev Way** is a **46-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
+**The Panaversity AI-Driven Way** is a **46-chapter technical book and open specification** that redefines how we learn programming in the era of intelligent tools.
 It teaches **AI-driven development** through *systematic collaboration between human learners and AI assistants*, using **Python (3.13+)** and **TypeScript** as the foundation.
 
 The learning journey flows from fundamentals to advanced AI systems — including:
@@ -75,7 +81,7 @@ To pioneer an **agent-native model of computer science education** where AI is:
 
 ---
 
-## The 8 CoLearning Skills
+## The 9 CoLearning Skills
 
 1.  **learning-objectives:** Generate measurable learning outcomes.
 2.  **concept-scaffolding:** Break down complex topics into manageable steps.
@@ -85,11 +91,15 @@ To pioneer an **agent-native model of computer science education** where AI is:
 6.  **technical-clarity:** Ensure all explanations are clear and accessible.
 7.  **book-scaffolding:** Plan and structure multi-part educational content with cognitive load management.
 8.  **ai-augmented-teaching:** Design lessons that effectively integrate AI tools.
-
+9.  **evaluation-framework:** A comprehensive curriculm content designing framework.
 
 ## 3 Specialized Sub Agents
+- Chapter Planner
+- Lesson writer
+- Technical reviewer
 
 ---
 
-🧠 *Part of the CoLearn Initiative — advancing AI-Driven Learning for the next generation of developers.*
-- **Scalable book expansion** with consistent numbering
+🧠 *Part of **The Panaversity AI-Driven Way Book Series** — advancing AI-Driven Learning for the next generation of developers.*
+
+📘 **Read the book**: [https://aidd.panaversity.org](https://aidd.panaversity.org)

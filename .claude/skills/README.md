@@ -1,6 +1,8 @@
 # CoLearning Python Skills
 
-This directory contains 8 specialized pedagogical skills for creating high-quality Python programming education content. These skills are designed to be **semantically activated** based on the educator's intent and teaching needs, using Claude Code's natural language understanding.
+
+This directory contains 9 specialized pedagogical skills for creating high-quality Python programming education content. These skills are designed to be **semantically activated** based on the educator's intent and teaching needs, using Claude Code's natural language understanding.
+
 
 ## Architecture: Progressive Disclosure
 
@@ -28,7 +30,11 @@ This layered approach ensures Claude can:
 2. **Execute effectively** (Layer 2 processes)
 3. **Apply rigor** (Layer 3 references and validation)
 
-## The 8 Skills
+
+
+## The 9 Skills
+
+
 
 ### 1. learning-objectives
 **Purpose**: Generate measurable learning outcomes aligned with Bloom's taxonomy
@@ -167,7 +173,9 @@ This layered approach ensures Claude can:
 
 ---
 
-### 7. book-architecture
+
+### 7. book-scaffolding
+
 **Purpose**: Structure book content with logical chapter flow and dependency management
 
 **When to use**:
@@ -190,8 +198,14 @@ This layered approach ensures Claude can:
 
 ---
 
+
 ### 8. ai-augmented-teaching
+
 **Purpose**: Design learning experiences for AI-assisted software development
+
+### 9. content-evaluation-framework
+**Purpose**: Evaluate content quality using a structured rubric (technical accuracy, pedagogy, writing, structure, AI-first teaching, constitution compliance) with weighted scoring and actionable feedback
+
 
 **When to use**:
 - Integrating AI tools (ChatGPT, GitHub Copilot, Claude) into programming curriculum

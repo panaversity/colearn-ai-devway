@@ -319,11 +319,15 @@ For each section, evaluate content and mark:
 
 ---
 
-## Section 4: Domain Skills Application (The 8 CoLearning Skills)
+
+## Section 4: Domain Skills Application (The 9 CoLearning Skills)
+
 
 ### Skill Application Verification
 
-Verify appropriate application of the 8 domain skills for chapter type:
+
+Verify appropriate application of the 9 domain skills for chapter type:
+
 
 **1. learning-objectives** 🔴
 - [ ] Clear, measurable learning outcomes stated (Bloom's taxonomy)

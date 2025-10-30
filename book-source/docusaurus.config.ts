@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CoLearn - AI Dev Way',
-  tagline: 'Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
+  title: 'The Panaversity AI-Driven Way',
+  tagline: 'CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://colearn-aidevway.panaversity.org',
+  url: 'https://aidd.panaversity.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,10 +23,24 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearn-ai-devway', // Usually your repo name.
+  projectName: 'colearn-aidd', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
+
+  // Add Font Awesome for social media icons
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        integrity: 'sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==',
+        crossorigin: 'anonymous',
+        referrerpolicy: 'no-referrer',
+      },
+    },
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -45,7 +59,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/panaversity/colearning-python/tree/main/website/',
+            'https://github.com/panaversity/colearn-aidd/tree/main/website/',
         },
         blog: false,
         theme: {
@@ -57,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/book-cover.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -67,20 +81,23 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'CoLearning Python',
+      title: 'CoLearn Programming',
       // logo: {
-      //   alt: 'My Site Logo',
-      //   src: 'img/logo.svg',
+      //   alt: 'Panaversity Logo',
+      //   src: 'img/book-cover.png',
+      //   width: 32,
+      //   height: 32,
       // },
+      hideOnScroll: false,
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Book',
         },
         {
-          href: 'https://github.com/panaversity/colearning-python',
+          href: 'https://github.com/panaversity/colearn-aidd',
           label: 'GitHub',
           position: 'right',
         },
@@ -90,16 +107,24 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learn',
           items: [
             {
-              label: 'Start Learning',
-              to: '/docs/intro',
+              label: 'Start Your Journey',
+              to: '/docs/Introducing-AI-Driven-Development/intro',
+            },
+            {
+              label: 'Full Curriculum',
+              to: '/docs/Introducing-AI-Driven-Development/intro',
+            },
+            {
+              label: 'Learning Path',
+              to: '/#learning-path',
             },
           ],
         },
         {
-          title: 'Follow Us',
+          title: 'Community',
           items: [
             {
               label: 'YouTube',
@@ -120,16 +145,33 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
-              label: 'GitHub',
+              label: 'GitHub Repository',
               href: 'https://github.com/panaversity/colearning-python',
+            },
+            {
+              label: 'Project Examples',
+              href: 'https://github.com/panaversity',
+            },
+          ],
+        },
+        {
+          title: 'About',
+          items: [
+            {
+              label: 'Panaversity',
+              href: 'https://panaversity.org/',
+            },
+            {
+              label: 'Our Mission',
+              href: 'https://panaversity.org/#about',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Panaversity. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • 100% Free & Open Source`,
     },
     prism: {
       theme: prismThemes.github,

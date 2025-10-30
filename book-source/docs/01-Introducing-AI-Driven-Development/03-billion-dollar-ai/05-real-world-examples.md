@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: "Lesson 5: Real-World Examples and Your PPP Design"
+title: "Real-World Examples and Your PPP Design"
 duration: "30-40 minutes"
 ---
 

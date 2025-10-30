@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: "Lesson 4: The PPP Strategy - Market Entry Through Protocol and Pivot"
+title: "The PPP Strategy - Market Entry Through Protocol and Pivot"
 duration: "20-25 minutes"
 ---
 
