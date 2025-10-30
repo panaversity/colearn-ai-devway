@@ -9,9 +9,11 @@ You've completed Part 1. You understand the transformation. You know *why* AI-dr
 
 But understanding transformation and experiencing it are two different things. Part 2 changes that. This chapter introduces you to the first real tool you'll use: Claude Code. Not as abstract theory, but as a working development partner on your machine.
 
-Through five interconnected lessons—from origin story through installation, subagents, skills, and MCP integration—you'll move from passive understanding to active mastery. You'll discover why this tool achieved a $500 million annualized run rate in just two months, why developers are reporting 2-4x productivity increases, and most importantly, you'll experience the "agentic AI" paradigm shift firsthand.
+Through five interconnected lessons—from origin story through installation, subagents, skills, and MCP integration—you'll move from passive understanding to active collaboration. You'll install Claude Code, set up simple collaborative partners (subagents and skills), and integrate it with external systems (MCP).
 
-This chapter is **hybrid**: narrative storytelling to establish context, then hands-on tutorials where you'll install, configure, and extend Claude Code with custom capabilities. By the end, Claude Code will be installed on your machine, configured to your workflow, and ready for real development work.
+The goal is **not to build a supercomputer**, but to establish Claude Code as your **collaborative thinking partner** for development.
+
+This chapter is **hybrid**: narrative storytelling to establish context, then hands-on tutorials where you'll install Claude Code and create ONE simple subagent and ONE simple skill. By the end, Claude Code will be installed on your machine and ready to collaborate with you on real development work.
 
 This is where theory becomes practice.
 
