@@ -20,132 +20,140 @@ book-source/docs/
 ```
 
 ## Template Structure
-```
+
+```yaml
 ---
-sidebar_position: N
 title: "Chapter N: Chapter Title"
+sidebar_position: N
 ---
 
 # Chapter N: Chapter Title
 
-**Chapter Type**: [Conceptual | Technical | Hybrid]
-**Estimated Time**: [X minutes reading | X-Y hours with hands-on]
-**Level**: [Beginner | Intermediate | Advanced]
+## Overview
 
-## What You'll Learn
+[Direct connection to previous chapter or context: "In Chapter X, you learned Y. Chapter N builds on that by..."]
 
-[2-3 paragraph overview: What is this chapter about? Why does it matter? Who is it for?]
+[2-3 sentences establishing the critical questions or problems this chapter addresses]
 
-By the end of this chapter, you will be able to:
-
-- ✅ [Learning outcome 1 - use Bloom's taxonomy verb]
-- ✅ [Learning outcome 2]
-- ✅ [Learning outcome 3]
-- ✅ [Learning outcome N]
-
-## Chapter Structure
-
-### [Descriptive Section Title 1]
-**Duration**: [X-Y minutes] | **Type**: [Narrative | Technical | Tutorial]
-[1-2 sentence description of what this section covers]
-
-**Key Concepts**: [List 2-3 main concepts]
+[1-2 sentences describing the scope and approach of this chapter]
 
 ---
 
-### [Descriptive Section Title 2]
-**Duration**: [X-Y minutes] | **Type**: [Narrative | Technical | Tutorial]
-[1-2 sentence description]
+## Main Learning Outcomes
 
-**What You'll Do**: [For technical sections, list hands-on activities]
-- [Activity 1]
-- [Activity 2]
+After completing this chapter, you will be able to:
 
-**Success Target**: [e.g., "95% install successfully on first attempt"]
-
----
-
-[Repeat for all sections - use descriptive titles, NEVER "Lesson 1", "Lesson 2", etc.]
-
-## Learning Path
-
-[1-2 paragraphs explaining how sections build on each other and the pedagogical strategy]
-
-## Prerequisites
-
-Before starting this chapter, you should have:
-
-- ✅ [Prerequisite 1]
-- ✅ [Prerequisite 2]
-- ✅ [Prerequisite N]
-
-## What Makes This Chapter Unique
-
-[1-2 paragraphs highlighting what's special about this chapter's approach or content]
-
-## Time Investment (Required)
-
-**Minimum Path** (Reading only): [X minutes]
-**Full Engagement** (Reading + exercises): [X-Y hours]
-**Mastery Path** (Including supplementary practice): [X-Y hours]
-
-**Recommended Approach**: [Suggest how to break up the chapter into sessions]
-
-## Success Indicators
-
-You'll know you've mastered this chapter when you can:
-
-1. [Measurable success criterion 1]
-2. [Measurable success criterion 2]
-3. [Measurable success criterion N]
-
-## What's Next: Chapter [N+1]
-
-[1-2 paragraphs explaining how this chapter connects to the next chapter]
-
-**Preview**: [Brief description of next chapter's topic and approach]
-
-## Getting Started
-
-Ready to begin? Start with [Section 1 Title](./01-filename.md) to [brief motivation for starting there].
+1. [Action verb + outcome: "Recognize...", "Apply...", "Distinguish..."]
+2. [Action verb + outcome]
+3. [Action verb + outcome]
+4. [Action verb + outcome]
+5. [Action verb + outcome: typically 4-6 outcomes]
 
 ---
 
-**Have questions or need help?** [Include guidance on where to get support]
+[1-2 paragraph closing that establishes the bridge to the next chapter or next phase of learning]
+
+---
+```
+
+## Template Guidance
+
+### Section: Overview
+
+**Purpose**: Situate the reader within the learning journey and establish relevance.
+
+**What to include**:
+1. **Connection to previous chapter**: Reference what they just learned and how this chapter extends it
+2. **Guiding questions**: Ask the critical questions this chapter answers (3-4 specific questions)
+3. **Scope statement**: Brief description of what this chapter covers and how (evidence-based, practical frameworks, hands-on practice, etc.)
+4. **Outcomes preview**: Light mention of what they'll be able to do (detailed in Learning Outcomes section)
+
+**Tone**: Direct, engaging, establishing urgency or relevance without being formulaic
+
+### Section: Main Learning Outcomes
+
+**Purpose**: Set clear, measurable expectations for the chapter.
+
+**Requirements**:
+- Use strong action verbs from Bloom's taxonomy (Recognize, Analyze, Apply, Distinguish, Evaluate, etc.)
+- State what learner will be able to *do*, not what they'll "understand"
+- 4-6 outcomes (not 10+; aim for depth over quantity)
+- Format as numbered list with no checkbox bullets
+- Each outcome should be achievable and verifiable
+
+**Examples of strong outcomes**:
+- "Recognize concrete evidence that 2025 differs from previous AI cycles"
+- "Apply a 7-step workflow to structure your development process"
+- "Evaluate trade-offs between different AI-first architecture approaches"
+
+### Closing Bridge (Optional but Recommended)
+
+**Purpose**: Create momentum toward the next chapter and show how learning progresses.
+
+**What to include**:
+- How this chapter's learning feeds into what comes next
+- The broader narrative arc (where are they in the journey?)
+- Optional: a provocative question or forward-looking statement that builds anticipation
+
+---
 ```
 
 ## Critical Rules
 
 1. **File Naming**: ALWAYS use `README.md` (uppercase), NEVER `readme.md` or `index.md`
-2. **Section Headings**: NEVER use "Lesson 1", "Lesson 2", "Lesson N" - use descriptive titles only
-3. **Learning Outcomes**: Use appropriate Bloom's taxonomy verbs for chapter type
-4. **Consistency**: Match terminology and structure with individual lesson files
-5. **Professional Polish**: No typos, clear language, engaging overview
+2. **Structure**: Chapters have only THREE main sections: **Overview**, **Main Learning Outcomes**, and optional **Closing Bridge**
+3. **No subsections**: Do NOT include "Chapter Structure", "Prerequisites", "What Makes This Chapter Unique", "Time Investment", etc.
+4. **Learning Outcomes**: Use strong action verbs (Recognize, Apply, Distinguish, Evaluate, Analyze, etc.)
+5. **Narrative flow**: Write as if speaking directly to the reader; establish context and relevance
+6. **Professional Polish**: Publication-quality writing with no typos, clear prose, and engaging tone
 
-## Examples of Good vs Bad Headings
+## Example: Good Chapter README
 
-**CORRECT** (Descriptive, no "Lesson N"):
-```
-### Installing and Authenticating Claude Code
-### Creating and Using Agent Skills
-### Connecting MCP Servers and Common Workflows
-```
+```markdown
+---
+title: "Chapter 3: Mastering Your AI Pair"
+sidebar_position: 3
+---
 
-**INCORRECT** (Uses "Lesson N"):
-```
-### Lesson 1: Installing and Authenticating Claude Code
-### Lesson 2: Creating and Using Agent Skills
-### Lesson 3: Connecting MCP Servers and Common Workflows
+# Chapter 3: Mastering Your AI Pair
+
+## Overview
+
+In Chapters 1 and 2, you understood the transformation and the strategic context. Now comes the practical work: learning to *collaborate effectively* with AI.
+
+This chapter moves beyond vibe coding into disciplined partnership. You'll discover how to set up your AI development environment, establish clear communication patterns with your AI pair, navigate common pitfalls, and measure your effectiveness. You'll learn when to guide and when to trust, how to validate AI suggestions, and how to iterate productively.
+
+By the end of this chapter, you'll have working tools, proven workflows, and the confidence to build real projects with AI as a true collaborator.
+
+---
+
+## Main Learning Outcomes
+
+After completing this chapter, you will be able to:
+
+1. Configure your local development environment with AI-first tools (Claude Code, Git, editor extensions)
+2. Evaluate AI suggestions critically using three criteria: correctness, clarity, and alignment with your codebase
+3. Debug collaboratively: interpreting error messages and guiding AI toward solutions
+4. Apply the Spec-Driven Development workflow to structure AI-assisted projects
+5. Recognize anti-patterns and restore productivity when AI collaboration breaks down
+
+---
+
+This chapter transforms you from a passive consumer of AI outputs to an active orchestrator of AI-assisted development. What you learn here becomes your foundation for every project that follows.
+
+---
 ```
 
 ## Validation Checklist
 
 - [ ] File named `README.md` (uppercase)
-- [ ] No "Lesson N" in any section heading
-- [ ] All required sections present
-- [ ] Learning outcomes use appropriate Bloom's taxonomy
-- [ ] Prerequisites clearly stated
-- [ ] Time investment section included and filled in
-- [ ] All referenced lesson files exist
-- [ ] No typos or grammatical errors
-- [ ] Professional tone and formatting
+- [ ] Three sections only: **Overview**, **Main Learning Outcomes**, **Closing Bridge** (optional)
+- [ ] **Overview** includes: (1) connection to previous chapter, (2) guiding questions, (3) scope/approach
+- [ ] **Main Learning Outcomes** has 4-6 outcomes with strong action verbs
+- [ ] No "Prerequisites", "Chapter Structure", "Time Investment", or other metadata sections
+- [ ] Opening connects directly to previous chapter (establish narrative continuity)
+- [ ] Learning outcomes are achievable and verifiable (not vague "understand" statements)
+- [ ] Closing bridge previews next chapter or next learning phase
+- [ ] Tone is direct and engaging ("you", "your", conversational)
+- [ ] No typos, grammatical errors, or placeholder text
+- [ ] Professional, publication-quality writing
