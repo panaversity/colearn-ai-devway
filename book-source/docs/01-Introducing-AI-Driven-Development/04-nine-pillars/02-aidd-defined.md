@@ -15,7 +15,9 @@ Instead of writing code line by line, you write specifications—clear descripti
 
 This isn't about replacing developers. It's about elevating your role from code writer to system designer.
 
-AIDD consists of nine pillars that work together as an integrated system:
+## AIDD Characteristics: Nine Defining Principles
+
+AIDD is characterized by nine core principles that distinguish it from traditional development:
 
 1. **Specification-Driven**: Requirements and design come first
 2. **AI-Augmented**: Agents handle implementation details
@@ -27,7 +29,11 @@ AIDD consists of nine pillars that work together as an integrated system:
 8. **Documentation-Embedded**: Knowledge captured alongside code
 9. **Production-Ready**: Professional standards from day one
 
-Each pillar reinforces the others. Together, they create a development methodology that's greater than the sum of its parts.
+These nine characteristics define *what* AIDD is—how it differs fundamentally from traditional development methodologies.
+
+**But how do you achieve these characteristics in practice?** That's where the **Nine Enabling Technologies** come in—the concrete tools, practices, and infrastructure that make AIDD possible. We'll explore those technologies in detail in the next sections (AI CLI agents, Markdown specifications, MCP standard, and six others).
+
+Think of it this way: the nine characteristics above describe the *nature* of AI-Driven Development. The nine enabling technologies (covered in Sections 3-4) provide the *foundation* to achieve it.
 
 ## Why Now? The Convergence That Made AIDD Possible
 
@@ -59,10 +65,10 @@ Traditional development positioned you as a code writer—an individual contribu
 | **Decision Making** | Implementation details | Architecture and design |
 | **Team Size Needed** | 5-10 developers minimum | 1-2 developers with AI agents |
 | **Time Distribution** | 80% coding, 20% design | 20% specification, 80% oversight |
-| **Market Reach** | Limited by team capacity | Solutions for billion-dollar potential markets |
+| **Market Reach** | Limited by team capacity | Access to larger markets previously requiring teams |
 | **Quality Control** | Manual code review | Automated testing + human validation |
 
-This transformation enables solo developers and small teams to build solutions that address billion-dollar potential markets—not by guaranteeing individual outcomes, but by removing the traditional barriers of team size, implementation complexity, and deployment overhead.
+This transformation enables solo developers and small teams to build solutions that compete in markets previously accessible only to larger teams—not by guaranteeing success or unicorn outcomes, but by removing traditional barriers of team size, implementation complexity, and deployment overhead. Domain complexity, market dynamics, and execution quality still determine success, but the **access barrier** is dramatically lower.
 
 ## A Real Example: From Code Writer to System Architect
 
@@ -108,11 +114,11 @@ Take a moment to assess your familiarity with this paradigm shift:
 
 There's no right answer here. Whether you're at 1 or 5, this chapter will meet you where you are and help you move forward. The paradigm shift takes time—it's not just learning new tools, it's changing how you think about software development.
 
-## What's Next: Understanding the Nine Pillars
+## What's Next: Understanding the Nine Enabling Technologies
 
-You now have a clear definition of AIDD and understand the value proposition. But how do these nine pillars actually work together? What does each pillar contribute to the system?
+You now have a clear definition of AIDD, its nine defining characteristics, and the value proposition. But how do you achieve these characteristics in practice?
 
-In the next section, we'll explore each pillar in detail: what it means, why it matters, and how it integrates with the others. You'll see how specification-driven development enables AI augmentation, how quality gates ensure reliability, and how all nine pillars create a cohesive methodology that's greater than the sum of its parts.
+In the next sections, we'll explore the **Nine Enabling Technologies**—the concrete tools, practices, and infrastructure that make AIDD characteristics achievable. You'll learn about AI CLI agents, Markdown specifications, MCP standard, AI-first IDEs, and five other foundational technologies. You'll see how these technologies work together to create the specification-driven, AI-augmented, quality-gated development workflow that defines AIDD.
 
 ---
 

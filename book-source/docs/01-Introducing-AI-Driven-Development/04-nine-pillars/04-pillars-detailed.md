@@ -43,7 +43,7 @@ Each pillar removes a specific barrier that has historically limited developers.
 
 **How it integrates**: MCP enables Pillar 1 (AI CLI agents) to access external systems and powers Pillar 8 (Composable Skills) by allowing skill modules to use standardized tool connections. It works alongside Pillar 5 (Linux CLI) as another interface layer.
 
-**Historical precedent**: Remember when every device had its own charging cable? Then USB became standard, and suddenly one cable worked for everything. MCP does this for AI tool integration. Before this standardization, each AI-tool connection required custom development and maintenance.
+**Historical precedent**: Remember when every device had its own charging cable? Then USB became standard, and suddenly one cable worked for everything. MCP aims to do this for AI tool integration. **Important context**: As of 2025, MCP is still emerging—it's not yet as universally adopted as USB became. However, the standardization pattern is similar: before protocols like MCP, each AI-tool connection required custom development and maintenance. MCP's adoption is growing as more tools and AI platforms support it.
 
 ## Pillar 4: AI-First IDEs
 
@@ -115,7 +115,7 @@ Each pillar removes a specific barrier that has historically limited developers.
 
 **How it integrates**: This pillar depends on Pillar 5 (Linux environments for containers), connects to Pillar 6 (TDD through CI/CD pipelines), and is orchestrated by Pillar 7 (SDD workflows). AI agents (Pillar 1) can generate deployment configurations using these tools.
 
-**Historical precedent**: Cloud computing democratized server infrastructure—you no longer needed to buy and maintain physical servers. Kubernetes and Docker now democratize deployment architecture—you no longer need a dedicated DevOps team to run production systems. This completes the accessibility transformation.
+**Historical precedent**: Cloud computing democratized server infrastructure—you no longer needed to buy and maintain physical servers. Kubernetes and Docker significantly lower the barrier to deployment architecture—individual developers and small teams can now manage production systems that once required dedicated DevOps teams. **Important nuance**: Organizational complexity and domain expertise still matter. Large enterprises often still need DevOps specialists for scale and reliability, but the **baseline capability** for small teams has transformed dramatically.
 
 ---
 

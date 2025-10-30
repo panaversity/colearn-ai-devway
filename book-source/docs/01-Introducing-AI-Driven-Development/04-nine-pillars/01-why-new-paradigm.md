@@ -7,7 +7,7 @@ title: "Why This Moment Demands a New Paradigm"
 
 Priya is a senior developer at a fintech startup. She's been coding for eight years, and she's good at it. Last year, she started using GitHub Copilot for autocomplete and ChatGPT when she got stuck on tricky problems. Her productivity went up—maybe 20%. She felt like she was "using AI."
 
-But something bothered her. Her junior colleague, Marcus, who joined the team six months ago, was shipping features *faster* than she was. Not just a little faster—sometimes twice as fast. And his code? It was cleaner, better tested, and more maintainable than hers.
+But something bothered her. Her junior colleague, Marcus, who joined the team six months ago, was shipping features *faster* than she was. On certain types of tasks—particularly new feature development with well-defined requirements—he could complete work that took her two days in a single day. And his code? It was cleaner, better tested, and more maintainable than hers.
 
 Marcus wasn't smarter. He wasn't working longer hours. He was doing something fundamentally different. While Priya was using AI as a *tool*, Marcus was using AI as a *system*.
 
@@ -64,7 +64,7 @@ He wasn't using more tools. He was using AI *differently*—as a **system**, not
 
 Here's what happens when you adopt AI tools piecemeal without shifting your mental model:
 
-**You get stuck in the "productivity plateau."** You see a 10-20% boost from autocomplete and faster debugging, but you never break through to the 2-10x gains that are actually possible. You're still the bottleneck because you're still thinking like a solo coder.
+**You get stuck in the "productivity plateau."** You see a 10-20% boost from autocomplete and faster debugging, but you never break through to the larger gains that full system adoption enables—gains that can reach 2-10x for specific workflows like API development, testing automation, and deployment pipelines. You're still the bottleneck because you're still thinking like a solo coder.
 
 **You miss the exponential benefits.** The real power of AIDD comes from the **compounding effects** of all nine revolutions working together. Partial adoption gives you linear gains. Full adoption gives you exponential growth.
 
