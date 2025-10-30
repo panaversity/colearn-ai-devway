@@ -310,7 +310,7 @@ Structure (adapt task categories to chapter type):
 **All Chapters:**
 - [ ] All MUST tasks completed
 - [ ] Learning objectives are measurable and use appropriate Bloom's taxonomy
-- [ ] Chapter integrates with the 8 mandatory domain skills (contextually applied)
+- [ ] Chapter integrates with the 9 mandatory domain skills (contextually applied)
 - [ ] Output style matches chapter type requirements
 - [ ] Accessibility requirements met (clear language, inclusive examples)
 

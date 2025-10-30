@@ -1,28 +1,22 @@
 <!--
 Sync Impact Report:
-Version: 2.2.0 (Book structure expansion: 7 parts → 13 parts, 32 chapters → 46 chapters)
+Version: 2.2.0
 Created: 2025-10-28
 Last Refactored: 2025-10-29
-Rationale: Expanded book to cover full stack (Python + TypeScript) and production deployment (Docker, Kubernetes, Databases, Kafka, Dapr). Added 14 new chapters covering advanced topics while consolidating foundational content for better flow.
+Rationale: Expanded the book scope to cover broader full stack topics and production deployment while consolidating foundational content for better flow.
 
 Changes in v2.2.0:
-- Expanded from 7 parts to 13 parts (added Parts 8-13)
-- Expanded from 32 chapters to 46 chapters (added 14 new advanced topic chapters)
-- Updated scaffolding ranges for 46 chapters: (1-9 heavy, 10-30 moderate, 31-46 minimal)
-- Added new parts: TypeScript, Realtime/Voice Agents, Docker/Kubernetes, Databases, Kafka/Dapr, Stateful Agents
-- Consolidated foundational content: Part 1 (5→3 ch), Part 3 (4→2 ch), Part 5 (5→3 ch)
-- Expanded Python coverage: Part 4 (8→12 chapters) with async, decorators, advanced types, packaging
-- All references now point to specs/book/chapter-index.md for 46-chapter structure
+- Expanded parts to include new domains (e.g., TypeScript, Realtime/Voice Agents, Docker/Kubernetes, Databases, Kafka/Dapr, Stateful Agents)
+- Updated scaffolding guidance to reflect early/middle/late progression
+- All references now point to specs/book/chapter-index.md as the authoritative source for chapter structure
 
 Changes in v2.1.0:
 - Replaced book-architecture skill with book-scaffolding (skill 7)
-- Fixed chapter count: 26 → 32 throughout
-- Removed Part 2 vs Part 5 Spec-Kit contradiction (now refers to chapter-index.md)
-- Fixed scaffolding ranges to cover all 32 chapters (1-10 heavy, 11-20 moderate, 21-32 minimal)
-- Section III: Book Structure now defers to specs/book/chapter-index.md (authoritative source)
+- Removed contradictory counts (now defers to chapter-index.md as authoritative)
+- Section III: Book Structure defers to specs/book/chapter-index.md (authoritative source)
 - Section VI: Infrastructure updated to match actual files (.claude/agents, .claude/output-styles, .claude/skills)
 - Section V: Workflow updated to reflect actual 3 subagents (chapter-planner, lesson-writer, technical-reviewer)
-- Made constitution truly generic and maintainable (follows same pattern as CLAUDE.md refactor)
+- Made constitution more generic and maintainable (follows same pattern as CLAUDE.md refactor)
 
 Templates Aligned:
   - spec-template.md (references these principles)
@@ -32,7 +26,7 @@ Templates Aligned:
   - skills/ (reference and apply these principles, now includes book-scaffolding)
 -->
 
-# CoLearning Python & Agentic AI: The AI-Driven Way — Project Constitution
+# Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way — Project Constitution
 
 **Version:** 2.2.0 | **Ratified:** 2025-10-28 | **Last Amended:** 2025-10-29
 
@@ -42,7 +36,7 @@ Templates Aligned:
 
 ### Vision
 
-"CoLearning Python & Agentic AI: The AI-Driven Way" is a 46-chapter technical book that teaches modern Python programming (3.13+) and TypeScript through systematic collaboration between human learners and AI assistants. It progresses from foundational AI-driven development through advanced topics including agentic AI systems and MCP (Model Context Protocol) frameworks. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
+"Colearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way" is a 46-chapter technical book that teaches modern Python programming (3.13+) and TypeScript through systematic collaboration between human learners and AI assistants. It progresses from foundational AI-driven development through advanced topics including agentic AI systems and MCP (Model Context Protocol) frameworks. The book demonstrates how to learn and write code effectively in the AI-driven development era—not as a replacement for thinking, but as an amplifier of capability.
 
 ### Core Philosophy
 
@@ -76,15 +70,15 @@ Every concept, example, and exercise MUST demonstrate AI-assisted development as
 
 ---
 
-### Principle 2: Spec-Kit Methodology as Foundation
+### Principle 2: Spec-Kit Plus Methodology as Foundation
 
-Spec-Kit methodology MUST be introduced progressively and applied to all projects and examples.
+Spec-Kit Plus methodology MUST be introduced progressively and applied to all projects and examples.
 
 **Why This Matters:** Specification-Driven Development (SDD) is a scalable, AI-friendly methodology. Progressive exposure builds better software engineering habits and enables collaborative workflows with AI agents.
 
 **What This Means:**
-- Spec-Kit concepts introduced early (foundational parts) and formalized in dedicated part (see book structure)
-- All significant projects use Spec-Kit structure: spec → plan → tasks → implementation
+- Spec-Kit Plus concepts introduced early (foundational parts) and formalized in dedicated part (see book structure)
+- All significant projects use Spec-Kit Plus structure: spec → plan → tasks → implementation
 - Students practice writing specifications and plans WITH AI assistance
 - Constitution, ADR, and PHR concepts are explained and practiced as real artifacts, not theory
 - Refer to `specs/book/chapter-index.md` for specific chapter assignments and sequencing
@@ -128,7 +122,7 @@ Content difficulty MUST increase gradually with no sudden jumps. Earlier chapter
 **Why This Matters:** Beginners need scaffolding. Jumping complexity levels loses readers. Clear prerequisite chains allow modular learning and reference. Progressive complexity reduces frustration and increases completion rates.
 
 **What This Means:**
-- Progressive scaffolding: Early chapters (1-9) heavy support, middle chapters (10-30) moderate, later chapters (31-46) minimal
+- Progressive scaffolding: Early chapters heavy support, middle chapters moderate, later chapters minimal
 - Concepts introduced once, then referenced by name
 - Explicit prerequisite chains documented
 - No forward references to unexplained concepts without saying "Chapter X covers this"
@@ -139,7 +133,7 @@ Content difficulty MUST increase gradually with no sudden jumps. Earlier chapter
 
 ### Principle 6: Consistent Structure Across All Chapters
 
-All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across 46 chapters.
+All content creators (human authors and AI agents) MUST use the same shared infrastructure (skills, output styles, sub-agents) to ensure consistency across all chapters.
 
 **Why This Matters:** Consistency in form allows readers to focus on content. It also makes chapters replaceable and updatable without cascading changes. Shared infrastructure enables AI and humans to collaborate effectively.
 
@@ -296,9 +290,9 @@ Chapters addressing these topics MUST include update mechanism notes:
 
 ---
 
-## II.B Domain Skills (The 8 CoLearning Skills)
+## II.B Domain Skills (The 9 CoLearning Skills)
 
-All book development MUST leverage these 8 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all 46 chapters and 13 parts:
+All book development MUST leverage these 9 specialized domain skills. These skills codify pedagogical best practices and ensure consistent quality across all chapters and parts:
 
 ### 1. **learning-objectives** Skill
 Generate measurable learning outcomes aligned with Bloom's taxonomy. Ensures every chapter/lesson has clear, testable objectives that guide content creation and assessment. Critical for parts 6-7 (agentic AI, MCP) where emerging topics require careful scaffolding.
@@ -309,8 +303,11 @@ Break down complex topics into manageable, progressive steps. Essential for Part
 ### 3. **code-example-generator** Skill
 Create high-quality, runnable code examples with type hints, docstrings, and testing. All Python code in the book must follow this skill's standards (Python 3.13+, type hints, tested).
 
+
 ### 4. **exercise-designer** Skill
-Design effective practice exercises aligned with learning objectives. Balances repetition, challenge, and application across all 32 chapters.
+
+Design effective practice exercises aligned with learning objectives. Balances repetition, challenge, and application across all chapters.
+
 
 ### 5. **assessment-builder** Skill
 Build meaningful quizzes, review questions, and evaluations. Ensures learners can verify understanding at multiple Bloom's levels.
@@ -324,7 +321,10 @@ Plan and structure multi-part educational content with cognitive load management
 ### 8. **ai-augmented-teaching** Skill
 Design lessons that effectively integrate AI tools as learning partners (not code generators). Ensures the book itself demonstrates the "learning WITH AI" philosophy it teaches.
 
-**Governance**: All chapter content MUST be validated against these 8 skills before publication. Content creators (human authors and AI agents) should reference and apply these skills throughout development.
+### 9. **content-evaluation-framework** Skill
+Provide a systematic rubric and process to evaluate content quality across dimensions (technical accuracy, pedagogy, writing, structure, AI-first teaching, and constitution compliance) with weighted scoring and actionable feedback for iteration.
+
+**Governance**: All chapter content MUST be validated against these 9 skills before publication. Content creators (human authors and AI agents) should reference and apply these skills throughout development.
 
 ---
 
@@ -342,7 +342,7 @@ The book MUST follow a multi-part progressive structure that builds from foundat
 **Each part MUST**:
 - Build on previous parts with clear prerequisite chains
 - Follow progressive complexity (gradual difficulty increase)
-- Maintain consistent structure using the 8 domain skills and output styles
+- Maintain consistent structure using the 9 domain skills and output styles
 - Demonstrate AI-augmented learning throughout
 
 **Planning New Parts**:
@@ -352,7 +352,7 @@ The book MUST follow a multi-part progressive structure that builds from foundat
 - Map connections to subsequent parts
 
 **Key References**:
-- **`specs/book/chapter-index.md`** — All 32 chapters with titles, numbers, and topics
+- **`specs/book/chapter-index.md`** — Chapters with titles, numbers, and topics
 - **`specs/book/directory-structure.md`** — File paths, folder organization, and naming conventions (authoritative source)
 
 ---
@@ -443,9 +443,9 @@ Each stage MUST include:
 
 ## VI. Infrastructure
 
-### Domain Skills (The 8 CoLearning Skills)
+### Domain Skills (The 9 CoLearning Skills)
 
-All content creators MUST apply the 8 domain skills defined in Section II.B. These skills are located in `.claude/skills/` and provide pedagogical best practices for:
+All content creators MUST apply the 9 domain skills defined in Section II.B. These skills are located in `.claude/skills/` and provide pedagogical best practices for:
 
 1. **learning-objectives** — Measurable outcomes with Bloom's taxonomy
 2. **concept-scaffolding** — Progressive complexity management
@@ -470,7 +470,7 @@ These are **generic, reusable templates** applicable to any educational content 
 Three specialized agents manage the SDD loop phases (located in `.claude/agents/`):
 
 1. **chapter-planner** — Takes approved spec → creates detailed lesson plans and task checklists
-2. **lesson-writer** — Takes lesson plan → writes complete lesson content with all 8 domain skills applied
+2. **lesson-writer** — Takes lesson plan → writes complete lesson content with all 9 domain skills applied
 3. **technical-reviewer** — Takes completed chapter → validates technical accuracy, pedagogical effectiveness, and constitutional alignment
 
 ---
@@ -515,10 +515,10 @@ Three specialized agents manage the SDD loop phases (located in `.claude/agents/
 
 The book is complete and successful when:
 
-- [ ] All 46 chapters written and validated
+- [ ] All chapters written and validated
 - [ ] All code examples tested and working
 - [ ] All chapters follow Constitution principles
-- [ ] Pedagogical flow coherent across all 13 parts
+- [ ] Pedagogical flow coherent across all parts
 - [ ] No contradictions across chapters
 - [ ] All cross-references valid
 - [ ] Technical accuracy verified by domain experts

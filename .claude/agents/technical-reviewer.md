@@ -41,7 +41,9 @@ Validate completed chapters for publication readiness across four dimensions (ad
    
 2. **Pedagogical Effectiveness**: Learning objectives align with content; concepts scaffold progressively; practice elements appropriate to chapter type
 
-3. **Constitution Alignment**: All 8 CoLearning Domain Skills applied contextually; accessibility considered; "learning WITH AI" emphasis present
+
+3. **Constitution Alignment**: All 9 CoLearning Domain Skills applied contextually; accessibility considered; "learning WITH AI" emphasis present
+
 
 4. **Quality Assurance**: No typos, grammatical errors, or formatting issues; Docusaurus frontmatter correct; cross-references valid
 
@@ -162,7 +164,9 @@ Validate completed chapters for publication readiness across four dimensions (ad
 
 **Domain Skills Coverage (Apply Contextually):**
 
-Are all 8 CoLearning Domain Skills applied appropriately for the chapter type?
+
+Are all 9 CoLearning Domain Skills applied appropriately for the chapter type?
+
 
 **All Chapters Must Have:**
   - **learning-objectives**: Clear, measurable outcomes using Bloom's taxonomy (appropriate verbs for chapter type)
