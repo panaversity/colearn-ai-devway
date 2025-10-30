@@ -1,49 +1,61 @@
 ---
 name: quiz-generator
 description: |
-  Generate college-level MCQ quizzes (5-10 questions) using interactive Quiz component. Produces MDX files
-  with conceptual questions, meaningful distractors, and randomized correct answers. Quizzes test understanding
-  through the globally-registered Quiz component with built-in features: progress tracking, answer validation,
-  explanations, results page, and theme support. Follows ##_chapter_##_quiz.mdx naming convention.
+  ALWAYS generate interactive quizzes using the Quiz component (20-30 comprehensive questions).
+  Creates MDX files with college-level conceptual questions, EQUAL LENGTH options (±2 words max),
+  and randomized correctOption indices (0-3). Quizzes prevent length-based guessing by keeping all
+  options similar word count. Features globally-registered Quiz component with built-in: progress
+  tracking, answer validation, instant explanations, results page, color-coded feedback, theme support.
+  Follows ##_chapter_##_quiz.md naming convention. CRITICAL: All options MUST be equal length.
 allowed-tools: [Read, Bash, Write, Glob]
-version: 2.0.0
+version: 3.1.0
 ---
 
 # Quiz Generator: College-Level Interactive Chapter Assessments
 
-**Version:** 2.0.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching)
+**Version:** 3.1.0 | **Alignment:** Constitution v2.2.0, Principle 1 (AI-First Teaching) | **CRITICAL:** Always use Quiz component, EQUAL LENGTH options (±2 words), 20-30 questions
 
 ---
 
 ## Purpose
 
-Generate high-quality, college-level MCQ quizzes (5-10 questions) using the globally-registered Quiz component. Each quiz measures conceptual understanding with built-in interactive features including progress tracking, answer validation, instant explanations, and results scoring. The Quiz component automatically handles anti-cheating measures, theme switching, and mobile responsiveness.
+Generate high-quality, college-level MCQ quizzes (20-30 comprehensive questions) using the globally-registered Quiz component. Each quiz measures conceptual understanding with built-in interactive features including progress tracking, answer validation, instant explanations, and results scoring. **CRITICAL: All options MUST have equal length (±2 words maximum difference) to prevent length-based guessing.** The Quiz component automatically handles theme switching and mobile responsiveness.
 
 **Core Principles:**
 - Test understanding and application, not memorization
-- Leverage Quiz component's built-in validation and anti-cheating features
+- **PREVENT LENGTH-BASED GUESSING: All options must be equal length (±2 words)**
 - Randomize correct answer distribution across options (0-3 indices)
 - Provide meaningful explanations for each answer
-- Comprehensive coverage of chapter material (not comprehensive = fewer, focused questions)
+- Comprehensive coverage of chapter material (20-30 questions for thorough assessment)
 
 ---
 
 ## When to Activate
 
-Use this skill when:
-- Creating end-of-chapter assessments using the Quiz component
-- Need college-level conceptual questions (5-10 focused questions)
-- Want interactive quiz with built-in scoring and feedback
-- Require randomized correct answers with consistent distribution
-- Need instant explanations shown after answer selection
-- Want fully responsive, accessible quiz with light/dark theme support
+This skill should be used when creating end-of-chapter assessments. **CRITICAL: This skill ALWAYS generates interactive quizzes using the Quiz component—NEVER static markdown quizzes.**
+
+Activate this skill when:
+- Creating end-of-chapter assessments that MUST use the Quiz component
+- Need college-level conceptual questions (20-30 comprehensive questions)
+- Want interactive quiz with built-in scoring, feedback, and instant explanations
+- **Require EQUAL LENGTH options (±2 words max) to prevent length-based guessing**
+- Require randomized correct answers with consistent distribution (correctOption indices 0-3)
+- Need fully responsive, accessible quiz with light/dark theme support
 - Creating MDX-compatible quiz files using `<Quiz />` component
 
 **Trigger phrases:**
-- "Create a quiz for Chapter X using the Quiz component"
-- "Generate interactive chapter assessment with 5-10 questions"
-- "Build college-level quiz using Quiz component with explanations"
-- "Create focused chapter quiz with instant feedback"
+- "Create a quiz for Chapter X"
+- "Generate comprehensive chapter assessment for Chapter X"
+- "Build an interactive quiz with 20-30 questions"
+- "Create chapter quiz with equal length options"
+- "Generate college-level assessment with equal-length MCQs"
+
+**MANDATORY REQUIREMENTS:**
+1. Use Quiz component (NEVER static markdown)
+2. Generate 20-30 questions (comprehensive coverage)
+3. **ALL options MUST be equal length (±2 words maximum difference)**
+4. Randomize correctOption indices evenly across 0-3
+5. Passing score: 70%
 
 ---
 
@@ -146,22 +158,27 @@ and push() is JavaScript. Understanding mutability is crucial for debugging vari
 ### Fixed Constraints (Non-Negotiable)
 
 ```yaml
-question_count: 5-10  # Focused assessment (5-10 questions)
+question_count: 20-30  # Comprehensive assessment (20-30 questions)
 options_per_question: 4  # Always exactly 4 options
+option_length: EQUAL  # ±2 words maximum difference (CRITICAL to prevent length guessing)
 question_format: multiple_choice  # Only MCQ
 correct_answer_distribution: random_equal  # indices 0-3 equally distributed
-passing_score: 60-70  # 60% for beginners, 70% intermediate
+passing_score: 70  # 70% (14/20 or 21/30)
 file_naming: ##_chapter_##_quiz.md  # e.g., 05_chapter_02_quiz.md
 output_format: Markdown with Quiz component  # <Quiz {...} /> (globally registered)
 component_globally_registered: true  # No imports needed
 ```
 
 **CRITICAL ANTI-PATTERNS:**
+- ❌ **LENGTH-BASED GUESSING: Options with different lengths** (e.g., 5 words vs 20 words)
+  - Students can guess by selecting longest/shortest option
+  - ALL options MUST be ±2 words maximum difference
+  - MANUALLY VERIFY word count for every option
 - ❌ Using array indices 1-4 (use 0-3!)
 - ❌ Questions that test recall instead of understanding
 - ❌ Explanations without addressing why distractors are wrong
 - ❌ No randomization of correctOption values
-- ❌ More than 10 questions (violates component UX patterns)
+- ❌ Fewer than 20 or more than 30 questions
 - ❌ File naming like `##_quiz.md` (use `##_chapter_##_quiz.md`)
 
 ---
@@ -240,19 +257,27 @@ Format Quiz Component → Validate → ##_chapter_##_quiz.mdx
 ## Quality Standards
 
 ### Content Quality
-- ✅ 5-10 questions (focused, high-impact assessment)
+- ✅ 20-30 questions (comprehensive assessment)
 - ✅ College-level conceptual (75%+ Apply or higher)
 - ✅ Realistic scenarios (debugging, prediction, analysis)
 - ✅ No obvious recall questions ("What is...?")
 
+### Option Length Quality (CRITICAL - PREVENTS GUESSING)
+- ✅ **ALL options MUST be equal length (±2 words maximum difference)**
+- ✅ **MANUALLY COUNT WORDS for every option in every question**
+- ✅ If option is 10 words, others must be 8-12 words
+- ✅ Longest option ≠ always correct (verify distribution)
+- ✅ No option noticeably longer or shorter than others
+- ✅ Test by reading quiz: no option visually stands out by length
+
 ### Answer Randomization Quality (CRITICAL)
-- ✅ Correct answers evenly distributed (indices 0-3: ~25% each)
+- ✅ Correct answers evenly distributed (indices 0-3: ~25% each for 20-30 Q)
 - ✅ No 3+ consecutive same correctOption values
 - ✅ No patterns (not 0,1,2,3,0,1,2,3...)
-- ✅ All index values (0,1,2,3) represented
+- ✅ All index values (0,1,2,3) represented equally
 
 ### Explanation Quality
-- ✅ 60-150 words each (comprehensive, not rushed)
+- ✅ 80-150 words each (comprehensive, not rushed)
 - ✅ Explain WHY correct (2-3 sentences)
 - ✅ Address why EACH distractor is wrong (1 sentence each)
 - ✅ Additional context (examples, connections, misconceptions)
@@ -263,35 +288,41 @@ Format Quiz Component → Validate → ##_chapter_##_quiz.mdx
 - ✅ correctOption uses 0-3 indices (NOT 1-4!)
 - ✅ File named: `##_chapter_##_quiz.mdx`
 - ✅ No imports needed (Quiz globally registered)
-- ✅ passingScore property set (60-70)
+- ✅ passingScore property set to 70
 
 📖 **Reference:** [quality-checklist.md](./references/quality-checklist.md) for complete validation criteria
 
 ---
 
-## Common Pitfalls (Top 5)
+## Common Pitfalls (Top 6)
 
-1. **Index Confusion (CRITICAL):** Using correctOption: 1-4 instead of 0-3
+1. **LENGTH-BASED GUESSING (CRITICAL):** Options with wildly different lengths
+   - ❌ Option A: 5 words | Option B: 15 words | Option C: 8 words | Option D: 6 words
+   - ❌ Students guess longest option and score 95% by guessing
+   - ✅ Option A: 10 words | Option B: 9 words | Option C: 11 words | Option D: 10 words (±2 words)
+   - Fix: **MANUALLY COUNT WORDS for every option. Make all ±2 words maximum difference.**
+
+2. **Index Confusion (CRITICAL):** Using correctOption: 1-4 instead of 0-3
    - ❌ `correctOption: 4` → References non-existent 5th option
    - ✅ `correctOption: 3` → Correct (last option, 4th item)
    - Fix: Always use 0-3 indices
 
-2. **Testing Recall:** "What is X?" questions → Memorization
+3. **Testing Recall:** "What is X?" questions → Memorization
    - ❌ "What is a Python list?"
    - ✅ "Which operation modifies a list in-place?"
    - Fix: Focus on Apply/Analyze/Evaluate levels
 
-3. **Weak Distractors:** Options that are obviously wrong
+4. **Weak Distractors:** Options that are obviously wrong
    - ❌ "Which is correct?" with options including "banana" or "xyz"
    - ✅ "Which is correct?" where all options are plausible misconceptions
    - Fix: Every distractor should test a specific misconception
 
-4. **Missing Explanation Details:** Not addressing why distractors are wrong
+5. **Missing Explanation Details:** Not addressing why distractors are wrong
    - ❌ "Lists are mutable." (only explains correct answer)
    - ✅ "Lists are mutable; strings aren't. The append() method exists, but add() doesn't (that's Java)..." (explains all options)
    - Fix: Address each distractor explicitly
 
-5. **Answer Patterns:** Obvious distribution patterns in correctOption
+6. **Answer Patterns:** Obvious distribution patterns in correctOption
    - ❌ correctOption sequence: 0,1,2,3,0,1,2,3... (repeating pattern)
    - ✅ correctOption sequence: 2,0,1,3,1,0,2,1... (random distribution)
    - Fix: Shuffle after writing; verify no patterns
@@ -396,4 +427,4 @@ Use `Read` tool to access references as needed during quiz generation.
 
 ---
 
-**Quiz Generator v3.0 creates interactive assessments using the globally-registered Quiz component. Focused 5-10 question quizzes measure conceptual understanding with instant feedback. Built-in features include progress tracking, answer validation, color-coded results, explanations, retake buttons, and full theme support—no manual implementation needed.**
+**Quiz Generator v3.1.0 ALWAYS creates interactive assessments using the globally-registered Quiz component with EQUAL LENGTH OPTIONS. NEVER creates static markdown quizzes. Comprehensive 20-30 question quizzes measure conceptual understanding with instant feedback and prevent length-based guessing. Built-in features include progress tracking, answer validation, color-coded results, explanations, retake buttons, and full theme support—no manual implementation needed. Every quiz MUST use <Quiz /> component with 20-30 questions, equal-length options (±2 words max), randomized correctOption indices (0-3), and 70% passing score.**
