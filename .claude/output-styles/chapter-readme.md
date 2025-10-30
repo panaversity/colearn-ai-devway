@@ -21,144 +21,152 @@ book-source/docs/
 ```
 
 ## Template Structure
-=======
----
-
 
 ```yaml
 ---
-title: "Chapter N: Chapter Title"
 sidebar_position: N
+title: "Chapter N: Chapter Title"
 ---
 
 # Chapter N: Chapter Title
 
-## Overview
+[Direct connection to previous chapter: "In Chapter X, you learned/discovered Y..."]
 
-[Direct connection to previous chapter or context: "In Chapter X, you learned Y. Chapter N builds on that by..."]
+[Transition statement or provocative question that establishes what this chapter addresses]
 
-[2-3 sentences establishing the critical questions or problems this chapter addresses]
+[1-2 compelling paragraphs establishing scope, approach, and what makes this chapter important. Mention the number of sections and preview key concepts without listing them all.]
 
-[1-2 sentences describing the scope and approach of this chapter]
+[Final paragraph establishing tone and expectations - conceptual/strategic vs. technical/practical]
 
----
+## What You'll Learn
 
-## Main Learning Outcomes
+By the end of this chapter, you'll understand:
 
-After completing this chapter, you will be able to:
+- **[Topic/Framework name]**: [Detailed description with specifics, examples, or concrete details explaining what this topic covers and why it matters]
+- **[Topic/Framework name]**: [Detailed description - should be 1-2 sentences providing rich context]
+- **[Topic/Framework name]**: [Detailed description with specific examples or outcomes]
+- **[Topic/Framework name]**: [Detailed description - aim for 4-6 bullet points total]
+- **[Topic/Framework name]**: [Detailed description]
+- **[Your strategic positioning / Your path forward / etc.]**: [Final bullet that personalizes learning to the reader's situation]
 
-1. [Action verb + outcome: "Recognize...", "Apply...", "Distinguish..."]
-2. [Action verb + outcome]
-3. [Action verb + outcome]
-4. [Action verb + outcome]
-5. [Action verb + outcome: typically 4-6 outcomes]
+## What's Next
 
----
+After completing this chapter, continue to **Chapter [N+1]: [Title]** where [describe the transition and what comes next].
 
-[1-2 paragraph closing that establishes the bridge to the next chapter or next phase of learning]
-
----
+[1-2 sentences showing how this chapter's learning feeds into the next, building anticipation and momentum]
 ```
 
 ## Template Guidance
 
-### Section: Overview
+### Section: Opening Narrative (No Heading)
 
-**Purpose**: Situate the reader within the learning journey and establish relevance.
+**Purpose**: Immediately engage the reader and establish the chapter's importance within the learning journey.
 
 **What to include**:
-1. **Connection to previous chapter**: Reference what they just learned and how this chapter extends it
-2. **Guiding questions**: Ask the critical questions this chapter answers (3-4 specific questions)
-3. **Scope statement**: Brief description of what this chapter covers and how (evidence-based, practical frameworks, hands-on practice, etc.)
-4. **Outcomes preview**: Light mention of what they'll be able to do (detailed in Learning Outcomes section)
+1. **Connection to previous chapter**: Start with "In Chapter X, you learned/discovered Y..." to establish continuity
+2. **Transition or provocative question**: A compelling statement or question that establishes what this chapter addresses
+3. **Scope and approach**: 1-2 paragraphs describing what the chapter covers (mention number of sections), key frameworks/concepts, and approach (strategic/conceptual vs. technical/practical)
+4. **Tone setting**: Final paragraph establishing whether this is conceptual/strategic or hands-on/practical
 
-**Tone**: Direct, engaging, establishing urgency or relevance without being formulaic
+**Tone**: Direct, narrative, engaging—like storytelling, not a syllabus. Avoid headings like "Overview" or "Introduction."
 
-### Section: Main Learning Outcomes
+**Length**: 3-5 paragraphs total
 
-**Purpose**: Set clear, measurable expectations for the chapter.
+### Section: What You'll Learn
+
+**Purpose**: Set clear, rich expectations for the chapter with detailed context.
 
 **Requirements**:
-- Use strong action verbs from Bloom's taxonomy (Recognize, Analyze, Apply, Distinguish, Evaluate, etc.)
-- State what learner will be able to *do*, not what they'll "understand"
-- 4-6 outcomes (not 10+; aim for depth over quantity)
-- Format as numbered list with no checkbox bullets
-- Each outcome should be achievable and verifiable
+- Use bullet points (not numbered list)
+- Each bullet has two parts: **Bold topic/framework name**: Detailed description
+- Descriptions should be 1-2 sentences with specific examples, concrete details, or outcomes
+- Include specifics: numbers, examples, timeframes, comparisons
+- 4-6 bullets total (aim for depth over quantity)
+- Final bullet often personalizes to reader's situation ("Your strategic positioning", "Your path forward", etc.)
 
-**Examples of strong outcomes**:
-- "Recognize concrete evidence that 2025 differs from previous AI cycles"
-- "Apply a 7-step workflow to structure your development process"
-- "Evaluate trade-offs between different AI-first architecture approaches"
-
-### Closing Bridge (Optional but Recommended)
-
-**Purpose**: Create momentum toward the next chapter and show how learning progresses.
-
-**What to include**:
-- How this chapter's learning feeds into what comes next
-- The broader narrative arc (where are they in the journey?)
-- Optional: a provocative question or forward-looking statement that builds anticipation
-
----
+**Format**:
 ```
+- **[Framework/Topic name]**: [1-2 sentence detailed description with specifics, examples, or concrete outcomes]
+```
+
+**Examples of rich bullets**:
+- **The Snakes & Ladders framework**: Why competing in vertical markets (healthcare, legal, logistics) offers better odds than competing at the consumer layer, and how the game board has fundamentally changed
+- **Super orchestrator economics**: How tiny teams generate billion-dollar value by orchestrating AI to handle the mechanical 90% while humans focus on the creative 10%—from Instagram's 13-person team to Claude Code's single-developer model
+
+### Section: What's Next
+
+**Purpose**: Create strong momentum toward the next chapter and show how learning progresses.
+
+**Requirements**:
+- Start with: "After completing this chapter, continue to **Chapter [N+1]: [Title]** where..."
+- Describe the transition and what comes next (1 sentence)
+- Add 1-2 sentences showing how this chapter's learning feeds into the next
+- Build anticipation with strong, purposeful language
+- Should feel like a chapter ending in a book, not a course syllabus
+
+**Tone**: Forward-looking, building anticipation, showing the learning journey continues
 
 ## Critical Rules
 
 1. **File Naming**: ALWAYS use `README.md` (uppercase), NEVER `readme.md` or `index.md`
-2. **Structure**: Chapters have only THREE main sections: **Overview**, **Main Learning Outcomes**, and optional **Closing Bridge**
-3. **No subsections**: Do NOT include "Chapter Structure", "Prerequisites", "What Makes This Chapter Unique", "Time Investment", etc.
-4. **Learning Outcomes**: Use strong action verbs (Recognize, Apply, Distinguish, Evaluate, Analyze, etc.)
-5. **Narrative flow**: Write as if speaking directly to the reader; establish context and relevance
-6. **Professional Polish**: Publication-quality writing with no typos, clear prose, and engaging tone
+2. **Structure**: Chapters have only TWO sections with headings: **What You'll Learn** and **What's Next** (opening narrative has NO heading)
+3. **No "Overview" heading**: Start directly with narrative paragraphs connecting to previous chapter
+4. **No subsections**: Do NOT include "Chapter Structure", "Prerequisites", "What Makes This Chapter Unique", "Time Investment", "How to Read This Chapter", etc.
+5. **Learning bullets must be rich**: Each bullet should have **bold topic name**: detailed description (1-2 sentences with specifics)
+6. **Narrative flow**: Write as if speaking directly to the reader; establish context and relevance like storytelling
+7. **Professional Polish**: Publication-quality writing with no typos, clear prose, and engaging tone
+8. **YAML order**: Always `sidebar_position` first, then `title`
 
 ## Example: Good Chapter README
 
 ```markdown
 ---
-title: "Chapter 3: Mastering Your AI Pair"
 sidebar_position: 3
+title: "Chapter 3: Mastering Your AI Pair"
 ---
 
 # Chapter 3: Mastering Your AI Pair
 
-## Overview
-
 In Chapters 1 and 2, you understood the transformation and the strategic context. Now comes the practical work: learning to *collaborate effectively* with AI.
 
-This chapter moves beyond vibe coding into disciplined partnership. You'll discover how to set up your AI development environment, establish clear communication patterns with your AI pair, navigate common pitfalls, and measure your effectiveness. You'll learn when to guide and when to trust, how to validate AI suggestions, and how to iterate productively.
+This chapter moves beyond experimental "vibe coding" into disciplined partnership. Through seven interconnected sections, you'll discover how to set up your AI development environment, establish clear communication patterns with your AI pair, validate suggestions critically, debug collaboratively, and apply the Spec-Driven Development workflow to structure real projects.
 
-By the end of this chapter, you'll have working tools, proven workflows, and the confidence to build real projects with AI as a true collaborator.
+You'll learn when to guide and when to trust, how to recognize anti-patterns before they derail your productivity, and how to restore effectiveness when AI collaboration breaks down. This is hands-on and practical—you'll configure actual tools, run real commands, and build working projects.
 
----
+By the end of this chapter, you'll have working tools, proven workflows, and the confidence to build production-quality software with AI as a true collaborator.
 
-## Main Learning Outcomes
+## What You'll Learn
 
-After completing this chapter, you will be able to:
+By the end of this chapter, you'll understand:
 
-1. Configure your local development environment with AI-first tools (Claude Code, Git, editor extensions)
-2. Evaluate AI suggestions critically using three criteria: correctness, clarity, and alignment with your codebase
-3. Debug collaboratively: interpreting error messages and guiding AI toward solutions
-4. Apply the Spec-Driven Development workflow to structure AI-assisted projects
-5. Recognize anti-patterns and restore productivity when AI collaboration breaks down
+- **Environment setup and toolchain**: How to configure your local development environment with AI-first tools (Claude Code, Git, VS Code extensions) and verify your installation with a test project
+- **Critical evaluation framework**: The three criteria for assessing AI suggestions (correctness, clarity, codebase alignment) and how to spot hallucinations or inappropriate recommendations before they reach production
+- **Collaborative debugging**: How to interpret error messages, guide AI toward root causes, and iterate through solutions—treating AI as a debugging partner, not an oracle
+- **Spec-Driven Development workflow**: The complete 7-step SDD process (Specify → Plan → Tasks → Implement → Test → Review → Refine) that transforms vibe coding into reliable, repeatable development
+- **Anti-patterns and recovery strategies**: Five common failure modes (over-reliance, context loss, drift, premature complexity, tooling misalignment) and specific techniques to restore productivity
+- **Your development identity**: How to position yourself as an active orchestrator—not a passive consumer—of AI assistance, establishing habits that compound over every future project
 
----
+## What's Next
 
-This chapter transforms you from a passive consumer of AI outputs to an active orchestrator of AI-assisted development. What you learn here becomes your foundation for every project that follows.
+After completing this chapter, continue to **Chapter 4: Python Foundations** where you'll apply these collaboration skills to learning Python itself. You'll discover how AI-augmented learning accelerates skill acquisition while building genuine understanding—not just copying code.
 
----
+The tools and workflows you establish here become your foundation for every technical chapter that follows. You're not just learning Python. You're learning how to learn *with* AI.
 ```
----
 
 ## Validation Checklist
 
 - [ ] File named `README.md` (uppercase)
-- [ ] Three sections only: **Overview**, **Main Learning Outcomes**, **Closing Bridge** (optional)
-- [ ] **Overview** includes: (1) connection to previous chapter, (2) guiding questions, (3) scope/approach
-- [ ] **Main Learning Outcomes** has 4-6 outcomes with strong action verbs
-- [ ] No "Prerequisites", "Chapter Structure", "Time Investment", or other metadata sections
-- [ ] Opening connects directly to previous chapter (establish narrative continuity)
-- [ ] Learning outcomes are achievable and verifiable (not vague "understand" statements)
-- [ ] Closing bridge previews next chapter or next learning phase
-- [ ] Tone is direct and engaging ("you", "your", conversational)
+- [ ] YAML frontmatter: `sidebar_position` first, then `title`
+- [ ] Opening narrative (NO "Overview" heading): 3-5 paragraphs connecting to previous chapter and establishing scope
+- [ ] Opening starts with "In Chapter X, you learned/discovered Y..."
+- [ ] Opening mentions number of sections and previews key concepts
+- [ ] **What You'll Learn** section with 4-6 bullet points
+- [ ] Each bullet has format: **Bold topic**: Detailed 1-2 sentence description with specifics
+- [ ] Bullets include concrete details: numbers, examples, frameworks, outcomes
+- [ ] Final bullet often personalizes to reader ("Your strategic positioning", "Your development identity", etc.)
+- [ ] **What's Next** section starts with "After completing this chapter, continue to **Chapter [N+1]: [Title]** where..."
+- [ ] "What's Next" builds anticipation and shows learning progression
+- [ ] No "Prerequisites", "Chapter Structure", "Time Investment", "How to Read This Chapter", or metadata sections
+- [ ] Tone is direct, narrative, and engaging ("you", "your", conversational storytelling)
 - [ ] No typos, grammatical errors, or placeholder text
-- [ ] Professional, publication-quality writing
+- [ ] Professional, publication-quality writing throughout
