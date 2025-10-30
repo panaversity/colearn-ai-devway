@@ -53,7 +53,7 @@ function HomepageHeader() {
             <div className={styles.heroButtons}>
               <Link
                 className={clsx('button button--primary button--lg', styles.ctaButton)}
-                to="/docs/Introducing-AI-Driven-Development/intro">
+                to="/docs/Introducing-AI-Driven-Development">
                 <span className={styles.buttonContent}>
                   <span className={styles.buttonText}>Start Reading Free</span>
                   <span className={styles.buttonIcon}>→</span>
@@ -274,7 +274,7 @@ function ParadigmShift() {
               </div>
               <Link
                 className={clsx('button button--primary button--lg', styles.paradigmCTAButton)}
-                to="/docs/Introducing-AI-Driven-Development/intro">
+                to="/docs/Introducing-AI-Driven-Development">
                 Start Learning Now
               </Link>
             </div>
