@@ -5,15 +5,15 @@
  */
 
 /* You can override the default Infima variables here. */
-/* Dark Blue Palette: Deep Sea inspired - darker for light mode */
+/* Navy Blue Palette: Bright Navy (Option C) - Professional & Energetic */
 :root {
-  --ifm-color-primary: #005b96;
-  --ifm-color-primary-dark: #004d7d;
-  --ifm-color-primary-darker: #004670;
-  --ifm-color-primary-darkest: #00314a;
-  --ifm-color-primary-light: #03396c;
-  --ifm-color-primary-lighter: #011f4b;
-  --ifm-color-primary-lightest: #6497b1;
+  --ifm-color-primary: #004d99;
+  --ifm-color-primary-dark: #004080;
+  --ifm-color-primary-darker: #003d73;
+  --ifm-color-primary-darkest: #002147;
+  --ifm-color-primary-light: #0066cc;
+  --ifm-color-primary-lighter: #3385d6;
+  --ifm-color-primary-lightest: #6699cc;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-heading-font-weight: 600;

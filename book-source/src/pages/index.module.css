@@ -8,10 +8,11 @@
  * - Depth: Layered design with subtle shadows and depth
  * - Spacing: Generous whitespace for breathing room
  * 
- * Dark Blue Palette: Blue Horizon / Deep Sea inspired
- * - Deep Navy: #0d1b2a, #1a3a5c, #2d4a6e
- * - Medium Blue: #41699d, #5a7d9a
- * - Light Blue: #7ba4c4, #a8c5d9
+ * Navy Blue Palette: Bright Navy (Professional & Energetic)
+ * - Deep: #002147 (Oxford Blue)
+ * - Medium: #003366 (Sapphire)
+ * - Accent: #004d99 (Cerulean)
+ * - Light: #6699cc (Cornflower)
  */
 
 /* ============================================
@@ -23,8 +24,8 @@
   padding: 8rem 2rem 10rem;
   text-align: center;
   overflow: hidden;
-  /* Deep Sea palette - darker blues for light mode visibility */
-  background: linear-gradient(180deg, #011f4b 0%, #03396c 50%, #005b96 100%);
+  /* Navy Blue palette - professional and energetic */
+  background: linear-gradient(180deg, #002147 0%, #003366 50%, #004d99 100%);
   color: white;
   min-height: 90vh;
   display: flex;
@@ -32,7 +33,7 @@
 }
 
 [data-theme='dark'] .heroBanner {
-  background: linear-gradient(180deg, #0d1b2a 0%, #1a3a5c 50%, #2d4a6e 100%);
+  background: linear-gradient(180deg, #001529 0%, #002d52 50%, #00416b 100%);
 }
 
 .heroGradient {
@@ -41,10 +42,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.08;
+  opacity: 0.1;
   background:
-    radial-gradient(circle at 30% 40%, rgba(91, 125, 157, 0.15) 0%, transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(123, 164, 196, 0.1) 0%, transparent 60%);
+    radial-gradient(circle at 30% 40%, rgba(102, 153, 204, 0.2) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(0, 77, 153, 0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -209,7 +210,7 @@
 
 .ctaButton {
   background: white !important;
-  color: #011f4b !important;
+  color: #002147 !important;
   border: none !important;
   font-weight: 600;
   padding: 1rem 2.75rem !important;
@@ -229,7 +230,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(1, 31, 75, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 33, 71, 0.05), transparent);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -240,7 +241,7 @@
 .ctaButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  color: #011f4b !important;
+  color: #002147 !important;
 }
 
 .ctaButton:active {
@@ -365,11 +366,11 @@
     padding: 6rem 1.5rem 5rem;
     min-height: auto;
   }
-  
+
   .heroTitle {
     font-size: 2.5rem;
   }
-  
+
   .heroSubtitle {
     font-size: 1.125rem;
   }
@@ -445,7 +446,7 @@
 }
 
 [data-theme='dark'] .features {
-  background: #011f4b;
+  background: #001529;
 }
 
 .featuresGrid {
@@ -460,7 +461,7 @@
   padding: 2.5rem;
   border-radius: 20px;
   background: #ffffff;
-  border: 1px solid rgba(1, 31, 75, 0.12);
+  border: 1px solid rgba(0, 33, 71, 0.12);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   /* Apple-style depth: subtle elevation */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -468,8 +469,8 @@
 
 .feature:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(1, 31, 75, 0.15);
-  border-color: rgba(0, 91, 150, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 33, 71, 0.15);
+  border-color: rgba(0, 77, 153, 0.3);
 }
 
 [data-theme='dark'] .feature {
@@ -495,7 +496,7 @@
   font-size: 1.375rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #011f4b;
+  color: #002147;
   letter-spacing: -0.01em;
   /* Apple-style: clear hierarchy */
 }
@@ -505,7 +506,7 @@
 }
 
 .featureDescription {
-  color: rgba(1, 31, 75, 0.75);
+  color: rgba(0, 33, 71, 0.8);
   line-height: 1.7;
   margin: 0;
   font-size: 1rem;
@@ -527,7 +528,7 @@
 }
 
 [data-theme='dark'] .paradigmSection {
-  background: rgba(1, 31, 75, 0.6);
+  background: rgba(0, 21, 41, 0.6);
 }
 
 .paradigmContent {
@@ -540,7 +541,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 5rem;
-  color: #011f4b;
+  color: #002147;
   letter-spacing: -0.03em;
   /* Apple-style: clear, readable headings */
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
@@ -560,22 +561,22 @@
   padding: 3rem;
   border-radius: 20px;
   background: #ffffff;
-  border: 1px solid rgba(1, 31, 75, 0.12);
+  border: 1px solid rgba(0, 33, 71, 0.12);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 [data-theme='dark'] .comparisonCard {
-  background: rgba(26, 58, 92, 0.4);
+  background: rgba(0, 45, 82, 0.4);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .comparisonCardHighlight {
-  border-color: rgba(0, 91, 150, 0.4);
-  background: linear-gradient(135deg, rgba(0, 91, 150, 0.08) 0%, rgba(3, 57, 108, 0.06) 100%);
+  border-color: rgba(0, 77, 153, 0.4);
+  background: linear-gradient(135deg, rgba(0, 77, 153, 0.08) 0%, rgba(0, 51, 102, 0.06) 100%);
   position: relative;
-  box-shadow: 0 4px 16px rgba(0, 91, 150, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 77, 153, 0.15);
 }
 
 [data-theme='dark'] .comparisonCardHighlight {
@@ -589,7 +590,7 @@
   position: absolute;
   top: -14px;
   right: 24px;
-  background: #005b96;
+  background: #004d99;
   color: white;
   padding: 0.375rem 1.25rem;
   border-radius: 50px;
@@ -597,7 +598,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  box-shadow: 0 2px 8px rgba(0, 91, 150, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 77, 153, 0.4);
 }
 
 [data-theme='dark'] .comparisonCardHighlight::before {
@@ -609,7 +610,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #011f4b;
+  color: #002147;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -628,7 +629,7 @@
   padding: 0.875rem 0;
   padding-left: 2.25rem;
   position: relative;
-  color: rgba(1, 31, 75, 0.85);
+  color: rgba(0, 33, 71, 0.85);
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -641,7 +642,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: rgba(1, 31, 75, 0.6);
+  color: rgba(0, 33, 71, 0.6);
   font-weight: 600;
   font-size: 1.125rem;
 }
@@ -652,7 +653,7 @@
 
 .comparisonCardHighlight .comparisonList li::before {
   content: '✓';
-  color: #005b96;
+  color: #004d99;
   font-size: 1rem;
 }
 
@@ -670,7 +671,7 @@
 }
 
 [data-theme='dark'] .pathSection {
-  background: #011f4b;
+  background: #001529;
 }
 
 .pathGrid {
@@ -685,7 +686,7 @@
   padding: 3rem 2.5rem;
   border-radius: 20px;
   background: #ffffff;
-  border: 1px solid rgba(1, 31, 75, 0.12);
+  border: 1px solid rgba(0, 33, 71, 0.12);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -693,8 +694,8 @@
 
 .pathCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(1, 31, 75, 0.15);
-  border-color: rgba(0, 91, 150, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 33, 71, 0.15);
+  border-color: rgba(0, 77, 153, 0.3);
 }
 
 [data-theme='dark'] .pathCard {
@@ -716,12 +717,12 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #005b96 0%, #03396c 100%);
+  background: linear-gradient(135deg, #004d99 0%, #003366 100%);
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 91, 150, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 77, 153, 0.35);
 }
 
 [data-theme='dark'] .pathNumber {
@@ -733,7 +734,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #011f4b;
+  color: #002147;
   letter-spacing: -0.01em;
 }
 
@@ -742,7 +743,7 @@
 }
 
 .pathCard p {
-  color: rgba(1, 31, 75, 0.75);
+  color: rgba(0, 33, 71, 0.8);
   line-height: 1.7;
   margin: 0;
   font-size: 1rem;
@@ -758,14 +759,14 @@
 
 .ctaSection {
   padding: 8rem 2rem;
-  background: linear-gradient(180deg, #011f4b 0%, #03396c 50%, #005b96 100%);
+  background: linear-gradient(180deg, #002147 0%, #003366 50%, #004d99 100%);
   color: white;
   text-align: center;
-  /* Consistent with hero section - Deep Sea palette */
+  /* Consistent with hero section - Navy Blue palette */
 }
 
 [data-theme='dark'] .ctaSection {
-  background: linear-gradient(180deg, #0d1b2a 0%, #1a3a5c 50%, #2d4a6e 100%);
+  background: linear-gradient(180deg, #001529 0%, #002d52 50%, #00416b 100%);
 }
 
 .ctaContent {
@@ -800,7 +801,7 @@
 
 .ctaButtonLarge {
   background: white !important;
-  color: #011f4b !important;
+  color: #002147 !important;
   border: none !important;
   font-weight: 600;
   padding: 1.25rem 3.5rem !important;
@@ -819,7 +820,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(1, 31, 75, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 33, 71, 0.05), transparent);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -830,7 +831,7 @@
 .ctaButtonLarge:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-  color: #011f4b !important;
+  color: #002147 !important;
 }
 
 .ctaButtonLarge:active {
