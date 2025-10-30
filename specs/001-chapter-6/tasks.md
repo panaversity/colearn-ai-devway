@@ -31,13 +31,13 @@
 
 **Purpose**: Create lesson outlines and chapter framework
 
-- [ ] T001 Create chapter README.md in book-source/docs/06-gemini-cli-installation-and-basics/README.md
-- [ ] T002 [P] Create 01-lesson-1.md outline (Why Gemini CLI Matters) in book-source/docs/06-gemini-cli-installation-and-basics/01-why-gemini-cli-matters.md
-- [ ] T003 [P] [US1] Create 02-lesson-2.md outline (Installation) in book-source/docs/06-gemini-cli-installation-and-basics/02-installation-platform-specific.md
-- [ ] T004 [P] [US1] Create 03-lesson-3.md outline (Authentication) in book-source/docs/06-gemini-cli-installation-and-basics/03-authentication-and-configuration.md
-- [ ] T005 [P] [US2] Create 04-lesson-4.md outline (First Commands) in book-source/docs/06-gemini-cli-installation-and-basics/04-your-first-commands.md
-- [ ] T006 [P] [US3] Create 05-lesson-5.md outline (Built-In Tools) in book-source/docs/06-gemini-cli-installation-and-basics/05-built-in-tools-deep-dive.md
-- [ ] T007 [P] [US4] [US5] [US6] Create 06-lesson-6.md outline (Context Window & Comparison) in book-source/docs/06-gemini-cli-installation-and-basics/06-context-window-and-tool-comparison.md
+- [X] T001 Create chapter README.md in book-source/docs/06-gemini-cli-installation-and-basics/README.md
+- [X] T002 [P] Create 01-lesson-1.md outline (Why Gemini CLI Matters) in book-source/docs/06-gemini-cli-installation-and-basics/01-why-gemini-cli-matters.md
+- [X] T003 [P] [US1] Create 02-lesson-2.md outline (Installation) in book-source/docs/06-gemini-cli-installation-and-basics/02-installation-platform-specific.md
+- [X] T004 [P] [US1] Create 03-lesson-3.md outline (Authentication) in book-source/docs/06-gemini-cli-installation-and-basics/03-authentication-and-configuration.md
+- [X] T005 [P] [US2] Create 04-lesson-4.md outline (First Commands) in book-source/docs/06-gemini-cli-installation-and-basics/04-your-first-commands.md
+- [X] T006 [P] [US3] Create 05-lesson-5.md outline (Built-In Tools) in book-source/docs/06-gemini-cli-installation-and-basics/05-built-in-tools-deep-dive.md
+- [X] T007 [P] [US4] [US5] [US6] Create 06-lesson-6.md outline (Context Window & Comparison) in book-source/docs/06-gemini-cli-installation-and-basics/06-context-window-and-tool-comparison.md
 
 ---
 
@@ -48,23 +48,23 @@
 
 ### Lesson 2: Installation — Platform-Specific (US1)
 
-- [ ] T008 [US1] Write pre-installation checklist in 02-installation-platform-specific.md
-- [ ] T009 [P] [US1] Write Windows installation section with PowerShell and Command Prompt options
-- [ ] T010 [P] [US1] Write macOS installation section with npm and Homebrew options, M1/M2 guidance
-- [ ] T011 [P] [US1] Write Linux installation section (Ubuntu/Debian/Fedora coverage)
-- [ ] T012 [US1] Write verification section common to all platforms (`gemini --version`)
-- [ ] T013 [US1] Write troubleshooting section covering 8-10 common failure scenarios
-- [ ] T014 [P] [US1] Create terminal output examples showing successful installation
+- [X] T008 [US1] Write pre-installation checklist in 02-installation-platform-specific.md
+- [X] T009 [P] [US1] Write Windows installation section with PowerShell and Command Prompt options
+- [X] T010 [P] [US1] Write macOS installation section with npm and Homebrew options, M1/M2 guidance
+- [X] T011 [P] [US1] Write Linux installation section (Ubuntu/Debian/Fedora coverage)
+- [X] T012 [US1] Write verification section common to all platforms (`gemini --version`)
+- [X] T013 [US1] Write troubleshooting section covering 8-10 common failure scenarios
+- [X] T014 [P] [US1] Create terminal output examples showing successful installation
 
 ### Lesson 3: Authentication & Configuration (US1)
 
-- [ ] T015 [US1] Write OAuth authentication conceptual explanation in 03-authentication-and-configuration.md
-- [ ] T016 [US1] Write step-by-step authentication walkthrough (`gemini auth` command)
-- [ ] T017 [US1] Write verification section explaining `gemini status` output
-- [ ] T018 [US1] Explain free tier quotas in practical terms (60 req/min, 1,000 req/day)
-- [ ] T019 [US1] Write configuration section (config file location, customization options)
-- [ ] T020 [US1] Write authentication troubleshooting (5-6 common failure scenarios)
-- [ ] T021 [P] [US1] [US7] Mention regional limitations and Qwen Code alternative
+- [X] T015 [US1] Write OAuth authentication conceptual explanation in 03-authentication-and-configuration.md
+- [X] T016 [US1] Write step-by-step authentication walkthrough (`gemini auth` command)
+- [X] T017 [US1] Write verification section explaining `gemini status` output
+- [X] T018 [US1] Explain free tier quotas in practical terms (60 req/min, 1,000 req/day)
+- [X] T019 [US1] Write configuration section (config file location, customization options)
+- [X] T020 [US1] Write authentication troubleshooting (5-6 common failure scenarios)
+- [X] T021 [P] [US1] [US7] Mention regional limitations and Qwen Code alternative
 
 ---
 
@@ -75,12 +75,12 @@
 
 ### Lesson 4: Your First Commands (US2)
 
-- [ ] T022 [US2] Write command syntax explanation in 04-your-first-commands.md
-- [ ] T023 [US2] Write first verification command walkthrough
-- [ ] T024 [US2] Provide five quick verification commands with expected outputs
-- [ ] T025 [US2] Explain how to interpret AI responses (critical thinking, verification)
-- [ ] T026 [US2] Write common error scenarios section (5-6 error messages with solutions)
-- [ ] T027 [P] [US2] Add prompting fundamentals teaser (defer details to Part 3)
+- [X] T022 [US2] Write command syntax explanation in 04-your-first-commands.md
+- [X] T023 [US2] Write first verification command walkthrough
+- [X] T024 [US2] Provide five quick verification commands with expected outputs
+- [X] T025 [US2] Explain how to interpret AI responses (critical thinking, verification)
+- [X] T026 [US2] Write common error scenarios section (5-6 error messages with solutions)
+- [X] T027 [P] [US2] Add prompting fundamentals teaser (defer details to Part 3)
 
 ---
 
@@ -91,12 +91,12 @@
 
 ### Lesson 1: Why Gemini CLI Matters (US6, US7)
 
-- [ ] T028 [P] [US6] Write opening hook and context in 01-why-gemini-cli-matters.md
-- [ ] T029 [P] [US6] Write section on three key differentiators (open source, free tier, context)
-- [ ] T030 [P] [US6] Create comparison table (Claude Code vs Gemini CLI) with 6-8 dimensions
-- [ ] T031 [P] [US6] Write when-to-use guidance (3-4 concrete scenarios)
-- [ ] T032 [P] [US5] Introduce MCP and extensibility conceptually (1-2 paragraphs)
-- [ ] T033 [P] [US6] Add real-world examples of Gemini CLI benefits
+- [X] T028 [P] [US6] Write opening hook and context in 01-why-gemini-cli-matters.md
+- [X] T029 [P] [US6] Write section on three key differentiators (open source, free tier, context)
+- [X] T030 [P] [US6] Create comparison table (Claude Code vs Gemini CLI) with 6-8 dimensions
+- [X] T031 [P] [US6] Write when-to-use guidance (3-4 concrete scenarios)
+- [X] T032 [P] [US5] Introduce MCP and extensibility conceptually (1-2 paragraphs)
+- [X] T033 [P] [US6] Add real-world examples of Gemini CLI benefits
 
 ---
 
@@ -107,13 +107,13 @@
 
 ### Lesson 5: Built-In Tools Deep Dive (US3)
 
-- [ ] T034 [US3] Write introduction explaining why built-in tools differentiate Gemini CLI in 05-built-in-tools-deep-dive.md
-- [ ] T035 [P] [US3] Write File Operations tool section (`--file` flag, examples, use cases, exercise)
-- [ ] T036 [P] [US3] Write Web Fetching tool section (`--web-fetch`, examples, exercise)
-- [ ] T037 [P] [US3] Write Search Grounding section (current information, source citation, exercise)
-- [ ] T038 [P] [US3] Write Shell Integration section (command suggestions, exercise)
-- [ ] T039 [US3] Write tool combination exercise (realistic scenario using 2-3 tools)
-- [ ] T040 [P] [US3] Add tool limitations and constraints section
+- [X] T034 [US3] Write introduction explaining why built-in tools differentiate Gemini CLI in 05-built-in-tools-deep-dive.md
+- [X] T035 [P] [US3] Write File Operations tool section (`--file` flag, examples, use cases, exercise)
+- [X] T036 [P] [US3] Write Web Fetching tool section (`--web-fetch`, examples, exercise)
+- [X] T037 [P] [US3] Write Search Grounding section (current information, source citation, exercise)
+- [X] T038 [P] [US3] Write Shell Integration section (command suggestions, exercise)
+- [X] T039 [US3] Write tool combination exercise (realistic scenario using 2-3 tools)
+- [X] T040 [P] [US3] Add tool limitations and constraints section
 
 ---
 
@@ -124,16 +124,16 @@
 
 ### Lesson 6: Context Window & Tool Comparison (US4, US5, US6, US7)
 
-- [ ] T041 [US4] Write tokens-to-practical translation in 06-context-window-and-tool-comparison.md
-- [ ] T042 [US4] Write "when context size doesn't matter" section
-- [ ] T043 [US4] Write "when context becomes critical" section with real scenarios
-- [ ] T044 [US4] Create scenario table (context requirements vs tool viability)
-- [ ] T045 [US6] Write decision framework section (when to choose each tool)
-- [ ] T046 [P] [US5] Introduce Extensions conceptually (2-3 examples)
-- [ ] T047 [P] [US5] Introduce MCP conceptually (1-2 sentences)
-- [ ] T048 [P] [US7] Mention Qwen Code as alternative (2,000 req/day free tier)
-- [ ] T049 [US6] Include decision-making exercise (3-5 scenarios)
-- [ ] T050 [P] [US6] Create expanded comparison table (8+ dimensions)
+- [X] T041 [US4] Write tokens-to-practical translation in 06-context-window-and-tool-comparison.md
+- [X] T042 [US4] Write "when context size doesn't matter" section
+- [X] T043 [US4] Write "when context becomes critical" section with real scenarios
+- [X] T044 [US4] Create scenario table (context requirements vs tool viability)
+- [X] T045 [US6] Write decision framework section (when to choose each tool)
+- [X] T046 [P] [US5] Introduce Extensions conceptually (2-3 examples)
+- [X] T047 [P] [US5] Introduce MCP conceptually (1-2 sentences)
+- [X] T048 [P] [US7] Mention Qwen Code as alternative (2,000 req/day free tier)
+- [X] T049 [US6] Include decision-making exercise (3-5 scenarios)
+- [X] T050 [P] [US6] Create expanded comparison table (8+ dimensions)
 
 ---
 

@@ -17,7 +17,8 @@
       "WebFetch(domain:github.com)",
       "Bash(.specify/scripts/bash/create-phr.sh:*)",
       "Bash(git -C /Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python log --oneline 003-chapter-1-spec -20)",
-      "Skill(quiz-generator)"
+      "Skill(quiz-generator)",
+      "Bash(\"D:\\Panaversity\\book_development\\for_claude_code\\colearn-aidd\\.specify\\scripts\\bash\\check-prerequisites.sh\" --json --require-tasks --include-tasks)"
     ],
     "deny": [],
     "ask": []
