@@ -1,0 +1,587 @@
+/**
+ * ============================================================================
+ * SIDEBAR PREMIUM STYLING
+ * Enhances left sidebar navigation to match the beautiful homepage design
+ * Polar Night Theme - Consistent for Light & Dark Modes
+ * ============================================================================
+ */
+
+/* ============================================================================
+   1. SIDEBAR CONTAINER
+   ============================================================================ */
+
+/* Main sidebar container */
+.theme-doc-sidebar-container {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(249, 249, 249, 0.95) 100%
+    ) !important;
+    border-right: 1px solid rgba(0, 31, 63, 0.08) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container {
+    background: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0.98) 0%,
+        rgba(26, 26, 26, 0.95) 100%
+    ) !important;
+    border-right: 1px solid rgba(170, 170, 170, 0.12) !important;
+}
+
+/* Sidebar inner wrapper */
+.sidebar {
+    padding: 1.5rem 1rem !important;
+}
+
+/* ============================================================================
+   2. SIDEBAR MENU
+   ============================================================================ */
+
+/* Menu container */
+.menu {
+    padding: 0.5rem 0;
+}
+
+/* Menu list */
+.menu__list {
+    padding-left: 0;
+    margin: 0;
+}
+
+/* ============================================================================
+   3. MENU ITEMS - PREMIUM STYLING
+   ============================================================================ */
+
+/* Base menu item */
+.menu__list-item {
+    margin-bottom: 0.25rem;
+}
+
+/* Menu link base styles */
+.menu__link {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.625rem 1rem !important;
+    border-radius: 6px !important;
+    font-size: 0.9375rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #2c3e50 !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    border-left: 3px solid transparent !important;
+    margin-left: 0 !important;
+}
+
+[data-theme="dark"] .menu__link {
+    color: #b0b0b0 !important;
+}
+
+/* Menu link hover state */
+.menu__link:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.06) 0%,
+        rgba(0, 31, 63, 0.03) 100%
+    ) !important;
+    color: #001f3f !important;
+    border-left-color: rgba(0, 31, 63, 0.3) !important;
+    transform: translateX(2px) !important;
+    text-decoration: none !important;
+}
+
+[data-theme="dark"] .menu__link:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(170, 170, 170, 0.08) 0%,
+        rgba(170, 170, 170, 0.04) 100%
+    ) !important;
+    color: #dddddd !important;
+    border-left-color: rgba(170, 170, 170, 0.4) !important;
+}
+
+/* Active menu item */
+.menu__link--active {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.12) 0%,
+        rgba(0, 31, 63, 0.08) 100%
+    ) !important;
+    color: #001f3f !important;
+    font-weight: 500 !important;
+    border-left-color: #001f3f !important;
+    box-shadow: 0 2px 4px rgba(0, 31, 63, 0.08) !important;
+}
+
+[data-theme="dark"] .menu__link--active {
+    background: linear-gradient(
+        135deg,
+        rgba(170, 170, 170, 0.15) 0%,
+        rgba(170, 170, 170, 0.08) 100%
+    ) !important;
+    color: #dddddd !important;
+    border-left-color: #aaaaaa !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Active menu item hover (maintain active state) */
+.menu__link--active:hover {
+    transform: translateX(2px) !important;
+    box-shadow: 0 3px 8px rgba(0, 31, 63, 0.12) !important;
+}
+
+[data-theme="dark"] .menu__link--active:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ============================================================================
+   4. CATEGORY / COLLAPSIBLE SECTIONS
+   ============================================================================ */
+
+/* Category container */
+.menu__list-item--collapsed .menu__list,
+.menu__list-item:not(.menu__list-item--collapsed) .menu__list {
+    padding-left: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    border-left: 2px solid rgba(0, 31, 63, 0.08);
+    margin-left: 0.75rem;
+}
+
+[data-theme="dark"] .menu__list-item--collapsed .menu__list,
+[data-theme="dark"]
+    .menu__list-item:not(.menu__list-item--collapsed)
+    .menu__list {
+    border-left-color: rgba(170, 170, 170, 0.12);
+}
+
+/* Category label (clickable header) */
+.menu__link--sublist {
+    font-weight: 500 !important;
+    color: #001f3f !important;
+    text-transform: none !important;
+    font-size: 0.9375rem !important;
+    letter-spacing: 0 !important;
+    padding: 0.75rem 1rem !important;
+    padding-right: 1rem !important;
+    position: relative !important;
+}
+
+[data-theme="dark"] .menu__link--sublist {
+    color: #cccccc !important;
+}
+
+/* Category label hover */
+.menu__link--sublist:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.08) 0%,
+        rgba(0, 31, 63, 0.04) 100%
+    ) !important;
+}
+
+[data-theme="dark"] .menu__link--sublist:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(170, 170, 170, 0.1) 0%,
+        rgba(170, 170, 170, 0.05) 100%
+    ) !important;
+}
+
+/* Category expand/collapse arrow - REMOVED for cleaner look */
+.menu__link--sublist::after {
+    content: none !important;
+}
+
+/* Category label when active child exists */
+.menu__list-item:not(.menu__list-item--collapsed) > .menu__link--sublist {
+    color: #001f3f !important;
+    background: rgba(0, 31, 63, 0.04) !important;
+}
+
+[data-theme="dark"]
+    .menu__list-item:not(.menu__list-item--collapsed)
+    > .menu__link--sublist {
+    color: #dddddd !important;
+    background: rgba(170, 170, 170, 0.06) !important;
+}
+
+/* ============================================================================
+   5. NESTED MENU ITEMS
+   ============================================================================ */
+
+/* Second level items */
+.menu__list .menu__list .menu__link {
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    padding: 0.5rem 0.875rem !important;
+    padding-left: 1.25rem !important;
+}
+
+/* Third level items */
+.menu__list .menu__list .menu__list .menu__link {
+    font-size: 0.8125rem !important;
+    font-weight: 400 !important;
+    padding-left: 1.75rem !important;
+    opacity: 0.9;
+}
+
+/* ============================================================================
+   6. SIDEBAR HEADER / BRANDING
+   ============================================================================ */
+
+/* Custom sidebar header (if added) */
+.sidebar-header {
+    padding: 1rem 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 31, 63, 0.1);
+}
+
+[data-theme="dark"] .sidebar-header {
+    border-bottom-color: rgba(170, 170, 170, 0.15);
+}
+
+.sidebar-header-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .sidebar-header-title {
+    background: linear-gradient(135deg, #dddddd 0%, #aaaaaa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sidebar-header-subtitle {
+    font-size: 0.8125rem;
+    color: #666;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .sidebar-header-subtitle {
+    color: #999;
+}
+
+/* ============================================================================
+   7. SCROLLBAR STYLING
+   ============================================================================ */
+
+/* Custom scrollbar for sidebar */
+.theme-doc-sidebar-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-doc-sidebar-container::-webkit-scrollbar-track {
+    background: rgba(0, 31, 63, 0.03);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container::-webkit-scrollbar-track {
+    background: rgba(170, 170, 170, 0.05);
+}
+
+.theme-doc-sidebar-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 31, 63, 0.2);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container::-webkit-scrollbar-thumb {
+    background: rgba(170, 170, 170, 0.3);
+}
+
+.theme-doc-sidebar-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 31, 63, 0.35);
+}
+
+[data-theme="dark"]
+    .theme-doc-sidebar-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(170, 170, 170, 0.5);
+}
+
+/* ============================================================================
+   8. SIDEBAR TOGGLE BUTTON
+   ============================================================================ */
+
+/* Toggle button styling */
+.theme-doc-sidebar-toggle {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.05) 0%,
+        rgba(0, 31, 63, 0.02) 100%
+    ) !important;
+    border: 1px solid rgba(0, 31, 63, 0.12) !important;
+    border-radius: 6px !important;
+    padding: 0.5rem !important;
+    transition: all 0.2s ease !important;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-toggle {
+    background: linear-gradient(
+        135deg,
+        rgba(170, 170, 170, 0.08) 0%,
+        rgba(170, 170, 170, 0.04) 100%
+    ) !important;
+    border-color: rgba(170, 170, 170, 0.2) !important;
+}
+
+.theme-doc-sidebar-toggle:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.1) 0%,
+        rgba(0, 31, 63, 0.05) 100%
+    ) !important;
+    border-color: rgba(0, 31, 63, 0.2) !important;
+    transform: scale(1.05) !important;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-toggle:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(170, 170, 170, 0.15) 0%,
+        rgba(170, 170, 170, 0.08) 100%
+    ) !important;
+    border-color: rgba(170, 170, 170, 0.3) !important;
+}
+
+/* ============================================================================
+   9. DIVIDERS / SEPARATORS
+   ============================================================================ */
+
+/* Menu divider (if using custom dividers) */
+.menu__divider {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 31, 63, 0.2) 10%,
+        rgba(0, 31, 63, 0.3) 50%,
+        rgba(0, 31, 63, 0.2) 90%,
+        transparent 100%
+    );
+    margin: 1rem 0.5rem;
+    border: none;
+}
+
+[data-theme="dark"] .menu__divider {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(170, 170, 170, 0.15) 10%,
+        rgba(170, 170, 170, 0.2) 50%,
+        rgba(170, 170, 170, 0.15) 90%,
+        transparent 100%
+    );
+}
+
+/* ============================================================================
+   10. BADGES / LABELS (Optional enhancements)
+   ============================================================================ */
+
+/* New/Beta/Updated badges in sidebar */
+.menu-item-badge {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    color: white;
+}
+
+[data-theme="dark"] .menu-item-badge {
+    background: linear-gradient(135deg, #aaaaaa 0%, #888888 100%);
+    color: #111;
+}
+
+/* Badge variants */
+.menu-item-badge--new {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+}
+
+.menu-item-badge--beta {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.menu-item-badge--updated {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
+/* ============================================================================
+   11. SEARCH BOX IN SIDEBAR (If enabled)
+   ============================================================================ */
+
+/* Sidebar search */
+.sidebar-search {
+    padding: 0 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid rgba(0, 31, 63, 0.15);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .sidebar-search input {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(170, 170, 170, 0.2);
+    color: #d0d0d0;
+}
+
+.sidebar-search input:focus {
+    outline: none;
+    border-color: #001f3f;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+}
+
+[data-theme="dark"] .sidebar-search input:focus {
+    border-color: #aaaaaa;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(170, 170, 170, 0.15);
+}
+
+/* ============================================================================
+   12. SIDEBAR FOOTER (Optional)
+   ============================================================================ */
+
+/* Sidebar footer section */
+.sidebar-footer {
+    padding: 1rem;
+    margin-top: auto;
+    border-top: 2px solid rgba(0, 31, 63, 0.1);
+    font-size: 0.8125rem;
+    color: #666;
+}
+
+[data-theme="dark"] .sidebar-footer {
+    border-top-color: rgba(170, 170, 170, 0.15);
+    color: #999;
+}
+
+/* ============================================================================
+   13. RESPONSIVE BEHAVIOR
+   ============================================================================ */
+
+/* Tablet and below */
+@media screen and (max-width: 996px) {
+    .sidebar {
+        padding: 1rem 0.75rem !important;
+    }
+
+    .menu__link {
+        padding: 0.5rem 0.875rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .menu__link--sublist {
+        padding: 0.625rem 0.875rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    /* Sidebar takes full width when open */
+    .theme-doc-sidebar-container {
+        border-right: none !important;
+    }
+
+    .menu__link {
+        padding: 0.5rem 0.75rem !important;
+    }
+}
+
+/* ============================================================================
+   14. ADDITIONAL POLISH
+   ============================================================================ */
+
+/* Smooth expand/collapse animation */
+.menu__list {
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.menu__link:focus-visible {
+    outline: 2px solid #001f3f;
+    outline-offset: 2px;
+}
+
+[data-theme="dark"] .menu__link:focus-visible {
+    outline-color: #aaaaaa;
+}
+
+/* Prevent text selection on category headers */
+.menu__link--sublist {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* Icon alignment in menu items (if using icons) */
+.menu__link svg,
+.menu__link img {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* ============================================================================
+   15. PART/CHAPTER NUMBERING STYLE
+   ============================================================================ */
+
+/* Enhanced styling for numbered chapters */
+.menu__link[href*="01-"],
+.menu__link[href*="02-"],
+.menu__link[href*="03-"],
+.menu__link[href*="04-"] {
+    position: relative;
+}
+
+/* Add subtle emphasis to part sections */
+.menu__link--sublist[href*="Part"],
+.menu__link--sublist[href*="Introducing"],
+.menu__link--sublist[href*="AI-Tool"] {
+    font-weight: 500 !important;
+    color: #001f3f !important;
+}
+
+[data-theme="dark"] .menu__link--sublist[href*="Part"],
+[data-theme="dark"] .menu__link--sublist[href*="Introducing"],
+[data-theme="dark"] .menu__link--sublist[href*="AI-Tool"] {
+    color: #dddddd !important;
+}
+
+/* ============================================================================
+   16. PERFORMANCE OPTIMIZATIONS
+   ============================================================================ */
+
+/* Hardware acceleration for transforms */
+.menu__link,
+.menu__link--sublist,
+.theme-doc-sidebar-toggle {
+    will-change: transform;
+}
+
+/* Optimize repaints */
+.menu__link::before,
+.menu__link::after {
+    content: none;
+}

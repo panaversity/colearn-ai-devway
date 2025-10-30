@@ -111,11 +111,11 @@ const config: Config = {
           items: [
             {
               label: 'Start Your Journey',
-              to: '/docs/Introducing-AI-Driven-Development/intro',
+              to: '/docs/Introducing-AI-Driven-Development',
             },
             {
               label: 'Full Curriculum',
-              to: '/docs/Introducing-AI-Driven-Development/intro',
+              to: '/docs/Introducing-AI-Driven-Development',
             },
             {
               label: 'Learning Path',
