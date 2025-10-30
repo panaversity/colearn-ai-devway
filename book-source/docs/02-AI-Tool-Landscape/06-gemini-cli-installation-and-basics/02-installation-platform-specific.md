@@ -74,12 +74,11 @@ npm --version
 ### Opening Your Terminal
 
 **Windows:**
-- Press `Win + X` → Select "Windows PowerShell" or "Command Prompt"
-- Or search "PowerShell" in Start menu
+- Press `Win + X`
+- Select "Windows PowerShell" (or "Terminal" if using Windows 11)
 
 **macOS:**
 - Press `Cmd + Space` → Type "Terminal" → Press Enter
-- Or find Terminal in Applications → Utilities
 
 **Linux:**
 - Press `Ctrl + Alt + T`
@@ -208,20 +207,6 @@ sudo npm install -g @google/gemini-cli
 **Why not recommended?** Using `sudo` installs packages with root permissions, which can cause permission issues later. Prefer fixing npm's global directory permissions (see Troubleshooting).
 
 **If prompted for password**: Enter your macOS user password (typing won't show on screen — this is normal).
-
-### M1/M2 Mac Considerations
-
-**Good news**: The Gemini CLI works on Apple Silicon (M1/M2/M3 chips) without special configuration.
-
-**If you encounter architecture errors**, ensure you're using an ARM64-compatible version of Node.js:
-
-```bash
-node -p "process.arch"
-```
-
-**Expected output**: `arm64`
-
-If you see `x64`, you're running Node.js in Rosetta. Reinstall Node.js from [nodejs.org](https://nodejs.org/) (the installer automatically detects Apple Silicon).
 
 ### Using Homebrew (Alternative Installation)
 
