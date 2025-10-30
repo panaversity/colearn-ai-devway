@@ -14,65 +14,62 @@ function HomepageHeader() {
       <div className={styles.heroGradient} />
       <div className="container">
         <div className={styles.heroContent}>
+          {/* Left side - Book Cover */}
           <div className={styles.heroImageContainer}>
             <img 
               src="/img/book-cover.png" 
-              alt="CoLearning Programming Book Cover" 
+              alt="CoLearning Programming: The AI-Driven Way Book Cover" 
               className={styles.heroBookCover}
             />
           </div>
-          <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
-          <Heading as="h1" className={styles.heroTitle}>
-            CoLearning Programming
-            <br />
-            <span className={styles.heroTitleAccent}>The AI Driven Way</span>
-          </Heading>
-          <p className={styles.heroSubtitle}>
-            Master Python & TypeScript by building production-ready AI systems.
-            <br />
-            Transform how you learn with AI as your co-learner and collaborator.
-          </p>
-          <div className={styles.heroBadges}>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>✨</span>
-              100% Free & Open Source
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>📚</span>
-              46 Chapters
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🎯</span>
-              Beginner Friendly
-            </span>
-          </div>
-          <div className={styles.heroButtons}>
-            <Link
-              className={clsx('button button--primary button--lg', styles.ctaButton)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Start Learning Free</span>
-                <span className={styles.buttonIcon}>→</span>
+          
+          {/* Right side - Content */}
+          <div className={styles.heroTextContent}>
+            <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
+            <Heading as="h1" className={styles.heroTitle}>
+              CoLearning Programming
+              <br />
+              <span className={styles.heroTitleAccent}>The AI-Driven Way</span>
+            </Heading>
+            <p className={styles.heroSubtitle}>
+              Master Python & TypeScript by building production-ready AI systems. Transform how you learn with AI as your co-learner and collaborator.
+            </p>
+            
+            <div className={styles.heroBadges}>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>✨</span>
+                100% Free & Open Source
               </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.secondaryButton)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>View Book</span>
-                <span className={styles.buttonIcon}>📖</span>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>📚</span>
+                AI Driven Learning
               </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.coursesButton)}
-              href="https://panaversity.org/flagship-program/courses"
-              target="_blank"
-              rel="noopener noreferrer">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Take Panaversity Courses</span>
-                <span className={styles.buttonIcon}>🎓</span>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>🎯</span>
+                Production Ready
               </span>
-            </Link>
+            </div>
+            
+            <div className={styles.heroButtons}>
+              <Link
+                className={clsx('button button--primary button--lg', styles.ctaButton)}
+                to="/docs/Introducing-AI-Driven-Development/intro">
+                <span className={styles.buttonContent}>
+                  <span className={styles.buttonText}>Start Reading Free</span>
+                  <span className={styles.buttonIcon}>→</span>
+                </span>
+              </Link>
+              <Link
+                className={clsx('button button--outline button--lg', styles.secondaryButton)}
+                href="https://panaversity.org/flagship-program/courses"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span className={styles.buttonContent}>
+                  <span className={styles.buttonText}>Explore Panaversity Courses</span>
+                  <span className={styles.buttonIcon}>🎓</span>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -80,12 +77,16 @@ function HomepageHeader() {
   );
 }
 
-function Feature({title, description, icon}: {title: string; description: string; icon: string}) {
+function Feature({title, description, icon, featured}: {title: string; description: string; icon: string; featured?: boolean}) {
   return (
-    <div className={styles.feature}>
-      <div className={styles.featureIcon}>{icon}</div>
+    <div className={clsx(styles.feature, featured && styles.featureFeatured)}>
+      {featured && <div className={styles.featureBadge}>Most Popular</div>}
+      <div className={styles.featureIconWrapper}>
+        <div className={styles.featureIcon}>{icon}</div>
+      </div>
       <h3 className={styles.featureTitle}>{title}</h3>
       <p className={styles.featureDescription}>{description}</p>
+      <div className={styles.featureAccent} />
     </div>
   );
 }
@@ -94,11 +95,24 @@ function FeaturesSection() {
   return (
     <section className={styles.features}>
       <div className="container">
+        {/* Section Header */}
+        <div className={styles.featuresHeader}>
+          <div className={styles.featuresLabel}>Core Pillars</div>
+          <Heading as="h2" className={styles.featuresHeading}>
+            What Makes This Book Different
+          </Heading>
+          <p className={styles.featuresSubheading}>
+            A comprehensive, production-focused approach to learning programming in the age of AI
+          </p>
+        </div>
+
+        {/* Features Grid */}
         <div className={styles.featuresGrid}>
           <Feature
             icon="🤖"
             title="AI-First Learning"
             description="Master AI-driven development from day one. Build with Claude, Gemini, and OpenAI Agents SDK."
+            featured={true}
           />
           <Feature
             icon="🏗️"
@@ -124,7 +138,31 @@ function FeaturesSection() {
             icon="🚀"
             title="Zero to Production"
             description="46 comprehensive chapters taking you from programming basics to deploying enterprise AI systems."
+            featured={true}
           />
+        </div>
+
+        {/* Bottom Stats Bar */}
+        <div className={styles.featuresStats}>
+          <div className={styles.featureStat}>
+            <div className={styles.featureStatNumber}>46</div>
+            <div className={styles.featureStatLabel}>Chapters</div>
+          </div>
+          <div className={styles.featureStatDivider} />
+          <div className={styles.featureStat}>
+            <div className={styles.featureStatNumber}>15+</div>
+            <div className={styles.featureStatLabel}>Real Projects</div>
+          </div>
+          <div className={styles.featureStatDivider} />
+          <div className={styles.featureStat}>
+            <div className={styles.featureStatNumber}>100%</div>
+            <div className={styles.featureStatLabel}>Free & Open</div>
+          </div>
+          <div className={styles.featureStatDivider} />
+          <div className={styles.featureStat}>
+            <div className={styles.featureStatNumber}>∞</div>
+            <div className={styles.featureStatLabel}>Production Ready</div>
+          </div>
         </div>
       </div>
     </section>
@@ -136,101 +174,110 @@ function ParadigmShift() {
     <section className={styles.paradigmSection}>
       <div className="container">
         <div className={styles.paradigmContent}>
-          <Heading as="h2" className={styles.sectionTitle}>
-            Challenging Traditional CS Education
-          </Heading>
+          {/* Section Header */}
+          <div className={styles.paradigmHeader}>
+            <div className={styles.paradigmLabel}>The Revolution</div>
+            <Heading as="h2" className={styles.paradigmTitle}>
+              Why Traditional CS Education <br />
+              <span className={styles.paradigmTitleAccent}>Needs a Rethink</span>
+            </Heading>
+            <p className={styles.paradigmSubtitle}>
+              The world has changed. AI has fundamentally transformed how we build software.
+              Your education should reflect this reality.
+            </p>
+          </div>
+
+          {/* Comparison Grid */}
           <div className={styles.comparisonGrid}>
+            {/* Traditional Card */}
             <div className={styles.comparisonCard}>
+              <div className={styles.comparisonIconWrapper}>
+                <div className={styles.comparisonIcon}>📚</div>
+              </div>
               <div className={styles.comparisonLabel}>Traditional Approach</div>
+              <div className={styles.comparisonDescription}>
+                The old way of learning programming
+              </div>
               <ul className={styles.comparisonList}>
-                <li>Learn syntax first, build later</li>
-                <li>Memorize algorithms</li>
-                <li>Solo problem-solving</li>
-                <li>Toy projects and exercises</li>
-                <li>Textbook-driven curriculum</li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Syntax First</span>
+                  Learn language basics before building anything meaningful
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Memorize Algorithms</span>
+                  Focus on rote learning of data structures
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Solo Problem-Solving</span>
+                  Work alone without modern collaborative tools
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Toy Projects</span>
+                  Build calculator apps and to-do lists
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Textbook-Driven</span>
+                  Theory-heavy with outdated examples
+                </li>
               </ul>
             </div>
+
+            {/* VS Divider */}
+            <div className={styles.comparisonDivider}>
+              <div className={styles.comparisonVS}>VS</div>
+              <div className={styles.comparisonArrow}>→</div>
+            </div>
+
+            {/* AI-Driven Card */}
             <div className={clsx(styles.comparisonCard, styles.comparisonCardHighlight)}>
+              <div className={styles.comparisonIconWrapper}>
+                <div className={styles.comparisonIcon}>🚀</div>
+              </div>
               <div className={styles.comparisonLabel}>AI-Driven Way</div>
+              <div className={styles.comparisonDescription}>
+                The future of programming education
+              </div>
               <ul className={styles.comparisonList}>
-                <li>Build production systems from day one</li>
-                <li>Understand patterns through AI collaboration</li>
-                <li>Pair programming with AI assistants</li>
-                <li>Real-world architectures and deployments</li>
-                <li>Specification-driven, tool-augmented learning</li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Production First</span>
+                  Build real systems from day one with AI guidance
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Pattern Understanding</span>
+                  Learn through doing with AI as your guide
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>AI Pair Programming</span>
+                  Collaborate with Claude, GPT, and Gemini
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Real Architectures</span>
+                  Deploy cloud-native, production-ready systems
+                </li>
+                <li>
+                  <span className={styles.comparisonItemTitle}>Spec-Driven Learning</span>
+                  Systematic, tool-augmented development
+                </li>
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-function LearningPath() {
-  return (
-    <section className={styles.pathSection}>
-      <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>
-          Your Learning Journey
-        </Heading>
-        <div className={styles.pathGrid}>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>01</div>
-            <h3>Foundations</h3>
-            <p>AI tools, prompt engineering, and Python fundamentals</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>02</div>
-            <h3>Agentic AI</h3>
-            <p>OpenAI Agents SDK, MCP protocol, and agent orchestration</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>03</div>
-            <h3>Cloud Systems</h3>
-            <p>Docker, Kubernetes, event-driven architecture, and state management</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>04</div>
-            <h3>Production</h3>
-            <p>Realtime agents, voice AI, and enterprise deployments</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FinalCTA() {
-  return (
-    <section className={styles.ctaSection}>
-      <div className="container">
-        <div className={styles.ctaContent}>
-          <Heading as="h2" className={styles.ctaTitle}>
-            Ready to Start Your AI-Driven Learning Journey?
-          </Heading>
-          <p className={styles.ctaSubtitle}>
-            Access the complete free book and explore our comprehensive courses
-          </p>
-          <div className={styles.ctaButtons}>
-            <Link
-              className={clsx('button button--primary button--lg', styles.ctaButtonLarge)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Read the Book Free</span>
-                <span className={styles.buttonIcon}>→</span>
-              </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.ctaButtonSecondary)}
-              href="https://panaversity.org/flagship-program/courses"
-              target="_blank"
-              rel="noopener noreferrer">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Explore Courses</span>
-                <span className={styles.buttonIcon}>🎓</span>
-              </span>
-            </Link>
+          {/* Bottom CTA */}
+          <div className={styles.paradigmCTA}>
+            <div className={styles.paradigmCTAContent}>
+              <div className={styles.paradigmCTAIcon}>💡</div>
+              <div className={styles.paradigmCTAText}>
+                <h3 className={styles.paradigmCTATitle}>Ready for the New Way?</h3>
+                <p className={styles.paradigmCTADescription}>
+                  Join thousands of learners who are mastering programming with AI as their co-learner
+                </p>
+              </div>
+              <Link
+                className={clsx('button button--primary button--lg', styles.paradigmCTAButton)}
+                to="/docs/Introducing-AI-Driven-Development/intro">
+                Start Learning Now
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -247,8 +294,6 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <FeaturesSection />
       <ParadigmShift />
-      <LearningPath />
-      <FinalCTA />
     </Layout>
   );
 }
