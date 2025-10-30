@@ -28,6 +28,20 @@ const config: Config = {
 
   onBrokenLinks: 'warn',
 
+  // Add Font Awesome for social media icons
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        integrity: 'sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==',
+        crossorigin: 'anonymous',
+        referrerpolicy: 'no-referrer',
+      },
+    },
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -100,8 +114,12 @@ const config: Config = {
               to: '/docs/Introducing-AI-Driven-Development/intro',
             },
             {
-              label: 'Curriculum',
+              label: 'Full Curriculum',
               to: '/docs/Introducing-AI-Driven-Development/intro',
+            },
+            {
+              label: 'Learning Path',
+              to: '/#learning-path',
             },
           ],
         },
@@ -130,13 +148,30 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'GitHub',
+              label: 'GitHub Repository',
               href: 'https://github.com/panaversity/colearning-python',
+            },
+            {
+              label: 'Project Examples',
+              href: 'https://github.com/panaversity',
+            },
+          ],
+        },
+        {
+          title: 'About',
+          items: [
+            {
+              label: 'Panaversity',
+              href: 'https://panaversity.com',
+            },
+            {
+              label: 'Our Mission',
+              href: 'https://panaversity.com/about',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Panaversity. 100% Free & Open Source.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • 100% Free & Open Source`,
     },
     prism: {
       theme: prismThemes.github,

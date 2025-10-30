@@ -42,7 +42,7 @@ function HomepageHeader() {
               </span>
               <span className={styles.badge}>
                 <span className={styles.badgeIcon}>📚</span>
-                46 Chapters
+                AI Driven Learning
               </span>
               <span className={styles.badge}>
                 <span className={styles.badgeIcon}>🎯</span>
@@ -65,7 +65,7 @@ function HomepageHeader() {
                 target="_blank"
                 rel="noopener noreferrer">
                 <span className={styles.buttonContent}>
-                  <span className={styles.buttonText}>Explore Courses</span>
+                  <span className={styles.buttonText}>Explore Panaversity Courses</span>
                   <span className={styles.buttonIcon}>🎓</span>
                 </span>
               </Link>
@@ -285,77 +285,6 @@ function ParadigmShift() {
   );
 }
 
-function LearningPath() {
-  return (
-    <section className={styles.pathSection}>
-      <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>
-          Your Learning Journey
-        </Heading>
-        <div className={styles.pathGrid}>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>01</div>
-            <h3>Foundations</h3>
-            <p>AI tools, prompt engineering, and Python fundamentals</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>02</div>
-            <h3>Agentic AI</h3>
-            <p>OpenAI Agents SDK, MCP protocol, and agent orchestration</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>03</div>
-            <h3>Cloud Systems</h3>
-            <p>Docker, Kubernetes, event-driven architecture, and state management</p>
-          </div>
-          <div className={styles.pathCard}>
-            <div className={styles.pathNumber}>04</div>
-            <h3>Production</h3>
-            <p>Realtime agents, voice AI, and enterprise deployments</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FinalCTA() {
-  return (
-    <section className={styles.ctaSection}>
-      <div className="container">
-        <div className={styles.ctaContent}>
-          <Heading as="h2" className={styles.ctaTitle}>
-            Ready to Start Your AI-Driven Learning Journey?
-          </Heading>
-          <p className={styles.ctaSubtitle}>
-            Access the complete free book and explore our comprehensive courses
-          </p>
-          <div className={styles.ctaButtons}>
-            <Link
-              className={clsx('button button--primary button--lg', styles.ctaButtonLarge)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Read the Book Free</span>
-                <span className={styles.buttonIcon}>→</span>
-              </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.ctaButtonSecondary)}
-              href="https://panaversity.org/flagship-program/courses"
-              target="_blank"
-              rel="noopener noreferrer">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Explore Courses</span>
-                <span className={styles.buttonIcon}>🎓</span>
-              </span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -365,8 +294,6 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <FeaturesSection />
       <ParadigmShift />
-      <LearningPath />
-      <FinalCTA />
     </Layout>
   );
 }
