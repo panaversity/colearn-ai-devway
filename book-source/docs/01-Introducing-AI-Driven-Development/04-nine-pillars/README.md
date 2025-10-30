@@ -3,7 +3,7 @@ sidebar_position: 4
 title: "Chapter 4: The Nine Pillars of AI-Driven Development"
 ---
 
-# The Nine Pillars of AI-Driven Development (AIDD)
+# Chapter 4: The Nine Pillars of AI-Driven Development (AIDD)
 
 You've learned about the AI revolution transforming software development. You've written your first AI-assisted program. Now it's time to understand the complete methodology that makes all this possible.
 
