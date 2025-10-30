@@ -290,7 +290,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="CoLearning Programming: The AI-Driven Way | Free Book"
-      description="Master Python & TypeScript by building production-ready AI systems. Free comprehensive guide with 46 chapters. AI as your co-learner and collaborator.">
+      description="Master Python & TypeScript by building production-ready AI systems. AI as your co-learner and collaborator.">
       <HomepageHeader />
       <FeaturesSection />
       <ParadigmShift />
