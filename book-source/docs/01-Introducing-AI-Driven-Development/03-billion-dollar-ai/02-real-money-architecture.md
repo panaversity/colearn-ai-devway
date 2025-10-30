@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: "Lesson 2: Real Money Architecture"
+title: "Real Money Architecture"
 duration: "13-15 minutes"
 ---
 

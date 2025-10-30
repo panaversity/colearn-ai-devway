@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: "Lesson 3: Building the Stack"
+title: "Building the Stack"
 duration: "6-7 minutes"
 ---
 

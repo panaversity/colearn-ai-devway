@@ -1,8 +1,12 @@
 # CoLearning Python & Agentic AI: Chapter Index
 
-**46 chapters across 13 parts**
+**49 chapters across 13 parts**
 
-Reference this document when naming and organizing chapter files. Use the chapter number in filenames: `[chapter-number]-[chapter-name].md`
+Reference this document when naming and organizing chapter files. Use the chapter number in directory names: `[chapter-number]-[chapter-name]/`
+
+**Implementation Status**:
+- ✅ **Implemented** (5 chapters): Chapters 1-5 have content and are ready for review
+- 📋 **Planned** (44 chapters): Chapters 6-49 are planned but not yet created
 
 ---
 
@@ -10,12 +14,12 @@ Reference this document when naming and organizing chapter files. Use the chapte
 
 Foundation building: orientation, setup, first programs with AI, complete AIDD methodology
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 1 | Welcome to AI-Driven Development | `01-ai-development-revolution/` | AI as collaborative partner, the $3T disruption, your new role as agent orchestrator, economic transformation |
-| 2 | Understanding AI Tools: The Nine Revolutions That Made This Possible | `02-ai-turning-point/` | Nine technological revolutions, inflection point evidence, AI coding agents, development patterns, DORA perspective |
-| 3 | Your First AI-Assisted Program | `03-billion-dollar-ai/` | Billion-dollar potential markets, PPP strategy (Prototype-Prove-Productize), real-world examples, stack building |
-| 4 | The Nine Pillars of AI-Driven Development (AIDD) | `04-nine-pillars/` | Complete AIDD methodology, nine pillars detailed (AI CLI, Markdown as Programming, MCP, AI-First IDEs, Linux, TDD, SDD, Composable Skills, Cloud Deployment), M-Shaped developer profile, competitive urgency |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 1 | Welcome to AI-Driven Development | `01-ai-development-revolution/` | ✅ Implemented |
+| 2 | Understanding AI Tools: The Nine Revolutions That Made This Possible | `02-ai-turning-point/` | ✅ Implemented |
+| 3 | Your First AI-Assisted Program | `03-billion-dollar-ai/` | ✅ Implemented |
+| 4 | The Nine Pillars of AI-Driven Development (AIDD) | `04-nine-pillars/` | ✅ Implemented |
 
 ---
 
@@ -23,152 +27,152 @@ Foundation building: orientation, setup, first programs with AI, complete AIDD m
 
 Tool literacy and comparison: deep dive into specific platforms
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 5 | Claude Code: Features and Workflows | `05-claude-code-features-and-workflows.md` | Claude capabilities, IDE integration |
-| 6 | Gemini CLI: Installation and Basics | `06-gemini-cli-installation-and-basics.md` | Gemini setup, command-line usage |
-| 7 | GitHub Copilot and Code Editors | `07-github-copilot-and-code-editors.md` | Copilot integration, editor support |
-| 8 | Choosing the Right Tool for the Task | `08-choosing-the-right-tool-for-the-task.md` | Tool comparison, selection criteria |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 5 | Claude Code: Features and Workflows | `05-claude-code-features-and-workflows/` | ✅ Implemented |
+| 6 | Gemini CLI: Installation and Basics | `06-gemini-cli-installation-and-basics/` | 📋 Planned |
+| 7 | GitHub Copilot and Code Editors | `07-github-copilot-and-code-editors/` | 📋 Planned |
+| 8 | Choosing the Right Tool for the Task | `08-choosing-the-right-tool-for-the-task/` | 📋 Planned |
 
 ---
 
-## Part 3: Prompt & Context Engineering (Chapters 10-13)
+## Part 3: Prompt & Context Engineering (Chapters 9-12)
 
 Effective AI communication: prompting and context management
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 10 | The Architect Toolkit: Prompting Foundations | `10-the-architect-toolkit-prompting-foundations.md` | Prompt structure, clarity, specificity, good/bad examples |
-| 11 | Six-Part Prompting Framework | `11-six-part-prompting-framework.md` | Structured approach to crafting powerful prompts |
-| 12 | Multimodal and Advanced Input | `12-multimodal-and-advanced-input.md` | Images, videos, function calling, tool invocation |
-| 13 | Advanced Prompt Techniques | `13-advanced-prompt-techniques.md` | Few-shot learning, chain-of-thought, prompt chaining, debugging AI code |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 9 | The Architect Toolkit: Prompting Foundations | `09-the-architect-toolkit-prompting-foundations/` | 📋 Planned |
+| 10 | Six-Part Prompting Framework | `10-six-part-prompting-framework/` | 📋 Planned |
+| 11 | Multimodal and Advanced Input | `11-multimodal-and-advanced-input/` | 📋 Planned |
+| 12 | Advanced Prompt Techniques | `12-advanced-prompt-techniques/` | 📋 Planned |
 
 ---
 
-## Part 4: Python: The Language of AI Agents (Chapters 10-21)
+## Part 4: Python: The Language of AI Agents (Chapters 13-24)
 
 Core language skills: production-quality Python
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 10 | Functions, Types, and Type Hints | `10-functions-types-and-type-hints.md` | Function definitions, type annotations |
-| 11 | Data Structures with Type Safety | `11-data-structures-with-type-safety.md` | Lists, dicts, type hints for collections |
-| 12 | Object-Oriented Programming (Modern) | `12-object-oriented-programming-modern.md` | Classes, inheritance, OOP patterns |
-| 13 | Testing and Quality Assurance | `13-testing-and-quality-assurance.md` | Unit tests, pytest, coverage |
-| 14 | Error Handling and Debugging | `14-error-handling-and-debugging.md` | Exceptions, debugging strategies |
-| 15 | Working with APIs and Data | `15-working-with-apis-and-data.md` | HTTP requests, JSON, data handling |
-| 16 | Clean Code and Design Patterns | `16-clean-code-and-design-patterns.md` | Code organization, design patterns |
-| 17 | Decorators, Generators, and Iterators | `17-decorators-generators-and-iterators.md` | Function/class decorators, yield, iterator protocol |
-| 18 | Async Programming and Concurrency | `18-async-programming-and-concurrency.md` | async/await, asyncio, parallel API calls |
-| 19 | Advanced Type Hints: Dataclasses, Protocols, and Generics | `19-advanced-type-hints-dataclasses-protocols-generics.md` | dataclasses, type protocols, TypeVar, Pydantic |
-| 20 | Package Management and Virtual Environments | `20-package-management-and-virtual-environments.md` | venv, pip, requirements.txt, Poetry, PyPI |
-| 21 | Building Your First Real Project | `21-building-your-first-real-project.md` | Project structure, integration of all concepts |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 13 | Functions, Types, and Type Hints | `13-functions-types-and-type-hints/` | 📋 Planned |
+| 14 | Data Structures with Type Safety | `14-data-structures-with-type-safety/` | 📋 Planned |
+| 15 | Object-Oriented Programming (Modern) | `15-object-oriented-programming-modern/` | 📋 Planned |
+| 16 | Testing and Quality Assurance | `16-testing-and-quality-assurance/` | 📋 Planned |
+| 17 | Error Handling and Debugging | `17-error-handling-and-debugging/` | 📋 Planned |
+| 18 | Working with APIs and Data | `18-working-with-apis-and-data/` | 📋 Planned |
+| 19 | Clean Code and Design Patterns | `19-clean-code-and-design-patterns/` | 📋 Planned |
+| 20 | Decorators, Generators, and Iterators | `20-decorators-generators-and-iterators/` | 📋 Planned |
+| 21 | Async Programming and Concurrency | `21-async-programming-and-concurrency/` | 📋 Planned |
+| 22 | Advanced Type Hints: Dataclasses, Protocols, and Generics | `22-advanced-type-hints-dataclasses-protocols-generics/` | 📋 Planned |
+| 23 | Package Management and Virtual Environments | `23-package-management-and-virtual-environments/` | 📋 Planned |
+| 24 | Building Your First Real Project | `24-building-your-first-real-project/` | 📋 Planned |
 
 ---
 
-## Part 5: Spec-Kit Plus Methodology (Chapters 22-24)
+## Part 5: Spec-Kit Plus Methodology (Chapters 25-27)
 
 Professional development workflow: specifications and planning
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 22 | Specification-Driven Development Fundamentals | `22-specification-driven-development-fundamentals.md` | SDD concepts, why it matters |
-| 23 | Writing and Planning Specifications | `23-writing-and-planning-specifications.md` | Spec structure, clarity, completeness, planning, task decomposition |
-| 24 | Real-World Spec-Kit Workflows | `24-real-world-spec-kit-workflows.md` | Practical application, examples, team scaling, collaboration |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 25 | Specification-Driven Development Fundamentals | `25-specification-driven-development-fundamentals/` | 📋 Planned |
+| 26 | Writing and Planning Specifications | `26-writing-and-planning-specifications/` | 📋 Planned |
+| 27 | Real-World Spec-Kit Workflows | `27-real-world-spec-kit-workflows/` | 📋 Planned |
 
 ---
 
-## Part 6: Agentic AI Fundamentals with OpenAI Agents SDK in Python (Chapters 25-27)
+## Part 6: Agentic AI Fundamentals with OpenAI Agents SDK in Python (Chapters 28-30)
 
 Building autonomous systems: agents and orchestration
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 25 | Introduction to Agentic AI and Agent Architecture | `25-introduction-to-agentic-ai-and-agent-architecture.md` | What are agents, agent vs chatbot, architecture, OpenAI Agents SDK |
-| 26 | Building Your First Agent with OpenAI Agents SDK | `26-building-your-first-agent-with-openai-agents-sdk.md` | Agent creation, tool use, state management, debugging |
-| 27 | Multi-Agent Systems and Orchestration Patterns | `27-multi-agent-systems-and-orchestration-patterns.md` | Multi-agent architecture, communication, coordination, production deployment |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 28 | Introduction to Agentic AI and Agent Architecture | `28-introduction-to-agentic-ai-and-agent-architecture/` | 📋 Planned |
+| 29 | Building Your First Agent with OpenAI Agents SDK | `29-building-your-first-agent-with-openai-agents-sdk/` | 📋 Planned |
+| 30 | Multi-Agent Systems and Orchestration Patterns | `30-multi-agent-systems-and-orchestration-patterns/` | 📋 Planned |
 
 ---
 
-## Part 7: MCP Fundamentals with FastMCP (Chapters 28-30)
+## Part 7: MCP Fundamentals with FastMCP (Chapters 31-33)
 
 Integration frameworks: Model Context Protocol
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 28 | Introduction to Model Context Protocol | `28-introduction-to-model-context-protocol.md` | MCP architecture, why standardization matters, protocol specification |
-| 29 | Building MCP Servers with FastMCP | `29-building-mcp-servers-with-fastmcp.md` | FastMCP setup, creating resources and tools, authentication, testing |
-| 30 | Advanced MCP Integration Patterns | `30-advanced-mcp-integration-patterns.md` | Complex tool chains, state management, multi-server orchestration, production |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 31 | Introduction to Model Context Protocol | `31-introduction-to-model-context-protocol/` | 📋 Planned |
+| 32 | Building MCP Servers with FastMCP | `32-building-mcp-servers-with-fastmcp/` | 📋 Planned |
+| 33 | Advanced MCP Integration Patterns | `33-advanced-mcp-integration-patterns/` | 📋 Planned |
 
 ---
 
-## Part 8: TypeScript: The Language of Realtime and Interaction (Chapters 31-33)
+## Part 8: TypeScript: The Language of Realtime and Interaction (Chapters 34-36)
 
 Full-stack AI development: TypeScript fundamentals
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 31 | TypeScript Fundamentals for Python Developers | `31-typescript-fundamentals-for-python-developers.md` | Type system, syntax basics, interfaces, generics, Node.js setup |
-| 32 | Advanced TypeScript Patterns and Async Programming | `32-advanced-typescript-patterns-and-async-programming.md` | Advanced types, async/await, Promises, error handling, decorators |
-| 33 | Building Backend Services with TypeScript and Node.js | `33-building-backend-services-with-typescript-and-nodejs.md` | Express.js, API development, WebSocket servers, database integration |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 34 | TypeScript Fundamentals for Python Developers | `34-typescript-fundamentals-for-python-developers/` | 📋 Planned |
+| 35 | Advanced TypeScript Patterns and Async Programming | `35-advanced-typescript-patterns-and-async-programming/` | 📋 Planned |
+| 36 | Building Backend Services with TypeScript and Node.js | `36-building-backend-services-with-typescript-and-nodejs/` | 📋 Planned |
 
 ---
 
-## Part 9: Building Realtime and Voice Agents (Chapters 34-36)
+## Part 9: Building Realtime and Voice Agents (Chapters 37-39)
 
 Interactive AI systems: realtime streaming and voice processing
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 34 | Introduction to Realtime AI and Voice Processing | `34-introduction-to-realtime-ai-and-voice-processing.md` | Realtime vs request-response, WebSocket fundamentals, OpenAI Realtime API |
-| 35 | Building Voice Agents with OpenAI Realtime API | `35-building-voice-agents-with-openai-realtime-api.md` | Voice input/output, TTS/STT, conversational flows, interruption handling |
-| 36 | Production Realtime Systems: Scaling and Optimization | `36-production-realtime-systems-scaling-and-optimization.md` | Latency optimization, connection management, scaling, monitoring, deployment |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 37 | Introduction to Realtime AI and Voice Processing | `37-introduction-to-realtime-ai-and-voice-processing/` | 📋 Planned |
+| 38 | Building Voice Agents with OpenAI Realtime API | `38-building-voice-agents-with-openai-realtime-api/` | 📋 Planned |
+| 39 | Production Realtime Systems: Scaling and Optimization | `39-production-realtime-systems-scaling-and-optimization/` | 📋 Planned |
 
 ---
 
-## Part 10: Containerization & Orchestration using Docker and Kubernetes (Chapters 37-39)
+## Part 10: Containerization & Orchestration using Docker and Kubernetes (Chapters 40-42)
 
 Production deployment: containerization and orchestration
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 37 | Docker Fundamentals: Containerizing AI Applications | `37-docker-fundamentals-containerizing-ai-applications.md` | Docker basics, Dockerfiles, multi-stage builds, image optimization, Docker Compose |
-| 38 | Kubernetes Basics: Orchestrating Containerized Agents | `38-kubernetes-basics-orchestrating-containerized-agents.md` | K8s architecture, pods/deployments/services, ConfigMaps/Secrets, scaling |
-| 39 | Production Kubernetes: Scaling, Monitoring, and CI/CD | `39-production-kubernetes-scaling-monitoring-and-cicd.md` | Helm charts, monitoring (Prometheus/Grafana), logging, GitOps, autoscaling |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 40 | Docker Fundamentals: Containerizing AI Applications | `40-docker-fundamentals-containerizing-ai-applications/` | 📋 Planned |
+| 41 | Kubernetes Basics: Orchestrating Containerized Agents | `41-kubernetes-basics-orchestrating-containerized-agents/` | 📋 Planned |
+| 42 | Production Kubernetes: Scaling, Monitoring, and CI/CD | `42-production-kubernetes-scaling-monitoring-and-cicd/` | 📋 Planned |
 
 ---
 
-## Part 11: Data, State, and Memory using PostgreSQL, Graph, and Vector Databases (Chapters 40-42)
+## Part 11: Data, State, and Memory using PostgreSQL, Graph, and Vector Databases (Chapters 43-45)
 
 Persistent state and memory systems for AI agents
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 40 | Relational Databases for Agent State with PostgreSQL | `40-relational-databases-for-agent-state-with-postgresql.md` | PostgreSQL setup, schema design, SQLAlchemy ORM, state persistence, transactions |
-| 41 | Graph Databases for Agent Memory and Relationships | `41-graph-databases-for-agent-memory-and-relationships.md` | Neo4j fundamentals, graph modeling, Cypher queries, knowledge graphs |
-| 42 | Vector Databases for Semantic Search and RAG | `42-vector-databases-for-semantic-search-and-rag.md` | Embeddings, vector similarity, Pinecone/Weaviate, RAG patterns, semantic search |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 43 | Relational Databases for Agent State with PostgreSQL | `43-relational-databases-for-agent-state-with-postgresql/` | 📋 Planned |
+| 44 | Graph Databases for Agent Memory and Relationships | `44-graph-databases-for-agent-memory-and-relationships/` | 📋 Planned |
+| 45 | Vector Databases for Semantic Search and RAG | `45-vector-databases-for-semantic-search-and-rag/` | 📋 Planned |
 
 ---
 
-## Part 12: Event-Driven Architecture using Kafka and Dapr (Chapters 43-44)
+## Part 12: Event-Driven Architecture using Kafka and Dapr (Chapters 46-47)
 
 Distributed systems: event-driven patterns and microservices
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 43 | Event-Driven Architecture with Apache Kafka | `43-event-driven-architecture-with-apache-kafka.md` | Kafka fundamentals, producers/consumers, topics/partitions, event streaming, Kafka Streams |
-| 44 | Building Distributed Systems with Dapr | `44-building-distributed-systems-with-dapr.md` | Dapr runtime, building blocks (pub/sub, state, bindings), service-to-service calls |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 46 | Event-Driven Architecture with Apache Kafka | `46-event-driven-architecture-with-apache-kafka/` | 📋 Planned |
+| 47 | Building Distributed Systems with Dapr | `47-building-distributed-systems-with-dapr/` | 📋 Planned |
 
 ---
 
-## Part 13: Stateful Agents using Dapr Actors and Dapr Workflows (Chapters 45-46)
+## Part 13: Stateful Agents using Dapr Actors and Dapr Workflows (Chapters 48-49)
 
 Advanced agent patterns: stateful systems and durable workflows
 
-| # | Chapter Title | File Name | Key Topics |
-|---|---------------|-----------|------------|
-| 45 | Stateful Agents with Dapr Virtual Actors | `45-stateful-agents-with-dapr-virtual-actors.md` | Actor model fundamentals, Dapr actor implementation, state management, concurrency |
-| 46 | Durable Workflows for Long-Running Agent Tasks | `46-durable-workflows-for-long-running-agent-tasks.md` | Dapr Workflow engine, workflow patterns, compensation/saga patterns, orchestration |
+| # | Chapter Title | File Name | Status |
+|---|---------------|-----------|--------|
+| 48 | Stateful Agents with Dapr Virtual Actors | `48-stateful-agents-with-dapr-virtual-actors/` | 📋 Planned |
+| 49 | Durable Workflows for Long-Running Agent Tasks | `49-durable-workflows-for-long-running-agent-tasks/` | 📋 Planned |
 
 ---
 
@@ -184,11 +188,12 @@ This document provides chapter titles and topics. For exact file paths, naming c
 - Chapter folders use **lowercase-with-hyphens**
 - Part folders use **Title-Case-With-Hyphens**
 
-**Examples**:
-- Chapter 1: `book-source/docs/01-Introducing-AI-Driven-Development/01-welcome-to-ai-driven-development/`
-- Chapter 10: `book-source/docs/04-Python-The-Language-of-AI-Agents/01-functions-types-and-type-hints/`
-- Chapter 25: `book-source/docs/06-Agentic-AI-with-OpenAI-Agents-SDK/01-introduction-to-agentic-ai-and-agent-architecture/`
-- Chapter 46: `book-source/docs/13-Dapr-Stateful-Agents/02-durable-workflows-for-long-running-agent-tasks/`
+**Examples** (based on actual structure):
+- Chapter 1: `book-source/docs/01-Introducing-AI-Driven-Development/01-ai-development-revolution/`
+- Chapter 5: `book-source/docs/02-AI-Tool-Landscape/05-claude-code-features-and-workflows/`
+- Chapter 13 (planned): `book-source/docs/04-Python-The-Language-of-AI-Agents/13-functions-types-and-type-hints/`
+- Chapter 28 (planned): `book-source/docs/06-Agentic-AI-with-OpenAI-Agents-SDK/28-introduction-to-agentic-ai-and-agent-architecture/`
+- Chapter 49 (planned): `book-source/docs/13-Stateful-Agents-Dapr/49-durable-workflows-for-long-running-agent-tasks/`
 
 ---
 
@@ -202,4 +207,4 @@ This document provides chapter titles and topics. For exact file paths, naming c
 5. Match the title exactly in frontmatter
 6. Reference `.claude/output-styles/chapters.md` for formatting guidelines
 
-**Version**: Updated for 13-part, 46-chapter structure (2025-10-29)
+**Version**: Updated for 13-part, 49-chapter structure with corrected sequential numbering and implementation status (2025-10-30)
