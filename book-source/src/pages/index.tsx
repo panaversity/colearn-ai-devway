@@ -14,65 +14,62 @@ function HomepageHeader() {
       <div className={styles.heroGradient} />
       <div className="container">
         <div className={styles.heroContent}>
+          {/* Left side - Book Cover */}
           <div className={styles.heroImageContainer}>
             <img 
               src="/img/book-cover.png" 
-              alt="CoLearning Programming Book Cover" 
+              alt="CoLearning Programming: The AI-Driven Way Book Cover" 
               className={styles.heroBookCover}
             />
           </div>
-          <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
-          <Heading as="h1" className={styles.heroTitle}>
-            CoLearning Programming
-            <br />
-            <span className={styles.heroTitleAccent}>The AI Driven Way</span>
-          </Heading>
-          <p className={styles.heroSubtitle}>
-            Master Python & TypeScript by building production-ready AI systems.
-            <br />
-            Transform how you learn with AI as your co-learner and collaborator.
-          </p>
-          <div className={styles.heroBadges}>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>✨</span>
-              100% Free & Open Source
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>📚</span>
-              46 Chapters
-            </span>
-            <span className={styles.badge}>
-              <span className={styles.badgeIcon}>🎯</span>
-              Beginner Friendly
-            </span>
-          </div>
-          <div className={styles.heroButtons}>
-            <Link
-              className={clsx('button button--primary button--lg', styles.ctaButton)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Start Learning Free</span>
-                <span className={styles.buttonIcon}>→</span>
+          
+          {/* Right side - Content */}
+          <div className={styles.heroTextContent}>
+            <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
+            <Heading as="h1" className={styles.heroTitle}>
+              CoLearning Programming
+              <br />
+              <span className={styles.heroTitleAccent}>The AI-Driven Way</span>
+            </Heading>
+            <p className={styles.heroSubtitle}>
+              Master Python & TypeScript by building production-ready AI systems. Transform how you learn with AI as your co-learner and collaborator.
+            </p>
+            
+            <div className={styles.heroBadges}>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>✨</span>
+                100% Free & Open Source
               </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.secondaryButton)}
-              to="/docs/Introducing-AI-Driven-Development/intro">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>View Book</span>
-                <span className={styles.buttonIcon}>📖</span>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>📚</span>
+                46 Chapters
               </span>
-            </Link>
-            <Link
-              className={clsx('button button--outline button--lg', styles.coursesButton)}
-              href="https://panaversity.org/flagship-program/courses"
-              target="_blank"
-              rel="noopener noreferrer">
-              <span className={styles.buttonContent}>
-                <span className={styles.buttonText}>Take Panaversity Courses</span>
-                <span className={styles.buttonIcon}>🎓</span>
+              <span className={styles.badge}>
+                <span className={styles.badgeIcon}>🎯</span>
+                Production Ready
               </span>
-            </Link>
+            </div>
+            
+            <div className={styles.heroButtons}>
+              <Link
+                className={clsx('button button--primary button--lg', styles.ctaButton)}
+                to="/docs/Introducing-AI-Driven-Development/intro">
+                <span className={styles.buttonContent}>
+                  <span className={styles.buttonText}>Start Reading Free</span>
+                  <span className={styles.buttonIcon}>→</span>
+                </span>
+              </Link>
+              <Link
+                className={clsx('button button--outline button--lg', styles.secondaryButton)}
+                href="https://panaversity.org/flagship-program/courses"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span className={styles.buttonContent}>
+                  <span className={styles.buttonText}>Explore Courses</span>
+                  <span className={styles.buttonIcon}>🎓</span>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
