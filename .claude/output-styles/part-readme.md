@@ -16,8 +16,7 @@ book-source/docs/
     ├── README.md        ← This file (MUST be uppercase)
     ├── NN-chapter-name/
     │   ├── README.md
-    │   └── lessons...
-    └── ...
+    │   └── NN-lesson-1
 ```
 
 ---

@@ -36,18 +36,3 @@ After completing this chapter, continue to **Chapter 7: GitHub Copilot** where y
 Then, **Chapter 8: Choosing the Right Tool** will synthesize everything you've learned, providing a unified framework for selecting the optimal AI development tool based on project constraints, workflow preferences, and specific task requirements.
 
 You're not just learning tools—you're building strategic judgment about when and how to leverage AI assistance for maximum development effectiveness.
-
-## Chapter Structure
-
-This chapter follows a progressive structure from motivation to mastery:
-
-1. **Lesson 1: Why Gemini CLI Matters** — Understand the strategic landscape and key differentiators (conceptual)
-2. **Lesson 2: Installation — Platform-Specific Walkthroughs** — Get Gemini CLI running on Windows, macOS, or Linux (hands-on)
-3. **Lesson 3: Authentication & Configuration** — Set up your Google account authentication and customize settings (hands-on)
-4. **Lesson 4: Your First Commands** — Execute basic commands and understand command types (hands-on)
-5. **Lesson 5: Built-In Tools Deep Dive** — Master file operations, web fetching, search grounding, and shell integration (hands-on)
-6. **Lesson 6: The 1M Token Context Window & Tool Comparison** — Understand strategic advantages and develop a decision framework (strategic)
-
-**Estimated Time**: 2-3 hours total
-
-**Prerequisites**: Completion of Chapter 5 (Claude Code) recommended for context and comparison
