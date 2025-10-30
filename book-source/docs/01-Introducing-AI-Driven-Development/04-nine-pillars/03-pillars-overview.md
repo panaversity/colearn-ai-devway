@@ -5,13 +5,15 @@ title: "The Nine Pillars—Overview and Integration"
 
 # The Nine Pillars—Overview and Integration
 
-You now understand what AI-Driven Development is and why it matters. But how does it actually work? What makes it possible for one developer to do what previously required entire teams?
+You now understand what AI-Driven Development is and why it matters. In the previous section, you learned AIDD's **nine defining characteristics**—the principles that distinguish it from traditional development (Specification-Driven, AI-Augmented, Quality-Gated, etc.).
 
-The answer lies in nine integrated technologies and practices. Each pillar removes a specific barrier that once required specialists or simply wasn't possible. Together, they create a complete system that fundamentally changes what individual developers can accomplish.
+But how do you achieve those characteristics in practice? What makes it possible for one developer to do what previously required entire teams?
+
+The answer lies in **nine integrated technologies and practices**—the concrete foundation that makes AIDD's characteristics achievable. Each technology removes a specific barrier that once required specialists or simply wasn't possible. Together, they create a complete system that fundamentally changes what individual developers can accomplish.
 
 ## The Nine Pillars
 
-Think of these pillars as nine pieces of infrastructure. Each one solves a specific problem. But their real power emerges when they work together:
+Think of these technologies as nine pieces of infrastructure. Each one solves a specific problem. But their real power emerges when they work together:
 
 1. **AI CLI & Coding Agents** (tools like Claude Code, Gemini CLI, GitHub Copilot)
 2. **Markdown as Programming Language** (natural language specifications become executable)

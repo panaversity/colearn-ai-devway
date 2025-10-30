@@ -37,13 +37,13 @@ This pattern isn't new. We've seen it before:
 
 ## Real Developers, Real Outcomes
 
-**Story 1: Complete Adoption**
-Sarah, a mid-level developer, committed to all nine pillars over 18 months. Initially overwhelming, but she followed a progressive path: started with Python fundamentals, added Git collaboration, layered in cloud basics, integrated AI assistance. By month 12, she was shipping features end-to-end that previously required three specialists. By month 18, she led her team's AI transformation, designed their cloud architecture, and automated their entire deployment pipeline. **Outcome:** 40% salary increase, promoted to senior engineer, became the team's go-to problem solver.
+**Story 1: Complete Adoption Path**
+Sarah, a mid-level developer, committed to learning all nine pillars over 18 months. Initially overwhelming, but she followed a progressive path: started with Python fundamentals, added Git collaboration, layered in cloud basics, integrated AI assistance. By month 12, she was shipping features end-to-end that previously required three specialists. By month 18, she led her team's AI transformation, designed their cloud architecture, and automated their entire deployment pipeline. **Example outcome:** Significant salary increase (40% in her case), promoted to senior engineer, became the team's go-to problem solver. *Note: Individual outcomes vary based on company, market conditions, and execution quality—the pattern of increased value and autonomy is consistent, specific percentages are illustrative.*
 
-**Story 2: Partial Adoption**
-Marcus mastered three pillars deeply: Python, AI orchestration, and frontend. Brilliant at building AI-powered UIs. But when his startup needed to scale, he hit walls: couldn't optimize database performance (needed backend specialist), couldn't deploy reliably (needed DevOps specialist), couldn't implement proper testing (needed QA specialist). **Outcome:** Hired three specialists, lost equity to fund the team, slower iteration cycles, dependencies on other people's availability.
+**Story 2: Partial Adoption Path**
+Marcus mastered three pillars deeply: Python, AI orchestration, and frontend. Brilliant at building AI-powered UIs. But when his startup needed to scale, he hit walls: couldn't optimize database performance (needed backend specialist), couldn't deploy reliably (needed DevOps specialist), couldn't implement proper testing (needed QA specialist). **Example outcome:** Hired three specialists, diluted equity to fund the team, slower iteration cycles, dependencies on other people's availability. *Note: This represents a common pattern, not a universal outcome—some developers successfully collaborate with specialists while maintaining value.*
 
-**The difference wasn't talent—it was completeness.**
+**The key pattern:** Completeness enables autonomy and increases individual leverage, though specific outcomes depend on many factors beyond skillset alone.
 
 ## Addressing the Skeptic: "Can One Person Really Do This?"
 

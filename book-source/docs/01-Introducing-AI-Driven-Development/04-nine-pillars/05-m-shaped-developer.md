@@ -99,6 +99,20 @@ Think about:
 
 There's no single right answer. The power of M-shaped development is choosing domains that **work together** for the products you want to build and the impact you want to have.
 
+## Realistic Constraints on M-Shaped Development
+
+M-Shaped development is transformative, but it's not limitless. Understanding the constraints helps you set realistic expectations and choose domains strategically:
+
+**Domain Depth Still Matters**: AI augmentation accelerates learning and fills knowledge gaps, but it doesn't replace years of specialized experience in critical areas. Security expertise, regulatory compliance, safety-critical systems (medical devices, aviation software), and advanced research domains still require deep, earned expertise that can't be fully AI-generated. An M-shaped developer can build secure authentication flows with AI assistance, but shouldn't architect a financial trading system's security model without genuine depth in that domain.
+
+**Domain Compatibility Varies**: Some domain combinations naturally reinforce each other—frontend + backend + DevOps creates a cohesive full-stack capability. ML + backend + data engineering builds on similar foundations. But other combinations remain challenging to bridge effectively. Machine learning research + legal compliance, or embedded systems + UX design require fundamentally different mental models that don't easily compound. Choose domains where skills transfer and knowledge reinforces.
+
+**Organizational Context Matters**: Even if you can span multiple domains effectively, your organization's structure, culture, and risk tolerance shapes how you apply M-shaped capabilities. M-shaped developers thrive in startups and small teams where autonomy is valued and rapid iteration is expected. Large enterprises may still require specialist verification, formal handoffs, and segregation of duties for compliance or risk management. Your capabilities may exceed what your environment allows you to execute independently.
+
+**Execution Quality Determines Outcomes**: Having M-shaped capabilities creates **access and opportunity**, not guaranteed success. Market timing, product-market fit, execution quality, and domain-specific insight still determine whether your product succeeds. AIDD removes the barrier of needing a large team—it doesn't remove the need for good judgment, persistence, and continuous learning.
+
+**The key insight**: M-shaped development dramatically expands what's possible for individuals and small teams. But it's a **capability multiplier**, not a magic solution. Choose domains strategically, respect the limits of AI augmentation, and recognize that execution and judgment still matter more than ever.
+
 ## The Urgency Question
 
 Understanding that M-Shaped development is possible is exciting. You can see how AI augmentation enables one person to do what previously required entire teams.
