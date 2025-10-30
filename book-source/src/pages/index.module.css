@@ -32,8 +32,8 @@
 }
 
 [data-theme='dark'] .heroBanner {
-  /* Seamless transition from header - starts with header color and gradually darkens */
-  background: linear-gradient(135deg, #1a3a5c 0%, #0f2749 25%, #0a1f3a 60%, #051728 100%);
+  /* Premium ebook hero - seamless flow from header with sophisticated depth */
+  background: linear-gradient(135deg, #1e3a5f 0%, #1a3a5c 15%, #0f2749 45%, #0a1f3a 75%, #051728 100%);
 }
 
 .heroGradient {

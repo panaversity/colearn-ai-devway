@@ -31,7 +31,8 @@
   --ifm-color-primary-lightest: #c8dded;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-background-color: #0d1b2a;
-  --ifm-background-surface-color: #1a3a5c;
+  /* Premium ebook header - sophisticated navy that flows seamlessly to hero */
+  --ifm-background-surface-color: #1e3a5f;
 }
 
 /* Smooth scrolling */
@@ -70,10 +71,15 @@ pre code {
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(13, 27, 42, 0.95);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* Premium ebook header with subtle transparency for modern glass effect */
+  background: linear-gradient(180deg, 
+    rgba(30, 58, 95, 0.98) 0%, 
+    rgba(26, 58, 92, 0.95) 100%
+  );
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(123, 164, 196, 0.08);
 }
 
 /* Navbar brand title styling */
@@ -85,6 +91,15 @@ pre code {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Enhanced navbar title for dark mode - premium ebook branding */
+[data-theme='dark'] .navbar__title {
+  background: linear-gradient(135deg, #a8c5d9 0%, #7ba4c4 50%, #c8dded 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(123, 164, 196, 0.3);
 }
 
 /* Navbar logo (book cover) styling */
