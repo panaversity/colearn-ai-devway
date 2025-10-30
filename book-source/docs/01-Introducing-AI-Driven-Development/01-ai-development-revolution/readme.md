@@ -30,4 +30,3 @@ By the end of this chapter, you'll understand:
 After completing this chapter, continue to **Chapter 2: The AI Turning Point** where you'll discover the nine technological revolutions that converged to make this transformation possible—from GPU computing to transformers to natural language interfaces.
 
 Understanding how we got here will help you anticipate where the field is heading and position yourself strategically for the next wave of innovation.
-

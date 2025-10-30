@@ -1,35 +1,31 @@
 ---
-title: "Chapter 2: AI Turning Point"
 sidebar_position: 2
+title: "Chapter 2: The AI Turning Point"
 ---
 
-# Chapter 2: AI Turning Point
-
-## Overview
+# Chapter 2: The AI Turning Point
 
 In Chapter 1, you discovered a fundamental shift: you're no longer just a "coder." You're becoming an *orchestrator*—directing AI partners to do work alongside you.
 
-Chapter 2 answers the critical questions that follow: Is 2025 really different from 2024? How should you approach AI-assisted development? Why do some teams succeed with AI while others fail? What tools should you use, and what risks should you navigate?
+Now the critical questions emerge: Is 2025 really different from 2024? How should you approach AI-assisted development? Why do some teams succeed with AI while others struggle? What tools should you use, and what risks must you navigate?
 
-This chapter provides evidence-based answers, concrete frameworks, and practical guidance. You'll see why 2025 represents a genuine inflection point, understand the difference between vibe coding and Spec-Driven Development, learn what organizational capabilities predict AI success, explore the modern three-layer AI development stack, and chart your path forward through the challenges.
+This chapter provides evidence-based answers, concrete frameworks, and practical guidance. Through six interconnected sections, you'll discover why 2025 represents a genuine inflection point, understand the difference between experimental "vibe coding" and disciplined Spec-Driven Development, learn what organizational capabilities predict AI success, explore the modern three-layer AI development stack, and chart your path forward through the challenges.
 
 By the end of this chapter, you'll have the context, frameworks, and confidence to adopt AI-driven development thoughtfully—with discipline, not just speed.
 
----
+## What You'll Learn
 
-## Main Learning Outcomes
+By the end of this chapter, you'll understand:
 
-After completing this chapter, you will be able to:
+- **The 2025 inflection point**: Three convergent trends (capability breakthroughs, mainstream adoption, enterprise productization) that make this year fundamentally different from previous AI waves
+- **Development patterns**: When experimental "vibe coding" is appropriate versus when Spec-Driven Development (SDD) is necessary, including the complete 7-step SDD workflow
+- **Organizational readiness**: The "AI as amplifier" thesis and how to assess your team's readiness across the seven DORA capabilities that predict AI development success
+- **The modern AI development stack**: The three-layer architecture (Frontier Models, AI-First IDEs, Development Agents) and how the Model Context Protocol (MCP) prevents vendor lock-in
+- **Core challenges and mitigation**: The three critical challenges of AI-driven development (over-reliance, quality drift, cost management) with specific strategies to address each
+- **Your strategic path forward**: How to evaluate your position in the AI transformation and make informed adoption decisions with appropriate guardrails
 
-1. *Recognize concrete evidence*: Identify the three convergent trends (capability breakthroughs, mainstream adoption, enterprise productization) that make 2025 different from previous AI waves
-2. *Distinguish development patterns*: Explain when vibe coding is appropriate vs. when Spec-Driven Development (SDD) is necessary, and understand the 7-step SDD workflow
-3. *Apply DORA capabilities*: Explain the "AI as amplifier" thesis and assess your team's readiness across the seven DORA organizational capabilities
-4. *Understand the modern stack*: Describe the three-layer AI development architecture (Frontier Models, AI-First IDEs, Development Agents) and explain how MCP prevents vendor lock-in
-5. *Navigate challenges strategically*: Identify the three core challenges of AI-driven development (over-reliance, quality drift, cost management) and apply mitigation strategies
-6. *Articulate your path forward*: Evaluate your position in the AI transformation and make informed decisions about adoption with appropriate guardrails
+## What's Next
 
----
+After completing this chapter, continue to **Chapter 3: Setting Up Your AI Development Environment** where you'll move from understanding to action—installing tools, configuring your workspace, and running your first AI-assisted development session.
 
-This chapter establishes the "what" and "why" of AI-driven development—bridging your new mindset from Chapter 1 to the practical "how" you'll learn in Chapter 3 and beyond.
-
----
+The theoretical foundation from Chapters 1 and 2 will translate into practical capability as you build the environment that professional developers are using to transform their productivity.
