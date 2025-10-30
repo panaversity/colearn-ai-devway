@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-title: "Lesson 1: The Claude Code Origin Story and Paradigm Shift"
+title: "The Claude Code Origin Story and Paradigm Shift"
 duration: "8-10 min"
 ---
 
-# Lesson 1: The Claude Code Origin Story and Paradigm Shift
+# The Claude Code Origin Story and Paradigm Shift
 
 ## The Development Tool That Nobody Meant to Build
 

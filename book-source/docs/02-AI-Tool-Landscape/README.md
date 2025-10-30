@@ -47,18 +47,19 @@ This part consists of four interconnected chapters that build practical proficie
 
 ### Chapter 5: How It All Started—The Claude Code Phenomenon
 
-**Estimated time: 3-4 hours**
+**Estimated time: 2-2.5 hours**
 
-You'll install and configure Claude Code, understanding why this "simple" command-line interface triggered such rapid adoption. We explore the origin story (how an internal Anthropic tool became a public phenomenon), walk through installation on Windows, Mac, and Linux, and demonstrate Claude Code's unique architecture: subagents, agent skills, output styles, and MCP servers.
+You'll install and configure Claude Code, understanding why this "simple" command-line interface triggered such rapid adoption. We explore the origin story (how an internal Anthropic tool became a public phenomenon), walk through a straightforward npm installation, and learn Claude Code's key features through hands-on experience: subagents for specialized tasks, agent skills for autonomous discovery, and MCP servers for external data access.
 
-By the end of this chapter, Claude Code will be running on your machine, and you'll have experienced your first real AI-assisted development workflow. You'll understand what makes Claude Code different from web-based AI chat—and more importantly, you'll understand why that difference matters for serious development work.
+This chapter establishes Claude Code as a **collaborative thinking partner**—not an automation supercomputer. By the end, Claude Code will be running on your machine with your first subagent and skill working, and you'll have experienced the paradigm shift from passive AI assistance to active AI collaboration.
 
 **What you'll accomplish**:
-- ✅ Install Claude Code on your operating system
-- ✅ Authenticate with your Anthropic API key
-- ✅ Understand Claude Code's architecture (subagents, skills, MCP)
-- ✅ Run your first Claude Code command and see it work
-- ✅ Recognize how Claude Code differs from web-based AI tools
+- ✅ Install Claude Code with a single npm command
+- ✅ Authenticate and run your first collaborative workflow
+- ✅ Create a simple subagent that explains code (not generates it)
+- ✅ Understand agent skills and autonomous discovery
+- ✅ Connect to GitHub via MCP and explore live repository data
+- ✅ Recognize how Claude Code differs from web-based AI chat
 
 ### Chapter 6: Google Gemini CLI—Open Source and Everywhere
 

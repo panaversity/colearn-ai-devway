@@ -1,10 +1,9 @@
 ---
 sidebar_position: 5
-title: "Lesson 5: Connecting MCP Servers and Common Workflows"
-duration: "32-39 min"
+title: "Connecting MCP Servers and Common Workflows"
 ---
 
-# Lesson 5: Connecting MCP Servers and Common Workflows
+# Connecting MCP Servers and Common Workflows
 
 ## Breaking Free from the File System
 
@@ -65,109 +64,16 @@ You've now learned three extension mechanisms. Here's how they differ:
 
 ---
 
-## 🔴 CRITICAL: MCP Server Security Considerations
+## A Note on Security
 
-**Before connecting any MCP server, read this section carefully.**
+**Use official Anthropic MCP servers** (GitHub, PostgreSQL, File System, Memory). They're maintained by Anthropic and safe to use.
 
-### The Security Risk
+**When creating credentials**:
+- Create a read-only GitHub token (you don't need write access for learning)
+- Credentials are stored securely in your system keychain, not in plain text
+- You can revoke access anytime
 
-MCP servers have access to external systems—often with your credentials. A malicious or compromised MCP server could:
-
-- ❌ Read sensitive data from your GitHub repos, databases, or APIs
-- ❌ Modify or delete data (if granted write permissions)
-- ❌ Exfiltrate credentials or API keys
-- ❌ Execute commands on external systems with your privileges
-
-**Unlike skills or subagents** (which only access local files you control), **MCP servers interact with external services using your authentication**.
-
-### Evaluating MCP Server Trustworthiness
-
-Before installing any MCP server, evaluate it systematically:
-
-#### 1. Source and Maintainer Trust
-
-**✅ High Trust**:
-- Official Anthropic MCP servers (https://github.com/anthropics/mcp-servers)
-- Major companies' official servers (GitHub, Stripe, PostgreSQL project)
-- Well-known open-source projects with active maintenance
-
-**⚠️ Medium Trust**:
-- Community-maintained servers with public source code
-- Servers from unknown individuals but with code review possible
-
-**❌ Low Trust**:
-- Closed-source MCP servers
-- Servers from unknown sources with no code visibility
-- Abandoned projects with no recent updates
-
-#### 2. Code Review (If Open Source)
-
-**Check the server's code**:
-```bash
-git clone https://github.com/[maintainer]/[mcp-server]
-cd [mcp-server]
-# Review what the server does
-cat src/index.js  # or main.py, etc.
-```
-
-**Red flags**:
-- ❌ Makes network requests to unexpected domains
-- ❌ Writes files outside expected directories
-- ❌ Executes system commands without clear purpose
-- ❌ Obfuscated or minified code
-- ❌ Requests excessive permissions
-
-**Green flags**:
-- ✅ Clear, readable code with comments
-- ✅ Minimal dependencies
-- ✅ Only accesses documented external services
-- ✅ Active GitHub issues/PRs showing community engagement
-- ✅ Security audit reports or vulnerability disclosure policy
-
-#### 3. Permission Scoping
-
-**Principle of Least Privilege**: Only grant the minimum permissions necessary.
-
-**Examples**:
-- ✅ GitHub MCP: Read-only access to public repos for learning (not private repos)
-- ❌ Database MCP with admin credentials that can DROP tables
-- ✅ Monitoring MCP with read-only API key
-- ❌ API MCP with master key instead of scoped service key
-
-**How to scope**:
-1. Create limited-scope API tokens/keys for MCP servers
-2. Use read-only credentials when write access isn't needed
-3. Restrict access to specific repos, databases, or resources
-
-#### 4. Environment Isolation
-
-**Best practices**:
-- ✅ Test new MCP servers in isolated development environments first
-- ✅ Use separate credentials for MCP access (not your personal GitHub token)
-- ✅ Monitor API usage for unexpected spikes
-- ❌ Never use production database credentials in MCP configuration
-
-### Official Trusted MCP Servers
-
-These MCP servers are officially maintained by Anthropic and considered safe:
-
-- **GitHub** (`@anthropic/mcp-server-github`) — Read GitHub repos, issues, PRs
-- **PostgreSQL** (`@anthropic/mcp-server-postgres`) — Query PostgreSQL databases
-- **File System** (`@anthropic/mcp-server-filesystem`) — Extended file operations
-- **Memory** (`@anthropic/mcp-server-memory`) — Persistent knowledge graph storage
-
-**Security Note**: Even official servers should be configured with scoped credentials (e.g., read-only GitHub tokens).
-
-### When to Avoid MCP Servers
-
-**Don't connect MCP servers if**:
-- ❌ You can't review the source code
-- ❌ The server requests permissions far beyond its stated purpose
-- ❌ You're unsure what data it will access
-- ❌ It's abandoned (no updates in 12+ months)
-- ❌ Your company security policy prohibits external tool integrations
-
-**Alternative**: For high-security environments, consider building internal MCP servers that you fully control and audit.
+That's it. This lesson is about learning to use MCP, not evaluating untrusted servers.
 
 ---
 
@@ -199,382 +105,107 @@ Now that you understand the security considerations, let's connect the **officia
 
 **Security Best Practice**: Do NOT select full `repo` scope (which grants write access) unless you specifically need Claude Code to create issues or PRs.
 
-### Step 2: Install the GitHub MCP Server
+### Step 2: Add the GitHub MCP Server
 
-Run:
-
-```bash
-claude mcp install @anthropic/mcp-server-github
-```
-
-**Expected output**:
-```
-Installing @anthropic/mcp-server-github...
-✓ MCP server installed successfully
-✓ Configuration file created: .mcp.json
-
-Next step: Configure authentication
-```
-
-### Step 3: Configure Authentication
-
-Claude Code will prompt you to add the GitHub token:
+Register the GitHub MCP server with Claude Code:
 
 ```bash
-claude mcp config github
+claude mcp add --transport http github https://api.github.com/graphql
 ```
 
-**Prompt**:
+**What this does**:
+- Adds the official Anthropic GitHub MCP server to your Claude Code configuration
+- Uses HTTP transport (the recommended, safe method)
+- Names it "github" for easy reference
+- Stores the configuration in your `.mcp.json` file
+
+**Expected outcome**: MCP server registered successfully. Configuration saved to `.mcp.json`.
+
+### Step 3: Configure Authentication with Your GitHub Token
+
+Claude Code will automatically prompt you for the GitHub token when it first tries to use the MCP server. You can also set the token explicitly by adding an environment variable:
+
+```bash
+export GITHUB_TOKEN=your_token_here
+```
+
+Or, when Claude Code first connects, paste your token when prompted:
+
 ```
 Enter your GitHub Personal Access Token:
 ```
 
-Paste the token you created in Step 1 and press Enter.
+**What happens**:
+- Paste the token you created in Step 1
+- Claude Code stores it securely in your system's credential manager:
+  - **macOS**: Keychain
+  - **Windows**: Credential Manager
+  - **Linux**: Secret Service
+- The token is never stored in plain text files
 
-**Expected output**:
+**Security**: Your token is stored securely and can be revoked anytime from GitHub's settings page.
+
+### Step 4: Test the MCP Connection
+
+Ask Claude Code about GitHub data. In your Claude Code session:
+
 ```
-✓ GitHub authentication configured
-✓ Connection test successful
-Ready to use GitHub MCP
+Tell me about the most recent issues in the anthropic-sdk-python repository on GitHub
 ```
 
-**Security**: The token is stored securely in your system's credential manager (Keychain on macOS, Credential Manager on Windows, Secret Service on Linux).
-
-### Step 4: Verify the Connection
-
-Test the MCP connection:
-
-```bash
-claude "List the 5 most recent issues in the anthropics/anthropic-sdk-python repository"
-```
-
-**Expected behavior**:
+**What happens**:
 - Claude Code recognizes you're asking about GitHub data
-- Invokes the GitHub MCP server automatically
-- Retrieves and displays the 5 most recent issues
+- It invokes the GitHub MCP server automatically
+- It retrieves real GitHub data and discusses it with you
 
-**If you see GitHub data**: ✅ MCP connection successful!
+**If you see GitHub data and discussion**: ✅ MCP connection successful!
 
-**If you see an error**: Check:
-- Is the token valid? Test at https://api.github.com/user (with `Authorization: token YOUR_TOKEN`)
-- Did you grant the necessary scopes? Re-create the token if needed
-- Run `claude mcp status` to see connection details
+**If you see an error**:
+- Is your token valid? Check: https://github.com/settings/tokens
+- Do you have the right scopes? Create a new read-only token if needed
+- See the troubleshooting guide in the official docs
 
-### Step 5: Explore GitHub MCP Capabilities
+### Step 5: Explore GitHub with MCP
 
-Try these commands to understand what the GitHub MCP can do:
+Now that MCP is working, try exploring other GitHub projects. Ask Claude naturally:
 
-```bash
-# Search for issues by label
-claude "Find open 'bug' issues in microsoft/vscode"
-
-# Get pull request information
-claude "Show details of PR #123 in facebook/react"
-
-# Analyze repository structure
-claude "What's the directory structure of pytorch/pytorch?"
-
-# Check release information
-claude "What's the latest release of rust-lang/rust?"
 ```
+Show me the most active open-source Python projects right now
+```
+
+```
+Tell me about recent activity in the pytorch repository
+```
+
+```
+What are the most common issues in the React repository?
+```
+
+Claude Code will query GitHub in real-time and discuss what it finds with you. **This is the power of MCP**: you're no longer limited to local files—you're exploring the entire GitHub ecosystem through Claude Code.
 
 ---
 
-## Common Workflows: Putting It All Together
+## Your First MCP Workflow: Exploring GitHub
 
-Now that you have Claude Code fully configured (subagents, skills, MCP), let's see four complete workflows that demonstrate real-world usage.
+Now that GitHub MCP is connected, let's use it for something practical: exploring a project you're interested in.
 
-### Workflow 1: Systematic Codebase Exploration
+**Try this**:
 
-**Scenario**: You're joining a new project and need to understand the codebase quickly.
-
-**Workflow**:
-
-```bash
-# Step 1: Get repository structure
-claude "Show me the main directories and their purposes in this project"
-
-# Step 2: Identify entry points
-claude "Find the main application entry point (main.py, index.js, etc.)"
-
-# Step 3: Understand dependencies
-claude "What are the key dependencies in package.json (or requirements.txt)?"
-
-# Step 4: Check for tests
-claude "Where are tests located, and what testing framework is used?"
-
-# Step 5: Review recent changes
-claude "Using GitHub MCP, what are the 10 most recent commits?"
-
-# Step 6: Check open issues
-claude "Using GitHub MCP, what critical bugs are currently open?"
+```
+Ask Claude: "Using GitHub, tell me about the most active projects right now"
 ```
 
-**What this demonstrates**:
-- Claude Code reads local files (Steps 1-4)
-- Claude Code queries external data via MCP (Steps 5-6)
-- You get a complete project overview in minutes
+Claude will query GitHub and describe what's trending.
 
-### Workflow 2: Issue-Driven Debugging with GitHub Integration
+**Next, try this**:
 
-**Scenario**: A user reported a bug via GitHub issue. You need to understand the issue, locate relevant code, and fix it.
-
-**Workflow**:
-
-```bash
-# Step 1: Get issue details
-claude "Using GitHub MCP, show me details of issue #247 in myorg/myrepo"
-
-# Step 2: Find related code
-claude "Search the codebase for files related to [issue topic from step 1]"
-
-# Step 3: Analyze the bug
-claude "Read [relevant files] and explain what might cause [issue symptom]"
-
-# Step 4: Create a fix with subagent
-claude agent run code-reviewer "Review my proposed fix for issue #247"
-
-# Step 5: Generate tests
-claude "Create unit tests that verify issue #247 is fixed"
-
-# Step 6: Verify fix
-claude "Run the tests and confirm they pass"
+```
+Ask Claude: "Show me the 5 most recent commits in [a project you like]"
 ```
 
-**What this demonstrates**:
-- External issue tracking integration (GitHub MCP)
-- Code analysis (file reading)
-- Specialized review (code-reviewer subagent)
-- Test generation and execution
-- Complete bug-fix workflow in one session
+Claude will retrieve actual commit history from GitHub and summarize what changed.
 
-### Workflow 3: Database-Backed Feature Validation
-
-**Scenario**: You're adding a new feature that queries a database. You need to understand existing data patterns and test your queries.
-
-**Prerequisites**: PostgreSQL MCP server configured (install with `claude mcp install @anthropic/mcp-server-postgres`)
-
-**Workflow**:
-
-```bash
-# Step 1: Understand schema
-claude "Using Postgres MCP, show me the schema for the 'users' table"
-
-# Step 2: Analyze data patterns
-claude "Query the database: What's the distribution of user signups by month?"
-
-# Step 3: Test your query
-claude "I'm writing this SQL query: [paste query]. Run it against the database and show results"
-
-# Step 4: Validate edge cases
-claude "Check if there are any users with NULL email addresses"
-
-# Step 5: Generate application code
-claude "Write a Python function using SQLAlchemy to safely query users by email"
-
-# Step 6: Security review with skill
-claude "Use the sql-injection-checker skill to verify my query is safe"
-```
-
-**What this demonstrates**:
-- Database integration via MCP
-- Interactive query testing
-- Code generation informed by real data
-- Security validation via skills
-
-### Workflow 4: Multi-System Debugging
-
-**Scenario**: A production issue involves multiple systems—application logs, database state, and GitHub deployment history. You need to correlate information across all three.
-
-**Prerequisites**: File system access, PostgreSQL MCP, GitHub MCP
-
-**Workflow**:
-
-```bash
-# Step 1: Check application logs
-claude "Read logs/production.log and find errors from the last hour"
-
-# Step 2: Identify error pattern
-claude "What's the most frequent error in the logs?"
-
-# Step 3: Check database state
-claude "Using Postgres MCP, query the database: Are there any locked transactions?"
-
-# Step 4: Check recent deployments
-claude "Using GitHub MCP, what commits were deployed to production today?"
-
-# Step 5: Correlate timeline
-claude "Did any of today's commits change code related to [error from step 2]?"
-
-# Step 6: Root cause analysis
-claude "Based on logs, database state, and recent commits, what's the likely root cause?"
-
-# Step 7: Document findings
-claude "Create an incident report summarizing the root cause and suggested fix"
-```
-
-**What this demonstrates**:
-- Multi-source data correlation (logs, database, GitHub)
-- Systematic debugging across systems
-- Claude Code acts as incident investigator
-- Produces actionable documentation
-
----
-
-## Hands-On Exercise: Connect and Use MCP
-
-**Exercise: Explore a Public Repository with GitHub MCP**
-
-**Goal**: Use GitHub MCP to understand a popular open-source project.
-
-**Steps**:
-
-1. **Choose a repository** you're interested in (e.g., `microsoft/vscode`, `django/django`, `pytorch/pytorch`)
-
-2. **Repository Overview**:
-   ```bash
-   claude "Using GitHub MCP, give me an overview of [repo-name]: description, stars, primary language, and license"
-   ```
-
-3. **Recent Activity**:
-   ```bash
-   claude "What are the 10 most recent commits in [repo-name]? Summarize what changed."
-   ```
-
-4. **Issue Analysis**:
-   ```bash
-   claude "What are the top 5 open issues by comment count in [repo-name]? What topics are most discussed?"
-   ```
-
-5. **Contributor Activity**:
-   ```bash
-   claude "Who are the top 5 contributors to [repo-name] by commit count?"
-   ```
-
-6. **Connect to Local Code**:
-   - Clone the repository: `git clone https://github.com/[repo-name]`
-   - Ask Claude to analyze it:
-   ```bash
-   claude "Based on the GitHub information and the local files, explain how to contribute to this project"
-   ```
-
-**💡 Learning with AI**:
-- Ask Claude Code: *"What other GitHub MCP queries would help me understand this project?"*
-- Experiment: *"Can you create a comparison table of issues labeled 'bug' vs 'feature'?"*
-- Deepen understanding: *"Explain how the GitHub MCP works behind the scenes"*
-
-Use Claude Code as a mentor to explore MCP capabilities, not just to complete the task.
-
----
-
-## Managing MCP Connections
-
-As you add more MCP servers, you'll need to manage them effectively.
-
-### List Installed MCP Servers
-
-```bash
-claude mcp list
-```
-
-**Output**:
-```
-Installed MCP servers:
-  - github (@anthropic/mcp-server-github) - Connected ✓
-  - postgres (@anthropic/mcp-server-postgres) - Connected ✓
-  - filesystem (@anthropic/mcp-server-filesystem) - Not configured
-```
-
-### Check MCP Status
-
-```bash
-claude mcp status github
-```
-
-**Output**:
-```
-GitHub MCP Server
-Status: Connected
-Scopes: public_repo, read:org, read:user
-Last used: 5 minutes ago
-Rate limit: 4,847 / 5,000 requests remaining
-```
-
-**Use case**: Monitor API rate limits to avoid throttling.
-
-### Remove an MCP Server
-
-```bash
-claude mcp remove postgres
-```
-
-**Warning**: This removes the server configuration and stored credentials. You'll need to reconfigure if you add it again later.
-
-### MCP Configuration File
-
-MCP servers are configured in `.mcp.json` in your project directory:
-
-```json
-{
-  "mcpServers": {
-    "github": {
-      "transport": "stdio",
-      "command": "mcp-server-github",
-      "env": {
-        "GITHUB_TOKEN": "keychain:github-token"
-      }
-    },
-    "postgres": {
-      "transport": "stdio",
-      "command": "mcp-server-postgres",
-      "env": {
-        "DATABASE_URL": "keychain:postgres-url"
-      }
-    }
-  }
-}
-```
-
-**Security Note**: Credentials are stored in your system keychain (not plain text), referenced as `keychain:[key-name]`.
-
----
-
-## Troubleshooting MCP Connections
-
-### Issue: MCP Server Not Connecting
-
-**Symptoms**: Claude Code can't access external data; MCP commands timeout.
-
-**Fixes**:
-
-1. **Check credentials**: `claude mcp config [server-name]` to re-enter credentials
-2. **Test manually**: Use the API directly (e.g., `curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/user`)
-3. **Check firewall**: Ensure your network allows connections to the external service
-4. **Review logs**: `claude mcp logs [server-name]` to see error details
-
-### Issue: Rate Limiting
-
-**Symptoms**: MCP commands fail with "rate limit exceeded" errors.
-
-**Fixes**:
-
-1. **Check usage**: `claude mcp status [server-name]` to see remaining quota
-2. **Wait**: Most APIs reset rate limits hourly or daily
-3. **Upgrade**: Some services offer higher rate limits for paid accounts
-4. **Cache**: Claude Code caches responses when possible to reduce API calls
-
-### Issue: Unexpected Data Access
-
-**Symptoms**: MCP server accesses data you didn't intend it to see.
-
-**Fixes**:
-
-1. **Review scopes**: Check what permissions your API token grants
-2. **Revoke token**: Go to the service's settings and revoke the token immediately
-3. **Create scoped token**: Generate a new token with narrower permissions
-4. **Remove MCP server**: `claude mcp remove [server-name]` until you resolve the issue
-
-**Security Principle**: If you're ever uncertain about what an MCP server is accessing, **remove it immediately and investigate**.
+**That's it.** You're now using Claude Code as a **collaborative explorer** that can see external systems in real-time. No complex workflows yet—just the ability to ask Claude questions about GitHub projects and get live answers.
 
 ---
 
@@ -605,8 +236,8 @@ You've completed all five lessons. Take a moment to reflect on what you've learn
 
 **Lesson 5: MCP Servers**
 - External data access (GitHub, databases, APIs)
-- Security evaluation is critical
-- Complete workflows combining local and external data
+- Use official Anthropic MCP servers for safe integration
+- Simple workflows connecting local work with external systems
 
 ### The Complete Claude Code Toolkit
 
@@ -634,20 +265,20 @@ Exploratory or one-off task?
 ### Reflection Questions
 
 **Understanding**:
-- Can you explain the difference between subagents, skills, and MCP servers to a colleague?
-- Why is MCP security evaluation critical compared to skills/subagents?
+- Can you explain the difference between subagents (explicit), skills (autonomous), and MCP (external data) to a colleague?
+- How does MCP extend Claude Code's capabilities beyond just reading local files?
 
 **Application**:
-- Which workflows from this lesson would help your current projects?
-- What domain-specific skills could your team build?
+- What GitHub repositories would be interesting to explore using MCP?
+- How could accessing external data (like GitHub) improve your development workflow?
 
 **Integration**:
-- How would you combine subagents, skills, and MCP in a complete development workflow?
-- What external systems would most benefit from MCP integration in your work?
+- How would you combine a subagent, a skill, and MCP in a single project?
+- If your subagent needed external data, how could you use MCP to provide it?
 
-**Strategic Thinking**:
-- If you were leading a development team, how would you leverage Claude Code's features to create competitive advantage?
-- What unique expertise could you encode as skills to scale across your organization?
+**Practical Experience**:
+- What was the difference between explicitly invoking a subagent vs. having a skill automatically discover when to help?
+- How did using MCP feel different from just asking Claude Code about local files?
 
 ---
 
@@ -666,7 +297,7 @@ Each tool has different strengths, and choosing the right tool for your workflow
 
 ---
 
-## Supplementary Resources
+## Resources for Learning More
 
 For deeper exploration beyond this chapter:
 
@@ -674,26 +305,22 @@ For deeper exploration beyond this chapter:
 - **MCP Specification**: https://modelcontextprotocol.io
 - **Community MCP Servers**: https://github.com/anthropics/mcp-servers
 - **Claude Code Discord**: https://discord.gg/anthropic (#claude-code channel)
-
-See the [Supplementary Resources](./supplementary-resources.md) page for a complete curated list of documentation, tutorials, community forums, and practice projects.
+- **Anthropic Blog**: https://www.anthropic.com/blog (announcements and case studies)
 
 ---
 
 ## Key Takeaways
 
-- **MCP connects Claude Code to external systems** (GitHub, databases, APIs, monitoring)
-- **Security evaluation is critical**: Review source code, scope permissions, use trusted servers
-- **Official Anthropic MCP servers are trusted**: GitHub, PostgreSQL, File System, Memory
-- **Four complete workflows** demonstrate combining files, commands, and external integrations
-- **MCP complements skills/subagents**: Skills = internal expertise, MCP = external data
-- **Configuration stored securely**: Credentials in system keychain, referenced in `.mcp.json`
-- **Management commands**: List, status, config, remove MCP servers with `claude mcp`
-- **You now have complete toolkit**: Main conversation, subagents, skills, MCP
+- **MCP connects Claude Code to external systems** like GitHub, enabling real-time data access beyond local files
+- **Use official Anthropic MCP servers**: GitHub, PostgreSQL, File System, and Memory are maintained and trusted
+- **Simple GitHub integration**: Ask Claude naturally about GitHub repositories, issues, and activity
+- **MCP complements subagents and skills**: Subagents for explicit tasks, skills for autonomous expertise, MCP for external data
+- **Credentials stored securely**: Your tokens are managed by your system's credential store (Keychain, Credential Manager, Secret Service)
+- **Real-time exploration**: Query live GitHub data, trending projects, repository activity, all through natural language prompts
+- **You now have complete toolkit**: Main conversation (exploratory), subagents (explicit tasks), skills (autonomous expertise), MCP (external data)
 
 ---
 
 **🎉 Congratulations!** You've completed Chapter 5 and mastered Claude Code's core features. You're ready to leverage AI as an integrated development partner, not just a question-answering tool.
 
 **Continue your journey**: Explore the supplementary resources, apply these concepts to your own projects, and see how AI-driven development transforms your workflow.
-
-**Up Next**: [Chapter 6 - AI-Driven Development Methodology](../../03-AIDD-in-Practice/06-aidd-methodology/README.md)

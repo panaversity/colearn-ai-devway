@@ -1,10 +1,9 @@
 ---
 sidebar_position: 3
-title: "Lesson 3: Understanding and Using Subagents"
-duration: "25-32 min"
+title: "Understanding and Using Subagents"
 ---
 
-# Lesson 3: Understanding and Using Subagents
+# Understanding and Using Subagents
 
 ## The Problem: Context Pollution and Specialization
 
@@ -137,114 +136,49 @@ Provide:
 
 ### Subagent Lifecycle
 
-1. **Creation**: You define the subagent with `claude agent create <name>`
-2. **Invocation**: You run the subagent with `claude agent run <name> "<task>"`
-3. **Execution**: The subagent processes the task in isolated context
-4. **Completion**: Results return; context is preserved for next invocation
-5. **Management**: You can list, edit, or delete subagents with `claude agent` commands
+1. **Creation**: You ask Claude Code to create a subagent in conversation (e.g., "Create a subagent called explain-my-code that...")
+2. **Storage**: Claude Code creates files in `.claude/agents/explain-my-code/`
+3. **Invocation**: You ask Claude Code to use the subagent naturally (e.g., "Use the explain-my-code subagent to explain this code")
+4. **Execution**: The subagent processes the task in isolated context
+5. **Completion**: Results return; context is preserved for next invocation
+6. **Management**: Subagents are stored as files in `.claude/agents/` that you can view, edit, or delete
 
 ---
 
 ## Hands-On Tutorial: Creating Your First Subagent
 
-Let's create a **code-reviewer subagent** that applies Python best practices.
+Let's create an **"explain-my-code" subagent**—a collaborative partner that helps you understand what your code does.
+
+This is simpler than a code reviewer and directly supports the "learning WITH AI" philosophy.
 
 ### Step 1: Create the Subagent
 
-In your terminal, run:
+Start Claude Code in your project directory:
 
 ```bash
-claude agent create code-reviewer
+claude
 ```
 
-**Expected output**:
+Then ask Claude to create the subagent:
+
 ```
-✓ Subagent 'code-reviewer' created
-✓ Files created:
-  - .claude/agents/code-reviewer/agent.json
-  - .claude/agents/code-reviewer/SYSTEM_PROMPT.md
+Create a subagent called "explain-my-code" with this description:
+"A collaborative partner that explains what code does in simple, conversational terms.
+Breaks down complex parts, points out confusing sections, and suggests clearer ways
+to write code. Perfect for learning and code review."
 
-Edit SYSTEM_PROMPT.md to customize instructions.
-```
-
-### Step 2: Customize the System Prompt
-
-Open `.claude/agents/code-reviewer/SYSTEM_PROMPT.md` in your text editor:
-
-```bash
-# Windows
-notepad .claude\agents\code-reviewer\SYSTEM_PROMPT.md
-
-# macOS/Linux
-nano .claude/agents/code-reviewer/SYSTEM_PROMPT.md
+Keep the explanation helpful and beginner-friendly, not academic.
 ```
 
-Replace the default content with:
+Claude will create the subagent files automatically in `.claude/agents/explain-my-code/`.
 
-```markdown
-# Code Reviewer System Prompt
+**Expected result**: Claude confirms the subagent has been created and saved to your project.
 
-You are a Python code reviewer with expertise in software engineering best practices.
+### Step 2: Test Your Subagent
 
-## Your Role
-- Review code for bugs, style issues, and improvements
-- Provide constructive, specific feedback
-- Balance critique with encouragement
+Create a sample Python file called `example.py`:
 
-## Standards to Apply
-
-### Style
-- PEP 8 compliance (line length, naming conventions)
-- Type hints for function parameters and return values
-- Google-style docstrings for all functions and classes
-
-### Quality
-- No hardcoded values—use constants or configuration
-- Error handling for edge cases
-- Security concerns (SQL injection, secrets in code)
-
-### Performance
-- Flag O(n²) or worse complexity
-- Suggest better data structures where applicable
-
-## Output Format
-
-Provide feedback in this structure:
-
-1. **Summary**: One-sentence overall assessment
-2. **Critical Issues**: Bugs or security concerns (if any)
-3. **Style Issues**: PEP 8 or documentation problems
-4. **Suggestions**: Performance or readability improvements
-5. **Positive Notes**: What the code does well
-
-Always include line numbers and specific examples.
-```
-
-Save and close the file.
-
-### Step 3: Configure Subagent Tools (Optional)
-
-Edit `.claude/agents/code-reviewer/agent.json`:
-
-```json
-{
-  "name": "code-reviewer",
-  "description": "Reviews Python code for bugs, style, and best practices",
-  "tools": ["read", "grep", "glob"],
-  "model": "claude-sonnet-4"
-}
-```
-
-**What this configuration does**:
-- **tools**: Limits the subagent to reading files, searching code, and finding files—no write or execute permissions (safer for automated reviews)
-- **model**: Uses Claude Sonnet (balance of speed and capability)
-
-### Step 4: Test Your Subagent
-
-Create a sample Python file to review:
-
-```bash
-cat > sample.py << 'EOF'
+```python
 def calculate_total(items):
     total = 0
     for item in items:
@@ -253,55 +187,39 @@ def calculate_total(items):
 
 result = calculate_total([{"price": 10}, {"price": 20}])
 print(result)
-EOF
 ```
 
-**This code has intentional issues**:
-- No type hints
-- No docstring
-- No error handling
-- O(n) loop could be simplified with `sum()`
-
-Now run the code-reviewer subagent:
-
-```bash
-claude agent run code-reviewer "Review sample.py for bugs and style issues"
-```
-
-**Expected output** (example):
+Now ask Claude to use the subagent:
 
 ```
-🔍 Code Review: sample.py
-
-1. Summary
-Code is functional but lacks documentation, type hints, and error handling.
-
-2. Critical Issues
-- No validation for 'items' parameter (line 1)
-  What if items is None or contains non-dict elements?
-
-3. Style Issues
-- Missing type hints (line 1)
-  Should be: def calculate_total(items: list[dict]) -> float:
-- Missing docstring (line 1)
-  Add description of function purpose and parameters
-
-4. Suggestions
-- Use sum() with generator expression (more Pythonic):
-  return sum(item["price"] for item in items)
-- Add error handling for KeyError if "price" key missing
-
-5. Positive Notes
-- Clear variable names ('total', 'items')
-- Straightforward logic, easy to understand
-
-Recommended next steps:
-1. Add type hints and docstring
-2. Validate input parameter
-3. Refactor loop to use sum()
+Use the explain-my-code subagent to explain what example.py does
 ```
 
-**If the review appears**: ✅ Your subagent works! It's applying the standards you defined in the system prompt.
+Or ask more naturally:
+
+```
+Have the explain-my-code subagent break down example.py for me
+```
+
+Claude will invoke the subagent, which analyzes the file and explains it in simple terms.
+
+**What you might hear back**:
+> "This function adds up prices from a list of items. It starts with `total = 0`, then loops through each item, adds its price to the total, and finally returns the sum. The test code at the bottom calls the function with two items ($10 and $20) and prints the result (30)."
+
+**If your subagent explains the code**: ✅ It works! Now you have a collaborative partner to help you understand your own code.
+
+---
+
+## ✓ Your Subagent Is Working When:
+
+**Quick verification**:
+
+1. **Subagent is created** - You can list it
+2. **Subagent can be invoked** - You can ask it to explain code
+3. **It returns helpful explanations** - The response makes sense and helps clarify the code
+4. **It stays in character** - Multiple invocations maintain the "collaborative explainer" role
+
+**If this works**: 🎉 **Your collaborative helper is ready! You now have a dedicated partner to help you understand code.**
 
 ---
 

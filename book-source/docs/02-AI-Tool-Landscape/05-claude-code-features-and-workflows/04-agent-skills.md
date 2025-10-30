@@ -1,10 +1,9 @@
 ---
 sidebar_position: 4
-title: "Lesson 4: Creating and Using Agent Skills"
-duration: "32-39 min"
+title: "Creating and Using Agent Skills"
 ---
 
-# Lesson 4: Creating and Using Agent Skills
+# Creating and Using Agent Skills
 
 ## The Competitive Advantage Hiding in Plain Sight
 
@@ -181,442 +180,90 @@ Skills can exist at three levels:
 
 ---
 
-## Hands-On Tutorial: Creating a Python Docstring Writer Skill
+## Hands-On Tutorial: Creating a Simple Skill
 
-Let's build a practical skill that adds Google-style docstrings to Python functions.
+Let's build a practical skill that helps you understand error messages—your **"error explainer" skill**.
 
-### Step 1: Create the Skill Directory
+When you get a Python error, Claude automatically explains what went wrong and how to fix it.
 
-In your project directory, run:
+### Step 1: Create the Skill
 
-```bash
-mkdir -p .claude/skills/python-docstring-writer
-```
-
-### Step 2: Create the SKILL.md File
-
-Create `.claude/skills/python-docstring-writer/SKILL.md`:
+Start Claude Code in your project directory:
 
 ```bash
-# macOS/Linux
-nano .claude/skills/python-docstring-writer/SKILL.md
-
-# Windows
-notepad .claude\skills\python-docstring-writer\SKILL.md
+claude
 ```
 
-### Step 3: Define the Skill
+Then ask Claude to create the skill:
 
-Paste the following content:
+```
+Create a skill called "error-explainer" for my project. https://docs.claude.com/en/docs/claude-code/skills
 
-```markdown
----
-name: python-docstring-writer
-description: |
-  Use this skill when working with Python functions or methods that lack docstrings.
-  The skill generates comprehensive Google-style docstrings with parameter descriptions,
-  return types, exception documentation, and usage examples. Invoke automatically when:
-  - Creating new Python functions without docstrings
-  - Editing existing functions that lack documentation
-  - User mentions "add docs" or "document this function"
-  - Reviewing code that fails documentation linting
-allowed-tools: [read, edit, grep]
----
+Description: "When a Python error occurs, identifies the error type and explains what caused it in simple, friendly terms. Provides a corrected code example and shows how to fix the problem."
 
-# Python Docstring Writer
+Instructions:
+- Identify what type of error it is (ValueError, KeyError, IndexError, etc.)
+- Explain what caused it in simple, non-technical terms
+- Show how to fix it with a concrete example
+- Provide corrected code that works
+- Keep explanations friendly and conversational
 
-## Purpose
-Generate high-quality, comprehensive docstrings for Python functions and methods following Google style guide conventions.
+Store this in .claude/skills/ so it's available to the whole project.
+```
 
-## When to Use
-- Python function/method lacks a docstring
-- Existing docstring is incomplete or outdated
-- User explicitly requests documentation
-- Code review identifies missing documentation
+Claude will create the skill files automatically in `.claude/skills/error-explainer/`.
 
-## Instructions
+**Expected result**: Claude confirms the skill has been created and saved to your project.
 
-### 1. Analyze the Function
-Read the function signature and body to understand:
-- Purpose and behavior
-- Parameters (types, descriptions)
-- Return value (type, meaning)
-- Exceptions raised
-- Side effects or state changes
+### Step 2: Test Your Skill
 
-### 2. Generate Docstring
-Create a Google-style docstring with these sections:
-
-**Required**:
-- Brief one-line summary
-- Args section (for functions with parameters)
-- Returns section (if function returns a value)
-
-**Optional** (include if applicable):
-- Detailed description paragraph (for complex functions)
-- Raises section (if function throws exceptions)
-- Example section (for non-obvious usage)
-- Note/Warning (for important caveats)
-
-### 3. Format Standards
+Create a Python file with an intentional error:
 
 ```python
-def function_name(param1: type1, param2: type2) -> return_type:
-    """Brief one-line summary ending with period.
-
-    Optional detailed description providing context, explaining
-    non-obvious behavior, or clarifying usage patterns.
-
-    Args:
-        param1: Description of param1, including valid values
-            and constraints. Use indentation for multi-line descriptions.
-        param2: Description of param2.
-
-    Returns:
-        Description of return value, including type information
-        and meaning.
-
-    Raises:
-        ValueError: When param1 is negative.
-        TypeError: When param2 is not a string.
-
-    Example:
-        >>> result = function_name(10, "test")
-        >>> print(result)
-        Expected output
-
-    Note:
-        Important implementation detail or usage caveat.
-    """
+# error_example.py
+my_list = [1, 2, 3]
+print(my_list[10])  # IndexError!
 ```
 
-### 4. Best Practices
-- Start with a verb ("Calculate", "Return", "Generate", etc.)
-- Keep summary under 80 characters
-- Be specific: "Calculate the average of positive integers" not "Do math"
-- Include type information even if type hints exist
-- Provide examples for non-obvious usage
-- Document side effects explicitly
+Now ask Claude to run it and help:
 
-## Example
-
-### Input (function without docstring):
-
-```python
-def calculate_discount(price, discount_percent):
-    if discount_percent < 0 or discount_percent > 100:
-        raise ValueError("Discount must be between 0 and 100")
-    discount_amount = price * (discount_percent / 100)
-    final_price = price - discount_amount
-    return final_price
+```
+Run error_example.py and help me understand what went wrong
 ```
 
-### Output (with generated docstring):
+**What happens**:
+Claude Code will:
+1. Run the script and see the IndexError
+2. Recognize your error-explainer skill applies
+3. Automatically explain the error using your skill
 
-```python
-def calculate_discount(price, discount_percent):
-    """Calculate the final price after applying a percentage discount.
+**What you might see**:
+> "You got an IndexError because you tried to access index 10, but your list only has 3 items (indices 0, 1, 2). Python counts from zero, so the last valid index is 2. To fix this, either check the list length first with `if index < len(my_list)` or use a try/except block."
 
-    Takes an original price and discount percentage, validates the discount
-    is within acceptable range (0-100), and returns the discounted price.
-
-    Args:
-        price: Original price in dollars before discount. Must be positive.
-        discount_percent: Discount percentage to apply. Must be between 0
-            and 100 inclusive.
-
-    Returns:
-        Final price in dollars after discount is applied. Will be equal to
-        or less than the original price.
-
-    Raises:
-        ValueError: If discount_percent is negative or greater than 100.
-
-    Example:
-        >>> calculate_discount(100, 20)
-        80.0
-        >>> calculate_discount(50, 10)
-        45.0
-    """
-    if discount_percent < 0 or discount_percent > 100:
-        raise ValueError("Discount must be between 0 and 100")
-    discount_amount = price * (discount_percent / 100)
-    final_price = price - discount_amount
-    return final_price
-```
-
-## Output Format
-Provide the complete updated function with the docstring inserted immediately after the function signature, maintaining proper indentation.
-```
-
-Save and close the file.
-
-### Step 4: Test the Skill
-
-Create a test Python file with an undocumented function:
-
-```bash
-cat > test_function.py << 'EOF'
-def validate_email(email):
-    if '@' not in email:
-        raise ValueError("Invalid email format")
-    local, domain = email.split('@')
-    if not local or not domain:
-        raise ValueError("Email missing local or domain part")
-    return True
-EOF
-```
-
-Now ask Claude Code to work with this file:
-
-```bash
-claude "Review test_function.py and improve it"
-```
-
-**Expected Behavior**: Claude Code should:
-1. Read the file and notice the function lacks a docstring
-2. Discover the `python-docstring-writer` skill is relevant
-3. Suggest: *"I notice this function lacks documentation. Should I use the python-docstring-writer skill to add a comprehensive docstring?"*
-4. Upon your approval, generate and add a Google-style docstring
-
-**If Claude discovers and suggests the skill**: ✅ Your skill is working! The description enabled autonomous discovery.
-
-**If Claude doesn't suggest the skill**: Check:
-- Is the `SKILL.md` file in the correct location? (`.claude/skills/python-docstring-writer/SKILL.md`)
-- Is the YAML frontmatter properly formatted?
-- Try being more explicit: `claude "Add docstrings using the python-docstring-writer skill"`
+**Key difference from subagents**: You don't explicitly invoke your skill. Claude **automatically discovers it** based on the error context and applies it. This is the power of skills—they work in the background, applied when relevant.
 
 ---
 
-## Writing Effective Skill Descriptions: Best Practices
+## ✓ Your Skill Is Working When:
 
-The **description** field determines whether Claude discovers your skill. Here's how to write effective descriptions:
+**Quick check**:
 
-### ❌ Bad Description (Vague, Won't Be Discovered)
+1. **Skill is created** - Skill directory exists
+2. **Skill is discovered** - When you have an error, Claude suggests using it
+3. **Explanations are helpful** - You understand what went wrong and how to fix it
+4. **It saves you time** - You don't have to google the error—Claude explains it immediately
 
-```yaml
-description: "Helps with Python docs"
-```
-
-**Why it fails**: Too vague. Claude can't determine when this is relevant.
-
-### ✅ Good Description (Specific, Discoverable)
-
-```yaml
-description: |
-  Use this skill when working with Python functions that lack docstrings.
-  Automatically generates Google-style docstrings with parameter descriptions,
-  return types, and usage examples. Invoke when creating or editing Python
-  functions without documentation.
-```
-
-**Why it works**:
-- Specific trigger: "Python functions that lack docstrings"
-- Clear outcome: "generates Google-style docstrings"
-- Action words: "creating or editing"
-
-### Description Formula
-
-Use this template for effective skill descriptions:
-
-```
-Use this skill when [SPECIFIC CONTEXT/TRIGGER].
-[WHAT THE SKILL DOES] with [KEY FEATURES/BENEFITS].
-Invoke when [LIST OF SCENARIOS WHERE IT APPLIES].
-```
-
-**Examples**:
-
-**Security Auditor Skill**:
-```yaml
-description: |
-  Use this skill when reviewing code that handles user input, database queries,
-  or authentication. Scans for common security vulnerabilities (SQL injection,
-  XSS, hardcoded secrets, weak crypto) and suggests fixes. Invoke when reviewing
-  pull requests, writing new API endpoints, or handling sensitive data.
-```
-
-**Test Generator Skill**:
-```yaml
-description: |
-  Use this skill when functions or classes lack unit tests. Generates pytest
-  test cases covering happy path, edge cases, and error conditions. Invoke when
-  completing feature implementation, before code review, or when test coverage
-  drops below threshold.
-```
-
-**API Documentation Skill**:
-```yaml
-description: |
-  Use this skill when REST API endpoints lack OpenAPI/Swagger documentation.
-  Generates complete API docs with request/response examples, parameter
-  descriptions, and status codes. Invoke when adding new endpoints or updating
-  existing API routes.
-```
+**If this works**: 🎉 **Your collaborative skill is ready! Claude now automatically helps you understand errors as you encounter them.**
 
 ---
 
-## Building a Skill Library: Strategic Recommendations
+## How Skills Work
 
-For teams serious about leveraging skills for competitive advantage:
+Skills are **collaborative helpers that Claude discovers automatically**. Unlike subagents (which you explicitly invoke), skills work in the background.
 
-### 1. Start with High-Frequency Pain Points
+When Claude notices you need help (confused by an error, writing undocumented code, etc.), it suggests your skill.
 
-**Identify**: What tasks does your team repeatedly spend time on?
-- Code reviews finding the same issues
-- Boilerplate that's tedious to write
-- Standards that are inconsistently applied
-
-**Encode**: Create skills that automate these tasks.
-
-**Examples**:
-- `enforce-type-hints` → Ensures all functions have type annotations
-- `database-migration-generator` → Creates migration files from model changes
-- `error-handling-wrapper` → Adds try/except blocks with logging
-
-### 2. Capture Expert Knowledge
-
-**Identify**: What domain expertise do your senior engineers have?
-- Security best practices
-- Performance optimization patterns
-- Domain-specific business rules
-
-**Encode**: Turn their expertise into skills that apply automatically.
-
-**Examples**:
-- `fintech-compliance-checker` → Validates calculations meet financial regulations
-- `ml-reproducibility-enforcer` → Ensures experiments log hyperparameters
-- `accessibility-auditor` → Checks UI code for WCAG compliance
-
-### 3. Make Skills Discoverable and Maintainable
-
-**Naming Convention**: Use descriptive, domain-specific names
-- ✅ `python-pytest-test-generator`
-- ❌ `test-helper`
-
-**Documentation**: Include README.md in skill directory explaining:
-- What the skill does
-- When to use it
-- Who maintains it
-- How to contribute improvements
-
-**Version Control**: Commit skills to your repo
-```bash
-git add .claude/skills/
-git commit -m "Add python-docstring-writer skill"
-```
-
-**Team Onboarding**: Add a section to your team handbook:
-*"We use Claude Code skills to automate expertise. Here's our skill library and what each does..."*
-
-### 4. Iterate Based on Usage
-
-**Track**: Which skills are invoked most frequently?
-**Refine**: Improve descriptions and instructions based on how well they work
-**Expand**: Build new skills based on team feedback and emerging needs
-
----
-
-## Exercise: Create a Domain-Specific Skill
-
-Now it's your turn to apply what you've learned.
-
-**Exercise: Build a Skill for Your Domain**
-
-**Goal**: Create a skill that captures expertise from your field (or learning area).
-
-**Options** (choose one):
-
-1. **Data Science**: `data-validation-checker` — Validates datasets for missing values, outliers, type consistency
-2. **Web Development**: `responsive-design-auditor` — Checks if UI components have mobile-friendly breakpoints
-3. **Backend**: `api-error-handler` — Ensures API endpoints return consistent error response formats
-4. **DevOps**: `dockerfile-optimizer` — Suggests improvements for Docker images (layer caching, security, size)
-
-**Requirements**:
-1. Create the skill in `.claude/skills/[skill-name]/SKILL.md`
-2. Write a specific, discoverable description (use the formula above)
-3. Define clear instructions for what the skill should check or generate
-4. Include at least one example showing input and expected output
-5. Test the skill by creating a relevant file and asking Claude to review it
-
-**💡 Learning with AI**:
-- Ask Claude Code: *"What are common issues in [your domain] that could be automated with a skill?"*
-- Request feedback: *"Review my skill description—will Claude be able to discover it effectively?"*
-- Iterate: *"Based on this test case, how should I improve my skill's instructions?"*
-
-Use Claude Code as a mentor to learn effective skill design, not just to complete the exercise.
-
----
-
-## Skill Management Commands
-
-As your skill library grows, you'll need to manage skills effectively.
-
-### List Available Skills
-
-```bash
-claude skill list
-```
-
-**Output**:
-```
-Available skills:
-Personal (.config/claude/skills/):
-  - personal-notes-formatter
-
-Project (.claude/skills/):
-  - python-docstring-writer
-  - sql-injection-checker
-  - pytest-test-generator
-
-Plugins:
-  (none installed)
-```
-
-### Show Skill Details
-
-```bash
-claude skill show python-docstring-writer
-```
-
-**Output**: Displays the full SKILL.md content and metadata.
-
-### Test Skill Discovery
-
-```bash
-claude skill test python-docstring-writer --context "Python function without docstring"
-```
-
-**Output**: Shows whether Claude would discover this skill in the given context (useful for debugging descriptions).
-
-### Disable a Skill Temporarily
-
-```bash
-claude skill disable sql-injection-checker
-```
-
-**Use case**: Temporarily disable a skill that's being invoked too aggressively while you refine it.
-
----
-
-## Pause and Reflect: Your Competitive Edge
-
-You've learned a powerful concept: **domain expertise encoded as skills compounds over time.**
-
-A single senior developer can encode their knowledge once, and that expertise automatically applies across:
-- Every developer on the team
-- Every project in the organization
-- Every line of code written going forward
-
-This is fundamentally different from traditional knowledge transfer (documentation, training, mentorship), which:
-- Requires active learning effort
-- Fades over time
-- Doesn't scale to entire codebases automatically
-
-**Reflection Questions**:
-- What unique expertise does your team or company have that could be encoded as skills?
-- If you're learning programming, what skills could accelerate your learning? (e.g., `explain-error-messages`, `suggest-better-variable-names`)
-- How would your development workflow change if common mistakes were caught automatically?
+**Key point**: Skills should complement your development workflow, not add complexity. Start simple.
 
 ---
 

@@ -40,6 +40,15 @@ const config: Config = {
         referrerpolicy: 'no-referrer',
       },
     },
+    // Plausible Analytics (privacy-friendly). Create site on plausible.io first.
+    {
+      tagName: 'script',
+      attributes: {
+        defer: true,
+        'data-domain': 'aidd.panaversity.org',
+        src: 'https://plausible.io/js/script.js',
+      },
+    },
   ],
 
   // Even if you don't use internationalization, you can use this field to set
