@@ -147,16 +147,21 @@ This 40-minute presentation from industry analysts provides the detailed evidenc
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Using the 30M × $100k heuristic as a baseline, build a rough model of the developer economy for my context.” Provide your org size or personal situation. Request a simple sensitivity table varying headcount and value per dev.
-- Ask: “Challenge the assumptions.” Have it list 3 alternative models for estimating economic impact (e.g., revenue attribution, productivity savings, user value) and discuss pros/cons for each.
-- Ask: “Find and summarize 3 credible sources on global developer counts and average impact.” Tell ChatGPT to cite URLs; you will independently verify them.
-- Ask: “Translate this macro view into 3 concrete actions I should take in the next 30 days to capture upside from AI-augmented development.”
+Prompts:
+1) Explain the “$3 trillion developer economy” concept in plain language and include 2 current, cited sources supporting developer counts and value per developer.
+2) Surface trade‑offs and constraints: critique the 30M × $100k heuristic and propose 2 alternative estimation frames (e.g., revenue attribution, productivity savings). Note pros/cons.
+3) Apply this to a realistic scenario: estimate impact for my team/org (or personal context). Provide a simple sensitivity table varying headcount and value per developer.
+4) Optional: Compare three estimation frames in a short table (assumptions, data needed, risks of misuse, best use cases).
 
-Expected outcomes
-- A simple spreadsheet or note with your personalized TAM/back-of-the-envelope model
-- 3 alternative estimation frames with trade-offs
-- A short, verifiable reading list and a 30-day action shortlist
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
 
-Safety note: Verify any external links and calculations; don’t share proprietary revenue or salary data.
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

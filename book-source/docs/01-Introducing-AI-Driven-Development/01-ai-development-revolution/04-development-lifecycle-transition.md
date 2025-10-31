@@ -194,13 +194,21 @@ In the next section, we'll explore this evolution in detail: how the developer r
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Map my current development lifecycle and annotate where AI could help today.” Provide a brief description of your workflow; request a Red/Amber/Green heatmap with specific tool ideas per phase.
-- Ask: “Generate a minimal-but-meaningful test plan for one feature I’m working on.” Include boundary cases, failure modes, and data setup.
-- Ask: “Draft a ‘Definition of Done’ template for AI-augmented development that my team could adopt.” Include items for spec quality, tests, review, and documentation.
+Prompts:
+1) Explain how AI is reshaping each phase of the development lifecycle (planning, design, implementation, testing, deployment, operations) and cite 2 current studies or tool reports.
+2) Identify trade‑offs/constraints per phase (e.g., test reliability, spec quality, governance). Propose 1 mitigation per item.
+3) Apply to a realistic scenario: map my current lifecycle and mark Red/Amber/Green opportunities for AI assistance, with one specific experiment per green area.
+4) Optional: Compare a classic agile lifecycle vs an AI‑augmented lifecycle in a short table (artifacts, handoffs, risks, time-to-value).
 
-Expected outcomes
-- A personalized lifecycle map with 2-3 AI insertion points you can try immediately
-- A concrete test plan for one feature
-- A DoD template you can pilot on your next task
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
+
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

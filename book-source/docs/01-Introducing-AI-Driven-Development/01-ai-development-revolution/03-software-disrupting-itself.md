@@ -152,15 +152,21 @@ In the next section, we'll look at how this transformation affects every single 
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Create a side-by-side table contrasting external industry disruption vs. software disrupting itself.” Include actors, resistance, timeline, adoption dynamics, and compounding effects.
-- Ask: “Generate 3 examples of ‘software disrupting itself’ in my domain or stack.” Provide your domain; pick one example and request a short mitigation/adoption plan.
-- Ask: “Draft a 250-word internal memo persuading my team to adopt AI coding tools, including top risks and guardrails.” Request a version for skeptical audiences.
+Prompts:
+1) Explain “software disrupting itself” vs external disruption in 150–200 words, with 2 current, cited examples (e.g., tool adoption rates, enterprise reports, benchmarks).
+2) List trade‑offs/constraints for rapid self‑disruption (governance, vendor risk, quality drift). Propose 1–2 guardrails for each.
+3) Apply to a realistic scenario: draft a short internal recommendation to pilot AI coding tools with scope, success criteria, and rollback conditions.
+4) Optional: Compare this shift to cloud or mobile adoption in a 4–6 row table (timeline, resistance, affected roles, compounding effects).
 
-Expected outcomes
-- One crisp comparison table you can reuse in notes or slides
-- A concrete mini-plan to experiment with AI adoption in your context
-- A shareable memo (or email) to start an informed discussion on your team
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
 
-Safety note: Keep company-specific details abstract unless you’re working in a private environment.
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

@@ -254,13 +254,21 @@ In our final section, we'll bring all of this together and set up the journey ah
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Build me a hybrid learning plan that pairs CS foundations with AI-augmented practice.” Request a weekly schedule (5–7 hours/week) and concrete resources for each topic.
-- Ask: “Define 3 portfolio projects aligned to my goals (beginner, intermediate, advanced).” Include acceptance criteria and what ‘done’ looks like.
-- Ask: “List 5 high-quality, current resources (courses, docs, talks) for spec-driven development, prompt engineering, and MCP.” Ask for URLs; you will verify them.
+Prompts:
+1) Explain the core gaps in traditional CS education (AI collaboration, spec‑driven dev, agent orchestration, MCP) and include 2 current, cited references (surveys, curricula analyses, industry reports).
+2) List trade‑offs/constraints of a hybrid path (university + AI‑first practice): risks, time costs, missing foundations. Propose one mitigation per risk.
+3) Apply to a realistic scenario: draft a weekly (5–7 hrs) hybrid plan pairing foundations with AI‑augmented practice and name concrete resources.
+4) Optional: Propose a 3‑step portfolio ladder (beginner/intermediate/advanced) with acceptance criteria and “done” definitions.
 
-Expected outcomes
-- A personalized weekly study plan you can follow alongside this book
-- A project ladder that demonstrates real, verifiable skills
-- A short reading/watch list you can keep updated over time
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
+
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

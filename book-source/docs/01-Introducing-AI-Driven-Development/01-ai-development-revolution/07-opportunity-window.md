@@ -258,13 +258,21 @@ Whatever your starting point, the opportunity is real. The question is what you 
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Draft a 30-day AI-augmented learning plan with weekly milestones and 3 tiny deliverables.” Keep the daily commitment to 30–60 minutes.
-- Ask: “Brainstorm 5 project ideas matched to my background; rank by speed-to-MVP and learning value.” Pick one and request a 1-week MVP scope.
-- Ask: “Help me write a one-sentence unfair-advantage statement that combines my domain skills with AI workflows.” Iterate and make it memorable.
+Prompts:
+1) Explain why the current moment is an exceptional opportunity window for AI‑driven development, and include 2 current, cited examples (adoption data, revenue ramps, enterprise usage).
+2) Surface trade‑offs/constraints: risks of being too early vs too late (tool instability, lock‑in, opportunity cost). Propose one mitigation for each.
+3) Apply to a realistic scenario: draft a 30‑day plan (30–60 min/day) with weekly milestones, three tiny deliverables, and a checkpoint to reassess strategy.
+4) Optional: Compare two strategies—“depth on one project” vs “breadth across experiments”—in a short table (learning yield, portfolio signal, risk profile).
 
-Expected outcomes
-- A realistic 30-day plan with weekly checkpoints
-- One project to start this week with a tiny MVP scope
-- A concise advantage statement you can revisit as you progress
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
+
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

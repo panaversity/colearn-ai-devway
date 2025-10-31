@@ -237,13 +237,21 @@ These videos provide additional context on the AI coding revolution and where th
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Scope a bounded agent task for my context.” Provide a small goal; request a well-formed objective, constraints, success criteria, and a rollback plan.
-- Ask: “List top risks of using autonomous agents in my environment.” Include security, cost, data privacy, failure modes; request mitigations and guardrails.
-- Ask: “Sketch a tiny multi-agent workflow on paper.” Have ChatGPT propose roles (planning, implementation, testing, review) and handoffs for a trivial feature.
+Prompts:
+1) Explain the evolution from autocomplete to autonomous agents in 150–200 words and include 2 current, cited examples (products, benchmarks, or case studies).
+2) List trade‑offs/constraints of autonomous agents (reliability, security, cost control, hidden coupling). Provide one mitigation/guardrail per item.
+3) Apply to a realistic scenario: draft a bounded agent task spec with goal, constraints, success criteria, and rollback conditions.
+4) Optional: Compare single‑agent vs multi‑agent workflows in a short table (strengths, risks, supervision effort, debugging approach).
 
-Expected outcomes
-- A 1–2 paragraph agent task spec you could trial later
-- A risk/guardrail checklist to revisit when you reach agent tooling
-- A first draft of a simple multi-agent workflow diagram
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
+
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice

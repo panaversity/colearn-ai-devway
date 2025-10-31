@@ -233,13 +233,21 @@ In the next section, we'll look ahead to where this is going: the autonomous age
 
 ## Try With AI
 
-Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-- Ask: “Help me self-assess on the four orchestrator dimensions (specification, architecture, review, agent iteration).” Request 2 strengths, 2 gaps, and a 7-day exercise to improve one gap.
-- Ask: “Practice spec-writing.” Pick a simple feature you care about and have ChatGPT co-author acceptance criteria and edge cases; iterate until clear and testable.
-- Ask: “Simulate an AI code review.” Paste or generate a small snippet and ask for maintainability, correctness, security, and performance concerns.
+Prompts:
+1) Explain the shift from typist to orchestrator in 150–200 words and include 2 current, cited examples (e.g., productivity studies, workflow reports, tooling case studies).
+2) Surface trade‑offs/constraints: where can orchestration fail (spec clarity, review quality, security)? Propose one mitigation for each.
+3) Apply to a realistic scenario: run a brief self‑assessment across specification, architecture, review, and agent iteration; outline one 7‑day exercise to improve the weakest area.
+4) Optional: Compare expected responsibilities for junior/mid/senior roles in an AI‑augmented team in a table (ownership, decision scope, artifacts, feedback loops).
 
-Expected outcomes
-- A focused improvement plan and one week of micro-exercises
-- A crisp, testable spec for a small feature
-- A review checklist you can reuse for AI-generated or human code
+Expected outcomes:
+- A concise explanation aligned with THIS lesson’s themes (not generic)
+- At least 1–2 recent, relevant examples with sources or citations
+- Clear articulation of trade‑offs/constraints and how to handle them
+- A short, realistic application or decision scenario tied to the lesson topic
+
+Safety/ethics note:
+- Verify claims and dates; watch for hallucinations and bias
+- Don’t share sensitive data or credentials
+- Cross‑check at least one external source before applying in practice
