@@ -234,3 +234,16 @@ Want to hear this perspective from industry leaders? Watch the overview videos t
 **[Watch Overview Video in Urdu/Hindi](https://youtu.be/dnk5nP9hzHg)**
 
 These videos provide additional context on the AI coding revolution and where the industry is headed.
+
+## Try With AI
+
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+
+- Ask: “Scope a bounded agent task for my context.” Provide a small goal; request a well-formed objective, constraints, success criteria, and a rollback plan.
+- Ask: “List top risks of using autonomous agents in my environment.” Include security, cost, data privacy, failure modes; request mitigations and guardrails.
+- Ask: “Sketch a tiny multi-agent workflow on paper.” Have ChatGPT propose roles (planning, implementation, testing, review) and handoffs for a trivial feature.
+
+Expected outcomes
+- A 1–2 paragraph agent task spec you could trial later
+- A risk/guardrail checklist to revisit when you reach agent tooling
+- A first draft of a simple multi-agent workflow diagram

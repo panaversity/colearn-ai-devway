@@ -73,8 +73,18 @@ Let's look at the numbers.
 
 ---
 
-**Reflection Prompt:**
+## Try With AI
 
-Before moving forward, pause for a moment. Which part of Sarah's story resonates most with you? Are you excited by the possibilities? Concerned about being left behind? Skeptical that the tools can really deliver on these promises?
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
 
-All three reactions are valid—and understanding your starting point will help you get the most out of this chapter. There's no need to write anything down, but notice your response. We'll revisit this question at the end of the chapter to see if your perspective has shifted.
+- Ask: “Write a one-paragraph hook that reframes my current context for learning software with AI.” Provide 2-3 sentences about your background and goals. Then ask it to extract 1 concrete goal and 1 fear, and to reframe the fear as a question you can investigate.
+- Ask: “Design a 2-week, 30–60 min/day AI-augmented learning plan to get momentum.” Request specific daily tasks and tiny deliverables you can actually ship.
+- Ask: “Help me craft a one-sentence personal thesis for why now is the right time for me to learn AI-driven development.” Iterate until it feels true and motivating.
+- Optional: “Turn that thesis into a short LinkedIn/Twitter post and a private affirmation I can pin to my notes.”
+
+Expected outcomes
+- A personal thesis statement and a two-week micro-plan you can start today
+- One clarified question (your reframed fear) to keep testing as you read
+- A tiny public or private commitment that makes the journey feel real
+
+Safety note: Don’t paste secrets or sensitive data. Keep personal context minimal; you can add details gradually as needed.

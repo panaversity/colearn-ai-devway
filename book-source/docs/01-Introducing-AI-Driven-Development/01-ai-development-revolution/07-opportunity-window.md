@@ -255,3 +255,16 @@ Where do you position yourself in this transformation?
 - **Career changer with domain expertise?** Your non-technical knowledge is your competitive advantage.
 
 Whatever your starting point, the opportunity is real. The question is what you do with it.
+
+## Try With AI
+
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+
+- Ask: “Draft a 30-day AI-augmented learning plan with weekly milestones and 3 tiny deliverables.” Keep the daily commitment to 30–60 minutes.
+- Ask: “Brainstorm 5 project ideas matched to my background; rank by speed-to-MVP and learning value.” Pick one and request a 1-week MVP scope.
+- Ask: “Help me write a one-sentence unfair-advantage statement that combines my domain skills with AI workflows.” Iterate and make it memorable.
+
+Expected outcomes
+- A realistic 30-day plan with weekly checkpoints
+- One project to start this week with a tiny MVP scope
+- A concise advantage statement you can revisit as you progress

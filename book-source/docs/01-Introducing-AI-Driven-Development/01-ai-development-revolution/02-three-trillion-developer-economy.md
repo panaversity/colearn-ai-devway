@@ -144,3 +144,19 @@ Want to see the original analysis that inspired this chapter? Watch the full pre
 **[Watch: The $3 Trillion AI Coding Opportunity](https://www.youtube.com/watch?v=VlOAWvvjThU)**
 
 This 40-minute presentation from industry analysts provides the detailed evidence and case studies behind the $3 trillion figure, along with projections for where the market is heading.
+
+## Try With AI
+
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+
+- Ask: “Using the 30M × $100k heuristic as a baseline, build a rough model of the developer economy for my context.” Provide your org size or personal situation. Request a simple sensitivity table varying headcount and value per dev.
+- Ask: “Challenge the assumptions.” Have it list 3 alternative models for estimating economic impact (e.g., revenue attribution, productivity savings, user value) and discuss pros/cons for each.
+- Ask: “Find and summarize 3 credible sources on global developer counts and average impact.” Tell ChatGPT to cite URLs; you will independently verify them.
+- Ask: “Translate this macro view into 3 concrete actions I should take in the next 30 days to capture upside from AI-augmented development.”
+
+Expected outcomes
+- A simple spreadsheet or note with your personalized TAM/back-of-the-envelope model
+- 3 alternative estimation frames with trade-offs
+- A short, verifiable reading list and a 30-day action shortlist
+
+Safety note: Verify any external links and calculations; don’t share proprietary revenue or salary data.

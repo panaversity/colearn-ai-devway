@@ -149,10 +149,18 @@ In the next section, we'll look at how this transformation affects every single 
 
 ---
 
-**Pause and Reflect:**
 
-Does this transformation feel real to you? Or does part of you still think "this is probably overblown—coding jobs will stay mostly the same"?
+## Try With AI
 
-It's okay to be skeptical. Healthy skepticism protects you from hype. But before moving to the next section, ask yourself: What evidence would you need to see to be convinced that this transformation is as significant as this chapter claims?
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
 
-Keep that question in mind as you continue reading. We'll provide that evidence.
+- Ask: “Create a side-by-side table contrasting external industry disruption vs. software disrupting itself.” Include actors, resistance, timeline, adoption dynamics, and compounding effects.
+- Ask: “Generate 3 examples of ‘software disrupting itself’ in my domain or stack.” Provide your domain; pick one example and request a short mitigation/adoption plan.
+- Ask: “Draft a 250-word internal memo persuading my team to adopt AI coding tools, including top risks and guardrails.” Request a version for skeptical audiences.
+
+Expected outcomes
+- One crisp comparison table you can reuse in notes or slides
+- A concrete mini-plan to experiment with AI adoption in your context
+- A shareable memo (or email) to start an informed discussion on your team
+
+Safety note: Keep company-specific details abstract unless you’re working in a private environment.

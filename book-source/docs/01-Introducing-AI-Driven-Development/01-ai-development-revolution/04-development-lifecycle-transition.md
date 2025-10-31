@@ -191,3 +191,16 @@ The key insight: **The development lifecycle isn't going away. It's being transf
 Your job is to figure out which side of that divide your skills fall on—and if they're on the mechanical side, to develop the judgment skills that AI can't automate.
 
 In the next section, we'll explore this evolution in detail: how the developer role is changing from typist to orchestrator, and what that means for your career.
+
+## Try With AI
+
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+
+- Ask: “Map my current development lifecycle and annotate where AI could help today.” Provide a brief description of your workflow; request a Red/Amber/Green heatmap with specific tool ideas per phase.
+- Ask: “Generate a minimal-but-meaningful test plan for one feature I’m working on.” Include boundary cases, failure modes, and data setup.
+- Ask: “Draft a ‘Definition of Done’ template for AI-augmented development that my team could adopt.” Include items for spec quality, tests, review, and documentation.
+
+Expected outcomes
+- A personalized lifecycle map with 2-3 AI insertion points you can try immediately
+- A concrete test plan for one feature
+- A DoD template you can pilot on your next task

@@ -251,3 +251,16 @@ Now, after eight sections of evidence, arguments, and examples:
 Do you now see the transformation as real and significant? Do you understand why traditional education isn't sufficient? Do you recognize the opportunity window?
 
 In our final section, we'll bring all of this together and set up the journey ahead in Chapter 2.
+
+## Try With AI
+
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
+
+- Ask: “Build me a hybrid learning plan that pairs CS foundations with AI-augmented practice.” Request a weekly schedule (5–7 hours/week) and concrete resources for each topic.
+- Ask: “Define 3 portfolio projects aligned to my goals (beginner, intermediate, advanced).” Include acceptance criteria and what ‘done’ looks like.
+- Ask: “List 5 high-quality, current resources (courses, docs, talks) for spec-driven development, prompt engineering, and MCP.” Ask for URLs; you will verify them.
+
+Expected outcomes
+- A personalized weekly study plan you can follow alongside this book
+- A project ladder that demonstrates real, verifiable skills
+- A short reading/watch list you can keep updated over time

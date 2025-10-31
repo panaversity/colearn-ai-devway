@@ -230,10 +230,16 @@ In the next section, we'll look ahead to where this is going: the autonomous age
 
 ---
 
-**Pause and Reflect:**
 
-Think about your current role or the role you're preparing for. Which parts of your work (or planned work) are mechanical and repetitive? Which parts require judgment and creativity?
+## Try With AI
 
-As you read the next sections, consider: Are you developing the skills that AI amplifies (judgment, architecture, communication) or the skills that AI automates (syntax, boilerplate, patterns)?
+Tool to use for this lesson: ChatGPT (web). If you’ve already set up an AI companion tool later in the book, you may use that instead.
 
-There's no judgment here—this is just self-assessment. Understanding where you are helps you figure out where to invest your learning energy.
+- Ask: “Help me self-assess on the four orchestrator dimensions (specification, architecture, review, agent iteration).” Request 2 strengths, 2 gaps, and a 7-day exercise to improve one gap.
+- Ask: “Practice spec-writing.” Pick a simple feature you care about and have ChatGPT co-author acceptance criteria and edge cases; iterate until clear and testable.
+- Ask: “Simulate an AI code review.” Paste or generate a small snippet and ask for maintainability, correctness, security, and performance concerns.
+
+Expected outcomes
+- A focused improvement plan and one week of micro-exercises
+- A crisp, testable spec for a small feature
+- A review checklist you can reuse for AI-generated or human code
