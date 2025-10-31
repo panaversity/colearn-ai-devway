@@ -98,118 +98,54 @@ Let's peek under the hood to understand how subagents function.
 
 ### File Structure
 
-When you create a subagent named `code-reviewer`, Claude Code stores it as:
+When you create a subagent named `code-reviewer`, Claude stores a single file under `.claude/agents/` with:
+- A name and short description of its purpose
+- Optional model selection and color
+- A clear checklist of standards it applies
+- The expected form of its output (e.g., prioritized issues and actionable suggestions)
 
-```
-.claude/
-└── agents/
-    └── code-reviewer.md    # Custom instructions
-```
+### Subagent Lifecycle (Zero Overhead View)
 
-
-**code-reviewer.md** (custom instructions):
-```markdown
----
-name: chapter-planner
-description: You are a code reviewer specializing in Python.
-model: haiku
-color: blue
----
-
-You are a code reviewer specializing in Python.
-
-Apply these standards:
-- PEP 8 style compliance
-- Type hints required for all functions
-- Docstrings required (Google style)
-- Flag security concerns
-
-Provide:
-1. Summary of issues found
-2. Specific line numbers and suggestions
-3. Positive feedback on good practices
-```
-
-### Subagent Lifecycle
-
-1. **Creation**: You ask Claude Code to create a subagent in conversation. Run /agents command select Create Agent and share your idea about sub agent. (e.g., "Create a subagent called explain-my-code that...")
-2. **Storage**: Claude Code ask the location project vs user level. After selection it creates files in `.claude/agents/<your_subagent_name>.md`
-3. **Invocation**: You ask Claude Code to use the subagent naturally (e.g., "Use the explain-my-code subagent to explain this code")
-4. **Execution**: The subagent processes the task in isolated context
-5. **Completion**: Results return; context is preserved for next invocation
-6. **Management**: Subagents are stored as files in `.claude/agents/` that you can view, edit, or delete
+1. Create once via `/agents` and describe the role.
+2. Use naturally ("Use the code-reviewer subagent...")—Claude may also auto‑delegate when the match is obvious.
+3. Work happens in a clean, isolated context; results return to the main thread.
+4. Iterate the description over time as your team practices evolve.
 
 ---
 
-## Hands-On Tutorial: Creating Your First Subagent
+## Creating a "Latest News" Subagent
 
-Let's create an **"explain-my-code" subagent**—a collaborative partner that helps you understand what your code does.
-
-This is simpler than a code reviewer and directly supports the "learning WITH AI" philosophy.
+Let's create a **"latest-news" subagent**—a focused researcher that surfaces current headlines, trends, and concise summaries with citations.
 
 ### Step 1: Create the Subagent
 
-Start Claude Code in your project directory:
+- Open the `/agents` interface and select "Create new agent"
+- Choose Project location so your team can reuse it
+- Describe the role succinctly, for example:
+  - Purpose: daily news researcher for a chosen domain (e.g., AI, security)
+  - Output: 5–7 bulleted headlines with one‑sentence summaries and links; a short trend synopsis; 2 follow‑up questions
+  - Constraints: prioritize reputable sources; avoid duplicates; keep total read under 2 minutes
 
-```bash
-claude
-```
+Claude will create the subagent file under `.claude/agents/latest-news.md` (or similar) with your description and settings.
 
-Then ask Claude to create the subagent:
+**Expected result**: The agent appears in your list and retains its focused role.
 
-1. Use slash command to create a new agent: ```/agents```
-2. Select `Create new agent`. 
-3. Choose location -> Project
-4. Generate with Claude (recommended) 
-5. Descibe your idea:
+### Step 2: Try the "Latest News" Subagent (Daily Workflow)
 
-```
-Create a subagent called "explain-my-code" with this description:
-"A collaborative partner that explains what code does in simple, conversational terms.
-Breaks down complex parts, points out confusing sections, and suggests clearer ways
-to write code. Perfect for learning and code review."
+- Try now: Ask Claude to use the latest-news subagent for your topic today (for example, AI policy). You should receive headlines with links, a short trend synopsis, and two follow‑up questions.
 
-Keep the explanation helpful and beginner-friendly, not academic.
-```
+**If you see targeted, phase‑specific feedback**: ✅ It works. You get clean execution and clear results with minimal prompting.
 
-Claude will create the subagent files automatically in `.claude/agents/explain-my-code/`.
+---
 
-**Expected result**: Claude confirms the subagent has been created and saved to your project.
+## Delegation Modes
 
-### Step 2: Test Your Subagent
+Subagents can be used in two ways:
 
-Ask claude 
+- Explicit invocation: You request a specific subagent (e.g., "Use the code-reviewer subagent to check my recent changes").
+- Automatic delegation: Claude can delegate to a subagent when your task clearly matches that subagent’s description and allowed tools.
 
-Create a sample Python file called `example.py` with:
-```python
-def calculate_total(items):
-    total = 0
-    for item in items:
-        total = total + item["price"]
-    return total
-
-result = calculate_total([{"price": 10}, {"price": 20}])
-print(result)
-```
-
-Now ask Claude to use the subagent:
-
-```
-Use the explain-my-code subagent to explain what example.py does
-```
-
-Or ask more naturally:
-
-```
-Have the explain-my-code subagent break down example.py for me
-```
-
-Claude will invoke the subagent, which analyzes the file and explains it in simple terms.
-
-**What you might hear back**:
-> "This function adds up prices from a list of items. It starts with `total = 0`, then loops through each item, adds its price to the total, and finally returns the sum. The test code at the bottom calls the function with two items ($10 and $20) and prints the result (30)."
-
-**If your subagent explains the code**: ✅ It works! Now you have a collaborative partner to help you understand your own code.
+Use explicit invocation for predictability. Rely on automatic delegation as a convenience when descriptions are specific. 
 
 ---
 
@@ -310,4 +246,4 @@ In Lesson 4, you'll:
 - Understand how to build a skill library that gives you competitive advantage
 - See how skills scale expertise across teams and projects
 
-**The key insight**: Skills turn your domain expertise into reusable, discoverable AI capabilities that amplify over time. Let's explore this powerful feature.
+**The key insight**: Subagents and skills are complementary—subagents own focused execution with clean context, while skills continuously apply shared expertise across phases. Used together, they amplify team effectiveness.
