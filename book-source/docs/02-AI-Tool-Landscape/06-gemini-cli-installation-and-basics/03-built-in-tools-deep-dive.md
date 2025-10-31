@@ -1,13 +1,13 @@
 ---
 title: Built-In Tools Deep Dive
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 # Built-In Tools Deep Dive
 
-## From Commands to Capabilities
+## From Installation to Capabilities
 
-You've mastered basic Gemini CLI commands in Lesson 4. Now it's time to unlock what makes Gemini CLI truly powerful: **built-in tools** that connect the AI to your actual development environment.
+You've mastered installation, authentication, and your first Gemini CLI commands in Lesson 2. Now it's time to unlock what makes Gemini CLI truly powerful: **built-in tools** that connect the AI to your actual development environment.
 
 Think of basic commands as asking someone for advice. Built-in tools are like giving that person direct access to your workspace—they can read your files, fetch documentation, search for current information, and understand your shell environment. This transforms Gemini from a general chatbot into a context-aware development assistant.
 
@@ -334,11 +334,11 @@ Understanding limitations makes you a better Gemini CLI user.
 
 ---
 
-## Looking Ahead to Lesson 6
+## Looking Ahead to Lesson 4
 
 You now understand Gemini CLI's tools. But you might wonder: **How much context can I actually give Gemini at once?**
 
-Lesson 6 explores **context windows**—the amount of information you can include in a single prompt. You'll learn:
+Lesson 4 explores **context windows**—the amount of information you can include in a single prompt. You'll learn:
 - Why Gemini's 1 million token context window matters
 - When context size becomes critical
 - How Gemini CLI compares to Claude Code
@@ -346,7 +346,7 @@ Lesson 6 explores **context windows**—the amount of information you can includ
 
 You'll also explore **Gemini CLI Extensions**, understand the **Model Context Protocol (MCP)**, and discover **Qwen Code** as an alternative.
 
-**Ready to go deeper?** Let's explore context windows and tool comparison in Lesson 6.
+**Ready to go deeper?** Let's explore context windows and tool comparison in Lesson 4.
 
 ---
 
@@ -359,4 +359,4 @@ Before moving to Lesson 6, try building your own workflow:
 3. Execute the tool commands in order
 4. Note how much faster you got answers compared to switching between browser, terminal, and IDE
 
-When you're ready, move to **Lesson 6: Context Window & Tool Comparison**.
+When you're ready, move to **Lesson 4: Context Window & Tool Comparison**.
