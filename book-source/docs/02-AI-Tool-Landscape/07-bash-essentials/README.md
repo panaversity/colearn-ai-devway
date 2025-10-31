@@ -39,12 +39,12 @@ This chapter **does NOT teach bash as a traditional skill**. Instead, it teaches
 
 These lessons teach the fundamentals and the pattern you'll use throughout your development journey.
 
-**[Lesson 1: Why Bash? Your AI Companion's Native Language](./01-why-bash-ai-language.md)** (35 min)
-- Understand why AI tools use bash
+**[Lesson 1: Move Around — Navigate Your Project](./01-navigate-your-project.md)** (35 min)
+- Understand why location and paths matter
 - Learn the supervision model: your AI executes, you understand
 - Shift from memorization to understanding
 
-**[Lesson 2: The AI Collaboration Pattern](./02-ai-collaboration-pattern.md)** (35 min)
+**[Lesson 2: Organize Your Work — Create & Manage Files](./02-organize-your-work.md)** (35 min)
 - Master the 5-step pattern: Ask → Understand → Verify → Execute → Learn
 - Practice with 3 guided scenarios
 - Build confidence in asking questions before executing
@@ -55,27 +55,27 @@ These lessons teach the fundamentals and the pattern you'll use throughout your 
 
 These lessons teach you to understand the most common bash patterns your AI uses.
 
-**[Lesson 3: Understanding File Navigation and Paths](./03-understanding-navigation.md)** (40 min)
+**[Lesson 3: Control What's Running — Processes & Backgrounds](./03-control-whats-running.md)** (40 min)
 - Understand absolute vs. relative paths
 - Know where you are before running commands
 - Navigate safely using pwd, cd, ls, mkdir
 
-**[Lesson 4: Understanding File Operations](./04-understanding-file-operations.md)** (45 min)
+**[Lesson 4: Set Up Safely — Environment & Configuration](./04-set-up-safely.md)** (45 min)
 - Distinguish safe operations (create, copy) from risky ones (move, delete)
 - Implement the safety pattern: Backup → Verify → Execute
 - Never lose data through careful understanding
 
-**[Lesson 5: Understanding Configuration and Environment](./05-understanding-configuration.md)** (40 min)
-- Set API keys and environment variables securely
-- Understand temporary vs. permanent configuration
-- Never hardcode secrets in code
-
-**[Lesson 6: Understanding Packages and Dependencies](./06-understanding-packages.md)** (40 min)
+**[Lesson 5: Get Dependencies — Install Packages](./05-get-dependencies.md)** (40 min)
 - Understand what package managers do
 - Know where packages are installed and how to verify
 - Troubleshoot installation errors by reading error messages
 
-**[Lesson 7: Understanding Pipes and Complex Commands](./07-understanding-pipes.md)** (40 min)
+**[Lesson 6: Find & Fix — Search & Permissions](./06-find-and-fix.md)** (40 min)
+- Understand what package managers do
+- Know where packages are installed and how to verify
+- Troubleshoot installation errors by reading error messages
+
+**[Lesson 7: Connect Commands — Pipes & Complex Operations](./07-connect-commands.md)** (40 min)
 - Trace how data flows through piped commands
 - Predict command outcomes before execution
 - Read and modify complex bash chains safely
@@ -191,7 +191,7 @@ By the end of Chapter 7, you've learned not just bash, but **how to learn effect
 
 ## Getting Started
 
-Begin with **[Lesson 1: Why Bash? Your AI Companion's Native Language](./01-why-bash-ai-language.md)** →
+Begin with **[Lesson 1: Move Around — Navigate Your Project](./01-navigate-your-project.md)** →
 
 ---
 
@@ -222,5 +222,5 @@ By understanding your AI's native language, you become an equal partner. You're 
 
 ## Next Chapter
 
-After mastering bash collaboration: **[Chapter 8: Git & GitHub](../08-git-github/)** — Version control using the same patterns you learned here.
+After mastering bash collaboration: Chapter 8: Git & GitHub — Version control using the same patterns you learned here.
 

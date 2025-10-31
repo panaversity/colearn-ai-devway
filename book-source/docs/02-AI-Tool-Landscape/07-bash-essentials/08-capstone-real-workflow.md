@@ -112,7 +112,7 @@ You ask: **"What does this command do?"**
 
 #### Step 3b: UNDERSTAND (Read the Explanation)
 
-AI responds: **"mkdir -p creates directories. The flag -p creates parent directories too. The braces {src,data,notebooks} create three folders at once inside data_project."**
+AI responds: **"mkdir -p creates directories. The flag -p creates parent directories too. The braces `\{src,data,notebooks\}` create three folders at once inside data_project."**
 
 You understand: *"So after this command, I'll have data_project/ with three subfolders inside."*
 
