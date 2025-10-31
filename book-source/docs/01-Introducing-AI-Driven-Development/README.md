@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 title: "Part 1: Introducing AI-Driven Development"
 ---
 
