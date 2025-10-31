@@ -5,9 +5,6 @@ title: "Capstone - Real Project Setup and Troubleshooting"
 
 # Capstone — Try With AI, Real Project Setup and Troubleshooting
 
-**Duration**: 50 minutes
-**Prerequisites**: All Lessons 1-7 completed
-
 ---
 
 ## The Capstone Challenge

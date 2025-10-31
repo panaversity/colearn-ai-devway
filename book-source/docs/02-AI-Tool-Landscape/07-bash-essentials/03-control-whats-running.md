@@ -132,7 +132,7 @@ If something seems stuck:
 
 ## Try With AI
 
-**Tool**: Claude Code, Gemini CLI, or ChatGPT Web
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
 ### Prompt 1: Understand Processes
 ```

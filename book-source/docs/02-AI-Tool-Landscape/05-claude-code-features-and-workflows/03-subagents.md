@@ -236,7 +236,7 @@ You've learned how to create specialized AI assistants with subagents. But there
 
 ## Try With AI
 
-Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
+Use Claude Code for this activity. If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
 
 **Prompts:**
 

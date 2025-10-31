@@ -87,7 +87,7 @@ Agent: "You have src/, tests/, README.md, and setup.py"
 
 ## Try With AI
 
-**Tool**: Claude Code, Gemini CLI, or ChatGPT Web
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
 ### Prompt 1: Check Current Location
 ```
