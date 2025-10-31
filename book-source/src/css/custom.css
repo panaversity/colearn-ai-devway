@@ -80,6 +80,8 @@ pre code {
 .navbar {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 100;
 }
 
 [data-theme="dark"] .navbar {
@@ -574,6 +576,23 @@ pre code {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
+}
+
+/* ============================================================================
+   MOBILE NAVBAR FIX - Ensure hamburger menu works properly
+   ============================================================================ */
+
+/* Ensure mobile sidebar appears above all content */
+@media (max-width: 996px) {
+    /* Docusaurus navbar sidebar for mobile */
+    .navbar-sidebar {
+        z-index: 1000 !important;
+    }
+    
+    /* Backdrop behind the mobile menu */
+    .navbar-sidebar__backdrop {
+        z-index: 999 !important;
+    }
 }
 
 /* ============================================================================

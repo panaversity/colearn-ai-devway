@@ -166,20 +166,48 @@ function AISpectrumSection() {
           </div>
         </div>
 
+        {/* Redesigned progression visualization */}
         <div className={styles.spectrumFlow}>
-          <div className={styles.spectrumFlowItem}>
-            <div className={styles.spectrumFlowLabel}>AI Assisted</div>
-            <div className={styles.spectrumFlowDesc}>Helper</div>
-          </div>
-          <div className={styles.spectrumFlowArrow}>→</div>
-          <div className={styles.spectrumFlowItem}>
-            <div className={styles.spectrumFlowLabel}>AI Driven</div>
-            <div className={styles.spectrumFlowDesc}>Co-Creator</div>
-          </div>
-          <div className={styles.spectrumFlowArrow}>→</div>
-          <div className={styles.spectrumFlowItem}>
-            <div className={styles.spectrumFlowLabel}>AI Native</div>
-            <div className={styles.spectrumFlowDesc}>Core System</div>
+          <div className={styles.spectrumFlowTrack}>
+            
+            <div className={styles.spectrumFlowStep}>
+              <div className={styles.flowStepCircle}>
+                <span className={styles.flowStepNumber}>1</span>
+              </div>
+              <div className={styles.flowStepContent}>
+                <div className={styles.flowStepTitle}>AI Assisted</div>
+                <div className={styles.flowStepSubtitle}>Helper</div>
+              </div>
+            </div>
+
+            <div className={styles.spectrumFlowLine}>
+              <div className={styles.flowLineProgress}></div>
+            </div>
+
+            <div className={clsx(styles.spectrumFlowStep, styles.flowStepActive)}>
+              <div className={styles.flowStepCircle}>
+                <span className={styles.flowStepNumber}>2</span>
+              </div>
+              <div className={styles.flowStepContent}>
+                <div className={styles.flowStepTitle}>AI Driven</div>
+                <div className={styles.flowStepSubtitle}>Co-Creator</div>
+              </div>
+            </div>
+
+            <div className={styles.spectrumFlowLine}>
+              <div className={styles.flowLineProgress}></div>
+            </div>
+
+            <div className={clsx(styles.spectrumFlowStep, styles.flowStepActive)}>
+              <div className={styles.flowStepCircle}>
+                <span className={styles.flowStepNumber}>3</span>
+              </div>
+              <div className={styles.flowStepContent}>
+                <div className={styles.flowStepTitle}>AI Native</div>
+                <div className={styles.flowStepSubtitle}>Core System</div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -236,29 +264,6 @@ function FeaturesSection() {
             description="46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production."
             featured={true}
           />
-        </div>
-
-        {/* Bottom Stats Bar */}
-        <div className={styles.featuresStats}>
-          <div className={styles.featureStat}>
-            <div className={styles.featureStatNumber}>46</div>
-            <div className={styles.featureStatLabel}>Chapters</div>
-          </div>
-          <div className={styles.featureStatDivider} />
-          <div className={styles.featureStat}>
-            <div className={styles.featureStatNumber}>15+</div>
-            <div className={styles.featureStatLabel}>Real Projects</div>
-          </div>
-          <div className={styles.featureStatDivider} />
-          <div className={styles.featureStat}>
-            <div className={styles.featureStatNumber}>100%</div>
-            <div className={styles.featureStatLabel}>Free & Open</div>
-          </div>
-          <div className={styles.featureStatDivider} />
-          <div className={styles.featureStat}>
-            <div className={styles.featureStatNumber}>∞</div>
-            <div className={styles.featureStatLabel}>Production Ready</div>
-          </div>
         </div>
       </div>
     </section>

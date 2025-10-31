@@ -596,12 +596,12 @@
 
     .heroBookCover {
         max-width: 300px;
-        /* Reduce rotation on tablets */
-        transform: rotate(-1deg);
+        /* Keep vertically aligned on tablets */
+        transform: rotate(0deg);
     }
 
     .heroBookCover:hover {
-        transform: rotate(-0.5deg) translateY(-10px) scale(1.02);
+        transform: rotate(0deg) translateY(-10px) scale(1.02);
     }
 
     .heroTitle {
@@ -765,8 +765,8 @@
 
     .heroBookCover {
         max-width: 260px;
-        /* Minimal rotation on mobile */
-        transform: rotate(-0.5deg);
+        /* Keep vertically aligned on mobile */
+        transform: rotate(0deg);
     }
 
     .heroBookCover:hover {
@@ -2550,52 +2550,146 @@
 }
 
 .spectrumFlow {
+    margin-top: 4rem;
+    padding: 0;
+}
+
+.spectrumFlowTrack {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-    background: rgba(0, 31, 63, 0.03);
-    border-radius: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 31, 63, 0.03) 0%, rgba(0, 31, 63, 0.01) 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(0, 31, 63, 0.08);
+    position: relative;
 }
 
-[data-theme="dark"] .spectrumFlow {
-    background: rgba(170, 170, 170, 0.03);
+[data-theme="dark"] .spectrumFlowTrack {
+    background: linear-gradient(135deg, rgba(170, 170, 170, 0.05) 0%, rgba(170, 170, 170, 0.02) 100%);
+    border-color: rgba(170, 170, 170, 0.1);
 }
 
-.spectrumFlowItem {
+.spectrumFlowStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.flowStepCircle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid rgba(0, 31, 63, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .flowStepCircle {
+    background: #1a1a1a;
+    border-color: rgba(170, 170, 170, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.flowStepNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #001f3f;
+}
+
+[data-theme="dark"] .flowStepNumber {
+    color: #aaaaaa;
+}
+
+.flowStepActive .flowStepCircle {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    border-color: #001f3f;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 31, 63, 0.3);
+}
+
+[data-theme="dark"] .flowStepActive .flowStepCircle {
+    background: linear-gradient(135deg, #aaaaaa 0%, #888888 100%);
+    border-color: #aaaaaa;
+    box-shadow: 0 6px 20px rgba(170, 170, 170, 0.2);
+}
+
+.flowStepActive .flowStepNumber {
+    color: white;
+}
+
+[data-theme="dark"] .flowStepActive .flowStepNumber {
+    color: #111111;
+}
+
+.flowStepContent {
     text-align: center;
 }
 
-.spectrumFlowLabel {
-    font-size: 1rem;
+.flowStepTitle {
+    font-size: 1.125rem;
     font-weight: 700;
     color: #001f3f;
     margin-bottom: 0.25rem;
 }
 
-[data-theme="dark"] .spectrumFlowLabel {
+[data-theme="dark"] .flowStepTitle {
     color: #ffffff;
 }
 
-.spectrumFlowDesc {
+.flowStepSubtitle {
     font-size: 0.875rem;
     color: #666666;
+    font-weight: 500;
 }
 
-[data-theme="dark"] .spectrumFlowDesc {
+[data-theme="dark"] .flowStepSubtitle {
     color: #888888;
 }
 
-.spectrumFlowArrow {
-    font-size: 2rem;
-    color: #001f3f;
-    font-weight: bold;
+.spectrumFlowLine {
+    flex: 1;
+    height: 3px;
+    background: rgba(0, 31, 63, 0.1);
+    position: relative;
+    margin: 0 1.5rem;
+    max-width: 150px;
 }
 
-[data-theme="dark"] .spectrumFlowArrow {
-    color: #aaaaaa;
+[data-theme="dark"] .spectrumFlowLine {
+    background: rgba(170, 170, 170, 0.15);
+}
+
+.flowLineProgress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #001f3f 0%, #003366 100%);
+    animation: flowProgress 2s ease-in-out infinite;
+}
+
+[data-theme="dark"] .flowLineProgress {
+    background: linear-gradient(90deg, #aaaaaa 0%, #888888 100%);
+}
+
+@keyframes flowProgress {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 /* ============================================
@@ -2933,6 +3027,28 @@
         min-height: auto;
     }
 
+    .spectrumFlowTrack {
+        padding: 2rem 1.5rem;
+    }
+
+    .spectrumFlowLine {
+        max-width: 80px;
+        margin: 0 1rem;
+    }
+
+    .flowStepCircle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .flowStepNumber {
+        font-size: 1.25rem;
+    }
+
+    .flowStepTitle {
+        font-size: 1rem;
+    }
+
     .maturityLevels {
         grid-template-columns: 1fr;
     }
@@ -2946,9 +3062,44 @@
         font-size: 2.25rem;
     }
 
-    .spectrumFlow {
+    .spectrumFlowTrack {
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .spectrumFlowLine {
+        width: 3px;
+        height: 40px;
+        max-width: none;
+        margin: 0;
+    }
+
+    .flowLineProgress {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #001f3f 0%, #003366 100%);
+    }
+
+    [data-theme="dark"] .flowLineProgress {
+        background: linear-gradient(180deg, #aaaaaa 0%, #888888 100%);
+    }
+
+    .flowStepCircle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .flowStepNumber {
+        font-size: 1.125rem;
+    }
+
+    .flowStepTitle {
+        font-size: 0.95rem;
+    }
+
+    .flowStepSubtitle {
+        font-size: 0.8125rem;
     }
 
     .spectrumFlowArrow {
