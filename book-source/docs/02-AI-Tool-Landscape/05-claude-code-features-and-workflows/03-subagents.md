@@ -234,8 +234,29 @@ You've learned how to create specialized AI assistants with subagents. But there
 
 ---
 
-## What's Next?
+## Try With AI
 
-Subagents are powerful because you run in isolation - what if Claude Code could **discover and invoke specialized capabilities autonomously**?
+Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
 
-That's what **Agent Skills** enable—modular capabilities that Claude Code discovers and uses without explicitly invoking subagent in isolated context. 
+**Prompts:**
+
+1) "I'm confused about when to use subagents vs. the main conversation. Give me a simple decision tree: For each scenario below, should I use a subagent or main conversation? (a) Quick question about Python syntax, (b) Code review following team standards, (c) Debugging a weird error I've never seen, (d) Generating tests for 10 similar functions, (e) Exploring a new codebase I just downloaded."
+
+2) "I want to create my FIRST subagent. My most repetitive task is [describe your task: code reviews / writing tests / generating docs / etc.]. Help me design it: (a) What should I name it? (b) What 3-5 instructions should go in the system prompt? (c) What tool access should it have? (d) Give me the exact command to create it."
+
+3) "The lesson shows a code-reviewer subagent with specific standards (PEP 8, type hints, docstrings). I work with [your language/framework]. Create a custom system prompt for a code-reviewer subagent tailored to MY stack. Include 5-7 specific standards I should enforce. Make it copy-paste ready."
+
+4) "I created a subagent but I'm not sure it's working correctly. How do I test it? Give me a safe 'test scenario': (a) what sample code/task to give it, (b) what good output looks like, (c) what bad output looks like, (d) how to iterate and improve the system prompt based on results."
+
+**Expected outcomes:**
+
+- Clear decision framework for when to use subagents
+- Complete design for your first custom subagent
+- Copy-paste-ready system prompt for your specific needs
+- Testing methodology to validate and improve subagents
+
+**Safety/ethics note:**
+
+- Start with read-only subagents (analysis/review) before write access (refactoring/generation)
+- Test subagents on non-critical code first
+- Review all subagent outputs carefully until you trust their consistency 

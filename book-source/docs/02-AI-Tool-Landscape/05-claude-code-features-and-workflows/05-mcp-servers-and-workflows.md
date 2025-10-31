@@ -176,6 +176,30 @@ Exploratory or one-off task?
 
 ---
 
-## What's Next: Beyond Claude Code
+## Try With AI
 
-You've mastered Claude Code—a powerful terminal-based AI assistant. But the AI tool landscape is vast, and Claude Code is one of many options. **In Chapter 6**, you'll explore **other AI development tools.
+Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
+
+**Prompts:**
+
+1) "I'm trying to add an MCP server to Claude Code and it's not working. I ran [paste your command]. The error says [paste error message]. Walk me through troubleshooting: (a) What's the most likely cause? (b) What should I check? (c) Give me 3 diagnostic commands to run. (d) If those fail, what's plan B?"
+
+2) "I successfully added Playwright MCP and Context7 MCP. Now I want to test them safely. Create 3 'Hello World' workflows for me: (a) One using Playwright to browse a safe website, (b) One using Context7 to fetch docs for [my library/framework], (c) One combining BOTH MCPs in a single workflow. Include the exact prompts I should give Claude Code."
+
+3) "The lesson emphasizes MCP security concerns. I'm nervous about external access. Help me establish safe boundaries: (a) What types of MCP servers should I AVOID as a beginner? (b) What permissions are risky? (c) How do I audit what an MCP server can access? (d) Create a 'MCP safety checklist' I can follow."
+
+4) "Now that I understand subagents, skills, AND MCP servers, help me design a complete workflow: I want to [describe your goal: research a topic / build a feature / debug an issue]. Design a workflow that uses: (a) the right subagent (or main conversation), (b) a relevant skill (if applicable), (c) the right MCP server(s). Show me step-by-step what I'd do."
+
+**Expected outcomes:**
+
+- Troubleshooting guidance for MCP connection issues
+- Safe, tested workflows you can run immediately
+- Security boundaries and audit procedures
+- Complete workflow design combining all Claude Code features
+
+**Safety/ethics note:**
+
+- Only install MCP servers from trusted sources (official repos, verified maintainers)
+- Review MCP server permissions before connecting
+- Never give MCP servers access to sensitive credentials or private data
+- Test new MCP servers with non-sensitive tasks first

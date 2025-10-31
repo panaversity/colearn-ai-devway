@@ -143,8 +143,29 @@ You can now ask Claude "What skills do you have?" and it will list all the skill
 
 ---
 
-## What's Next: Lesson 5 - MCP and Workflows
+## Try With AI
 
-You've learned how to extend Claude Code internally with subagents and skills. Subagents and skills are complementary—subagents own focused execution with clean context, while skills continuously apply shared expertise across phases. Used together, they amplify team effectiveness.
+Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
 
-But what if you need Claude Code to access **external systems**? That's where **Model Context Protocol (MCP)** comes in. MCP allows Claude Code to connect to external data sources and tools, dramatically expanding its capabilities.
+**Prompts:**
+
+1) "I'm confused about skills vs. subagents vs. slash commands. Create a comparison table that shows: (a) when to use each, (b) a concrete example of each for MY work [describe what you do], (c) which one to learn FIRST as a beginner. Make it crystal clear."
+
+2) "I want to create my FIRST skill. My team's biggest pain point is [describe: inconsistent code style / missing documentation / security vulnerabilities / etc.]. Design a skill for this: (a) What should I name it? (b) Write a 'discoverable description' that triggers when relevant, (c) List 5-7 instructions, (d) Give me one before/after example showing what it does."
+
+3) "The lesson says skills are 'discovered autonomously' by Claude Code. I don't understand HOW that works. Explain the discovery mechanism step-by-step: (a) What does Claude read? (b) When does it decide to suggest a skill? (c) How do I write descriptions that trigger at the right time? (d) Give me 3 example descriptions with explanations."
+
+4) "The lesson talks about 'strategic competitive advantage' of building a skill library. Help me think strategically: If I invest time building skills for [my domain: Python / JavaScript / data science / etc.], what's the ROI? How much time will I SAVE in 6 months? Create a simple cost-benefit analysis."
+
+**Expected outcomes:**
+
+- Clear differentiation between skills, subagents, and commands
+- Complete design for your first team skill
+- Deep understanding of autonomous discovery mechanism
+- Strategic justification for investing time in skill creation
+
+**Safety/ethics note:**
+
+- Don't encode sensitive business logic or credentials in skills
+- Test skills thoroughly before sharing with team
+- Version control skills so you can revert bad changes

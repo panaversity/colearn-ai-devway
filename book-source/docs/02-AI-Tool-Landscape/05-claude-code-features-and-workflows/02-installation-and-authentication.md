@@ -205,6 +205,29 @@ Before moving forward, let's address important security considerations:
 
 ---
 
-## What's Next?
+## Try With AI
 
-Now that Claude Code is installed and working, you're ready to learn about **subagents** - specialized AI assistants that handle specific tasks with custom instructions and isolated contexts.Let's continue building your Claude Code expertise.
+Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
+
+**Prompts:**
+
+1) "I'm trying to install Claude Code on [Windows / macOS / Linux] and I'm stuck at [describe where you're stuck]. Walk me through troubleshooting step-by-step. What should I check FIRST? What's the most common cause of this issue? Give me 3-5 diagnostic commands I can run to figure out what's wrong."
+
+2) "I successfully installed Claude Code but I'm confused about authentication. I have [Claude.ai account / Claude Console account / both / neither]. Which authentication method should I use? Walk me through the exact steps, including where to find my credentials and what to paste where. Be very specific."
+
+3) "The lesson mentions 'security considerations' like file access and command execution. I'm nervous about this. Help me set up safe boundaries: What directories should I AVOID running Claude Code in? What commands should I NEVER approve? Create a 'safety checklist' I can follow until I'm more comfortable."
+
+4) "I completed installation successfully! Now I want to test it with a simple, safe first command. Give me 3-5 'Hello World' style prompts I can try RIGHT NOW that will: (a) show me Claude Code works, (b) won't break anything, (c) help me understand what it can do. Include expected outputs so I know if it's working correctly."
+
+**Expected outcomes:**
+
+- Step-by-step troubleshooting guidance for installation issues
+- Crystal-clear authentication instructions for your specific situation
+- Practical safety boundaries and approval criteria
+- Confidence-building first commands with expected results
+
+**Safety/ethics note:**
+
+- Never paste API keys or credentials into this conversation—use them only in Claude Code's secure prompts
+- If installation fails repeatedly, check official Claude Code docs or community forums
+- Start with read-only commands (like file reading) before write commands

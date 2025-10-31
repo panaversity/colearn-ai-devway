@@ -216,10 +216,29 @@ Understanding your comfort level now will help you adopt these tools at a pace t
 
 ---
 
-## What's Next: From Story to Practice
+## Try With AI
 
-Now you understand *what* Claude Code is, *why* it matters, and *how* it represents a paradigm shift. But understanding the concept is different from using the tool.
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
 
-In the next lesson, we'll get hands-on. You'll install Claude Code, configure it, and run your first agentic commands. You'll experience firsthand the difference between asking an AI for advice and having an AI actively collaborate on your code.
+**Prompts:**
 
-You'll also learn to navigate the trust boundary: when to let Claude act autonomously, when to review changes carefully, and how to maintain control while benefiting from agentic assistance. Let's turn this paradigm shift from theory into practice.
+1) "The lesson compares 'passive AI' (like ChatGPT web) with 'agentic AI' (like Claude Code). I use ChatGPT regularly. Help me understand: What's ONE specific workflow where ChatGPT FAILS me today (because it can't see my files) that Claude Code would handle better? Give me a concrete before/after example."
+
+2) "I'm nervous about letting AI 'read my files' and 'propose changes.' Help me think through the trust boundary: What are the REAL risks? What protections exist? Compare this to other tools I already trust (like GitHub Copilot or auto-complete). Is Claude Code actually riskier, or does it just FEEL riskier because it's more visible?"
+
+3) "The lesson shows 7 scenarios where Claude Code transforms development work. Pick the scenario CLOSEST to my daily work [describe what you do: debugging / learning new frameworks / building projects / etc.]. Break it down step-by-step: How would Claude Code actually help me? What would I TYPE? What would I SEE?"
+
+4) "I finished this lesson but still don't fully 'get' why terminal integration matters so much. Explain it using a non-programming analogy (maybe: cooking, construction, writing). Why is 'AI in the terminal' fundamentally better than 'AI in a separate tab'?"
+
+**Expected outcomes:**
+
+- Concrete understanding of where ChatGPT limits you today (and how agentic AI solves it)
+- Rational assessment of risks vs. protections (not fear-based thinking)
+- Step-by-step visualization of Claude Code in action for YOUR workflow
+- Intuitive grasp of why terminal integration is revolutionary
+
+**Safety/ethics note:**
+
+- Never share actual API keys, passwords, or proprietary code when discussing examples
+- Start with read-only workflows until you're comfortable with write access
+- You control what Claude Code can access—start conservative, expand gradually
