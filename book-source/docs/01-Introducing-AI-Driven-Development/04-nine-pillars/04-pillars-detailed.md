@@ -190,8 +190,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Strategic deferral plan that prevents overwhelm while maintaining progress
 - Focused 30-day plan for mastering your highest-priority pillar
 
-**Safety/ethics note:**
-
-- Don't try to learn all 9 pillars in 30 days—focus deeply on one or two
-- It's okay to defer complex pillars (like Kubernetes) until you have fundamentals
-- Celebrate small wins—each pillar mastered is real progress

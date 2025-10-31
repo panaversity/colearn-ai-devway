@@ -254,9 +254,3 @@ Use Claude Code for this activity. If you already have another AI companion tool
 - Complete design for your first custom subagent
 - Copy-paste-ready system prompt for your specific needs
 - Testing methodology to validate and improve subagents
-
-**Safety/ethics note:**
-
-- Start with read-only subagents (analysis/review) before write access (refactoring/generation)
-- Test subagents on non-critical code first
-- Review all subagent outputs carefully until you trust their consistency 

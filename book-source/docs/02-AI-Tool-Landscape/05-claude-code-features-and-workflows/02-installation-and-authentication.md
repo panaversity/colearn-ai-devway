@@ -225,9 +225,3 @@ Use Claude Code for this activity (preferred, since you just installed it). If y
 - Crystal-clear authentication instructions for your specific situation
 - Practical safety boundaries and approval criteria
 - Confidence-building first commands with expected results
-
-**Safety/ethics note:**
-
-- Never paste API keys or credentials into this conversation—use them only in Claude Code's secure prompts
-- If installation fails repeatedly, check official Claude Code docs or community forums
-- Start with read-only commands (like file reading) before write commands

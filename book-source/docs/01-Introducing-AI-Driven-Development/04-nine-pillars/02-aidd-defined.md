@@ -140,9 +140,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Deep understanding of 3 challenging AIDD characteristics with examples
 - Personalized 12-month transition roadmap based on your starting point
 - Clear milestones to track your progress up the mastery scale
-
-**Safety/ethics note:**
-
-- Don't share company-specific development processes when describing your current state
-- Be realistic about time commitment—AIDD mastery is gradual, not instant
-- Track progress against your own baseline, not others' achievements

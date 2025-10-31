@@ -72,9 +72,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Reality-checked 12-month milestone based on your actual context
 - Concrete daily actions that reflect the "strategy company" mindset
 - Personal cheat sheet you can reference as you execute
-
-**Safety/ethics note:**
-
-- Don't share detailed business plans or proprietary strategies publicly
-- Verify ambitious revenue projections with market research before committing
-- Be honest about your constraints (time, money, skills) when setting milestones

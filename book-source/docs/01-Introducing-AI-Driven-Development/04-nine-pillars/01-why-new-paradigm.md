@@ -120,9 +120,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Personal identification of which revolutions matter most for YOUR context
 - Honest diagnosis of whether you've hit the productivity plateau
 - Actionable one-week experiment to shift toward systematic AI usage
-
-**Safety/ethics note:**
-
-- Don't share proprietary code or company workflows when discussing your AI usage
-- Be honest about your current skill level in the self-assessment
-- Start small with systematic changes—don't try to transform everything at once

@@ -163,9 +163,3 @@ Use Claude Code for this activity (preferred, since you just installed it). If y
 - Complete design for your first team skill
 - Deep understanding of autonomous discovery mechanism
 - Strategic justification for investing time in skill creation
-
-**Safety/ethics note:**
-
-- Don't encode sensitive business logic or credentials in skills
-- Test skills thoroughly before sharing with team
-- Version control skills so you can revert bad changes

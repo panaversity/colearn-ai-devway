@@ -119,9 +119,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Concrete visualization of how pillars integrate (using a simple project)
 - Strategic understanding of which pillars you can defer temporarily
 - Logical learning sequence that builds knowledge progressively
-
-**Safety/ethics note:**
-
-- Don't feel pressured to master all 9 pillars simultaneously
-- It's okay to learn progressively—even masters started with one pillar
-- Focus on understanding relationships between pillars, not memorizing definitions

@@ -102,9 +102,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Realistic first-milestone roadmap with specific actions (not vague advice)
 - Time allocation strategy based on the "human attention" bottleneck principle
 
-**Safety/ethics note:**
-
-- Don't share specific customer information or revenue details publicly
-- Verify market size and revenue potential claims before building a business plan
-- Be honest about your time availability and constraints when planning
-

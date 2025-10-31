@@ -236,9 +236,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Rational assessment of risks vs. protections (not fear-based thinking)
 - Step-by-step visualization of Claude Code in action for YOUR workflow
 - Intuitive grasp of why terminal integration is revolutionary
-
-**Safety/ethics note:**
-
-- Never share actual API keys, passwords, or proprietary code when discussing examples
-- Start with read-only workflows until you're comfortable with write access
-- You control what Claude Code can access—start conservative, expand gradually
