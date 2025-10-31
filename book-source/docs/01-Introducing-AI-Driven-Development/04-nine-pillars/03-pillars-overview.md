@@ -101,21 +101,37 @@ The overview gives you the map. The details give you the tools to navigate.
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1: Pillar Prioritization Strategy
 
-1) "The lesson lists 9 pillars that enable AIDD. I'm overwhelmed—that's a lot to learn! Help me prioritize: if I could only master 3 pillars in the next 6 months, which THREE would give me the biggest impact for [my goal: learning to build / getting a job / starting a side project]? Explain your reasoning."
+```
+The lesson lists 9 pillars that enable AIDD. I'm overwhelmed—that's a lot to learn! Help me prioritize: if I could only master 3 pillars in the next 6 months, which THREE would give me the biggest impact for [my goal: learning to build / getting a job / starting a side project]? Explain your reasoning.
+```
 
-2) "The integration story about Maya shows all 9 pillars working together. Walk me through a SIMPLER version: pick a basic project (like a todo app or personal blog) and show me how just 3-4 pillars would work together. Use step-by-step bullet points so I can visualize the workflow."
+**Expected outcome:** Realistic prioritization of which 3 pillars to focus on first
 
-3) "The thought experiment asks: 'Which three pillars would you remove?' Help me think this through. For my context [describe your situation], identify the 3 pillars I could SKIP for now (not forever, just initially) and still make progress. What gaps would appear? How would I work around them temporarily?"
+### Prompt 2: Simple Integration Visualization
 
-4) "The lesson explains interdependencies between pillars. Create a simple 'learning roadmap' for me: If I learn Pillar X first, which pillar should I learn SECOND because it builds on X? Give me a logical 1→2→3→4 sequence that makes sense for a beginner. Explain why this order works."
+```
+The integration story about Maya shows all 9 pillars working together. Walk me through a SIMPLER version: pick a basic project (like a todo app or personal blog) and show me how just 3-4 pillars would work together. Use step-by-step bullet points so I can visualize the workflow.
+```
 
-**Expected outcomes:**
+**Expected outcome:** Concrete visualization of how pillars integrate (using a simple project)
 
-- Realistic prioritization of which 3 pillars to focus on first
-- Concrete visualization of how pillars integrate (using a simple project)
-- Strategic understanding of which pillars you can defer temporarily
-- Logical learning sequence that builds knowledge progressively
+### Prompt 3: Strategic Pillar Deferral
+
+```
+The thought experiment asks: 'Which three pillars would you remove?' Help me think this through. For my context [describe your situation], identify the 3 pillars I could SKIP for now (not forever, just initially) and still make progress. What gaps would appear? How would I work around them temporarily?
+```
+
+**Expected outcome:** Strategic understanding of which pillars you can defer temporarily
+
+### Prompt 4: Learning Sequence Design
+
+```
+The lesson explains interdependencies between pillars. Create a simple 'learning roadmap' for me: If I learn Pillar X first, which pillar should I learn SECOND because it builds on X? Give me a logical 1→2→3→4 sequence that makes sense for a beginner. Explain why this order works.
+```
+
+**Expected outcome:** Logical learning sequence that builds knowledge progressively
+

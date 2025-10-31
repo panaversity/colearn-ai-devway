@@ -123,21 +123,40 @@ But here's the uncomfortable question: **Why is this urgent? Why learn all nine 
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1: Design Your M-Shape Profile
 
-1) "The lesson describes 'M-Shaped' developers with deep expertise in 2-4 complementary domains. Help me design MY ideal M-shape: I'm interested in [list 2-3 areas: frontend / backend / ML / design / DevOps / security / etc.]. Which combination makes the most SENSE for: (a) building complete products alone, (b) becoming irreplaceable in the job market? Create a simple diagram showing my M-shape."
+```
+The lesson describes 'M-Shaped' developers with deep expertise in 2-4 complementary domains. Help me design MY ideal M-shape: I'm interested in [list 2-3 areas: frontend / backend / ML / design / DevOps / security / etc.]. Which combination makes the most SENSE for: (a) building complete products alone, (b) becoming irreplaceable in the job market? Create a simple diagram showing my M-shape.
+```
 
-2) "The lesson shows 3 real M-Shaped profiles (Vertical SaaS Builder, Platform Engineer, AI Product Developer). Pick the one CLOSEST to what I want to become [describe your interest]. Then break down: what are the FIRST 3 skills I should learn (in order)? How long would each take with AI assistance? Be realistic."
+**Expected outcome:** Personalized M-shape design that makes strategic sense for YOUR goals
 
-3) "I'm skeptical about the 'constraints' section. It says AI doesn't replace deep expertise in safety-critical or regulatory domains. Help me understand: For MY chosen M-shape [from prompt 1], which parts can I confidently learn WITH AI, and which parts require traditional deep study? Be honest about the limits."
+### Prompt 2: First Steps Roadmap
 
-4) "The lesson asks 'What would your ideal M-shaped profile look like in 2 years?' Create a visual 'skill acquisition timeline' for me: Month 0-6 (focus on X), Month 7-12 (add Y), Month 13-18 (integrate Z), Month 19-24 (master W). Show how skills compound. Be specific to my chosen domains."
+```
+The lesson shows 3 real M-Shaped profiles (Vertical SaaS Builder, Platform Engineer, AI Product Developer). Pick the one CLOSEST to what I want to become [describe your interest]. Then break down: what are the FIRST 3 skills I should learn (in order)? How long would each take with AI assistance? Be realistic.
+```
 
-**Expected outcomes:**
+**Expected outcome:** Clear first-steps roadmap for your chosen profile (not generic advice)
 
-- Personalized M-shape design that makes strategic sense for YOUR goals
-- Clear first-steps roadmap for your chosen profile (not generic advice)
-- Honest assessment of what AI can/can't help you learn
-- 2-year timeline showing how skills build progressively
+### Prompt 3: AI Learning Limits Assessment
+
+```
+I'm skeptical about the 'constraints' section. It says AI doesn't replace deep expertise in safety-critical or regulatory domains. Help me understand: For MY chosen M-shape [from prompt 1], which parts can I confidently learn WITH AI, and which parts require traditional deep study? Be honest about the limits.
+```
+
+**Expected outcome:** Honest assessment of what AI can/can't help you learn
+
+### Prompt 4: Two-Year Skill Timeline
+
+```
+The lesson asks 'What would your ideal M-shaped profile look like in 2 years?' Create a visual 'skill acquisition timeline' for me: Month 0-6 (focus on X), Month 7-12 (add Y), Month 13-18 (integrate Z), Month 19-24 (master W). Show how skills compound. Be specific to my chosen domains.
+```
+
+**Expected outcome:** 2-year timeline showing how skills build progressively
+
+
+
+

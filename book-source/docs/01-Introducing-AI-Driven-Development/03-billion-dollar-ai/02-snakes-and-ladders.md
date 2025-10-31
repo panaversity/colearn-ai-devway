@@ -73,21 +73,36 @@ Now that you understand the competitive layers, let's look at who wins economica
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Understand The Four Layers
+```
+The 'Snakes and Ladders' framework describes four competitive layers. Explain this using a simple analogy I can understand—maybe comparing it to a real-world industry I'm familiar with (like restaurants, retail, or transportation). Which layer should someone like ME [describe your context] focus on? Why?
+```
 
-1) "The 'Snakes and Ladders' framework describes four competitive layers. Explain this using a simple analogy I can understand—maybe comparing it to a real-world industry I'm familiar with (like restaurants, retail, or transportation). Which layer should someone like ME [describe your context] focus on? Why?"
+**Expected outcome**: Intuitive understanding of the four competitive layers using relatable analogies.
 
-2) "The lesson says Layer 1 (consumer AI like ChatGPT) is a 'snake' I should avoid. But I use ChatGPT every day! Help me understand: is there ANY opportunity for individuals in Layer 1, or should I completely skip it? If I should skip it, explain why in a way that convinces me."
+### Prompt 2: Evaluate Layer 1 Opportunities
+```
+The lesson says Layer 1 (consumer AI like ChatGPT) is a 'snake' I should avoid. But I use ChatGPT every day! Help me understand: is there ANY opportunity for individuals in Layer 1, or should I completely skip it? If I should skip it, explain why in a way that convinces me.
+```
 
-3) "I'm interested in [pick a vertical: healthcare / education / finance / legal / accounting]. Using the Snakes and Ladders framework, identify 2-3 'incumbent systems' in this vertical that don't talk to each other well. Explain why bridging them (Layer 3) could be valuable. Is this realistic for a beginner?"
+**Expected outcome**: Clear guidance on which layer to pursue based on your context.
 
-4) "The lesson mentions Microsoft's failure with Windows Mobile as a lesson about competing on the wrong layer. Give me 1-2 current examples (2024-2025) of companies making similar mistakes—trying to compete on consumer appeal when they should focus elsewhere. What can I learn from these examples?"
+### Prompt 3: Identify Bridging Opportunities
+```
+I'm interested in [pick a vertical: healthcare / education / finance / legal / accounting]. Using the Snakes and Ladders framework, identify 2-3 'incumbent systems' in this vertical that don't talk to each other well. Explain why bridging them (Layer 3) could be valuable. Is this realistic for a beginner?
+```
 
-**Expected outcomes:**
+**Expected outcome**: Concrete examples of bridging opportunities in a vertical you care about.
 
-- Intuitive understanding of the four competitive layers using relatable analogies
-- Clear guidance on which layer to pursue based on your context
-- Concrete examples of bridging opportunities in a vertical you care about
-- Pattern recognition: spotting strategic mistakes to avoid in your own journey
+### Prompt 4: Learn From Strategic Mistakes
+```
+The lesson mentions Microsoft's failure with Windows Mobile as a lesson about competing on the wrong layer. Give me 1-2 current examples (2024-2025) of companies making similar mistakes—trying to compete on consumer appeal when they should focus elsewhere. What can I learn from these examples?
+```
+
+**Expected outcome**: Pattern recognition: spotting strategic mistakes to avoid in your own journey.
+
+
+
+

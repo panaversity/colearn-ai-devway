@@ -122,21 +122,38 @@ You now have a clear definition of AIDD, its nine defining characteristics, and 
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1: AIDD Job Description Translation
 
-1) "The lesson defines AIDD as 'specification-first methodology that transforms developers into specification engineers and system architects.' Translate this into a job description for me. If I master AIDD, what will my ACTUAL daily work look like? Compare 'a day in the life' before and after AIDD adoption. Be specific."
+```
+The lesson defines AIDD as 'specification-first methodology that transforms developers into specification engineers and system architects.' Translate this into a job description for me. If I master AIDD, what will my ACTUAL daily work look like? Compare 'a day in the life' before and after AIDD adoption. Be specific.
+```
 
-2) "The lesson lists 9 characteristics of AIDD (Specification-Driven, AI-Augmented, Quality-Gated, etc.). Pick THREE that feel most unfamiliar or challenging to me [describe your background]. For each, explain: what does this actually mean in practice? Give me a concrete example of what I'd DO differently."
+**Expected outcome:** Vivid picture of your daily work after AIDD adoption (not abstract concepts)
 
-3) "The comparison table shows 'Traditional Development vs AIDD Development.' I'm currently at [describe where you are]. Walk me through a realistic 12-month transition plan. What should I focus on in Month 1-3, Month 4-6, Month 7-9, and Month 10-12? Don't give me generic advice—be specific to my starting point."
+### Prompt 2: AIDD Characteristics Deep Dive
 
-4) "The self-assessment scale goes from 1 (Completely New) to 5 (Fully Embracing). I rated myself as [your number]. What does 'moving up one level' actually require? Give me a checklist of 3-5 concrete milestones that would prove I've advanced to the next level."
+```
+The lesson lists 9 characteristics of AIDD (Specification-Driven, AI-Augmented, Quality-Gated, etc.). Pick THREE that feel most unfamiliar or challenging to me [describe your background]. For each, explain: what does this actually mean in practice? Give me a concrete example of what I'd DO differently.
+```
 
-**Expected outcomes:**
+**Expected outcome:** Deep understanding of 3 challenging AIDD characteristics with examples
 
-- Vivid picture of your daily work after AIDD adoption (not abstract concepts)
-- Deep understanding of 3 challenging AIDD characteristics with examples
-- Personalized 12-month transition roadmap based on your starting point
-- Clear milestones to track your progress up the mastery scale
+### Prompt 3: Personal Transition Roadmap
+
+```
+The comparison table shows 'Traditional Development vs AIDD Development.' I'm currently at [describe where you are]. Walk me through a realistic 12-month transition plan. What should I focus on in Month 1-3, Month 4-6, Month 7-9, and Month 10-12? Don't give me generic advice—be specific to my starting point.
+```
+
+**Expected outcome:** Personalized 12-month transition roadmap based on your starting point
+
+### Prompt 4: Mastery Level Assessment
+
+```
+The self-assessment scale goes from 1 (Completely New) to 5 (Fully Embracing). I rated myself as [your number]. What does 'moving up one level' actually require? Give me a checklist of 3-5 concrete milestones that would prove I've advanced to the next level.
+```
+
+**Expected outcome:** Clear milestones to track your progress up the mastery scale
+
+

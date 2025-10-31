@@ -185,6 +185,29 @@ Write down one specific development task you've struggled with recently. Could a
 
 ---
 
+## Try With AI
+
+Use Claude Code for this activity (preferred, since you're learning about it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
+
+### Prompts
+
+1) **"I'm trying to understand the difference between passive and agentic AI assistance. Give me 3 specific examples from MY work [describe what you do: web development / data analysis / etc.] showing how passive AI would handle a task versus how agentic AI would handle the same task. Make it concrete with step-by-step comparisons."**
+
+2) **"The lesson shows 7 examples of agentic AI in action. Pick the one that's most relevant to my current skill level [beginner / intermediate / advanced] and tech stack [describe your languages/tools]. Walk me through exactly what would happen if I tried this scenario today: What would I type? What would Claude Code do? What would the output look like?"**
+
+3) **"I'm skeptical about AI 'acting on my behalf' in my code. Help me understand the safety mechanisms: How does Claude Code prevent accidental damage? What approval processes exist? Give me a 'safety checklist' I can follow until I'm comfortable with agentic assistance."**
+
+4) **"Based on this lesson, I want to identify where agentic AI could help me most. Analyze my typical development workflow [describe your daily tasks] and suggest: (a) Which friction points agentic AI could eliminate, (b) Which tasks I should keep doing manually, (c) One specific scenario I should try FIRST as a beginner."**
+
+### Expected Outcomes
+
+- Clear understanding of passive vs. agentic AI through personal examples
+- Confidence to try your first agentic AI scenario safely
+- Practical safety guidelines for working with AI agents
+- Strategic plan for integrating agentic AI into your workflow
+
+---
+
 ## Why This Matters: The Future of Development
 
 Claude Code's success reveals something crucial about the future of software development: **the most powerful AI assistance isn't about replacing human developers—it's about removing friction from the development workflow.**
@@ -216,23 +239,39 @@ Understanding your comfort level now will help you adopt these tools at a pace t
 
 ---
 
-## Try With AI
+## Try With AI (Alternative)
 
 Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
 
-**Prompts:**
+### Prompt 1: ChatGPT vs. Claude Code Comparison
 
-1) "The lesson compares 'passive AI' (like ChatGPT web) with 'agentic AI' (like Claude Code). I use ChatGPT regularly. Help me understand: What's ONE specific workflow where ChatGPT FAILS me today (because it can't see my files) that Claude Code would handle better? Give me a concrete before/after example."
+```
+The lesson compares 'passive AI' (like ChatGPT web) with 'agentic AI' (like Claude Code). I use ChatGPT regularly. Help me understand: What's ONE specific workflow where ChatGPT FAILS me today (because it can't see my files) that Claude Code would handle better? Give me a concrete before/after example.
+```
 
-2) "I'm nervous about letting AI 'read my files' and 'propose changes.' Help me think through the trust boundary: What are the REAL risks? What protections exist? Compare this to other tools I already trust (like GitHub Copilot or auto-complete). Is Claude Code actually riskier, or does it just FEEL riskier because it's more visible?"
+**Expected outcome:** Concrete understanding of where ChatGPT limits you today (and how agentic AI solves it)
 
-3) "The lesson shows 7 scenarios where Claude Code transforms development work. Pick the scenario CLOSEST to my daily work [describe what you do: debugging / learning new frameworks / building projects / etc.]. Break it down step-by-step: How would Claude Code actually help me? What would I TYPE? What would I SEE?"
+### Prompt 2: Trust and Risk Assessment
 
-4) "I finished this lesson but still don't fully 'get' why terminal integration matters so much. Explain it using a non-programming analogy (maybe: cooking, construction, writing). Why is 'AI in the terminal' fundamentally better than 'AI in a separate tab'?"
+```
+I'm nervous about letting AI 'read my files' and 'propose changes.' Help me think through the trust boundary: What are the REAL risks? What protections exist? Compare this to other tools I already trust (like GitHub Copilot or auto-complete). Is Claude Code actually riskier, or does it just FEEL riskier because it's more visible?
+```
 
-**Expected outcomes:**
+**Expected outcome:** Rational assessment of risks vs. protections (not fear-based thinking)
 
-- Concrete understanding of where ChatGPT limits you today (and how agentic AI solves it)
-- Rational assessment of risks vs. protections (not fear-based thinking)
-- Step-by-step visualization of Claude Code in action for YOUR workflow
-- Intuitive grasp of why terminal integration is revolutionary
+### Prompt 3: Personal Workflow Analysis
+
+```
+The lesson shows 7 scenarios where Claude Code transforms development work. Pick the scenario CLOSEST to my daily work [describe what you do: debugging / learning new frameworks / building projects / etc.]. Break it down step-by-step: How would Claude Code actually help me? What would I TYPE? What would I SEE?
+```
+
+**Expected outcome:** Step-by-step visualization of Claude Code in action for YOUR workflow
+
+### Prompt 4: Terminal Integration Analogy
+
+```
+I finished this lesson but still don't fully 'get' why terminal integration matters so much. Explain it using a non-programming analogy (maybe: cooking, construction, writing). Why is 'AI in the terminal' fundamentally better than 'AI in a separate tab'?
+```
+
+**Expected outcome:** Intuitive grasp of why terminal integration is revolutionary
+

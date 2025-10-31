@@ -106,21 +106,40 @@ Write down your answers. They'll help you track your mindset shift as you progre
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1: Devil's Advocate Analysis
 
-1) "The lesson argues 'all nine pillars or none'—that partial adoption creates gaps. I'm skeptical. Play devil's advocate for me: make the STRONGEST case for why someone could succeed with just 6 of 9 pillars. Then refute your own argument. Help me understand why completeness actually matters."
+```
+The lesson argues 'all nine pillars or none'—that partial adoption creates gaps. I'm skeptical. Play devil's advocate for me: make the STRONGEST case for why someone could succeed with just 6 of 9 pillars. Then refute your own argument. Help me understand why completeness actually matters.
+```
 
-2) "The historical examples (cloud computing, Agile, mobile-first) show early adopters thriving and late adopters struggling. Based on these patterns, help me assess: Am I an 'early adopter' reading this in [current year]? A 'late majority'? What does that mean for my urgency level? Should I panic or stay calm?"
+**Prompt 2: Expected outcome:** Honest understanding of why completeness matters (not just accepting it)
 
-3) "Sarah's story (complete adoption, 18 months, 40% salary increase) vs. Marcus's story (partial adoption, needed specialists). These feel cherry-picked. Give me 2-3 REALISTIC scenarios for MY situation [describe your context]. What outcomes should I actually expect if I commit to this path? No hype—be honest."
+### Adoption Curve Assessment
 
-4) "The realistic timeline says Months 1-6 (pillars 1-3), Months 7-12 (pillars 4-6), Months 13-18 (pillars 7-9). Create a 'milestone checklist' for me: How will I KNOW I've actually mastered pillars 1-3? What's the concrete proof? Do the same for pillars 4-6 and 7-9. Give me testable criteria."
+```
+The historical examples (cloud computing, Agile, mobile-first) show early adopters thriving and late adopters struggling. Based on these patterns, help me assess: Am I an 'early adopter' reading this in [current year]? A 'late majority'? What does that mean for my urgency level? Should I panic or stay calm?
+```
 
-**Expected outcomes:**
+**Expected outcome:** Realistic urgency assessment based on adoption curves
 
-- Honest understanding of why completeness matters (not just accepting it)
-- Realistic urgency assessment based on adoption curves
-- Grounded expectations for YOUR outcomes (not aspirational stories)
-- Concrete milestones you can use to track real progress
+### Prompt 3: Grounded Outcome Expectations
+
+```
+Sarah's story (complete adoption, 18 months, 40% salary increase) vs. Marcus's story (partial adoption, needed specialists). These feel cherry-picked. Give me 2-3 REALISTIC scenarios for MY situation [describe your context]. What outcomes should I actually expect if I commit to this path? No hype—be honest.
+```
+
+**Expected outcome:** Grounded expectations for YOUR outcomes (not aspirational stories)
+
+### Prompt 4: Mastery Milestone Checklist
+
+```
+The realistic timeline says Months 1-6 (pillars 1-3), Months 7-12 (pillars 4-6), Months 13-18 (pillars 7-9). Create a 'milestone checklist' for me: How will I KNOW I've actually mastered pillars 1-3? What's the concrete proof? Do the same for pillars 4-6 and 7-9. Give me testable criteria.
+```
+
+**Expected outcome:** Concrete milestones you can use to track real progress
+
+
+
+

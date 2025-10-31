@@ -31,16 +31,6 @@ Part 1 was about understanding. Part 2 is about becoming capable.
 
 This is what "learning WITH AI" looks like in practice.
 
-## Who This Part Is For
-
-**If you're a complete beginner** with no terminal experience, this part meets you exactly where you are. Chapter 5 assumes nothing—we start with the absolute basics of installation and walk through every step. By the time you finish Chapter 8, you'll have professional workflows that experienced developers spend months learning.
-
-**If you're switching from other AI tools** (ChatGPT, Copilot, other IDEs), this part shows you why specialized tools like Claude Code matter, what unique capabilities each tool provides, and how to choose between them. You'll develop practical experience, not just theoretical knowledge.
-
-**If you're an experienced developer** skeptical about command-line AI tools, this part gives you concrete evidence of why these tools are different. You'll see how they integrate into professional workflows, why version control becomes even more critical with AI agents, and how to use them as legitimate development partners rather than code generators.
-
-**If you're preparing for a career in tech**, this part is your professional onboarding. These tools are already standard in the industry. Proficiency with them isn't optional—it's table stakes. By completing this part, you're preparing for the actual tools and workflows you'll encounter in professional environments.
-
 ## What You'll Learn in Part 2
 
 This part consists of four interconnected chapters that build practical proficiency with AI development tools and professional workflows.
@@ -130,13 +120,6 @@ Critical insight: Git provides the safety net that makes AI-assisted development
 
 **Platform matters.** Chapters 7 and 8 provide Windows-specific, Mac-specific, and Linux-specific instructions because terminal behavior differs significantly. Find your platform and follow those instructions carefully. If something doesn't work, ask your AI assistant to debug it based on your error message—that's what they're designed for.
 
-## What Comes After Part 2
-
-Once you complete these four chapters, you'll have transformed from someone with theoretical understanding into someone with practical capability. You'll be ready for **Part 3: Prompt & Context Engineering**, where we learn the art and science of communicating effectively with AI tools.
-
-From there, **Part 4: Python - The Language of AI Agents** begins your coding journey with your new tools already installed and ready to use.
-
-Each part builds on the previous, but Part 2 is unique: it's where theory becomes reality. Where you go from reading about AI-driven development to actually doing it.
 
 ## A Note on Mindset
 
@@ -172,4 +155,3 @@ Take your time. Don't rush. Use your AI assistant (Claude Code or Gemini CLI) wh
 
 Let's get started.
 
----

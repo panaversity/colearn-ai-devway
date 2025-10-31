@@ -168,22 +168,35 @@ With the three-layer stack, you make three independent decisions:
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Assistant vs. Agent Modes
+```
+Explain the difference between an 'AI assistant' (suggests ideas, you decide) and an 'AI agent' (takes action autonomously). Using simple analogies, help me understand: When would I want AI to just advise me? When would I want AI to execute tasks on its own? Give me 2 examples of each scenario.
+```
 
-1) "Explain the difference between an 'AI assistant' (suggests ideas, you decide) and an 'AI agent' (takes action autonomously). Using simple analogies, help me understand: When would I want AI to just advise me? When would I want AI to execute tasks on its own? Give me 2 examples of each scenario."
+**Expected outcome**: Clear understanding of AI assistant vs. agent modes using beginner-friendly analogies.
 
-2) "I'm thinking about using AI to help me build [describe your project idea]. Should I use AI as an 'assistant' (I stay in control) or as an 'agent' (it does work autonomously)? What factors should influence my decision? What are the risks of each approach for a beginner like me?"
+### Prompt 2: Choose Your Approach
+```
+I'm thinking about using AI to help me build [describe your project idea]. Should I use AI as an 'assistant' (I stay in control) or as an 'agent' (it does work autonomously)? What factors should influence my decision? What are the risks of each approach for a beginner like me?
+```
 
-3) "This lesson mentioned a 'three-layer stack': models (the AI brain), workspaces (where you work), and agents (autonomous helpers). Explain this using a simple analogy that doesn't require technical knowledge. Why does this separation matter for someone who just wants to build solutions?"
+**Expected outcome**: Practical decision framework for choosing between assistant and agent modes for your projects.
 
-4) "I'm concerned about vendor lock-in—what if the AI tool I learn today becomes expensive or disappears tomorrow? How does the 'modular stack' approach protect me? Give me practical advice: what should I focus on learning that will stay relevant even as specific tools change?"
+### Prompt 3: Understand The Three-Layer Stack
+```
+This lesson mentioned a 'three-layer stack': models (the AI brain), workspaces (where you work), and agents (autonomous helpers). Explain this using a simple analogy that doesn't require technical knowledge. Why does this separation matter for someone who just wants to build solutions?
+```
 
-**Expected outcomes:**
+**Expected outcome**: Conceptual grasp of the three-layer architecture and why it matters (without technical details).
 
-- Clear understanding of AI assistant vs. agent modes using beginner-friendly analogies
-- Practical decision framework for choosing between assistant and agent modes for your projects
-- Conceptual grasp of the three-layer architecture and why it matters (without technical details)
-- Confidence that learning AI collaboration skills is durable, even as specific tools evolve
+### Prompt 4: Avoid Vendor Lock-In
+```
+I'm concerned about vendor lock-in—what if the AI tool I learn today becomes expensive or disappears tomorrow? How does the 'modular stack' approach protect me? Give me practical advice: what should I focus on learning that will stay relevant even as specific tools change?
+```
+
+**Expected outcome**: Confidence that learning AI collaboration skills is durable, even as specific tools evolve.
+
+
 
