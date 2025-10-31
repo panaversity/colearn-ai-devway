@@ -1,337 +1,716 @@
 ---
-title: "Extending Gemini: Asking for the Tools You Need"
-chapter: 6
+title: "When Your AI Needs More: Extensions for Real Business Tasks"
+chapter: 2
 lesson: 5
 estimated_time: "25 minutes"
 learning_objectives:
-  - "Recognize when built-in capabilities aren't enough and ask Gemini for guidance on extensions"
-  - "Evaluate different integration approaches by dialoguing with Gemini about your specific needs"
-  - "Discover and implement custom integrations using extensions (MCP-based and beyond)"
-  - "Apply the meta-skill of asking AI for ecosystem guidance to solve unfamiliar integration problems"
-  - "Reflect on what you've learned in the Gemini CLI chapter and identify next learning priorities"
+  - "Recognize when built-in tools aren't enough for your business task"
+  - "Install and use MCP servers to extend AI capabilities (web research, live documentation)"
+  - "Apply extensions to real business workflows (competitive research, staying current)"
+  - "Understand security considerations when giving AI access to external systems"
+  - "Consolidate your learning and identify next steps in your AI journey"
 sidebar_position: 5
 ---
 
-# Extending Gemini: Asking for the Tools You Need
+## The Moment You Hit a Wall
 
-## The Moment You Need More
+You've been using Gemini CLI for your business tasks. It's helped you analyze sales reports, research competitors, review customer feedback. But now you need something it can't do out of the box.
 
-Imagine this: You've been using Gemini CLI for a week. It's helped you write code, debug scripts, brainstorm architecture. But now you hit a wall.
+**Example scenarios:**
+- You want your AI to browse live competitor websites and extract current pricing (not just fetch a single page)
+- You need to stay current with constantly changing business tools (Stripe API updates, Shopify features, industry regulations)
+- You want to monitor real-time data (stock prices, social media trends, breaking news in your industry)
+- You need to connect to your business systems (CRM, project management, databases)
 
-You're analyzing CSV files from your company's database. Gemini can help you understand the data, but it can't *query* the database directly—you have to copy-paste results into the terminal each time. Or you're building a workflow that needs to check your project management tool (Jira, Asana, Linear) in real time. Or you're in a region where Gemini's rate limits feel tight, and you wonder if there are alternatives.
+This is when **extensions** become essential.
 
-This is the moment extensions are designed for.
+But here's the key: **You don't learn to build extensions. You learn to use pre-built ones.**
 
-But here's the agent-native approach: **you don't memorize how extensions work. You ask Gemini.**
+This lesson shows you how to extend Gemini CLI with two powerful capabilities:
+1. **Playwright MCP**: Your AI can browse websites like a human (for competitive research)
+2. **Context7 MCP**: Your AI accesses the latest documentation (for staying current)
 
-This lesson teaches you the meta-skill of *discovering* what extensions can do by having a conversation with Gemini about your needs. We'll walk through real scenarios, show you how to ask the right questions, and by the end, you'll know how to extend Gemini yourself—and more importantly, how to ask AI for guidance when you encounter integration challenges you've never seen before.
-
----
-
-## Section 1: When You Need More — A Discovery Scenario
-
-### The Problem
-
-Let's start with a concrete scenario. You have a folder of JSON files from an API, and you want to analyze trends across all of them. Gemini can help you write Python to parse them, but what if you need Gemini to *directly access* those files during our conversation—without you manually uploading each one?
-
-Or: You're debugging a microservices system. Your logs are in Datadog. You want to ask Gemini: "What's happening in my application right now?" and have Gemini pull live logs to answer.
-
-Or: You're in Southeast Asia, and you've hit Gemini's rate limit. You wonder: are there other models that might work better for my use case?
-
-**The Common Thread:** Your use case has evolved beyond Gemini's built-in capabilities.
-
-### Asking Gemini for Guidance
-
-In an agent-native workflow, your first move is *not* to research documentation. It's to ask Gemini directly.
-
-Open your Gemini CLI and try this:
-
-```bash
-gemini "I need to analyze CSV files from my company's database during our conversations,
-but I'm copying and pasting results manually. What are my options for connecting
-my database directly to Gemini so you can query it as we talk?"
-```
-
-**What Gemini will tell you:**
-- Gemini CLI supports **custom integrations** (typically via tools/extensions)
-- You can build extensions using **MCP (Model Context Protocol)** — a standard for letting AI models access external systems
-- Some integrations are already pre-built by the community
-- The complexity depends on your use case (simple file access vs. live API queries)
-
-Gemini will likely ask you clarifying questions: *How large are your files? How often do they change? Does your company have security/compliance requirements?* These questions help you understand the **right level of integration** for your need.
-
-**Key insight:** You didn't memorize MCP. You asked Gemini what you needed, and Gemini explained it in the context of your problem.
+By the end, you'll understand when you need extensions, how to install them safely, and how to use them for real business value.
 
 ---
 
-## Section 2: Understanding Extensions Through Use Cases
+## What Are Extensions? (The Business Explanation)
 
-### Use Case 1: Local File Access (Simplest)
+An **extension** is a capability you add to Gemini CLI that lets your AI do things it couldn't before.
 
-**Scenario:** You have a folder of project files (markdown docs, config files, Python scripts) that you want Gemini to reference during our conversation.
+Think of it like apps on your phone:
+- **Built-in apps** (camera, messages): Work out of the box
+- **Downloaded apps** (Uber, Slack): You install them when you need specific features
 
-**What you ask Gemini:**
-```bash
-gemini "I have a folder of project documentation and code files.
-How can I let you access them directly so you can reference them as we talk?"
+**Gemini CLI works the same way:**
+- **Built-in tools** (file reading, web fetching, search): Already covered in Lesson 3
+- **Extensions** (web browsing, live docs, database connectors): You add them when needed
+
+### What Is MCP? (Model Context Protocol)
+
+**MCP** is the technology that lets your AI safely connect to external systems.
+
+**Simple explanation:**
+- Your AI lives on your computer (local)
+- The data you need lives elsewhere (external): websites, databases, APIs, documentation sites
+- **MCP servers** are bridges that safely connect your AI to that external data
+
+**Without MCP:**
+```
+You → Gemini CLI → Your local files only
 ```
 
-**What Gemini will tell you:**
-- Gemini CLI has built-in file browsing for your current directory (already covered in earlier lessons)
-- For *persistent* cross-conversation access, you might set up a simple file-indexing extension
-- This is usually the easiest integration to start with
-
-**Try it:** Use what you learned in Lesson 3 (built-in tools) to ask Gemini to read files from your current project. This is the starting point—no extensions needed yet.
-
-### Use Case 2: Live System Access (Intermediate)
-
-**Scenario:** You want Gemini to check your system's current CPU usage, memory, running processes—or query your company's API during our conversation.
-
-**What you ask Gemini:**
-```bash
-gemini "I want you to access live data from my system (CPU, memory, processes)
-or from our company's API (e.g., customer database).
-How would I build that capability?"
+**With MCP:**
+```
+You → Gemini CLI → MCP Servers → External systems
+                         ↓
+              [Websites, Live Docs, Databases, APIs]
 ```
 
-**What Gemini will tell you:**
-- This requires an **extension** — a piece of code that runs locally and gives Gemini access to your system/API
-- The extension uses a protocol (usually **MCP**) to communicate with Gemini
-- Gemini can then call your extension as a "tool" — just like it calls built-in tools
-- You write the extension code (Python, JavaScript, etc.), and Gemini can invoke it during conversations
-
-**The MCP Protocol (Explained via Need):**
-You don't need to understand MCP architecture in detail. But here's the practical concept:
-
-- **MCP** = a standard way for Gemini to request information from external systems
-- **Your extension** = a small program that listens for Gemini's requests and responds with data
-- **Example flow:**
-  - You: "Show me what's running on my system right now"
-  - Gemini: (internally) "I need system process data. Let me call the 'system-monitor' extension"
-  - Extension: (returns list of running processes)
-  - Gemini: (shows you the data) "Here's what's running..."
-
-That's it. The protocol is just the glue that lets Gemini talk to your code.
-
-### Use Case 3: Alternative Models (When You Hit Limits)
-
-**Scenario:** You're in a region with rate limiting, or Gemini's capabilities don't fit your use case perfectly, and you want to explore alternatives.
-
-**What you ask Gemini:**
-```bash
-gemini "I'm hitting rate limits with you, or I need a different model
-for my use case. What are the alternatives in the Gemini CLI ecosystem,
-or beyond?"
-```
-
-**What Gemini will tell you:**
-- **Qwen Code** — Alibaba's code model, optimized for programming tasks, available in some regions
-- **Claude CLI** (next chapter!) — Anthropic's model with different strengths
-- **OpenAI API** — GPT-4, available globally
-- Trade-offs: cost, rate limits, regional availability, model strengths
-
-Gemini will help you think through which alternative fits your constraints.
+**Key insight**: MCP servers give your AI access **beyond your computer**, which is powerful but requires careful security evaluation.
 
 ---
 
-## Section 3: Building Your First Extension (Agent-Guided)
+## Security First: What You Must Know
 
-### The Scenario
+Before we install anything, understand the risks and how to stay safe.
 
-You decide you want Gemini to access your local time and timezone info during conversations. This is a simple, low-stakes extension that teaches the pattern.
+### The Risk
 
-### Asking Gemini to Help You Build It
+When you install an MCP server, you're giving your AI permission to access external systems. This means:
+- ⚠️ Your AI can browse websites (could visit malicious sites if prompted carelessly)
+- ⚠️ Your AI can query databases (could expose sensitive data)
+- ⚠️ Your AI can access APIs (could rack up costs or leak credentials)
 
-Instead of a traditional tutorial, ask Gemini:
+### How to Stay Safe
 
-```bash
-gemini "I want to build a Gemini CLI extension that lets you access
-my system's timezone and current time during our conversations.
-Walk me through how to build this step-by-step.
-What language should I use? What files do I need?
-Show me a minimal working example."
-```
+**1. Only install trusted MCP servers**
 
-Gemini will provide:
-1. A language recommendation (Python is typical for CLI extensions)
-2. A minimal code example that serves time data
-3. How to register it with Gemini CLI
-4. How to test it
+In this lesson, we use two widely trusted servers:
+- ✅ **Playwright MCP**: Official, maintained by Microsoft/Playwright team
+- ✅ **Context7 MCP**: Maintained by Upstash (reputable company)
 
-**Your role:**
-- Create the files Gemini suggests
-- Ask clarifying questions if something doesn't work
-- Iterate with Gemini to debug (e.g., "This doesn't run — here's the error. How do I fix it?")
+**2. Understand what you're installing**
 
-### Key Pattern (The Meta-Skill)
+Before installing any MCP server, ask:
+- Who built this? (Individual developer? Reputable company? Open source community?)
+- What access does it need? (Read-only web access? Database write access?)
+- Is it actively maintained? (Recent updates? Active community?)
 
-Notice what you're doing:
-1. Define your need ("I want Gemini to access X")
-2. Ask Gemini how to build it
-3. Implement with Gemini's guidance
-4. Test and iterate
-5. Ask Gemini to help debug
+**3. Test with non-sensitive data first**
 
-**This pattern transfers to any extension or tool you'll encounter.** You're not memorizing MCP syntax or extension architecture. You're learning to *ask Gemini for help building it.*
+When trying a new MCP server:
+- ✅ Test on public websites first (not your company's internal systems)
+- ✅ Use test credentials (not your production API keys)
+- ✅ Start with read-only tasks (not data modification)
 
----
+**4. Know what NOT to share**
 
-## Section 4: Evaluating Extensions — Decision Making with Gemini
+Never give MCP servers access to:
+- 🚫 Bank accounts or financial credentials
+- 🚫 Company databases with customer data (unless explicitly authorized)
+- 🚫 Private emails or internal communications
+- 🚫 Production API keys or passwords
 
-### The Dilemma
-
-Someone shares a community extension with you: "Use this MCP extension to connect your Slack workspace to Gemini!"
-
-You want to evaluate it, but you have questions:
-- Is it secure? Does it store my credentials safely?
-- How do I install it? Is it maintained?
-- Does my company's security policy allow third-party integrations?
-- Will it impact Gemini's performance?
-
-### Asking Gemini to Help You Decide
-
-```bash
-gemini "I found this extension that connects Slack to Gemini CLI: [paste repo URL or description].
-Before I install it, help me evaluate it.
-What security concerns should I think about?
-How do I know if it's trustworthy?
-What questions should I ask the maintainer?"
-```
-
-**What Gemini will help you with:**
-- Security red flags (hardcoded credentials, unverified source, etc.)
-- Trustworthiness signals (active maintenance, clear documentation, author reputation)
-- Installation best practices (using virtual environments, reviewing code before running)
-- Questions to ask the maintainer
-- How it might affect your setup
-
-**You're not becoming an expert on extension security.** You're learning to *ask Gemini to help you think through decisions.*
+**Rule of thumb**: If you wouldn't share it with a contractor, don't give an MCP server access to it.
 
 ---
 
-## Section 5: The Gemini CLI Ecosystem in Context
+## Extension 1: Playwright MCP — Browse the Web Like a Human
 
-### What You've Learned (Reflected Through Dialogue)
+### What It Does
 
-By now, you've spent a week with Gemini CLI. Let's consolidate what you know by asking Gemini to reflect with you.
+**Playwright MCP** lets your AI actively browse websites, click links, fill forms, and extract information—just like you would in a web browser.
 
-Open Gemini and ask:
+**Business use cases:**
+- Competitive research: Browse competitor websites to compare features, pricing, offerings
+- Market research: Extract product details from e-commerce sites
+- Price monitoring: Check competitor pricing across multiple pages
+- Job research: Browse job boards to understand market salary ranges
+
+### The Difference from Web Fetching (Lesson 3)
+
+**Web Fetching** (built-in tool from Lesson 3):
+- Reads one specific page
+- Gets HTML content
+- Like taking a snapshot
+
+**Playwright MCP** (extension):
+- Browses multiple pages
+- Clicks buttons, follows links
+- Fills out forms
+- Like having a human browse for you
+
+**Example:**
+- Web Fetching: "Read the Stripe pricing page"
+- Playwright: "Browse Stripe's website, click through all pricing tiers, and create a comparison table"
+
+### How to Install Playwright MCP
+
+**Step 1: Install the extension**
+
+Open your terminal and run:
 
 ```bash
-gemini "Let me review what I've learned about Gemini CLI this week.
-I understand: installation, basic commands, built-in tools, context windows,
-and now extensions.
-For each of these, explain in one sentence what it enables me to do.
-Then, help me identify which of these capabilities I haven't tried yet,
-and what my next priority should be."
+gemini extensions install https://github.com/gemini-cli-extensions/playwright-mcp
 ```
 
-Gemini's response will help you see the *shape* of what you've learned:
+**What happens:**
+- Gemini downloads the Playwright extension
+- Installs necessary dependencies
+- Makes it available for your conversations
 
-- **Installation:** Lets you run Gemini locally without web UI friction
-- **Basic commands:** Lets you ask Gemini from your terminal in your workflow
-- **Built-in tools:** Lets Gemini access files, code execution, search — extending its reach beyond pure language
-- **Context windows:** Lets you have longer conversations and load entire projects for analysis
-- **Extensions:** Lets you connect Gemini to *your specific systems* — databases, APIs, monitoring tools
+**Step 2: Verify installation**
 
-**The narrative:** You're not just using a tool. You're building a **personal AI assistant** that understands your environment.
+```bash
+gemini extensions list
+```
 
-### What Comes Next (Beyond This Chapter)
+You should see `playwright-mcp` in the list.
+
+### Business Workflow 1: Competitive Pricing Research
+
+**Your goal**: You're launching a new product. You need to understand how 3 competitors price similar offerings.
+
+**Traditional approach:**
+1. Visit competitor A website
+2. Navigate to pricing page
+3. Take notes
+4. Repeat for competitors B and C
+5. Manually create comparison
+6. Time: 1-2 hours
+
+**With Playwright MCP:**
+
+Open Gemini CLI and say:
+
+```
+Use Playwright to browse these three competitor websites:
+1. [Competitor A URL]
+2. [Competitor B URL]
+3. [Competitor C URL]
+
+For each, find their pricing page, extract:
+- Pricing tiers (Basic, Pro, Enterprise, etc.)
+- Monthly cost for each tier
+- Key features included
+- Any discounts or special offers
+
+Create a comparison table showing all three side-by-side.
+```
+
+**What Gemini does:**
+1. Launches Playwright browser
+2. Visits first competitor site
+3. Navigates to pricing page
+4. Extracts relevant information
+5. Repeats for other competitors
+6. Creates comparison table
+
+**Time: 5-10 minutes**
+
+**Example output:**
+```
+Competitor Pricing Comparison
+
+| Feature          | Competitor A | Competitor B | Competitor C |
+|------------------|--------------|--------------|--------------|
+| Basic Tier       | $29/month    | $25/month    | Free         |
+| Pro Tier         | $99/month    | $89/month    | $79/month    |
+| Enterprise       | Custom       | $299/month   | Custom       |
+| Key Differentiator | Analytics | Support     | Integrations |
+```
+
+### Business Workflow 2: Product Research
+
+**Your goal**: You're considering adding a new feature. You want to see how competitors implement it.
+
+**Prompt:**
+```
+Use Playwright to visit [Competitor Website]. Browse their product features page,
+click on [Specific Feature], and summarize:
+- How they describe this feature
+- What benefits they highlight
+- What use cases they show
+- How prominently they feature it (main page vs. buried?)
+```
+
+**What you learn:**
+- How competitors position the feature
+- What language resonates with customers
+- How to differentiate your offering
+
+### When Playwright MCP Is Useful
+
+**✅ Use Playwright when:**
+- You need to browse multiple pages on a site
+- Information requires clicking/navigating (pricing calculators, feature pages)
+- You're doing ongoing competitor monitoring (monthly pricing checks)
+- You need to extract data from multiple similar pages
+
+**❌ Don't use Playwright when:**
+- Simple one-page fetch works (use built-in web fetching instead)
+- Site blocks automated browsing (some sites detect bots)
+- You're accessing sensitive/private data (security risk)
+
+---
+
+## Extension 2: Context7 MCP — Stay Current with Latest Documentation
+
+### What It Does
+
+**Context7 MCP** gives your AI access to constantly updated documentation for popular tools, libraries, and platforms.
+
+**Business use cases:**
+- Learning new tools: Get latest docs for Stripe, Shopify, QuickBooks APIs
+- Staying current: Understand recent changes to platforms you use
+- Quick reference: Get answers without hunting through documentation
+- Onboarding: Help new team members understand your tech stack
+
+### The Difference from Web Fetching
+
+**Web Fetching** (built-in):
+- You need to know the documentation URL
+- Fetches what's on the page right now
+- Manual process each time
+
+**Context7 MCP** (extension):
+- Knows where to find docs automatically
+- Indexes documentation for fast searches
+- Stays updated with latest changes
+- One command gets you current information
+
+### How to Install Context7 MCP
+
+**Step 1: Install the extension**
+
+```bash
+gemini extensions install https://github.com/gemini-cli-extensions/context7-mcp
+```
+
+**Step 2: Verify installation**
+
+```bash
+gemini extensions list
+```
+
+You should see `context7-mcp` in the list.
+
+### Business Workflow 3: Understanding API Changes
+
+**Your goal**: Your team uses Stripe for payments. They announced API changes. You need to understand what changed and if it affects you.
+
+**Prompt:**
+```
+Use Context7 to fetch the latest Stripe API documentation.
+Specifically, I need to know:
+1. What changed in the most recent API version?
+2. Are there any breaking changes that would affect payment processing?
+3. What new features were added?
+4. Do we need to update our integration?
+
+Provide a summary with links to relevant documentation sections.
+```
+
+**What Gemini does:**
+1. Queries Context7 for latest Stripe docs
+2. Identifies recent changes
+3. Summarizes breaking changes
+4. Provides links for details
+
+**Example output:**
+```
+Stripe API Updates (v2024-10-15):
+
+Breaking Changes:
+- Payment Intents now require explicit confirmation (affects checkout flow)
+- Legacy charge API deprecated (sunset date: 2025-06-01)
+
+New Features:
+- Multi-currency support for subscriptions
+- Enhanced fraud detection (Radar v3)
+
+Impact Assessment:
+- Your integration uses Payment Intents: UPDATE REQUIRED
+- Timeline: 2 weeks before legacy API sunset
+- Recommended action: Review new confirmation flow
+
+Documentation:
+- Migration guide: https://stripe.com/docs/upgrades
+- Payment Intents changes: https://stripe.com/docs/payments/intents
+```
+
+### Business Workflow 4: Quick Tool Learning
+
+**Your goal**: Your team is considering Airtable for project management. You need a quick overview of its API capabilities.
+
+**Prompt:**
+```
+Use Context7 to fetch Airtable API documentation and explain:
+1. What can you do with the Airtable API?
+2. How do you authenticate?
+3. Can you read and write records?
+4. What are the rate limits?
+5. Is there a free tier for API access?
+
+Give me a 3-minute summary suitable for a non-technical team.
+```
+
+**What you get:**
+- Quick understanding of capabilities
+- Technical requirements
+- Cost implications
+- Decision-making information
+
+### When Context7 MCP Is Useful
+
+**✅ Use Context7 when:**
+- Learning a new tool or platform
+- Checking if something changed recently
+- Quick reference during conversation
+- Comparing multiple tools' capabilities
+
+**❌ Don't use Context7 when:**
+- Documentation is offline/proprietary (Context7 needs public docs)
+- You need older/archived versions
+- Custom internal documentation (not indexed by Context7)
+
+---
+
+## Combining Extensions: A Powerful Business Workflow
+
+Now let's see how to use both extensions together for maximum impact.
+
+### Scenario: Market Research for New Product Launch
+
+**Your goal**: You're launching a SaaS product. You need to:
+1. Understand competitor offerings
+2. Learn how to integrate with Stripe for billing
+3. Research pricing models in your industry
+
+**Workflow using both extensions:**
+
+**Step 1: Competitive Research (Playwright)**
+
+```
+Use Playwright to browse these 5 SaaS competitor websites:
+[List competitor URLs]
+
+For each, extract:
+- Pricing model (monthly, annual, usage-based?)
+- Free trial offerings
+- Payment methods accepted
+- Refund policies
+
+Create a comparison table.
+```
+
+**Step 2: Integration Research (Context7)**
+
+```
+Use Context7 to fetch Stripe subscription API documentation.
+Explain:
+- How to set up recurring billing
+- How to implement free trials
+- How to handle refunds programmatically
+
+Provide code examples for a non-technical founder to share with developers.
+```
+
+**Step 3: Synthesis**
+
+```
+Based on the competitor research (from Playwright) and Stripe capabilities
+(from Context7), recommend:
+1. What pricing model should we use?
+2. What free trial length is competitive?
+3. What Stripe features do we need?
+4. What can we offer that competitors don't?
+```
+
+**Result:**
+- Comprehensive market understanding
+- Technical implementation clarity
+- Strategic differentiation
+- Total time: 20-30 minutes (vs. 4-6 hours manually)
+
+---
+
+## Understanding Your Complete Toolkit
+
+You now have access to powerful AI capabilities. Let's consolidate what you've learned across all 5 lessons.
+
+### Your AI Capabilities (Chapter 6 Summary)
+
+**Lesson 1: Why Gemini CLI?**
+- Understanding AI companions as business tools
+- When terminal AI makes sense
+
+**Lesson 2: Installation & First Steps**
+- Setting up Gemini CLI
+- Running first commands
+- Authentication and quotas
+
+**Lesson 3: Built-In Tools**
+- File operations (analyze reports, contracts)
+- Web fetching (read competitor pages)
+- Search grounding (current information with citations)
+- Shell integration (file management tasks)
+
+**Lesson 4: Context Windows**
+- When to use which AI tool
+- Multi-document analysis
+- Asking AI to recommend tools
+
+**Lesson 5 (This Lesson): Extensions**
+- Playwright MCP (active web browsing)
+- Context7 MCP (live documentation)
+- Security considerations
+- Real business workflows
+
+### Strategic Decision Framework
+
+When facing a business task, ask yourself:
+
+```
+1. Can built-in tools handle this?
+   ├─ Yes → Use file operations, web fetch, or search (Lesson 3)
+   └─ No → Need extensions...
+
+2. Do I need active web browsing?
+   ├─ Yes → Use Playwright MCP
+   └─ No → Continue...
+
+3. Do I need current technical documentation?
+   ├─ Yes → Use Context7 MCP
+   └─ No → Continue...
+
+4. Do I need something else? (Database, CRM, custom integration)
+   → Ask Gemini: "What extension exists for [my need]?"
+   → Research available MCP servers
+   → Evaluate security before installing
+```
+
+---
+
+## What You're Ready For Now
+
+After completing this chapter, you can:
+
+✅ **Use AI companions for real business tasks**
+- Competitive research
+- Document analysis
+- Market intelligence
+- Strategic decision-making
+
+✅ **Extend AI capabilities safely**
+- Install trusted extensions
+- Evaluate security risks
+- Use MCP servers effectively
+
+✅ **Ask AI for tool guidance**
+- Don't memorize features
+- Consult AI about what's possible
+- Get personalized recommendations
+
+✅ **Choose the right tool for each task**
+- Built-in tools vs. extensions
+- One AI tool vs. another
+- When to combine multiple capabilities
+
+---
+
+## Looking Ahead: Your Next Steps
+
+You've completed the Gemini CLI chapter. But this is a foundation, not the end.
+
+### Immediate Next Actions
+
+**1. Apply what you learned this week**
+
+Choose one real business task and complete it using Gemini CLI:
+- Competitive pricing research (use Playwright)
+- Learn a new tool (use Context7)
+- Analyze business data (use file operations)
+- Multi-document synthesis (use large context)
+
+**2. Explore additional extensions**
 
 Ask Gemini:
-
-```bash
-gemini "I've completed the Gemini CLI chapter. I understand how to use it,
-extend it, and think through integration decisions.
-What should my next step be?
-Should I move to another CLI (Claude, OpenAI)?
-Should I deepen Gemini skills?
-What would be the highest-impact thing for me to do next?"
+```
+What other MCP servers or extensions exist for Gemini CLI?
+I'm interested in [your business area]. What extensions would help me?
 ```
 
-Gemini will help you personalize your next steps based on your goals.
+**3. Identify your next learning priority**
+
+Ask Gemini:
+```
+I've completed the Gemini CLI chapter. Based on my work in [your industry]
+doing [your role], what should I learn next to get the most business value from AI?
+
+Should I:
+- Explore other AI tools (Claude, ChatGPT)?
+- Learn prompt engineering techniques?
+- Understand automation workflows?
+- Something else?
+```
+
+### What Comes Next in This Book
+
+The following chapters introduce:
+- Other AI companions (Claude Code, ChatGPT, open-source models)
+- Choosing between tools based on your specific needs
+- Combining multiple AI tools in workflows
+- Building AI-augmented business processes
+
+**The core skill you've developed** — asking AI for guidance on tools and capabilities — transfers directly to all future chapters.
 
 ---
 
-## Section 6: Chapter Closure — Consolidating Your Learning
+## Try With AI: Design Your Custom Business Workflow
 
-You've now completed the Gemini CLI chapter. But this isn't the end—it's a foundation for the rest of the book.
+### Setup
 
-### What You're Ready For
-
-- **You can ask Gemini for help solving problems you've never seen before.** Extensions, custom integrations, ecosystem questions—you know how to ask.
-- **You understand that AI tools are *extensible* — they're not fixed boxes.** You can adapt them to your workflow.
-- **You've internalized the meta-skill:** When facing an unknown integration or tool, you don't panic or hunt for docs. You *ask your AI partner*.
-
-### Looking Ahead
-
-The next chapters introduce other AI companions (Claude CLI, Open-Source Models) and show you how to choose between them, combine them in workflows, and build AI-augmented applications.
-
-But the core skill—*asking AI for guidance on tools and integrations*—transfers directly to those chapters.
-
-### Reflection Prompt
-
-Before moving on, ask yourself (and Gemini):
-
-- What capability would most improve my workflow right now? (Database integration? API access? Alternative model?)
-- Of the tools I've learned (file access, code execution, context windows, extensions), which one am I most confident using?
-- Which one am I least confident about, and what's one small experiment I could do to build confidence?
-
-Let Gemini help you answer these.
+Open Gemini CLI (your AI companion from this chapter). You'll now design a real workflow for your business using everything you've learned.
 
 ---
 
-## Try With AI: Personal Extension Design Challenge
+### Prompt 1: Identify Your Need
 
-**Setup:** You'll use Gemini CLI (your AI companion from this chapter) to design a *custom extension* for your real workflow—not to build it fully, but to plan it and understand feasibility.
-
-**Context:** By now, you've used Gemini CLI for a week. Think of one real problem where you need Gemini to access data or capabilities it currently can't reach. This could be:
-- Analyzing files from a specific folder automatically
-- Querying an API (your company's database, a public API, etc.)
-- Accessing system information (uptime, resource usage, logs)
-- Connecting to a communication tool (Slack, email, calendar)
-
-**Prompt Set (copy and adapt to your use case):**
-
-**Prompt 1: Discovery**
 ```
-I have a specific workflow problem:
-[Describe what you want to do. Example: "I want Gemini to analyze our
-customer feedback from a CSV database file that updates daily."]
+I want to improve my business workflow in this area: [DESCRIBE YOUR SITUATION]
 
-What's the simplest way to extend Gemini CLI so I can ask you about
-this data during our conversations without manually copy-pasting?
-Walk me through the options from simplest to most complex.
+Examples:
+- "I spend 3 hours weekly researching competitor pricing and features"
+- "I need to stay current with Shopify API changes for our e-commerce site"
+- "I analyze customer feedback emails manually each month"
+
+What AI capabilities (built-in tools + extensions) would save me the most time?
+Create a priority list: highest impact first.
 ```
 
-**Expected Outcome:** Gemini outlines 2-3 approaches, from built-in tools (already available) to custom extensions (new). You'll understand the trade-off between effort and capability.
+**Expected Outcome**: Gemini identifies which tools and extensions address your specific pain points.
 
-**Prompt 2: Security & Feasibility Check**
+---
+
+### Prompt 2: Design the Workflow
+
 ```
-Of the options you suggested, which is most feasible for me to
-implement in the next week?
-What are the security/permission requirements I should think about?
-If I implement this, what could go wrong?
+For my top priority task from the previous answer, design a complete workflow:
+
+1. What tools/extensions do I need? (Be specific: Playwright? Context7? Built-in tools?)
+2. What's the step-by-step process?
+3. What information do I prepare beforehand?
+4. What does the AI output look like?
+5. How much time does this save vs. manual process?
+
+Give me a workflow I can execute today.
 ```
 
-**Expected Outcome:** Gemini helps you identify the safest, most practical starting point. You understand constraints and risks.
+**Expected Outcome**: A concrete, actionable workflow plan with commands and expected results.
 
-**Prompt 3: Next Step**
+---
+
+### Prompt 3: Security Check
+
 ```
-Help me write a small step-by-step plan to build this extension.
-What do I need to learn?
-What's the minimal working version I could test first?
+Before I implement this workflow, help me evaluate security:
+
+1. What data am I giving the AI access to?
+2. What are the privacy risks?
+3. What credentials or sensitive information might be exposed?
+4. How do I test this safely before using real data?
+5. What's my "rollback plan" if something goes wrong?
+
+Create a safety checklist for this workflow.
 ```
 
-**Expected Outcome:** You have a concrete, achievable plan. Gemini knows your constraints and helps you scope it right.
+**Expected Outcome**: Clear security boundaries and a safe testing plan.
 
-**Safety & Verification:**
-- Always review code Gemini generates before running it, especially for file access or API calls.
-- Test extensions in a safe sandbox first (separate folder, non-production data, test credentials).
-- If Gemini's suggestion seems complex, ask: "Can we make this even simpler?"
-- If you get stuck, paste error messages directly to Gemini: "I tried this and got this error. Help me debug."
+---
 
-**What Success Looks Like:**
-You have a written plan for extending Gemini to solve a real problem *you* have, not a textbook example. You understand the effort required and the capabilities you'll gain. You know how to ask Gemini for help if you get stuck implementing it.
+### Prompt 4: Implementation Guidance
 
-**Optional Stretch:** Pick one small part of your plan (e.g., write a Python script that reads your data file) and implement it. Ask Gemini for code help as you go. This is how extensions are actually built—iteratively, with AI as your co-developer.
+```
+I'm ready to implement the workflow you designed. Walk me through:
+
+1. Exact commands to install any needed extensions
+2. The first prompt I should give you to start the workflow
+3. What to watch for (errors, unexpected behavior)
+4. How to verify the results are correct
+5. What to do if it doesn't work as expected
+
+Assume I'm a beginner—be specific and clear.
+```
+
+**Expected Outcome**: Step-by-step implementation guide you can follow immediately.
+
+---
+
+### What Success Looks Like
+
+✅ **You successfully completed this if:**
+- You designed a workflow for YOUR actual business need (not a textbook example)
+- You understand which tools/extensions solve your specific problem
+- You have a security checklist before running it
+- You have implementation steps you can execute today
+- You know how to troubleshoot if something fails
+
+---
+
+### Safety & Ethics Note
+
+**Before running your workflow on real business data:**
+
+1. **Test with sample data first**
+   - Use fake competitor URLs (or public sites)
+   - Use test documentation (public APIs)
+   - Don't use customer data until validated
+
+2. **Verify outputs manually**
+   - Spot-check AI-generated research
+   - Confirm extracted data is accurate
+   - Don't rely solely on AI for critical decisions
+
+3. **Respect privacy and terms of service**
+   - Don't scrape sites that prohibit automated access
+   - Don't violate competitors' terms of service
+   - Don't access private data without authorization
+
+4. **Understand cost implications**
+   - Some MCP servers may have usage limits
+   - Monitor your Gemini API quota
+   - Test incrementally before large-scale use
+
+**Rule: If you wouldn't do it manually, don't ask AI to do it automatically.**
+
+---
+
+### Reflection Questions
+
+Before moving to the next chapter, reflect:
+
+**Understanding:**
+- What's the difference between built-in tools and extensions?
+- Why does MCP exist, and what problem does it solve?
+- How do Playwright and Context7 differ from web fetching and search?
+
+**Application:**
+- What business task will you automate first with these new capabilities?
+- How much time would this save you weekly or monthly?
+- What other extensions would solve problems you currently face?
+
+**Strategic Thinking:**
+- How does AI change the way you approach competitive research?
+- What business insights can you now access that were too time-consuming before?
+- How will staying current with documentation (via Context7) change your decision-making?
+
+**Your AI Journey:**
+You started this chapter as a beginner. You now understand how to use AI as a business research partner, extend its capabilities safely, and design custom workflows for your specific needs.
+
+**The meta-skill**: You don't memorize tools. You ask AI what's possible, evaluate options, and implement solutions iteratively.
+
+This skill scales to every AI tool you'll encounter. When new extensions emerge, when tools evolve, when your needs change—you'll know how to adapt.
+
+**Welcome to AI-augmented business workflows.** The next chapters build on this foundation.

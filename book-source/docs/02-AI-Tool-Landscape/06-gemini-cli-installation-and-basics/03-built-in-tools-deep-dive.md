@@ -1,825 +1,492 @@
 ---
-title: Built-In Tools Deep Dive
-chapter: 6
+title: "How Your AI Reads the World: Built-In Tools in Action"
+chapter: 2
 lesson: 3
-sidebar_position: 3
-estimated_time: 20-25 minutes
+estimated_time: "20-25 minutes"
 learning_objectives:
-  - Understand how Gemini CLI tools connect AI to your development environment through natural dialogue
-  - Apply file operations, web fetching, search grounding, and shell integration to real development scenarios
-  - Refine prompts iteratively based on AI feedback to solve problems more effectively
-  - Recognize when each tool is appropriate and what limitations exist
-  - Develop meta-cognitive awareness of what makes prompts effective with AI
+  - "Understand how AI tools extend beyond text to access files, the web, and real-time information"
+  - "Recognize when and why AI needs to use specific tools (files vs. web vs. search)"
+  - "Apply tools in natural dialogue without memorizing commands"
+  - "Identify what data you're sharing and privacy implications of web-based tools"
+  - "Combine multiple tools to answer complex business questions"
 ---
 
-# Built-In Tools Deep Dive
+## The Collaboration Shift: AI Becomes Your Research Partner
 
-## Opening: The Collaboration Shift
+If you ask your AI tool "What's the weather today?", something important happens behind the scenes. Your AI doesn't guess or rely on outdated training data. It *reached out* to look it up. That reach—that ability to go beyond its own knowledge and grab fresh information—changes everything about what you can accomplish together.
 
-In Lesson 2, you authenticated Gemini CLI and sent your first prompt. Simple prompts work fine for general advice. But what if you want Gemini to understand your actual code, read current documentation, verify information, or help you construct the right command without memorizing syntax?
+Think about your workday. You don't answer questions from memory alone. You check files, read websites, search for recent news, and run commands to verify facts. Your AI can do the same thing now. But here's the key difference from before: you don't type cryptic tool commands. You ask naturally. Your AI partner knows which tool to use and deploys it automatically.
 
-The answer is **built-in tools**—capabilities that connect Gemini to your real development environment. Instead of you copying files into chat or describing your problem in isolation, Gemini can directly read your code, fetch web pages, search for current information, and help you understand shell commands.
-
-The key insight: **You don't memorize tool syntax. You ask Gemini to help, and the tool activates naturally.**
-
-This lesson teaches you to collaborate with Gemini using four powerful tools. But more importantly, it teaches you how to **think about asking questions to AI**—a skill that amplifies all your other learning.
+This lesson is about understanding the tools your AI companion has available—not to memorize syntax, but to know what's possible and what's safe. By the end, you'll confidently ask your AI to read files, fetch live data from websites, search the web, and run shell commands. And you'll understand exactly what's happening when it does.
 
 ---
 
-## Why Tools Matter: Context Changes Everything
+## Why Context Changes Everything: The Three Kinds of Questions
 
-Imagine debugging a complex function. A traditional workflow:
+Your AI has three different "ways of knowing":
 
-1. Copy function code into your editor
-2. Describe the problem in chat
-3. Chat AI suggests fixes
-4. You manually test them
-5. Repeat multiple times
+**1. Training Knowledge** (built-in understanding from its training data)
+- "What is machine learning?"
+- "Explain the difference between RAM and storage"
+- Fast answer, no tools needed
 
-**With Gemini CLI tools:**
+**2. Fresh Information** (current facts it must look up)
+- "What's Tesla's stock price right now?"
+- "What are the latest GDPR changes in 2024?"
+- Requires web search or current data
 
-1. Ask: "Gemini, debug my function" (point to file)
-2. Gemini reads your *actual code*, not your description
-3. Gemini suggests fixes with full context
-4. One or two iterations instead of five
+**3. Your Data** (files, documents, and systems only you have access to)
+- "Read my sales.csv and identify trends"
+- "Summarize this PDF product roadmap"
+- Requires file access or API calls
 
-The difference? **Context.** When AI has access to your real files, current web information, and the ability to understand your shell environment, it stops being a general chatbot and becomes a *specific development partner* for your actual problem.
-
-Let's see how.
+When you ask a question, your AI partner is smart enough to know which kind of answer you need. If it doesn't have fresh information, it uses tools automatically. Your job isn't to command the tools—it's to ask clear questions and understand what your AI is doing.
 
 ---
 
-## Tool 1: File Operations — Reading Your Code
+## Tool 1: File Operations — Reading and Analyzing Your Business Data
+
+**What This Means**: Your AI can read files you give it (CSV, JSON, PDFs, text files) and answer questions about the data inside.
+
+**Why You Care**: You have important data in files—sales numbers, customer lists, product specs, quarterly reports. Instead of manually summarizing or searching through files, you ask your AI to do it for you.
+
+### A Real Business Example: Sales Analysis
+
+Imagine you have a quarterly sales report:
+
+```csv
+Product,Q1_Sales,Q2_Sales,Q3_Sales,Q4_Sales,Year_Total
+Consulting,45000,48000,52000,55000,200000
+Training,32000,35000,38000,41000,146000
+Software,28000,31000,34000,37000,130000
+Support,18000,19000,21000,23000,81000
+```
+
+You ask your AI: "Read this sales.csv file and tell me which product grew the most from Q1 to Q4."
+
+**Behind the scenes:**
+1. Your AI uses the file-reading tool to access the CSV
+2. It calculates the growth: Consulting grew 22% (best performer)
+3. It returns the answer with data to back it up
+
+**Your input:** One natural question in conversation
+**AI's work:** File access + analysis
+**Your output:** Actionable business insight
+
+You didn't need to learn Excel formulas, write Python scripts, or remember any commands. You asked. It read and analyzed. Done.
+
+### How File Operations Work in Practice
+
+When you have a file and want answers about it:
+
+1. **Ask naturally**: "Look at this spreadsheet and identify our top customer"
+2. **Your AI reads the file** (automatically—no tool commands from you)
+3. **Your AI analyzes the data** based on your question
+4. **Your AI reports back** with findings and citations to the data
+
+The beauty here: **you don't memorize file formats, command syntax, or tool names**. You just describe what you want to know.
+
+**What files can your AI read?**
+- ✅ CSV files (spreadsheets exported as text)
+- ✅ JSON files (structured data from APIs)
+- ✅ Plain text files (notes, logs, documentation)
+- ✅ PDFs (documents, reports, contracts)
+- ✅ XML files (configuration and data files)
+- ✅ Markdown files (documentation)
+
+---
+
+## Tool 2: Web Fetching — Getting Live Information From Websites
+
+**What This Means**: Your AI can visit websites and read their content, just like you would in a browser.
+
+**Why You Care**: You need current information—competitor pricing, API documentation, industry news, regulatory updates. Instead of manually browsing, your AI fetches and summarizes.
+
+### A Real Business Example: Competitor Research
+
+You're pricing a new product. You ask your AI:
+
+> "Fetch Stripe's pricing page and summarize their plan tiers and costs."
+
+**Behind the scenes:**
+1. Your AI opens the Stripe pricing page (like clicking a link in your browser)
+2. It reads the HTML content
+3. It extracts the pricing tiers and features
+4. It returns a clean summary with sources
+
+**What you get back:**
+```
+Stripe Pricing (fetched from stripe.com/pricing):
+
+Free Plan: $0/month
+- Transactions: Pay as you go (2.9% + $0.30)
+- No upfront costs
+
+Starter Plan: $100/month
+- Rate: 2.5% + $0.25 per transaction
+- Best for: Businesses under $100K revenue
+
+Scale Plan: Custom
+- Contact sales for pricing
+- Dedicated support
+```
+
+**Citation included**: You know exactly where this data came from (stripe.com, fetched on today's date).
+
+### Another Example: Technical Documentation
+
+You need to understand how to process refunds. You ask:
+
+> "Fetch the Stripe refund API documentation and explain the basic refund process."
+
+Your AI fetches the docs and explains it in plain English instead of making you read dense technical documentation.
+
+**What makes web fetching valuable:**
+- ✅ Get current pricing (changes frequently, you don't track manually)
+- ✅ Summarize long pages (no skimming through 50 paragraphs)
+- ✅ Compare features across sites (fetch competitor A, competitor B, compare)
+- ✅ Access technical documentation (complex docs explained simply)
+- ✅ Verify information (your AI cites the source, you can verify)
+
+---
+
+## Tool 3: Search Grounding — Finding Current Information Across the Web
+
+**What This Means**: Your AI can search the entire internet for current information, similar to Google, but it reads the search results and synthesizes them into a direct answer.
+
+**Why You Care**: Some information isn't on one specific page—it's spread across multiple sources. You need current facts, news, and real-time data. Search grounding lets you ask "What's happening today?" instead of "What does your training data say?"
+
+### Real Business Examples
+
+**Example 1: Current Stock Price**
+
+You ask: "What's Tesla's stock price right now?"
+
+Your AI:
+1. Searches the web for current Tesla stock data
+2. Finds multiple financial sources (Yahoo Finance, Bloomberg, etc.)
+3. Synthesizes the answer with current price, change, and context
+4. Cites the sources (so you know it's real, current data)
+
+**Example 2: Recent Regulatory Changes**
+
+You ask: "What are the latest GDPR enforcement updates in 2024?"
+
+Your AI:
+1. Searches for recent GDPR news and official EU sources
+2. Finds the most current updates
+3. Summarizes what changed and why it matters
+4. Provides links to official sources
+
+**Example 3: Competitive Intelligence**
+
+You ask: "Who just received Series B funding in the AI productivity space this quarter?"
+
+Your AI:
+1. Searches for recent venture funding announcements
+2. Finds recent Series B deals in your industry
+3. Tells you about new competitors and their funding
+4. Cites TechCrunch, Crunchbase, company announcements
+
+**Why this is different from web fetching:**
+- Web fetching = "Read this specific page"
+- Search grounding = "Find the answer across the entire web"
+
+Use search when you don't know which page has the answer. Use web fetch when you know exactly where the data is.
+
+---
+
+## Tool 4: Shell Integration — Running System Commands Safely
+
+**What This Means**: Your AI can suggest and help you run terminal commands (like those you learned in Lesson 1) to manage files, check system status, and automate tasks.
+
+**Why You Care**: Some tasks are faster and more reliable in the terminal than clicking through UI menus. Your AI helps you navigate this without memorizing every command.
+
+### A Business Example: Finding Files
+
+You ask: "I need to find all Excel files created in the last month. How do I do that?"
+
+Your AI suggests the approach:
+
+**Plain English First:**
+"You want to search your computer for Excel files (.xlsx files) modified in the last 30 days. We can use a terminal command to do this quickly."
+
+**Then the command with explanation:**
+```bash
+find . -name "*.xlsx" -mtime -30 -type f
+```
+
+Breaking it down:
+- `find .` = Look in the current folder
+- `-name "*.xlsx"` = For files ending in .xlsx
+- `-mtime -30` = Modified in the last 30 days
+- `-type f` = That are files (not folders)
+
+**Your job:** Read the explanation, verify it sounds safe, then copy and run the command.
+
+### Why This Matters for Business
+
+Terminal commands let you:
+- ✅ Find files quickly without endless clicking
+- ✅ Backup important data reliably
+- ✅ Automate repetitive tasks
+- ✅ Check system health and resources
+- ✅ Process multiple files at once (instead of one-by-one)
+
+**The key rule:** Your AI suggests the command and explains it. You review, understand it, and decide if it's safe to run. You're never blindly executing code.
+
+---
+
+## Combining Tools: A Real Workflow
+
+Now let's see how these tools work together. You're a product manager researching competitor pricing strategy.
 
 ### The Scenario
 
-You've written a Python function. You want feedback before committing it, but you don't want to copy-paste into chat. You also want to see what a real developer would catch.
+You want to understand how three competitors price their services and what features they offer. You'd normally spend 2 hours manually visiting websites, taking notes, and comparing. Let's see how AI tools help.
 
-**The old way**: Copy code into chat, hope your description is clear enough.
+**Step 1: Fetch Competitor A's Pricing**
 
-**The AI-first way**: Ask Gemini to read your file directly.
+You ask: "Fetch Competitor A's pricing page and summarize their tier structure."
 
-### Discovery: Asking Naturally
+Your AI fetches the page and returns:
+```
+Tier 1 (Basic): $29/month
+- Up to 100 users
+- Standard support
 
-Here's the starting point. You have a Python file at `./utils.py`:
+Tier 2 (Pro): $99/month
+- Unlimited users
+- Priority support
+- Advanced analytics
 
-```python
-def calculate_average(numbers):
-    total = 0
-    for n in numbers:
-        total = total + n
-    return total / len(numbers)
-
-result = calculate_average([1, 2, 3, 4, 5])
-print(result)
+Tier 3 (Enterprise): Custom pricing
 ```
 
-Your first instinct might be: *"How do I get Gemini to read this file?"*
+**Step 2: Fetch Competitor B's Pricing**
 
-**Don't memorize syntax. Ask Gemini:**
+You ask: "Now fetch Competitor B's pricing page."
 
-```bash
-gemini "I have a Python file at ./utils.py. Can you read it and review the code?"
-```
+Your AI returns similar structured data.
 
-**What Gemini says:**
-```
-I can help! Use the --file flag to share your code with me:
+**Step 3: Search for Recent Pricing Changes**
 
-gemini --file ./utils.py "Review this code for best practices."
+You ask: "Search the web for any recent pricing changes announced by these competitors in 2024."
 
-This tells me to read the file directly. I'll then analyze it
-in the context of your question.
-```
+Your AI searches and finds announcements:
+- Competitor A raised prices 10% in Q2
+- Competitor B introduced a new free tier in March
+- Industry-wide inflation averaging 8%
 
-**Notice**: You asked naturally. Gemini told you the syntax. That's the agent-native model.
+**Step 4: Analyze and Compare**
 
-### Refining the Request
+You ask: "Based on what you fetched and found, how does our pricing strategy compare? Should we adjust?"
 
-Now you know the syntax. But your first attempt might be too vague:
+Your AI synthesizes everything:
+- Shows side-by-side feature comparison
+- Identifies gaps in your offering
+- Notes pricing trends
+- Recommends strategy
 
-```bash
-gemini --file ./utils.py "Review this code."
-```
-
-**Gemini's response** might be brief. You want deeper feedback. So you **refine**:
-
-```bash
-gemini --file ./utils.py "Review this code for: 1) Best practices, 2) Performance, 3) Error handling, 4) Type safety. What am I missing?"
-```
-
-**Better response**: Gemini now understands exactly what you need. It identifies:
-- Missing type hints (`def calculate_average(numbers: list[float]) -> float:`)
-- Error case: division by zero if empty list
-- Opportunity: use built-in `sum()` instead of loop
-- Why it matters: readability and maintainability
-
-#### Learning to Learn with AI: How Specificity Improves Answers
-
-Notice what happened:
-- **Vague prompt**: "Review this code" → Shallow feedback
-- **Specific prompt**: "Review for these 4 things" → Targeted, actionable feedback
-
-**Why?** AI responds to clarity. When you name what you need, AI delivers that. When you're vague, AI guesses what matters.
-
-**Skill to develop**: Before asking Gemini, ask yourself: *What specifically do I want to improve?*
+**Total time:** 5 minutes of conversation
+**Without tools:** 2+ hours of manual research, spreadsheets, notes
+**Data quality:** Current, sourced, verifiable
 
 ---
 
-### Exercise 1: Code Review Through Dialogue
+## Red Flags to Watch: Errors and Privacy
 
-**Your task**: Create a file with a function that has intentional flaws, then guide Gemini to identify them.
+When you're using tools, some messages are normal. Others mean something went wrong or you should be cautious.
 
-**Step 1: Create a file** (`my_function.py`):
-```python
-def process_data(data):
-    result = []
-    for i in range(len(data)):
-        result.append(data[i] * 2)
-    return result
+### ✅ Normal (Safe to Ignore or Expected)
 
-user_data = [1, 2, 3, 4, 5]
-print(process_data(user_data))
-```
+| Message | What It Means | Your Action |
+|---------|---------------|-------------|
+| "Fetching [URL]..." | Your AI is visiting the website | Wait, it's working |
+| "Found 5 results for..." | Search found matches | Your AI will summarize them |
+| "File read successfully: 50 KB" | Your AI accessed the file | Information is coming next |
+| "Command executed" | Terminal command ran successfully | Check the results your AI provides |
+| "Citation: source.com, retrieved 2024-10-31" | Your AI tracked where data came from | Good! You can verify this |
 
-**Step 2: Start with a vague question:**
-```bash
-gemini --file ./my_function.py "What's wrong with this?"
-```
+### ⚠️ Problems (Ask Your AI for Help)
 
-**Step 3: Refine based on Gemini's response.** If Gemini mentions performance, ask:
-```bash
-gemini --file ./my_function.py "You mentioned performance. Show me a more Pythonic version. Explain why it's better."
-```
+| Message | What It Means | Your Action |
+|---------|---------------|-------------|
+| "ERROR: File not found" | File doesn't exist or wrong path | Verify filename with your AI, check location |
+| "ERROR: Access denied" | Permission problem on file or website | Ask your AI why; may need different approach |
+| "No results found" | Search returned nothing | Refine question or try different search terms |
+| "Timeout: request took too long" | Website didn't respond fast enough | Try again, or ask your AI for alternative source |
+| "SSL certificate error" | Website security issue | Ask your AI; may indicate fake or compromised site |
+| "Rate limited: Too many requests" | You're requesting too much too fast | Wait, or your AI will use a different approach |
 
-**Step 4: Reflect in your notes:**
-- What did Gemini catch that you missed?
-- What made your refined prompt more effective than the vague one?
-- What would you ask next?
+### 🔐 Privacy & Data Safety: What You Should Know
 
----
+When your AI uses tools, it's accessing or sending data. This is powerful but requires awareness:
 
-### When to Use File Operations
+**File Operations (Lowest Risk):**
+- ✅ Your AI reads files on your computer (stays private)
+- ✅ Data stays between you and your AI tool
+- ⚠️ Never share files containing passwords, API keys, or PII (personally identifiable information) with your AI
+- ✅ Use test data or anonymized data when possible
 
-**Perfect for:**
-- Code review before committing
-- Debugging: "Why does this crash?"
-- Learning: "Show me idiomatic Python here"
-- Refactoring: "What's the cleaner way?"
+**Web Fetching (Medium Risk):**
+- ✅ Your AI visits public websites (like you would in a browser)
+- ⚠️ Websites can see that *something* accessed them (but not who, unless you're logged in)
+- ⚠️ Don't ask your AI to fetch pages from private accounts (your email, bank, etc.)
+- ✅ Public pricing pages, documentation, news sites are fine
+- ⚠️ Rule: If you wouldn't paste the URL in a shared Slack message, don't ask your AI to fetch it
 
-**Limitations:**
-- File size: Generally works with files up to a few MB
-- Binary files: Won't help with `.png`, `.pyc`, etc.
-- Workaround: For large files, extract the relevant function and save it separately
+**Search Grounding (Medium Risk):**
+- ✅ Your AI searches the public web (like Google)
+- ⚠️ Your search query may be logged (just like Google searches)
+- ✅ Use general terms ("GDPR updates 2024") instead of specific ones ("my company's GDPR violations")
+- ⚠️ Don't search for confidential competitive information; search for public knowledge
 
----
+**Shell Commands (High Risk if Misused):**
+- ⚠️ Commands can delete files, change settings, or expose data
+- ✅ Always understand the command before running it
+- ✅ Ask your AI to explain what each part does
+- ⚠️ Never run commands you don't understand
+- ✅ Test on unimportant files first if you're learning
 
-## Tool 2: Web Fetching — Reading Current Documentation
+### What NOT to Ask Your AI to Read or Fetch
 
-### The Scenario
+- 🚫 Bank statements or financial accounts (private data)
+- 🚫 Medical or health records
+- 🚫 Passwords, API keys, or tokens
+- 🚫 Social security numbers or IDs
+- 🚫 Private emails or messages
+- 🚫 Proprietary source code (unless you own it and want privacy)
+- 🚫 Customer personal data (GDPR, CCPA violations possible)
+- 🚫 Confidential contracts or NDAs (unless for legal review)
 
-You're learning async Python. You want to understand how `asyncio.Task` works. You could:
-
-1. Google "asyncio.Task"
-2. Find the official Python docs
-3. Read through the full page (5+ minutes)
-4. Extract the relevant part
-5. Ask ChatGPT about it
-
-**With Gemini CLI's web fetching tool, you skip steps 2–4.**
-
-### Discovery: From Search to Understanding
-
-Your first thought: *"How do I fetch a webpage with Gemini?"*
-
-**Ask naturally:**
-
-```bash
-gemini "Can you read a webpage and help me understand it?"
-```
-
-**Gemini responds:**
-```
-Yes! Use --web-fetch:
-
-gemini --web-fetch "https://docs.python.org/3/library/asyncio.html" \
-  "Explain asyncio.Task. Can multiple tasks run concurrently?"
-
-This fetches the page and answers your question based on its content.
-```
-
-### Starting Vague, Then Refining
-
-**First attempt (too broad):**
-```bash
-gemini --web-fetch "https://docs.python.org/3/library/asyncio.html" "Explain this page."
-```
-
-**Result**: You get a summary of the whole asyncio module—too much.
-
-**Refined attempt (specific intent):**
-```bash
-gemini --web-fetch "https://docs.python.org/3/library/asyncio.html" \
-  "I need to run 3 API requests concurrently. Should I use Task or gather()? Show me a code example."
-```
-
-**Result**: Gemini reads the docs and gives you a focused answer with example code. Much better.
-
-#### Learning to Learn with AI: Making Documentation Personal
-
-Traditional docs reading:
-- Read entire page
-- Hope it answers your question
-- Feel like you wasted time on irrelevant sections
-
-**With Gemini + web fetch:**
-- Fetch the page
-- Ask your *specific question*
-- Get a personalized explanation
-
-**The mindset shift**: You're not reading documentation. You're having a conversation *with* the documentation. Gemini is the intermediary.
+**Rule of thumb:** If a human wouldn't read it aloud in a public coffee shop, don't ask your AI to process it.
 
 ---
 
-### Exercise 2: Fetch and Question
+## Try With AI: Analyze Competitor Strategy
 
-**Your task**: Use web fetching to learn something specific you're uncertain about.
+Now let's put this into practice. You'll use your AI companion to research and analyze competitor pricing strategy—a real business task that combines file reading and web fetching.
 
-**Step 1: Identify a real question.** Examples:
-- "How do I serialize custom Python objects to JSON?"
-- "What's the difference between `git merge` and `git rebase`?"
-- "How do type hints work with function overloads?"
+### Setup: Choose Your Tool
 
-**Step 2: Find the official documentation URL.** (Use Google for this one time.)
+**Option 1: Gemini CLI (if you've been following along with this book)**
 
-**Step 3: Ask Gemini to fetch and explain:**
+In your terminal:
 ```bash
-gemini --web-fetch "<your-url>" "I need to <your-specific-goal>. Show me how with a code example."
+gemini
 ```
 
-**Step 4: If the answer isn't specific enough, refine:**
-```bash
-gemini --web-fetch "<your-url>" "The previous answer was too broad. Focus specifically on <narrower-goal>. Show a minimal example."
+Then paste the prompts below into the Gemini conversation.
+
+**Option 2: ChatGPT Web (fastest, no setup needed)**
+
+1. Go to [chat.openai.com](https://chat.openai.com)
+2. Start a new chat
+3. Paste the prompts below
+
+**Option 3: Any AI Tool You Prefer**
+
+Gemini, Claude, ChatGPT, or similar all support these tools. Use whichever you've set up.
+
+### Prompt Set: Pricing Strategy Research
+
+**Prompt 1 (Fetch Live Data):**
+```
+Fetch the Stripe pricing page (stripe.com/pricing) and summarize
+their main pricing tiers, costs, and what each tier includes.
 ```
 
-**Reflection:**
-- Did fetching the docs save you time compared to reading them yourself?
-- What made your question specific enough to get useful results?
-- When would this be better/worse than web search?
+**Expected Output:**
+- Clear list of pricing tiers (Free, Starter, Scale, etc.)
+- Cost per tier
+- Key features for each
+- Citation of where data came from
 
 ---
 
-### When to Use Web Fetching
+**Prompt 2 (Fetch a Competitor):**
+```
+Fetch the Shopify pricing page (shopify.com/pricing) and summarize
+their pricing tiers and what each includes. Then compare it to the Stripe
+pricing you just fetched. What are the main differences?
+```
 
-**Perfect for:**
-- Official documentation: Python, FastAPI, NumPy, etc.
-- Technical articles: Real Python, Medium posts, DEV articles
-- Learning specific frameworks: Fetch tutorials, then ask focused questions
-- Resolving confusion: Fetch docs, ask Gemini to clarify the section that confused you
-
-**Limitations:**
-- Some sites block automated access (paywalls, social media)
-- Dynamic content (JavaScript-loaded pages): May not fetch fully
-- Large pages: May be truncated
-- Workaround: Copy-paste relevant sections if fetch doesn't work
+**Expected Output:**
+- Shopify tier summary
+- Side-by-side comparison with Stripe
+- Key differences (e.g., features, target audience, price points)
 
 ---
 
-## Tool 3: Search Grounding — Current Information with Citations
-
-### The Scenario
-
-You're building a new project in 2024. You want to know about the latest Python features, FastAPI best practices, or whether NumPy changed something important. You don't want outdated information.
-
-**The problem with generic AI**: It has a knowledge cutoff. Responses might be months or years old.
-
-**Search grounding**: Connects Gemini to Google Search, so responses include current information with citations.
-
-### How It Works (Almost Automatic)
-
-You mostly don't need to do anything special. **Gemini automatically uses search** when it detects your question is about:
-- Current information (latest library versions, recent changes)
-- Events, news, or recent developments
-- Best practices that evolve over time
-
-You just ask naturally:
-
-```bash
-gemini "What are the latest Python 3.13 features I should know about?"
+**Prompt 3 (Search for Current Trends):**
+```
+Search the web for "payment processing pricing trends 2024" and
+tell me: What are the main price changes happening in this industry?
+Are most providers raising or lowering prices?
 ```
 
-**Behind the scenes**: Gemini searches the web, reads recent articles, and grounds its response in current information.
-
-**You see citations:**
-```
-According to the Python 3.13 release notes [Python.org, 2024]:
-- Performance improvements with "Zero-cost Exceptions"
-- Better error messages...
-
-[Source: Python Enhancement Proposals]
-```
-
-### Requesting Search Explicitly
-
-If Gemini doesn't automatically search, you can request it:
-
-```bash
-gemini "search: FastAPI best practices 2024 production performance"
-```
-
-The `search:` prefix tells Gemini: *"Use Google Search for this one."*
-
-#### Learning to Learn with AI: Citations Are Your Verification Tool
-
-When Gemini provides citations, **you have a way to verify**. This is important:
-
-- Find the source link in Gemini's response
-- Click it to read the original
-- Verify the claim matches the source
-
-**Why verify?** AI can misinterpret sources. Citations let you fact-check quickly.
+**Expected Output:**
+- Summary of 2-3 recent pricing announcements
+- Trend analysis (up, down, or stable)
+- Cited sources (so you can verify)
 
 ---
 
-### Exercise 3: Ask for Current Information, Then Verify
-
-**Your task**: Ask Gemini a time-sensitive question, get citations, and verify one claim.
-
-**Step 1: Ask about something recent:**
-```bash
-gemini "What are the major new features in the latest version of <your-favorite-library>? What changed from the previous version?"
+**Prompt 4 (Synthesize into Strategy):**
+```
+Based on what we found about Stripe and Shopify pricing, and the
+2024 trends: If you were advising a new payments startup on pricing
+strategy, what would you recommend? What market gap could they fill?
 ```
 
-**Step 2: Examine Gemini's response.** It should include citations like:
-- `[Source: Library.org, 2024]`
-- `[via GitHub Release Notes]`
-
-**Step 3: Pick one claim and verify it.** Use the citation to find the source and confirm Gemini's statement is accurate.
-
-**Reflection:**
-- Did Gemini's citations help you verify quickly?
-- Did you find any claims that didn't match the source?
-- When would search grounding be most valuable for your work?
+**Expected Output:**
+- Strategic recommendations
+- Identified market opportunities
+- Competitive positioning advice
 
 ---
 
-### When to Use Search Grounding
+**Stretch Prompt 5 (Real File Analysis):**
 
-**Perfect for:**
-- Current library versions and features
-- Recent best practices (changes over time)
-- New frameworks or tools
-- Verifying whether something changed recently
+If you have a CSV file of your own pricing or customer data:
+```
+Read my sales-data.csv file and identify: What's our most profitable
+product tier? Which one has the most customers but lowest margin?
+```
 
-**Limitations:**
-- Not fact-checking machine: Can misinterpret search results
-- Always verify critical information independently
-- Not for subjective opinions (search results won't help)
-- Slower than non-search queries (network latency)
+**Expected Output:**
+- Analysis of your data
+- Identified opportunities or concerns
+- Recommendations based on actual numbers
 
 ---
 
-## Tool 4: Shell Integration — Understanding Commands Without Memorizing
+### What Success Looks Like
 
-### The Scenario
+✅ **You successfully completed this if:**
+- Your AI fetched and summarized at least one pricing page with citations
+- You got a comparison between two competitors
+- You received strategic recommendations based on live market data
+- You verified that the sources cited are real and current
+- You didn't need to memorize any tool syntax—you just asked naturally
 
-You see a command online:
-```bash
-find . -name "*.py" -mtime -7 -exec wc -l {} \;
-```
+### Safety & Verification
 
-What does this do? You could:
+Before you use this for real business decisions:
 
-1. Open a bash manual
-2. Look up each flag individually
-3. Guess based on pattern matching
-4. Or: **Ask Gemini**
+1. **Verify sources** — Check that the cited websites are real (not hallucinated)
+2. **Check dates** — Confirm that fetched data is recent (not outdated)
+3. **Spot-check facts** — Open one of the fetched pages yourself to confirm your AI read it correctly
+4. **Don't rely on AI alone** — Use this as research input, not the final answer
+5. **Consider confidentiality** — If you used proprietary data in Prompt 5, understand that your AI tool's company may log it
 
-### Discovery: Asking About Commands
+### Next: Combine Skills
 
-Your natural question:
+You now understand:
+- Files → Data analysis
+- Web fetching → Research and documentation
+- Search → Current information
+- Shell → System tasks
 
-```bash
-gemini "What does this command do? find . -name '*.py' -mtime -7 -exec wc -l {} \;"
-```
-
-**Gemini explains:**
-```
-This command finds Python files modified in the last 7 days
-and shows their line counts:
-
-- find . : Start in current directory
-- -name "*.py" : Match .py files only
-- -mtime -7 : Modified within last 7 days
-- -exec wc -l {} \; : Count lines in each file
-
-Example output:
-  42 file1.py
-  156 file2.py
-```
-
-**Notice**: You didn't memorize flags. You asked. Gemini explained.
-
-### Building Commands With Dialogue
-
-You want a similar command but different:
-
-**Your intent**: *Find all `.js` files larger than 100KB.*
-
-**First attempt (vague):**
-```bash
-gemini "Show me a find command for large JavaScript files."
-```
-
-**Gemini suggests:**
-```bash
-find . -name "*.js" -size +100k
-```
-
-**Follow-up (refining):**
-```bash
-gemini "How do I modify this to also show file sizes in the output?"
-```
-
-**Gemini shows:**
-```bash
-find . -name "*.js" -size +100k -exec ls -lh {} \;
-```
-
-**You never memorized the syntax. You collaborated to build it.**
-
-#### Learning to Learn with AI: Commands Are Conversations, Not Memorization
-
-Traditional learning: memorize `man find`, study pages of flags.
-
-**Agent-native learning**: Describe what you want, Gemini tells you how. Then refine.
-
-**The skill**: Get comfortable describing intent clearly. Gemini handles the syntax.
-
----
-
-### Exercise 4: Build a Command Through Dialogue
-
-**Your task**: Create a command you want to run by asking Gemini step-by-step.
-
-**Real scenario**: You want to find all Python files in your project, exclude test files, and count total lines of code.
-
-**Step 1: State your goal clearly:**
-```bash
-gemini "I want to find all Python files in my project except test files, and count the total lines of code. What command?"
-```
-
-**Gemini suggests something like:**
-```bash
-find . -name "*.py" ! -path "*/test*" -exec wc -l {} + | tail -1
-```
-
-**Step 2: Understand each part:**
-```bash
-gemini "Explain each part of this command: find . -name '*.py' ! -path '*/test*' -exec wc -l {} + | tail -1"
-```
-
-**Step 3: Before running, verify safety:**
-```bash
-gemini "Is this command safe to run? Does it modify files? Could it cause problems?"
-```
-
-**Step 4: Run it (once you're confident), and if it fails:**
-```bash
-gemini "This command failed with: <error-message>. What went wrong?"
-```
-
-**Reflection:**
-- Did this approach feel faster than reading man pages?
-- What made the command explanation clear?
-- When would you still consult manual pages instead of asking Gemini?
-
----
-
-### When to Use Shell Integration
-
-**Perfect for:**
-- Understanding what a command does before running it
-- Building complex commands without memorizing flags
-- Debugging command failures
-- Learning shell patterns
-
-**Limitations:**
-- Always verify before running commands that modify files
-- Some edge cases: Gemini might suggest syntax that fails on your shell
-- Real-time command execution: Gemini explains, you verify before running
-
----
-
-## Combining Tools: A Real Development Workflow
-
-Let's see how professionals combine these tools to solve problems faster.
-
-### Scenario: Building a Production-Ready FastAPI Application
-
-You're starting a new FastAPI project. You want to:
-1. Understand current best practices
-2. Review your starter code
-3. Set up proper testing
-4. Deploy it safely
-
-Here's how you'd collaborate with Gemini:
-
-**Step 1: Fetch Current Best Practices**
-
-```bash
-gemini --web-fetch "https://fastapi.tiangolo.com/deployment/concepts/" \
-  "What are the key best practices for production FastAPI deployment?"
-```
-
-**Result**: You understand production requirements (async handling, load balancing, security) without reading the full deployment guide.
-
-**Step 2: Analyze Your Code**
-
-```bash
-gemini --file ./main.py \
-  "Compare my FastAPI app to production best practices. What am I doing well? What risks do I have?"
-```
-
-**Result**: Gemini finds specific issues (unvalidated inputs, missing error handlers) in your actual code.
-
-**Step 3: Get Current Testing Practices**
-
-```bash
-gemini "search: FastAPI pytest best practices 2024"
-```
-
-**Result**: You learn about recent testing improvements, including the latest pytest features.
-
-**Step 4: Understand Your Deployment Setup**
-
-```bash
-gemini "I'll deploy with: docker run -e DB_URL=postgres://... my_app:latest. \
-What should I check before this goes live?"
-```
-
-**Result**: Gemini identifies security issues (hardcoded DB URL, missing secrets management) before you hit production.
-
-**Total time**: 15 minutes instead of 1–2 hours of reading, context-switching, and searching.
-
-### Exercise 5: Build Your Own Workflow
-
-**Choose a real problem you're facing**: Debugging, learning a new tool, refactoring code, understanding a framework.
-
-**Use these steps:**
-
-1. **Get context**: Use web fetching to understand best practices or current approaches
-2. **Analyze your code**: Use file operations to review your actual implementation
-3. **Verify currency**: Use search grounding to ensure you're not following outdated patterns
-4. **Ask about commands**: Use shell integration to understand or build what you need
-
-**Document your workflow:**
-- What tools did you use?
-- How much time did this save compared to traditional methods?
-- What would you do differently next time?
-
----
-
-## Understanding Limitations (The Real Story)
-
-Powerful tools have constraints. Knowing them prevents frustration.
-
-### File Operations Limits
-
-- **Size**: Works smoothly with files up to ~5 MB. Larger files may be truncated.
-- **Binary files**: Can't analyze `.exe`, `.pyc`, images, etc.
-- **Solution**: Extract relevant code sections into a separate file for analysis
-
-**Realistic scenario:**
-```bash
-gemini --file ./app.py "Review this file."  # Works
-gemini --file ./large_dataset.csv "Analyze this."  # May fail or truncate
-# Instead:
-head -100 large_dataset.csv > sample.csv
-gemini --file ./sample.csv "Analyze this sample."  # Works
-```
-
-### Web Fetching Limits
-
-- **Blocked sites**: Some URLs block automated access (paywalls, social media, corporate intranets)
-- **JavaScript-heavy pages**: Content loaded by JavaScript may not fetch
-- **Timeouts**: Very large pages may time out
-- **Solution**: Copy-paste relevant sections if fetch fails
-
-**Realistic scenario:**
-```bash
-# Fails (Medium blocks automated access):
-gemini --web-fetch "https://medium.com/..." "Summarize this article."
-
-# Works (GitHub is automation-friendly):
-gemini --web-fetch "https://github.com/.../releases" "What's new?"
-```
-
-### Search Grounding Limits
-
-- **Not fact-checking**: Search results can contain errors
-- **Recent news**: Breaking news from the last few hours may not be indexed
-- **Subjective questions**: Search won't resolve opinion-based questions
-- **Solution**: Always verify critical claims independently
-
-**Realistic scenario:**
-```bash
-gemini "search: Is Docker a good choice for this project?"  # Opinion—not helped by search
-
-gemini "search: Docker latest version features"  # Factual—search helps
-```
-
-### Shell Integration Limits
-
-- **Shell differences**: Syntax varies between bash, zsh, PowerShell, etc.
-- **Edge cases**: Complex commands may have subtle failures on your system
-- **Solution**: Always test in a safe directory first; ask Gemini to explain before running
-
-**Realistic scenario:**
-```bash
-# Gemini suggests: rm -rf old_backup/
-# Before running, ask:
-gemini "Is this safe? Will it delete everything in old_backup/?"
-# Verify Gemini confirms, then run
-```
-
----
-
-## Putting It Together: The Agent-Native Mindset
-
-Throughout this lesson, you've seen a pattern:
-
-1. **Start with your goal**, not syntax
-2. **Ask Gemini naturally**
-3. **Get back a suggestion**
-4. **Refine based on feedback**
-5. **Learn in the process**
-
-This is fundamentally different from traditional learning:
-
-| Traditional | Agent-Native |
-|---|---|
-| Memorize syntax first | Ask naturally first |
-| Read full documentation | Fetch relevant sections |
-| Search for answers | Leverage search grounding |
-| Look up man pages | Ask Gemini to explain |
-| Trial-and-error | Dialogue with AI |
-
-**The meta-skill you've developed:** *Asking good questions is more valuable than remembering answers.*
-
-When you can describe what you want clearly, AI handles the syntax, documentation, and technical details. Your job: clarify intent, refine based on feedback, and think critically about suggestions.
-
----
-
-## Try With AI: Apply All Four Tools to a Real Scenario
-
-Now it's your turn. You'll use all four tools together to solve a realistic development problem.
-
-### Setup
-
-We'll use **Gemini CLI** (which you installed in Lesson 2). If you haven't already set it up, go back and authenticate.
-
-If you prefer a web interface, **ChatGPT** works for all these examples—you'll just type the prompts into chat instead of using the command line.
-
-### Scenario: Optimize a Python Script
-
-You have a script that's slow and you want to make it faster. The workflow below combines all four tools.
-
-### Prompt Set (Progressive Complexity)
-
-#### Prompt 1: Get Context (Web Fetching)
-Start by understanding current best practices for Python performance optimization:
-
-**Gemini CLI:**
-```bash
-gemini --web-fetch "https://docs.python.org/3/library/timeit.html" \
-  "How do I benchmark Python code to measure performance improvements? Show a simple example."
-```
-
-**ChatGPT (web):** Copy the prompt above into chat.
-
-**Expected outcome:** You understand how to measure performance (using `timeit` or similar), so you know whether your optimizations actually help.
-
----
-
-#### Prompt 2: Analyze Your Code (File Operations)
-Now let's look at the actual script. Create a file called `slow_script.py`:
-
-```python
-def process_data(data):
-    results = []
-    for item in data:
-        if item % 2 == 0:
-            results.append(item * 2)
-    return results
-
-data = list(range(1000000))
-output = process_data(data)
-print(len(output))
-```
-
-**Gemini CLI:**
-```bash
-gemini --file ./slow_script.py \
-  "This script is slow. What's the bottleneck? How would you optimize it for speed?"
-```
-
-**ChatGPT (web):** Paste the script into chat with the same question.
-
-**Expected outcome:** Gemini identifies opportunities (list comprehension instead of append loop, potential NumPy use for large datasets). You get concrete suggestions with reasoning.
-
----
-
-#### Prompt 3: Learn Current Techniques (Search Grounding)
-Search for modern optimization techniques:
-
-**Gemini CLI:**
-```bash
-gemini "search: Python performance optimization 2024 list comprehension vs generator vs numpy"
-```
-
-**ChatGPT (web):** Type the prompt and let ChatGPT search for recent information.
-
-**Expected outcome:** You see which techniques are current best practices, with references to recent articles and documentation.
-
----
-
-#### Prompt 4: Build the Optimized Version (Dialogue)
-Now refine your approach with Gemini:
-
-**Gemini CLI:**
-```bash
-gemini --file ./slow_script.py \
-  "Rewrite this function using a list comprehension instead of a loop. Explain the performance difference."
-```
-
-**ChatGPT (web):** Paste the script and ask the same.
-
-**Expected outcome:** You get an optimized version with explanation. You understand *why* it's faster (fewer function calls, simpler bytecode).
-
----
-
-#### Prompt 5: Verify and Understand Commands (Shell Integration)
-If you want to benchmark both versions:
-
-**Gemini CLI:**
-```bash
-gemini "How do I run a Python script and measure its execution time on the command line?"
-```
-
-**ChatGPT (web):** Type the question.
-
-**Expected outcome:** You learn `time ./slow_script.py` or `python -m timeit` without memorizing syntax.
-
----
-
-### Expected Outcomes
-
-After these five prompts, you should have:
-
-1. ✅ Understanding of how to benchmark code
-2. ✅ Specific optimizations for your script
-3. ✅ Knowledge of current best practices
-4. ✅ An optimized version of your code
-5. ✅ A way to verify the improvements
-
-**Key insight**: You solved a real problem (slow script) using all four tools in sequence. The entire workflow took ~10 minutes. Without AI collaboration, it would take 45+ minutes of reading documentation, searching for examples, and trial-and-error.
-
----
-
-### Safety & Ethics Note: Trust But Verify
-
-Gemini's suggestions are helpful, but you remain responsible:
-
-- **Code quality**: Suggested code should be readable and maintainable, not just fast
-- **Correctness**: Always test optimizations (did you break functionality?)
-- **Security**: Don't optimize away error handling or security checks
-- **Relevance**: Does the optimization actually solve your real problem?
-
-**Before deploying**: Run the code, measure actual performance, and ask: *"Does this optimization matter for my use case?"*
-
----
-
-### Next Variation (On Your Own)
-
-Try this with a problem you're actually facing:
-
-1. Fetch documentation related to your problem
-2. Share your code with Gemini
-3. Search for current best practices
-4. Ask Gemini to help you understand a command or build one
-5. Document what you learned and how long it took
-
-Reflect: *How would this have gone without AI collaboration?*
-
----
-
-## What You've Mastered
-
-You've moved from "how do I use this tool?" to "how do I collaborate with AI to solve real problems?"
-
-The four tools—file operations, web fetching, search grounding, shell integration—are capabilities. The real skill is *knowing when to ask and what to ask.*
-
-**Looking ahead**: Lesson 4 explores **context windows**—how much information you can include in a single conversation with Gemini. You'll learn when Gemini CLI shines compared to other tools, and how to choose the right AI assistant for different scenarios.
-
-Ready to go deeper? Continue to **Lesson 4: Context Windows & Tool Comparison**.
+Next lesson, you'll learn to **automate** using these tools—stringing multiple operations together without clicking through each one manually. That's where the real time-saving begins.

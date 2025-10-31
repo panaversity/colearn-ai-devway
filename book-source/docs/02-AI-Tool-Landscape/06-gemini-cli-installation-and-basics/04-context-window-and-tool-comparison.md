@@ -1,460 +1,499 @@
 ---
-title: Context Window & Tool Comparison
-chapter: 6
+title: "Choosing the Right AI Tool: When Size Matters"
+chapter: 2
 lesson: 4
 learning_objectives:
-  - Understand what a context window is and why it matters
-  - Learn to ask AI about your specific project's context needs
-  - Discover how to choose between tools through guided conversation
-  - Practice real-world tool selection decisions with AI guidance
+  - "Understand what a context window is in business terms (reading capacity)"
+  - "Recognize when task size requires larger AI reading capacity"
+  - "Ask AI to recommend the right tool for your specific situation"
+  - "Make informed tool choices through dialogue, not memorization"
 estimated_time: 25 minutes
 sidebar_position: 4
 ---
 
-# Context Window & Tool Comparison
+## The Question You're Probably Asking
 
-## Introduction: A Question You've Probably Had
+You've learned about Gemini CLI. You've used ChatGPT or Claude before. Now you're wondering:
 
-You've been learning Gemini CLI. You've installed it, authenticated, run built-in tools, and seen it work. But somewhere in the back of your mind, a question emerges:
+**"Which one should I use? Is Gemini better? When does it matter?"**
 
-**"Is Gemini CLI better than Claude Code? When should I use one versus the other?"**
+Here's the honest answer: **For most tasks, it doesn't matter.** But for some specific situations, choosing the right tool makes a huge difference.
 
-This lesson answers that question—but not by giving you a checklist to memorize. Instead, you'll learn how to ask AI itself to help you make the decision. This is a meta-skill: learning to consult your AI tools to evaluate which tool is best for your situation.
+This lesson teaches you how to ask your AI companion which tool to use for your specific situation. You won't memorize rules. You'll learn to consult AI about which AI to use—a meta-skill that works for any tool, current or future.
 
-By the end of this lesson, you'll understand context windows, know how to ask Gemini about your specific project, and have a framework for making tool decisions through dialogue with AI.
-
----
-
-## What Is a Context Window? (And Why You Might Not Need to Calculate It)
-
-### The Simple Explanation
-
-A **context window** is the amount of text an AI model can "see" and understand at once. Think of it like a reading window—the larger the window, the more of a document you can see simultaneously.
-
-**Here's the key insight**: You don't need to understand token math to use context windows effectively. What matters is knowing when to ask.
-
-### Context Windows: A Simple Comparison
-
-| Tool | Context Window | What This Means |
-|------|----------------|-----------------|
-| **Gemini CLI** | 1,000,000 tokens | Can see large projects at once |
-| **Claude Code** | 200,000 tokens | Can see smaller projects at once |
-| **ChatGPT-4** | 128,000 tokens | Can see medium files/docs at once |
-
-**Key insight**: Gemini CLI can see about 5x more code than Claude Code in a single conversation.
-
-### But Does Your Project Size Actually Matter?
-
-Let's be honest: for most tasks, context window size is irrelevant. Let me show you when it matters and when it doesn't.
+By the end, you'll confidently choose tools through dialogue, not guesswork.
 
 ---
 
-## Pause and Reflect: What's Your Situation?
+## What Is a Context Window? (The Reading Capacity Analogy)
 
-Before we dive deeper, ask yourself:
+A **context window** is how much your AI can "see" and understand at once.
 
-- **What are you building?** (A single script? A web app? A large system?)
-- **How big is your codebase?** (Rough estimate: 1 file? 10 files? 100+ files?)
-- **What problem are you solving?** (Learning a concept? Fixing a bug? Refactoring? Analyzing an entire system?)
+Think of it like your desk space:
+- **Small desk** (ChatGPT, Claude): You can spread out 1-2 documents and read them thoroughly
+- **Large desk** (Gemini CLI): You can spread out 10-20 documents and see them all simultaneously
 
-Keep your specific situation in mind as you read. We'll show you how to ask AI about your exact scenario.
+**Key insight**: You don't need to understand the technical details. What matters is knowing when desk size helps.
 
----
+### Simple Comparison
 
-## When Context Window Size Doesn't Matter
+| Tool | Context Window | What This Means for Your Work |
+|------|----------------|-------------------------------|
+| **ChatGPT** | Medium (128K tokens) | Can read 1-2 full reports at once |
+| **Claude Code** | Large (200K tokens) | Can read 2-4 full reports at once |
+| **Gemini CLI** | Very Large (1M tokens) | Can read 10-20+ reports simultaneously |
 
-Let's start with the truth: **for most daily tasks, context size is irrelevant**.
+**Translation**: Tokens ≈ Words. Roughly 750 words = 1,000 tokens.
 
-### Scenario 1: Single File Bug Fixes
-
-You're debugging a TypeError in your Python script.
-
-```bash
-gemini "I'm getting TypeError: 'str' object does not support item assignment. What does this mean?"
-```
-
-**Context needed**: Almost none. This is a concept question.
-
-**Who can handle it**: Gemini CLI, Claude Code, ChatGPT—all identical.
+**But here's the truth**: You don't calculate this. You ask your AI: "Can you handle this task?" It tells you.
 
 ---
 
-### Scenario 2: Learning Concepts
+## When Context Size Doesn't Matter (80% of Your Work)
 
-You want to understand how Python decorators work.
+Let's start with reality: **Most business tasks work fine with any AI tool.**
 
-```bash
-gemini "Explain how Python decorators work. Show a practical example."
-```
+### Scenario 1: Single Document Review
 
-**Context needed**: None. You're learning a concept, not analyzing your code.
+You have one quarterly sales report (15 pages, ~7,500 words).
 
-**Who can handle it**: Any AI tool works equally well.
+**Your task**: "Read this Q3 sales report and identify the top 3 revenue trends."
+
+**Context needed**: Medium (one document)
+
+**Which tools work**: ChatGPT, Claude, Gemini CLI—all work equally well
+
+**Why it doesn't matter**: Any tool can read one document fully. Choose based on what you already have access to.
 
 ---
 
-### Scenario 3: Small Project Analysis
+### Scenario 2: Simple Research Question
 
-You have a personal project: 5 Python files, ~1,000 lines total.
+You need to understand a business concept.
 
-```bash
-gemini --file ./src/**/*.py "Review this code for security issues"
-```
+**Your question**: "What's the difference between Series A and Series B funding?"
 
-**Context needed**: ~5,000-10,000 tokens (small).
+**Context needed**: Almost none (general knowledge)
 
-**Who can handle it**: Gemini CLI, Claude Code, ChatGPT—all work fine. You'll never hit context limits.
+**Which tools work**: Any AI tool answers this identically
+
+**Why it doesn't matter**: This is a knowledge question, not a document analysis task.
+
+---
+
+### Scenario 3: Quick Competitor Check
+
+You want to know one competitor's pricing.
+
+**Your task**: "Check Shopify's pricing and tell me their entry-level tier cost."
+
+**Context needed**: Small (one webpage)
+
+**Which tools work**: All of them can fetch and read one pricing page
+
+**Why it doesn't matter**: Single-page tasks don't stress any tool's capacity.
 
 ---
 
 ### The Reality Check
 
-**For 80% of your daily work**, context window size won't matter. Both tools feel identical. Choose based on:
-- **Cost**: Gemini CLI has a free tier (1,000 requests/day)
-- **Interface**: Do you prefer web (Claude) or terminal (Gemini)?
-- **Availability**: Which tool is accessible right now?
+**For 80% of daily business tasks**, context size is irrelevant:
+- Reading one report
+- Answering knowledge questions
+- Checking one website
+- Reviewing one contract
+- Analyzing one data file
 
-**Context size only becomes critical for the remaining 20% of tasks.** Let's explore those.
+**Choose based on**:
+- Cost (Gemini CLI has generous free tier)
+- Interface (Do you prefer web or terminal?)
+- What you already have access to
 
----
-
-## When Context Size Becomes Critical
-
-There are specific scenarios where a large context window changes everything.
-
-### Scenario 1: Large Legacy Codebases
-
-**Situation**: You're analyzing a mature project with 200+ files and 50,000+ lines of code spread across multiple modules.
-
-**Your Question**:
-> "I have a medium-sized Flask API with 40+ files, ~25,000 lines. Can I analyze the whole architecture at once, or should I break it into pieces?"
-
-**How to Ask Gemini**:
-
-```bash
-gemini "I have a Flask API project with 40 files and approximately 25,000 lines of code spread across models, routes, services, and utilities. I want to analyze the entire authentication architecture across all modules at once. Will that fit in your context window?"
-```
-
-**What Gemini Tells You**:
-- Yes, 25,000 lines easily fits in 1,000,000 tokens
-- You can upload all 40 files at once
-- You'll get a complete architectural analysis without missing cross-file dependencies
-
-**Compare to Claude Code**: You'd need to upload files selectively, run multiple analyses, and manually piece together the architecture.
-
-**Why it matters**: With large context, you see dependencies and patterns that span entire systems.
+**Context size only matters for the other 20% of tasks.** Let's explore those.
 
 ---
 
-### Scenario 2: Entire Documentation Sets
+## When Large Context Becomes Critical
 
-**Situation**: You're learning a complex framework. You want to understand all the ways it handles asynchronous operations across its entire API documentation.
+Some business tasks require seeing multiple documents simultaneously. This is where tool choice matters.
 
-**Your Question**:
-> "Can you read an entire documentation site at once?"
+### Scenario 1: Multi-Competitor Pricing Analysis
 
-**How to Ask Gemini**:
+**Your situation**: You're pricing a new product. You need to compare 12 competitor pricing structures side-by-side.
 
-```bash
-gemini --web-fetch "https://docs.fastapi.tiangolo.com/" "Across the entire FastAPI documentation, what are all the ways I can implement concurrency? Compare native async/await, background tasks, and third-party async patterns."
+**Traditional approach**:
+1. Visit 12 websites manually
+2. Take notes in a spreadsheet
+3. Manually compare features and prices
+4. Time: 2-3 hours
+
+**With Small Context (ChatGPT)**:
+- Ask: "Compare these 12 competitor pricing pages"
+- AI reads them one-by-one
+- You piece together the comparison
+- Time: 45 minutes
+
+**With Large Context (Gemini CLI)**:
+- Ask: "Read all 12 competitor pricing pages and create a comparison table"
+- AI sees all 12 simultaneously
+- AI identifies patterns across all competitors
+- AI creates comprehensive comparison
+- Time: 10 minutes
+
+**Why this matters**: Gemini sees all data at once and catches patterns you'd miss reading sequentially.
+
+**How to ask Gemini**:
+```
+I need to compare pricing across 12 competitor websites for our new SaaS product.
+Can you read all 12 at once and create a comparison table, or should I break this into smaller batches?
 ```
 
-**What Gemini Tells You**:
-- Yes, it can read hundreds of documentation pages
-- It synthesizes patterns across the entire documentation
-- You get a comprehensive comparison you'd never find in a single manual read
-
-**Compare to Claude Code**: You'd need to read docs manually or paste sections piece-by-piece.
+Gemini will tell you if it can handle all 12 (it can) and suggest the best approach.
 
 ---
 
-### Scenario 3: Multi-File Refactoring
+### Scenario 2: Annual Business Review
 
-**Situation**: You're refactoring authentication logic that touches 15+ files across your codebase. You need a comprehensive plan that keeps everything consistent.
+**Your situation**: You have 12 monthly sales reports from 2024. You want to identify trends across the entire year.
 
-**Your Question**:
-> "I'm refactoring JWT to OAuth2. I need to change 15 files consistently. Can you see them all at once?"
+**Traditional approach**:
+- Read each month manually
+- Note trends in each
+- Try to remember patterns from January when reading December
+- Miss connections between non-adjacent months
 
-**How to Ask Gemini**:
+**With Small Context**:
+- Feed reports quarterly (Q1, Q2, Q3, Q4)
+- Get 4 separate analyses
+- Manually synthesize the year
 
-```bash
-gemini --file ./src/**/*.py "I'm refactoring from JWT to OAuth2. Show me every file that needs changes and create a step-by-step refactoring plan that maintains consistency across all 15 files."
+**With Large Context (Gemini CLI)**:
+- Upload all 12 months at once
+- Ask: "Analyze trends across the entire year. Which products show seasonal patterns? What changed from January to December?"
+- AI sees the full year simultaneously
+- Identifies year-long patterns, seasonal effects, gradual trends
+
+**Why this matters**: Some business insights only appear when you see the complete timeline.
+
+**How to ask**:
 ```
-
-**What Gemini Tells You**:
-- Yes, it sees all 15 files simultaneously
-- It identifies all dependencies (imports, function calls, configuration)
-- It provides a comprehensive plan that avoids inconsistencies
-
-**Compare to Claude Code**: You'd refactor file-by-file, risk missing dependencies, and need manual cross-checking.
+I have 12 monthly sales reports (Excel files, roughly 50 pages each).
+I want to identify trends across the entire year. Can you analyze all 12 together,
+or should I group them by quarter?
+```
 
 ---
 
-## The Real Decision Framework: Ask AI About Your Situation
+### Scenario 3: Comprehensive Customer Feedback Analysis
 
-Here's the truth: **You don't need to memorize when context matters.** Instead, learn to ask.
+**Your situation**: You collected 50 customer feedback emails during Q4. You want to identify the top 3 complaints and understand why customers are frustrated.
 
-### The Meta-Skill: Consulting AI About Tool Choices
+**Traditional approach**:
+- Read all 50 emails manually
+- Try to remember themes
+- Count mentions manually
+- Miss subtle connections
 
-When you're uncertain whether Gemini CLI or Claude Code is right for your task, ask:
+**With Small Context**:
+- Feed emails in batches of 10
+- Get 5 separate summaries
+- Manually combine themes
 
-**Step 1: Describe Your Situation**
-```
-I have a 75-file project with about 18,000 lines of Python code. I need to refactor
-the database layer, which touches 20+ files. Should I use Gemini CLI or Claude Code
-for this task?
-```
+**With Large Context (Gemini CLI)**:
+- Give AI all 50 emails at once
+- Ask: "Read all customer feedback and identify the top 3 complaints. For each complaint, show me 2-3 example quotes and suggest solutions."
+- AI sees all feedback simultaneously
+- Identifies true patterns (not just what appeared in first batch)
+- Provides representative examples
 
-**Step 2: Let AI Guide Your Decision**
-Gemini might respond:
-- "18,000 lines fits easily in both tools"
-- "However, since you're refactoring across 20+ files, Gemini CLI's larger context window means you see all dependencies at once"
-- "With Claude Code, you'd need multiple conversations to handle all 20 files"
-- "Recommendation: Use Gemini CLI for this refactoring to get a comprehensive plan in one conversation"
-
-**Step 3: Trust the Dialogue**
-You now have a specific recommendation based on your exact situation, not a generic checklist.
+**Why this matters**: Customer sentiment analysis requires seeing the full picture, not fragments.
 
 ---
 
-## Practice: Ask Gemini About Your Real Project
+### Scenario 4: Multi-Document Contract Comparison
 
-**Exercise 1: Assess Your Current Project**
+**Your situation**: You're choosing between 5 different SaaS vendors. Each sent you a contract (~20 pages). You need to compare pricing terms, cancellation clauses, and data ownership across all 5.
 
-Think of a real project you're working on (or one you've worked on recently).
+**With Small Context**:
+- Read contracts 1-2 at a time
+- Create manual comparison notes
+- Risk missing subtle differences
 
-**Open Gemini CLI and ask:**
-```bash
-gemini "I'm working on a [PROJECT TYPE] with [NUMBER] files and approximately [LINES OF CODE] lines.
-I need to [YOUR SPECIFIC TASK].
-Should I use Gemini CLI or Claude Code for this? Why?"
+**With Large Context (Gemini CLI)**:
+- Upload all 5 contracts
+- Ask: "Compare these 5 vendor contracts. Create a table showing: monthly cost, cancellation terms, data ownership, and any red flags. Which vendor has the best terms for a small business?"
+- AI reads all 5 simultaneously
+- Catches inconsistencies across vendors
+- Recommends best fit for your situation
+
+---
+
+## The Real Decision Framework: Ask AI
+
+Here's the secret: **You don't memorize when to use which tool.** Instead, you ask.
+
+### The Meta-Skill: Consulting AI About Tool Choice
+
+When you're uncertain, describe your situation and ask.
+
+**Example Dialogue 1: Competitor Research**
+
+**You**: "I need to analyze 15 competitor websites to understand their pricing strategies, target customers, and key features. Should I use Gemini CLI or ChatGPT for this?"
+
+**Your AI** (could be ChatGPT or Gemini):
+"For analyzing 15 websites simultaneously:
+- **Gemini CLI recommended**: Can read all 15 at once, identify cross-competitor patterns
+- **ChatGPT approach**: Would need to read in batches of 2-3, requiring you to synthesize
+- **Benefit of Gemini**: Complete view in one analysis; catches patterns across all competitors
+- **Recommendation**: Use Gemini CLI for comprehensive competitor intelligence in one conversation."
+
+---
+
+**Example Dialogue 2: Monthly Reports**
+
+**You**: "I have 6 months of financial reports (January-June). Each is about 30 pages. I want to understand cash flow trends. Which tool should I use?"
+
+**Your AI**:
+"6 months × 30 pages = ~180 pages total
+- **ChatGPT**: Can handle this in 2-3 batches (60 pages each)
+- **Gemini CLI**: Can see all 180 pages at once
+- **For cash flow trends**: Large context helps because trends span months
+- **Recommendation**: Gemini CLI gives you year-to-date view; ChatGPT requires quarterly synthesis
+- **Budget consideration**: If on free tier, both work—Gemini just faster"
+
+---
+
+**Example Dialogue 3: Budget-Constrained Research**
+
+**You**: "I'm on a tight budget. I need to read 30 customer survey responses to identify common themes. What's the most cost-effective approach?"
+
+**Your AI**:
+"30 survey responses (assume ~500 words each = ~15,000 words total)
+- **Gemini CLI free tier**: 1,000 requests/day—this uses 1 request for all 30
+- **ChatGPT free tier**: Works fine; might need 2-3 prompts if you want detailed analysis
+- **Cost**: Both free tiers handle this easily
+- **Recommendation**: Use whichever you have access to; Gemini is slightly faster (one prompt)"
+
+---
+
+### What You Learn From These Dialogues
+
+- **AI evaluates YOUR specific situation** (not generic advice)
+- **You get personalized recommendations** based on task size, budget, timeline
+- **You don't memorize rules**; you consult AI each time
+- **This works for future tools too**—same questioning approach applies
+
+---
+
+## Practice: Ask About Your Real Situation
+
+Now it's your turn. Think of a real business task you're facing.
+
+### Exercise 1: Describe Your Task and Ask
+
+**Template**:
+```
+I need to [YOUR BUSINESS TASK] involving [NUMBER] of [DOCUMENTS/WEBSITES/FILES].
+Should I use Gemini CLI, ChatGPT, or Claude for this? Why?
 ```
 
-**Example:**
-```bash
-gemini "I'm working on a Django web app with 45 files and approximately 12,000 lines.
-I need to refactor the authentication system to use OAuth2.
-Should I use Gemini CLI or Claude Code for this? Why?"
+**Real Examples**:
+
+```
+I need to compare benefits packages from 8 different health insurance providers
+to choose the best one for my startup. Should I use Gemini CLI, ChatGPT, or
+Claude for this? Why?
+```
+
+```
+I need to analyze 20 customer interview transcripts (each ~10 pages) to identify
+product improvement opportunities. Should I use Gemini CLI, ChatGPT, or Claude
+for this? Why?
+```
+
+```
+I need to review 3 different vendor proposals (each ~15 pages) and create a
+side-by-side comparison for my team. Should I use Gemini CLI, ChatGPT, or
+Claude for this? Why?
 ```
 
 **What to observe**:
-- Does Gemini recommend itself or another tool?
+- Does your AI recommend one tool over others?
 - What reasoning does it give?
-- Do you understand the trade-offs?
+- Do the recommendations align with your budget, timeline, complexity?
 
-**Write down the response.** This is your personalized tool selection framework.
+**Write down the response.** This is your personalized decision framework.
 
 ---
 
-**Exercise 2: Ask About Edge Cases**
+### Exercise 2: Test with Varying Task Sizes
 
-Sometimes you're not sure about project size. Ask AI to help you estimate:
+Ask about the same task at different scales:
 
-```bash
-gemini "How do I estimate the number of tokens in my codebase?
-I have a Node.js project with 8 JavaScript files.
-Will it fit in a 200K token context window?"
+**Small scale**:
+```
+I need to review 1 competitor's pricing page. Which tool should I use?
 ```
 
-**What you'll learn**:
-- Gemini gives you a quick estimation method
-- You understand whether your project is large, medium, or small
-- You get a recommendation for which tool to use
-
----
-
-**Exercise 3: Compare Tools for Your Specific Constraint**
-
-If budget is a factor:
-
-```bash
-gemini "I have limited budget for API calls. I'm working on a 50-file Python project.
-Should I use Gemini CLI's free tier or pay for Claude Code API?
-What are the trade-offs?"
+**Medium scale**:
+```
+I need to review 5 competitor pricing pages. Which tool should I use?
 ```
 
-**What you'll learn**:
-- Whether your project size fits free tier limits
-- Cost-benefit analysis for your situation
-- A decision based on your constraints, not generic advice
+**Large scale**:
+```
+I need to review 20 competitor pricing pages. Which tool should I use?
+```
+
+**What you'll learn**: At what point does your AI recommend switching to larger-context tools?
 
 ---
 
-## Understanding Tool Trade-Offs (Without Memorizing)
+## Understanding Tool Trade-Offs (Without Memorization)
 
-You don't need to memorize tool comparisons. But you should understand the dimensions of difference. Here's a quick reference:
+You don't need to memorize comparison charts. But understanding the dimensions helps you ask better questions.
 
-### Key Dimensions (Ask Gemini About These)
+### Key Dimensions to Ask About
 
-**Context Window**
-- Ask: "Does my 50-file project fit in your context window?"
-- Gemini answers based on YOUR project
+**1. Context Window**
+- Ask: "Can you handle [X] documents at once?"
+- AI tells you yes/no and suggests batching if needed
 
-**Cost**
-- Ask: "What's the total cost to analyze my codebase with Gemini CLI vs Claude Code?"
-- Gemini calculates based on YOUR usage
+**2. Cost**
+- Ask: "What's the most cost-effective tool for [MY TASK]?"
+- AI considers free tiers, API pricing, your usage pattern
 
-**Interface**
-- Ask: "Do you work in the terminal or web browser?"
-- You already know your preference; Gemini confirms compatibility
+**3. Interface**
+- Ask: "Do you work better in browser or terminal for [MY TASK]?"
+- You already know your preference; verify compatibility
 
-**Customization**
-- Ask: "Can I customize Gemini CLI for my specific needs?"
-- Gemini explains available options for YOUR use case
+**4. Speed**
+- Ask: "For analyzing 15 reports, which tool gives fastest results?"
+- AI compares batch processing vs. single-pass analysis
 
-**Enterprise Compliance**
-- Ask: "Does Gemini CLI meet SOC 2 compliance requirements?"
-- Gemini gives you the answer directly
+**5. Output Format**
+- Ask: "I need a comparison table. Which tool formats this best?"
+- AI recommends based on output needs
 
----
-
-## Real Dialogue Example: How This Works in Practice
-
-Let's see what an actual conversation looks like:
-
-**You**: "I'm working on a monorepo with 200 JavaScript files across 5 services. I want to understand how authentication flows across all services. Which tool should I use?"
-
-**Gemini**: "Great question. Let me help you evaluate:
-
-- **File count**: 200 files is substantial—your context window is critical
-- **Gemini CLI can see**: All 200 files in one analysis (~150K-200K tokens)
-- **Claude Code would need**: Multiple separate conversations (each limited to ~50-100 files)
-- **Your benefit with Gemini CLI**: Complete architectural analysis of how auth flows across all 5 services
-- **Recommendation**: Gemini CLI. The larger context lets you see cross-service patterns in one prompt instead of 5 separate conversations."
-
-**You**: "That makes sense. But what if I wanted to use Claude Code anyway?"
-
-**Gemini**: "You could, but you'd need to:
-1. Analyze each service separately (5 conversations)
-2. Manually cross-reference auth patterns
-3. Create your own architectural diagram
-
-It's doable, just more work. Gemini CLI is more efficient for this specific scenario."
-
-**You**: "Okay, I'll use Gemini CLI. How do I start?"
-
-**Gemini**: "Here's your command:
-```bash
-gemini --file ./services/**/*.js "Map the complete authentication flow across all 5 services. Show how credentials are passed, validated, and used in each service."
-```"
 
 ---
 
-## Key Insight: Context Matters, But Asking Matters More
+## Key Insight: Asking Matters More Than Knowing
 
 By now, you've learned:
 
-1. **Context windows exist**, and they differ between tools
-2. **Most tasks don't require large context**—either tool works fine
-3. **Specific scenarios benefit from larger context**—large codebases, documentation synthesis, multi-file refactoring
-4. **You don't memorize decision criteria**—you ask AI about YOUR situation
-5. **Gemini can evaluate itself**—ask whether it's the right tool for your task
+1. **Context window = reading capacity** (how much AI can see at once)
+2. **Most tasks don't need large context**—any tool works
+3. **Multi-document tasks benefit from large context**—Gemini CLI's advantage
+4. **Don't memorize tool charts**—ask AI to evaluate your situation
+5. **AI can recommend itself or competitors**—honest evaluation
 
-The meta-skill is this: **Learn to ask your AI tools to evaluate themselves.**
+The meta-skill: **Consult your AI tools about which tool to use.**
 
-This approach scales to future tools too. When Claude's context grows, or when new tools emerge, you'll already know how to consult AI about which tool fits your needs.
-
----
-
-## Connecting to What's Next
-
-You now understand context windows and how to make tool decisions through dialogue with AI. In Lesson 5, you'll explore the Gemini CLI ecosystem—extensions, integrations, and the Model Context Protocol (MCP) that makes Gemini adaptable to any environment.
-
-But before you move forward, make sure you've completed the practice exercises above. Tool selection becomes intuitive once you've asked Gemini about your own real projects.
+This scales to any future tools. When GPT-5 arrives, when Claude expands, when new tools emerge—you'll know how to ask which fits your needs.
 
 ---
 
-## Try With AI: Personalized Tool Selection for Your Project
+## Try With AI: Personalized Tool Selection
 
 ### Setup
-Open **Gemini CLI** (your AI companion from previous lessons). You'll now use Gemini to evaluate itself as the right tool for your specific situation.
 
-### Prompt Set (Work through these in order)
-
-**Prompt 1: Assess Your Project**
-```
-I'm working on a [PROJECT TYPE] project with approximately [NUMBER] files and
-[ROUGH LINE COUNT] lines of code. Here's what I'm trying to do: [YOUR SPECIFIC TASK].
-
-Can I analyze my entire codebase at once with your context window, or do I need
-to break it into smaller pieces?
-```
-
-*Example:*
-```
-I'm working on a Django REST API with 35 files and roughly 8,500 lines of Python.
-I want to analyze the entire user authentication system for security vulnerabilities.
-
-Can I analyze my entire codebase at once with your context window, or do I need
-to break it into smaller pieces?
-```
-
-**Expected Outcome**: Gemini tells you whether your project fits in its context window and whether you can analyze it in one conversation or multiple.
+Open any AI tool you have access to (Gemini CLI, ChatGPT, Claude). You'll ask it to help you choose the right tool for real tasks.
 
 ---
 
-**Prompt 2: Compare to Claude Code**
+### Prompt 1: Multi-Competitor Analysis
+
 ```
-Based on the project size you just evaluated, is Gemini CLI or Claude Code a better
-choice for my [SPECIFIC TASK]? Explain the trade-offs.
+I need to compare pricing, features, and customer reviews across 10 competitors
+in the project management software space. Should I use Gemini CLI or ChatGPT
+for this research? Explain which is better and why.
 ```
 
-*Example:*
-```
-Based on the 8,500-line Django project I just described, is Gemini CLI or Claude Code
-a better choice for analyzing my authentication system? Explain the trade-offs.
-```
-
-**Expected Outcome**: Gemini recommends one tool over the other with specific reasoning tied to your project size and task type.
+**Expected Outcome**: Your AI recommends a tool based on the task size (10 competitors) and explains whether you need large context or can batch the analysis.
 
 ---
 
-**Prompt 3: Ask About Your Constraint**
+### Prompt 2: Annual Report Synthesis
+
 ```
-My main constraint is [BUDGET/INTERFACE/COMPLIANCE/OTHER]. Given this constraint,
-which tool should I choose for [YOUR TASK]?
+I have 12 monthly sales reports from 2024 (Excel files, roughly 40 pages each).
+I want to identify revenue trends, seasonal patterns, and which products grew or
+declined. Which tool should I use to analyze all 12 months together?
 ```
 
-*Example:*
-```
-My main constraint is budget—I'm using the free tier. Given this constraint, which
-tool should I choose for refactoring my authentication system?
-```
-
-**Expected Outcome**: Gemini evaluates the tool choice through the lens of your specific constraint, showing whether free tier limits are sufficient for your task.
+**Expected Outcome**: Your AI evaluates whether 12 × 40 pages fits in one analysis or needs batching, and recommends the most efficient approach.
 
 ---
 
-**Prompt 4 (Optional Stretch): Plan Your Analysis**
+### Prompt 3: Budget Consideration
+
 ```
-Based on our conversation, create a step-by-step plan for me to analyze my entire
-[PROJECT AREA] using Gemini CLI. What files should I include? What questions should I ask?
+I'm on a limited budget using free tiers only. I need to analyze 50 customer
+feedback emails to find the top 3 complaints. Which tool is most cost-effective:
+Gemini CLI (free tier: 1,000 req/day) or ChatGPT (free tier: limited usage)?
 ```
 
-*Example:*
+**Expected Outcome**: Your AI compares free tier limits against your task and recommends the most economical approach.
+
+---
+
+### Prompt 4: Complex Multi-Step Research
+
 ```
-Based on our conversation, create a step-by-step plan for me to analyze my entire
-authentication system using Gemini CLI. What files should I include? What questions
-should I ask?
+I need to:
+1. Read 5 industry trend reports
+2. Analyze our internal sales data from the past year
+3. Compare to 8 competitor offerings
+4. Identify market gaps we can fill
+
+This is a multi-step research project. Which AI tool can handle this workflow
+most efficiently?
 ```
 
-**Expected Outcome**: A concrete, copyable plan for your analysis—filenames, command structure, and question sequence.
+**Expected Outcome**: Your AI recommends a tool based on the multi-document, multi-step nature of the task and suggests workflow optimizations.
+
+---
+
+### What Success Looks Like
+
+✅ **You completed this successfully if:**
+- Your AI gave specific tool recommendations for your tasks
+- You understand *why* one tool is better for certain situations
+- You can now ask this question for any future task
+- You didn't memorize rules—you learned to consult AI
 
 ---
 
 ### Safety & Ethics Note
 
-When evaluating tools, remember: **All AI tools have trade-offs.**
-- Gemini CLI is powerful but requires terminal familiarity
-- Claude Code has excellent documentation but smaller context windows
-- No tool is perfect for every situation
+**All tools have trade-offs. No tool is perfect.**
 
-Use this guidance to make informed decisions, but remain skeptical of any claims that one tool solves all problems. Real-world development requires combining multiple tools and approaches.
+- Gemini CLI: Powerful context, but requires terminal comfort
+- ChatGPT: User-friendly, but smaller context may require batching
+- Claude: Balanced approach, context between the others
 
-### Next Self-Directed Variation
+When evaluating tools:
+- ✅ Consider your budget constraints
+- ✅ Think about your interface preferences
+- ✅ Evaluate based on actual task needs
+- ⚠️ Be skeptical of "one tool for everything" claims
+- ⚠️ Privacy matters—don't share confidential data unless you trust the platform
 
-After completing the prompts above, try this variation on your next project:
+Real-world work combines multiple tools. This lesson teaches you to choose wisely for each situation.
 
-**Before starting a new task, always ask**: "Is Gemini CLI or [another tool] better for this? Why?"
+---
 
-Make this a habit. Over time, you'll develop intuition about which tool fits which scenario—and you'll know how to ask when you're uncertain.
+### Next: Building on What You've Learned
+
+You now understand:
+- Context windows (reading capacity)
+- When size matters (multi-document tasks)
+- How to ask AI for tool recommendations
+- Personalized decision-making through dialogue
+
+**What's next**: In the upcoming chapters, you'll explore how to integrate these AI tools into real business workflows—automating research, streamlining analysis, and making faster, data-driven decisions.
+
+**But first**: Apply this lesson to a real task this week. Describe your situation, ask your AI which tool to use, and observe how personalized recommendations work in practice.
+
+The skill you've developed—consulting AI about tool selection—will serve you for years as new tools emerge and existing tools evolve.
