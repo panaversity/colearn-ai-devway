@@ -16,12 +16,10 @@
       "Bash(git fetch:*)",
       "WebFetch(domain:github.com)",
       "Bash(.specify/scripts/bash/create-phr.sh:*)",
-      "Bash(git -C /Users/mjs/Documents/code/panaversity-official/tutorgpt-build/colearning-python log --oneline 003-chapter-1-spec -20)",
       "Skill(quiz-generator)",
-      "WebFetch(domain:www.anthropic.com)"
+      "Bash('.specify\\scripts\\bash\\create-phr.sh' --title \"implement-chapter-6-lessons\" --stage implement --feature \"001-chapter-6\" --json)"
     ],
     "deny": [],
     "ask": []
-  },
-  "outputStyle": "lesson"
+  }
 }

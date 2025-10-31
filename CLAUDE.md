@@ -44,6 +44,7 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 - Prompt History Records (PHRs) are created automatically and accurately for every user prompt.
 - Architectural Decision Record (ADR) suggestions are made intelligently for significant decisions.
 - All changes are small, testable, and reference code precisely.
+- When invoking lesson-writer subagent, always ensure the response of the subagents is written in our project. Mostly subagents are unable to write the file. It is your responsibility to ensure that the file is written correctly.
 
 ## Core Guarantees (Product Promise)
 
