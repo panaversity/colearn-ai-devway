@@ -17,7 +17,7 @@ function HomepageHeader() {
           {/* Left side - Book Cover */}
           <div className={styles.heroImageContainer}>
             <img 
-              src="/img/book-cover.png" 
+              src="/img/book-cover-page.png" 
               alt="CoLearning Programming: The AI-Driven Way Book Cover" 
               className={styles.heroBookCover}
             />
@@ -50,7 +50,7 @@ function HomepageHeader() {
             <div className={styles.heroButtons}>
               <Link
                 className={clsx('button button--primary button--lg', styles.ctaButton)}
-                to="/docs/Introducing-AI-Driven-Development">
+                to="/docs/preface-agent-native">
                 <span className={styles.buttonContent}>
                   <span className={styles.buttonText}>Start Reading Free</span>
                   <span className={styles.buttonIcon}>→</span>
@@ -493,7 +493,7 @@ function ParadigmShift() {
               </div>
               <Link
                 className={clsx('button button--primary button--lg', styles.paradigmCTAButton)}
-                to="/docs/Introducing-AI-Driven-Development">
+                to="/docs/preface-agent-native">
                 Begin Your Journey
               </Link>
             </div>

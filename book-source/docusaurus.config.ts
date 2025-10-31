@@ -80,7 +80,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/book-cover.png',
+    image: 'img/book-cover-page.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -120,11 +120,11 @@ const config: Config = {
           items: [
             {
               label: 'Start Your Journey',
-              to: '/docs/Introducing-AI-Driven-Development',
+              to: '/docs/preface-agent-native',
             },
             {
               label: 'Full Curriculum',
-              to: '/docs/Introducing-AI-Driven-Development',
+              to: '/docs/preface-agent-native',
             },
             {
               label: 'Learning Path',
