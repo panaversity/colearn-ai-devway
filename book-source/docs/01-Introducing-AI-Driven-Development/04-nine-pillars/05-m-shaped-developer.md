@@ -123,4 +123,6 @@ The next section addresses this directly: why these nine pillars aren't just hel
 
 ---
 
-**Next:** Why All Nine Pillars Matter Now — Understanding the urgency behind mastering these foundations.
+## What's Next?
+
+Why All Nine Pillars Matter Now — Understanding the urgency behind mastering these foundations.

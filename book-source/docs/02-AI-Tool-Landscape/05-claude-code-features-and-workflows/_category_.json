@@ -1,8 +1,0 @@
-{
-  "label": "Claude Code Features and Workflows",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Master Claude Code through hands-on tutorials covering installation, subagents, agent skills, and MCP server integration. Learn to transform AI from a chat assistant into an active development partner."
-  }
-}

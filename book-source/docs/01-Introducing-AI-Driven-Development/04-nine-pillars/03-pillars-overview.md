@@ -90,13 +90,9 @@ You don't need to choose between frontend and backend, between infrastructure an
 
 We'll explore M-shaped development in detail in Section 5. First, let's understand each pillar individually.
 
-## Coming Up Next
+## What's Next?
+
 
 Each pillar deserves deeper examination. In Section 4, we'll explore what each pillar does, how it works, and why it matters. You'll see concrete examples of each pillar in action and understand the specific barriers each one removes.
 
 The overview gives you the map. The details give you the tools to navigate.
-
----
-
-**Section Duration**: ~4 minutes
-**Key Takeaway**: Nine pillars working together enable capabilities that were impossible individually. Each removes a specific barrier; together they enable M-shaped developers.

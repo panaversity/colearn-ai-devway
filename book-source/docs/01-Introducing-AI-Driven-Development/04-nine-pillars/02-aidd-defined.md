@@ -119,7 +119,3 @@ There's no right answer here. Whether you're at 1 or 5, this chapter will meet y
 You now have a clear definition of AIDD, its nine defining characteristics, and the value proposition. But how do you achieve these characteristics in practice?
 
 In the next sections, we'll explore the **Nine Enabling Technologies**—the concrete tools, practices, and infrastructure that make AIDD characteristics achievable. You'll learn about AI CLI agents, Markdown specifications, MCP standard, AI-first IDEs, and five other foundational technologies. You'll see how these technologies work together to create the specification-driven, AI-augmented, quality-gated development workflow that defines AIDD.
-
----
-
-**Duration**: 3 minutes
