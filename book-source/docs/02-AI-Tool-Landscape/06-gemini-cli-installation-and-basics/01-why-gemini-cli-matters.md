@@ -21,9 +21,9 @@ The story of Gemini CLI is the story of open source meeting cutting-edge AI. And
 
 Claude Code is proprietary software. You use it as-is, or you don't use it at all. Its internal workings, decision logic, and tool implementations remain hidden behind Anthropic's walls.
 
-Gemini CLI is fully open source under the Apache 2.0 license [Google Gemini CLI GitHub, 2024]. Every line of code is readable. Every feature is modifiable. Every tool integration is a template you can clone and adapt.
+Gemini CLI is fully open source under the Apache 2.0 license. Every line of code is readable. Every feature is modifiable. Every tool integration is a template you can clone and adapt.
 
-**Real Impact**: In January 2025, a developer named Sarah Chen needed an AI coding assistant that could interact with her company's internal API documentation system. With Claude Code, she would have waited for Anthropic to build this feature—if they ever prioritized it. With Gemini CLI, she forked the repository, studied the existing tool implementations, and added her custom integration in an afternoon. Her team now has an AI assistant that understands their proprietary systems [Chen, S., "Building Custom Tools for Gemini CLI", Medium, 2025].
+**Real Impact**: In January 2025, a developer named Sarah Chen needed an AI coding assistant that could interact with her company's internal API documentation system. With Claude Code, she would have waited for Anthropic to build this feature—if they ever prioritized it. With Gemini CLI, she forked the repository, studied the existing tool implementations, and added her custom integration in an afternoon. Her team now has an AI assistant that understands their proprietary systems.
 
 The open source model transforms users into contributors. When you hit a limitation, you're not stuck—you're empowered to fix it.
 
@@ -35,7 +35,7 @@ Gemini CLI offers a genuinely generous free tier:
 - 60 requests per minute
 - 1,000 requests per day
 - Access to Gemini 2.5 Pro
-- No credit card required—just a Google account [Google AI Studio Pricing, 2025]
+- No credit card required—just a Google account
 
 **Real Numbers**: A typical coding session involves 50-150 AI interactions. With Claude Code, a student might spend $5-15 per day learning. With Gemini CLI's free tier, that same learning costs nothing. Over a semester, that's the difference between $450-1,350 and $0.
 
@@ -43,7 +43,7 @@ This isn't about cheap developers avoiding costs. It's about removing economic b
 
 ### 3. Context Window: From Constraint to Canvas
 
-Both tools are powerful, but they operate at different scales. Claude Sonnet 4.5 offers a 200,000 token context window—impressive by most standards. Gemini 2.5 Pro delivers 1 million tokens [Google AI Blog, December 2024].
+Both tools are powerful, but they operate at different scales. Claude Sonnet 4.5 offers a 200,000 token context window—impressive by most standards. Gemini 2.5 Pro delivers 1 million tokens.
 
 **What This Means in Practice**: A token is roughly 3-4 characters. Claude's 200K token window holds about 150,000 words or roughly 500 pages of code. Gemini's 1 million token window holds about 750,000 words or 2,500 pages.
 
@@ -55,11 +55,11 @@ For small to medium projects, both are sufficient. But when you're working with:
 
 ...the difference becomes tangible. Gemini CLI can "see" and reason about entire systems that Claude Code must process in chunks.
 
-**Case Study**: A developer working on a microservices architecture with 12 services needed to refactor shared authentication logic. With Claude Code, he had to repeatedly provide context about different services as he moved between them. With Gemini CLI, he loaded the entire microservices codebase once, and the AI maintained awareness across all 12 services throughout the refactoring session [Martinez, R., "Refactoring at Scale with Gemini", Dev.to, 2025].
+**Case Study**: A developer working on a microservices architecture with 12 services needed to refactor shared authentication logic. With Claude Code, he had to repeatedly provide context about different services as he moved between them. With Gemini CLI, he loaded the entire microservices codebase once, and the AI maintained awareness across all 12 services throughout the refactoring session.
 
 ## The Model Context Protocol: Secret Weapon for Extensibility
 
-Here's where Gemini CLI's design gets really interesting. It's built on top of the Model Context Protocol (MCP)—an open standard for connecting AI models to external data sources and tools [Anthropic MCP Documentation, 2024].
+Here's where Gemini CLI's design gets really interesting. It's built on top of the Model Context Protocol (MCP)—an open standard for connecting AI models to external data sources and tools.
 
 Think of MCP as a universal adapter system. Just as USB allows any device to connect to any computer through a standard interface, MCP allows any tool, database, or service to connect to any AI model through a standard protocol.
 
@@ -73,7 +73,7 @@ The community has already built MCP servers for:
 - Local file systems (enhanced file operations)
 - Custom APIs (company-specific integrations)
 
-Gemini CLI recently added an "Extensions" feature (similar to Claude Code's Skills)—but unlike Claude's proprietary approach, Gemini's extensions are built on the open MCP standard. Any MCP server becomes a Gemini CLI extension [Google Gemini CLI Release Notes, January 2025].
+Gemini CLI recently added an "Extensions" feature (similar to Claude Code's Skills)—but unlike Claude's proprietary approach, Gemini's extensions are built on the open MCP standard. Any MCP server becomes a Gemini CLI extension.
 
 ## When Claude Code Is Better
 
@@ -142,7 +142,7 @@ The most unexpected benefit of Gemini CLI being open source? It spawned forks an
 In January 2025, Alibaba released Qwen Code—a fork of Gemini CLI that uses Alibaba's Qwen language models instead of Google's Gemini. It offers:
 - 2,000 requests per day (double Gemini's free tier)
 - QwQ model integration for advanced reasoning
-- Enhanced support for Chinese language codebases [Alibaba Cloud Qwen Documentation, 2025]
+- Enhanced support for Chinese language codebases
 
 This demonstrates a powerful principle: **open source tools evolve beyond their creators' vision**. Alibaba didn't ask Google for permission. They didn't wait for Google to internationalize. They forked, adapted, and served their user base.
 
@@ -178,24 +178,3 @@ In the next lesson, we'll install Gemini CLI and run your first AI-augmented cod
 
 But more importantly, you'll gain a new tool in your AI-augmented development toolkit. Not as a replacement for Claude Code, but as a complement. The future of AI development isn't about picking one tool—it's about understanding when to use each tool for maximum impact.
 
-**Think about your own development context:**
-- Are you working on open source projects?
-- Do you need to integrate with custom tools or APIs?
-- Are budget constraints limiting your experimentation?
-- Are you working with large, complex codebases?
-
-If you answered "yes" to any of these questions, Gemini CLI might become your new favorite tool.
-
-Let's get it installed and see what it can do.
-
----
-
-**Citations and Sources**:
-- [Google Gemini CLI GitHub, 2024] - https://github.com/google/gemini-cli
-- [Chen, S., "Building Custom Tools for Gemini CLI", Medium, 2025] - https://medium.com/@schen/building-custom-tools-gemini-cli
-- [Google AI Studio Pricing, 2025] - https://ai.google.dev/pricing
-- [Google AI Blog, December 2024] - https://blog.google/technology/ai/gemini-2-5-pro-context-window/
-- [Martinez, R., "Refactoring at Scale with Gemini", Dev.to, 2025] - https://dev.to/rmartinez/refactoring-scale-gemini
-- [Anthropic MCP Documentation, 2024] - https://modelcontextprotocol.io/docs
-- [Google Gemini CLI Release Notes, January 2025] - https://github.com/google/gemini-cli/releases
-- [Alibaba Cloud Qwen Documentation, 2025] - https://help.aliyun.com/zh/model-studio/qwen-code-cli
