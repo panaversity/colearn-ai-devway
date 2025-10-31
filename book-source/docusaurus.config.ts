@@ -68,7 +68,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/panaversity/colearn-aidd/tree/main/website/',
+            'https://github.com/panaversity/ai-native-software-development/tree/main/website/',
         },
         blog: false,
         theme: {
@@ -106,7 +106,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/panaversity/colearning-python',
+          href: 'https://github.com/panaversity/ai-native-software-development',
           label: 'GitHub',
           position: 'right',
         },
@@ -158,11 +158,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/panaversity/colearning-python',
+              href: 'https://github.com/panaversity/ai-native-software-development',
             },
             {
               label: 'AI Native Specification',
-              href: 'https://github.com/panaversity/colearning-python/tree/main/specs',
+              href: 'https://github.com/panaversity/ai-native-software-development/tree/main/specs',
             },
             {
               label: 'Example Projects',
