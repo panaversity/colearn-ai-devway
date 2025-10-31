@@ -7,7 +7,7 @@ title: "Creating and Using Agent Skills"
 
 ## The Competitive Advantage Hiding in Plain Sight
 
-You've learned about subagents—specialized assistants you explicitly invoke for focused tasks. But here's a challenge: **you have to remember to use them.**
+You've learned about subagents—specialized assistants claude code main agent explicitly invoke for focused tasks. But here's a challenge: **you will end up building a lot of sub agents for claude code to remember to use them for every new task.**
 
 Imagine you're working on a Python project. You've created a `docstring-writer` subagent to add documentation to functions. But in the flow of development, you forget to invoke it. You write five new functions, commit them, and move on. A week later during code review, you realize: no docstrings.
 

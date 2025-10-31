@@ -37,25 +37,16 @@ Before we begin, verify you have the following:
 **3. Node.js 18+ (for NPM installation method)**
 - Check if installed: `node --version`
 - If not installed: https://nodejs.org (download LTS version)
-- Note: There's also a native installation method that doesn't require Node.js
 
 **4. Internet Connection**
 - Needed for initial download and authentication
 - Claude Code requires connection to communicate with Claude AI
-
-**5. Administrator/Sudo Access**
-- Some installation steps may require elevated permissions
 
 ---
 
 ## Installation: Node.js + NPM
 
 Claude Code installs easily via Node.js package manager (npm). This is the recommended path - it works consistently across Windows, macOS, and Linux.
-
-**Why this approach?**
-- Node.js is widely installed already (check: `node --version`)
-- If needed, easy to install from https://nodejs.org (get LTS version)
-- Once you have Node, Claude Code installation is one command
 
 ---
 
@@ -71,9 +62,10 @@ npm install -g @anthropic-ai/claude-code
 
 **What this does**: Downloads and installs Claude Code globally on your system, making it accessible from any directory.
 
-**Expected output**:
-```
-added 127 packages in 8s
+For macOs/Linux you can use:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 ### Step 2: Verify Installation
@@ -86,13 +78,10 @@ claude --version
 
 **Expected output** (version number may vary):
 ```
-claude-code version 1.2.3
+2.0.30 (Claude Code)
 ```
 
 **If you see the version number**: ✅ Installation successful! Skip to [Authentication](#authentication-connecting-claude-code-to-your-account).
-
-**If you see "command not found"**: See [Troubleshooting: Command Not Found](#troubleshooting-command-not-found).
-
 
 ## Authentication: Connecting Claude Code to Your Account
 
@@ -161,31 +150,6 @@ claude "Hello! Can you confirm Claude Code is working?"
 
 ---
 
-## First Run Verification: Confirming Everything Works
-
-Create a test file, then ask Claude to read it:
-
-```bash
-echo "This is a test file for Claude Code." > test-claude.txt
-claude "Read test-claude.txt and tell me what it says."
-```
-
-**Expected**: Claude reads the file and reports the contents.
-
-**Test 3: Command Execution**
-
-```bash
-claude "Run the command 'echo Success' and show me the output."
-```
-
-**Expected**: Claude executes the command and displays "Success".
-
-**If all three tests pass**: 🎉 **Claude Code is fully installed, authenticated, and working!** You're ready for Lesson 3.
-
-**If any test fails**: Continue to the troubleshooting section below.
-
----
-
 ## If Installation or Authentication Fails
 
 **Most common issues and quick fixes:**
@@ -197,10 +161,6 @@ claude "Run the command 'echo Success' and show me the output."
 **Browser doesn't open for authentication**:
 - Check your internet connection
 - Try again with `[command to authenticate - phase 2 will confirm correct syntax]`
-
-**API Key error (Console users)**:
-- Verify your API key is active: https://console.anthropic.com/keys
-- Create a new key and re-authenticate
 
 **Not sure what went wrong?**:
 - Check official docs: https://docs.claude.com/en/docs/claude-code/troubleshooting
@@ -225,26 +185,19 @@ claude "Run the command 'echo Success' and show me the output."
 
 Before moving forward, let's address important security considerations:
 
-**1. API Key Security**
-
-- ✅ **Do**: Store API keys using Claude Code's built-in secure storage (`claude auth login` or `claude auth set-key`)
-- ❌ **Never**: Store API keys in code, config files, or environment variables that get committed to version control
-- ✅ **Do**: Rotate API keys periodically (every 90 days recommended)
-- ❌ **Never**: Share API keys or commit them to public repositories
-
-**2. File System Access**
+**1. File System Access**
 
 - Claude Code can read and write files in directories where you run it
 - **Best Practice**: Start Claude Code sessions in project directories, not system directories
 - Review file changes Claude proposes before approving them
 
-**3. Command Execution**
+**2. Command Execution**
 
 - Claude Code can execute terminal commands with your permissions
 - **Best Practice**: Review commands Claude suggests, especially `sudo` or administrative commands
 - Claude Code will ask for approval before executing destructive actions
 
-**4. Cost Management (Console API Users)**
+**3. Cost Management (Console API Users)**
 
 - Set usage limits in Claude Console: https://console.anthropic.com/settings/limits
 - Monitor usage regularly to avoid unexpected bills
@@ -254,29 +207,4 @@ Before moving forward, let's address important security considerations:
 
 ## What's Next: Lesson 3 - Subagents
 
-Now that Claude Code is installed and working, you're ready to learn about **subagents**—specialized AI assistants that handle specific tasks with custom instructions and isolated contexts.
-
-In Lesson 3, you'll:
-- Understand when to use subagents versus the main conversation
-- Create your first subagent (a code reviewer)
-- Learn to manage multiple subagents for different tasks
-- See how subagents preserve context and improve efficiency
-
-**By mastering subagents**, you'll transform Claude Code from a general assistant into a specialized team of experts, each focused on specific aspects of your development workflow.
-
-Let's continue building your Claude Code expertise.
-
----
-
-## Key Takeaways
-
-- **Two installation methods**: NPM (for Node.js users) and native installers (platform-specific)
-- **Two authentication paths**: Claude.ai accounts (most common) and Claude Console API keys
-- **95% success rate achievable**: Comprehensive troubleshooting covers most common issues
-- **Security matters**: Store API keys securely, review file changes, monitor usage
-- **Verification is essential**: Test basic interaction, file access, and command execution
-- **Help is available**: Official docs, GitHub issues, and community Discord for support
-
----
-
-**Up Next**: [Lesson 3 - Understanding and Using Subagents](./03-subagents.md)
+Now that Claude Code is installed and working, you're ready to learn about **subagents** - specialized AI assistants that handle specific tasks with custom instructions and isolated contexts.Let's continue building your Claude Code expertise.

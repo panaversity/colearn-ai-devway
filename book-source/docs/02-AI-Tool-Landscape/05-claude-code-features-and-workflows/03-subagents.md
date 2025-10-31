@@ -23,11 +23,11 @@ In this lesson, you'll learn what subagents are, when to use them, and how to cr
 
 ## What Are Subagents?
 
-**Definition**: A subagent is a specialized instance of Claude within Claude Code, configured with custom instructions (called a "system prompt") and isolated context separate from the main conversation.
+**Definition**: A subagent is a specialized task-specific agent for improved context management. They are configured with custom instructions (called a "system prompt") and isolated context separate from the main conversation.
 
 Think of subagents as specialized team members:
 
-- **Main Claude Code**: Your general assistant—handles one-off questions, exploratory tasks, varied workflows
+- **Main Claude Code**: Your general assistant—handles one-off questions, exploratory tasks, varied workflows. It will manage the subagents as well.
 - **Subagent 1 (Code Reviewer)**: Focused solely on reviewing code for bugs, style, and best practices
 - **Subagent 2 (Test Writer)**: Specialized in generating unit tests for functions
 - **Subagent 3 (Documentation Generator)**: Expert at writing clear, comprehensive documentation
@@ -103,23 +103,19 @@ When you create a subagent named `code-reviewer`, Claude Code stores it as:
 ```
 .claude/
 └── agents/
-    └── code-reviewer/
-        ├── agent.json          # Configuration (tools, model)
-        └── SYSTEM_PROMPT.md    # Custom instructions
+    └── code-reviewer.md    # Custom instructions
 ```
 
-**agent.json** (configuration):
-```json
-{
-  "name": "code-reviewer",
-  "description": "Reviews code for bugs, style, and best practices",
-  "tools": ["read", "grep", "glob"],
-  "model": "claude-sonnet-4"
-}
-```
 
-**SYSTEM_PROMPT.md** (custom instructions):
+**code-reviewer.md** (custom instructions):
 ```markdown
+---
+name: chapter-planner
+description: You are a code reviewer specializing in Python.
+model: haiku
+color: blue
+---
+
 You are a code reviewer specializing in Python.
 
 Apply these standards:
@@ -136,8 +132,8 @@ Provide:
 
 ### Subagent Lifecycle
 
-1. **Creation**: You ask Claude Code to create a subagent in conversation (e.g., "Create a subagent called explain-my-code that...")
-2. **Storage**: Claude Code creates files in `.claude/agents/explain-my-code/`
+1. **Creation**: You ask Claude Code to create a subagent in conversation. Run /agents command select Create Agent and share your idea about sub agent. (e.g., "Create a subagent called explain-my-code that...")
+2. **Storage**: Claude Code ask the location project vs user level. After selection it creates files in `.claude/agents/<your_subagent_name>.md`
 3. **Invocation**: You ask Claude Code to use the subagent naturally (e.g., "Use the explain-my-code subagent to explain this code")
 4. **Execution**: The subagent processes the task in isolated context
 5. **Completion**: Results return; context is preserved for next invocation
@@ -161,6 +157,12 @@ claude
 
 Then ask Claude to create the subagent:
 
+1. Use slash command to create a new agent: ```/agents```
+2. Select `Create new agent`. 
+3. Choose location -> Project
+4. Generate with Claude (recommended) 
+5. Descibe your idea:
+
 ```
 Create a subagent called "explain-my-code" with this description:
 "A collaborative partner that explains what code does in simple, conversational terms.
@@ -176,8 +178,9 @@ Claude will create the subagent files automatically in `.claude/agents/explain-m
 
 ### Step 2: Test Your Subagent
 
-Create a sample Python file called `example.py`:
+Ask claude 
 
+Create a sample Python file called `example.py` with:
 ```python
 def calculate_total(items):
     total = 0
@@ -259,158 +262,6 @@ Here are five common scenarios where subagents provide value:
 
 ---
 
-## Managing Subagents: Essential Commands
-
-Once you've created multiple subagents, you'll need to manage them.
-
-### List All Subagents
-
-```bash
-claude agent list
-```
-
-**Output**:
-```
-Available subagents:
-  - code-reviewer       (Reviews Python code)
-  - test-writer         (Generates unit tests)
-  - doc-writer          (Creates API documentation)
-```
-
-### View Subagent Details
-
-```bash
-claude agent show code-reviewer
-```
-
-**Output**: Displays the subagent's configuration and system prompt.
-
-### Edit a Subagent
-
-```bash
-claude agent edit code-reviewer
-```
-
-**What this does**: Opens the system prompt in your default editor for modifications.
-
-### Delete a Subagent
-
-```bash
-claude agent delete test-writer
-```
-
-**Warning**: This permanently removes the subagent files. Use with caution.
-
----
-
-## Exercise: Create Your Own Subagent
-
-Now it's your turn to apply what you've learned.
-
-**Exercise: Build a "Bug Hunter" Subagent**
-
-**Goal**: Create a subagent that specializes in finding common bugs in Python code.
-
-**Requirements**:
-1. Name it `bug-hunter`
-2. Configure it to only use `read`, `grep`, and `glob` tools (no write access)
-3. Write a system prompt that instructs it to look for:
-   - Off-by-one errors in loops
-   - Unhandled exceptions
-   - None checks missing
-   - Division by zero risks
-   - Mutable default arguments
-
-**Steps**:
-1. Create the subagent: `claude agent create bug-hunter`
-2. Edit the system prompt with the requirements above
-3. Test it on a sample file with intentional bugs
-
-**💡 Learning with AI**: As you build this, if you're unsure how to write an effective system prompt, ask Claude Code:
-- "What are common bug patterns to check for in Python?"
-- "How should I structure a system prompt for a bug-finding subagent?"
-- "Can you review my system prompt and suggest improvements?"
-
-Use AI as a learning mentor to understand system prompt best practices, not just to generate the solution.
-
-<details>
-<summary>Show Example Solution</summary>
-
-**System Prompt** (`.claude/agents/bug-hunter/SYSTEM_PROMPT.md`):
-
-```markdown
-# Bug Hunter System Prompt
-
-You are a bug detection specialist for Python code.
-
-## Your Mission
-Scan code for common bug patterns and potential runtime errors.
-
-## Bug Patterns to Detect
-
-1. **Off-by-one errors**
-   - Loop ranges that should be `range(len(x))` but use `range(len(x)-1)` or `range(len(x)+1)`
-   - List indexing that may exceed bounds
-
-2. **Unhandled exceptions**
-   - File operations without try/except
-   - Network calls without error handling
-   - Type conversions (int(), float()) without validation
-
-3. **None checks missing**
-   - Functions that may return None but callers don't check
-   - Optional parameters used without validation
-
-4. **Division by zero risks**
-   - Any division operation where denominator could be zero
-   - Suggest adding checks: `if denominator != 0:`
-
-5. **Mutable default arguments**
-   - Functions with `def func(items=[]):` instead of `def func(items=None):`
-
-## Output Format
-
-List findings with:
-- **Severity**: Critical / Warning / Info
-- **Line number** and code snippet
-- **Explanation** of why it's a bug
-- **Suggested fix**
-
-Focus on actionable, specific findings—not theoretical issues.
-```
-
-**Test File** (`buggy_code.py`):
-
-```python
-def process_items(items=[]):  # Bug: mutable default
-    items.append("new")
-    return items
-
-def divide_values(a, b):  # Bug: no zero check
-    return a / b
-
-def read_config():  # Bug: no error handling
-    with open("config.txt") as f:
-        return f.read()
-
-result = divide_values(10, 0)  # Runtime error!
-```
-
-**Test Command**:
-```bash
-claude agent run bug-hunter "Scan buggy_code.py for potential bugs"
-```
-
-**Expected Output**:
-- Identifies mutable default argument
-- Flags missing zero check in `divide_values`
-- Warns about missing error handling in `read_config`
-- Suggests specific fixes for each
-
-</details>
-
----
-
 ## Subagent Best Practices
 
 **1. Keep System Prompts Focused**
@@ -425,12 +276,7 @@ claude agent run bug-hunter "Scan buggy_code.py for potential bugs"
 - Read-only subagents for analysis tasks
 - Full access only when necessary (e.g., refactoring subagents)
 
-**4. Version Control Your Subagents**
-- Commit `.claude/agents/` to Git
-- Share effective subagents with your team
-- Document what each subagent does in a team README
-
-**5. Iterate and Improve**
+**4. Iterate and Improve**
 - After using a subagent, refine its system prompt
 - Add examples of good/bad outputs to guide behavior
 - Collect feedback from team members
@@ -446,7 +292,7 @@ You've learned how to create specialized AI assistants with subagents. But there
 **The main conversation** is flexible and exploratory, but lacks the focused instructions and clean context that subagents provide.
 
 **Reflection Questions**:
-- Think about your own development workflow. What repetitive tasks could benefit from a specialized subagent?
+- Think about your own daily workflow. What repetitive tasks could benefit from a specialized subagent?
 - When would you prefer the flexibility of the main conversation over a focused subagent?
 - If you work on a team, what subagents could capture and share your team's unique expertise?
 
@@ -454,33 +300,14 @@ You've learned how to create specialized AI assistants with subagents. But there
 
 ## What's Next: Lesson 4 - Agent Skills
 
-Subagents are powerful because you explicitly invoke them: `claude agent run code-reviewer`. But what if Claude Code could **discover and invoke specialized capabilities autonomously**?
+Subagents are powerful because you run in isolation - what if Claude Code could **discover and invoke specialized capabilities autonomously**?
 
-That's what **Agent Skills** enable—modular capabilities that Claude Code discovers and uses without you explicitly calling them.
+That's what **Agent Skills** enable—modular capabilities that Claude Code discovers and uses without explicitly invoking subagent in isolated context. 
 
 In Lesson 4, you'll:
-- Learn the difference between subagents (explicit invocation) and skills (autonomous discovery)
+- Learn the difference between subagents (isolated context invocation) and skills (autonomous discovery)
 - Create your first Agent Skill with a discoverable description
 - Understand how to build a skill library that gives you competitive advantage
 - See how skills scale expertise across teams and projects
 
-**The key insight**: Skills turn your domain expertise into reusable, discoverable AI capabilities that amplify over time.
-
-Let's explore this powerful feature.
-
----
-
-## Key Takeaways
-
-- **Subagents are specialized Claude instances** with custom instructions and isolated context
-- **Use subagents for repetitive, focused tasks** where you need consistency (code reviews, test generation, documentation)
-- **Use main conversation for exploration** and varied tasks where flexibility matters
-- **Three key benefits**: Context preservation, specialization, and reusability
-- **Subagents are files** stored in `.claude/agents/` that can be versioned and shared
-- **System prompts define behavior**: Clear instructions create consistent, valuable assistants
-- **Manage subagents** with `claude agent list/create/edit/delete/run` commands
-- **Best practice**: One responsibility per subagent, descriptive names, appropriate tool access
-
----
-
-**Up Next**: [Lesson 4 - Creating and Using Agent Skills](./04-agent-skills.md)
+**The key insight**: Skills turn your domain expertise into reusable, discoverable AI capabilities that amplify over time. Let's explore this powerful feature.
