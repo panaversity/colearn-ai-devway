@@ -260,17 +260,22 @@ Whatever your starting point, the opportunity is real. The question is what you 
 
 Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-Prompts:
-1) Explain why the current moment is an exceptional opportunity window for AI‑driven development, and include 2 current, cited examples (adoption data, revenue ramps, enterprise usage).
-2) Surface trade‑offs/constraints: risks of being too early vs too late (tool instability, lock‑in, opportunity cost). Propose one mitigation for each.
-3) Apply to a realistic scenario: draft a 30‑day plan (30–60 min/day) with weekly milestones, three tiny deliverables, and a checkpoint to reassess strategy.
-4) Optional: Compare two strategies—“depth on one project” vs “breadth across experiments”—in a short table (learning yield, portfolio signal, risk profile).
+**Prompts:**
 
-Expected outcomes:
-- A concise explanation aligned with THIS lesson’s themes (not generic)
-- At least 1–2 recent, relevant examples with sources or citations
-- Clear articulation of trade‑offs/constraints and how to handle them
-- A short, realistic application or decision scenario tied to the lesson topic
+1) "This lesson claims this is 'the best time in 3-4 decades' to learn software development. Help me understand WHY. What specific barriers have fallen that used to keep people like me out? Use concrete examples (like: no more memorizing syntax, easier debugging, etc.). Make it personal to MY situation [describe your context]."
+
+2) "The lesson talks about different types of people: beginners, experienced developers, entrepreneurs, career changers. I'm [your category]. Explain specifically why THIS moment is opportune for ME. What advantages do I have right now that I won't have in 2-3 years?"
+
+3) "Help me think about timing: The lesson mentions we're in the 'Early Majority' phase of adoption. Explain what that means in simple terms. Am I too early (tools still rough)? Too late (everyone's already learning)? Or is the timing actually good? Give me an honest assessment."
+
+4) "Based on this 'opportunity window' idea, create a simple 30-day action plan for me (30-60 minutes per day). Break it into weekly themes. What should I do in Week 1, Week 2, Week 3, Week 4 to capture this opportunity? Make it concrete and beginner-friendly."
+
+**Expected outcomes:**
+
+- Personal understanding of why barriers have fallen for YOU specifically
+- Clear sense of your unique advantage at this moment in time
+- Realistic assessment of whether now is the right time to start (spoiler: yes)
+- Actionable 30-day plan to begin capturing the opportunity
 
 Safety/ethics note:
 - Verify claims and dates; watch for hallucinations and bias

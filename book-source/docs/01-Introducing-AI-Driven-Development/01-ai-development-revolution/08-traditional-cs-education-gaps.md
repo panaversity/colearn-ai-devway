@@ -256,17 +256,22 @@ In our final section, we'll bring all of this together and set up the journey ah
 
 Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-Prompts:
-1) Explain the core gaps in traditional CS education (AI collaboration, spec‑driven dev, agent orchestration, MCP) and include 2 current, cited references (surveys, curricula analyses, industry reports).
-2) List trade‑offs/constraints of a hybrid path (university + AI‑first practice): risks, time costs, missing foundations. Propose one mitigation per risk.
-3) Apply to a realistic scenario: draft a weekly (5–7 hrs) hybrid plan pairing foundations with AI‑augmented practice and name concrete resources.
-4) Optional: Propose a 3‑step portfolio ladder (beginner/intermediate/advanced) with acceptance criteria and “done” definitions.
+**Prompts:**
 
-Expected outcomes:
-- A concise explanation aligned with THIS lesson’s themes (not generic)
-- At least 1–2 recent, relevant examples with sources or citations
-- Clear articulation of trade‑offs/constraints and how to handle them
-- A short, realistic application or decision scenario tied to the lesson topic
+1) "This lesson says traditional CS education teaches 'how to be a developer in 2015' when we're in 2025. Help me understand: What are the top 3 critical skills I need in 2025 that universities DON'T teach? Explain each one in simple terms so I know what I'm missing."
+
+2) "I'm trying to decide my path: Should I [pursue a CS degree / learn on my own / do both]? The lesson suggests a 'hybrid' approach. Help me think through the pros and cons of each path FOR MY SITUATION [describe your context: time, money, goals]. Be honest about trade-offs."
+
+3) "The lesson lists 5 gaps: (1) AI collaboration, (2) spec-driven development, (3) agent orchestration, (4) Model Context Protocol, (5) real-world problem solving. Pick the ONE most important gap for a beginner and explain: what it is, why it matters, and ONE simple way I can start learning it this week."
+
+4) "Create a balanced learning plan for me: If I have [X hours per week], how should I split my time between 'foundational' knowledge (algorithms, how computers work) and 'modern practice' skills (AI tools, building real projects)? Give me a percentage split and explain your reasoning."
+
+**Expected outcomes:**
+
+- Clear understanding of what's missing from traditional CS education
+- Personalized guidance on your learning path (degree, self-taught, or hybrid)
+- Deep dive into ONE critical skill gap you can address immediately
+- Balanced time allocation strategy between foundations and modern practice
 
 Safety/ethics note:
 - Verify claims and dates; watch for hallucinations and bias

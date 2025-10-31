@@ -154,17 +154,22 @@ In the next section, we'll look at how this transformation affects every single 
 
 Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-Prompts:
-1) Explain “software disrupting itself” vs external disruption in 150–200 words, with 2 current, cited examples (e.g., tool adoption rates, enterprise reports, benchmarks).
-2) List trade‑offs/constraints for rapid self‑disruption (governance, vendor risk, quality drift). Propose 1–2 guardrails for each.
-3) Apply to a realistic scenario: draft a short internal recommendation to pilot AI coding tools with scope, success criteria, and rollback conditions.
-4) Optional: Compare this shift to cloud or mobile adoption in a 4–6 row table (timeline, resistance, affected roles, compounding effects).
+**Prompts:**
 
-Expected outcomes:
-- A concise explanation aligned with THIS lesson’s themes (not generic)
-- At least 1–2 recent, relevant examples with sources or citations
-- Clear articulation of trade‑offs/constraints and how to handle them
-- A short, realistic application or decision scenario tied to the lesson topic
+1) "This lesson explains 'software disrupting itself.' Help me understand this concept using a simple analogy. How is this different from when software disrupted other industries (like retail or transportation)? Why is it happening SO much faster this time?"
+
+2) "The lesson says there's 'no external resistance' to AI coding tools—developers are adopting them enthusiastically. But I'm wondering: should I be cautious? What are 2-3 things that could go wrong if I jump in too quickly? And what are 2-3 things I'll miss out on if I wait too long?"
+
+3) "I'm [your context: learning to code / considering a career change / running a small business]. Based on this 'self-disruption' pattern, what's my smart move? Should I learn traditional coding first, or jump straight into AI-augmented development? Give me a clear recommendation with your reasoning."
+
+4) "The lesson mentions a 'recursion effect'—AI tools being used to improve AI tools. Explain what this means for me as a learner. Will the tools keep getting better? Should I worry that what I learn today will be obsolete tomorrow?"
+
+**Expected outcomes:**
+
+- Simple, clear understanding of what "software disrupting itself" means
+- Balanced view of risks (moving too fast) and opportunity costs (moving too slow)
+- Personalized guidance on your learning strategy based on your context
+- Confidence that learning AI collaboration is a durable skill, not a fleeting trend
 
 Safety/ethics note:
 - Verify claims and dates; watch for hallucinations and bias

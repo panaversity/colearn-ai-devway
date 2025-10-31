@@ -77,17 +77,22 @@ Let's look at the numbers.
 
 Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
 
-Prompts:
-1) Explain in 150–200 words why AI‑driven development is a turning point right now, and include 2 current, cited examples (e.g., adoption or productivity studies, competitions, or enterprise reports) with links.
-2) List the top trade‑offs and constraints of adopting AI‑augmented workflows early (quality risks, privacy, compliance, skill gaps). Propose one practical mitigation per risk.
-3) Apply this to a realistic scenario: outline a 2‑week, 30–60 min/day plan to get momentum, with 3 tiny weekly deliverables and one checkpoint to reassess.
-4) Optional: Compare “AI‑augmented coding” vs “traditional CS‑first learning” in a 4–6 row table (focus, speed to impact, failure modes, assessment style, artifacts).
+**Prompts:**
 
-Expected outcomes:
-- A concise explanation aligned with THIS lesson’s themes (not generic)
-- At least 1–2 recent, relevant examples with sources or citations
-- Clear articulation of trade‑offs/constraints and how to handle them
-- A short, realistic application or decision scenario tied to the lesson topic
+1) "I just read about Sarah Chen building a dashboard in 48 hours using AI. Help me understand: Is this kind of speed really possible for someone without a traditional programming background? What makes 2024-2025 different from, say, 2020? Give me 2 concrete examples of why AI tools have reached this 'turning point.'"
+
+2) "I'm interested in learning to build with AI, but I'm cautious. What are 3 realistic concerns or risks I should be aware of (like: will I understand the code? what about security? will I become dependent on tools?)? For each concern, suggest one practical way to stay safe while learning."
+
+3) "Create a realistic 2-week starter plan for me (30-60 minutes per day). I want to see if I can actually build something small but real. Break it into week 1 and week 2, with simple daily activities and 1-2 tiny projects I can complete to prove to myself this works."
+
+4) "Based on what we've discussed, explain: If I'm learning to build solutions in 2025 with AI as my partner, what should I focus on learning that will stay relevant? What can I safely let AI handle? Give me a practical framework I can use."
+
+**Expected outcomes:**
+
+- Clear understanding of why this moment is different (with real-world proof, not hype)
+- Honest assessment of risks and how to mitigate them as a beginner
+- A concrete, actionable 2-week plan you can start today
+- Clarity on what to learn vs. what to delegate to AI
 
 Safety/ethics note:
 - Verify claims and dates; watch for hallucinations and bias
