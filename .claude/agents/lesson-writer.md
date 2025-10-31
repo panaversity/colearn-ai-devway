@@ -36,6 +36,7 @@ The book contains different chapter archetypes with different requirements:
 ## Core Responsibilities
 
 You will receive lesson plans (typically from the chapter-planner agent) that contain learning objectives, key topics, and structural guidance. Your job is to write the actual lesson markdown content that:
+- Follows the sequence: Specification reference → AI Prompt(s) used → Generated Code (when technical) → Validation steps/results
 - Teaches concepts progressively from simple to complex (all chapter types)
 - Includes code examples when appropriate to chapter type (technical chapters)
 - Provides practice opportunities appropriate to content (exercises for technical, reflection prompts for conceptual)
@@ -43,6 +44,7 @@ You will receive lesson plans (typically from the chapter-planner agent) that co
 - Maintains technical accuracy and clarity (all chapters)
 - Aligns with the 9 mandatory CoLearning Domain Skills (applied contextually)
 - Follows the lesson.md output style template as a guide, adapting to chapter type
+
 
 ## Required Skills (All 9 Applied Contextually)
 
@@ -73,7 +75,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 
 7. **book-scaffolding** — Ensure lesson flows logically within the chapter and connects to adjacent lessons (all chapters)
 
-8. **ai-augmented-teaching** — Frame AI appropriately based on chapter type
+8. **ai-collaborate-learning** — Frame AI appropriately based on chapter type
    - Technical chapters: AI as coding partner and learning tool
    - Conceptual chapters: Understanding AI's role in development
 
@@ -171,10 +173,11 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - Use assessment-builder to create checkpoint quizzes
    - Use technical-clarity to review and simplify language
    - Use book-scaffolding to ensure flow and connection
-   - Use ai-augmented-teaching to frame AI appropriately
+   - Use ai-collaborate-learning to frame AI appropriately
 
 4. **Write Content**: Produce the lesson markdown with all required sections
    - Resolve the "Try With AI" tool selection per the policy above (pre-tools → ChatGPT web; post-tools → learner’s AI companion). Include prompts and expected outcomes accordingly.
+   - At first occurrence of generated code in a lesson, add a small block listing: Spec reference, Prompt(s) used, Validation steps/results.
 
 5. **Self-Validate** (adapt checklist to chapter type):
 

@@ -14,6 +14,28 @@ allowed-tools: [Read, Bash, Write]
 
 The code-example-generator skill helps authors create runnable, well-structured Python code examples that clearly demonstrate specific concepts for learners. This skill produces examples that are pedagogically sound, follow Python best practices, and are validated for correctness through syntax checking and optional sandbox execution.
 
+> Requirements (Spec-First, Validation-First)
+>
+> - A reference to an approved chapter specification is required (path to spec file)
+> - For generated examples, include the exact AI prompt(s) used and document validation steps/results (tests, scripts)
+> - Do not generate examples without linking to a specification and a validation plan
+
+### Minimal test snippet template
+```
+def test_example_basic():
+    # Arrange
+    # [setup]
+    # Act
+    # [call]
+    # Assert
+    assert ...
+```
+
+### Security lint checklist
+- [ ] No hardcoded secrets/tokens
+- [ ] Input validation present when parsing external data
+- [ ] Safe defaults and error handling
+
 ## When to Activate
 
 Use this skill when:
@@ -253,10 +275,29 @@ Include:
 
 ## Output Format
 
-Provide complete code example as structured markdown:
+Provide complete code example as structured markdown (include Spec/Prompt/Validation header on first example per lesson):
 
 ```markdown
 # Example: [Title]
+
+Spec/Prompt/Validation
+```
+Spec: [path/to/specs/part-X/chapter-Y-spec.md]
+Prompt(s):
+- "[Exact prompt text used]"
+Validation:
+- Syntax: scripts/validate-syntax.py (pass)
+- Execution: _shared/sandbox-executor.py (pass)
+- Tests: include minimal test snippet (passes)
+```
+
+### Failure mode example (intermediate+)
+```
+## Failure Case
+Input: [bad input]
+Expected: Raises ValueError with message "..."
+```
+```
 
 **Concept**: [Primary concept]
 **Level**: [beginner/intermediate/advanced]

@@ -73,6 +73,11 @@ When validating a single lesson, evaluate:
   - Post-tool onboarding: instruct learners to use their preferred AI companion tool among those taught (e.g., Gemini CLI, Claude CLI); variants acceptable.
   - If chapter position is ambiguous, default to ChatGPT web and include a note allowing use of the learner’s AI companion if already set up.
 
+**F. Must-Pass Gates (Quality Safeguards)**
+- Acceptance criteria from the chapter specification are referenced and met for the lesson scope
+- Technical lessons: First occurrence of generated code documents Spec reference → Prompt(s) used → Validation steps/results
+- Conceptual lessons: All factual claims include inline sources; volatile fields include maintenance triggers
+
 ### PHASE 3: CHAPTER-LEVEL VALIDATION
 
 When validating a complete chapter, evaluate:

@@ -173,7 +173,7 @@ Are all 9 CoLearning Domain Skills applied appropriately for the chapter type?
   - **concept-scaffolding**: Progressive complexity, prerequisites addressed
   - **technical-clarity**: Accessibility, avoiding jargon, clear explanations
   - **book-scaffolding**: Proper chapter structure, alignment with part and chapter index
-  - **ai-augmented-teaching**: Emphasis appropriate to chapter type
+  - **ai-collaborate-learning**: Emphasis appropriate to chapter type
 
 **Technical Chapters Must Also Have:**
   - **code-example-generator**: Type hints, tested examples, clear output, cross-platform tested
@@ -324,7 +324,7 @@ Generate a structured validation report in markdown:
 - [x] Required domain skills demonstrated contextually (1, 2, 6, 7, 8 for all; 3, 4, 5 as appropriate)
 - [x] Code standards met (if applicable: typing, testing, PEP 8, security, cross-platform)
 - [x] Accessibility principles applied
-- [x] "Learning WITH AI" emphasis present and appropriate
+- [x] "Learning WITH AI" emphasis present and appropriate; spectrum noted (Assisted vs Driven vs Native) when relevant
 - [x] All ALWAYS DO rules followed
 - [x] No NEVER DO rules violated
 - [x] Book Gaps Checklist items verified (factual accuracy, field volatility, inclusivity, engagement, ethical/security for technical)
@@ -406,6 +406,7 @@ Generate a structured validation report in markdown:
 - [ ] All links and references functional
 - [ ] Recommendation justified and clear
 - [ ] AI-first closure policy verified (final "Try With AI" in each lesson; correct tool selection per chapter position; no "Key Takeaways"/"What's Next")
+- [ ] Spec → Prompt(s) → Code → Validation sequence present for technical content (first occurrence must document this sequence)
 
 ### Phase 4.5: Chapter README.md Validation
 

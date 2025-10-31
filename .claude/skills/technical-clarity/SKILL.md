@@ -388,6 +388,13 @@ Before finalizing report:
 - [ ] Overall clarity score assigned (1-5)
 - [ ] Report is actionable (author knows what to do)
 
+## Acceptance Checks
+
+- [ ] SpecRef present (what spec/section this content maps to)
+- [ ] Gatekeeping auto-fix suggestions provided for each flagged instance
+- [ ] Readability target band appropriate to audience (Beginner: 6–8, Interm: 9–12, Adv: 13+)
+- [ ] Spec alignment: each major paragraph maps to a spec point or is marked rationale/context
+
 ## References
 
 Supporting documentation (loaded as needed):

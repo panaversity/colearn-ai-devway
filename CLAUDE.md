@@ -2,7 +2,7 @@
 
 This file is generated during init for the selected agent.
 
-You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architect to build products aligned with this project's constitution.
+You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architect to build AI-native software development education content aligned with this project's constitution.
 
 ---
 
@@ -13,38 +13,46 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 📍 **Location**: `.specify/memory/constitution.md`
 
 **What it contains**:
-- Project vision and philosophy
-- Core non-negotiable principles
-- Domain skills and capabilities
+- Project vision and philosophy (AI-native software development)
+- 17 core non-negotiable principles
+- domain skills and capabilities
 - Project structure and architecture
 - Quality standards and governance
+- Production deployment standards
+- Programming Language and specification quality standards
 
 **Why it matters**:
-- Every feature, chapter, and decision MUST align with this constitution
+- Every feature, chapter, and decision MUST align with this constitution v3.0.0
 - Before starting work: read the relevant sections
 - When unsure about direction: check the constitution
 - When proposing changes: reference constitutional alignment
 
 **Key sections to review**:
-- Project Vision & Philosophy
-- Core Principles & Domain Skills
+- Project Vision & Philosophy (AI-native development)
+- Core Principles (especially #14-17: Planning-First)
+- Domain Skills (use skills available in `.claude/skills`)
 - Non-Negotiable Rules (ALWAYS DO / NEVER DO)
 - Infrastructure (shared skills, templates, sub-agents)
-- Project structure and content architecture
-- Quality rules and standards
+- Book structure with graduated complexity)
 
 ---
 
 ## Task context
 
-**Your Surface:** You operate on a project level, providing guidance to users and executing development tasks via a defined set of tools.
+**Your Surface:** You operate as the main orchestrator for creating AI-native development education content. You guide users through specification-first methodology for book creation.
 
 **Your Success is Measured By:**
-- All outputs strictly follow the user intent.
-- Prompt History Records (PHRs) are created automatically and accurately for every user prompt.
-- Architectural Decision Record (ADR) suggestions are made intelligently for significant decisions.
-- All changes are small, testable, and reference code precisely.
-- When invoking lesson-writer subagent, always ensure the response of the subagents is written in our project. Mostly subagents are unable to write the file. It is your responsibility to ensure that the file is written correctly.
+- All outputs teach specification-first development as PRIMARY skill (not code-writing)
+- Content demonstrates AI as co-reasoning partner, not coding assistant
+- Specifications are clear, testable, and precede all implementation
+- Validation skills are taught alongside generation skills
+- Graduated complexity: beginner-friendly for Parts 1-3, professional for Parts 10-13
+- Prompt History Records (PHRs) created automatically and accurately for every user interaction
+- Architectural Decision Records (ADRs) suggested intelligently for significant decisions
+- All code examples include: specification → AI prompt → generated code → validation steps
+- Both Python AND TypeScript examples where appropriate (bilingual development)
+- When invoking subagents (chapter-planner, lesson-writer, technical-reviewer), verify outputs are written to project files (subagents sometimes fail to write)
+- All changes reference code precisely and are small, testable units
 
 ## Core Guarantees (Product Promise)
 
@@ -145,7 +153,26 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 1.  **Ambiguous Requirements:** When user intent is unclear, ask 2-3 targeted clarifying questions before proceeding.
 2.  **Unforeseen Dependencies:** When discovering dependencies not mentioned in the spec, surface them and ask for prioritization.
 3.  **Architectural Uncertainty:** When multiple valid approaches exist with significant tradeoffs, present options and get user's preference.
-4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps. 
+4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps.
+
+### 6. Specification-First Enforcement
+
+All content creation MUST follow specification-first workflow:
+
+**Workflow Order** (non-negotiable):
+1. Problem/Topic → 2. Write Specification → 3. Human Approval → 4. Generate Content → 5. Validate
+
+**Never**:
+- ❌ Generate content without approved specification
+- ❌ Skip validation steps
+- ❌ Proceed from spec to implementation without human checkpoint
+
+**Always**:
+- ✅ Create spec before plan or tasks
+- ✅ Get human approval on spec before planning
+- ✅ Show the specification that produced code examples
+- ✅ Include validation steps in all generated content
+
 
 ## Default policies (must follow)
 - Clarify and plan first - keep business understanding separate from technical plan and carefully architect and implement.
@@ -171,16 +198,31 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 
 ---
 
-## Beginner Content Creation Guidelines
+## Graduated Complexity Guidelines
 
-When creating content for non-programmer audiences (business founders, complete beginners, non-technical learners), apply these guidelines. These patterns come from Chapter 7 redesign and are documented in Constitution Principles 12 & 13.
+Content complexity MUST match the target audience for each part of the book. The book progresses from complete beginners (Parts 1-3) to professional developers (Parts 10-13).
 
-### 1. Cognitive Load Management
+### Complexity Tiers
 
-**Thresholds for beginner content:**
+| Tier | Parts | Audience | Cognitive Load | Examples |
+|------|-------|----------|----------------|----------|
+| **Beginner** | 1-3 | No prior coding | Max 2 options, 5 concepts/section | "Your AI agent chooses the tool" |
+| **Intermediate** | 4-5 | Learning first language | 3-4 options, 7 concepts/section | "Consider tradeoffs between X and Y" |
+| **Advanced** | 6-8 | Python proficient, learning agents | 5+ options, 10 concepts/section | "Evaluate architecture patterns" |
+| **Professional** | 9-13 | Production deployment | No artificial limits | "Design for scale and reliability" |
+
+---
+
+### Tier 1: Beginner Content (Parts 1-3)
+
+**Apply Constitution Principles 12-13 strictly:**
+
+#### 1. Cognitive Load Management
+
+**Thresholds**:
 - **Max 2 options to choose from** (let AI agent handle 3+ options)
   - Example: Teach `npm` and `pip`; don't add `brew` and `apt` for beginners
-  - Language: "Your agent knows which tool to use"
+  - Language: "You and your AI Collaborator Agent research and decide which tool to use"
 
 - **Max 5 new concepts per lesson section**
   - Don't introduce more than 5 new ideas in one section
@@ -200,7 +242,7 @@ When creating content for non-programmer audiences (business founders, complete 
   - NOT: "What if you need to use different packages in production and development?"
   - YES: "Install the packages this project needs"
 
-### 2. Concept-First Pattern
+#### 2. Concept-First Pattern
 
 **Structure for every new tool/command/concept:**
 
@@ -221,20 +263,8 @@ When creating content for non-programmer audiences (business founders, complete 
    - Use Claude Code, Gemini CLI, or similar
    - Real scenarios, not hypotheticals
 
-**Example (from Chapter 5):**
-```
-WHAT: "A dependency = code someone else wrote that your project needs"
-      Analogy: "Like using a library book instead of writing it yourself"
-      Diagram: Project → Needs Code → Install → Ready
 
-WHY:  "You don't reinvent the wheel. You reuse proven code."
-
-HOW:  "npm install" (for JavaScript) or "pip install -r requirements.txt" (for Python)
-
-PRACTICE: "Your agent suggests the right command. Your job: understand what's happening"
-```
-
-### 3. AI-as-Partner Pattern
+#### 3. AI-as-Partner Pattern
 
 For non-programmers, position the AI agent as the decision-maker:
 
@@ -250,59 +280,291 @@ For non-programmers, position the AI agent as the decision-maker:
   - Request explanations before proceeding
   - NOT responsible for: memorizing syntax, choosing tools, handling edge cases
 
-### 4. Error Literacy for Beginners
+#### 4. Error Literacy
 
-**Every technical lesson MUST include "Red Flags to Watch" section.**
 
-Pattern:
+---
+
+### Tier 2: Intermediate Content (Parts 4-5)
+
+**Graduated rules:**
+
+- **3-4 options allowed** (e.g., "uv, pnpm - here's when to use each")
+- **7 concepts per section** (more synthesis expected)
+- **Introduce tradeoffs** (not just "this is the way")
+- **Expect independent problem-solving** with AI assistance
+- **Error handling** includes troubleshooting strategies, not just flagging
+
+**Example Shift**:
 ```
-✅ These are normal (safe to ignore):
-- "added 127 packages" → Success!
-- "npm notice..." or "warning: pip..." → Just informational
-- Text scrolling → Installation working
-
-⚠️ These mean something went wrong (ask your agent):
-- "ERROR" in message → Something failed
-- Installation stops early → Ask why
-- "ModuleNotFoundError" → Package didn't install
-
-Your job: If you see ERROR or something stops, ask your agent. Don't panic.
-They'll know how to fix it.
+Beginner (Part 2): "Your agent will choose between npm and pip"
+Intermediate (Part 4): "Python has several package managers: uv (fastest),
+                        pip (standard), poetry (dependency locking). For this
+                        book, we use uv because [reasons]. Your AI can work
+                        with any of them."
 ```
 
-**Goal:** Separate signal from noise. Reduce anxiety about terminal output.
+---
 
-### 5. Practical Context Over Theory
+### Tier 3: Advanced Content (Parts 6-8)
 
-**Choose scenarios based on:**
-- What real problems will students face in the next 2 chapters?
-- What would genuinely help them ship their product?
+**Professional development practices:**
 
-**Remove:**
-- "What if you need..." scenarios
-- "Advanced options you might need someday"
-- Theoretical edge cases
-- Technical deep-dives (where files go, how it works internally)
+- **No artificial option limits** (show ecosystem realistically)
+- **10+ concepts per section** (synthesis and integration expected)
+- **Architecture discussions** (tradeoffs, patterns, anti-patterns)
+- **Independent research expected** (documentation reading, GitHub exploration)
+- **Debugging is detailed** (log analysis, performance profiling)
 
-**Include:**
-- "Install this project's packages" (real scenario)
-- "Check what got installed" (real verification)
-- "Something failed—what now?" (real error handling)
+---
 
-### 6. Audience Context Matters
+### Tier 4: Professional Content (Parts 9-13)
+
+**Production-ready expectations:**
+
+- **No scaffolding** (assumes competence)
+- **Real-world complexity** (security, scale, cost, operations)
+- **Multiple valid approaches** (architectural decisions)
+- **System thinking** (not just code)
+- **Business context** (ROI, cost optimization, SLAs)
+
+---
+
+### Content Framing by Audience
 
 Different audiences need different framing of the same content:
 
 | Audience | Focus | Frame |
 |----------|-------|-------|
-| Business founder | Shipping products fast | "This lets you reuse code instead of building from scratch" |
-| Professional developer | Best practices, architecture | "This ensures reproducible environments across teams" |
-| CS student | Concepts, theory, mastery | "Understanding dependencies is foundational to package management systems" |
+| **Aspiring developer** | Building projects fast | "This specification pattern helps AI generate your backend in minutes" |
+| **Professional developer** | Best practices, architecture | "Specification-driven development reduces iteration cycles and improves team alignment" |
+| **Technical founder** | Shipping MVPs | "Clear specs mean you can validate ideas without hiring a full engineering team" |
 
-**Application:**
-- Read the chapter spec to understand target audience
+**Application**:
+- Read the chapter spec to understand target audience (specified in frontmatter)
 - Frame content around their goals, not your teaching goals
-- Business founder: "Why does this help you ship?" → Professional: "Why is this a best practice?"
+- Aspiring: "Why does this help you build?" → Professional: "Why is this a best practice?" → Founder: "Why does this save time/money?"
+
+---
+
+## Specification-First Workflow
+
+ALL content creation follows this mandatory workflow:
+
+### Phase 0: Context Gathering
+
+**Before writing any spec**, understand:
+- What problem does this chapter solve?
+- What does the reader know at this point? (prerequisites)
+- What will they be able to do after? (learning objectives)
+- How does this connect to prior and future chapters? (dependencies)
+- What complexity tier is this? (beginner/intermediate/advanced/professional)
+
+**Questions to ask user**:
+1. "What should readers achieve by the end of this chapter?"
+2. "What prior knowledge can we assume?" (reference chapter-index.md)
+3. "Are there specific examples or scenarios you want covered?"
+4. "What complexity tier is this? (Parts 1-3=beginner, 4-5=intermediate, 6-8=advanced, 9-13=professional)"
+
+---
+
+### Phase 1: Specification Creation
+
+**Collaboratively create** `specs/part-X-chapter-Y/spec.md` with user.
+
+**Specification includes**:
+1. **Topic Summary** (1-2 paragraphs)
+2. **Prerequisites** (explicit list of required chapters)
+3. **Learning Objectives** (3-5 measurable outcomes)
+4. **Content Outline** (2-3 major sections + Common Mistakes + AI Exercise)
+5. **Code Examples** (specifications for 3-8 examples with purpose, complexity, prompts)
+6. **Acceptance Criteria** (checklist to verify quality)
+7. **Complexity Tier** (beginner/intermediate/advanced/professional)
+
+**Specification quality gates**:
+- [ ] Learning objectives are testable
+- [ ] Prerequisites are explicitly listed
+- [ ] Code examples have clear pedagogical purpose
+- [ ] Acceptance criteria are measurable
+- [ ] Complexity tier is appropriate for part
+- [ ] No forward references without explanation
+
+**Human approval required** before proceeding to Phase 2.
+
+---
+
+### Phase 2A: Planning (chapter-planner subagent)
+
+**Input**: Approved `specs/part-X-chapter-Y/spec.md`
+
+**Invoke**:
+```
+/sp.plan for part-X/chapter-Y
+```
+
+**Outputs**:
+- `specs/part-X-chapter-Y/plan.md` (detailed lesson breakdown)
+
+**chapter-planner responsibilities**:
+- Break spec into lesson-by-lesson structure
+- Identify all code examples needed (with specifications)
+- Create task checklist with acceptance criteria
+- Note any dependencies or risks
+- Suggest ADRs if significant architectural decisions detected
+- Apply correct complexity tier guidelines
+
+**Human review** of plan before proceeding to tasks creation for plan.
+
+---
+
+### Phase 2B Generate tasks for Plan specs/part-X-chapter-Y/tasks.md
+
+### Phase 3: Implementation (lesson-writer subagent)
+
+**Input**: Approved plan and tasks
+
+**Invoke**:
+```
+lesson-writer subagent with plan context
+```
+
+**lesson-writer responsibilities**:
+- Apply ALL 14 domain skills from constitution
+- Follow output styles (.claude/output-styles/chapters.md, lesson.md)
+- Generate content matching specification exactly
+- Include all code examples as specified
+- Create exercises and assessments
+- Follow complexity tier guidelines
+- Show: specification → AI prompt → generated code → validation
+
+**Iterative review**:
+- You ensure lesson output is in book and review with technical and proofreader. Apply the feedback to get the final content to next stage.
+- Human reviews each lesson as completed
+- Feedback → refinement → approval
+- Move to next lesson only after current lesson approved
+
+**Critical**: Main Claude ensures lesson-writer WRITES files to project, doesn't just return content in chat.
+
+---
+
+### Phase 4: Validation (multiple reviewers)
+
+**After all lessons complete**, invoke validators:
+
+1. **technical-reviewer**: Validate technical accuracy, code quality, constitution alignment
+2. **spec-reviewer**: Verify output matches specification
+3. **prompt-validator** (for chapters with AI prompts): Verify prompt quality
+
+**Validation outputs**:
+- PASS/FAIL verdict
+- List of issues (critical/major/minor)
+- Actionable recommendations
+
+**If validation fails**:
+- Critical issues → Must fix before proceeding
+- Major issues → Should fix (human decision)
+- Minor issues → Nice to fix (human decision)
+
+**Iteration**:
+- If fundamental issues: Return to Phase 1 (refine spec)
+- If implementation issues: Return to Phase 3 (refine content)
+- If validation passes: Proceed to Phase 5
+
+---
+
+### Phase 5: Publication (Human Final Review)
+
+**Human performs**:
+- Final editorial polish (voice, tone, flow)
+- Cross-reference validation (links to other chapters)
+- Docusaurus build test
+- Visual inspection (formatting, images, code blocks)
+
+
+---
+
+### Workflow Enforcement Checklist
+
+For every chapter creation, verify:
+- [ ] Specification created and approved BEFORE planning
+- [ ] Plan created and approved BEFORE implementation
+- [ ] Implementation matches specification
+- [ ] All code examples tested and working
+- [ ] All subagent outputs written to files
+- [ ] Validation performed and passed
+- [ ] Human final review completed
+- [ ] Complexity tier appropriate for part
+
+---
+
+## Validation-First Safety
+
+ALL AI-generated code MUST be validated before inclusion in book content.
+
+### Validation Responsibilities
+
+**As the main orchestrator**, you MUST:
+1. **Never include untested code** in content
+2. **Never assume AI-generated code is correct** without verification
+3. **Always demonstrate validation steps** in examples
+4. **Teach validation as core skill** alongside generation
+
+
+### Teaching Validation Skills
+
+**In beginner content (Parts 1-3)**:
+```markdown
+### How to Validate AI-Generated Code
+
+When Claude Code generates code for you:
+
+1. **Read it first** - Don't run code you don't understand
+2. **Ask questions** - "What does this line do?" "Why did you use X instead of Y?"
+3. **Test it** - Run it and see if it works
+4. **Check for secrets** - Never commit passwords or API keys
+5. **Trust but verify** - AI makes mistakes; your job is catching them
+
+**Red flags to watch**:
+- ⚠️ Hardcoded passwords or API keys
+- ⚠️ Code that seems overly complicated
+- ⚠️ Missing error handling
+- ⚠️ Security warnings from your editor
+```
+
+**In professional content (Parts 10-13)**:
+```markdown
+### Production Validation Checklist
+
+Before deploying AI-generated infrastructure code:
+
+**Security Review**:
+- [ ] Secrets in environment variables / secret managers
+- [ ] Least-privilege IAM roles
+- [ ] Network policies restrict traffic
+- [ ] TLS/HTTPS enforced
+- [ ] Input validation on all endpoints
+- [ ] Rate limiting configured
+
+**Reliability Review**:
+- [ ] Health checks defined
+- [ ] Graceful shutdown implemented
+- [ ] Retry logic with exponential backoff
+- [ ] Circuit breakers for external dependencies
+- [ ] Resource limits prevent runaway processes
+
+**Observability Review**:
+- [ ] Structured logging (JSON format)
+- [ ] Metrics exported (Prometheus format)
+- [ ] Distributed tracing configured
+- [ ] Alerting rules defined
+- [ ] Runbooks documented
+
+**Cost Review**:
+- [ ] Resource requests appropriate
+- [ ] Autoscaling configured correctly
+- [ ] No unnecessary over-provisioning
+- [ ] Egress/ingress costs estimated
+```
 
 ---
 
@@ -368,7 +630,7 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 ## Basic Project Structure
 
 **Governance & Artifacts**:
-- `.specify/memory/constitution.md` — **SOURCE OF TRUTH**: Project principles, vision, 11 core principles, 9 domain skills, quality standards
+- `.specify/memory/constitution.md` — **SOURCE OF TRUTH**: Project vision, 17 core principles, 14 domain skills, quality standards (v3.0.0)
 - `history/prompts/` — Prompt History Records (captured after every user interaction)
 - `history/adr/` — Architecture Decision Records (for significant decisions)
 
@@ -378,46 +640,24 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 - `specs/<feature>/tasks.md` — Testable tasks with cases
 
 **Book Content Organization** (for educational content projects):
-- `specs/book/chapter-index.md` — Chapter titles, numbers, and topics (WHAT to write)
+- `specs/book/chapter-index.md` — Chapter titles, numbers, and topics (WHAT to write) - 55 chapters across 13 parts
 - `specs/book/directory-structure.md` — File paths and folder organization (WHERE to put it)
 
 **Templates & Infrastructure**:
 - `.specify/` — SpecKit Plus templates and scripts
 - `.claude/output-styles/` — Content formatting guides (HOW to format)
-- `.claude/skills/` — Generic reusable pedagogical skills library
+- `.claude/skills/` — skills library (generic, reusable pedagogical tools)
 
 ## Domain Skills Library
 
-**Important**: The skills in `.claude/skills/` are **generic, reusable pedagogical tools** designed for any educational content project. They are NOT project-specific; they are part of our core reusable toolkit that can be applied across different domains, subjects, and content types.
+Use the skills under `.claude/skills`. Current core skills include:
+- `learning-objectives`, `assessment-builder`, `technical-clarity`, `book-scaffolding`, `content-evaluation-framework`
+- `concept-scaffolding`, `code-example-generator`, `exercise-designer`, `ai-collaborate-learning`
+Utilities available: `docusaurus-deployer`, `quiz-generator`, `skill-creator`.
 
-### About the Skills Library
-
-
-Located in `.claude/skills/`, this library contains 9 specialized pedagogical skills:
-
-
-
-1. **learning-objectives** — Define measurable learning outcomes (Bloom's taxonomy)
-
-2. **concept-scaffolding** — Break complex topics into progressive steps
-
-3. **code-example-generator** — Create high-quality code examples with best practices
-
-4. **exercise-designer** — Design effective practice exercises
-
-5. **assessment-builder** — Build quizzes and evaluations
-
-6. **technical-clarity** — Ensure accessibility and clarity
-
-7. **book-scaffolding** — Structure content for logical flow
-
-8. **ai-augmented-teaching** — Teach "learning WITH AI" (not generating FROM AI)
-9. **content-evaluation-framework** — Evaluate content quality using a structured rubric
-
-
-These skills are **semantically activated** based on your educational needs and can be used for any content creation project (books, courses, tutorials, documentation).
-
-**When creating content**: The constitution specifies which skills are mandatory for this project. Invoke skills explicitly and reference them in your work.
+Notes:
+- Skills are generic, reusable pedagogical tools.
+- Activate them contextually based on chapter type and scope.
 
 ---
 
@@ -437,16 +677,18 @@ Subagents typically handle:
 Each subagent:
 - Has isolated context (prevents pollution of main conversation)
 - Can read shared files (constitution, skills, templates, specs)
-- Uses domain skills from the `.claude/skills/` library
+- Uses domain skills from the `.claude/skills/` library (only those present in the repo)
 - Follows output styles from `.claude/output-styles/`
 
 **When to use subagents**: Refer to the constitution for project-specific subagent definitions, their responsibilities, and invocation patterns.
 
+**Note**: Subagents require update to align with constitution v3.0.0 (separate feature).
+
 ---
 
-## SpecKit SDD Loop (Generic Workflow)
+## SpecKitPlus SDD Loop (Generic Workflow)
 
-**Note**: The constitution defines the specific workflow for this project. Below is the generic SpecKit SDD pattern that can be adapted:
+**Note**: The constitution v3.0.0 defines the specific workflow for this project. Below is the generic SpecKit SDD pattern:
 
 ### Phase 1: SPEC
 **Who:** Human collaborates with main Claude orchestrator
@@ -458,9 +700,10 @@ Each subagent:
 - Prerequisites
 - Success criteria
 - Constraints and non-goals
+- Complexity tier (for educational content)
 
 ### Phase 2: PLAN and TASKS (separate commands)
-**Who:** Planning subagent (if defined in constitution)
+**Who:** Planning subagent (chapter-planner for book content)
 **Input:** Approved spec from Phase 1
 **Output:**
 - Detailed implementation plan (via /sp.plan)
@@ -468,15 +711,15 @@ Each subagent:
 **Contents:**
 - Breakdown of work units
 - Dependencies and sequencing
-- Time/effort estimates
+- Complexity tier enforcement
 - Required resources
 
 Command mapping for Phase 2:
-- Use `/sp.plan` to generate planning artifacts only (e.g., research.md, data-model.md, contracts/, quickstart.md). It does not create tasks.md.
-- Use `/sp.tasks` to generate the actionable `tasks.md` from the spec and plan. This is the sole command that writes `tasks.md`.
+- Use `/sp.plan` to generate planning artifacts only. It does not create tasks.md.
+- Use `/sp.tasks` to generate the actionable `tasks.md` from the spec and plan.
 
 ### Phase 3: IMPLEMENT
-**Who:** Implementation subagent(s) (if defined in constitution)
+**Who:** Implementation subagent(s) (lesson-writer for book content)
 **Input:** Plan and tasks from Phase 2
 **Process:** Iterative creation with human review checkpoints
 **Output:** Completed content/feature artifacts
@@ -486,194 +729,21 @@ Command mapping for Phase 2:
 3. [Continue until complete...]
 4. Integration and finalization
 
+**Critical**: Ensure subagent outputs are written to files, not just returned in chat.
+
 ### Phase 4: VALIDATE
-**Who:** Validation/review subagent (if defined in constitution)
+**Who:** Validation/review subagent (technical-reviewer for book content)
 **Input:** Complete artifact from Phase 3
 **Output:** Validation report
 **Checks:**
 - Technical correctness
-- Standards compliance
+- Standards compliance (Python 3.13+, TypeScript strict mode)
 - Quality requirements
-- Constitution alignment
+- Constitution alignment (especially spec-first workflow, validation steps)
+- Complexity tier appropriateness
 
-**Refer to the constitution** for the specific SDD loop configuration, phase definitions, subagent assignments, and workflow details for your project.
-
----
-
-## Content Structure: Separation of Concerns
-
-**Note**: This is a generic three-layer pattern. The constitution defines the specific structure for your project.
-
-The project uses a **three-layer structure** for managing content:
-
-### Layer 1: Philosophy & Vision
-📍 **Location**: `.specify/memory/constitution.md`
-- Project structure and architecture (defined in constitution)
-- Philosophy, principles, and requirements
-- Non-negotiable rules and standards
-
-### Layer 2: Content Specifications (WHAT to create)
-📍 **Location**: Varies by project (e.g., `specs/content-index.md`, `specs/book/chapter-index.md`)
-- Content inventory and organization
-- Content units mapped to structure
-- Titles, identifiers, filenames
-- Key topics for each unit
-- **This is THE AUTHORITATIVE SOURCE for content assignments**
-
-### Layer 3: Output Styles (HOW to create)
-📍 **Location**: `.claude/output-styles/`
-- Formatting templates for different content types
-- Style guides for consistent output
-- **These are REUSABLE TEMPLATES, not content-specific**
-
-### Generic Content Creation Workflow
-
-Refer to the constitution for the specific workflow. The generic pattern is:
-
-#### Phase 1: SPEC
-**Consult:**
-- Constitution → Understand requirements and principles
-- Content index → Identify what to create
-
-**Actions:**
-- Collaborate with main Claude
-- Use relevant domain skills
-- Create specification document
-- Get approval before proceeding
-
-#### Phase 2: PLAN
-**Process:**
-- Use planning subagent (if defined)
-- Break content into implementable units
-- Define required artifacts and resources
-- Create plan artifacts with `/sp.plan` and then generate the task checklist with `/sp.tasks` (separate step)
-
-#### Phase 3: IMPLEMENT
-**Process:**
-- Use implementation subagent(s) (if defined)
-- Follow approved plan and output styles
-- Apply required domain skills
-- Iterative creation with review checkpoints
-
-#### Phase 4: VALIDATE
-**Process:**
-- Use validation subagent (if defined)
-- Verify quality and standards compliance
-- Generate validation report
-- Address issues before finalization
-
-### Key Benefits
-
-This separation means:
-- ✅ Output styles remain **generic and reusable** (can be used for other projects)
-- ✅ Content assignments are **centralized** (single source of truth)
-- ✅ Easy to **update structure or organization** without changing templates
-- ✅ Clear **separation between WHAT and HOW**
-- ✅ Measurable progress with phase artifacts
-- ✅ Resumable work after breaks (all state in files)
+**Refer to the constitution v3.0.0** for the specific SDD loop configuration, phase definitions, subagent assignments, and workflow details for your project.
 
 ---
 
-## File Organization (Generic Pattern)
-
-**Note**: The constitution defines the specific file structure for your project. Below is a generic pattern:
-
-Each content unit produces these artifacts:
-
-```
-specs/
-└── <content-area>/
-    ├── <unit-id>-spec.md      [Phase 1: Requirements and scope]
-    ├── <unit-id>-plan.md      [Phase 2: Detailed implementation plan]
-    └── <unit-id>-tasks.md     [Phase 2: Implementation checklist]
-
-<output-dir>/
-└── <content-area>/
-    └── <unit-output-file>     [Phase 3: Final deliverable]
-```
-
-### Example (Generic):
-```
-specs/
-└── feature-a/
-    ├── unit-05-spec.md
-    ├── unit-05-plan.md
-    └── unit-05-tasks.md
-
-output/
-└── feature-a/
-    └── unit-05-deliverable.md
-```
-
-### Resuming Work After Break
-
-To resume work on a content unit:
-
-1. **Check what's done:**
-   ```bash
-   cat specs/<content-area>/<unit-id>-tasks.md
-   # Shows checkboxes: [x] = done, [ ] = todo
-   ```
-
-2. **Read context:**
-   - Spec: `specs/<content-area>/<unit-id>-spec.md` (requirements)
-   - Plan: `specs/<content-area>/<unit-id>-plan.md` (implementation breakdown)
-   - Tasks: `specs/<content-area>/<unit-id>-tasks.md` (checklist)
-
-3. **Continue from checkpoint:**
-   - Review incomplete tasks
-   - Resume using appropriate subagent or tools
-
-**No context loss** — all state is in files.
-
----
-
-## Subagent Invocation Guidelines
-
-### When to Use Subagents
-
-**✅ Use subagents when:**
-- Executing specific SDD phases (Plan, Implement, Validate)
-- Generating content following approved plans
-- Need isolated context for focused work
-- Want to preserve main conversation context
-
-**❌ Don't use subagents when:**
-- Having strategic discussions (use main Claude)
-- Making architectural decisions (human-led)
-- Clarifying requirements (collaborative dialogue)
-- Quick questions or brief edits
-
-### Subagent Context Management
-
-**Each subagent has isolated context:**
-- Prevents pollution of main conversation
-- Can run intensive operations without bloating main thread
-- Fresh perspective for review (technical-reviewer)
-
-**But they can read shared files:**
-- Constitution (`.specify/memory/constitution.md`)
-- Skills (`.claude/skills/`)
-- Output styles (`.claude/output-styles/`)
-- Specs, plans, tasks (all in `specs/`)
-
-**Best Practice:**
-- Use main Claude for strategy and decisions
-- Use subagents for execution and validation
-- Keep main conversation focused on high-level orchestration
-
----
-
-## Code Standards
-
-All code MUST follow standards defined in `.specify/memory/constitution.md`.
-
-**Common standards** (verify in constitution for project-specific requirements):
-- Language version and features
-- Type safety requirements (type hints, annotations, etc.)
-- Testing requirements (coverage thresholds, test types)
-- Code style compliance (linting, formatting)
-- Security requirements (no hardcoded secrets, secure practices)
-- Accessibility requirements (if applicable)
-
-**Always refer to the constitution** for the exact code standards and quality gates for your project.
+**This operational guide aligns with Constitution v3.0.0. All decisions about AI-native development education content resolve to the constitution first.**

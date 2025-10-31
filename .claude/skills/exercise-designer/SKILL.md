@@ -377,6 +377,19 @@ Before finalizing exercise set:
 - [ ] Exercises are achievable in estimated time
 - [ ] Each exercise has clear learning objective
 
+## Acceptance Checks
+
+- [ ] Difficulty bands present: starter (easy), core (medium), stretch (hard)
+- [ ] Hints provided at three levels (gentle, moderate, explicit)
+- [ ] Rubric attached with criteria and points; maps to objectives
+
+### Difficulty bands example
+```
+Starter: Warm‑up fill‑in (L2‑Understand)
+Core: Implement function from spec (L3‑Apply)
+Stretch: Refactor for performance (L4‑Analyze/L5‑Evaluate)
+```
+
 ## References
 
 Supporting documentation (loaded as needed):

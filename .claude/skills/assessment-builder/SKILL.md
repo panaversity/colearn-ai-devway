@@ -313,6 +313,21 @@ Write a function that [specification].
 [Complete correct solution]
 ```
 
+## Acceptance Checks
+
+- [ ] SpecRef present and each question maps to at least one objective ID
+- [ ] Objective Coverage Matrix included (question → objective IDs, Bloom level)
+- [ ] ≥ 60% non‑recall; variety of question types present
+- [ ] Validation Pack attached: answer key, explanations, distractor analyses, and rubric(s)
+
+### Objective Coverage Matrix (example)
+```
+Q1 → [LO-001] (Understand)
+Q2 → [LO-002] (Apply)
+Q3 → [LO-002, LO-003] (Analyze)
+...
+```
+
 **Rubric**:
 
 **Correctness (40 pts)**:
