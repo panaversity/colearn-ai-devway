@@ -210,22 +210,35 @@ Do you now see the transformation as real and significant? Do you understand why
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Identify Critical Skill Gaps
+```
+This lesson says traditional CS education teaches 'how to be a developer in 2015' when we're in 2025. Help me understand: What are the top 3 critical skills I need in 2025 that universities DON'T teach? Explain each one in simple terms so I know what I'm missing.
+```
 
-1) "This lesson says traditional CS education teaches 'how to be a developer in 2015' when we're in 2025. Help me understand: What are the top 3 critical skills I need in 2025 that universities DON'T teach? Explain each one in simple terms so I know what I'm missing."
+**Expected outcome**: Clear understanding of what's missing from traditional CS education.
 
-2) "I'm trying to decide my path: Should I [pursue a CS degree / learn on my own / do both]? The lesson suggests a 'hybrid' approach. Help me think through the pros and cons of each path FOR MY SITUATION [describe your context: time, money, goals]. Be honest about trade-offs."
+### Prompt 2: Choose Your Learning Path
+```
+I'm trying to decide my path: Should I [pursue a CS degree / learn on my own / do both]? The lesson suggests a 'hybrid' approach. Help me think through the pros and cons of each path FOR MY SITUATION [describe your context: time, money, goals]. Be honest about trade-offs.
+```
 
-3) "The lesson lists 5 gaps: (1) AI collaboration, (2) spec-driven development, (3) agent orchestration, (4) Model Context Protocol, (5) real-world problem solving. Pick the ONE most important gap for a beginner and explain: what it is, why it matters, and ONE simple way I can start learning it this week."
+**Expected outcome**: Personalized guidance on your learning path (degree, self-taught, or hybrid).
 
-4) "Create a balanced learning plan for me: If I have [X hours per week], how should I split my time between 'foundational' knowledge (algorithms, how computers work) and 'modern practice' skills (AI tools, building real projects)? Give me a percentage split and explain your reasoning."
+### Prompt 3: Focus On One Critical Gap
+```
+The lesson lists 5 gaps: (1) AI collaboration, (2) spec-driven development, (3) agent orchestration, (4) Model Context Protocol, (5) real-world problem solving. Pick the ONE most important gap for a beginner and explain: what it is, why it matters, and ONE simple way I can start learning it this week.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Deep dive into ONE critical skill gap you can address immediately.
 
-- Clear understanding of what's missing from traditional CS education
-- Personalized guidance on your learning path (degree, self-taught, or hybrid)
-- Deep dive into ONE critical skill gap you can address immediately
-- Balanced time allocation strategy between foundations and modern practice
+### Prompt 4: Design Balanced Learning Plan
+```
+Create a balanced learning plan for me: If I have [X hours per week], how should I split my time between 'foundational' knowledge (algorithms, how computers work) and 'modern practice' skills (AI tools, building real projects)? Give me a percentage split and explain your reasoning.
+```
+
+**Expected outcome**: Balanced time allocation strategy between foundations and modern practice.
+
+
 

@@ -233,22 +233,35 @@ In the next section, we'll look ahead to where this is going: the autonomous age
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Visualize The Orchestrator Role
+```
+This lesson says developers are shifting from 'typist' to 'orchestrator.' Explain what that means using an analogy I can understand. Instead of typing code line-by-line, what will I actually be DOING? Paint a picture of a typical day.
+```
 
-1) "This lesson says developers are shifting from 'typist' to 'orchestrator.' Explain what that means using an analogy I can understand. Instead of typing code line-by-line, what will I actually be DOING? Paint a picture of a typical day."
+**Expected outcome**: Vivid understanding of what the "orchestrator" role looks like in practice.
 
-2) "Help me understand the four dimensions of the 'orchestrator role': (1) writing clear specifications, (2) system design, (3) code review, and (4) guiding AI. Which of these FOUR should I focus on learning first as a beginner? Why? Give me a practical starting point."
+### Prompt 2: Prioritize Orchestration Skills
+```
+Help me understand the four dimensions of the 'orchestrator role': (1) writing clear specifications, (2) system design, (3) code review, and (4) guiding AI. Which of these FOUR should I focus on learning first as a beginner? Why? Give me a practical starting point.
+```
 
-3) "Here's my fear: If AI writes the code, will I lose the opportunity to learn by doing? The lesson says I'll learn by 'reviewing and refining' AI output—but how do I know if the AI's code is good or bad when I'm still learning? Help me think through this."
+**Expected outcome**: Clear guidance on which orchestration skill to develop first.
 
-4) "The lesson says 'developers are more valuable, not less' with AI. Explain why this is true for someone at MY level [beginner / intermediate / experienced]. What makes ME valuable if AI can generate code? What human skills should I be developing?"
+### Prompt 3: Learn Through AI Collaboration
+```
+Here's my fear: If AI writes the code, will I lose the opportunity to learn by doing? The lesson says I'll learn by 'reviewing and refining' AI output—but how do I know if the AI's code is good or bad when I'm still learning? Help me think through this.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Honest strategy for learning through AI collaboration (not passive copying).
 
-- Vivid understanding of what the "orchestrator" role looks like in practice
-- Clear guidance on which orchestration skill to develop first
-- Honest strategy for learning through AI collaboration (not passive copying)
-- Confidence in what makes you valuable as a human collaborator with AI
+### Prompt 4: Define Your Human Value
+```
+The lesson says 'developers are more valuable, not less' with AI. Explain why this is true for someone at MY level [beginner / intermediate / experienced]. What makes ME valuable if AI can generate code? What human skills should I be developing?
+```
+
+**Expected outcome**: Confidence in what makes you valuable as a human collaborator with AI.
+
+
 

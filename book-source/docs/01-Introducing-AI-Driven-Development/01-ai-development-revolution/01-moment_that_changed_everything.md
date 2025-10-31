@@ -75,26 +75,34 @@ Let's look at the numbers.
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Understand The Speed Claims
+```
+I just read about Sarah Chen building a dashboard in 48 hours using AI. Help me understand: Is this kind of speed really possible for someone without a traditional programming background? What makes 2024-2025 different from, say, 2020? Give me 2 concrete examples of why AI tools have reached this 'turning point.'
+```
 
-1) "I just read about Sarah Chen building a dashboard in 48 hours using AI. Help me understand: Is this kind of speed really possible for someone without a traditional programming background? What makes 2024-2025 different from, say, 2020? Give me 2 concrete examples of why AI tools have reached this 'turning point.'"
+**Expected outcome**: Clear understanding of why this moment is different (with real-world proof, not hype).
 
-2) "I'm interested in learning to build with AI, but I'm cautious. What are 3 realistic concerns or risks I should be aware of (like: will I understand the code? what about security? will I become dependent on tools?)? For each concern, suggest one practical way to stay safe while learning."
+### Prompt 2: Assess Realistic Risks
+```
+I'm interested in learning to build with AI, but I'm cautious. What are 3 realistic concerns or risks I should be aware of (like: will I understand the code? what about security? will I become dependent on tools?)? For each concern, suggest one practical way to stay safe while learning.
+```
 
-3) "Create a realistic 2-week starter plan for me (30-60 minutes per day). I want to see if I can actually build something small but real. Break it into week 1 and week 2, with simple daily activities and 1-2 tiny projects I can complete to prove to myself this works."
+**Expected outcome**: Honest assessment of risks and how to mitigate them as a beginner.
 
-4) "Based on what we've discussed, explain: If I'm learning to build solutions in 2025 with AI as my partner, what should I focus on learning that will stay relevant? What can I safely let AI handle? Give me a practical framework I can use."
+### Prompt 3: Create A Starter Plan
+```
+Create a realistic 2-week starter plan for me (30-60 minutes per day). I want to see if I can actually build something small but real. Break it into week 1 and week 2, with simple daily activities and 1-2 tiny projects I can complete to prove to myself this works.
+```
 
-**Expected outcomes:**
+**Expected outcome**: A concrete, actionable 2-week plan you can start today.
 
-- Clear understanding of why this moment is different (with real-world proof, not hype)
-- Honest assessment of risks and how to mitigate them as a beginner
-- A concrete, actionable 2-week plan you can start today
-- Clarity on what to learn vs. what to delegate to AI
+### Prompt 4: Define Learning Framework
+```
+Based on what we've discussed, explain: If I'm learning to build solutions in 2025 with AI as my partner, what should I focus on learning that will stay relevant? What can I safely let AI handle? Give me a practical framework I can use.
+```
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice
+**Expected outcome**: Clarity on what to learn vs. what to delegate to AI.
+
+
