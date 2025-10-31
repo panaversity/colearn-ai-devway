@@ -29,15 +29,6 @@ But here's what matters most: This transformation creates unprecedented opportun
 
 That's what this part teaches you.
 
-## Who This Part Is For
-
-**If you're a complete beginner** with no programming experience, this part shows you why now is actually the best time to start. Traditional barriers—memorizing syntax, debugging cryptic errors, spending months before building anything useful—are dissolving. AI-driven development lets you focus on understanding problems and designing solutions while AI handles the mechanical details of implementation.
-
-**If you're an experienced developer**, this part explains how your role is evolving from typist to architect, from code writer to system orchestrator. The skills that matter most are changing: domain knowledge, specification writing, and AI collaboration are becoming more valuable than typing speed or syntax memorization.
-
-**If you're an educator or technical leader**, this part provides evidence for why traditional computer science curriculum needs updating and what an AI-native approach looks like. You'll see quantitative data, industry case studies, and strategic frameworks for organizational transformation.
-
-**If you're skeptical**, this part addresses your doubts with evidence. We cite research from Stack Overflow, Google's DORA team, major enterprise deployments, and peer-reviewed benchmarks. Every major claim is sourced and verifiable.
 
 ## What You'll Learn in Part 1
 
@@ -93,15 +84,6 @@ Think of Part 1 as the foundation of a house. Without it, everything built on to
 
 **Notice patterns, not just facts.** While specific statistics (like Claude Code's $500M run rate) provide evidence, the patterns matter more: how quickly adoption is happening, how enterprises are reorganizing, which skills are becoming more valuable. These patterns will continue even as specific numbers change.
 
-## What Comes After Part 1
-
-Once you complete these four chapters, you'll be ready for **Part 2: AI Tool Landscape**, where we dive deep into specific AI coding tools—how to choose them, install them, and use them effectively. You'll get hands-on with Claude Code, Gemini CLI, and other agents.
-
-From there, **Part 3: Prompt & Context Engineering** teaches you how to communicate effectively with AI tools to get the results you want.
-
-Then **Part 4: Python - The Language of AI Agents** begins your coding journey, teaching modern Python specifically in the context of AI-driven development—not as isolated syntax to memorize, but as a language you'll use while collaborating with AI partners.
-
-Each part builds on the previous. But all of them build on the foundation you're about to establish in Part 1.
 
 ## A Note on Mindset
 
@@ -142,15 +124,6 @@ Stay curious. Question the claims. Look for the patterns. Think about how this a
 By the end of Part 1, you'll understand why this transformation is happening, what it makes possible, and what role you want to play in it.
 
 Let's begin.
-
----
-
-**Part 1 Contents:**
-
-1. [Chapter 1: The AI Development Revolution - Disrupting the $3 Trillion Software Economy](#)
-2. [Chapter 2: AI Turning Point - The New Wave of AI Coding Agents Has Changed Everything for Developers](#)
-3. [Chapter 3: How to Make a Billion Dollars in the AI Era?](#)
-4. [Chapter 4: The Nine Pillars of AI-Driven Development (AIDD)](#)
 
 ---
 

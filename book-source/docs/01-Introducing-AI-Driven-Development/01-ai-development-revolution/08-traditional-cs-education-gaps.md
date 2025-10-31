@@ -169,43 +169,6 @@ If you're learning on your own without a formal degree:
 
 But you can learn these alongside AI-driven development, not before it.
 
-## The Skill Gap in Numbers
-
-Industry surveys reveal the extent of the gap:
-
-**What employers increasingly prioritize (2024-2025 surveys):**
-- 40% of CEOs plan to hire additional staff because of generative AI (IBM survey, 3,000 CEOs)
-- 31% of recruiters now value AI tool knowledge, up 5% from last year (GMAC survey)
-- 23% predict AI tools will be the most important skill in the next five years (GMAC survey)
-- 7% are actively hiring for prompt engineering roles (McKinsey AI survey)
-- Average salary for roles requiring generative AI skills: $174,727 (Indeed)
-
-**What CS programs teach (curriculum analysis):**
-- Most CS programs have not yet integrated AI coding tools into core curriculum
-- Specification-driven development remains uncommon in traditional courses
-- Prompt engineering and agent orchestration are rarely addressed
-- Gap between industry needs and academic curriculum continues to widen
-
-**The mismatch is enormous.** Graduates enter the job market lacking the skills employers desperately need.
-
-## How This Book Fills the Gap
-
-This book is designed specifically to bridge the education gap. Here's how:
-
-**Part 1 (Introducing AI-Driven Development):** Establishes mindset and context—what traditional education assumes you already understand about the AI transformation
-
-**Part 2 (AI Tool Landscape):** Practical guide to tools and workflows—not covered in CS curricula but essential for productivity
-
-**Part 3 (Prompt & Context Engineering):** Core skills for AI collaboration—completely absent from traditional education
-
-**Part 4-7 (Python Fundamentals through Modular Design):** Learn Python in the AI-augmented way, building real projects with AI assistance from day one
-
-**Part 8-9 (MCP Ecosystem, Model Context Protocol):** Modern protocols and architectures—too new for university curricula but critical for current practice
-
-**Part 10-11 (AI Deployment, Productionizing AI Apps):** Production skills that CS programs teach inadequately—with AI-native approaches
-
-The book teaches you to learn **with** AI as a partner, not **from** textbooks as a passive recipient. This is how you'll actually work in professional environments.
-
 ## The Respectful Critique
 
 To be clear: **This isn't an attack on CS educators.**
@@ -240,17 +203,10 @@ The solution isn't to abandon traditional education—it's to supplement it inte
 
 **Together, you're prepared for both the long-term fundamentals and the current practice realities.**
 
-## One Final Question
-
-Remember that "Pause and Reflect" moment from Section 1? We asked which part of Sarah Chen's story resonated with you—excitement, concern, or skepticism.
-
-Now, after eight sections of evidence, arguments, and examples:
 
 **Has your perspective shifted?**
 
 Do you now see the transformation as real and significant? Do you understand why traditional education isn't sufficient? Do you recognize the opportunity window?
-
-In our final section, we'll bring all of this together and set up the journey ahead in Chapter 2.
 
 ## Try With AI
 
@@ -273,7 +229,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Deep dive into ONE critical skill gap you can address immediately
 - Balanced time allocation strategy between foundations and modern practice
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice

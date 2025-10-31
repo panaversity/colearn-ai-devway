@@ -277,7 +277,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Realistic assessment of whether now is the right time to start (spoiler: yes)
 - Actionable 30-day plan to begin capturing the opportunity
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice

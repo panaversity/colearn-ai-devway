@@ -24,9 +24,3 @@ By the end of this chapter, you'll understand:
 - **The education gap**: Five critical gaps in traditional CS curriculum and why supplemental learning is essential
 - **Your optimal timing**: Why you're in the Early Majority adoption phase—the sweet spot for high return and manageable risk
 
-
-## What's Next
-
-After completing this chapter, continue to **Chapter 2: The AI Turning Point** where you'll discover the nine technological revolutions that converged to make this transformation possible—from GPU computing to transformers to natural language interfaces.
-
-Understanding how we got here will help you anticipate where the field is heading and position yourself strategically for the next wave of innovation.

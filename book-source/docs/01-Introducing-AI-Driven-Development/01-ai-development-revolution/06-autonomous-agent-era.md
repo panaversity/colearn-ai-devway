@@ -148,32 +148,6 @@ Just like human teams benefit from specialization, agent teams can be more effec
 
 The challenge is **coordination**: ensuring agents work together smoothly and don't produce conflicting outputs.
 
-## Timeline: When Will This Be Mainstream?
-
-Based on current trajectory and industry expert consensus:
-
-**2024-2025 (Now-Near Term):**
-- Generation 3 tools (Claude Code, Cursor) become standard in professional environments
-- Early Gen 4 autonomous agents available but rough around edges
-- Workflows and best practices still being established
-
-**2025-2026 (12-24 months):**
-- Autonomous agents reliable enough for production use with human oversight
-- Multi-agent systems deployed in enterprise settings
-- Educational institutions begin teaching agent orchestration
-
-**2026-2027 (2-3 years):**
-- Autonomous agents handle majority of routine feature development
-- Human developers primarily focus on architecture, business logic, and review
-- "Developer" role looks fundamentally different from 2023
-
-**2027+ (3+ years):**
-- Agents handle increasingly complex tasks with minimal human intervention
-- New abstractions emerge (agents as first-class citizens in development tools)
-- Unforeseen capabilities and applications emerge
-
-**Important caveat:** Predictions about AI tend to underestimate short-term progress and overestimate long-term transformation. The timeline might compress or extend based on breakthroughs, regulations, or unforeseen challenges.
-
 ## What Won't Change: The Need for Human Judgment
 
 Here's the part that's easy to miss in all the hype:
@@ -225,13 +199,7 @@ In the next section, we'll explore why this is arguably the best time in decades
 
 ---
 
-**Alternative Format:**
-
-Want to hear this perspective from industry leaders? Watch the overview videos that explore these themes:
-
-**[Watch Overview Video in English](https://youtu.be/3ZPIerZkZn4)**
-
-**[Watch Overview Video in Urdu/Hindi](https://youtu.be/dnk5nP9hzHg)**
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/3ZPIerZkZn4" title="The $3 Trillion AI Coding Revolution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 These videos provide additional context on the AI coding revolution and where the industry is headed.
 
@@ -256,7 +224,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Timing guidance: whether to start now or wait for better tools
 - Concrete examples of where human judgment beats AI (your unique value)
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice

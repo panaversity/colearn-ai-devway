@@ -171,7 +171,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Personalized guidance on your learning strategy based on your context
 - Confidence that learning AI collaboration is a durable skill, not a fleeting trend
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice

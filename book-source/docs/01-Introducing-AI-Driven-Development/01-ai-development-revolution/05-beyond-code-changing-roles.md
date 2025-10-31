@@ -252,7 +252,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Honest strategy for learning through AI collaboration (not passive copying)
 - Confidence in what makes you valuable as a human collaborator with AI
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice

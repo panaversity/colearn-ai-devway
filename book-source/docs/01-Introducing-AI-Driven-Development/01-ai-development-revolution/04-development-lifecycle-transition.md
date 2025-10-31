@@ -213,7 +213,3 @@ Use ChatGPT web for this activity. If you’ve already set up an AI companion to
 - Deep understanding of at least ONE phase where you can apply AI immediately
 - Appreciation for how doing early work well pays off later
 
-Safety/ethics note:
-- Verify claims and dates; watch for hallucinations and bias
-- Don’t share sensitive data or credentials
-- Cross‑check at least one external source before applying in practice
