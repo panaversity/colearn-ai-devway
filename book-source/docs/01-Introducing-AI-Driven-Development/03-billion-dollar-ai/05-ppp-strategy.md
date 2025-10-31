@@ -93,5 +93,31 @@ This is the path to a billion dollars as a solo entrepreneur. Not in one year. B
 
 ---
 
-But before you execute this strategy, you must understand three critical requirements. Without all three, PPP fails.
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "The 'Piggyback Protocol Pivot' (PPP) strategy has three phases over 18-36 months. Help me reality-check this: I'm [describe your situation: working full-time / in school / etc.]. Can I realistically execute PPP as a side project? If yes, how would the timeline change? If no, what's my alternative path?"
+
+2) "Phase 1 says 'become the indispensable bridge between fragmented incumbent systems.' Pick a vertical I might know [healthcare / education / small business tools]. Identify 2-3 specific incumbent systems and explain: What pain does their fragmentation cause? What would a 'bridge' solution look like? Could I build a basic version in 6 months?"
+
+3) "The lesson says PPP beats 'direct competition' with 60-80% lower customer acquisition cost (CAC). Explain WHY piggybacking lowers CAC. Use a simple analogy—maybe comparing it to selling a product in an existing store vs. opening your own store. Make the economics crystal clear."
+
+4) "I'm worried about Phase 3—the 'pivot.' What if the incumbent systems see me as a threat and cut off my access? Or what if they copy my subagent features? Give me 2-3 defensive strategies to protect my position during the pivot. Be realistic about risks."
+
+**Expected outcomes:**
+
+- Honest assessment of whether PPP fits YOUR time and resource constraints
+- Concrete example of a bridge solution in a vertical you understand
+- Clear economics explanation of why piggybacking reduces customer acquisition costs
+- Risk mitigation strategies for protecting your position during the pivot
+
+**Safety/ethics note:**
+
+- Don't share specific company partnership strategies or negotiation tactics publicly
+- Verify legal and contractual obligations before building on incumbents' platforms
+- Consider ethical implications of piggybacking then pivoting away from partners
+
 

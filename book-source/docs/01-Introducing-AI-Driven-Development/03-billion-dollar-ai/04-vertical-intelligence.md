@@ -83,3 +83,32 @@ The code is disposable. The intelligence is permanent. The value per developer s
 
 Now you understand the architecture of reusable intelligence. The next insight is how to actually enter a vertical market and execute this strategy. That's where the Piggyback Protocol Pivot comes in.
 
+---
+
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "The lesson says 'reuse intelligence, not code.' I'm struggling to grasp this. Explain the difference using a concrete example from everyday life (NOT software). Then apply it to a simple software scenario I can understand—maybe a calculator app or a todo list. What would 'reusing intelligence' look like vs 'reusing code'?"
+
+2) "The lesson lists five components of a reusable subagent: (1) system prompt, (2) horizontal skills, (3) vertical skills, (4) horizontal MCPs, (5) vertical MCPs. Pick ONE component and explain it in depth. Why does this component matter? Give me a real example from [healthcare / finance / education—pick one]."
+
+3) "I'm confused by the accounting example at the end. Walk me through it step-by-step: If I wanted to build an 'accounting subagent' for small businesses, what would I actually build FIRST? What would I build SECOND? What would I build THIRD? Give me a 3-step roadmap that a beginner could follow."
+
+4) "The lesson says 'code is disposable, intelligence is permanent.' This feels wasteful—why would I throw away code I just wrote? Help me understand: In what scenarios does DISPOSABLE code actually save time and money compared to REUSABLE code? Give me a practical decision framework."
+
+**Expected outcomes:**
+
+- Crystal-clear understanding of "reusing intelligence" using non-technical analogies
+- Deep dive into at least ONE component of a subagent (with real examples)
+- Step-by-step roadmap for building your first subagent (not overwhelming)
+- Decision framework for when to reuse code vs. regenerate it
+
+**Safety/ethics note:**
+
+- Don't share actual system prompts or proprietary subagent designs publicly
+- Verify technical architecture claims before implementing in production
+- Consider security and privacy implications when defining subagent capabilities
+

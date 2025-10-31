@@ -79,3 +79,32 @@ This is why Claude Code's $500M achievement in two months isn't anomalous. It's 
 
 Now that you understand the opportunity (competitive layers) and the economics (90-10 rule), the next insight is how to build solutions that embody this principle. That's the paradigm shift from code to intelligence.
 
+---
+
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "The '90-10 rule' says AI handles 90% (mechanical work) and humans handle 10% (judgment). Give me 3-5 concrete examples of this split in action. For each example, explain: what's the 90% that AI handles, and what's the 10% that requires human judgment? Make the examples relevant to [your field of interest]."
+
+2) "The lesson shows Instagram (13 employees, $1B valuation) and WhatsApp (55 employees, $19B valuation) as examples. Help me understand: What did those small teams DO all day if AI wasn't available yet? How is my situation DIFFERENT today with AI tools? What's easier for me now than it was for them?"
+
+3) "I'm skeptical about the 'solo developer to $10M revenue' path in the table. Walk me through the FIRST milestone: going from $0 to $50K in revenue with 1-5 customers. What would I actually DO in Month 1, Month 2, Month 3? Be specific and realistic—not motivational fluff."
+
+4) "The lesson says the bottleneck is 'human attention, not infrastructure.' Explain what this means for how I should spend my time. If I have 40 hours per week, how should I allocate my time between: (a) learning technical skills, (b) understanding my market, (c) building relationships, (d) actually building the solution?"
+
+**Expected outcomes:**
+
+- Concrete examples of the 90-10 split in practice (not just theory)
+- Understanding of how AI tools change YOUR advantage vs. past entrepreneurs
+- Realistic first-milestone roadmap with specific actions (not vague advice)
+- Time allocation strategy based on the "human attention" bottleneck principle
+
+**Safety/ethics note:**
+
+- Don't share specific customer information or revenue details publicly
+- Verify market size and revenue potential claims before building a business plan
+- Be honest about your time availability and constraints when planning
+

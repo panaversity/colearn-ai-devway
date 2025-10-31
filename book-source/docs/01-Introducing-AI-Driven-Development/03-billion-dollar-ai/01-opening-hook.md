@@ -47,3 +47,32 @@ That's what this chapter teaches you.
 
 By the end, you'll understand why the path to a billion dollars no longer requires a traditional startup scaling curve—and how to take that path yourself.
 
+---
+
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "This lesson says a solo developer generated $500M in annual revenue in two months. Help me understand: Is this real or exaggerated? What makes this possible NOW that wasn't possible 5 years ago? Explain in simple terms—I don't have a business background."
+
+2) "The lesson mentions 'three forces converged.' Break these down for me: (1) tools crossed a capability threshold, (2) mainstream adoption, (3) economics shifted. Which of these THREE is most important for someone like me [describe your situation: student / entrepreneur / career changer]? Why?"
+
+3) "Here's what I'm thinking: If AI makes building software easier, won't EVERYONE try to build companies? Won't that make it harder, not easier, to succeed? Help me understand why this is actually an opportunity for ME, not just for already-successful tech people."
+
+4) "The lesson says I don't need 'a large team, years of experience, or venture capital.' But I DO need 'understanding, strategy, and ability to work with AI agents.' Be honest: what's the MINIMUM I need to know or learn to actually capture this opportunity? Give me a realistic self-assessment framework."
+
+**Expected outcomes:**
+
+- Honest understanding of what's real vs. hype in the $500M claim
+- Clear grasp of which force matters most for YOUR context
+- Confidence that this opportunity is accessible (not just for tech insiders)
+- Realistic assessment of what you need to learn to get started
+
+**Safety/ethics note:**
+
+- Verify extraordinary claims (like $500M in 2 months) with external sources
+- Don't share business ideas or sensitive plans when exploring strategies
+- Cross-check market data and revenue claims before making decisions
+
