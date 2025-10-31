@@ -28,19 +28,3 @@ By the end of this chapter, you'll understand:
 5. **The M-Shaped Developer profile**: The skills and mental models you need to thrive in AIDD
 6. **Why all nine matter**: Competitive implications of partial vs. complete adoption
 7. **Your roadmap ahead**: How the remaining chapters of this book build mastery in each pillar
-
----
-
-## What's Next: Part 2
-
-After establishing the philosophical and technical foundation in Part 1, Part 2 shifts from "Why and What" to "How and Where."
-
-**Part 2: AI Tool Landscape** focuses on tool proficiency and professional workflows:
-- Chapter 5 (Claude Code): Install and master the primary AI coding agent you'll use throughout
-- Chapter 6 (Gemini CLI): Understand alternatives and tool selection
-- Chapter 7 (Bash): Command-line mastery for AI-driven development
-- Chapter 8 (Git & GitHub): Professional version control and safety mechanisms
-
-These chapters teach Pillar 1 (AI CLI & Coding Agents) and foundational skills you need before diving into coding.
-
-**Preview**: Part 2 is where theory becomes hands-on practice. You'll install Claude Code on your machine, get it working, and have your first genuine AI-assisted development workflows. The philosophical framework from Part 1—and the nine-pillar system from this chapter—becomes concrete and real.

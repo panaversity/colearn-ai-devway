@@ -25,7 +25,3 @@ By the end of this chapter, you'll understand:
 - **Agent Skills for autonomous discovery**: Building custom skills that Claude Code discovers and invokes automatically based on task context, understanding how skill libraries amplify your team's domain expertise, and the competitive advantage of encoding institutional knowledge as discoverable skills
 - **MCP (Model Context Protocol) for external integration**: Connecting Claude Code to external data sources.
 - **Your workflow transformation**: Transitioning from passive tool user to active AI orchestrator, establishing habits for effective AI collaboration, and recognizing when Claude Code amplifies productivity versus when simpler tools suffice
-
-## What's Next
-
-After completing this chapter, continue to setup another AI Collaborator. The technical capabilities you build here become the foundation for the structured workflows you'll be using daily. You're not just learning a tool. You're learning a new way to ship software.

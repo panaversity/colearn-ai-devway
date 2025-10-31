@@ -112,31 +112,34 @@ The question isn't "Are these claims credible?" The question is: "How fast will 
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Understand The Timing Significance
+```
+I'm exploring whether now is the right time to learn AI-powered development. Based on 2024–2025 trends, explain in simple terms why this moment is significant. Give me 2 real-world examples (like competition results, company adoptions, or survey data) that show AI's capabilities have fundamentally changed.
+```
 
-1) "I'm exploring whether now is the right time to learn AI-powered development. Based on 2024–2025 trends, explain in simple terms why this moment is significant. Give me 2 real-world examples (like competition results, company adoptions, or survey data) that show AI's capabilities have fundamentally changed."
+**Expected outcome**: A clear, jargon-free explanation of why 2024–2025 is an inflection point, with real-world proof.
 
-2) "Help me understand how the AI shift is different from past technology waves I might have heard about (like cloud computing, mobile apps, or smartphones). Create a simple comparison showing what makes AI adoption unique—especially for someone who wants to build products or solutions."
+### Prompt 2: Compare To Past Technology Waves
+```
+Help me understand how the AI shift is different from past technology waves I might have heard about (like cloud computing, mobile apps, or smartphones). Create a simple comparison showing what makes AI adoption unique—especially for someone who wants to build products or solutions.
+```
 
-3) "I'm [describe your role: business owner / student / career changer / professional in X field] and I'm unsure about timing. What are the risks if I wait too long to learn AI tools? What are the risks if I rush in without preparation? For each risk, suggest one practical step I can take to protect myself."
+**Expected outcome**: Understanding how AI is different from past tech shifts (and why that matters for beginners).
 
-4) "Based on what we've discussed, help me craft a personal 'AI adoption statement'—one sentence that captures my timing and approach. Then create a simple 2-week starter plan (30–60 minutes per day) focused on understanding AI as a collaborator, not just a coding tool. What should I learn first?"
+### Prompt 3: Assess Personal Risk And Timing
+```
+I'm [describe your role: business owner / student / career changer / professional in X field] and I'm unsure about timing. What are the risks if I wait too long to learn AI tools? What are the risks if I rush in without preparation? For each risk, suggest one practical step I can take to protect myself.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Personalized risk assessment based on your actual context (not generic developer advice).
 
-- A clear, jargon-free explanation of why 2024–2025 is an inflection point, with real-world proof
-- Understanding how AI is different from past tech shifts (and why that matters for beginners)
-- Personalized risk assessment based on your actual context (not generic developer advice)
-- A concrete, beginner-friendly 2-week plan to start learning AI collaboration
+### Prompt 4: Create Action Plan
+```
+Based on what we've discussed, help me craft a personal 'AI adoption statement'—one sentence that captures my timing and approach. Then create a simple 2-week starter plan (30–60 minutes per day) focused on understanding AI as a collaborator, not just a coding tool. What should I learn first?
+```
 
-**Safety/ethics note:**
+**Expected outcome**: A concrete, beginner-friendly 2-week plan to start learning AI collaboration.
 
-- Verify claims and dates; AI models can hallucinate statistics or misattribute sources
-- Don't share sensitive company data or credentials when discussing your adoption context
-- Cross-check at least one external source (DORA Report, Stack Overflow Survey, company announcements) before making adoption decisions
 
----
-
-**Next**: [Section 2: Development Patterns — Vibe Coding vs. Spec-Driven Development →](./02-development-patterns.md)

@@ -54,27 +54,34 @@ This is why a solo developer generating $500M is no longer surprising. **It's th
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Synthesize All Frameworks
+```
+I just completed Chapter 3 on billion-dollar AI strategies. Help me synthesize the key frameworks: Snakes and Ladders, 90-10 economics, Vertical Intelligence, PPP strategy, and Three Requirements. Create a simple visual outline or decision tree showing how these frameworks connect. What should I apply FIRST in my context [describe your situation]?
+```
 
-1) "I just completed Chapter 3 on billion-dollar AI strategies. Help me synthesize the key frameworks: Snakes and Ladders, 90-10 economics, Vertical Intelligence, PPP strategy, and Three Requirements. Create a simple visual outline or decision tree showing how these frameworks connect. What should I apply FIRST in my context [describe your situation]?"
+**Expected outcome**: Integrated understanding of how all Chapter 3 frameworks connect.
 
-2) "The reflection prompts asked about vertical markets, competitive layers, and PPP strategy. Based on my answers [share your thinking], help me reality-check: Am I being too ambitious? Too cautious? Give me honest feedback. What's a realistic 12-month milestone I should aim for, given my starting point?"
+### Prompt 2: Reality-Check Your Plan
+```
+The reflection prompts asked about vertical markets, competitive layers, and PPP strategy. Based on my answers [share your thinking], help me reality-check: Am I being too ambitious? Too cautious? Give me honest feedback. What's a realistic 12-month milestone I should aim for, given my starting point?
+```
 
-3) "The lesson ends with 'you're building a strategy company, not a software company.' Explain what this mindset shift actually means for how I spend my day. If I have 4 hours today to work on my idea, what should I DO that reflects this 'strategy company' mindset vs. traditional 'software company' mindset?"
+**Expected outcome**: Reality-checked 12-month milestone based on your actual context.
 
-4) "I'm feeling overwhelmed by all the frameworks in this chapter. Help me create a simple 'Chapter 3 Cheat Sheet'—a one-page summary I can reference later. Include: (1) the key frameworks in simple terms, (2) when to use each one, (3) common mistakes to avoid, (4) my personalized next action based on [your context]."
+### Prompt 3: Apply Strategy Company Mindset
+```
+The lesson ends with 'you're building a strategy company, not a software company.' Explain what this mindset shift actually means for how I spend my day. If I have 4 hours today to work on my idea, what should I DO that reflects this 'strategy company' mindset vs. traditional 'software company' mindset?
+```
 
-**Expected outcomes:**
+**Expected outcome**: Concrete daily actions that reflect the "strategy company" mindset.
 
-- Integrated understanding of how all Chapter 3 frameworks connect
-- Reality-checked 12-month milestone based on your actual context
-- Concrete daily actions that reflect the "strategy company" mindset
-- Personal cheat sheet you can reference as you execute
+### Prompt 4: Create Your Cheat Sheet
+```
+I'm feeling overwhelmed by all the frameworks in this chapter. Help me create a simple 'Chapter 3 Cheat Sheet'—a one-page summary I can reference later. Include: (1) the key frameworks in simple terms, (2) when to use each one, (3) common mistakes to avoid, (4) my personalized next action based on [your context].
+```
 
-**Safety/ethics note:**
+**Expected outcome**: Personal cheat sheet you can reference as you execute.
 
-- Don't share detailed business plans or proprietary strategies publicly
-- Verify ambitious revenue projections with market research before committing
-- Be honest about your constraints (time, money, skills) when setting milestones
+

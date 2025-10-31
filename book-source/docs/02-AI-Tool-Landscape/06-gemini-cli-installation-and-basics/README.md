@@ -28,11 +28,3 @@ By the end of this chapter, you'll understand:
 - **Built-in tools for integrated workflows**: File operations (`@` commands) for code analysis and documentation understanding, web fetching for retrieving online content, Google Search grounding for current information with citations, shell integration (`!` commands) for executing system commands with AI guidance, combining multiple tools in realistic development workflows, and understanding tool limitations and security considerations
 
 - **The 1 million token context window advantage**: Translating "1 million tokens" into practical development terms (~100,000 lines of code or entire small-to-medium projects), identifying when context window size matters versus when it's irrelevant, leveraging massive context for architecture analysis and cross-file refactoring, understanding Gemini CLI's extension ecosystem and the Model Context Protocol (MCP), comparing Gemini CLI and Claude Code across 8 critical dimensions, and applying a decision framework to choose the right tool for every scenario
-
-## What's Next
-
-After completing this chapter, continue to **Chapter 7: GitHub Copilot** where you'll explore IDE-integrated AI assistance. You'll learn how Copilot's real-time code completion and inline suggestions complement the CLI-based tools you've mastered in Chapters 5 and 6.
-
-Then, **Chapter 8: Choosing the Right Tool** will synthesize everything you've learned, providing a unified framework for selecting the optimal AI development tool based on project constraints, workflow preferences, and specific task requirements.
-
-You're not just learning tools—you're building strategic judgment about when and how to leverage AI assistance for maximum development effectiveness.

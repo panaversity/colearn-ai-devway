@@ -147,25 +147,34 @@ You can now ask Claude "What skills do you have?" and it will list all the skill
 
 Use Claude Code for this activity (preferred, since you just installed it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Skills vs. Subagents Comparison
 
-1) "I'm confused about skills vs. subagents vs. slash commands. Create a comparison table that shows: (a) when to use each, (b) a concrete example of each for MY work [describe what you do], (c) which one to learn FIRST as a beginner. Make it crystal clear."
+```
+I'm confused about skills vs. subagents vs. slash commands. Create a comparison table that shows: (a) when to use each, (b) a concrete example of each for MY work [describe what you do], (c) which one to learn FIRST as a beginner. Make it crystal clear.
+```
 
-2) "I want to create my FIRST skill. My team's biggest pain point is [describe: inconsistent code style / missing documentation / security vulnerabilities / etc.]. Design a skill for this: (a) What should I name it? (b) Write a 'discoverable description' that triggers when relevant, (c) List 5-7 instructions, (d) Give me one before/after example showing what it does."
+**Expected outcome:** Clear differentiation between skills, subagents, and commands
 
-3) "The lesson says skills are 'discovered autonomously' by Claude Code. I don't understand HOW that works. Explain the discovery mechanism step-by-step: (a) What does Claude read? (b) When does it decide to suggest a skill? (c) How do I write descriptions that trigger at the right time? (d) Give me 3 example descriptions with explanations."
+### Prompt 2: First Skill Design
 
-4) "The lesson talks about 'strategic competitive advantage' of building a skill library. Help me think strategically: If I invest time building skills for [my domain: Python / JavaScript / data science / etc.], what's the ROI? How much time will I SAVE in 6 months? Create a simple cost-benefit analysis."
+```
+I want to create my FIRST skill. My team's biggest pain point is [describe: inconsistent code style / missing documentation / security vulnerabilities / etc.]. Design a skill for this: (a) What should I name it? (b) Write a 'discoverable description' that triggers when relevant, (c) List 5-7 instructions, (d) Give me one before/after example showing what it does.
+```
 
-**Expected outcomes:**
+**Expected outcome:** Complete design for your first team skill
 
-- Clear differentiation between skills, subagents, and commands
-- Complete design for your first team skill
-- Deep understanding of autonomous discovery mechanism
-- Strategic justification for investing time in skill creation
+### Prompt 3: Discovery Mechanism Explained
 
-**Safety/ethics note:**
+```
+The lesson says skills are 'discovered autonomously' by Claude Code. I don't understand HOW that works. Explain the discovery mechanism step-by-step: (a) What does Claude read? (b) When does it decide to suggest a skill? (c) How do I write descriptions that trigger at the right time? (d) Give me 3 example descriptions with explanations.
+```
 
-- Don't encode sensitive business logic or credentials in skills
-- Test skills thoroughly before sharing with team
-- Version control skills so you can revert bad changes
+**Expected outcome:** Deep understanding of autonomous discovery mechanism
+
+### Prompt 4: Strategic ROI Analysis
+
+```
+The lesson talks about 'strategic competitive advantage' of building a skill library. Help me think strategically: If I invest time building skills for [my domain: Python / JavaScript / data science / etc.], what's the ROI? How much time will I SAVE in 6 months? Create a simple cost-benefit analysis.
+```
+
+**Expected outcome:** Strategic justification for investing time in skill creation
