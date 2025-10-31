@@ -86,6 +86,10 @@ When given an approved chapter spec (e.g., `specs/part-X/chapter-Y-spec.md`):
 - Flag any unverified assertions for clarification before proceeding
 - Example: "Chapter mentions '3 trillion dollar disruption'—need to verify source before planning"
 
+Also, determine AI tool onboarding status for lesson closures:
+- If the part/sequence has not yet taught an AI tool (e.g., Part-1), plan "Try With AI" using ChatGPT web.
+- After AI tools are introduced, plan "Try With AI" to use the learner’s preferred AI companion tool among those taught (e.g., Gemini CLI, Claude CLI). Provide variants as needed.
+
 ### Phase 2: Concept Breakdown (Scaffolding)
 
 Deconstruct the chapter into **3–7 sections/lessons** appropriate to chapter type:
@@ -93,14 +97,14 @@ Deconstruct the chapter into **3–7 sections/lessons** appropriate to chapter t
 **For Conceptual Chapters:**
 - **Section 1**: Hook/motivation — Establish why this matters
 - **Sections 2–N**: Progressive narrative — Each explores one major idea with examples
-- **Final Section**: Synthesis + transition — Connect ideas, prepare for next chapter
+- **Final Section**: Try With AI — End-of-lesson AI activity with a focused prompt set; avoid additional closing sections like "Key Takeaways" or "What's Next"
 - Use descriptive section titles (e.g., "The $3 Trillion Disruption")
 - Focus on reflection prompts, not exercises
 
 **For Technical Chapters:**
 - **Lesson 1**: Review + motivation — Activate prior knowledge
 - **Lessons 2–N**: Progressive skill building — Each introduces one concept with code
-- **Final Lesson**: Integration + practice — Apply concepts in realistic context
+- **Final Lesson**: Integration + practice — Apply concepts in realistic context, then conclude with a single "Try With AI" activity (no separate key takeaways or what's next)
 - Can use generic (lesson-1) or descriptive titles
 - Include code examples, exercises, assessments
 
@@ -110,6 +114,7 @@ Deconstruct the chapter into **3–7 sections/lessons** appropriate to chapter t
 - Key concepts introduced (max 1–2 major concepts)
 - Content elements (code examples for technical, stories/examples for conceptual)
 - Practice approach (exercises for technical, reflection for conceptual)
+ - End-of-lesson closure: Try With AI activity (Tool selection per policy: pre-tools → ChatGPT web; post-tools → learner’s AI companion), 2–4 prompts, expected outcomes
 - Prerequisites (which prior sections must be understood)
 - Estimated time/duration
 
@@ -202,6 +207,7 @@ Structure (adapt based on chapter type):
 - **Practice Approach**: 
   - [For Technical: Exercise or code challenge]
   - [For Conceptual: Reflection prompt or thought experiment]
+ - **End-of-Lesson: Try With AI** — [Tool], [2–4 prompts], [expected outputs], [safety/ethics note]
 
 ### Section/Lesson 2: [Title]
 [Repeat structure]
@@ -226,6 +232,8 @@ Structure (adapt based on chapter type):
  - Technical: Assessments, code challenges
  - Conceptual: Reflection, comprehension checks
  - Hybrid: Mix of both]
+
+Additionally, every lesson must include an end-of-lesson "Try With AI" activity and avoid conventional closing sections (no separate "Key Takeaways" or "What's Next"). The "Try With AI" tool selection must align with chapter position: pre-tools (e.g., Part-1) → ChatGPT web; post-tools → learner’s AI companion tool.
 ```
 
 ### Output 2: Task Checklist (`specs/part-X/chapter-Y-tasks.md`)
@@ -260,6 +268,11 @@ Structure (adapt task categories to chapter type):
   - Reference: `.specify/memory/constitution.md` Code Standards
   - Effort: 3h
 
+- [ ] **MUST**: Design "Try With AI" activity for Lesson 1
+  - Acceptance: Includes named AI tool (per selection policy), 2–4 prompts, expected outputs, and a brief safety/ethics note
+  - Constraint: No additional closure sections like "Key Takeaways" or "What's Next" in the lesson content
+  - Effort: 1–2h
+
 [For Conceptual Chapters:]
 - [ ] **MUST**: Section 1 outline (narrative arc, key points, examples)
   - Acceptance: Outline approved, clear narrative flow
@@ -283,6 +296,10 @@ Structure (adapt task categories to chapter type):
 - [ ] **MUST**: Create assessments/quizzes
   - Acceptance: Questions test multiple Bloom's levels, answers provided
   - Effort: 2h
+
+- [ ] **MUST**: Finalize "Try With AI" activities for Lessons [X]
+  - Acceptance: Prompts validated for clarity; outcomes testable; appears as the final section in each lesson; tool selection matches policy (pre-tools → ChatGPT web; post-tools → learner’s AI companion)
+  - Effort: 1h per lesson
 
 [For Conceptual Chapters:]
 - [ ] **SHOULD**: Design reflection prompts
@@ -313,6 +330,8 @@ Structure (adapt task categories to chapter type):
 - [ ] Chapter integrates with the 9 mandatory domain skills (contextually applied)
 - [ ] Output style matches chapter type requirements
 - [ ] Accessibility requirements met (clear language, inclusive examples)
+ - [ ] Each lesson ends with a single "Try With AI" section; no "Key Takeaways" or "What's Next" sections present
+ - [ ] "Try With AI" tool selection aligns with chapter/part progression (pre-tools → ChatGPT web; post-tools → learner’s AI companion tool)
 
 **Technical Chapters Only:**
 - [ ] All code examples pass tests (80%+ coverage) and follow code standards
@@ -330,6 +349,8 @@ Structure (adapt task categories to chapter type):
   - **Mitigation**: [Action]
 
 - **Next Step**: [After this phase completes, what comes next? e.g., "Run lesson-writer agent to implement content"]
+
+Note: This planning template enforces an AI-first closure to manage cognitive load. Plans and tasks should not request or schedule separate "Key Takeaways" or "What's Next" sections; use the "Try With AI" activity as the only closing element per lesson.
 ```
 
 ## Decision-Making Framework

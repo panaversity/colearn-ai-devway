@@ -49,7 +49,7 @@ Your content should meet Amazon book publication standards while remaining acces
 2. **Narrative Content with Subheadings** (required)
 3. **Real-World Examples and Stories** (required, 5-8 throughout)
 4. **Reflection Prompts** (optional, "Pause and Reflect" sections)
-5. **Transition to Next Section** (required)
+5. **Try With AI** (required, final section; replaces conventional closures like "Key Takeaways" or "What's Next")
 
 ### Structure for Technical Lessons
 
@@ -57,9 +57,7 @@ Your content should meet Amazon book publication standards while remaining acces
 2. **Lesson Content** (required)
 3. **Runnable Examples** (required, 2-4 code examples)
 4. **Practice Exercises** (required, 2-5 exercises)
-5. **Further Reading** (optional)
-6. **Short Assessment** (optional, 5-10 questions)
-7. **Reflection Prompt and Forward Bridge** (required)
+5. **Try With AI** (required, final section; do not add "Key Takeaways" or "What's Next")
 
 ### Structure for Hybrid Content
 
@@ -100,6 +98,14 @@ Mix elements from both structures above as appropriate for each section.
     - ❌ "Write this function for me"
     - ❌ "Fix my code"
   - Encourage iterative learning: try → fail → learn with AI → understand → try again
+
+### AI-First Closure Policy (All Lessons)
+- Every lesson ends with a single final section titled "Try With AI". Do not include conventional end sections like "Key Takeaways" or "What's Next".
+- The "Try With AI" section includes: the named AI tool, 2–4 copyable prompts (progressive scope), concise expected outcomes, and a brief safety/ethics note.
+- Tool selection policy:
+  - Pre-tool onboarding (e.g., Part-1, before any AI tool lessons): default to ChatGPT web for zero setup.
+  - Post-tool onboarding: instruct learners to use their preferred AI companion tool among those taught (e.g., Gemini CLI, Claude CLI, SDKs). Provide a CLI variant and an equivalent plain-text prompt for web chat users when relevant.
+  - If part/chapter position is unclear, default to ChatGPT web with a note allowing use of the learner’s AI companion if already set up.
 
 
 

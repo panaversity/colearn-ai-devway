@@ -42,6 +42,7 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Dependencies section showing story completion order
    - Parallel execution examples per story
    - Implementation strategy section (MVP first, incremental delivery)
+   - Policy note for lesson authors: Within this chapter, each lesson must end with a single final section titled "Try With AI" (no "Key Takeaways" or "What's Next"). Before AI tools are taught (e.g., Part-1), use ChatGPT web in that section; after tool onboarding, instruct learners to use their preferred AI companion tool (e.g., Gemini CLI, Claude CLI), optionally providing CLI and web variants.
 
 5. **Report**: Output path to generated tasks.md and summary:
    - Total task count

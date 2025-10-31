@@ -89,7 +89,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 - Progressive narrative sections building understanding
 - Real-world examples, stories, analogies
 - Reflection prompts ("Pause and Reflect" sections)
-- Summary and transitions to next section
+- Try With AI — end-of-lesson, AI-first practice section with a focused prompt set to apply the lesson using an AI tool; do not add separate "Key Takeaways" or "What's Next" sections
 - Descriptive file names matching content
 
 ### For Technical Chapters:
@@ -100,8 +100,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 - Interactive exercises (minimum 3, progressing in difficulty)
 - Checkpoint assessments
 - Real-world application connecting theory to practice
-- Summary and key takeaways
-- Links to next lesson
+- Try With AI — end-of-lesson, AI-first practice section with concrete prompts and expected outputs; do not add separate "Key Takeaways" or "What's Next" sections
 
 ### For Hybrid Chapters:
 - Mix elements from both above as appropriate
@@ -131,6 +130,24 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
 - Technical clarity: avoid jargon without definition; use analogies for complex ideas
 - Engagement: Include opening hook (2-3 paragraphs), visual breaks (lists, bold, code), appropriate pacing (5-7 min per major section)
 - Inclusivity: No gatekeeping language ("easy", "simple", "obvious"); diverse example names and contexts; gender-neutral language
+- AI-first closure: Every lesson must end with a single "Try With AI" section to manage cognitive load; avoid additional closing sections like "Key Takeaways" or "What's Next"
+
+### Try With AI — End-of-Lesson Closure (all chapters)
+- Purpose: Reinforce learning with an AI-partnered activity that applies the lesson immediately, while minimizing cognitive load.
+- Structure (recommended):
+   1) Setup: name the AI tool and context; 2) Prompt set: 2–4 progressively scoped prompts; 3) Expected outcomes: what a correct response looks like; 4) Safety/ethics note and next self-directed variation.
+- Characteristics:
+   - Single section placed at the very end of the lesson content
+   - Concrete, copyable prompts; concise expected outputs; optional stretch prompt
+   - Brief guardrails on responsible AI use and verification
+   - No additional summary, key takeaways, or "what's next" sections after this
+
+#### Tool selection policy (must follow)
+- Determine tool based on learner progression and chapter position:
+  - Pre-tool onboarding (e.g., Part-1 or before any AI tool lessons): default to ChatGPT web for accessibility and zero setup.
+  - Post-tool onboarding: direct learners to "your AI companion tool" among those taught (e.g., Gemini CLI, Claude CLI, OpenAI/Anthropic SDK, etc.)—honor learner preference and provide variant instructions if CLI is used.
+- How to decide: consult `specs/book/chapter-index.md` and the chapter plan to see whether AI tools have been introduced yet. If ambiguous, default to ChatGPT web and add a brief note: "If you've already set up an AI companion tool from previous lessons, feel free to use it instead."
+- Authoring tip: When using a CLI, include a short, copyable example command and the equivalent plain prompt text for web chat users.
 
 ## Execution Workflow
 
@@ -157,6 +174,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - Use ai-augmented-teaching to frame AI appropriately
 
 4. **Write Content**: Produce the lesson markdown with all required sections
+   - Resolve the "Try With AI" tool selection per the policy above (pre-tools → ChatGPT web; post-tools → learner’s AI companion). Include prompts and expected outcomes accordingly.
 
 5. **Self-Validate** (adapt checklist to chapter type):
 
@@ -164,7 +182,7 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - [ ] Learning objectives are measurable and use appropriate Bloom's taxonomy verbs
    - [ ] Concepts are scaffolded with clear progression
    - [ ] Language is clear and jargon is defined
-   - [ ] Connections to previous and next lessons are explicit
+   - [ ] Necessary connections to adjacent lessons are made within the body (not as end-of-lesson "what's next")
    - [ ] AI's role is framed appropriately for chapter type
    - [ ] Markdown follows appropriate template structure
    - [ ] Opening hook present and engages reader within 2-3 paragraphs
@@ -173,6 +191,8 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - [ ] No gatekeeping language ("easy", "simple", "obvious")
    - [ ] Diverse example names and inclusive contexts
    - [ ] Visual breaks present (headings, lists, code blocks, bold)
+   - [ ] Ends with a single "Try With AI" section; no "Key Takeaways" or "What's Next" sections included
+   - [ ] "Try With AI" tool selection follows policy (Part‑1/pre-tools → ChatGPT web; after tool onboarding → learner’s AI companion tool)
 
    **Technical Chapters Only:**
    - [ ] All code examples include type hints and docstrings
@@ -225,4 +245,6 @@ Provide the complete lesson markdown with:
 2. The full markdown content ready to be saved as a file
 3. A checklist of validation criteria passed
 4. Any notes on pedagogical decisions or design rationale
-5. Suggestions for next lesson or related content
+5. The end-of-lesson "Try With AI" section (prompt set, expected outputs, and a brief safety/ethics note)
+
+Note: This project follows an AI-first closure pattern to reduce cognitive load; avoid conventional end sections like "Key Takeaways" or "What's Next" in lesson content.

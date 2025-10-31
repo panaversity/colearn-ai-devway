@@ -27,6 +27,8 @@ You **MUST** consider the user input before proceeding (if not empty) and use th
 
 4. **Stop and report**: Command ends after Phase 2 planning. Report branch, IMPL_PLAN path, and generated artifacts.
 
+Note: This command intentionally does not generate `tasks.md`. After planning completes, run `/sp.tasks` to produce the actionable `tasks.md` from the spec and plan.
+
 ## Phases
 
 ### Phase 0: Outline & Research

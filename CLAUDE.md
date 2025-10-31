@@ -322,17 +322,21 @@ Each subagent:
 - Success criteria
 - Constraints and non-goals
 
-### Phase 2: PLAN + TASKS
+### Phase 2: PLAN and TASKS (separate commands)
 **Who:** Planning subagent (if defined in constitution)
 **Input:** Approved spec from Phase 1
 **Output:**
-- Detailed implementation plan
-- Task checklist with acceptance criteria
+- Detailed implementation plan (via /sp.plan)
+- Task checklist with acceptance criteria (via /sp.tasks)
 **Contents:**
 - Breakdown of work units
 - Dependencies and sequencing
 - Time/effort estimates
 - Required resources
+
+Command mapping for Phase 2:
+- Use `/sp.plan` to generate planning artifacts only (e.g., research.md, data-model.md, contracts/, quickstart.md). It does not create tasks.md.
+- Use `/sp.tasks` to generate the actionable `tasks.md` from the spec and plan. This is the sole command that writes `tasks.md`.
 
 ### Phase 3: IMPLEMENT
 **Who:** Implementation subagent(s) (if defined in constitution)
@@ -405,7 +409,7 @@ Refer to the constitution for the specific workflow. The generic pattern is:
 - Use planning subagent (if defined)
 - Break content into implementable units
 - Define required artifacts and resources
-- Create plan and task checklist
+- Create plan artifacts with `/sp.plan` and then generate the task checklist with `/sp.tasks` (separate step)
 
 #### Phase 3: IMPLEMENT
 **Process:**

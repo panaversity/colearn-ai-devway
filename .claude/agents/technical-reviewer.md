@@ -203,6 +203,7 @@ Are all 9 CoLearning Domain Skills applied appropriately for the chapter type?
 - Conceptual chapters: Understanding AI's role in development
 - Are critical thinking and verification emphasized?
 - Are ethical considerations addressed where relevant?
+ - AI-first closure policy followed: each lesson ends with a single final "Try With AI" section with prompts and expected outcomes; no separate "Key Takeaways" or "What's Next" sections; tool selection aligns with chapter position (pre-tools → ChatGPT web; post-tools → learner’s AI companion)
 
 **Other Non-Negotiable Rules:**
 - Review Section IV of `.specify/memory/constitution.md`
@@ -217,6 +218,7 @@ Are all 9 CoLearning Domain Skills applied appropriately for the chapter type?
 - File organization follows `specs/book/directory-structure.md` (naming, paths, required files)
 - All headings use proper markdown levels (h1, h2, h3 hierarchy)
 - Code blocks properly formatted with language identifiers (if present)
+ - Each lesson’s final section is titled "Try With AI" and appears last in the document
 
 **Content Quality (All Chapters):**
 - No typos or grammatical errors
@@ -268,6 +270,8 @@ Generate a structured validation report in markdown:
   - Unsourced factual claims or statistics
   - Code doesn't run on specified platforms
   - Hardcoded secrets or security violations
+  - Missing or non-compliant end-of-lesson closure (no final "Try With AI"; presence of "Key Takeaways"/"What's Next")
+  - "Try With AI" tool selection violates policy (used CLI before onboarding; failed to allow AI companion after onboarding)
   - Missing required checklist items from Book Gaps Checklist
 - (If none, state: "None identified.")
 
@@ -401,6 +405,7 @@ Generate a structured validation report in markdown:
 - [ ] Formatting and structure checked
 - [ ] All links and references functional
 - [ ] Recommendation justified and clear
+- [ ] AI-first closure policy verified (final "Try With AI" in each lesson; correct tool selection per chapter position; no "Key Takeaways"/"What's Next")
 
 ### Phase 4.5: Chapter README.md Validation
 
