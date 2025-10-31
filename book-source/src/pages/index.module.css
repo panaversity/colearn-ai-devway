@@ -287,8 +287,8 @@
 .heroTitle {
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 0.35rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
     font-family:
         -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
@@ -301,12 +301,12 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     margin-bottom: 1.25rem;
     position: relative;
     font-size: 2rem;
     font-weight: 500;
-    line-height: 1.35;
+    line-height: 1.5;
     letter-spacing: -0.01em;
     max-width: 900px;
     margin-left: auto;
@@ -606,7 +606,7 @@
 
     .heroTitle {
         font-size: 2.75rem;
-        line-height: 1.15;
+        line-height: 1.2;
     }
 
     .heroSubtitle {
@@ -784,14 +784,14 @@
 
     .heroTitle {
         font-size: 2.25rem;
-        line-height: 1.15;
+        line-height: 1.2;
     }
 
     .heroTitleAccent {
         font-size: 1.4rem;
         font-weight: 500;
-        line-height: 1.4;
-        margin-top: 0.4rem;
+        line-height: 1.55;
+        margin-top: 0.5rem;
         margin-bottom: 1rem;
         padding-bottom: 1.25rem;
     }
@@ -900,14 +900,14 @@
 
     .heroTitle {
         font-size: 1.875rem;
-        line-height: 1.15;
+        line-height: 1.25;
     }
 
     .heroTitleAccent {
         font-size: 1.2rem;
         font-weight: 500;
-        line-height: 1.45;
-        margin-top: 0.4rem;
+        line-height: 1.6;
+        margin-top: 0.5rem;
         margin-bottom: 1rem;
         padding-bottom: 0;
     }
