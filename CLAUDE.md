@@ -169,6 +169,143 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 - Smallest viable change; no unrelated edits
 - Code references to modified/inspected files where relevant
 
+---
+
+## Beginner Content Creation Guidelines
+
+When creating content for non-programmer audiences (business founders, complete beginners, non-technical learners), apply these guidelines. These patterns come from Chapter 7 redesign and are documented in Constitution Principles 12 & 13.
+
+### 1. Cognitive Load Management
+
+**Thresholds for beginner content:**
+- **Max 2 options to choose from** (let AI agent handle 3+ options)
+  - Example: Teach `npm` and `pip`; don't add `brew` and `apt` for beginners
+  - Language: "Your agent knows which tool to use"
+
+- **Max 5 new concepts per lesson section**
+  - Don't introduce more than 5 new ideas in one section
+  - One concept fully explained beats 5 concepts skimmed
+
+- **Simplify before teaching:**
+  - Show minimal/simplest version first
+  - Then show how it extends for advanced use
+  - Pattern: Basic → Applied → Why It Matters → Then advanced variations
+
+- **One new skill per lesson**
+  - Focus on depth, not breadth
+  - Build confidence with mastery, not overwhelm with options
+
+- **Remove theoretical scenarios and edge cases**
+  - For beginners: Only include scenarios they'll face in next 2 chapters
+  - NOT: "What if you need to use different packages in production and development?"
+  - YES: "Install the packages this project needs"
+
+### 2. Concept-First Pattern
+
+**Structure for every new tool/command/concept:**
+
+1. **WHAT** (Concept) — Explain without jargon
+   - Use non-programmer examples and analogies
+   - Real-world parallel before technical definition
+   - Visual diagram if possible
+
+2. **WHY** (Value) — Why does this matter for their work?
+   - Business context, not technical elegance
+   - Frame around shipping products or solving problems
+
+3. **HOW** (Command) — Now show the actual command
+   - Simple version first
+   - Explain each part
+
+4. **PRACTICE** (Try With AI) — Interactive learning
+   - Use Claude Code, Gemini CLI, or similar
+   - Real scenarios, not hypotheticals
+
+**Example (from Chapter 5):**
+```
+WHAT: "A dependency = code someone else wrote that your project needs"
+      Analogy: "Like using a library book instead of writing it yourself"
+      Diagram: Project → Needs Code → Install → Ready
+
+WHY:  "You don't reinvent the wheel. You reuse proven code."
+
+HOW:  "npm install" (for JavaScript) or "pip install -r requirements.txt" (for Python)
+
+PRACTICE: "Your agent suggests the right command. Your job: understand what's happening"
+```
+
+### 3. AI-as-Partner Pattern
+
+For non-programmers, position the AI agent as the decision-maker:
+
+- **Phrases to use:**
+  - "Your agent knows which tool to use"
+  - "Different tools exist. Your agent chooses the right one"
+  - "You don't memorize commands. Your agent executes. You understand."
+  - "Your job: understand concepts, supervise execution, ask questions"
+
+- **Student responsibility:**
+  - Understand WHAT is happening
+  - Ask "Is this safe?" questions
+  - Request explanations before proceeding
+  - NOT responsible for: memorizing syntax, choosing tools, handling edge cases
+
+### 4. Error Literacy for Beginners
+
+**Every technical lesson MUST include "Red Flags to Watch" section.**
+
+Pattern:
+```
+✅ These are normal (safe to ignore):
+- "added 127 packages" → Success!
+- "npm notice..." or "warning: pip..." → Just informational
+- Text scrolling → Installation working
+
+⚠️ These mean something went wrong (ask your agent):
+- "ERROR" in message → Something failed
+- Installation stops early → Ask why
+- "ModuleNotFoundError" → Package didn't install
+
+Your job: If you see ERROR or something stops, ask your agent. Don't panic.
+They'll know how to fix it.
+```
+
+**Goal:** Separate signal from noise. Reduce anxiety about terminal output.
+
+### 5. Practical Context Over Theory
+
+**Choose scenarios based on:**
+- What real problems will students face in the next 2 chapters?
+- What would genuinely help them ship their product?
+
+**Remove:**
+- "What if you need..." scenarios
+- "Advanced options you might need someday"
+- Theoretical edge cases
+- Technical deep-dives (where files go, how it works internally)
+
+**Include:**
+- "Install this project's packages" (real scenario)
+- "Check what got installed" (real verification)
+- "Something failed—what now?" (real error handling)
+
+### 6. Audience Context Matters
+
+Different audiences need different framing of the same content:
+
+| Audience | Focus | Frame |
+|----------|-------|-------|
+| Business founder | Shipping products fast | "This lets you reuse code instead of building from scratch" |
+| Professional developer | Best practices, architecture | "This ensures reproducible environments across teams" |
+| CS student | Concepts, theory, mastery | "Understanding dependencies is foundational to package management systems" |
+
+**Application:**
+- Read the chapter spec to understand target audience
+- Frame content around their goals, not your teaching goals
+- Business founder: "Why does this help you ship?" → Professional: "Why is this a best practice?"
+
+---
+
 ## Architect Guidelines (for planning)
 
 Instructions: As an expert architect, generate a detailed architectural plan for [Project Name]. Address each of the following thoroughly.

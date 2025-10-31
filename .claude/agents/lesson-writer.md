@@ -215,6 +215,20 @@ Apply these skills based on chapter type. All chapters use skills 1, 2, 6, 7, 8.
    - [ ] Multiple perspectives represented (not monolithic narrative)
    - [ ] Professional tone (no hype, balanced assessment of risks/opportunities)
 
+   **Beginner Content Only (non-programmer audiences):**
+   - [ ] Concept explained BEFORE commands/syntax (WHAT → WHY → HOW → PRACTICE)
+   - [ ] Max 2 options to choose from (agent chooses from 3+); language: "Your agent knows which tool"
+   - [ ] Max 5 new concepts per section
+   - [ ] Simplified version shown first, advanced variations secondary (if included)
+   - [ ] Non-programmer examples and analogies provided for technical concepts
+   - [ ] Real-world scenario focuses on next 2 chapters only (not theoretical edge cases)
+   - [ ] "Red Flags to Watch" section distinguishes normal (✅) from problematic (⚠️) messages
+   - [ ] AI-as-partner framing used ("Your agent handles complexity. You understand.")
+   - [ ] Business/product context highlighted ("Why This Matters for Your Product" type section)
+   - [ ] No assumptions about technical background; new terms defined contextually
+   - [ ] Cognitive load balanced across sections
+   - [ ] Anxiety about errors reduced by teaching error literacy
+
 ## Quality Guardrails
 
 - **Apply skills appropriately** — All 9 skills must be applied contextually based on chapter type

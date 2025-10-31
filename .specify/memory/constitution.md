@@ -229,6 +229,66 @@ Multiple AI tools MUST be covered with honest comparison, not single-tool lock-i
 
 ---
 
+### Principle 12: Cognitive Load Consciousness
+
+Content MUST be deliberately structured to reduce cognitive overload, especially for beginner audiences. Prioritize deep understanding of core concepts over comprehensive feature coverage.
+
+**Why This Matters:** Beginners (especially non-programmers) have limited working memory. Overwhelming them with options, complexity, and edge cases leads to dropout and reduced retention. Strategic simplification increases completion rates and long-term learning. Let AI handle complexity; students focus on conceptual understanding.
+
+**What This Means:**
+- For beginner audiences: Max 2 options to choose from (agent handles 3+ options)
+- Max 5 new concepts introduced per lesson section
+- Always show the minimal/simplest version first, then extend with advanced variations
+- One new skill/concept per lesson where possible
+- Remove theoretical scenarios and edge cases for beginners (save for advanced chapters)
+- Explicitly state "Your agent handles this complexity—you understand the concept"
+- Trade-off: Comprehensiveness for Clarity (clarity wins for beginners)
+
+**Application:**
+- Chapter 5 (Dependencies) example: Taught npm + pip (2 options), explicitly stated "Your agent chooses the tool"
+- Chapter 5 example: Removed brew/apt, removed requirements-dev.txt, removed version pinning complexity
+- Teaching Pattern: "Concept → Simple Example → Why It Matters → Then Try With AI"
+
+---
+
+### Principle 13: Concept-Before-Command Pattern
+
+Every new tool, command, or technical concept MUST be introduced by explaining WHAT it is conceptually BEFORE showing HOW to use it. Use non-programmer examples and analogies.
+
+**Why This Matters:** Teaching syntax without context creates cargo-cult programming (following commands without understanding). Students need mental models before execution details. Non-programmers especially need conceptual anchors before technical steps.
+
+**What This Means:**
+- Structure: WHAT (concept) → WHY (real-world value) → HOW (command) → PRACTICE (Try With AI)
+- For each new term: Explain in non-programmer language on first use
+- Use analogies and real-world examples before introducing technical jargon
+- Include visual diagrams when explaining complex concepts
+- Avoid assumptions about prior knowledge; define terms contextually
+- Example phrasing: "A dependency is code someone else wrote that your project needs. Think of it like using a library book instead of writing the content yourself."
+
+**Application:**
+- Chapter 5: Added "What Are Dependencies?" section with diagram and real example before teaching package managers
+- Included analogy: "Like using a library instead of writing from scratch"
+- Visual flow: Project → Needs → Install → Ready
+
+---
+
+### Extended Principle 8: Accessibility and Inclusivity — Error Literacy Addition
+
+Content MUST be welcoming and accessible to diverse learners. **NEW:** Students must develop error literacy—the ability to distinguish between normal/expected messages and actual problems.
+
+**Error Literacy Additions:**
+- Every technical lesson MUST include "Red Flags to Watch" section
+- Red Flags section distinguishes: ✅ Normal/Expected vs. ⚠️ Actual Problems
+- Empower students: "Error messages are tools for learning. When you see ERROR, ask your agent"
+- Help students overcome anxiety about terminal output by separating signal from noise
+- Example pattern:
+  ```
+  ✅ Normal (safe to ignore): "warning: pip is configured..." | "npm notice..."
+  ⚠️ Problem (ask agent): "ERROR" in message | Installation stops early | Command not found
+  ```
+
+---
+
 ## II.C Book Gaps Checklist (Required Coverage by Chapter Type)
 
 All chapters MUST be validated against this checklist before publication. Subagents reference this checklist during planning, writing, and validation phases.
