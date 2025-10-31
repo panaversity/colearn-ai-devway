@@ -1,5 +1,5 @@
 ---
-name: ai-augmented-teaching
+name: ai-collaborate-learning
 description: |
   Design learning experiences for AI-assisted software development, integrating prompt engineering pedagogy,
   AI pair programming patterns, and AI tool literacy into programming curriculum. Use this skill when
@@ -12,15 +12,15 @@ allowed-tools: ["Read", "Bash", "Write"]
 version: "1.0.0"
 ---
 
-# AI-Augmented Teaching Skill
+# AI Collaborate Learning
 
 ## Purpose
 
-Enable educators to design **effective AI-integrated learning experiences** that prepare students for modern software development while maintaining learning integrity. This skill helps:
+Enable educators to design **co‑reasoning learning experiences** where AI is a partner in thinking, not just autocomplete. This skill helps:
 - Teach prompt engineering as a core programming skill
-- Design lessons balancing AI assistance with foundational learning
+- Design lessons that emphasize specification‑first, co‑reasoning with AI, and validation‑before‑trust
 - Establish patterns for AI pair programming in education
-- Build AI tool literacy (capabilities, limitations, verification)
+- Build AI tool literacy (capabilities, limitations, verification), with explicit spec → generate → validate loops
 - Create ethical guidelines for responsible AI use
 - Assess appropriate balance of AI integration in curriculum
 
@@ -254,6 +254,19 @@ ai_assistance_balance:
   foundational_work_percentage: 40
   ai_assisted_work_percentage: 40
   independent_verification_percentage: 20
+```
+
+## Acceptance Checks
+
+- [ ] Spectrum tag specified for the lesson: Assisted | Driven | Native
+- [ ] Spec → Generate → Validate loop outlined for AI usage
+- [ ] At least one “verification prompt” included to force the model to explain/test its own output
+
+### Verification prompt examples
+```
+- “Explain why this output satisfies the acceptance criteria from the spec.”
+- “Generate unit tests that would fail if requirement X is not met.”
+- “List assumptions you made; propose a test to verify each.”
 ```
 
 ## Examples

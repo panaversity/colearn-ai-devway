@@ -130,6 +130,21 @@ objectives:
       - "Criterion 2"
 ```
 
+## Acceptance Checks
+
+- [ ] SpecRef present (path to chapter spec and objective IDs)
+- [ ] ≤ 5 objectives; measurable verbs only
+- [ ] Each objective has Bloom tag (e.g., L2-Understand, L3-Apply)
+- [ ] Each objective includes an “Evidence” mapping to assessment items or tasks
+- [ ] Objectives align with complexity tier constraints (see Constitution)
+
+### Objective snippet
+```
+- [ID: LO-001 | Bloom: L3-Apply]
+  Statement: Implement X in Y context
+  Evidence: Quiz Q3, Task T2
+```
+
 ## Examples
 
 ### Example 1: Python List Comprehensions (1-hour lesson)

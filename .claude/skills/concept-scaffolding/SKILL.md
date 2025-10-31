@@ -274,6 +274,18 @@ Before finalizing scaffolding plan:
 - [ ] Clear progression from simple to complex
 - [ ] No circular dependencies in prerequisite chain
 
+## Acceptance Checks
+
+- [ ] Per-step verifiability: each step lists entry knowledge, single outcome, and a micro-check
+- [ ] Cognitive Load Budget present for the lesson (Beginner default ≤ 5 new concepts total)
+
+### Step snippet
+```
+Entry: knows lists, for-loops
+Outcome: implement list comprehension with filter
+Micro-check: “Write one comprehension that filters even numbers”
+```
+
 ## References
 
 Supporting documentation (loaded as needed):

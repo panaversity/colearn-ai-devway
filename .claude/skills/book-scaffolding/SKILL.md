@@ -238,6 +238,19 @@ All book content MUST:
 - ✅ **Accessibility**: Alt text, high contrast, clear language, multiple reading paths
 - ✅ **Constitutional alignment**: Align with project principles and non-negotiable rules
 
+## Acceptance Checks
+
+- [ ] Each section/lesson tagged with complexity tier (Beginner/Intermediate/Advanced/Professional)
+- [ ] Beginner-tier sections respect concept cap (≤ 5 new concepts per section)
+- [ ] Dependency Index present: prerequisites and forward links with anchors
+- [ ] SpecRef included at part/chapter headers
+
+### Dependency Index (example)
+```
+Prerequisites: Part 1 Ch 2 (tools), Part 3 Ch 1 (prompting)
+Next: Part 4 Ch 3 (types), Part 5 Ch 1 (Spec‑Kit intro)
+```
+
 ---
 
 ## Success Metrics
