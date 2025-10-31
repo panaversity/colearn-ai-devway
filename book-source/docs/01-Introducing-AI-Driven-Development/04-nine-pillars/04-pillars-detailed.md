@@ -161,6 +161,8 @@ Here's a question to test your understanding: **What if you could only use six o
 
 You now understand all nine pillars individually and how they interconnect. But here's the crucial question: **What does this combination enable that wasn't possible before?**
 
+## What's Next?
+
 In the next section, we'll explore the M-Shaped Developer—a new type of technical professional who leverages these nine pillars to build capabilities that span the full stack, from idea to production deployment. This isn't about being a "10x developer" or a polymath genius. It's about using the right tools, in the right combination, to achieve what previously required entire teams.
 
 The nine pillars are the foundation. The M-Shaped Developer is what you build on that foundation.

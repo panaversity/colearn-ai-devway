@@ -37,7 +37,7 @@ You ↔ Claude Code ↔ Local Files Only
 ```
 You ↔ Claude Code ↔ MCP Servers ↔ External Systems
                         ↓
-              [Web browsing, Docs search, Databases, APIs]
+              [Web browsing, Docs search]
 ```
 
 **MCP Server**: A small helper app Claude uses to do a job (browse the web, fetch docs, query a database).
@@ -71,14 +71,7 @@ You've now learned three extension mechanisms. Here's how they differ:
 
 ## Hands-On: Add Two Helpful MCP Servers
 
-We’ll add two servers using simple commands. If you prefer, you can also edit the JSON config directly.
-
-### Prerequisites
-
-- Claude Code installed and signed in
-- Node.js and `npx` available
-
-### Option A: Add via CLI (recommended)
+We’ll add two servers using simple commands.
 
 ```bash
 # 1) Playwright MCP (browse the web)
@@ -86,23 +79,6 @@ claude mcp add --transport stdio playwright npx @playwright/mcp@latest
 
 # 2) Context7 MCP (get up-to-date docs)
 claude mcp add --transport stdio context7 npx -y @upstash/context7-mcp
-```
-
-### Option B: Add via JSON
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["@playwright/mcp@latest"]
-    },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
-    }
-  }
-}
 ```
 
 ---
@@ -117,23 +93,6 @@ claude mcp add --transport stdio playwright npx @playwright/mcp@latest
 
 # Add Context7 MCP (live docs)
 claude mcp add --transport stdio context7 npx -y @upstash/context7-mcp
-```
-
-Alternatively, add this to your MCP config (e.g., `.mcp.json`):
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["@playwright/mcp@latest"]
-    },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
-    }
-  }
-}
 ```
 
 Goal: Ask Claude to browse Amazon and find a shirt that matches your preferences. No code—just a plain request.
@@ -174,37 +133,7 @@ Tip: This is your “know about anything new” button. Use it anytime you need 
 
 ---
 
-## Comprehensive Reflection: Your Claude Code Journey
-
-You've completed all five lessons. Take a moment to reflect on what you've learned and how it integrates into a complete mental model of Claude Code.
-
-### Knowledge Integration
-
-**Lesson 1: Paradigm Shift**
-- Claude Code is an agentic assistant, not a passive chatbot
-- Terminal integration enables direct file/command access
-
-**Lesson 2: Installation**
-- Platform-specific installation (NPM or native)
-- Dual authentication paths (Claude.ai or Console API)
-- Troubleshooting covers 90% of issues
-
-**Lesson 3: Subagents**
-- Specialized AI assistants with isolated context
-- Explicit invocation for focused, repeatable tasks
-- Consistency through custom system prompts
-
-**Lesson 4: Agent Skills**
-- Autonomous discovery and invocation
-- Scales expertise across teams and projects
-- Competitive advantage through domain-specific skill libraries
-
-**Lesson 5: MCP Servers**
-- External tools and data (web browsing, docs, databases)
-- Use trusted servers like Playwright MCP and Context7 MCP
-- Simple workflows that connect your local work with the live web and docs
-
-### The Complete Claude Code Toolkit
+## The Complete Claude Code Toolkit
 
 You now have four extension mechanisms:
 
@@ -249,43 +178,4 @@ Exploratory or one-off task?
 
 ## What's Next: Beyond Claude Code
 
-You've mastered Claude Code—a powerful terminal-based AI assistant. But the AI tool landscape is vast, and Claude Code is one of many options.
-
-**In Chapter 6**, you'll explore **other AI development tools**:
-- **Gemini CLI**: Google's terminal-based AI assistant
-- **GitHub Copilot**: IDE-integrated pair programming
-- **Cursor and Windsurf**: AI-first code editors
-
-Each tool has different strengths, and choosing the right tool for your workflow matters.
-
-**Your foundation is solid**: The concepts you've learned—agentic AI, specialization, security evaluation, workflow integration—apply across all AI development tools. You're not just learning Claude Code; you're learning **how to work effectively with AI in software development.**
-
----
-
-## Resources for Learning More
-
-For deeper exploration beyond this chapter:
-
-- **Official Claude Code Documentation**: https://docs.claude.com/en/docs/claude-code
-- **MCP Specification**: https://modelcontextprotocol.io
-- **Community MCP Servers**: https://github.com/anthropics/mcp-servers
-- **Claude Code Discord**: https://discord.gg/anthropic (#claude-code channel)
-- **Anthropic Blog**: https://www.anthropic.com/blog (announcements and case studies)
- - **Playwright MCP**: https://www.npmjs.com/package/@playwright/mcp
- - **Context7 MCP**: https://www.npmjs.com/package/@upstash/context7-mcp
-
----
-
-## Key Takeaways
-
-- **MCP lets Claude Code use external tools and data** (web, docs, APIs), so it can collaborate beyond your local files
-- **Two beginner-friendly servers**: Playwright (web browsing) and Context7 (live docs)
-- **Natural-language workflows**: “Find me shirts under $30” or “Summarize the latest MCP docs for Claude Code”
-- **Safe by default**: Secrets stay in your system keychain; use reputable servers
-- **Complete toolkit**: Main conversation (explore), subagents (explicit), skills (automatic), MCP (external tools/data)
-
----
-
-**🎉 Congratulations!** You've completed Chapter 5 and mastered Claude Code's core features. You're ready to leverage AI as an integrated development partner, not just a question-answering tool.
-
-**Continue your journey**: Explore the supplementary resources, apply these concepts to your own projects, and see how AI-driven development transforms your workflow.
+You've mastered Claude Code—a powerful terminal-based AI assistant. But the AI tool landscape is vast, and Claude Code is one of many options. **In Chapter 6**, you'll explore **other AI development tools.

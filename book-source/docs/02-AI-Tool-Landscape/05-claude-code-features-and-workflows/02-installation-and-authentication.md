@@ -205,6 +205,6 @@ Before moving forward, let's address important security considerations:
 
 ---
 
-## What's Next: Lesson 3 - Subagents
+## What's Next?
 
 Now that Claude Code is installed and working, you're ready to learn about **subagents** - specialized AI assistants that handle specific tasks with custom instructions and isolated contexts.Let's continue building your Claude Code expertise.

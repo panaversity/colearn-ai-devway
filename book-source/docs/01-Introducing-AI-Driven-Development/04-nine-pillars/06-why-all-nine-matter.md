@@ -104,4 +104,6 @@ Write down your answers. They'll help you track your mindset shift as you progre
 
 ---
 
-**Next:** In Section 7, we'll map your journey through all nine pillars—showing exactly how this book will guide you from where you are now to complete AI-augmented development capability. The path is clearer than you think.
+## What's Next?
+
+In Section 7, we'll map your journey through all nine pillars—showing exactly how this book will guide you from where you are now to complete AI-augmented development capability. The path is clearer than you think.

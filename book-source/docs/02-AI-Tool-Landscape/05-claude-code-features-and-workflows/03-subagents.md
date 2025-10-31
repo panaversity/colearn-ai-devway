@@ -234,7 +234,7 @@ You've learned how to create specialized AI assistants with subagents. But there
 
 ---
 
-## What's Next: Lesson 4 - Agent Skills
+## What's Next?
 
 Subagents are powerful because you run in isolation - what if Claude Code could **discover and invoke specialized capabilities autonomously**?
 
