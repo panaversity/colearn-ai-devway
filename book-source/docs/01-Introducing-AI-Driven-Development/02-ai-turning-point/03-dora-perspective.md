@@ -152,15 +152,34 @@ The capabilities aren't optional. They're the foundation that lets you capture t
 
 :::
 
-## Key Takeaway
+---
 
-**AI is an amplifier, not a fix.** It makes strong teams stronger and struggling teams more chaotic.
+## Try With AI
 
-DORA identified seven capabilities that determine whether AI becomes an asset or liability: Clear AI Stance, Healthy Data Ecosystem, AI-Accessible Internal Data, Strong Version Control, Working in Small Batches, User-Centric Focus, and Quality Internal Platform.
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
 
-Organizations that excel in these areas see 20-30% productivity gains with stable or improving quality. Organizations that struggle with them see velocity spikes followed by stability problems.
+**Prompts:**
 
-The lesson: if you want to benefit from AI-assisted development, start by strengthening your foundational practices. The amplifier only works when there's something worth amplifying.
+1) "This lesson mentioned that 'AI amplifies whatever you bring to it'—good practices get better, weak practices get worse. Explain this concept using a simple analogy (not technical jargon). Then give me 2 real-world examples: one where AI helped a team succeed, and one where it made existing problems worse."
+
+2) "I'm [your role/context] and I want to use AI to build solutions faster. What are 3 warning signs that I'm moving too fast and creating problems? What are 3 signs that I'm doing it right and building quality? Give me practical indicators I can watch for as a beginner."
+
+3) "The lesson talked about 'guardrails' that make AI development safer and faster (like testing, reviews, and documentation). Pick one guardrail and explain: (a) what it is in simple terms, (b) why it matters when using AI, and (c) one easy way I can start using it in my next project."
+
+4) "Here's my concern: I'm worried that if I focus too much on 'process' and 'guardrails,' I'll lose the speed advantage of AI. Is this a valid concern? How do successful teams balance 'moving fast with AI' and 'maintaining quality'? Give me a practical strategy I can use."
+
+**Expected outcomes:**
+
+- Clear, jargon-free understanding of how AI amplifies existing practices (good and bad)
+- Practical warning signs and success indicators you can monitor as a beginner
+- Concrete understanding of at least one quality practice (guardrail) and how to implement it
+- Balanced perspective on speed vs. quality when using AI tools
+
+**Safety/ethics note:**
+
+- Verify that DORA metric definitions and benchmarks are accurate; check against the official DORA reports
+- Don't share proprietary team performance data or confidential metrics publicly
+- Cross-check at least one claim about AI's impact on DORA metrics against external sources (research papers, case studies, vendor-neutral reports)
 
 ---
 

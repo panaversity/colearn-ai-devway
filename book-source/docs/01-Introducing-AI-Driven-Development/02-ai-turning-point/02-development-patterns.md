@@ -178,17 +178,32 @@ Think of it like blueprints for construction. Building a treehouse in your backy
 
 ---
 
-## Key Takeaways
+## Try With AI
 
-- **Vibe coding** is intuition-led exploration. Excellent for learning, but creates predictable failure modes in production: missing tests, ambiguous requirements, architecture drift.
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
 
-- **Spec-Driven Development** enforces clarity upfront with a 7-step workflow (Specify, Plan, Tasks, Implement Red-Green, Refactor, Explain, Record/Share). Feels slower initially but compresses total cost and enables confident refactoring.
+**Prompts:**
 
-- **Context matters.** Neither approach is universally right. Solo learning project? Vibe coding. Team production feature? SDD.
+1) "Explain the difference between 'vibe coding' (jumping in and iterating quickly) and 'spec-driven development' (planning first, then building). Which approach is better for: (a) learning a new skill, (b) building a personal project, (c) creating a product for real users? Give me specific examples of when each approach works best."
 
-- **AI amplifies everything.** Fast vibe coding with AI feels amazing and creates the same risks. Disciplined SDD with AI multiplies your leverage.
+2) "I want to build [describe something you'd like to create: a website, an app, a business tool, etc.] using AI as my collaborator. Walk me through what 'planning first' would look like for this project. What questions should I answer before asking AI to help me build it? What could go wrong if I skip the planning step?"
 
-Now that you understand how to work with AI, a critical question emerges: **Why do some teams succeed with AI while others struggle?** The answer comes from research by DORA (DevOps Research and Assessment) showing that discipline matters MORE with AI, not less.
+3) "Here's a realistic scenario: I'm building a simple tool and I use AI to generate code quickly. It works on my computer, but when I share it with others, it breaks. What likely went wrong? What should I have done differently? Give me a simple checklist I can use next time to avoid this problem."
+
+4) "Create a simple decision framework for me: Given a project or idea, how do I decide whether to 'explore quickly with AI' versus 'plan carefully first'? Make it practical—something I can use as a beginner without needing to know technical jargon."
+
+**Expected outcomes:**
+
+- Clear understanding of when to plan vs. when to explore (without technical jargon)
+- Practical insight into planning a real project with AI collaboration
+- Awareness of common beginner mistakes (like "works on my machine" syndrome) and how to avoid them
+- A simple, reusable decision framework for choosing your approach
+
+**Safety/ethics note:**
+
+- Verify that cited patterns are real practices, not AI hallucinations
+- Don't share proprietary development processes or sensitive project details
+- Cross-check at least one pattern description against practitioner blogs, conference talks, or case studies before adopting
 
 ---
 

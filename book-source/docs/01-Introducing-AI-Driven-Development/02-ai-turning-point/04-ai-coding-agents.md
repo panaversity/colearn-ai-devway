@@ -164,17 +164,34 @@ With the three-layer stack, you make three independent decisions:
 
 :::
 
-## Key Takeaway
+---
 
-The modern AI development stack is a **three-layer architecture**: Frontier Models (intelligence), AI-First IDEs (workspace), and Development Agents (orchestration).
+## Try With AI
 
-**What makes 2025 different from 2024**: Modular, composable tools replaced monolithic silos. You can now swap any layer independently thanks to standardization like MCP.
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
 
-**Model Context Protocol (MCP)** prevents vendor lock-in by providing a common language for AI tools to access your codebase, terminal, and systems.
+**Prompts:**
 
-**Choosing tools**: Pick the best option at each layer based on your performance needs, budget, and privacy requirements. You can change your mind later without rewriting your workflow.
+1) "Explain the difference between an 'AI assistant' (suggests ideas, you decide) and an 'AI agent' (takes action autonomously). Using simple analogies, help me understand: When would I want AI to just advise me? When would I want AI to execute tasks on its own? Give me 2 examples of each scenario."
 
-The three-layer stack isn't a fad—it's a durable pattern that reflects how AI-assisted development actually works.
+2) "I'm thinking about using AI to help me build [describe your project idea]. Should I use AI as an 'assistant' (I stay in control) or as an 'agent' (it does work autonomously)? What factors should influence my decision? What are the risks of each approach for a beginner like me?"
+
+3) "This lesson mentioned a 'three-layer stack': models (the AI brain), workspaces (where you work), and agents (autonomous helpers). Explain this using a simple analogy that doesn't require technical knowledge. Why does this separation matter for someone who just wants to build solutions?"
+
+4) "I'm concerned about vendor lock-in—what if the AI tool I learn today becomes expensive or disappears tomorrow? How does the 'modular stack' approach protect me? Give me practical advice: what should I focus on learning that will stay relevant even as specific tools change?"
+
+**Expected outcomes:**
+
+- Clear understanding of AI assistant vs. agent modes using beginner-friendly analogies
+- Practical decision framework for choosing between assistant and agent modes for your projects
+- Conceptual grasp of the three-layer architecture and why it matters (without technical details)
+- Confidence that learning AI collaboration skills is durable, even as specific tools evolve
+
+**Safety/ethics note:**
+
+- Verify that the agent task doesn't involve sensitive data, credentials, or production systems until you've tested in safe environments
+- Don't share actual credentials, API keys, or proprietary system architectures when discussing agent tasks
+- Cross-check security best practices for AI agents against official vendor documentation and security guidelines before deploying
 
 ---
 
