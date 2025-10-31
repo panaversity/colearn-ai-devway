@@ -3,7 +3,7 @@ sidebar_position: 2
 title: "Development Patterns — Vibe Coding vs. Spec-Driven Development"
 ---
 
-# Section 2: Development Patterns — Vibe Coding vs. Spec-Driven Development
+# Development Patterns — Vibe Coding vs. Spec-Driven Development
 
 You've probably experienced this: you start a project and move *fast*. No specs, no planning, just coding. The first feature ships in hours. It works. You ship it.
 

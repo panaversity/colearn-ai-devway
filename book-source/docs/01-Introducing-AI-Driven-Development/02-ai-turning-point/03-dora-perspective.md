@@ -6,7 +6,7 @@ lesson: 3
 duration: "8-10 minutes"
 ---
 
-# Section 3: The DORA Perspective — AI as Amplifier
+# The DORA Perspective — AI as Amplifier
 
 Two engineering organizations at different companies both adopt the same AI coding assistant in January 2025. Same tool, same budget, same training materials.
 

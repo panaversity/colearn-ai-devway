@@ -24,8 +24,4 @@ By the end of this chapter, you'll understand:
 - **Core challenges and mitigation**: The three critical challenges of AI-driven development (over-reliance, quality drift, cost management) with specific strategies to address each
 - **Your strategic path forward**: How to evaluate your position in the AI transformation and make informed adoption decisions with appropriate guardrails
 
-## What's Next
 
-After completing this chapter, continue to **Chapter 3: Setting Up Your AI Development Environment** where you'll move from understanding to action—installing tools, configuring your workspace, and running your first AI-assisted development session.
-
-The theoretical foundation from Chapters 1 and 2 will translate into practical capability as you build the environment that professional developers are using to transform their productivity.

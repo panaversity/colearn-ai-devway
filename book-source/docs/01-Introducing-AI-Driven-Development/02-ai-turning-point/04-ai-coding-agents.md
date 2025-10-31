@@ -6,7 +6,7 @@ lesson: 4
 duration: "7-9 minutes"
 ---
 
-# Section 4: The Modern AI Development Stack
+# The Modern AI Development Stack
 
 In 2024, if you wanted AI assistance while coding, you had to choose: Do I use GitHub Copilot in VS Code? Or ChatGPT in a browser? Or Claude in a separate window?
 
@@ -187,12 +187,3 @@ Use ChatGPT web for this activity. If you've already set up an AI companion tool
 - Conceptual grasp of the three-layer architecture and why it matters (without technical details)
 - Confidence that learning AI collaboration skills is durable, even as specific tools evolve
 
-**Safety/ethics note:**
-
-- Verify that the agent task doesn't involve sensitive data, credentials, or production systems until you've tested in safe environments
-- Don't share actual credentials, API keys, or proprietary system architectures when discussing agent tasks
-- Cross-check security best practices for AI agents against official vendor documentation and security guidelines before deploying
-
----
-
-**Next:** You've seen the evidence, the development patterns, the organizational capabilities that matter, and the modern stack. Section 5 addresses the hard question: What are the challenges and risks of AI-driven development, and how do you navigate them responsibly?

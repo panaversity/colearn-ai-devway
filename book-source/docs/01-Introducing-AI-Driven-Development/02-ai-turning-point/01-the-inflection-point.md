@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: "The Evidence — Why 2025 Is Different"
+title: "The Inflection Point — Why 2025 Is Different"
 ---
 
-# Section 1: The Evidence — Why 2025 Is Different
+# The Inflection Point — Why 2025 Is Different
 
 :::info Maintenance Note
 Statistics and benchmarks in this chapter reflect 2025 data. 
@@ -109,7 +109,6 @@ The question isn't "Are these claims credible?" The question is: "How fast will 
 
 ---
 
----
 
 ## Try With AI
 
