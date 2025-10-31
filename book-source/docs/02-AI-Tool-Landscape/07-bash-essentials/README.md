@@ -32,7 +32,7 @@ Build foundational command-line fluency through direct instruction.
 2. **[Navigation and File Management](./02-navigation-files.md)** (40-45 min)  
    - List, create, copy, move, and delete files
    - Use wildcards for batch operations
-   - Set up professional project structures in <2 minutes
+   - Set up professional project structures in &lt;2 minutes
 
 3. **[Viewing and Searching File Content](./03-viewing-searching.md)** (30-35 min)  
    - Read files with `cat`, `head`, `tail`, `less`
@@ -150,8 +150,8 @@ Platform-specific guidance provided throughout.
 
 After completing this chapter, you should be able to:
 
-- [ ] Navigate to any directory and list contents in <10 seconds
-- [ ] Set up a professional project structure in <2 minutes
+- [ ] Navigate to any directory and list contents in &lt;10 seconds
+- [ ] Set up a professional project structure in &lt;2 minutes
 - [ ] Configure API keys that persist across sessions
 - [ ] Search log files for errors and count occurrences
 - [ ] Diagnose and fix "command not found" errors
