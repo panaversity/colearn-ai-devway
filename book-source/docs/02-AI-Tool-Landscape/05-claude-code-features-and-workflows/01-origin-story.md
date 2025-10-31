@@ -251,18 +251,3 @@ You'll also learn to navigate the trust boundary: when to let Claude act autonom
 - Approved (or rejected) your first AI-proposed file change
 
 Let's turn this paradigm shift from theory into practice.
-
----
-
-## Key Takeaways
-
-- **Claude Code is an agentic CLI**: It doesn't just answer questions—it reads, writes, and executes within your development environment.
-- **The paradigm shift is from passive to agentic**: AI moves from "consultant you talk to" to "collaborator you work with."
-- **Terminal integration is essential**: Direct file access, real-time execution, and version control integration enable true collaboration.
-- **Real-world impact is measurable**: Developers save hours per week by eliminating context-switching and manual integration.
-- **The future is embedded AI**: AI assistance works best when integrated into your workflow, not separated from it.
-- **Trust is the key challenge**: Agentic AI requires you to define boundaries and build confidence through transparency.
-
----
-
-**Up Next**: Lesson 2 - Installing and Configuring Claude Code (hands-on setup)

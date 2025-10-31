@@ -123,13 +123,12 @@ Do you have a Claude.ai account?
 In your terminal, run:
 
 ```bash
-claude auth login
+claude
 ```
 
 **Expected output**:
 ```
-Opening browser for authentication...
-Waiting for login to complete...
+____
 ```
 
 **What happens**: Your default browser opens to the Claude.ai authentication page.
@@ -160,67 +159,9 @@ claude "Hello! Can you confirm Claude Code is working?"
 
 **Expected output**: Claude responds with a greeting confirming the connection works.
 
-**If authentication fails**: See [Troubleshooting: Authentication Issues](#troubleshooting-authentication-issues).
-
----
-
-### Authentication Method B: Claude Console (API Credits)
-
-**Step 1: Get Your API Key**
-
-1. Go to: https://console.anthropic.com
-2. Navigate to "API Keys" section
-3. Click "Create Key"
-4. **Copy the key immediately**—you won't see it again
-
-**Security Warning**: Treat API keys like passwords. Never commit them to version control or share them publicly.
-
-**Step 2: Set the API Key in Claude Code**
-
-In your terminal, run:
-
-```bash
-claude auth set-key
-```
-
-**Expected prompt**:
-```
-Enter your Anthropic API key:
-```
-
-Paste your API key and press Enter.
-
-**Expected output**:
-```
-✓ API key saved securely
-✓ Ready to use Claude Code with Console API
-```
-
-**Step 3: Test Your Setup**
-
-```bash
-claude "Hello! Verify Claude Code is connected."
-```
-
-**Expected output**: Claude responds, confirming the connection.
-
-**Cost Note**: Console API usage is billed based on tokens used. Claude Code will display token usage for each interaction. Monitor usage at: https://console.anthropic.com/usage
-
 ---
 
 ## First Run Verification: Confirming Everything Works
-
-Let's run a comprehensive test to ensure Claude Code is fully functional.
-
-**Test 1: Basic Interaction**
-
-```bash
-claude "What is 2 + 2?"
-```
-
-**Expected**: Claude responds with "4" (possibly with additional context).
-
-**Test 2: File System Access**
 
 Create a test file, then ask Claude to read it:
 

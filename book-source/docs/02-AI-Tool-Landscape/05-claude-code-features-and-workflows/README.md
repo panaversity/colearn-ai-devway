@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: "Chapter 5: How It All Started—The Claude Code Phenomenon"
+title: "Chapter 5: How It All Started — The Claude Code Phenomenon"
 ---
 
-# Chapter 5: How It All Started—The Claude Code Phenomenon
+# Chapter 5: How It All Started — The Claude Code Phenomenon
 
 You've completed Part 1. You understand the transformation. You know *why* AI-driven development matters—and that it's happening right now, in 2025.
 

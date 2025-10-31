@@ -168,15 +168,7 @@ Bash and Git work the same way. You'll learn the 20% of commands that handle 80%
 - ❌ Programming experience (code comes later)
 - ❌ Any specific hardware or software
 
-**Special note:** If you're using a corporation-managed computer, verify that your IT department permits installing CLI tools and creating API accounts. Some organizations have restrictions that may block this content.
-
-## Ready?
-
-The next four chapters will transform you from someone who reads about AI tools into someone who uses them daily. You'll install professional software on your machine. You'll run commands in the terminal. You'll see AI agents make changes to your code (safely, via Git). You'll set up a GitHub portfolio that demonstrates professional practices.
-
-This is where theory becomes practice. Where understanding becomes capability. Where you go from wondering "How does AI-driven development work?" to actually doing it.
-
-Take your time. Don't rush. Use your AI assistant (Claude Code or Gemini CLI) when you're confused. Make mistakes and use Git to recover. By the end of these four chapters, you'll have the foundation every professional developer relies on in 2025.
+Take your time. Don't rush. Use your AI assistant (Claude Code or Gemini CLI) when you're confused. Make mistakes and use Git to recover. By the end of these four chapters, you'll have the foundation every professional developer relies on.
 
 Let's get started.
 
