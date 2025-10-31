@@ -9,15 +9,9 @@ title: "Creating and Using Agent Skills"
 
 Skills are your team's reusable intelligence. Claude Code can auto‑detect opportunities to apply that intelligence and can also auto‑delegate to the right subagent when focused execution is needed.
 
-Imagine you're working on a Python project. You've created a `docstring-writer` subagent to add documentation to functions. But in the flow of development, you forget to invoke it. You write five new functions, commit them, and move on. A week later during code review, you realize: no docstrings.
+Skills are **discovered and suggested autonomously by Claude Code** when relevant. Subagents handle focused, isolated execution; skills continuously inject shared standards and domain expertise.
 
-**What if Claude Code could automatically suggest adding docstrings when you write a new function—without you asking?**
-
-**What if your company's domain expertise could be encoded once and then autonomously applied across every project, every developer, every day?**
-
-That's the power of **Agent Skills**. Skills are **discovered and suggested autonomously by Claude Code** when relevant, then executed with your approval. Subagents handle focused, isolated execution; skills continuously inject shared standards and domain expertise.
-
-In this lesson, you'll learn how skills work, create your first skill (a Python docstring generator), and understand why building a skill library is a strategic competitive advantage for teams and companies.
+In this lesson, you'll learn how skills work, create your first skill, and understand why building a skill library is a strategic competitive advantage for teams and companies.
 
 ---
 
@@ -44,20 +38,6 @@ You've now seen three ways to extend Claude Code. Here's how they differ:
 
 ---
 
-## A Day in the Flow: Zero Extra Prompts
-
-Morning:
-- You open a PR to add a new endpoint. Claude suggests security and type‑hint skills. You accept; they run with no extra prompting.
-- Claude auto‑delegates to your `test-runner` subagent to run tests in isolated context; failures are summarized back in the main thread.
-
-Afternoon:
-- While refactoring, skills suggest docstrings and complexity checks; you accept inline.
-- For a performance report, Claude delegates to a `profiler` subagent; skills annotate the findings (clarity, pedagogy, compliance) before summarizing.
-
-Outcome: predictable execution in clean contexts (subagents) + continuously applied standards and domain expertise (skills) without added cognitive load.
-
----
-
 ## Why Agent Skills Matter: The Strategic Value
 
 Agent Skills aren't just a technical feature—they're a **strategic business advantage**. Here's why:
@@ -78,21 +58,7 @@ Agent Skills aren't just a technical feature—they're a **strategic business ad
 
 **Example**: A security expert creates an `sql-injection-checker` skill. Now every developer—regardless of security expertise—gets automatic alerts when writing database queries that might be vulnerable.
 
-### 2. Consistent Standards Without Enforcement Overhead
-
-**Without Skills**:
-- Team agrees on coding standards (docstrings, type hints, naming conventions)
-- Code reviews catch violations manually
-- Inconsistency creeps in over time
-- Engineers spend hours enforcing standards
-
-**With Skills**:
-- Standards encoded as skills (e.g., `enforce-type-hints`, `docstring-generator`)
-- Claude Code automatically applies them
-- Standards maintained consistently without manual enforcement
-- Engineers focus on logic, not style policing
-
-### 3. Competitive Differentiation Through Domain Expertise
+### 2. Competitive Differentiation Through Domain Expertise
 
 This is where skills become truly powerful: **Your unique domain knowledge becomes an automated advantage.**
 
@@ -127,19 +93,6 @@ Every skill is defined by a `SKILL.md` file with three critical sections:
 **3. Examples** (optional):
 - Brief before/after descriptions (no code required)
 
-### Discovery Process
-
-Here's how Claude Code decides to use a skill:
-
-1. Context analysis: current task, open artifacts, recent conversation
-2. Skill scanning: available skills’ discoverable descriptions
-3. Relevance matching: which skills match the context
-4. Suggestion: propose applying relevant skills
-5. Approval: accept or skip
-6. Execution: follow the skill’s instructions and report back
-
-**Key Insight**: The **description** is what makes skills discoverable. A vague description means Claude won't know when to use the skill. A specific, context-rich description enables autonomous discovery.
-
 ---
 
 ## Skill Scopes: Where Skills Live
@@ -168,14 +121,14 @@ Skills can exist at three levels:
 
 ## Quick Start: Add One Skill, See It Work
 
-Goal: add a project skill that explains runtime errors.
+Goal: add a project skill that explains startup ideas.
 
 Ask Claude:
 ```
-Create a project skill named "error-explainer" that, when a Python error occurs, identifies the error type, explains the cause in simple terms, and proposes a minimal fix. Store it in .claude/skills/.
+Create a project skill named "idea-evaluator" to evaluate project ideas and decide on feasibility. Use docs to understand how to build skills: https://docs.claude.com/en/docs/claude-code/skills Store it project level in .claude/skills/.
 ```
 
-Then trigger an error in your code as usual. Claude will suggest the skill when relevant and summarize the fix—no extra prompting.
+You can now ask Claude "What skills do you have?" and it will list all the skills you have installed.
 
 ---
 
@@ -185,38 +138,13 @@ Then trigger an error in your code as usual. Claude will suggest the skill when 
 
 1. **Skill is created** - Skill directory exists
 2. **Skill is discovered** - When relevant, Claude suggests using it
-3. **Explanations are helpful** - You understand what went wrong and how to fix it
-4. **It saves you time** - You don't have to google the error—Claude explains it immediately
 
 **If this works**: 🎉 **Your collaborative skill is ready! Claude now automatically helps you understand errors as you encounter them.**
 
 ---
 
-## How Skills Work
-
-Skills are **collaborative helpers that Claude discovers automatically**. Unlike subagents (which you explicitly invoke), skills work in the background.
-
-When Claude notices you need help (errors, missing docs, missing types, security checks), it suggests your skill.
-
-**Key point**: Skills should complement your development workflow, not add complexity. Start simple.
-
----
-
 ## What's Next: Lesson 5 - MCP and Workflows
 
-You've learned how to extend Claude Code internally with subagents and skills. But what if you need Claude Code to access **external systems**?
+You've learned how to extend Claude Code internally with subagents and skills. Subagents and skills are complementary—subagents own focused execution with clean context, while skills continuously apply shared expertise across phases. Used together, they amplify team effectiveness.
 
-That's where **Model Context Protocol (MCP)** comes in. MCP allows Claude Code to connect to external data sources and tools, dramatically expanding its capabilities.
-
-In Lesson 5, you'll:
-- Learn what MCP is and how it works
-- Connect Claude Code to a GitHub MCP server
-- See complete workflows combining files, commands, and external integrations
-- **Understand security considerations** for evaluating third-party MCP servers
-- Explore four common real-world workflows
-
-**The final piece**: Combining everything you've learned—installation, subagents, skills, and MCP—into powerful, integrated development workflows.
-
-Let's complete your Claude Code mastery.
-
----
+But what if you need Claude Code to access **external systems**? That's where **Model Context Protocol (MCP)** comes in. MCP allows Claude Code to connect to external data sources and tools, dramatically expanding its capabilities.

@@ -239,11 +239,3 @@ You've learned how to create specialized AI assistants with subagents. But there
 Subagents are powerful because you run in isolation - what if Claude Code could **discover and invoke specialized capabilities autonomously**?
 
 That's what **Agent Skills** enable—modular capabilities that Claude Code discovers and uses without explicitly invoking subagent in isolated context. 
-
-In Lesson 4, you'll:
-- Learn the difference between subagents (isolated context invocation) and skills (autonomous discovery)
-- Create your first Agent Skill with a discoverable description
-- Understand how to build a skill library that gives you competitive advantage
-- See how skills scale expertise across teams and projects
-
-**The key insight**: Subagents and skills are complementary—subagents own focused execution with clean context, while skills continuously apply shared expertise across phases. Used together, they amplify team effectiveness.

@@ -5,29 +5,26 @@ title: "Connecting MCP Servers and Common Workflows"
 
 # Connecting MCP Servers and Common Workflows
 
-## Breaking Free from the File System
+## Claude Code as Your Collaborative Partner (Beginner-Friendly)
 
-You've mastered Claude Code's core features: installation, subagents for specialization, and skills for autonomous expertise. But there's a fundamental limitation we haven't addressed yet: **Claude Code can only see what's in your file system.**
+Think of Claude Code like a helpful teammate sitting beside you. You ask for what you want in plain language, and Claude Code helps you do it—search the web, read docs, and work with tools—without needing to write code.
 
-What if you need Claude to:
-- Check the status of GitHub issues and pull requests?
-- Query your PostgreSQL database to understand data patterns?
-- Read metrics from your monitoring dashboard?
-- Access your company's internal API documentation?
+By default, Claude Code only sees your local files. But much of what you need lives elsewhere: websites, docs, APIs. **Model Context Protocol (MCP)** is the bridge that lets Claude Code safely use external tools and data—so it can truly collaborate with you on real tasks.
 
-All of this information lives **outside your local files**—in external services, databases, and APIs. Without a bridge to these systems, Claude Code operates in isolation.
+In this lesson, you will:
+- Understand what MCP is (in simple terms)
+- Add two beginner-friendly MCP servers to Claude Code
+  - **Playwright MCP**: lets Claude browse and extract information from websites
+  - **Context7 MCP**: gives Claude instant access to up-to-date library and API docs
+- Try two real workflows you can copy/paste and run immediately
 
-**Model Context Protocol (MCP)** is that bridge. It's a standard way to connect Claude Code to external data sources, dramatically expanding what it can help you with.
-
-In this lesson, you'll learn what MCP is, how to connect your first MCP server (GitHub), understand critical security considerations, and see four complete workflows that combine files, commands, and external integrations.
-
-By the end, you'll understand how to integrate Claude Code into your full development ecosystem—not just your local code.
+No programming experience required.
 
 ---
 
 ## What Is Model Context Protocol (MCP)?
 
-**Definition**: Model Context Protocol (MCP) is an open standard that allows AI assistants like Claude Code to securely connect to external data sources and tools. MCP servers provide Claude Code with access to databases, APIs, monitoring systems, and third-party services.
+**In simple terms**: MCP is how Claude Code safely uses tools outside your computer. Each tool is an "MCP server" (for example: a web browser or a docs helper).
 
 ### How MCP Works: The Architecture
 
@@ -40,13 +37,12 @@ You ↔ Claude Code ↔ Local Files Only
 ```
 You ↔ Claude Code ↔ MCP Servers ↔ External Systems
                         ↓
-              [GitHub, PostgreSQL, Slack,
-               Monitoring, Custom APIs, etc.]
+              [Web browsing, Docs search, Databases, APIs]
 ```
 
-**MCP Server**: A program that implements the MCP standard, providing Claude Code with specific capabilities (e.g., reading GitHub issues, querying databases, accessing Slack messages).
+**MCP Server**: A small helper app Claude uses to do a job (browse the web, fetch docs, query a database).
 
-**MCP Connection**: A configured link between Claude Code and an MCP server, defined in your `.mcp.json` configuration file.
+**MCP Connection**: The saved info Claude needs to talk to that helper.
 
 ### MCP vs. Skills vs. Subagents
 
@@ -64,148 +60,117 @@ You've now learned three extension mechanisms. Here's how they differ:
 
 ---
 
-## A Note on Security
+## A Note on Security (Read This First)
 
-**Use official Anthropic MCP servers** (GitHub, PostgreSQL, File System, Memory). They're maintained by Anthropic and safe to use.
-
-**When creating credentials**:
-- Create a read-only GitHub token (you don't need write access for learning)
-- Credentials are stored securely in your system keychain, not in plain text
-- You can revoke access anytime
-
-That's it. This lesson is about learning to use MCP, not evaluating untrusted servers.
+**Stay safe**:
+- Use trusted MCP servers. In this lesson we’ll use two widely used, reputable servers: Playwright MCP and Context7 MCP.
+- Your tokens and secrets are stored in your system keychain (not plain text).
+- Never paste secrets into files; use prompts when Claude asks or environment variables.
 
 ---
 
-## Hands-On Tutorial: Connecting the GitHub MCP Server
+## Hands-On: Add Two Helpful MCP Servers
 
-Now that you understand the security considerations, let's connect the **official Anthropic GitHub MCP server**—a commonly useful integration for developers.
+We’ll add two servers using simple commands. If you prefer, you can also edit the JSON config directly.
 
 ### Prerequisites
 
-- GitHub account
-- Personal Access Token (PAT) with appropriate scopes
-- Claude Code installed and authenticated
+- Claude Code installed and signed in
+- Node.js and `npx` available
 
-### Step 1: Create a GitHub Personal Access Token
-
-**Why**: The MCP server needs credentials to access GitHub on your behalf.
-
-**Security**: Create a token with minimal required permissions.
-
-1. Go to: https://github.com/settings/tokens
-2. Click "Generate new token" → "Generate new token (classic)"
-3. **Token name**: "Claude Code MCP (Read-Only)"
-4. **Scopes** (select only these for read-only access):
-   - ✅ `repo` → `public_repo` (access public repositories)
-   - ✅ `read:org` (read organization data)
-   - ✅ `read:user` (read user profile)
-5. Click "Generate token"
-6. **Copy the token immediately**—you won't see it again
-
-**Security Best Practice**: Do NOT select full `repo` scope (which grants write access) unless you specifically need Claude Code to create issues or PRs.
-
-### Step 2: Add the GitHub MCP Server
-
-Register the GitHub MCP server with Claude Code:
+### Option A: Add via CLI (recommended)
 
 ```bash
-claude mcp add --transport http github https://api.github.com/graphql
+# 1) Playwright MCP (browse the web)
+claude mcp add --transport stdio playwright npx @playwright/mcp@latest
+
+# 2) Context7 MCP (get up-to-date docs)
+claude mcp add --transport stdio context7 npx -y @upstash/context7-mcp
 ```
 
-**What this does**:
-- Adds the official Anthropic GitHub MCP server to your Claude Code configuration
-- Uses HTTP transport (the recommended, safe method)
-- Names it "github" for easy reference
-- Stores the configuration in your `.mcp.json` file
+### Option B: Add via JSON
 
-**Expected outcome**: MCP server registered successfully. Configuration saved to `.mcp.json`.
-
-### Step 3: Configure Authentication with Your GitHub Token
-
-Claude Code will automatically prompt you for the GitHub token when it first tries to use the MCP server. You can also set the token explicitly by adding an environment variable:
-
-```bash
-export GITHUB_TOKEN=your_token_here
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
 ```
-
-Or, when Claude Code first connects, paste your token when prompted:
-
-```
-Enter your GitHub Personal Access Token:
-```
-
-**What happens**:
-- Paste the token you created in Step 1
-- Claude Code stores it securely in your system's credential manager:
-  - **macOS**: Keychain
-  - **Windows**: Credential Manager
-  - **Linux**: Secret Service
-- The token is never stored in plain text files
-
-**Security**: Your token is stored securely and can be revoked anytime from GitHub's settings page.
-
-### Step 4: Test the MCP Connection
-
-Ask Claude Code about GitHub data. In your Claude Code session:
-
-```
-Tell me about the most recent issues in the anthropic-sdk-python repository on GitHub
-```
-
-**What happens**:
-- Claude Code recognizes you're asking about GitHub data
-- It invokes the GitHub MCP server automatically
-- It retrieves real GitHub data and discusses it with you
-
-**If you see GitHub data and discussion**: ✅ MCP connection successful!
-
-**If you see an error**:
-- Is your token valid? Check: https://github.com/settings/tokens
-- Do you have the right scopes? Create a new read-only token if needed
-- See the troubleshooting guide in the official docs
-
-### Step 5: Explore GitHub with MCP
-
-Now that MCP is working, try exploring other GitHub projects. Ask Claude naturally:
-
-```
-Show me the most active open-source Python projects right now
-```
-
-```
-Tell me about recent activity in the pytorch repository
-```
-
-```
-What are the most common issues in the React repository?
-```
-
-Claude Code will query GitHub in real-time and discuss what it finds with you. **This is the power of MCP**: you're no longer limited to local files—you're exploring the entire GitHub ecosystem through Claude Code.
 
 ---
 
-## Your First MCP Workflow: Exploring GitHub
+## Workflow 1: Shop Together — Find a Shirt on Amazon (Playwright MCP)
 
-Now that GitHub MCP is connected, let's use it for something practical: exploring a project you're interested in.
+Setup (one-time):
 
-**Try this**:
+```bash
+# Add Playwright MCP (web browsing)
+claude mcp add --transport stdio playwright npx @playwright/mcp@latest
 
-```
-Ask Claude: "Using GitHub, tell me about the most active projects right now"
-```
-
-Claude will query GitHub and describe what's trending.
-
-**Next, try this**:
-
-```
-Ask Claude: "Show me the 5 most recent commits in [a project you like]"
+# Add Context7 MCP (live docs)
+claude mcp add --transport stdio context7 npx -y @upstash/context7-mcp
 ```
 
-Claude will retrieve actual commit history from GitHub and summarize what changed.
+Alternatively, add this to your MCP config (e.g., `.mcp.json`):
 
-**That's it.** You're now using Claude Code as a **collaborative explorer** that can see external systems in real-time. No complex workflows yet—just the ability to ask Claude questions about GitHub projects and get live answers.
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
+Goal: Ask Claude to browse Amazon and find a shirt that matches your preferences. No code—just a plain request.
+
+In Claude Code, say:
+
+```
+Use the Playwright MCP to browse Amazon. Find 3 men's casual shirts under $30 with good reviews. Share links, prices, main features, and any sizing notes. Prefer neutral colors.
+```
+
+What happens:
+- Claude launches the Playwright MCP to visit Amazon
+- It navigates pages, extracts details, and returns a neat summary with links
+- You can iterate naturally: “filter to long-sleeve” or “show only Prime-eligible”
+
+If you get an error:
+- Ensure `playwright` MCP is registered
+- Try again; websites change often, so Claude may adjust its browsing steps
+
+---
+
+## Workflow 2: Learn What’s New — Ask for MCP Docs (Context7 MCP)
+
+Goal: Ask Claude to use Context7 to fetch and summarize the latest resources about MCP in Claude Code.
+
+In Claude Code, say:
+
+```
+Use the Context7 MCP to fetch the latest official documentation and articles about MCP support in Claude Code. Summarize what MCP is, how to add a server, and any recent changes or best practices. Include links and short quotes for key points.
+```
+
+What happens:
+- Claude queries Context7’s knowledge sources for up-to-date docs
+- You get a short, current summary with citations and links
+- Ask follow-ups: “show the exact CLI command to add a server via stdio” or “compare Context7 MCP vs GitHub MCP”
+
+Tip: This is your “know about anything new” button. Use it anytime you need the latest docs without hunting across websites.
 
 ---
 
@@ -235,9 +200,9 @@ You've completed all five lessons. Take a moment to reflect on what you've learn
 - Competitive advantage through domain-specific skill libraries
 
 **Lesson 5: MCP Servers**
-- External data access (GitHub, databases, APIs)
-- Use official Anthropic MCP servers for safe integration
-- Simple workflows connecting local work with external systems
+- External tools and data (web browsing, docs, databases)
+- Use trusted servers like Playwright MCP and Context7 MCP
+- Simple workflows that connect your local work with the live web and docs
 
 ### The Complete Claude Code Toolkit
 
@@ -246,12 +211,12 @@ You now have four extension mechanisms:
 1. **Main Conversation**: Exploratory, flexible, one-off tasks
 2. **Subagents**: Specialized, repeatable, context-isolated tasks
 3. **Skills**: Autonomous expertise automatically applied
-4. **MCP Servers**: External data and service integration
+4. **MCP Servers**: External tools and data (web, docs, APIs)
 
 **Strategic Decision Framework**:
 
 ```
-Need external data (GitHub, database)?
+Need external tools/data (web, docs, database)?
   → Use MCP Server
 
 Have repetitive task with clear rules?
@@ -269,8 +234,8 @@ Exploratory or one-off task?
 - How does MCP extend Claude Code's capabilities beyond just reading local files?
 
 **Application**:
-- What GitHub repositories would be interesting to explore using MCP?
-- How could accessing external data (like GitHub) improve your development workflow?
+- What websites or shops would you explore first with Playwright MCP?
+- How could Context7 help you keep up with fast-changing tools and libraries?
 
 **Integration**:
 - How would you combine a subagent, a skill, and MCP in a single project?
@@ -306,18 +271,18 @@ For deeper exploration beyond this chapter:
 - **Community MCP Servers**: https://github.com/anthropics/mcp-servers
 - **Claude Code Discord**: https://discord.gg/anthropic (#claude-code channel)
 - **Anthropic Blog**: https://www.anthropic.com/blog (announcements and case studies)
+ - **Playwright MCP**: https://www.npmjs.com/package/@playwright/mcp
+ - **Context7 MCP**: https://www.npmjs.com/package/@upstash/context7-mcp
 
 ---
 
 ## Key Takeaways
 
-- **MCP connects Claude Code to external systems** like GitHub, enabling real-time data access beyond local files
-- **Use official Anthropic MCP servers**: GitHub, PostgreSQL, File System, and Memory are maintained and trusted
-- **Simple GitHub integration**: Ask Claude naturally about GitHub repositories, issues, and activity
-- **MCP complements subagents and skills**: Subagents for explicit tasks, skills for autonomous expertise, MCP for external data
-- **Credentials stored securely**: Your tokens are managed by your system's credential store (Keychain, Credential Manager, Secret Service)
-- **Real-time exploration**: Query live GitHub data, trending projects, repository activity, all through natural language prompts
-- **You now have complete toolkit**: Main conversation (exploratory), subagents (explicit tasks), skills (autonomous expertise), MCP (external data)
+- **MCP lets Claude Code use external tools and data** (web, docs, APIs), so it can collaborate beyond your local files
+- **Two beginner-friendly servers**: Playwright (web browsing) and Context7 (live docs)
+- **Natural-language workflows**: “Find me shirts under $30” or “Summarize the latest MCP docs for Claude Code”
+- **Safe by default**: Secrets stay in your system keychain; use reputable servers
+- **Complete toolkit**: Main conversation (explore), subagents (explicit), skills (automatic), MCP (external tools/data)
 
 ---
 
