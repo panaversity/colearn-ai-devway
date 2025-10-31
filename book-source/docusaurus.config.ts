@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'The Panaversity AI-Driven Way',
-  tagline: 'CoLearning Programming & Agentic AI with Python and TypeScript: The AI-Driven Way',
+  title: 'AI Native Software Development',
+  tagline: 'Colearning Agentic AI with Python and TypeScript – The AI & Spec Driven Way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://aidd.panaversity.org',
+  url: 'https://ai-native.panaversity.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
-  projectName: 'colearn-aidd', // Usually your repo name.
+  projectName: 'ai-native-software-development', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
       tagName: 'script',
       attributes: {
         defer: 'true',
-        'data-domain': 'aidd.panaversity.org',
+        'data-domain': 'ai-native.panaversity.org',
         src: 'https://plausible.io/js/script.js',
       },
     },
@@ -90,7 +90,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'CoLearn Programming',
+      title: 'AI Native Development',
       // logo: {
       //   alt: 'Panaversity Logo',
       //   src: 'img/book-cover.png',
@@ -106,7 +106,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/panaversity/colearn-aidd',
+          href: 'https://github.com/panaversity/colearning-python',
           label: 'GitHub',
           position: 'right',
         },
@@ -161,7 +161,11 @@ const config: Config = {
               href: 'https://github.com/panaversity/colearning-python',
             },
             {
-              label: 'Project Examples',
+              label: 'AI Native Specification',
+              href: 'https://github.com/panaversity/colearning-python/tree/main/specs',
+            },
+            {
+              label: 'Example Projects',
               href: 'https://github.com/panaversity',
             },
           ],
@@ -180,7 +184,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • 100% Free & Open Source`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • AI Native Software Development • 100% Free & Open Source`,
     },
     prism: {
       theme: prismThemes.github,
