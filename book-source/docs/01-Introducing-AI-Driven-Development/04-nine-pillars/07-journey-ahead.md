@@ -70,3 +70,5 @@ The foundation is complete. You understand the landscape, the methodology, and t
 The future of development isn't coming—it's here. And you're already on the path just by reading this far. Let's continue the journey together.
 
 **Welcome to Part 2. Let's build something remarkable.**
+
+---

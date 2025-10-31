@@ -97,3 +97,32 @@ Then, in Sections 3-6, we'll explore the **Nine Pillars** that make AIDD work—
 By the end of this chapter, you won't just understand AIDD intellectually. You'll have a concrete framework for how to **adopt it in your own work**, starting tomorrow.
 
 Let's begin.
+
+---
+
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "The story of Priya and Marcus shows two developers using AI differently—one as a 'tool' and one as a 'system.' Help me understand this distinction using a simple analogy (NOT from programming). Then explain: which approach am I probably using RIGHT NOW when I use AI tools? Be honest."
+
+2) "The lesson lists 'nine revolutions' happening simultaneously in software development. Pick the THREE that seem most impactful for someone like me [describe your situation: beginner / career changer / experienced developer]. For each one, explain: what does this revolution ACTUALLY mean for my daily work? Give concrete examples."
+
+3) "I'm experiencing 'partial adoption' right now—using AI tools here and there but not systematically. The lesson says this creates a 'productivity plateau.' Help me diagnose: What are THREE specific signs that I've hit this plateau? What would be different if I were using AI as a complete system?"
+
+4) "Based on the Priya/Marcus story, create a simple self-assessment for me. Ask 5-7 yes/no questions that reveal whether I'm using AI as a 'tool' or a 'system.' Then, based on my answers, give me ONE specific change I should make THIS WEEK to shift toward the 'system' approach."
+
+**Expected outcomes:**
+
+- Crystal-clear understanding of 'tool vs. system' using relatable analogies
+- Personal identification of which revolutions matter most for YOUR context
+- Honest diagnosis of whether you've hit the productivity plateau
+- Actionable one-week experiment to shift toward systematic AI usage
+
+**Safety/ethics note:**
+
+- Don't share proprietary code or company workflows when discussing your AI usage
+- Be honest about your current skill level in the self-assessment
+- Start small with systematic changes—don't try to transform everything at once

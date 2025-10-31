@@ -119,10 +119,33 @@ Understanding that M-Shaped development is possible is exciting. You can see how
 
 But here's the uncomfortable question: **Why is this urgent? Why learn all nine pillars NOW instead of gradually over the next few years?**
 
-The next section addresses this directly: why these nine pillars aren't just helpful—they're essential for remaining competitive in the AI-driven development era.
-
 ---
 
-## What's Next?
+## Try With AI
 
-Why All Nine Pillars Matter Now — Understanding the urgency behind mastering these foundations.
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "The lesson describes 'M-Shaped' developers with deep expertise in 2-4 complementary domains. Help me design MY ideal M-shape: I'm interested in [list 2-3 areas: frontend / backend / ML / design / DevOps / security / etc.]. Which combination makes the most SENSE for: (a) building complete products alone, (b) becoming irreplaceable in the job market? Create a simple diagram showing my M-shape."
+
+2) "The lesson shows 3 real M-Shaped profiles (Vertical SaaS Builder, Platform Engineer, AI Product Developer). Pick the one CLOSEST to what I want to become [describe your interest]. Then break down: what are the FIRST 3 skills I should learn (in order)? How long would each take with AI assistance? Be realistic."
+
+3) "I'm skeptical about the 'constraints' section. It says AI doesn't replace deep expertise in safety-critical or regulatory domains. Help me understand: For MY chosen M-shape [from prompt 1], which parts can I confidently learn WITH AI, and which parts require traditional deep study? Be honest about the limits."
+
+4) "The lesson asks 'What would your ideal M-shaped profile look like in 2 years?' Create a visual 'skill acquisition timeline' for me: Month 0-6 (focus on X), Month 7-12 (add Y), Month 13-18 (integrate Z), Month 19-24 (master W). Show how skills compound. Be specific to my chosen domains."
+
+**Expected outcomes:**
+
+- Personalized M-shape design that makes strategic sense for YOUR goals
+- Clear first-steps roadmap for your chosen profile (not generic advice)
+- Honest assessment of what AI can/can't help you learn
+- 2-year timeline showing how skills build progressively
+
+**Safety/ethics note:**
+
+- Don't attempt safety-critical domains (medical, aviation, financial trading) without proper credentials
+- Be realistic about time investment—M-shaped development is months/years, not weeks
+- Choose domains that genuinely interest you, not just what sounds impressive
+
+

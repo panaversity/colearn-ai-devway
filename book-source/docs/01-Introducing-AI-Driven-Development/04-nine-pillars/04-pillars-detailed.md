@@ -166,3 +166,32 @@ You now understand all nine pillars individually and how they interconnect. But 
 In the next section, we'll explore the M-Shaped Developer—a new type of technical professional who leverages these nine pillars to build capabilities that span the full stack, from idea to production deployment. This isn't about being a "10x developer" or a polymath genius. It's about using the right tools, in the right combination, to achieve what previously required entire teams.
 
 The nine pillars are the foundation. The M-Shaped Developer is what you build on that foundation.
+
+---
+
+## Try With AI
+
+Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+
+**Prompts:**
+
+1) "This lesson deep-dives into 9 pillars. I'm still confused about a few. Pick TWO pillars that are hardest for beginners to grasp: (a) one technical pillar (like MCP or TDD), (b) one conceptual pillar (like Markdown as Programming or Composable Skills). For each, explain it like I'm 10 years old, then give me a 'hello world' example I could try TODAY."
+
+2) "The lesson shows interdependencies between pillars. Create a visual text diagram (using ASCII art or bullet points) that shows how the 9 pillars connect. Then highlight: which pillar is the 'foundation' (most other pillars depend on it)? Which pillar is the 'capstone' (depends on most others)?"
+
+3) "The 'Six-of-Nine Challenge' asks which 3 pillars I'd skip. Help me think strategically: I'm [describe your context: complete beginner / have some coding experience / experienced in one area]. Based on this, which 3 pillars should I DEFER (not abandon, just learn later) to avoid overwhelm? Justify each deferral."
+
+4) "Pick ONE pillar that excites me most [tell AI which one]. Create a 30-day learning plan JUST for that pillar. Break it into weekly milestones. What should I learn in Week 1, Week 2, Week 3, Week 4? Include specific resources, mini-projects, or experiments I should try."
+
+**Expected outcomes:**
+
+- Crystal-clear explanation of 2 difficult pillars with beginner-friendly examples
+- Visual understanding of how all 9 pillars interconnect
+- Strategic deferral plan that prevents overwhelm while maintaining progress
+- Focused 30-day plan for mastering your highest-priority pillar
+
+**Safety/ethics note:**
+
+- Don't try to learn all 9 pillars in 30 days—focus deeply on one or two
+- It's okay to defer complex pillars (like Kubernetes) until you have fundamentals
+- Celebrate small wins—each pillar mastered is real progress
