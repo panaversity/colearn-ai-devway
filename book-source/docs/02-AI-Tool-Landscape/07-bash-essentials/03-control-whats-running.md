@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Lesson 3: Control What's Running — Processes & Backgrounds"
+title: "Control What's Running — Processes & Backgrounds"
 ---
 
-# Lesson 3: Control What's Running — Processes & Backgrounds
+# Control What's Running — Processes & Backgrounds
 
 ## What You're Trying to Do
 

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
-title: "Lesson 7: Connect Commands — Pipes & Complex Operations"
+title: "Connect Commands — Pipes & Complex Operations"
 ---
 
-# Lesson 7: Connect Commands — Pipes & Complex Operations
+# Connect Commands — Pipes & Complex Operations
 
 ## What You're Trying to Do
 

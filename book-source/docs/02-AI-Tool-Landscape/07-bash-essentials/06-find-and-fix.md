@@ -1,9 +1,9 @@
 ---
 sidebar_position: 6
-title: "Lesson 6: Find & Fix — Search & Permissions"
+title: "Find & Fix — Search & Permissions"
 ---
 
-# Lesson 6: Find & Fix — Search & Permissions
+# Find & Fix — Search & Permissions
 
 ## What You're Trying to Do
 

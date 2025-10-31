@@ -1,9 +1,9 @@
 ---
 sidebar_position: 4
-title: "Lesson 4: Set Up Safely — Environment & Configuration"
+title: "Set Up Safely — Environment & Configuration"
 ---
 
-# Lesson 4: Set Up Safely — Environment & Configuration
+# Set Up Safely — Environment & Configuration
 
 ## What You're Trying to Do
 

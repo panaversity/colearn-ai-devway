@@ -1,9 +1,9 @@
 ---
 sidebar_position: 5
-title: "Lesson 5: Get Dependencies — Install Packages"
+title: "Get Dependencies — Install Packages"
 ---
 
-# Lesson 5: Get Dependencies — Install Packages
+# Get Dependencies — Install Packages
 
 ## What You're Trying to Do
 

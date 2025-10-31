@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: "Lesson 2: Organize Your Work — Create & Manage Files"
+title: "Organize Your Work — Create & Manage Files"
 ---
 
-# Lesson 2: Organize Your Work — Create & Manage Files
+# Organize Your Work — Create & Manage Files
 
 ## What You're Trying to Do
 

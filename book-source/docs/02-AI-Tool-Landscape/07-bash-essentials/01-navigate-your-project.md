@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: "Lesson 1: Move Around — Navigate Your Project"
+title: "Move Around — Navigate Your Project"
 ---
 
-# Lesson 1: Move Around — Navigate Your Project
+# Move Around — Navigate Your Project
 
 ## What You're Trying to Do
 
