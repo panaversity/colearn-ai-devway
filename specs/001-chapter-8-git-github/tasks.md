@@ -24,8 +24,8 @@
 
 **Purpose**: Create chapter overview and structure that ties all lessons together
 
-- [ ] T001 Create chapter README.md in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/README.md
-- [ ] T002 Review constitution and output styles in .specify/memory/constitution.md and .claude/output-styles/lesson.md
+- [X] T001 Create chapter README.md in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/README.md
+- [X] T002 Review constitution and output styles in .specify/memory/constitution.md and .claude/output-styles/lesson.md
 
 **Checkpoint**: Chapter structure ready - lesson implementation can now begin
 
@@ -41,19 +41,19 @@
 
 ### L1: Conceptual Foundation (Why Git Matters)
 
-- [ ] T003 [L1] Write Lesson 1 content (Why Git Matters) in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/01-why-git-matters.md
-- [ ] T004 [L1] Create 2-3 reflection prompts for Lesson 1
-- [ ] T005 [L1] Add 4-5 real-world examples of AI development with Git safety net
+- [X] T003 [L1] Write Lesson 1 content (Why Git Matters) in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/01-why-git-matters.md
+- [X] T004 [L1] Create 2-3 reflection prompts for Lesson 1
+- [X] T005 [L1] Add 4-5 real-world examples of AI development with Git safety net
 
 ### L2: Essential Git Workflow (Installation and Basic Commands)
 
-- [ ] T006 [L2] Write Lesson 2 Part I: Installation & Setup in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/02-git-essentials.md
-- [ ] T007 [L2] Write Lesson 2 Part II: Core Workflow (status → add → commit → push)
-- [ ] T008 [L2] Write Lesson 2 Part III: Three-Stage Concept (working directory → staging → repository)
-- [ ] T009 [L2] Write Lesson 2 Part IV: Reading Git Output
-- [ ] T010 [L2] Write Lesson 2 Part V: Commit Messages with AI Attribution
-- [ ] T011 [L2] Create 5 hands-on exercises for Lesson 2 (install, configure, init, commit, log)
-- [ ] T012 [L2] Create 8-10 question self-assessment for Lesson 2
+- [X] T006 [L2] Write Lesson 2 Part I: Installation & Setup in book-source/docs/02-AI-Tool-Landscape/08-git-and-github/02-git-essentials.md
+- [X] T007 [L2] Write Lesson 2 Part II: Core Workflow (status → add → commit → push)
+- [X] T008 [L2] Write Lesson 2 Part III: Three-Stage Concept (working directory → staging → repository)
+- [X] T009 [L2] Write Lesson 2 Part IV: Reading Git Output
+- [X] T010 [L2] Write Lesson 2 Part V: Commit Messages with AI Attribution
+- [X] T011 [L2] Create 5 hands-on exercises for Lesson 2 (install, configure, init, commit, log)
+- [X] T012 [L2] Create 8-10 question self-assessment for Lesson 2
 
 ### L3: Safe Experimentation (Checkpoints and Rollback)
 
