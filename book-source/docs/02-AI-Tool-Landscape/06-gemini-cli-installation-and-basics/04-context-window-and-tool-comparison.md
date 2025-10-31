@@ -1,260 +1,460 @@
 ---
 title: Context Window & Tool Comparison
+chapter: 6
+lesson: 4
+learning_objectives:
+  - Understand what a context window is and why it matters
+  - Learn to ask AI about your specific project's context needs
+  - Discover how to choose between tools through guided conversation
+  - Practice real-world tool selection decisions with AI guidance
+estimated_time: 25 minutes
 sidebar_position: 4
 ---
 
 # Context Window & Tool Comparison
 
-## Understanding Context Windows
+## Introduction: A Question You've Probably Had
 
-You've mastered Gemini CLI installation, authentication, basic commands, and built-in tools. But there's one crucial advantage we haven't fully explored yet: **Gemini's massive 1 million token context window**.
+You've been learning Gemini CLI. You've installed it, authenticated, run built-in tools, and seen it work. But somewhere in the back of your mind, a question emerges:
 
-This lesson explains why context matters, when it becomes critical, and how to choose between Gemini CLI and Claude Code based on your actual needs.
+**"Is Gemini CLI better than Claude Code? When should I use one versus the other?"**
 
-By the end of this lesson, you'll understand when context window size matters and have a practical framework for choosing the right tool for different scenarios.
+This lesson answers that question—but not by giving you a checklist to memorize. Instead, you'll learn how to ask AI itself to help you make the decision. This is a meta-skill: learning to consult your AI tools to evaluate which tool is best for your situation.
 
----
-
-## Understanding the 1 Million Token Context Window
-
-### What Is a Token?
-
-A **token** is roughly 3-4 characters of text. It's how AI models measure input size.
-
-**Quick translation:**
-- **1 token** ≈ 3-4 characters (or about 0.75 words)
-- **1,000 tokens** ≈ 750 words or 3 pages of code
-- **10,000 tokens** ≈ 7,500 words or 30 pages of code
-- **100,000 tokens** ≈ 75,000 words or 300 pages of code
-- **1,000,000 tokens** ≈ 750,000 words or **2,500 pages of code**
-
-**What this means practically:**
-- A typical Python file (200 lines) ≈ 2,000-3,000 tokens
-- A medium project (50 files, 10,000 lines) ≈ 100,000-150,000 tokens
-- A large codebase (500+ files, 100,000+ lines) ≈ 1,000,000+ tokens
-
-Gemini 2.5 Pro's 1 million token context window means you can feed it an entire small-to-medium codebase in a single prompt.
-
-### Comparing Context Windows
-
-| Tool | Context Window | Equivalent |
-|------|----------------|------------|
-| **Gemini CLI** | 1,000,000 tokens | ~2,500 pages of code |
-| **Claude Code** | 200,000 tokens | ~500 pages of code |
-| **ChatGPT-4** | 128,000 tokens | ~320 pages of code |
-| **GitHub Copilot** | Varies (smaller) | Individual files |
-
-Gemini CLI offers **5x more context than Claude Code** and **~8x more than ChatGPT-4**.
+By the end of this lesson, you'll understand context windows, know how to ask Gemini about your specific project, and have a framework for making tool decisions through dialogue with AI.
 
 ---
 
-## When Context Size Doesn't Matter
+## What Is a Context Window? (And Why You Might Not Need to Calculate It)
 
-Let's be honest: for many tasks, context size isn't important.
+### The Simple Explanation
 
-### Scenarios Where Context Size Doesn't Matter
+A **context window** is the amount of text an AI model can "see" and understand at once. Think of it like a reading window—the larger the window, the more of a document you can see simultaneously.
 
-**1. Simple Questions**
-```bash
-gemini "What is a Python decorator?"
-```
-Answer requires no project context.
+**Here's the key insight**: You don't need to understand token math to use context windows effectively. What matters is knowing when to ask.
 
-**2. Single File Analysis**
-```bash
-gemini --file ./script.py "Review this code"
-```
-One file (200 lines) = ~2,000-3,000 tokens. Any modern AI tool handles this easily.
+### Context Windows: A Simple Comparison
 
-**3. Quick Bug Fixes**
+| Tool | Context Window | What This Means |
+|------|----------------|-----------------|
+| **Gemini CLI** | 1,000,000 tokens | Can see large projects at once |
+| **Claude Code** | 200,000 tokens | Can see smaller projects at once |
+| **ChatGPT-4** | 128,000 tokens | Can see medium files/docs at once |
+
+**Key insight**: Gemini CLI can see about 5x more code than Claude Code in a single conversation.
+
+### But Does Your Project Size Actually Matter?
+
+Let's be honest: for most tasks, context window size is irrelevant. Let me show you when it matters and when it doesn't.
+
+---
+
+## Pause and Reflect: What's Your Situation?
+
+Before we dive deeper, ask yourself:
+
+- **What are you building?** (A single script? A web app? A large system?)
+- **How big is your codebase?** (Rough estimate: 1 file? 10 files? 100+ files?)
+- **What problem are you solving?** (Learning a concept? Fixing a bug? Refactoring? Analyzing an entire system?)
+
+Keep your specific situation in mind as you read. We'll show you how to ask AI about your exact scenario.
+
+---
+
+## When Context Window Size Doesn't Matter
+
+Let's start with the truth: **for most daily tasks, context size is irrelevant**.
+
+### Scenario 1: Single File Bug Fixes
+
+You're debugging a TypeError in your Python script.
+
 ```bash
 gemini "I'm getting TypeError: 'str' object does not support item assignment. What does this mean?"
 ```
-Error explanation doesn't require large context.
 
-**4. Learning Concepts**
-```bash
-gemini "Explain how async/await works in Python"
-```
-Teaching material isn't context-dependent.
+**Context needed**: Almost none. This is a concept question.
 
-**For these scenarios, Gemini CLI, Claude Code, and ChatGPT perform similarly.** Choose based on other factors (cost, interface preference, availability).
+**Who can handle it**: Gemini CLI, Claude Code, ChatGPT—all identical.
 
 ---
 
-## When Context Becomes Critical
+### Scenario 2: Learning Concepts
 
-But for certain scenarios, context size is a **game-changer**.
+You want to understand how Python decorators work.
+
+```bash
+gemini "Explain how Python decorators work. Show a practical example."
+```
+
+**Context needed**: None. You're learning a concept, not analyzing your code.
+
+**Who can handle it**: Any AI tool works equally well.
+
+---
+
+### Scenario 3: Small Project Analysis
+
+You have a personal project: 5 Python files, ~1,000 lines total.
+
+```bash
+gemini --file ./src/**/*.py "Review this code for security issues"
+```
+
+**Context needed**: ~5,000-10,000 tokens (small).
+
+**Who can handle it**: Gemini CLI, Claude Code, ChatGPT—all work fine. You'll never hit context limits.
+
+---
+
+### The Reality Check
+
+**For 80% of your daily work**, context window size won't matter. Both tools feel identical. Choose based on:
+- **Cost**: Gemini CLI has a free tier (1,000 requests/day)
+- **Interface**: Do you prefer web (Claude) or terminal (Gemini)?
+- **Availability**: Which tool is accessible right now?
+
+**Context size only becomes critical for the remaining 20% of tasks.** Let's explore those.
+
+---
+
+## When Context Size Becomes Critical
+
+There are specific scenarios where a large context window changes everything.
 
 ### Scenario 1: Large Legacy Codebases
 
-**Problem**: You're analyzing a project with 500+ files and 100,000+ lines of code.
+**Situation**: You're analyzing a mature project with 200+ files and 50,000+ lines of code spread across multiple modules.
 
-**With Small Context (Claude Code, 200K tokens):**
-- You must manually select which files to include
-- AI sees only a fraction of the codebase at once
-- You repeat context in multiple prompts
-- AI lacks full system understanding
+**Your Question**:
+> "I have a medium-sized Flask API with 40+ files, ~25,000 lines. Can I analyze the whole architecture at once, or should I break it into pieces?"
 
-**With Large Context (Gemini CLI, 1M tokens):**
-- Feed the entire codebase in one prompt
-- AI understands cross-file dependencies
-- AI sees architectural patterns across modules
-- One prompt, complete analysis
+**How to Ask Gemini**:
 
-**Real example:**
 ```bash
-gemini --file ./src/**/*.py "Analyze this microservices architecture. Where are the authentication bottlenecks across all 12 services?"
+gemini "I have a Flask API project with 40 files and approximately 25,000 lines of code spread across models, routes, services, and utilities. I want to analyze the entire authentication architecture across all modules at once. Will that fit in your context window?"
 ```
 
-Gemini can see all 12 services simultaneously and identify patterns Claude Code would miss.
+**What Gemini Tells You**:
+- Yes, 25,000 lines easily fits in 1,000,000 tokens
+- You can upload all 40 files at once
+- You'll get a complete architectural analysis without missing cross-file dependencies
+
+**Compare to Claude Code**: You'd need to upload files selectively, run multiple analyses, and manually piece together the architecture.
+
+**Why it matters**: With large context, you see dependencies and patterns that span entire systems.
 
 ---
 
 ### Scenario 2: Entire Documentation Sets
 
-**Problem**: You need to understand a complex library by reading its full documentation.
+**Situation**: You're learning a complex framework. You want to understand all the ways it handles asynchronous operations across its entire API documentation.
 
-**With Small Context:**
-- Read docs manually
-- Ask AI about specific sections
-- Miss connections between concepts
+**Your Question**:
+> "Can you read an entire documentation site at once?"
 
-**With Large Context:**
+**How to Ask Gemini**:
+
 ```bash
-gemini --web-fetch "https://docs.python.org/3/library/" "What are all the ways Python handles concurrency? Compare threading, multiprocessing, asyncio, and concurrent.futures across the entire standard library documentation."
+gemini --web-fetch "https://docs.fastapi.tiangolo.com/" "Across the entire FastAPI documentation, what are all the ways I can implement concurrency? Compare native async/await, background tasks, and third-party async patterns."
 ```
 
-Gemini can synthesize information across dozens of documentation pages simultaneously.
+**What Gemini Tells You**:
+- Yes, it can read hundreds of documentation pages
+- It synthesizes patterns across the entire documentation
+- You get a comprehensive comparison you'd never find in a single manual read
+
+**Compare to Claude Code**: You'd need to read docs manually or paste sections piece-by-piece.
 
 ---
 
 ### Scenario 3: Multi-File Refactoring
 
-**Problem**: You're refactoring authentication logic that spans 20+ files.
+**Situation**: You're refactoring authentication logic that touches 15+ files across your codebase. You need a comprehensive plan that keeps everything consistent.
 
-**With Small Context:**
-- Refactor file-by-file
-- Hope you didn't miss dependencies
-- Manual cross-checking
+**Your Question**:
+> "I'm refactoring JWT to OAuth2. I need to change 15 files consistently. Can you see them all at once?"
 
-**With Large Context:**
+**How to Ask Gemini**:
+
 ```bash
-gemini --file ./src/**/*.py "I'm refactoring authentication to use OAuth2 instead of JWT. Show me every file that needs changes and suggest the refactoring plan that maintains consistency across all modules."
+gemini --file ./src/**/*.py "I'm refactoring from JWT to OAuth2. Show me every file that needs changes and create a step-by-step refactoring plan that maintains consistency across all 15 files."
 ```
 
-Gemini sees the entire system and suggests a comprehensive, consistent refactoring plan.
+**What Gemini Tells You**:
+- Yes, it sees all 15 files simultaneously
+- It identifies all dependencies (imports, function calls, configuration)
+- It provides a comprehensive plan that avoids inconsistencies
+
+**Compare to Claude Code**: You'd refactor file-by-file, risk missing dependencies, and need manual cross-checking.
 
 ---
 
-### Context Requirements Decision Table
+## The Real Decision Framework: Ask AI About Your Situation
 
-| Task Type | Tokens Needed | Claude Code | Gemini CLI | Recommended |
-|-----------|---------------|-------------|------------|-------------|
-| **Single file bug fix** | 2,000-5,000 | ✅ | ✅ | Either |
-| **Simple concept learning** | 1,000-3,000 | ✅ | ✅ | Either |
-| **Small project (5-10 files)** | 10,000-30,000 | ✅ | ✅ | Either |
-| **Medium project (50 files)** | 100,000-150,000 | ✅ | ✅ | Either (Gemini has room to grow) |
-| **Large project (500+ files)** | 500,000-1M+ | ❌ | ✅ | **Gemini CLI** |
-| **Entire documentation set** | 200,000-500,000 | ⚠️ (partial) | ✅ | **Gemini CLI** |
-| **Multi-service architecture** | 300,000-800,000 | ❌ | ✅ | **Gemini CLI** |
+Here's the truth: **You don't need to memorize when context matters.** Instead, learn to ask.
 
-**Key insight**: If your task fits within 150,000 tokens (~400 pages), either tool works. Beyond that, Gemini CLI becomes the clear choice.
+### The Meta-Skill: Consulting AI About Tool Choices
 
----
+When you're uncertain whether Gemini CLI or Claude Code is right for your task, ask:
 
-## Decision Framework: When to Use Each Tool
+**Step 1: Describe Your Situation**
+```
+I have a 75-file project with about 18,000 lines of Python code. I need to refactor
+the database layer, which touches 20+ files. Should I use Gemini CLI or Claude Code
+for this task?
+```
 
-### Choose Gemini CLI When:
+**Step 2: Let AI Guide Your Decision**
+Gemini might respond:
+- "18,000 lines fits easily in both tools"
+- "However, since you're refactoring across 20+ files, Gemini CLI's larger context window means you see all dependencies at once"
+- "With Claude Code, you'd need multiple conversations to handle all 20 files"
+- "Recommendation: Use Gemini CLI for this refactoring to get a comprehensive plan in one conversation"
 
-✅ **Budget is a constraint** — Free tier: 1,000 requests/day
-✅ **Large codebase analysis** — 100,000+ lines of code
-✅ **Entire documentation needed** — Synthesizing across many pages
-✅ **Open source projects** — Philosophically aligned with open tooling
-✅ **Custom integrations needed** — Open source allows modification
-✅ **Learning and experimentation** — Free tier enables practice
-
-### Choose Claude Code When:
-
-✅ **Enterprise compliance required** — SOC 2, GDPR support available
-✅ **Vendor support needed** — Anthropic provides enterprise SLAs
-✅ **Web interface preferred** — No installation or terminal needed
-✅ **Exploratory coding sessions** — Conversational interface optimized for dialogue
-✅ **Consistent quality matters** — Proprietary system, predictable behavior
-✅ **Budget allows** — API costs acceptable
-
-### Expanded Comparison Table
-
-| Dimension | Claude Code | Gemini CLI |
-|-----------|-------------|------------|
-| **License** | Proprietary | Open Source (Apache 2.0) |
-| **Pricing** | Pay-per-use API | Free: 1,000 req/day |
-| **Context Window** | 200K tokens (~500 pages) | 1M tokens (~2,500 pages) |
-| **Model** | Claude Sonnet 4.5 | Gemini 2.5 Pro |
-| **Interface** | Web-based | Command line |
-| **Installation** | None (browser-based) | Requires Node.js/npm |
-| **Built-in Tools** | File, shell, web search | File, web fetch, search, shell |
-| **Extensibility** | Proprietary Skills | Open MCP protocol |
-| **Platform Support** | Any browser | Windows, macOS, Linux |
-| **Community** | Vendor-controlled | Growing open source |
-| **Customization** | Limited to API params | Full source code access |
-| **Enterprise Support** | Available (with contracts) | Community-based |
-| **Regional Availability** | Widely available | Some restrictions |
-| **Learning Curve** | Low (web interface) | Medium (terminal required) |
+**Step 3: Trust the Dialogue**
+You now have a specific recommendation based on your exact situation, not a generic checklist.
 
 ---
 
-## Key Takeaways
+## Practice: Ask Gemini About Your Real Project
 
-**Context Window Matters When:**
-- Analyzing large codebases (500+ files, 100,000+ lines)
-- Synthesizing entire documentation sets
-- Refactoring logic that spans many files
-- Understanding cross-file dependencies in complex systems
+**Exercise 1: Assess Your Current Project**
 
-**Context Window Doesn't Matter When:**
-- Single file analysis
-- Simple concept learning
-- Quick bug fixes
-- Small projects (< 50 files)
+Think of a real project you're working on (or one you've worked on recently).
 
-**Decision Framework:**
-- **Gemini CLI**: Budget constraints, large codebases, open source alignment, need for customization
-- **Claude Code**: Enterprise compliance, vendor support, web interface preference, consistent quality requirements
+**Open Gemini CLI and ask:**
+```bash
+gemini "I'm working on a [PROJECT TYPE] with [NUMBER] files and approximately [LINES OF CODE] lines.
+I need to [YOUR SPECIFIC TASK].
+Should I use Gemini CLI or Claude Code for this? Why?"
+```
 
----
+**Example:**
+```bash
+gemini "I'm working on a Django web app with 45 files and approximately 12,000 lines.
+I need to refactor the authentication system to use OAuth2.
+Should I use Gemini CLI or Claude Code for this? Why?"
+```
 
-## Looking Ahead to Lesson 5
+**What to observe**:
+- Does Gemini recommend itself or another tool?
+- What reasoning does it give?
+- Do you understand the trade-offs?
 
-You now understand context windows and have a framework for comparing Gemini CLI to Claude Code. But there's more to the Gemini CLI ecosystem:
-
-**In Lesson 5, you'll explore:**
-- **Gemini CLI Extensions** — Add custom capabilities for your specific needs
-- **Model Context Protocol (MCP)** — The open standard powering extensibility
-- **Qwen Code** — An alternative fork with even higher free tier limits
-- **Decision-making exercises** — Practice choosing the right tool for real scenarios
-- **Chapter summary** — Review everything you've learned
-
-Extensions let you connect Gemini CLI to proprietary databases, internal APIs, project management tools, and more—making it adaptable to any development environment.
-
-**Ready to explore the ecosystem?** Let's dive into **Lesson 5: Extensions & the Gemini CLI Ecosystem**.
+**Write down the response.** This is your personalized tool selection framework.
 
 ---
 
-## Practice Exercise
+**Exercise 2: Ask About Edge Cases**
 
-Before moving to Lesson 5, consider:
+Sometimes you're not sure about project size. Ask AI to help you estimate:
 
-1. **Review a project you're working on**:
-   - How many files does it have?
-   - How many lines of code total?
-   - Would it fit in Gemini's 1M token context window?
+```bash
+gemini "How do I estimate the number of tokens in my codebase?
+I have a Node.js project with 8 JavaScript files.
+Will it fit in a 200K token context window?"
+```
 
-2. **Identify a scenario** where context window size would matter for your work
+**What you'll learn**:
+- Gemini gives you a quick estimation method
+- You understand whether your project is large, medium, or small
+- You get a recommendation for which tool to use
 
-3. **Think about your needs**:
-   - Do you need enterprise compliance?
-   - Is budget a constraint?
-   - Do you prefer web interfaces or command-line tools?
+---
 
-When you're ready, move to **Lesson 5: Extensions & the Gemini CLI Ecosystem**.
+**Exercise 3: Compare Tools for Your Specific Constraint**
+
+If budget is a factor:
+
+```bash
+gemini "I have limited budget for API calls. I'm working on a 50-file Python project.
+Should I use Gemini CLI's free tier or pay for Claude Code API?
+What are the trade-offs?"
+```
+
+**What you'll learn**:
+- Whether your project size fits free tier limits
+- Cost-benefit analysis for your situation
+- A decision based on your constraints, not generic advice
+
+---
+
+## Understanding Tool Trade-Offs (Without Memorizing)
+
+You don't need to memorize tool comparisons. But you should understand the dimensions of difference. Here's a quick reference:
+
+### Key Dimensions (Ask Gemini About These)
+
+**Context Window**
+- Ask: "Does my 50-file project fit in your context window?"
+- Gemini answers based on YOUR project
+
+**Cost**
+- Ask: "What's the total cost to analyze my codebase with Gemini CLI vs Claude Code?"
+- Gemini calculates based on YOUR usage
+
+**Interface**
+- Ask: "Do you work in the terminal or web browser?"
+- You already know your preference; Gemini confirms compatibility
+
+**Customization**
+- Ask: "Can I customize Gemini CLI for my specific needs?"
+- Gemini explains available options for YOUR use case
+
+**Enterprise Compliance**
+- Ask: "Does Gemini CLI meet SOC 2 compliance requirements?"
+- Gemini gives you the answer directly
+
+---
+
+## Real Dialogue Example: How This Works in Practice
+
+Let's see what an actual conversation looks like:
+
+**You**: "I'm working on a monorepo with 200 JavaScript files across 5 services. I want to understand how authentication flows across all services. Which tool should I use?"
+
+**Gemini**: "Great question. Let me help you evaluate:
+
+- **File count**: 200 files is substantial—your context window is critical
+- **Gemini CLI can see**: All 200 files in one analysis (~150K-200K tokens)
+- **Claude Code would need**: Multiple separate conversations (each limited to ~50-100 files)
+- **Your benefit with Gemini CLI**: Complete architectural analysis of how auth flows across all 5 services
+- **Recommendation**: Gemini CLI. The larger context lets you see cross-service patterns in one prompt instead of 5 separate conversations."
+
+**You**: "That makes sense. But what if I wanted to use Claude Code anyway?"
+
+**Gemini**: "You could, but you'd need to:
+1. Analyze each service separately (5 conversations)
+2. Manually cross-reference auth patterns
+3. Create your own architectural diagram
+
+It's doable, just more work. Gemini CLI is more efficient for this specific scenario."
+
+**You**: "Okay, I'll use Gemini CLI. How do I start?"
+
+**Gemini**: "Here's your command:
+```bash
+gemini --file ./services/**/*.js "Map the complete authentication flow across all 5 services. Show how credentials are passed, validated, and used in each service."
+```"
+
+---
+
+## Key Insight: Context Matters, But Asking Matters More
+
+By now, you've learned:
+
+1. **Context windows exist**, and they differ between tools
+2. **Most tasks don't require large context**—either tool works fine
+3. **Specific scenarios benefit from larger context**—large codebases, documentation synthesis, multi-file refactoring
+4. **You don't memorize decision criteria**—you ask AI about YOUR situation
+5. **Gemini can evaluate itself**—ask whether it's the right tool for your task
+
+The meta-skill is this: **Learn to ask your AI tools to evaluate themselves.**
+
+This approach scales to future tools too. When Claude's context grows, or when new tools emerge, you'll already know how to consult AI about which tool fits your needs.
+
+---
+
+## Connecting to What's Next
+
+You now understand context windows and how to make tool decisions through dialogue with AI. In Lesson 5, you'll explore the Gemini CLI ecosystem—extensions, integrations, and the Model Context Protocol (MCP) that makes Gemini adaptable to any environment.
+
+But before you move forward, make sure you've completed the practice exercises above. Tool selection becomes intuitive once you've asked Gemini about your own real projects.
+
+---
+
+## Try With AI: Personalized Tool Selection for Your Project
+
+### Setup
+Open **Gemini CLI** (your AI companion from previous lessons). You'll now use Gemini to evaluate itself as the right tool for your specific situation.
+
+### Prompt Set (Work through these in order)
+
+**Prompt 1: Assess Your Project**
+```
+I'm working on a [PROJECT TYPE] project with approximately [NUMBER] files and
+[ROUGH LINE COUNT] lines of code. Here's what I'm trying to do: [YOUR SPECIFIC TASK].
+
+Can I analyze my entire codebase at once with your context window, or do I need
+to break it into smaller pieces?
+```
+
+*Example:*
+```
+I'm working on a Django REST API with 35 files and roughly 8,500 lines of Python.
+I want to analyze the entire user authentication system for security vulnerabilities.
+
+Can I analyze my entire codebase at once with your context window, or do I need
+to break it into smaller pieces?
+```
+
+**Expected Outcome**: Gemini tells you whether your project fits in its context window and whether you can analyze it in one conversation or multiple.
+
+---
+
+**Prompt 2: Compare to Claude Code**
+```
+Based on the project size you just evaluated, is Gemini CLI or Claude Code a better
+choice for my [SPECIFIC TASK]? Explain the trade-offs.
+```
+
+*Example:*
+```
+Based on the 8,500-line Django project I just described, is Gemini CLI or Claude Code
+a better choice for analyzing my authentication system? Explain the trade-offs.
+```
+
+**Expected Outcome**: Gemini recommends one tool over the other with specific reasoning tied to your project size and task type.
+
+---
+
+**Prompt 3: Ask About Your Constraint**
+```
+My main constraint is [BUDGET/INTERFACE/COMPLIANCE/OTHER]. Given this constraint,
+which tool should I choose for [YOUR TASK]?
+```
+
+*Example:*
+```
+My main constraint is budget—I'm using the free tier. Given this constraint, which
+tool should I choose for refactoring my authentication system?
+```
+
+**Expected Outcome**: Gemini evaluates the tool choice through the lens of your specific constraint, showing whether free tier limits are sufficient for your task.
+
+---
+
+**Prompt 4 (Optional Stretch): Plan Your Analysis**
+```
+Based on our conversation, create a step-by-step plan for me to analyze my entire
+[PROJECT AREA] using Gemini CLI. What files should I include? What questions should I ask?
+```
+
+*Example:*
+```
+Based on our conversation, create a step-by-step plan for me to analyze my entire
+authentication system using Gemini CLI. What files should I include? What questions
+should I ask?
+```
+
+**Expected Outcome**: A concrete, copyable plan for your analysis—filenames, command structure, and question sequence.
+
+---
+
+### Safety & Ethics Note
+
+When evaluating tools, remember: **All AI tools have trade-offs.**
+- Gemini CLI is powerful but requires terminal familiarity
+- Claude Code has excellent documentation but smaller context windows
+- No tool is perfect for every situation
+
+Use this guidance to make informed decisions, but remain skeptical of any claims that one tool solves all problems. Real-world development requires combining multiple tools and approaches.
+
+### Next Self-Directed Variation
+
+After completing the prompts above, try this variation on your next project:
+
+**Before starting a new task, always ask**: "Is Gemini CLI or [another tool] better for this? Why?"
+
+Make this a habit. Over time, you'll develop intuition about which tool fits which scenario—and you'll know how to ask when you're uncertain.
