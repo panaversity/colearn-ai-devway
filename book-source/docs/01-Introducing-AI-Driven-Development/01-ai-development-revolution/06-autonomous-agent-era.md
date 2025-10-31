@@ -205,22 +205,35 @@ These videos provide additional context on the AI coding revolution and where th
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Understand Current Tool Capabilities
+```
+This lesson describes four 'generations' of AI coding tools, from autocomplete to autonomous agents. Help me understand where we are TODAY (2025) and what I should expect when I start using AI tools. What generation will I be working with? What can it actually do?
+```
 
-1) "This lesson describes four 'generations' of AI coding tools, from autocomplete to autonomous agents. Help me understand where we are TODAY (2025) and what I should expect when I start using AI tools. What generation will I be working with? What can it actually do?"
+**Expected outcome**: Realistic understanding of current AI tool capabilities (not science fiction).
 
-2) "The lesson defines 'autonomous' agents—what they CAN and CAN'T do. This is important: help me set realistic expectations. If I give an AI agent a task like 'build me a simple portfolio website,' what parts will it handle autonomously? Where will it need my help?"
+### Prompt 2: Set Autonomous Agent Expectations
+```
+The lesson defines 'autonomous' agents—what they CAN and CAN'T do. This is important: help me set realistic expectations. If I give an AI agent a task like 'build me a simple portfolio website,' what parts will it handle autonomously? Where will it need my help?
+```
 
-3) "I'm curious about the timeline: when will autonomous agents be 'mainstream'? The lesson predicts 2025-2027. But what does that mean for me learning NOW? Should I wait for the tools to mature, or start learning with today's Generation 3 tools? Give me your honest recommendation."
+**Expected outcome**: Clear expectations about what autonomous agents will and won't do for you.
 
-4) "The lesson emphasizes 'human judgment remains essential.' Give me 3-5 concrete examples of decisions or judgment calls AI CAN'T make (that I'll need to handle). This will help me understand where I add value even in the 'autonomous agent era.'"
+### Prompt 3: Assess Learning Timing
+```
+I'm curious about the timeline: when will autonomous agents be 'mainstream'? The lesson predicts 2025-2027. But what does that mean for me learning NOW? Should I wait for the tools to mature, or start learning with today's Generation 3 tools? Give me your honest recommendation.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Timing guidance: whether to start now or wait for better tools.
 
-- Realistic understanding of current AI tool capabilities (not science fiction)
-- Clear expectations about what autonomous agents will and won't do for you
-- Timing guidance: whether to start now or wait for better tools
-- Concrete examples of where human judgment beats AI (your unique value)
+### Prompt 4: Identify Human Judgment Areas
+```
+The lesson emphasizes 'human judgment remains essential.' Give me 3-5 concrete examples of decisions or judgment calls AI CAN'T make (that I'll need to handle). This will help me understand where I add value even in the 'autonomous agent era.'
+```
+
+**Expected outcome**: Concrete examples of where human judgment beats AI (your unique value).
+
+
 

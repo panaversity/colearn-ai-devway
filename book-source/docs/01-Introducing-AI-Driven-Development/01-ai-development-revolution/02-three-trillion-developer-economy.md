@@ -147,22 +147,35 @@ This 40-minute presentation from industry analysts provides the detailed evidenc
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Understand The Economic Scale
+```
+This lesson talks about a '$3 trillion developer economy.' Explain this in simple terms—what does it actually mean, and why should I care? Is this number real or inflated? Help me understand the scale we're talking about using comparisons I can relate to (like country GDPs or familiar industries).
+```
 
-1) "This lesson talks about a '$3 trillion developer economy.' Explain this in simple terms—what does it actually mean, and why should I care? Is this number real or inflated? Help me understand the scale we're talking about using comparisons I can relate to (like country GDPs or familiar industries)."
+**Expected outcome**: Clear grasp of the economic scale (without needing an economics degree).
 
-2) "The lesson says AI is 'disrupting an economy the size of France.' But how does that affect me personally? If I'm [your role: student / entrepreneur / career changer / business owner], what does this transformation mean for my opportunities? Be specific about how I might benefit."
+### Prompt 2: Personal Impact Assessment
+```
+The lesson says AI is 'disrupting an economy the size of France.' But how does that affect me personally? If I'm [your role: student / entrepreneur / career changer / business owner], what does this transformation mean for my opportunities? Be specific about how I might benefit.
+```
 
-3) "Here's what confuses me: If AI makes developers more productive, won't we need FEWER developers? Help me understand why the lesson claims the opposite—that demand for software is actually INCREASING. Use a simple analogy or real example I can grasp."
+**Expected outcome**: Personal understanding of how this transformation creates opportunities for YOU.
 
-4) "Based on this economic shift, help me think strategically: Should I focus on learning to build custom solutions for specific needs? Or should I aim for building products that serve many people? What's more realistic for someone starting with AI tools in 2025?"
+### Prompt 3: Clarify The Productivity Paradox
+```
+Here's what confuses me: If AI makes developers more productive, won't we need FEWER developers? Help me understand why the lesson claims the opposite—that demand for software is actually INCREASING. Use a simple analogy or real example I can grasp.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Insight into why AI expands rather than shrinks the software market.
 
-- Clear grasp of the economic scale (without needing an economics degree)
-- Personal understanding of how this transformation creates opportunities for YOU
-- Insight into why AI expands rather than shrinks the software market
-- Strategic guidance on where to focus your learning efforts
+### Prompt 4: Strategic Direction Planning
+```
+Based on this economic shift, help me think strategically: Should I focus on learning to build custom solutions for specific needs? Or should I aim for building products that serve many people? What's more realistic for someone starting with AI tools in 2025?
+```
+
+**Expected outcome**: Strategic guidance on where to focus your learning efforts.
+
+
 

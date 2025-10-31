@@ -194,22 +194,35 @@ In the next section, we'll explore this evolution in detail: how the developer r
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you’ve already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Map The Full Development Process
+```
+This lesson says AI is transforming 'every phase' of development—not just writing code. Help me understand: If I want to build a simple web app (like a to-do list or small business tool), walk me through each phase and explain where AI can help me. Use simple language, not technical jargon.
+```
 
-1) "This lesson says AI is transforming 'every phase' of development—not just writing code. Help me understand: If I want to build a simple web app (like a to-do list or small business tool), walk me through each phase and explain where AI can help me. Use simple language, not technical jargon."
+**Expected outcome**: Clear mental model of the full development process (not just "coding").
 
-2) "I'm concerned about one thing: If AI handles so much of the work (planning, testing, deployment, etc.), will I actually understand what I'm building? Or will I just be clicking buttons without learning? Give me an honest answer and suggest how to avoid this trap."
+### Prompt 2: Avoid Dependency Traps
+```
+I'm concerned about one thing: If AI handles so much of the work (planning, testing, deployment, etc.), will I actually understand what I'm building? Or will I just be clicking buttons without learning? Give me an honest answer and suggest how to avoid this trap.
+```
 
-3) "Pick ONE phase from the development lifecycle (maybe testing or deployment—whichever is most helpful for beginners). Explain it in detail: what it means, why it matters, and give me ONE specific way I can use AI to do it better as I'm learning."
+**Expected outcome**: Honest guidance on learning WITH AI without becoming dependent on it.
 
-4) "The lesson mentions the 'compounding effect'—each phase improvement makes the next phase easier. Explain this with a concrete example. If I do planning better with AI, how exactly does that make my testing easier later?"
+### Prompt 3: Deep Dive One Phase
+```
+Pick ONE phase from the development lifecycle (maybe testing or deployment—whichever is most helpful for beginners). Explain it in detail: what it means, why it matters, and give me ONE specific way I can use AI to do it better as I'm learning.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Deep understanding of at least ONE phase where you can apply AI immediately.
 
-- Clear mental model of the full development process (not just "coding")
-- Honest guidance on learning WITH AI without becoming dependent on it
-- Deep understanding of at least ONE phase where you can apply AI immediately
-- Appreciation for how doing early work well pays off later
+### Prompt 4: Understand Compounding Effects
+```
+The lesson mentions the 'compounding effect'—each phase improvement makes the next phase easier. Explain this with a concrete example. If I do planning better with AI, how exactly does that make my testing easier later?
+```
+
+**Expected outcome**: Appreciation for how doing early work well pays off later.
+
+
 
