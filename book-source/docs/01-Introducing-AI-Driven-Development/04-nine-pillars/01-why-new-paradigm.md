@@ -102,27 +102,37 @@ Let's begin.
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1:Tool vs System Understanding
 
-1) "The story of Priya and Marcus shows two developers using AI differently—one as a 'tool' and one as a 'system.' Help me understand this distinction using a simple analogy (NOT from programming). Then explain: which approach am I probably using RIGHT NOW when I use AI tools? Be honest."
+```
+The story of Priya and Marcus shows two developers using AI differently—one as a 'tool' and one as a 'system.' Help me understand this distinction using a simple analogy (NOT from programming). Then explain: which approach am I probably using RIGHT NOW when I use AI tools? Be honest.
+```
 
-2) "The lesson lists 'nine revolutions' happening simultaneously in software development. Pick the THREE that seem most impactful for someone like me [describe your situation: beginner / career changer / experienced developer]. For each one, explain: what does this revolution ACTUALLY mean for my daily work? Give concrete examples."
+**Expected outcome:** Crystal-clear understanding of 'tool vs. system' using relatable analogies
 
-3) "I'm experiencing 'partial adoption' right now—using AI tools here and there but not systematically. The lesson says this creates a 'productivity plateau.' Help me diagnose: What are THREE specific signs that I've hit this plateau? What would be different if I were using AI as a complete system?"
+### Prompt 2: Personal Revolution Assessment  
 
-4) "Based on the Priya/Marcus story, create a simple self-assessment for me. Ask 5-7 yes/no questions that reveal whether I'm using AI as a 'tool' or a 'system.' Then, based on my answers, give me ONE specific change I should make THIS WEEK to shift toward the 'system' approach."
+```
+The lesson lists 'nine revolutions' happening simultaneously in software development. Pick the THREE that seem most impactful for someone like me [describe your situation: beginner / career changer / experienced developer]. For each one, explain: what does this revolution ACTUALLY mean for my daily work? Give concrete examples.
+```
 
-**Expected outcomes:**
+**Expected outcome:** Personal identification of which revolutions matter most for YOUR context
 
-- Crystal-clear understanding of 'tool vs. system' using relatable analogies
-- Personal identification of which revolutions matter most for YOUR context
-- Honest diagnosis of whether you've hit the productivity plateau
-- Actionable one-week experiment to shift toward systematic AI usage
+### Prompt 3: Productivity Plateau Diagnosis
 
-**Safety/ethics note:**
+```
+I'm experiencing 'partial adoption' right now—using AI tools here and there but not systematically. The lesson says this creates a 'productivity plateau.' Help me diagnose: What are THREE specific signs that I've hit this plateau? What would be different if I were using AI as a complete system?
+```
 
-- Don't share proprietary code or company workflows when discussing your AI usage
-- Be honest about your current skill level in the self-assessment
-- Start small with systematic changes—don't try to transform everything at once
+**Expected outcome:** Honest diagnosis of whether you've hit the productivity plateau
+
+### Prompt 4: System Approach Self-Assessment
+
+```
+Based on the Priya/Marcus story, create a simple self-assessment for me. Ask 5-7 yes/no questions that reveal whether I'm using AI as a 'tool' or a 'system.' Then, based on my answers, give me ONE specific change I should make THIS WEEK to shift toward the 'system' approach.
+```
+
+**Expected outcome:** Actionable one-week experiment to shift toward systematic AI usage
+

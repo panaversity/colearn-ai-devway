@@ -180,31 +180,34 @@ Think of it like blueprints for construction. Building a treehouse in your backy
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Compare Development Approaches
+```
+Explain the difference between 'vibe coding' (jumping in and iterating quickly) and 'spec-driven development' (planning first, then building). Which approach is better for: (a) learning a new skill, (b) building a personal project, (c) creating a product for real users? Give me specific examples of when each approach works best.
+```
 
-1) "Explain the difference between 'vibe coding' (jumping in and iterating quickly) and 'spec-driven development' (planning first, then building). Which approach is better for: (a) learning a new skill, (b) building a personal project, (c) creating a product for real users? Give me specific examples of when each approach works best."
+**Expected outcome**: Clear understanding of when to plan vs. when to explore (without technical jargon).
 
-2) "I want to build [describe something you'd like to create: a website, an app, a business tool, etc.] using AI as my collaborator. Walk me through what 'planning first' would look like for this project. What questions should I answer before asking AI to help me build it? What could go wrong if I skip the planning step?"
+### Prompt 2: Plan A Real Project
+```
+I want to build [describe something you'd like to create: a website, an app, a business tool, etc.] using AI as my collaborator. Walk me through what 'planning first' would look like for this project. What questions should I answer before asking AI to help me build it? What could go wrong if I skip the planning step?
+```
 
-3) "Here's a realistic scenario: I'm building a simple tool and I use AI to generate code quickly. It works on my computer, but when I share it with others, it breaks. What likely went wrong? What should I have done differently? Give me a simple checklist I can use next time to avoid this problem."
+**Expected outcome**: Practical insight into planning a real project with AI collaboration.
 
-4) "Create a simple decision framework for me: Given a project or idea, how do I decide whether to 'explore quickly with AI' versus 'plan carefully first'? Make it practical—something I can use as a beginner without needing to know technical jargon."
+### Prompt 3: Debug Common Problems
+```
+Here's a realistic scenario: I'm building a simple tool and I use AI to generate code quickly. It works on my computer, but when I share it with others, it breaks. What likely went wrong? What should I have done differently? Give me a simple checklist I can use next time to avoid this problem.
+```
 
-**Expected outcomes:**
+**Expected outcome**: Awareness of common beginner mistakes (like "works on my machine" syndrome) and how to avoid them.
 
-- Clear understanding of when to plan vs. when to explore (without technical jargon)
-- Practical insight into planning a real project with AI collaboration
-- Awareness of common beginner mistakes (like "works on my machine" syndrome) and how to avoid them
-- A simple, reusable decision framework for choosing your approach
+### Prompt 4: Create Decision Framework
+```
+Create a simple decision framework for me: Given a project or idea, how do I decide whether to 'explore quickly with AI' versus 'plan carefully first'? Make it practical—something I can use as a beginner without needing to know technical jargon.
+```
 
-**Safety/ethics note:**
+**Expected outcome**: A simple, reusable decision framework for choosing your approach.
 
-- Verify that cited patterns are real practices, not AI hallucinations
-- Don't share proprietary development processes or sensitive project details
-- Cross-check at least one pattern description against practitioner blogs, conference talks, or case studies before adopting
 
----
-
-**Next**: [Section 3: DORA Perspective — Why Discipline Matters MORE with AI →](./03-dora-perspective.md)

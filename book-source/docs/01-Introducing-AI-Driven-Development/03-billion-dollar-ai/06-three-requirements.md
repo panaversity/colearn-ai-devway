@@ -66,29 +66,38 @@ If you have integrations + agentic solution but NO domain-specific models, you'r
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
 
-**Prompts:**
+### Prompt 1: Prioritize The Three Requirements
+```
+The lesson says I need THREE requirements for success: (1) fine-tuned models, (2) deep integrations, (3) complete agentic solutions. Rank these from EASIEST to HARDEST for a beginner to achieve. For each one, explain: what would the first small step look like? Don't overwhelm me—just give me ONE concrete action per requirement.
+```
 
-1) "The lesson says I need THREE requirements for success: (1) fine-tuned models, (2) deep integrations, (3) complete agentic solutions. Rank these from EASIEST to HARDEST for a beginner to achieve. For each one, explain: what would the first small step look like? Don't overwhelm me—just give me ONE concrete action per requirement."
+**Expected outcome**: Prioritized roadmap: which requirement to tackle first (with first steps).
 
-2) "The OpenAI Study Mode example shows what happens when you're missing requirements. Help me learn from this: Pick a different product or startup (maybe one I've heard of) that FAILED because it was missing one of the three requirements. Explain what they had, what they lacked, and what the lesson is for me."
+### Prompt 2: Learn From Failure Cases
+```
+The OpenAI Study Mode example shows what happens when you're missing requirements. Help me learn from this: Pick a different product or startup (maybe one I've heard of) that FAILED because it was missing one of the three requirements. Explain what they had, what they lacked, and what the lesson is for me.
+```
 
-3) "I'm confused about 'fine-tuning models with domain expertise.' Explain this like I'm 10 years old. Then give me a realistic example: If I wanted to build a solution for [pick: teachers / small business owners / healthcare workers], what would 'fine-tuning' actually involve? Do I need to be a data scientist?"
+**Expected outcome**: Pattern recognition from real failure case studies.
 
-4) "The lesson says 'all three or none'—meaning if I'm missing even ONE requirement, I fail. But that feels extreme. Help me understand: could I start with just ONE requirement (maybe integrations) and gradually add the others? Or is there really no middle ground? Give me an honest answer with reasoning."
+### Prompt 3: Demystify Model Fine-Tuning
+```
+I'm confused about 'fine-tuning models with domain expertise.' Explain this like I'm 10 years old. Then give me a realistic example: If I wanted to build a solution for [pick: teachers / small business owners / healthcare workers], what would 'fine-tuning' actually involve? Do I need to be a data scientist?
+```
 
-**Expected outcomes:**
+**Expected outcome**: Beginner-friendly understanding of model fine-tuning (without PhD-level jargon).
 
-- Prioritized roadmap: which requirement to tackle first (with first steps)
-- Pattern recognition from real failure case studies
-- Beginner-friendly understanding of model fine-tuning (without PhD-level jargon)
-- Honest assessment of whether you can build incrementally or need all three upfront
+### Prompt 4: Assess Incremental vs. All-Or-Nothing
+```
+The lesson says 'all three or none'—meaning if I'm missing even ONE requirement, I fail. But that feels extreme. Help me understand: could I start with just ONE requirement (maybe integrations) and gradually add the others? Or is there really no middle ground? Give me an honest answer with reasoning.
+```
 
-**Safety/ethics note:**
+**Expected outcome**: Honest assessment of whether you can build incrementally or need all three upfront.
 
-- Don't attempt to fine-tune models without understanding data privacy and consent
-- Verify integration capabilities and API limitations before committing to customers
-- Be realistic about your technical depth before promising agentic solutions
+
+
+
 
 

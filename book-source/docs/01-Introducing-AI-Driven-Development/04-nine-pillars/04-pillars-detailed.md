@@ -171,27 +171,37 @@ The nine pillars are the foundation. The M-Shaped Developer is what you build on
 
 ## Try With AI
 
-Use ChatGPT web for this activity. If you've already set up an AI companion tool from later chapters, you may use it instead.
+Use your AI companion tool set up from Chapter 5. If you haven't reached that chapter yet, use ChatGPT web or Claude for this activity.
 
-**Prompts:**
+### Prompt 1: Beginner-Friendly Pillar Explanations
 
-1) "This lesson deep-dives into 9 pillars. I'm still confused about a few. Pick TWO pillars that are hardest for beginners to grasp: (a) one technical pillar (like MCP or TDD), (b) one conceptual pillar (like Markdown as Programming or Composable Skills). For each, explain it like I'm 10 years old, then give me a 'hello world' example I could try TODAY."
+```
+This lesson deep-dives into 9 pillars. I'm still confused about a few. Pick TWO pillars that are hardest for beginners to grasp: (a) one technical pillar (like MCP or TDD), (b) one conceptual pillar (like Markdown as Programming or Composable Skills). For each, explain it like I'm 10 years old, then give me a 'hello world' example I could try TODAY.
+```
 
-2) "The lesson shows interdependencies between pillars. Create a visual text diagram (using ASCII art or bullet points) that shows how the 9 pillars connect. Then highlight: which pillar is the 'foundation' (most other pillars depend on it)? Which pillar is the 'capstone' (depends on most others)?"
+**Expected outcome:** Crystal-clear explanation of 2 difficult pillars with beginner-friendly examples
 
-3) "The 'Six-of-Nine Challenge' asks which 3 pillars I'd skip. Help me think strategically: I'm [describe your context: complete beginner / have some coding experience / experienced in one area]. Based on this, which 3 pillars should I DEFER (not abandon, just learn later) to avoid overwhelm? Justify each deferral."
+### Prompt 2: Pillar Interconnection Mapping
 
-4) "Pick ONE pillar that excites me most [tell AI which one]. Create a 30-day learning plan JUST for that pillar. Break it into weekly milestones. What should I learn in Week 1, Week 2, Week 3, Week 4? Include specific resources, mini-projects, or experiments I should try."
+```
+The lesson shows interdependencies between pillars. Create a visual text diagram (using ASCII art or bullet points) that shows how the 9 pillars connect. Then highlight: which pillar is the 'foundation' (most other pillars depend on it)? Which pillar is the 'capstone' (depends on most others)?
+```
 
-**Expected outcomes:**
+**Expected outcome:** Visual understanding of how all 9 pillars interconnect
 
-- Crystal-clear explanation of 2 difficult pillars with beginner-friendly examples
-- Visual understanding of how all 9 pillars interconnect
-- Strategic deferral plan that prevents overwhelm while maintaining progress
-- Focused 30-day plan for mastering your highest-priority pillar
+### Prompt 3: Strategic Pillar Deferral
 
-**Safety/ethics note:**
+```
+The 'Six-of-Nine Challenge' asks which 3 pillars I'd skip. Help me think strategically: I'm [describe your context: complete beginner / have some coding experience / experienced in one area]. Based on this, which 3 pillars should I DEFER (not abandon, just learn later) to avoid overwhelm? Justify each deferral.
+```
 
-- Don't try to learn all 9 pillars in 30 days—focus deeply on one or two
-- It's okay to defer complex pillars (like Kubernetes) until you have fundamentals
-- Celebrate small wins—each pillar mastered is real progress
+**Expected outcome:** Strategic deferral plan that prevents overwhelm while maintaining progress
+
+### Prompt 4: Focused Learning Plan
+
+```
+Pick ONE pillar that excites me most [tell AI which one]. Create a 30-day learning plan JUST for that pillar. Break it into weekly milestones. What should I learn in Week 1, Week 2, Week 3, Week 4? Include specific resources, mini-projects, or experiments I should try.
+```
+
+**Expected outcome:** Focused 30-day plan for mastering your highest-priority pillar
+
