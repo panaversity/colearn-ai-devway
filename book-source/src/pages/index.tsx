@@ -25,15 +25,12 @@ function HomepageHeader() {
           
           {/* Right side - Content */}
           <div className={styles.heroTextContent}>
-            <div className={styles.heroLabel}>Panaversity AI-Driven Way Book Series</div>
+            <div className={styles.heroLabel}>Panaversity AI-Native Book Series</div>
             <Heading as="h1" className={styles.heroTitle}>
-              CoLearning Programming
+              AI Native Software Development
               <br />
-              <span className={styles.heroTitleAccent}>The AI-Driven Way</span>
+              <span className={styles.heroTitleAccent}>Colearning Agentic AI with Python and TypeScript – <strong>The AI & Spec Driven Way</strong></span>
             </Heading>
-            <p className={styles.heroSubtitle}>
-              Master Python & TypeScript by building production-ready AI systems. Transform how you learn with AI as your co-learner and collaborator.
-            </p>
             
             <div className={styles.heroBadges}>
               <span className={styles.badge}>
@@ -41,12 +38,12 @@ function HomepageHeader() {
                 100% Free & Open Source
               </span>
               <span className={styles.badge}>
-                <span className={styles.badgeIcon}>📚</span>
-                AI Driven Learning
+                <span className={styles.badgeIcon}>🤝</span>
+                Co-Learning with AI
               </span>
               <span className={styles.badge}>
                 <span className={styles.badgeIcon}>🎯</span>
-                Production Ready
+                Spec-Driven Development
               </span>
             </div>
             
@@ -65,7 +62,7 @@ function HomepageHeader() {
                 target="_blank"
                 rel="noopener noreferrer">
                 <span className={styles.buttonContent}>
-                  <span className={styles.buttonText}>Explore Panaversity Courses</span>
+                  <span className={styles.buttonText}>Explore Panaversity</span>
                   <span className={styles.buttonIcon}>🎓</span>
                 </span>
               </Link>
@@ -91,6 +88,105 @@ function Feature({title, description, icon, featured}: {title: string; descripti
   );
 }
 
+function AISpectrumSection() {
+  return (
+    <section className={styles.spectrumSection}>
+      <div className="container">
+        <div className={styles.spectrumHeader}>
+          <div className={styles.spectrumLabel}>Understanding AI Development</div>
+          <Heading as="h2" className={styles.spectrumTitle}>
+            The AI Development Spectrum
+          </Heading>
+          <p className={styles.spectrumSubtitle}>
+            Three distinct approaches to AI in software development. This book teaches you both AI-Driven and AI-Native development.
+          </p>
+        </div>
+
+        <div className={styles.spectrumCards}>
+          {/* AI Assisted */}
+          <div className={styles.spectrumCard}>
+            <div className={styles.spectrumCardHeader}>
+              <div className={styles.spectrumIcon}>🛠️</div>
+              <h3 className={styles.spectrumCardTitle}>AI Assisted</h3>
+              <div className={styles.spectrumCardSubtitle}>AI as Helper</div>
+            </div>
+            <p className={styles.spectrumCardDescription}>
+              AI enhances your productivity with code completion, debugging assistance, and documentation generation.
+            </p>
+            <ul className={styles.spectrumCardList}>
+              <li>Code completion & suggestions</li>
+              <li>Bug detection & debugging</li>
+              <li>Documentation generation</li>
+            </ul>
+            <div className={styles.spectrumCardExample}>
+              <strong>Example:</strong> Using Copilot to build a React website faster
+            </div>
+          </div>
+
+          {/* AI Driven */}
+          <div className={clsx(styles.spectrumCard, styles.spectrumCardHighlight)}>
+            <div className={styles.spectrumBadge}>Focus of This Book</div>
+            <div className={styles.spectrumCardHeader}>
+              <div className={styles.spectrumIcon}>🚀</div>
+              <h3 className={styles.spectrumCardTitle}>AI Driven</h3>
+              <div className={styles.spectrumCardSubtitle}>AI as Co-Creator</div>
+            </div>
+            <p className={styles.spectrumCardDescription}>
+              AI generates significant code from specifications. You act as architect, director, and reviewer.
+            </p>
+            <ul className={styles.spectrumCardList}>
+              <li>Code generation from specs</li>
+              <li>Automated testing & optimization</li>
+              <li>Architecture from requirements</li>
+            </ul>
+            <div className={styles.spectrumCardExample}>
+              <strong>Example:</strong> Writing a spec for a REST API, AI generates complete FastAPI backend
+            </div>
+          </div>
+
+          {/* AI Native */}
+          <div className={clsx(styles.spectrumCard, styles.spectrumCardHighlight)}>
+            <div className={styles.spectrumBadge}>Focus of This Book</div>
+            <div className={styles.spectrumCardHeader}>
+              <div className={styles.spectrumIcon}>🧠</div>
+              <h3 className={styles.spectrumCardTitle}>AI Native</h3>
+              <div className={styles.spectrumCardSubtitle}>AI IS the Software</div>
+            </div>
+            <p className={styles.spectrumCardDescription}>
+              Applications architected around AI capabilities. LLMs and agents are core functional components.
+            </p>
+            <ul className={styles.spectrumCardList}>
+              <li>Natural language interfaces</li>
+              <li>Intelligent automation & reasoning</li>
+              <li>Agent orchestration systems</li>
+            </ul>
+            <div className={styles.spectrumCardExample}>
+              <strong>Example:</strong> Building a customer support agent that autonomously resolves tickets
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.spectrumFlow}>
+          <div className={styles.spectrumFlowItem}>
+            <div className={styles.spectrumFlowLabel}>AI Assisted</div>
+            <div className={styles.spectrumFlowDesc}>Helper</div>
+          </div>
+          <div className={styles.spectrumFlowArrow}>→</div>
+          <div className={styles.spectrumFlowItem}>
+            <div className={styles.spectrumFlowLabel}>AI Driven</div>
+            <div className={styles.spectrumFlowDesc}>Co-Creator</div>
+          </div>
+          <div className={styles.spectrumFlowArrow}>→</div>
+          <div className={styles.spectrumFlowItem}>
+            <div className={styles.spectrumFlowLabel}>AI Native</div>
+            <div className={styles.spectrumFlowDesc}>Core System</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FeaturesSection() {
   return (
     <section className={styles.features}>
@@ -102,42 +198,42 @@ function FeaturesSection() {
             What Makes This Book Different
           </Heading>
           <p className={styles.featuresSubheading}>
-            A comprehensive, production-focused approach to learning programming in the age of AI
+            A comprehensive, production-focused approach to co-learning with AI in the spec-driven way
           </p>
         </div>
 
         {/* Features Grid */}
         <div className={styles.featuresGrid}>
           <Feature
-            icon="🤖"
-            title="AI-First Learning"
-            description="Master AI-driven development from day one. Build with Claude, Gemini, and OpenAI Agents SDK."
+            icon="�"
+            title="Co-Learning Philosophy"
+            description="Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together."
             featured={true}
           />
           <Feature
+            icon="🐍"
+            title="Dual Language Mastery"
+            description="Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack."
+          />
+          <Feature
+            icon="📋"
+            title="Spec-Driven Development"
+            description="Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems."
+          />
+          <Feature
+            icon="🤖"
+            title="Agentic AI Systems"
+            description="Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously."
+          />
+          <Feature
             icon="🏗️"
-            title="Production Systems"
-            description="Learn through real-world architectures: MCP, containers, Dapr, event-driven patterns, and Kubernetes."
-          />
-          <Feature
-            icon="🧠"
-            title="Spec-Kit Plus Methodology"
-            description="Specification-driven development designed for AI collaboration. Plan, iterate, and scale systematically."
-          />
-          <Feature
-            icon="🌐"
-            title="Cloud-Native Stack"
-            description="Stateless, containerized applications. Deploy anywhere with Docker, Kubernetes, and modern DevOps."
-          />
-          <Feature
-            icon="💬"
-            title="Voice & Realtime Agents"
-            description="Build cutting-edge realtime and voice-interactive AI agents that respond to natural language."
+            title="Production-Ready Architecture"
+            description="Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems."
           />
           <Feature
             icon="🚀"
-            title="Zero to Production"
-            description="46 comprehensive chapters taking you from programming basics to deploying enterprise AI systems."
+            title="Complete Learning Journey"
+            description="46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production."
             featured={true}
           />
         </div>
@@ -169,6 +265,124 @@ function FeaturesSection() {
   );
 }
 
+function MaturityLevelsSection() {
+  return (
+    <section className={styles.maturitySection}>
+      <div className="container">
+        <div className={styles.maturityHeader}>
+          <div className={styles.maturityLabel}>Your AI Journey</div>
+          <Heading as="h2" className={styles.maturityTitle}>
+            Organizational AI Maturity Levels
+          </Heading>
+          <p className={styles.maturitySubtitle}>
+            Where does your organization stand? Understanding these levels helps you chart your path forward.
+          </p>
+        </div>
+
+        <div className={styles.maturityLevels}>
+          {/* Level 1 */}
+          <div className={styles.maturityLevel}>
+            <div className={styles.maturityLevelNumber}>1</div>
+            <div className={styles.maturityLevelHeader}>
+              <div>
+                <h3 className={styles.maturityLevelTitle}>AI Awareness</h3>
+                <div className={styles.maturityLevelSubtitle}>Experimenting</div>
+              </div>
+              <div className={styles.maturityLevelImpact}>10-20% productivity gains</div>
+            </div>
+            <p className={styles.maturityLevelDescription}>
+              Individual developers experimenting with AI coding tools. Early AI Assisted Development.
+            </p>
+            <div className={styles.maturityLevelApproach}>
+              <strong>Approach:</strong> AI Assisted (Individual)
+            </div>
+          </div>
+
+          {/* Level 2 */}
+          <div className={styles.maturityLevel}>
+            <div className={styles.maturityLevelNumber}>2</div>
+            <div className={styles.maturityLevelHeader}>
+              <div>
+                <h3 className={styles.maturityLevelTitle}>AI Adoption</h3>
+                <div className={styles.maturityLevelSubtitle}>Standardizing</div>
+              </div>
+              <div className={styles.maturityLevelImpact}>30-40% productivity boost</div>
+            </div>
+            <p className={styles.maturityLevelDescription}>
+              Organization-wide adoption with governance. Established guidelines and security policies.
+            </p>
+            <div className={styles.maturityLevelApproach}>
+              <strong>Approach:</strong> AI Assisted (Team)
+            </div>
+          </div>
+
+          {/* Level 3 */}
+          <div className={clsx(styles.maturityLevel, styles.maturityLevelHighlight)}>
+            <div className={styles.maturityBadge}>BOOK FOCUS</div>
+            <div className={styles.maturityLevelNumber}>3</div>
+            <div className={styles.maturityLevelHeader}>
+              <div>
+                <h3 className={styles.maturityLevelTitle}>AI Integration</h3>
+                <div className={styles.maturityLevelSubtitle}>Transforming Workflows</div>
+              </div>
+              <div className={styles.maturityLevelImpact}>2-3x faster development</div>
+            </div>
+            <p className={styles.maturityLevelDescription}>
+              AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.
+            </p>
+            <div className={styles.maturityLevelApproach}>
+              <strong>Approach:</strong> AI Driven (Workflow)
+            </div>
+          </div>
+
+          {/* Level 4 */}
+          <div className={clsx(styles.maturityLevel, styles.maturityLevelHighlight)}>
+            <div className={styles.maturityBadge}>BOOK FOCUS</div>
+            <div className={styles.maturityLevelNumber}>4</div>
+            <div className={styles.maturityLevelHeader}>
+              <div>
+                <h3 className={styles.maturityLevelTitle}>AI-Native Products</h3>
+                <div className={styles.maturityLevelSubtitle}>Building Intelligence</div>
+              </div>
+              <div className={styles.maturityLevelImpact}>New capabilities unlocked</div>
+            </div>
+            <p className={styles.maturityLevelDescription}>
+              Products where AI/LLMs are core components. Agent orchestration, natural language interfaces, intelligent systems.
+            </p>
+            <div className={styles.maturityLevelApproach}>
+              <strong>Approach:</strong> AI Native (Product)
+            </div>
+          </div>
+
+          {/* Level 5 */}
+          <div className={styles.maturityLevel}>
+            <div className={styles.maturityLevelNumber}>5</div>
+            <div className={styles.maturityLevelHeader}>
+              <div>
+                <h3 className={styles.maturityLevelTitle}>AI-First Enterprise</h3>
+                <div className={styles.maturityLevelSubtitle}>Living in the Future</div>
+              </div>
+              <div className={styles.maturityLevelImpact}>10x productivity</div>
+            </div>
+            <p className={styles.maturityLevelDescription}>
+              Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.
+            </p>
+            <div className={styles.maturityLevelApproach}>
+              <strong>Approach:</strong> AI Native (Enterprise)
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.maturityCTA}>
+          <p className={styles.maturityCTAText}>
+            <strong>This book prepares you for Levels 3-4:</strong> Master AI-Driven workflows and build AI-Native products
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ParadigmShift() {
   return (
     <section className={styles.paradigmSection}>
@@ -176,14 +390,14 @@ function ParadigmShift() {
         <div className={styles.paradigmContent}>
           {/* Section Header */}
           <div className={styles.paradigmHeader}>
-            <div className={styles.paradigmLabel}>The Revolution</div>
+            <div className={styles.paradigmLabel}>The Great Shift</div>
             <Heading as="h2" className={styles.paradigmTitle}>
-              Why Traditional CS Education <br />
-              <span className={styles.paradigmTitleAccent}>Needs a Rethink</span>
+              From Automation to Intelligence<br />
+              <span className={styles.paradigmTitleAccent}>From Coding to Co-Creating</span>
             </Heading>
             <p className={styles.paradigmSubtitle}>
-              The world has changed. AI has fundamentally transformed how we build software.
-              Your education should reflect this reality.
+              AI-native development is not about replacing developers—it's about amplifying intelligence.
+              Learn to collaborate with reasoning entities that learn with you.
             </p>
           </div>
 
@@ -194,30 +408,30 @@ function ParadigmShift() {
               <div className={styles.comparisonIconWrapper}>
                 <div className={styles.comparisonIcon}>📚</div>
               </div>
-              <div className={styles.comparisonLabel}>Traditional Approach</div>
+              <div className={styles.comparisonLabel}>Traditional Development</div>
               <div className={styles.comparisonDescription}>
-                The old way of learning programming
+                The automation era
               </div>
               <ul className={styles.comparisonList}>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Syntax First</span>
-                  Learn language basics before building anything meaningful
+                  <span className={styles.comparisonItemTitle}>Instruction-Based</span>
+                  Tell computers exactly what to do with precise syntax
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Memorize Algorithms</span>
-                  Focus on rote learning of data structures
+                  <span className={styles.comparisonItemTitle}>Solo Coding</span>
+                  Developer writes every line manually
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Solo Problem-Solving</span>
-                  Work alone without modern collaborative tools
+                  <span className={styles.comparisonItemTitle}>Documentation as Afterthought</span>
+                  Specs are static contracts written post-facto
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Toy Projects</span>
-                  Build calculator apps and to-do lists
+                  <span className={styles.comparisonItemTitle}>Linear Learning</span>
+                  Learn syntax → Build simple projects → Slowly scale
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Textbook-Driven</span>
-                  Theory-heavy with outdated examples
+                  <span className={styles.comparisonItemTitle}>Code-First</span>
+                  Focus on implementation details from day one
                 </li>
               </ul>
             </div>
@@ -228,35 +442,35 @@ function ParadigmShift() {
               <div className={styles.comparisonArrow}>→</div>
             </div>
 
-            {/* AI-Driven Card */}
+            {/* AI-Native Card */}
             <div className={clsx(styles.comparisonCard, styles.comparisonCardHighlight)}>
               <div className={styles.comparisonIconWrapper}>
-                <div className={styles.comparisonIcon}>🚀</div>
+                <div className={styles.comparisonIcon}>🤖</div>
               </div>
-              <div className={styles.comparisonLabel}>AI-Driven Way</div>
+              <div className={styles.comparisonLabel}>AI-Native Way</div>
               <div className={styles.comparisonDescription}>
-                The future of programming education
+                The intelligence era
               </div>
               <ul className={styles.comparisonList}>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Production First</span>
-                  Build real systems from day one with AI guidance
+                  <span className={styles.comparisonItemTitle}>Intent-Based</span>
+                  Describe what you want; AI reasons how to build it
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Pattern Understanding</span>
-                  Learn through doing with AI as your guide
+                  <span className={styles.comparisonItemTitle}>Co-Learning Partnership</span>
+                  You and AI teach each other through iteration
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>AI Pair Programming</span>
-                  Collaborate with Claude, GPT, and Gemini
+                  <span className={styles.comparisonItemTitle}>Specs as Living Blueprints</span>
+                  Specifications drive code, tests, and documentation
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Real Architectures</span>
-                  Deploy cloud-native, production-ready systems
+                  <span className={styles.comparisonItemTitle}>Production-First Learning</span>
+                  Build real agentic systems from day one
                 </li>
                 <li>
-                  <span className={styles.comparisonItemTitle}>Spec-Driven Learning</span>
-                  Systematic, tool-augmented development
+                  <span className={styles.comparisonItemTitle}>Architecture-First</span>
+                  Design intelligent collaborations, not just code
                 </li>
               </ul>
             </div>
@@ -265,17 +479,17 @@ function ParadigmShift() {
           {/* Bottom CTA */}
           <div className={styles.paradigmCTA}>
             <div className={styles.paradigmCTAContent}>
-              <div className={styles.paradigmCTAIcon}>💡</div>
+              <div className={styles.paradigmCTAIcon}>🌱</div>
               <div className={styles.paradigmCTAText}>
-                <h3 className={styles.paradigmCTATitle}>Ready for the New Way?</h3>
+                <h3 className={styles.paradigmCTATitle}>Ready to Co-Learn with AI?</h3>
                 <p className={styles.paradigmCTADescription}>
-                  Join thousands of learners who are mastering programming with AI as their co-learner
+                  Join the revolution where coding becomes conversation and software becomes alive
                 </p>
               </div>
               <Link
                 className={clsx('button button--primary button--lg', styles.paradigmCTAButton)}
                 to="/docs/Introducing-AI-Driven-Development">
-                Start Learning Now
+                Begin Your Journey
               </Link>
             </div>
           </div>
@@ -289,10 +503,12 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="CoLearning Programming: The AI-Driven Way | Free Book"
-      description="Master Python & TypeScript by building production-ready AI systems. AI as your co-learner and collaborator.">
+      title="AI Native Software Development | Free Book"
+      description="Colearning Agentic AI with Python and TypeScript – The AI & Spec Driven Way. Build production-ready intelligent systems.">
       <HomepageHeader />
+      <AISpectrumSection />
       <FeaturesSection />
+      <MaturityLevelsSection />
       <ParadigmShift />
     </Layout>
   );

@@ -287,8 +287,8 @@
 .heroTitle {
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
     letter-spacing: -0.02em;
     font-family:
         -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
@@ -302,13 +302,22 @@
     background-clip: text;
     display: block;
     margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
     position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
 }
 
 .heroTitleAccent::after {
     content: "";
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -319,19 +328,25 @@
 
 .heroSubtitle {
     font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    margin-top: 0;
     opacity: 0.9;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: -0.01em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .heroBadges {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.875rem;
     flex-wrap: wrap;
-    margin-bottom: 2.5rem;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+    max-width: 100%;
 }
 
 .badge {
@@ -339,17 +354,18 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.625rem 1.125rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 25px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .badge:first-child {
@@ -388,6 +404,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 0;
 }
 
 .ctaButton {
@@ -395,8 +412,9 @@
     color: #001f3f !important;
     border: none !important;
     font-weight: 600;
-    padding: 1rem 2.25rem !important;
+    padding: 1.125rem 2.5rem !important;
     font-size: 1.0625rem;
+    line-height: 1.4;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -442,8 +460,9 @@
     color: white !important;
     border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
     font-weight: 500;
-    padding: 1rem 2.25rem !important;
+    padding: 1.125rem 2.5rem !important;
     font-size: 1.0625rem;
+    line-height: 1.4;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -587,7 +606,7 @@
 
     .heroTitle {
         font-size: 2.75rem;
-        line-height: 1.2;
+        line-height: 1.15;
     }
 
     .heroSubtitle {
@@ -599,7 +618,7 @@
         justify-content: center;
         gap: 0.75rem;
         flex-wrap: wrap;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
     }
 
     .badge {
@@ -715,6 +734,19 @@
     }
 }
 
+/* Narrower viewports - optimize badge layout */
+@media screen and (max-width: 900px) {
+    .heroBadges {
+        gap: 0.75rem;
+        max-width: 100%;
+    }
+
+    .badge {
+        font-size: 0.8125rem;
+        padding: 0.5625rem 1rem;
+    }
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 580px) {
     .heroBanner {
@@ -755,24 +787,35 @@
         line-height: 1.15;
     }
 
+    .heroTitleAccent {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-top: 0.4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1.25rem;
+    }
+
     /* Adjust accent line for mobile */
     .heroTitleAccent::after {
         width: 50px;
         height: 2px;
+        bottom: 0;
     }
 
     .heroSubtitle {
         font-size: 1.0625rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+        margin-top: 0;
     }
 
     .heroBadges {
-        gap: 0.5rem;
+        gap: 0.625rem;
         /* Keep horizontal layout consistent */
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 2rem;
+        margin-bottom: 2.75rem;
     }
 
     .badge {
@@ -857,7 +900,16 @@
 
     .heroTitle {
         font-size: 1.875rem;
-        line-height: 1.2;
+        line-height: 1.15;
+    }
+
+    .heroTitleAccent {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+        margin-top: 0.4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
     }
 
     /* Hide accent line on very small screens - gets too cramped */
@@ -867,15 +919,17 @@
 
     .heroSubtitle {
         font-size: 1rem;
-        line-height: 1.4;
+        line-height: 1.65;
+        margin-top: 0;
+        margin-bottom: 2rem;
     }
 
     .heroBadges {
         flex-direction: column;
         align-items: center;
         gap: 0.6rem;
-        margin-bottom: 2rem;
-        max-width: 220px;
+        margin-bottom: 2.5rem;
+        max-width: 280px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -2228,5 +2282,676 @@
     .paradigmCTAButton {
         padding: 0.875rem 2rem !important;
         font-size: 1rem;
+    }
+}
+
+/* ============================================
+   AI SPECTRUM SECTION
+   ============================================ */
+
+.spectrumSection {
+    position: relative;
+    padding: 6rem 2rem;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f8f9fa 50%,
+        #ffffff 100%
+    );
+    overflow: hidden;
+}
+
+[data-theme="dark"] .spectrumSection {
+    background: linear-gradient(
+        180deg,
+        #1a1a1a 0%,
+        #111111 50%,
+        #1a1a1a 100%
+    );
+}
+
+.spectrumHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.spectrumLabel {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #001f3f;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 31, 63, 0.08) 0%,
+        rgba(0, 31, 63, 0.12) 100%
+    );
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .spectrumLabel {
+    color: #aaaaaa;
+    background: linear-gradient(
+        90deg,
+        rgba(170, 170, 170, 0.15) 0%,
+        rgba(170, 170, 170, 0.1) 100%
+    );
+}
+
+.spectrumTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #001f3f;
+    line-height: 1.2;
+}
+
+[data-theme="dark"] .spectrumTitle {
+    color: #ffffff;
+}
+
+.spectrumSubtitle {
+    font-size: 1.25rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .spectrumSubtitle {
+    color: #aaaaaa;
+}
+
+.spectrumCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spectrumCard {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 31, 63, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+}
+
+[data-theme="dark"] .spectrumCard {
+    background: #222222;
+    border-color: rgba(170, 170, 170, 0.1);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.spectrumCard:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .spectrumCard:hover {
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.spectrumCardHighlight {
+    border: 2px solid #001f3f;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8f9fa 100%
+    );
+}
+
+[data-theme="dark"] .spectrumCardHighlight {
+    border-color: #aaaaaa;
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #1a1a1a 100%
+    );
+}
+
+.spectrumBadge {
+    position: absolute;
+    top: -12px;
+    right: 1.5rem;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.3);
+}
+
+[data-theme="dark"] .spectrumBadge {
+    background: linear-gradient(135deg, #aaaaaa 0%, #888888 100%);
+    color: #111111;
+}
+
+.spectrumCardHeader {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.spectrumIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.spectrumCardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #001f3f;
+    margin-bottom: 0.5rem;
+    min-height: 2rem;
+}
+
+[data-theme="dark"] .spectrumCardTitle {
+    color: #ffffff;
+}
+
+.spectrumCardSubtitle {
+    font-size: 0.875rem;
+    color: #666666;
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+
+[data-theme="dark"] .spectrumCardSubtitle {
+    color: #888888;
+}
+
+.spectrumCardDescription {
+    font-size: 1rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .spectrumCardDescription {
+    color: #cccccc;
+}
+
+.spectrumCardList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.spectrumCardList li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+[data-theme="dark"] .spectrumCardList li {
+    color: #aaaaaa;
+}
+
+.spectrumCardList li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #001f3f;
+    font-weight: bold;
+}
+
+[data-theme="dark"] .spectrumCardList li::before {
+    color: #aaaaaa;
+}
+
+.spectrumCardExample {
+    padding: 1rem;
+    background: rgba(0, 31, 63, 0.05);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #444444;
+    border-left: 3px solid #001f3f;
+    margin-top: auto;
+}
+
+[data-theme="dark"] .spectrumCardExample {
+    background: rgba(170, 170, 170, 0.05);
+    color: #aaaaaa;
+    border-left-color: #aaaaaa;
+}
+
+.spectrumCardExample strong {
+    color: #001f3f;
+}
+
+[data-theme="dark"] .spectrumCardExample strong {
+    color: #ffffff;
+}
+
+.spectrumFlow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: rgba(0, 31, 63, 0.03);
+    border-radius: 16px;
+}
+
+[data-theme="dark"] .spectrumFlow {
+    background: rgba(170, 170, 170, 0.03);
+}
+
+.spectrumFlowItem {
+    text-align: center;
+}
+
+.spectrumFlowLabel {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #001f3f;
+    margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .spectrumFlowLabel {
+    color: #ffffff;
+}
+
+.spectrumFlowDesc {
+    font-size: 0.875rem;
+    color: #666666;
+}
+
+[data-theme="dark"] .spectrumFlowDesc {
+    color: #888888;
+}
+
+.spectrumFlowArrow {
+    font-size: 2rem;
+    color: #001f3f;
+    font-weight: bold;
+}
+
+[data-theme="dark"] .spectrumFlowArrow {
+    color: #aaaaaa;
+}
+
+/* ============================================
+   MATURITY LEVELS SECTION
+   ============================================ */
+
+.maturitySection {
+    position: relative;
+    padding: 6rem 2rem;
+    background: linear-gradient(
+        180deg,
+        #f8f9fa 0%,
+        #ffffff 50%,
+        #f8f9fa 100%
+    );
+}
+
+[data-theme="dark"] .maturitySection {
+    background: linear-gradient(
+        180deg,
+        #111111 0%,
+        #1a1a1a 50%,
+        #111111 100%
+    );
+}
+
+.maturityHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.maturityLabel {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #001f3f;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 31, 63, 0.08) 0%,
+        rgba(0, 31, 63, 0.12) 100%
+    );
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .maturityLabel {
+    color: #aaaaaa;
+    background: linear-gradient(
+        90deg,
+        rgba(170, 170, 170, 0.15) 0%,
+        rgba(170, 170, 170, 0.1) 100%
+    );
+}
+
+.maturityTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #001f3f;
+    line-height: 1.2;
+}
+
+[data-theme="dark"] .maturityTitle {
+    color: #ffffff;
+}
+
+.maturitySubtitle {
+    font-size: 1.25rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .maturitySubtitle {
+    color: #aaaaaa;
+}
+
+.maturityLevels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maturityLevel {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    padding-top: 3rem;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 31, 63, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+}
+
+[data-theme="dark"] .maturityLevel {
+    background: #222222;
+    border-color: rgba(170, 170, 170, 0.1);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.maturityLevel:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .maturityLevel:hover {
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.maturityLevelHighlight {
+    border: 2px solid #001f3f;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8f9fa 100%
+    );
+}
+
+[data-theme="dark"] .maturityLevelHighlight {
+    border-color: #aaaaaa;
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #1a1a1a 100%
+    );
+}
+
+.maturityBadge {
+    position: absolute;
+    top: -12px;
+    right: 1.5rem;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.3);
+}
+
+[data-theme="dark"] .maturityBadge {
+    background: linear-gradient(135deg, #aaaaaa 0%, #888888 100%);
+    color: #111111;
+}
+
+.maturityLevelNumber {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.maturityLevelNumber::before {
+    content: "Level ";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #001f3f;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .maturityLevelNumber {
+    background: linear-gradient(135deg, #aaaaaa 0%, #888888 100%);
+    color: #111111;
+}
+
+[data-theme="dark"] .maturityLevelNumber::before {
+    color: #aaaaaa;
+}
+
+.maturityLevelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.maturityLevelTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #001f3f;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+[data-theme="dark"] .maturityLevelTitle {
+    color: #ffffff;
+}
+
+.maturityLevelSubtitle {
+    font-size: 0.875rem;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+[data-theme="dark"] .maturityLevelSubtitle {
+    color: #888888;
+}
+
+.maturityLevelDescription {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: auto;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+[data-theme="dark"] .maturityLevelDescription {
+    color: #cccccc;
+}
+
+.maturityLevelApproach {
+    padding: 0.75rem 1rem;
+    background: rgba(0, 31, 63, 0.05);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #444444;
+    margin-bottom: 0.75rem;
+    margin-top: auto;
+}
+
+[data-theme="dark"] .maturityLevelApproach {
+    background: rgba(170, 170, 170, 0.05);
+    color: #aaaaaa;
+}
+
+.maturityLevelApproach strong {
+    color: #001f3f;
+}
+
+[data-theme="dark"] .maturityLevelApproach strong {
+    color: #ffffff;
+}
+
+.maturityLevelImpact {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 31, 63, 0.08);
+    color: #001f3f;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 100px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    border: 1.5px solid rgba(0, 31, 63, 0.2);
+}
+
+[data-theme="dark"] .maturityLevelImpact {
+    background: rgba(170, 170, 170, 0.12);
+    color: #dddddd;
+    border-color: rgba(170, 170, 170, 0.25);
+}
+
+.maturityCTA {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    border-radius: 16px;
+    color: white;
+}
+
+[data-theme="dark"] .maturityCTA {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 1px solid rgba(170, 170, 170, 0.2);
+}
+
+.maturityCTAText {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .maturityCTAText {
+    color: #ffffff;
+}
+
+.maturityCTAText strong {
+    font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .spectrumCards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .maturityLevels {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 996px) {
+    .spectrumCards {
+        grid-template-columns: 1fr;
+    }
+
+    .spectrumCard {
+        min-height: auto;
+    }
+
+    .maturityLevels {
+        grid-template-columns: 1fr;
+    }
+
+    .maturityLevel {
+        min-height: auto;
+    }
+
+    .spectrumTitle,
+    .maturityTitle {
+        font-size: 2.25rem;
+    }
+
+    .spectrumFlow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .spectrumFlowArrow {
+        transform: rotate(90deg);
     }
 }
