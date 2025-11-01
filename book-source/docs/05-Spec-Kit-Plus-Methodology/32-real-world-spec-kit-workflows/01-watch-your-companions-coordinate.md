@@ -1,8 +1,22 @@
 ---
 title: "Watch Your Companions Coordinate (Without Talking)"
-chapter: 27
+chapter: 32
 lesson: 1
 duration: "2 hours"
+skills:
+  - name: "Team Coordination"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "AI Agent Collaboration"
+    proficiency: "A2"
+    category: "Conceptual"
+  - name: "Specification as Communication"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Understand how specifications enable coordination without conversation (B1)"
+  - "Observe how multiple AI agents execute the same specification consistently (A2)"
+  - "Recognize specifications as the lingua franca for distributed team execution (B1)"
 ---
 
 # Watch Your Companions Coordinate (Without Talking)

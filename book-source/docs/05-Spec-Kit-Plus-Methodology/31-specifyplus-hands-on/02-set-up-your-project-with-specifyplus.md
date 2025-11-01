@@ -1,8 +1,22 @@
 ---
 title: "Set Up Your Project With SpecifyPlus"
-chapter: 26
+chapter: 31
 lesson: 2
 duration: "1.5 hours"
+skills:
+  - name: "Tool Installation"
+    proficiency: "A2"
+    category: "Technical"
+  - name: "Project Initialization"
+    proficiency: "A2"
+    category: "Technical"
+  - name: "Environment Configuration"
+    proficiency: "A2"
+    category: "Technical"
+learning_objectives:
+  - "Install Spec-Kit Plus tooling and dependencies (A2)"
+  - "Initialize a new project with specification structure (A2)"
+  - "Understand directory organization for SDD workflows (A2)"
 ---
 
 # Set Up Your Project With SpecifyPlus

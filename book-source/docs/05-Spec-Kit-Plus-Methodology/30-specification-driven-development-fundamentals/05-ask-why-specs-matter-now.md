@@ -3,6 +3,20 @@ title: "Ask: Why Do Specs Matter NOW? The AI Moment"
 chapter: 30
 lesson: 5
 duration: "2.5-3 hours"
+skills:
+  - name: "Historical Context of SDD"
+    proficiency: "A2"
+    category: "Conceptual"
+  - name: "AI and SDD Convergence"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Strategic Thinking"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Trace the history of formal methods and specifications from 1970s to 2024 (A2)"
+  - "Explain why SDD emerged as critical NOW due to AI capabilities (B1)"
+  - "Connect specification precision to AI literal-mindedness (B1)"
 ---
 
 # Ask: Why Do Specs Matter NOW? The AI Moment

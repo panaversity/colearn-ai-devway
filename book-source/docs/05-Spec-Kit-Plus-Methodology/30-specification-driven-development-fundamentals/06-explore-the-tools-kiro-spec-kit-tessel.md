@@ -3,6 +3,20 @@ title: "Explore the Tools: Which SDD Framework Fits YOUR Work?"
 chapter: 30
 lesson: 6
 duration: "3-3.5 hours"
+skills:
+  - name: "Tool Evaluation"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Framework Comparison"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Decision Making"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Compare three SDD frameworks: Kiro, Spec-Kit, and Tessel (B1)"
+  - "Evaluate strengths and limitations of each framework (B1)"
+  - "Select the right SDD framework for a given project context (B1)"
 ---
 
 # Explore the Tools: Which SDD Framework Fits YOUR Work?

@@ -3,6 +3,20 @@ title: "Where Is SDD Heading? Spec-as-Source and Beyond"
 chapter: 30
 lesson: 7
 duration: "3.5-4 hours"
+skills:
+  - name: "Critical Analysis"
+    proficiency: "B2"
+    category: "Soft"
+  - name: "Future Trends Assessment"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Architectural Thinking"
+    proficiency: "B1"
+    category: "Technical"
+learning_objectives:
+  - "Evaluate the promises and limitations of spec-as-source (B2)"
+  - "Identify contexts where spec-as-source succeeds and where it fails (B1)"
+  - "Assess hybrid approaches and strategic specialization (B1)"
 ---
 
 # Where Is SDD Heading? Spec-as-Source and Beyond

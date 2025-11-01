@@ -3,6 +3,20 @@ title: "Write Your Professional Commitment to Specifications"
 chapter: 32
 lesson: 7
 duration: "1.5 hours"
+skills:
+  - name: "Professional Development Planning"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Specification Advocacy"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Accountability Design"
+    proficiency: "A2"
+    category: "Soft"
+learning_objectives:
+  - "Write a measurable professional commitment to SDD practices (B1)"
+  - "Design accountability mechanisms for specification adoption (B1)"
+  - "Plan organizational change for spec-driven development (B1)"
 ---
 
 # Write Your Professional Commitment to Specifications

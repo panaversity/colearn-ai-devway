@@ -1,8 +1,22 @@
 ---
 title: "Run /sp.plan and See the Implementation Plan"
-chapter: 26
+chapter: 31
 lesson: 5
 duration: "1.5 hours"
+skills:
+  - name: "Planning Automation"
+    proficiency: "A2"
+    category: "Technical"
+  - name: "Implementation Planning"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Plan Evaluation"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Use /sp.plan CLI command to generate implementation plans from specifications (A2)"
+  - "Understand plan structure and breakdown of work units (B1)"
+  - "Evaluate plan feasibility and dependencies (B1)"
 ---
 
 # Run /sp.plan and See the Implementation Plan

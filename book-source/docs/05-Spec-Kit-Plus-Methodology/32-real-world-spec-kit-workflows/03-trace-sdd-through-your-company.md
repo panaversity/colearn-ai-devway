@@ -1,8 +1,22 @@
 ---
 title: "Trace SDD Through Your Company"
-chapter: 27
+chapter: 32
 lesson: 3
 duration: "2 hours"
+skills:
+  - name: "Organizational Analysis"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Value Chain Mapping"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "SDD Adoption Assessment"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Map how specifications flow through organizational roles and processes (B1)"
+  - "Identify opportunities for SDD adoption in your company (B1)"
+  - "Assess business value of specification-driven practices (B1)"
 ---
 
 # Trace SDD Through Your Company

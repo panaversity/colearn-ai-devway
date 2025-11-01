@@ -3,6 +3,20 @@ title: "Ask Your Companion: What Is Specification-Driven Development?"
 chapter: 30
 lesson: 2
 duration: "2-2.5 hours"
+skills:
+  - name: "Specification Comprehension"
+    proficiency: "A2"
+    category: "Conceptual"
+  - name: "SDD Methodology Understanding"
+    proficiency: "A2"
+    category: "Conceptual"
+  - name: "AI Collaboration"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Define Specification-Driven Development and explain its three key principles (A2)"
+  - "Distinguish between spec-first, spec-anchored, and spec-as-source approaches (B1)"
+  - "Understand the SDD Loop: Spec → Plan → Execute → Validate → Iterate (A2)"
 ---
 
 # Ask Your Companion: What Is Specification-Driven Development?

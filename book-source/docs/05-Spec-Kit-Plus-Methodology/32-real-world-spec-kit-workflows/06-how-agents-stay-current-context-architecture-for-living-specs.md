@@ -3,6 +3,20 @@ title: "How Agents Stay Current: Context Architecture for Living Specs"
 chapter: 32
 lesson: 6
 duration: "3-3.5 hours"
+skills:
+  - name: "Context Architecture"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Knowledge Management"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "API Integration Strategies"
+    proficiency: "B1"
+    category: "Technical"
+learning_objectives:
+  - "Understand how knowledge cutoffs impact AI agent specifications (B1)"
+  - "Compare three context strategies: Context7, Tessel Registry, and hybrid approaches (B1)"
+  - "Design context architecture decisions appropriate for specific domains (B1)"
 ---
 
 # How Agents Stay Current — Context Architecture for Living Specs

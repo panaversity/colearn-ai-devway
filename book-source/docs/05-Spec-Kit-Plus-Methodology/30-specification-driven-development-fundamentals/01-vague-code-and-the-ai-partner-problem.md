@@ -3,6 +3,20 @@ title: "Vague Code and the AI Partner Problem"
 chapter: 30
 lesson: 1
 duration: "1-1.5 hours"
+skills:
+  - name: "Problem Identification"
+    proficiency: "A2"
+    category: "Conceptual"
+  - name: "AI Communication Clarity"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Specification Understanding"
+    proficiency: "A1"
+    category: "Conceptual"
+learning_objectives:
+  - "Identify vagueness in requirements and its impact on AI-generated code (A2)"
+  - "Recognize the gap between conversational intent and machine-executable instructions (B1)"
+  - "Understand the core problem that Specification-Driven Development solves (A2)"
 ---
 
 # Vague Code and the AI Partner Problem

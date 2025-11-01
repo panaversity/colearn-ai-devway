@@ -3,6 +3,20 @@ title: "Your Specification-Driven Development Commitment"
 chapter: 30
 lesson: 8
 duration: "2.5-3 hours"
+skills:
+  - name: "Self-Reflection"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Commitment Planning"
+    proficiency: "A2"
+    category: "Soft"
+  - name: "Professional Practice"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Reflect on personal learning throughout Chapter 30 (B1)"
+  - "Write a measurable SDD commitment for the next 3 months (B1)"
+  - "Plan accountability mechanisms to sustain SDD practice (A2)"
 ---
 
 # Your Specification-Driven Development Commitment
