@@ -14,6 +14,7 @@ Mini-Project 1 was about building code from a spec. This project is about **writ
 This is a critical skill: **specification writing is separate from coding.** Professional architects write specs without knowing who will code them or what language they'll use. The spec is a contract: "This is what must be built."
 
 You're going to write a specification for a **production grading system inspired by real companies** (Gradewiz, Edexia, Frizzle, Mimir). You'll apply all the skills from Chapter 26:
+
 - Coaching clarity
 - Writing SMART criteria
 - Addressing error handling and edge cases
@@ -51,11 +52,13 @@ Your companion will explain something like:
 > 5. **Adjustment**: Changing one grade or rubric requires manual updates everywhere.
 >
 > Existing tools:
+>
 > - Spreadsheets: Time-consuming, error-prone
 > - LMS built-in tools: Too simple, limited rubric support
 > - Manual paper: Slow, no digital record
 >
 > What would help:
+>
 > - Pre-built rubrics they can customize
 > - Automatic essay analysis (not AI, but text metrics)
 > - Bulk grading workflows
@@ -94,6 +97,7 @@ Help me think through:
 ```
 
 Your companion will help you narrow scope. For this exercise, let's assume:
+
 - **User**: College professors grading essays and programming assignments
 - **Must-have**: Rubric-based grading with built-in rubric templates
 - **Phase 2**: AI-powered feedback generation
@@ -137,18 +141,23 @@ and providing meaningful feedback to students.
 ## 1. Problem Statement
 
 ### Current State
+
 Educators spend 2-4 hours per assignment batch:
+
 - Manual rubric application (inconsistent)
 - Writing similar feedback repeatedly (40% of time)
 - Grade tracking across assignments and semesters (spreadsheets, error-prone)
 
 ### Desired State
+
 Educators can grade the same batch in 30-45 minutes:
+
 - Structured rubric application (consistent)
 - Template-based feedback (customizable)
 - Integrated grade tracking (analytics ready)
 
 ### Market Validation
+
 - 3.7 million K-12 teachers in US
 - 1.2 million college instructors
 - Current solutions (Canvas, Blackboard, Google Classroom) lack dedicated grading
@@ -159,6 +168,7 @@ Educators can grade the same batch in 30-45 minutes:
 ## 2. Product Overview
 
 RapidGrade is a web-based grading platform offering:
+
 - **Rubric Library**: 50+ pre-built rubrics (customizable)
 - **Fast Grading Workflow**: Click-to-apply rubric criteria
 - **Template Feedback**: AI-free feedback templates (reduces writing by 60%)
@@ -172,16 +182,19 @@ RapidGrade is a web-based grading platform offering:
 ## 3. Users & Use Cases
 
 ### Primary User: Professor Sarah (College)
+
 - **Role**: Literature professor, 150 students across 3 sections
 - **Pain**: Grades 50 essays/week (3 hours); wants to grade faster while being fair
 - **Success**: Grades 50 essays in 1 hour; feedback is specific and helps students
 
 ### Secondary User: Mr. Chen (High School)
+
 - **Role**: Math teacher, 120 students across 4 sections
 - **Pain**: Grades code assignments (100+ lines each); wants consistency
 - **Success**: Can grade 30 programs in 45 minutes with consistent rubric application
 
 ### Tertiary User: Dept Chair (Admin)
+
 - **Role**: Department administrator
 - **Pain**: Wants visibility into grading consistency across instructors
 - **Success**: Can generate reports showing how different instructors apply rubrics
@@ -195,6 +208,7 @@ RapidGrade is a web-based grading platform offering:
 **Capability**: Create, customize, and apply rubric templates
 
 **Features**:
+
 - Browse 50+ pre-built rubrics (essays, code, presentations, math)
 - Create new rubric with 3-5 criteria
 - Define score levels per criterion (1-4 stars or 0-100 points)
@@ -204,12 +218,14 @@ RapidGrade is a web-based grading platform offering:
 - Share rubrics with co-instructors
 
 **Technical Requirements**:
+
 - Rubric data model with criteria, levels, descriptors
 - Rubric versioning (changes don't affect past grades)
 - Search/filter across rubric library
 - Rubric templates loadable from database
 
 **Acceptance Criteria**:
+
 - [ ] Can load a pre-built rubric in < 5 seconds
 - [ ] Can customize a rubric in < 2 minutes
 - [ ] Can save custom rubric and reuse in future assignments
@@ -221,6 +237,7 @@ RapidGrade is a web-based grading platform offering:
 **Capability**: Grade submissions quickly using rubric
 
 **Features**:
+
 - Upload assignment submissions (batch upload 30+ files)
 - Display student submission + rubric side-by-side
 - Click rubric criteria to apply
@@ -230,12 +247,14 @@ RapidGrade is a web-based grading platform offering:
 - Save grade and move to next submission
 
 **Technical Requirements**:
+
 - File handling (essays: .pdf, .docx, .txt; code: .py, .js, .java, etc.)
 - Side-by-side UI (submission left, rubric right)
 - Real-time score calculation
 - Draft/saved state tracking
 
 **Acceptance Criteria**:
+
 - [ ] Can grade a submission in < 60 seconds (including rubric review)
 - [ ] Grading 30 submissions takes < 30 minutes
 - [ ] Score calculates automatically from criteria
@@ -247,6 +266,7 @@ RapidGrade is a web-based grading platform offering:
 **Capability**: Store grades, generate feedback, track history
 
 **Features**:
+
 - Automatic feedback generation from selected criteria
 - Template-based feedback (not AI)
 - Manual feedback editing and customization
@@ -255,12 +275,14 @@ RapidGrade is a web-based grading platform offering:
 - Grade export (CSV, PDF)
 
 **Technical Requirements**:
+
 - Feedback template library (associated with rubrics)
 - Grade versioning (audit trail)
 - Bulk operations support
 - Export formatting
 
 **Acceptance Criteria**:
+
 - [ ] Feedback auto-generated from rubric selection (no manual typing for standard cases)
 - [ ] Teacher can customize feedback in < 30 seconds
 - [ ] Grade changes tracked with before/after values and timestamp
@@ -272,6 +294,7 @@ RapidGrade is a web-based grading platform offering:
 **Capability**: Visualize grading patterns and student progress
 
 **Features**:
+
 - Grade distribution chart (histogram)
 - Student progress over time
 - Criteria-level analytics (which criteria are struggling points?)
@@ -279,11 +302,13 @@ RapidGrade is a web-based grading platform offering:
 - Custom report builder
 
 **Technical Requirements**:
+
 - Aggregation queries on grade data
 - Visualization library (Chart.js or similar)
 - Report export (PDF)
 
 **Acceptance Criteria**:
+
 - [ ] Dashboard loads in < 2 seconds
 - [ ] Can view grade distribution for any assignment
 - [ ] Can see which criteria most students struggle with
@@ -294,6 +319,7 @@ RapidGrade is a web-based grading platform offering:
 ## 5. Technical Architecture
 
 ### Tech Stack
+
 - **Frontend**: React (or Vue.js), TypeScript
 - **Backend**: Python (FastAPI) or Node.js (Express)
 - **Database**: PostgreSQL (relational for rubrics, grades)
@@ -302,12 +328,14 @@ RapidGrade is a web-based grading platform offering:
 
 ### Key Data Models
 ```
+
 User: id, email, institution, role (teacher/admin)
 Rubric: id, name, owner_id, criteria[], version, created_date
-Criterion: id, name, levels[{score, descriptor}]
+Criterion: id, name, levels[score, descriptor]
 Assignment: id, course_id, name, rubric_id, due_date
 Submission: id, assignment_id, student_id, file_url, uploaded_date
 Grade: id, submission_id, rubric_id, score, feedback, created_date, updated_date
+
 ```
 
 ### Performance Budgets
@@ -486,6 +514,7 @@ Your companion will provide professional feedback like:
 > - Internationalization: Is this US-only, or global?
 >
 > For implementation planning, I'd add:
+>
 > - Detailed API specification (this is product spec, not technical spec)
 > - UI mockups or wireframes
 > - Database schema
@@ -543,6 +572,7 @@ This document is the contract between product and engineering: "This is what mus
 ## Questions for Implementers
 
 Before you start, answer:
+
 - How long to build Phase 1? (We estimate 16 weeks; you might estimate 12-20)
 - What risks do you see? (Beyond what we listed)
 - What dependencies do you need? (Databases? APIs? Third-party services?)
@@ -551,6 +581,7 @@ Before you start, answer:
 ## Success
 
 This specification is implemented successfully when:
+
 1. All acceptance criteria in Section 11 are met
 2. All success metrics in Section 7 are validated
 3. User testing with 5+ real teachers shows positive results
@@ -577,6 +608,7 @@ This was different from Mini-Project 1. You didn't code anything. **Write a refl
 ### What Was Harder: Writing Spec or Building Code?
 
 For me: Writing the spec was harder because...
+
 - I had to think about scalability (not just MVP functionality)
 - I had to anticipate user needs without directly coding
 - I had to make architectural decisions without knowing implementation details
@@ -587,6 +619,7 @@ For me: Writing the spec was harder because...
 The calculator spec was small (10 sections). This spec is production-grade (12+ sections).
 
 Differences:
+
 - Calculator spec: Focused on correctness (does math work?)
 - RapidGrade spec: Focused on market fit (does this solve a real problem?)
 
@@ -616,6 +649,7 @@ to people (or AI) who will build your vision.
 You're going to complete this mini-project with professional-level rigor.
 
 ### Prompt 1: Understand the Real Problem
+
 ```
 I'm going to build a production-grade specification for a grading system.
 But before I write, I need to understand the real problem.
@@ -632,6 +666,7 @@ Give me the problem, not solutions.
 **Expected outcome**: You understand the real market problem. This grounds your spec in reality.
 
 ### Prompt 2: Coach Scope With Me
+
 ```
 Based on the real problem you described, I want to scope a solution.
 
@@ -647,6 +682,7 @@ Help me define realistic MVP scope.
 **Expected outcome**: You have a clear MVP and Phase 2 vision.
 
 ### Prompt 3: Review My Production Spec
+
 ```
 I've written a comprehensive specification for my grading system.
 
@@ -663,6 +699,7 @@ As a technical architect, review this:
 **Expected outcome**: You get professional feedback on spec quality.
 
 ### Prompt 4: Identify Next Steps
+
 ```
 Based on my specification, what should the implementation team do next?
 
@@ -688,6 +725,7 @@ Your finished mini-project should include:
 3. **REFLECTION.md** — Your learning from the project
 
 This specification is **professional-quality**. It could be used to:
+
 - Pitch investors
 - Brief a development team
 - Plan an implementation timeline
@@ -700,12 +738,15 @@ This specification is **professional-quality**. It could be used to:
 In Chapter 26, you've completed a full **specification-driven development education**:
 
 **Lessons 1-7**: Learn the workflow
+
 - Coach clarity → Specify → Refine → Plan → Decompose
 
 **Mini-Project 1**: Build from a spec
+
 - Spec → Code → Test → Validate
 
 **Mini-Project 2**: Write a production spec
+
 - Research → Define scope → Write spec → Handoff
 
 You now understand something most developers never learn: **The quality of your thinking upstream (specification) determines the quality of your code downstream.**
