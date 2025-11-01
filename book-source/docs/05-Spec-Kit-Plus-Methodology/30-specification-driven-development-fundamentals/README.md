@@ -1,24 +1,25 @@
-# Chapter 30: Understanding Specification-Driven Development Fundamentals
-
-## Overview
-
-Chapter 30 teaches specification-driven development through **discovery and dialogue**, not lectures. Students don't learn about SDD in isolation—they **discover specifications through problems and ask their companion questions**, learning by thinking together.
-
-This chapter implements **AI-native pedagogy**: Student + Companion DISCOVER SDD together, learning by experiencing the problem, asking questions, and understanding through dialogue.
-
+---
+sidebar_position: 1
+title: "Chapter 30: Understanding Specification-Driven Development Fundamentals"
 ---
 
-## Learning Outcomes
+# Chapter 30: Understanding Specification-Driven Development Fundamentals
 
-By completing Chapter 30, students will be able to:
+Welcome to the philosophy that powers modern software development at scale. This chapter doesn't teach you about specifications—it helps you discover why they matter through direct experience with your AI companion.
 
-1. **Diagnose** when vague specifications are causing problems and cost
-2. **Explain** specification-driven development philosophy in their own words
-3. **Write** a specification with clear intent, requirements, and test scenarios
-4. **Design** a Constitution for their team or domain
-5. **Connect** SDD to its historical context and understand why it emerged NOW
-6. **Evaluate** SDD tools (Kiro, Spec-Kit Plus, Tessel) and choose appropriately for their context
-7. **Assess** spec-as-source realistically—its promise, challenges, and appropriate domains
-8. **Commit** specifically and measurably to specification-driven practice
+Through seven interconnected lessons, you'll diagnose the hidden costs of vague requirements, understand why Specification-Driven Development emerged in 2024-2025 (not earlier), explore the tools ecosystem, and confront the "spec-as-source" vision realistically. Most importantly, you'll work through problems with your AI companion in dialogue—learning by experiencing failure, asking questions, and discovering solutions together.
 
-These are not theoretical. You will apply and demonstrate concepts through reflection exercises and the final commitment.
+Whether you're skeptical that specifications matter, wondering why everyone suddenly cares about specs, or curious how Amazon and Stripe coordinate 1000+ engineers—this chapter answers those questions through discovery, not lectures.
+
+## What You'll Learn
+
+By the end of this chapter, you'll understand:
+
+- **The cost of vagueness**: Through diagnosing a failing project, you'll discover how unclear specifications create cascading costs—wasted implementation time, debugging cycles, rework, and technical debt that compounds over time
+- **SDD philosophy**: The core principles that make specification-driven development work—separation of "what" from "how," explicit acceptance criteria, testability from the start, and specifications as AI instructions (not documentation)
+- **Your first specification**: Through dialogue with your AI companion, you'll write a complete specification with intent, requirements, acceptance criteria, and test scenarios—experiencing the clarity that emerges from structured thinking
+- **Constitutions as domain specs**: How organizations like Amazon use Constitutions to embed domain expertise, compliance requirements, and architectural principles that automatically guide all specifications in that domain
+- **The historical context**: Why SDD emerged NOW (2024-2025) after decades of failed attempts—the convergence of AI agents that demand explicit specs, tools that make spec-writing fast, and economic pressures that reward clarity
+- **The tools ecosystem**: Deep evaluation of Kiro (enterprise coordination), Spec-Kit Plus (pragmatic development), and Tessel (spec-as-source experimentation)—understanding when to use each and why multiple approaches coexist
+- **Spec-as-source reality check**: The ambitious vision of specifications replacing code entirely—what's working (contract enforcement, test generation), what's struggling (UI implementation, complex algorithms), and appropriate domains for experimentation
+- **Your personal commitment**: How you'll integrate specification-first thinking into your workflow—specific, measurable practices that build the muscle memory for clarity

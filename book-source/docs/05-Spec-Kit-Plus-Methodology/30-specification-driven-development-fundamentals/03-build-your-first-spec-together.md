@@ -21,8 +21,6 @@ learning_objectives:
 
 # Build Your First Spec Together With Your Companion
 
-## From Understanding to Doing
-
 You now understand what SDD is. But understanding is not the same as doing.
 
 **This lesson**: You and your companion will build an actual specification together. You'll discover what makes specs work by constructing one.
@@ -355,21 +353,3 @@ They're the difference between:
 - ✅ "Here's exactly what password reset should do, including all edge cases" (now you understand)
 
 ---
-
-## Next Steps
-
-You now know:
-- ✅ What SDD is (Lesson 2)
-- ✅ How to build a spec (Lesson 3)
-- Still to learn:
-  - How specs scale (Lesson 4: Memory banks, constitutions)
-  - Why SDD emerged now (Lesson 5: History)
-  - Which tools to use (Lesson 6: Kiro, Spec-Kit, Tessel)
-  - Where it's going (Lesson 7: Spec-as-source)
-  - Your commitment (Lesson 8)
-
-Then **Chapters 31-32** teach you professional Spec-Kit Plus workflows with teams and AI agents.
-
----
-
-**Next Lesson**: How do you scale specs across a whole system? Discover Memory Banks and Constitutions.

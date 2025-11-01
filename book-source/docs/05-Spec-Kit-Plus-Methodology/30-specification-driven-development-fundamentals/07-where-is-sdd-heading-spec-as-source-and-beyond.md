@@ -589,20 +589,4 @@ The smart teams won't choose one or the other. They'll choose the right tool for
 
 ---
 
-## Next Steps
-
-You now understand:
-- ✅ What SDD is (Lesson 2)
-- ✅ How to build a spec (Lesson 3)
-- ✅ How to scale specs (Lesson 4)
-- ✅ Why specs matter NOW (Lesson 5)
-- ✅ Which tools to use (Lesson 6)
-- ✅ Where SDD is heading (Lesson 7)
-- Still to learn:
-  - Your personal SDD commitment (Lesson 8: What will YOU do?)
-
-Then **Chapters 31-32** teach you to apply this in real projects.
-
----
-
 **Next Lesson**: Write your personal SDD Commitment. After understanding the philosophy and tools, what's YOUR commitment to specification-driven development?

@@ -21,8 +21,6 @@ learning_objectives:
 
 # Ask Your Companion: What Is Specification-Driven Development?
 
-## You've Experienced the Problem. Now Understand the Solution.
-
 In Lesson 1, you discovered that vague specs fail. Your companion built something that technically worked but didn't match your intent.
 
 **Here's the key insight you discovered**: Clarity prevents miscommunication.
@@ -160,9 +158,9 @@ This is crucial because:
 
 ---
 
-## Going Deeper: Ask About CEO's Key Insights
+## Going Deeper
 
-Your companion has basic understanding now. But there are insights from the book's CEO that deepen this. Ask:
+Your companion has basic understanding now. But there are insights that deepen this. Ask:
 
 ### Insight 1: Why AI Agents Need Specs
 
@@ -241,20 +239,3 @@ Your companion helped you understand this through conversation, not lecture.
 **That's how professionals learn too.**
 
 ---
-
-## Next Steps
-
-You now understand WHAT SDD is and WHY it matters.
-
-- **Lesson 3**: You'll discover HOW to structure a good spec
-- **Lesson 4**: You'll understand how specs scale (memory banks, constitutions)
-- **Lesson 5**: You'll explore the history (why it emerged now)
-- **Lesson 6**: You'll evaluate tools (Kiro, Spec-Kit, Tessel)
-- **Lesson 7**: You'll explore the future (spec-as-source, MDD lessons)
-- **Lesson 8**: You'll write your personal SDD commitment
-
-Then **Chapters 31-32** teach you to apply this in real projects.
-
----
-
-**Next Lesson**: How do you actually write a good spec? Discover through building your own.

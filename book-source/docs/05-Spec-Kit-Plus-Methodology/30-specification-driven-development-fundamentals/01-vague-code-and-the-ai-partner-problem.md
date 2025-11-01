@@ -21,8 +21,6 @@ learning_objectives:
 
 # Vague Code and the AI Partner Problem
 
-## What This Lesson Will Show You
-
 You're about to discover why your AI coding companion sometimes builds something that looks right but doesn't quite work.
 
 Here's the pattern you've probably experienced:
