@@ -1,8 +1,22 @@
 ---
 title: "Make Your Acceptance Criteria So Clear That AI Understands"
-chapter: 26
+chapter: 31
 lesson: 3
 duration: "2 hours"
+skills:
+  - name: "Acceptance Criteria Writing"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Testability Design"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Machine-Executable Specifications"
+    proficiency: "B1"
+    category: "Technical"
+learning_objectives:
+  - "Write acceptance criteria that are unambiguous and machine-executable (B1)"
+  - "Structure criteria for AI comprehension without human context (B1)"
+  - "Design testable conditions that verify implementation correctness (B1)"
 ---
 
 # Make Your Acceptance Criteria So Clear That AI Understands

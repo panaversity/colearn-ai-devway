@@ -1,8 +1,22 @@
 ---
 title: "SDD In the Wild: Real Companies"
-chapter: 27
+chapter: 32
 lesson: 5
 duration: "2 hours"
+skills:
+  - name: "Case Study Analysis"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Real-World SDD Patterns"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Implementation Insights"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Analyze real-world examples of SDD adoption in industry (B1)"
+  - "Extract patterns and lessons from successful SDD implementations (B1)"
+  - "Understand both benefits and challenges in production SDD environments (B1)"
 ---
 
 # SDD In the Wild: Real Companies

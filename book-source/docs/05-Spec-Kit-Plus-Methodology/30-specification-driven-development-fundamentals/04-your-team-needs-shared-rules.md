@@ -3,6 +3,20 @@ title: "Your Team Needs Shared Rules: Memory Banks and Constitutions"
 chapter: 30
 lesson: 4
 duration: "2-2.5 hours"
+skills:
+  - name: "Team Governance"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Constitution Writing"
+    proficiency: "A2"
+    category: "Technical"
+  - name: "Scaling Specifications"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Understand the problem of specification consistency across teams (B1)"
+  - "Define a Constitution (Memory Bank) that applies globally to all specifications (B1)"
+  - "Apply constitutional rules to ensure uniform implementation across team members (B1)"
 ---
 
 # Your Team Needs Shared Rules: Memory Banks and Constitutions

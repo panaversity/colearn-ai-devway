@@ -4,6 +4,20 @@ chapter: 32
 lesson: 9
 lesson_type: "capstone_part_2"
 duration: "3 hours"
+skills:
+  - name: "Parallel Implementation"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Multi-Agent Coordination"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Integration Planning"
+    proficiency: "B1"
+    category: "Technical"
+learning_objectives:
+  - "Execute specification-driven implementation in parallel with multiple AI agents (B1)"
+  - "Coordinate independent work without synchronous communication (B1)"
+  - "Integrate parallel work back into cohesive system (B1)"
 ---
 
 # Capstone Part 2: Implement in Parallel With Two Companions

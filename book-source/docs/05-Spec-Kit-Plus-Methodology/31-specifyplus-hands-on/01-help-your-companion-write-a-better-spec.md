@@ -1,8 +1,22 @@
 ---
 title: "Help Your Companion Write a Better Spec"
-chapter: 26
+chapter: 31
 lesson: 1
 duration: "2 hours"
+skills:
+  - name: "Specification Review"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Feedback Delivery"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Iterative Improvement"
+    proficiency: "A2"
+    category: "Conceptual"
+learning_objectives:
+  - "Identify deficiencies and ambiguities in AI-generated specifications (B1)"
+  - "Provide constructive feedback to improve specification clarity (B1)"
+  - "Guide an AI companion through iterative spec refinement (B1)"
 ---
 
 # Help Your Companion Write a Better Spec

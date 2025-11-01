@@ -1,8 +1,22 @@
 ---
 title: "Decompose Your Spec Into Atomic Tasks"
-chapter: 26
+chapter: 31
 lesson: 6
 duration: "1.5 hours"
+skills:
+  - name: "Task Decomposition"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Atomic Unit Definition"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Dependency Mapping"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Break a specification into atomic, independently-testable work units (B1)"
+  - "Identify task dependencies and critical path (B1)"
+  - "Design tasks that can be executed in parallel or sequence (B1)"
 ---
 
 # Decompose Your Spec Into Atomic Tasks

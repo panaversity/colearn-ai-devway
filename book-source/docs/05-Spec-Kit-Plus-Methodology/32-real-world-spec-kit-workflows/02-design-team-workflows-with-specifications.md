@@ -1,8 +1,22 @@
 ---
 title: "Design Team Workflows With Specifications"
-chapter: 27
+chapter: 32
 lesson: 2
 duration: "2 hours"
+skills:
+  - name: "Team Process Design"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Workflow Specification"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Human-AI Coordination"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Design team workflows where specifications are the coordination mechanism (B1)"
+  - "Map decision points, approvals, and handoffs in specification-driven processes (B1)"
+  - "Apply SDD to operational team structures and roles (B1)"
 ---
 
 # Design Team Workflows With Specifications

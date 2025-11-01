@@ -4,6 +4,20 @@ chapter: 32
 lesson: 8
 lesson_type: "capstone_part_1"
 duration: "2.5 hours"
+skills:
+  - name: "Feature Decomposition"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Dependency Analysis"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Parallel Execution Planning"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Decompose a complex specification into independent, parallelizable features (B1)"
+  - "Identify critical dependencies and blocking relationships (B1)"
+  - "Design work packages for team parallel execution (B1)"
 ---
 
 # Capstone Part 1: Decompose Your Spec Into Independent Features

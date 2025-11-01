@@ -1,8 +1,22 @@
 ---
 title: "Build Your Grading System Spec End-to-End"
-chapter: 26
+chapter: 31
 lesson: 7
 duration: "3 hours"
+skills:
+  - name: "End-to-End Specification"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Complex System Modeling"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "SDD Loop Application"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Build a complete grading system specification from problem to implementation (B1)"
+  - "Apply Spec-Kit Plus tools to a real-world problem (B1)"
+  - "Execute the full SDD loop: Spec → Plan → Decompose → Validate (B1)"
 ---
 
 # Build Your Grading System Spec End-to-End

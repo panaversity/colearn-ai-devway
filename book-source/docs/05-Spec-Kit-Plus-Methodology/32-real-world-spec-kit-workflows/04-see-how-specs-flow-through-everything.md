@@ -1,8 +1,22 @@
 ---
 title: "See How Specs Flow Through Everything"
-chapter: 27
+chapter: 32
 lesson: 4
 duration: "2 hours"
+skills:
+  - name: "Systems Thinking"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Specification Traceability"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Cross-Functional Alignment"
+    proficiency: "B1"
+    category: "Soft"
+learning_objectives:
+  - "Understand how a single specification propagates through design, development, testing, and deployment (B1)"
+  - "Trace specification dependencies across systems and services (B1)"
+  - "Design for specification traceability and verification (B1)"
 ---
 
 # See How Specs Flow Through Everything

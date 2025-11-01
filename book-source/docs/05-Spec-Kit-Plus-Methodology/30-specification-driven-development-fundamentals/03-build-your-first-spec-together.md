@@ -3,6 +3,20 @@ title: "Build Your First Spec Together With Your Companion"
 chapter: 30
 lesson: 3
 duration: "2.5-3 hours"
+skills:
+  - name: "Specification Writing"
+    proficiency: "B1"
+    category: "Technical"
+  - name: "Requirements Clarity"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "Acceptance Criteria Definition"
+    proficiency: "A2"
+    category: "Technical"
+learning_objectives:
+  - "Write a complete specification with Intent, Inputs/Outputs, and Functional Requirements (B1)"
+  - "Define acceptance criteria that an AI agent can execute (B1)"
+  - "Collaborate with an AI companion to iteratively refine a specification (B1)"
 ---
 
 # Build Your First Spec Together With Your Companion

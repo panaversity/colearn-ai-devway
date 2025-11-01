@@ -4,6 +4,20 @@ chapter: 32
 lesson: 10
 lesson_type: "capstone_part_3"
 duration: "2 hours"
+skills:
+  - name: "Scaling Analysis"
+    proficiency: "B1"
+    category: "Conceptual"
+  - name: "Retrospective Thinking"
+    proficiency: "B1"
+    category: "Soft"
+  - name: "SDD Maturity Assessment"
+    proficiency: "B1"
+    category: "Conceptual"
+learning_objectives:
+  - "Reflect on how specifications enabled team coordination at scale (B1)"
+  - "Assess what worked, what didn't, and how to improve next time (B1)"
+  - "Apply lessons learned to future projects and organizational practices (B1)"
 ---
 
 # Capstone Part 3: Reflect on Building at Scale
