@@ -61,7 +61,7 @@ The book structure will be as follows, consisting of 13 parts and 55 chapters:
 32. Building Projects with Spec-Kit Plus
 33. The Tessl Vision: Spec-as-Source
 
-## Part 6: Agentic AI Fundamentals with OpenAI Agents SDK in Python (3 chapters)
+## Part 6: AI Native Software Development (3 chapters)
 
 ## Part 7: MCP Fundamentals with FastMCP (3 chapters)
 
