@@ -364,129 +364,35 @@ When your AI uses tools, it's accessing or sending data. This is powerful but re
 
 ---
 
-## Try With AI: Analyze Competitor Strategy
+## Try With AI
 
-Now let's put this into practice. You'll use your AI companion to research and analyze competitor pricing strategy—a real business task that combines file reading and web fetching.
+Use your AI companion tool (Gemini CLI, ChatGPT web, Claude Code, etc.)—the prompts work with any tool.
 
-### Setup: Choose Your Tool
-
-**Option 1: Gemini CLI (if you've been following along with this book)**
-
-In your terminal:
-```bash
-gemini
+### Prompt 1: Fetch Live Pricing Data
+```
+Fetch the Stripe pricing page (stripe.com/pricing) and summarize their main pricing tiers, costs, and what each tier includes.
 ```
 
-Then paste the prompts below into the Gemini conversation.
+**Expected outcome**: Clear list of pricing tiers, costs, key features, and citation of data source.
 
-**Option 2: ChatGPT Web (fastest, no setup needed)**
-
-1. Go to [chat.openai.com](https://chat.openai.com)
-2. Start a new chat
-3. Paste the prompts below
-
-**Option 3: Any AI Tool You Prefer**
-
-Gemini, Claude, ChatGPT, or similar all support these tools. Use whichever you've set up.
-
-### Prompt Set: Pricing Strategy Research
-
-**Prompt 1 (Fetch Live Data):**
+### Prompt 2: Compare Competitor Pricing
 ```
-Fetch the Stripe pricing page (stripe.com/pricing) and summarize
-their main pricing tiers, costs, and what each tier includes.
+Fetch the Shopify pricing page (shopify.com/pricing) and summarize their pricing tiers and what each includes. Then compare it to the Stripe pricing you just fetched. What are the main differences?
 ```
 
-**Expected Output:**
-- Clear list of pricing tiers (Free, Starter, Scale, etc.)
-- Cost per tier
-- Key features for each
-- Citation of where data came from
+**Expected outcome**: Shopify tier summary, side-by-side comparison with Stripe, and key differences identified.
 
----
-
-**Prompt 2 (Fetch a Competitor):**
+### Prompt 3: Search Current Industry Trends
 ```
-Fetch the Shopify pricing page (shopify.com/pricing) and summarize
-their pricing tiers and what each includes. Then compare it to the Stripe
-pricing you just fetched. What are the main differences?
+Search the web for "payment processing pricing trends 2024" and tell me: What are the main price changes happening in this industry? Are most providers raising or lowering prices?
 ```
 
-**Expected Output:**
-- Shopify tier summary
-- Side-by-side comparison with Stripe
-- Key differences (e.g., features, target audience, price points)
+**Expected outcome**: Summary of recent pricing announcements, trend analysis (up/down/stable), and cited sources.
 
----
-
-**Prompt 3 (Search for Current Trends):**
+### Prompt 4: Synthesize Strategic Recommendations
 ```
-Search the web for "payment processing pricing trends 2024" and
-tell me: What are the main price changes happening in this industry?
-Are most providers raising or lowering prices?
+Based on what we found about Stripe and Shopify pricing, and the 2024 trends: If you were advising a new payments startup on pricing strategy, what would you recommend? What market gap could they fill?
 ```
 
-**Expected Output:**
-- Summary of 2-3 recent pricing announcements
-- Trend analysis (up, down, or stable)
-- Cited sources (so you can verify)
+**Expected outcome**: Strategic recommendations, identified market opportunities, and competitive positioning advice.
 
----
-
-**Prompt 4 (Synthesize into Strategy):**
-```
-Based on what we found about Stripe and Shopify pricing, and the
-2024 trends: If you were advising a new payments startup on pricing
-strategy, what would you recommend? What market gap could they fill?
-```
-
-**Expected Output:**
-- Strategic recommendations
-- Identified market opportunities
-- Competitive positioning advice
-
----
-
-**Stretch Prompt 5 (Real File Analysis):**
-
-If you have a CSV file of your own pricing or customer data:
-```
-Read my sales-data.csv file and identify: What's our most profitable
-product tier? Which one has the most customers but lowest margin?
-```
-
-**Expected Output:**
-- Analysis of your data
-- Identified opportunities or concerns
-- Recommendations based on actual numbers
-
----
-
-### What Success Looks Like
-
-✅ **You successfully completed this if:**
-- Your AI fetched and summarized at least one pricing page with citations
-- You got a comparison between two competitors
-- You received strategic recommendations based on live market data
-- You verified that the sources cited are real and current
-- You didn't need to memorize any tool syntax—you just asked naturally
-
-### Safety & Verification
-
-Before you use this for real business decisions:
-
-1. **Verify sources** — Check that the cited websites are real (not hallucinated)
-2. **Check dates** — Confirm that fetched data is recent (not outdated)
-3. **Spot-check facts** — Open one of the fetched pages yourself to confirm your AI read it correctly
-4. **Don't rely on AI alone** — Use this as research input, not the final answer
-5. **Consider confidentiality** — If you used proprietary data in Prompt 5, understand that your AI tool's company may log it
-
-### Next: Combine Skills
-
-You now understand:
-- Files → Data analysis
-- Web fetching → Research and documentation
-- Search → Current information
-- Shell → System tasks
-
-Next lesson, you'll learn to **automate** using these tools—stringing multiple operations together without clicking through each one manually. That's where the real time-saving begins.

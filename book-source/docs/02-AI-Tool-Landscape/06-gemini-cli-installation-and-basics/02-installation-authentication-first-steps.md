@@ -200,83 +200,35 @@ How do companies use machine learning to recommend products?
 
 ---
 
-## Real-World Use Cases: What You Can Do
+## Try With AI
 
-Gemini CLI is your AI collaborator for all kinds of tasks—not just coding. Inside the session, you can ask about anything:
+Now that you've installed Gemini CLI, try these prompts to explore what your AI collaborator can do.
 
-### Learning & Understanding
-
+### Prompt 1: Learn a New Concept
 ```
-Explain machine learning to me in simple terms with a real example
-```
-
-**Why this matters:** You're learning something new and want it explained clearly. You can ask follow-ups right there in the session without restarting.
-
-```
-What are the key differences between Python and JavaScript?
+Explain machine learning to me in simple terms with a real example. Then give me 3 real-world applications of machine learning.
 ```
 
-### Writing & Content
+**Expected outcome**: Clear explanation with concrete examples and practical applications you can understand.
 
+### Prompt 2: Write Professional Content
 ```
-Write a professional email to my manager about my project status
-```
-
-```
-Rewrite this paragraph in a more engaging way: [paste your text here]
+Write a professional email to my manager about my project status. The project is [describe your situation]. Make it concise and positive.
 ```
 
+**Expected outcome**: Well-structured professional email you can use or adapt.
+
+### Prompt 3: Problem Solving
 ```
-Create an outline for a blog post about artificial intelligence for beginners
+I'm getting an error when I try to install a package. The error message is: [paste error]. What does it mean and how do I fix it?
 ```
 
-### Problem Solving & Debugging
+**Expected outcome**: Clear explanation of the error and step-by-step solution.
 
+### Prompt 4: Plan and Organize
 ```
-I'm getting an error when I try to install a package. The error message is: [paste error]. What does it mean?
-```
-
-```
-How do I troubleshoot my WiFi connection if it keeps dropping?
+I want to learn programming. What programming language should I start with and why? Give me a 4-week learning plan with specific goals for each week.
 ```
 
-### Brainstorming & Planning
+**Expected outcome**: Personalized learning recommendation with structured plan you can follow immediately.
 
-```
-Give me 5 creative ideas for a small side project I could build this month
-```
-
-```
-I want to learn programming. What programming language should I start with and why?
-```
-
-```
-What are the steps I should follow to plan a successful study schedule?
-```
-
-### Productivity & Organization
-
-```
-Help me organize my weekly schedule. I have: [list tasks]. What's the best order to tackle them?
-```
-
-```
-I need to research [topic]. What are the key areas I should look into?
-```
-
-### Creative Tasks
-
-```
-Help me brainstorm names for my new startup
-```
-
-```
-Give me tips for creating engaging social media content"
-```
----
-
-## What's Next?
-
-In the next lesson (**Built-In Tools Deep Dive**), you'll explore the powerful tools Gemini CLI comes with—like file operations, web searching, and more—that make your AI collaborator even more capable.
-
-Until then, **start using Gemini for real tasks**. Launch a session, ask it about something you're learning, get help writing something, brainstorm ideas. The more you use it naturally, the more comfortable you'll become. That's when the real power emerges.

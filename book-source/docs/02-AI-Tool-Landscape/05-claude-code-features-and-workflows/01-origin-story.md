@@ -185,29 +185,6 @@ Write down one specific development task you've struggled with recently. Could a
 
 ---
 
-## Try With AI
-
-Use Claude Code for this activity (preferred, since you're learning about it). If you already have another AI companion tool set up (e.g., ChatGPT web, Gemini CLI), you may use that instead—the prompts are the same.
-
-### Prompts
-
-1) **"I'm trying to understand the difference between passive and agentic AI assistance. Give me 3 specific examples from MY work [describe what you do: web development / data analysis / etc.] showing how passive AI would handle a task versus how agentic AI would handle the same task. Make it concrete with step-by-step comparisons."**
-
-2) **"The lesson shows 7 examples of agentic AI in action. Pick the one that's most relevant to my current skill level [beginner / intermediate / advanced] and tech stack [describe your languages/tools]. Walk me through exactly what would happen if I tried this scenario today: What would I type? What would Claude Code do? What would the output look like?"**
-
-3) **"I'm skeptical about AI 'acting on my behalf' in my code. Help me understand the safety mechanisms: How does Claude Code prevent accidental damage? What approval processes exist? Give me a 'safety checklist' I can follow until I'm comfortable with agentic assistance."**
-
-4) **"Based on this lesson, I want to identify where agentic AI could help me most. Analyze my typical development workflow [describe your daily tasks] and suggest: (a) Which friction points agentic AI could eliminate, (b) Which tasks I should keep doing manually, (c) One specific scenario I should try FIRST as a beginner."**
-
-### Expected Outcomes
-
-- Clear understanding of passive vs. agentic AI through personal examples
-- Confidence to try your first agentic AI scenario safely
-- Practical safety guidelines for working with AI agents
-- Strategic plan for integrating agentic AI into your workflow
-
----
-
 ## Why This Matters: The Future of Development
 
 Claude Code's success reveals something crucial about the future of software development: **the most powerful AI assistance isn't about replacing human developers—it's about removing friction from the development workflow.**

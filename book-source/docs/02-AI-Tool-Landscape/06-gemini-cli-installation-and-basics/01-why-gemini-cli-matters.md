@@ -172,9 +172,38 @@ As you work through this chapter, you're not just learning "another AI tool." Yo
 - Different tools excel in different scenarios
 - The AI development landscape is rapidly evolving
 
-## Looking Ahead: Your First Gemini CLI Session
 
-In the next lesson, we'll install Gemini CLI and run your first AI-augmented coding session. You'll see firsthand how the 1 million token context window handles large codebases. You'll experiment with Google Search grounding for real-time information. You'll understand why developers are choosing Gemini CLI for specific use cases.
+## Try With AI
 
-But more importantly, you'll gain a new tool in your AI-augmented development toolkit. Not as a replacement for Claude Code, but as a complement. The future of AI development isn't about picking one tool—it's about understanding when to use each tool for maximum impact.
+Use your AI companion tool set up (e.g., ChatGPT web, Claude Code, Gemini CLI), you may use that instead—the prompts are the same.
+
+### Prompt 1: Where Does Gemini Fit For Me?
+```
+Given my situation [describe yourself: student / solo developer / team lead], help me compare Claude Code and Gemini CLI for my next project. Which should I use first, and why? Consider: installation effort, cost/free tier, context window needs, and openness/extensibility.
+```
+
+**Expected outcome**: Personalized tool recommendation with trade-offs for your context.
+
+### Prompt 2: Free Tier Impact Estimator
+```
+Estimate how much I can get done on Gemini CLI’s free tier given my usage pattern [describe your typical session length and number of interactions]. Compare this to likely cost using Claude or other paid APIs for the same work.
+```
+
+**Expected outcome**: Rough calculation of daily/weekly usage and cost savings to inform your tool choice.
+
+### Prompt 3: Does My Codebase Fit The Context?
+```
+I want to work on a codebase of roughly [X files / Y lines / Z MB]. Would Claude’s ~200K token window be enough, or do I benefit from Gemini’s ~1M token window? Show how you estimate token size from files and recommend a workflow if it doesn’t fit in one shot.
+```
+
+**Expected outcome**: Practical guidance on context sizing and batching strategy if needed.
+
+### Prompt 4: Apply the Tool-Choice Framework
+```
+Using my upcoming project [describe it], evaluate whether Gemini CLI or Claude Code is the better fit (1) open source vs. proprietary (ability to inspect/modify), (2) free tier and expected usage, (3) context window needs for my code/docs size, and (4) interface/workflow fit (CLI vs. web). Give a clear recommendation, a 4‑bullet justification, and one risk/trade‑off I should watch.
+```
+
+**Expected outcome**: A concise, evidence-based recommendation grounded in this lesson’s factors, tailored to your project.
+
+
 

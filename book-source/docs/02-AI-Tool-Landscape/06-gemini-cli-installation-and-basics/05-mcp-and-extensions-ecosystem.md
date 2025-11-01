@@ -424,16 +424,11 @@ Gemini will search for reputable extensions and explain what each does.
 
 ---
 
-## Try With AI: Design Your MCP-Powered Workflow
+## Try With AI
 
-### Setup
-
-Open Gemini CLI. You'll now design a real workflow using MCP servers for your actual business needs.
-
----
+Use Gemini CLI to design a real workflow using MCP servers for your actual business needs.
 
 ### Prompt 1: Identify High-Value Use Case
-
 ```
 I want to save time on this business task: [DESCRIBE YOUR SITUATION]
 
@@ -442,16 +437,12 @@ Examples:
 - "I need to stay current with Shopify API updates for our e-commerce platform"
 - "I analyze market trends across 20+ industry websites quarterly"
 
-Which MCP servers would help? Playwright? Context7? Something else?
-Explain why each one helps with my specific task.
+Which MCP servers would help? Playwright? Context7? Something else? Explain why each one helps with my specific task.
 ```
 
-**Expected Outcome:** Gemini identifies which MCP servers address your pain point and why.
-
----
+**Expected outcome**: Identification of which MCP servers address your pain point and why.
 
 ### Prompt 2: Design the Complete Workflow
-
 ```
 For my task from Prompt 1, design a complete MCP-powered workflow:
 
@@ -465,12 +456,9 @@ For my task from Prompt 1, design a complete MCP-powered workflow:
 Give me a workflow I can implement and test today.
 ```
 
-**Expected Outcome:** Detailed implementation plan with configuration, commands, and time savings estimate.
-
----
+**Expected outcome**: Detailed implementation plan with configuration, commands, and time savings estimate.
 
 ### Prompt 3: Security Evaluation
-
 ```
 Before I implement this workflow, help me evaluate security:
 
@@ -484,12 +472,9 @@ Before I implement this workflow, help me evaluate security:
 Create a security checklist I must complete before using real business data.
 ```
 
-**Expected Outcome:** Clear risk assessment and safe testing protocol.
-
----
+**Expected outcome**: Clear risk assessment and safe testing protocol.
 
 ### Prompt 4: Implementation & Troubleshooting
-
 ```
 I'm ready to implement. Walk me through:
 
@@ -503,81 +488,5 @@ I'm ready to implement. Walk me through:
 Assume I'm a beginner—be specific and step-by-step.
 ```
 
-**Expected Outcome:** Complete implementation guide with troubleshooting steps.
+**Expected outcome**: Complete implementation guide with troubleshooting steps.
 
----
-
-### What Success Looks Like
-
-✅ **You completed this successfully if:**
-- You designed a workflow for YOUR real business task (not hypothetical)
-- You understand which MCP servers solve your specific problem
-- You have a security checklist completed
-- You configured MCP servers and verified they loaded
-- You tested with non-sensitive data first
-- You measured time savings vs. manual process
-
----
-
-### Safety & Ethics Reminder
-
-**Before using MCP-powered workflows on real business data:**
-
-1. **Verify accuracy with spot checks**
-   - Don't trust 100% automated research
-   - Manually verify 2-3 examples
-   - Understand AI limitations (can miss nuances)
-
-2. **Respect website terms of service**
-   - Don't scrape sites that prohibit automation
-   - Rate-limit your requests (don't overwhelm servers)
-   - Consider reaching out to competitors for partnership rather than scraping
-
-3. **Protect sensitive information**
-   - Don't browse internal company systems without IT approval
-   - Don't share customer data through MCP servers
-   - Use test/demo credentials, not production API keys
-
-4. **Understand cost implications**
-   - Monitor your Gemini API quota usage
-   - Some MCP servers may have usage costs
-   - Scale gradually to understand cost structure
-
-**Ethics principle:** If you wouldn't want competitors doing it to you, don't do it to them.
-
----
-
-### Reflection Questions
-
-Before moving to the next chapter:
-
-**Technical Understanding:**
-- What's the difference between an MCP server and a Gemini CLI extension?
-- Why does MCP exist? What problem does it solve?
-- How do Playwright and Context7 extend your AI's capabilities differently?
-
-**Business Application:**
-- What's the highest-value use case for MCP in your work?
-- How much time could you save weekly with automated competitor research?
-- What business decisions would you make differently with real-time documentation access?
-
-**Strategic Thinking:**
-- How does MCP change what's possible with AI for business?
-- What workflows are now feasible that weren't before?
-- What's the next capability you'd add if you could?
-
----
-
-### Your Journey
-
-You started this chapter as a beginner. Now you:
-- Understand AI companion architecture (built-in tools → MCP → extensions)
-- Can safely extend AI capabilities for business tasks
-- Know how to evaluate security vs. business value
-- Design repeatable, automated workflows
-
-**The meta-skill:** You don't memorize technical details. You ask your AI what's possible, evaluate options for security and fit, implement incrementally, and scale what works.
-
-**This skill transfers to every AI tool and every new capability that emerges.**
-
-Welcome to AI-augmented business intelligence. You're ready for the next chapters.

@@ -394,52 +394,32 @@ This scales to any future tools. When GPT-5 arrives, when Claude expands, when n
 
 ---
 
-## Try With AI: Personalized Tool Selection
+## Try With AI
 
-### Setup
-
-Open any AI tool you have access to (Gemini CLI, ChatGPT, Claude). You'll ask it to help you choose the right tool for real tasks.
-
----
+Use your AI companion tool (Gemini CLI, ChatGPT, Claude, etc.) to help you choose the right tool for real tasks.
 
 ### Prompt 1: Multi-Competitor Analysis
-
 ```
-I need to compare pricing, features, and customer reviews across 10 competitors
-in the project management software space. Should I use Gemini CLI or ChatGPT
-for this research? Explain which is better and why.
+I need to compare pricing, features, and customer reviews across 10 competitors in the project management software space. Should I use Gemini CLI or ChatGPT for this research? Explain which is better and why.
 ```
 
-**Expected Outcome**: Your AI recommends a tool based on the task size (10 competitors) and explains whether you need large context or can batch the analysis.
-
----
+**Expected outcome**: Tool recommendation based on task size, with explanation of whether you need large context or can batch the analysis.
 
 ### Prompt 2: Annual Report Synthesis
-
 ```
-I have 12 monthly sales reports from 2024 (Excel files, roughly 40 pages each).
-I want to identify revenue trends, seasonal patterns, and which products grew or
-declined. Which tool should I use to analyze all 12 months together?
+I have 12 monthly sales reports from 2024 (Excel files, roughly 40 pages each). I want to identify revenue trends, seasonal patterns, and which products grew or declined. Which tool should I use to analyze all 12 months together?
 ```
 
-**Expected Outcome**: Your AI evaluates whether 12 × 40 pages fits in one analysis or needs batching, and recommends the most efficient approach.
-
----
+**Expected outcome**: Evaluation of whether 12 × 40 pages fits in one analysis or needs batching, plus the most efficient approach.
 
 ### Prompt 3: Budget Consideration
-
 ```
-I'm on a limited budget using free tiers only. I need to analyze 50 customer
-feedback emails to find the top 3 complaints. Which tool is most cost-effective:
-Gemini CLI (free tier: 1,000 req/day) or ChatGPT (free tier: limited usage)?
+I'm on a limited budget using free tiers only. I need to analyze 50 customer feedback emails to find the top 3 complaints. Which tool is most cost-effective: Gemini CLI (free tier: 1,000 req/day) or ChatGPT (free tier: limited usage)?
 ```
 
-**Expected Outcome**: Your AI compares free tier limits against your task and recommends the most economical approach.
-
----
+**Expected outcome**: Comparison of free tier limits against your task and the most economical approach.
 
 ### Prompt 4: Complex Multi-Step Research
-
 ```
 I need to:
 1. Read 5 industry trend reports
@@ -447,53 +427,8 @@ I need to:
 3. Compare to 8 competitor offerings
 4. Identify market gaps we can fill
 
-This is a multi-step research project. Which AI tool can handle this workflow
-most efficiently?
+This is a multi-step research project. Which AI tool can handle this workflow most efficiently?
 ```
 
-**Expected Outcome**: Your AI recommends a tool based on the multi-document, multi-step nature of the task and suggests workflow optimizations.
+**Expected outcome**: Tool recommendation based on multi-document, multi-step task nature with workflow optimization suggestions.
 
----
-
-### What Success Looks Like
-
-✅ **You completed this successfully if:**
-- Your AI gave specific tool recommendations for your tasks
-- You understand *why* one tool is better for certain situations
-- You can now ask this question for any future task
-- You didn't memorize rules—you learned to consult AI
-
----
-
-### Safety & Ethics Note
-
-**All tools have trade-offs. No tool is perfect.**
-
-- Gemini CLI: Powerful context, but requires terminal comfort
-- ChatGPT: User-friendly, but smaller context may require batching
-- Claude: Balanced approach, context between the others
-
-When evaluating tools:
-- ✅ Consider your budget constraints
-- ✅ Think about your interface preferences
-- ✅ Evaluate based on actual task needs
-- ⚠️ Be skeptical of "one tool for everything" claims
-- ⚠️ Privacy matters—don't share confidential data unless you trust the platform
-
-Real-world work combines multiple tools. This lesson teaches you to choose wisely for each situation.
-
----
-
-### Next: Building on What You've Learned
-
-You now understand:
-- Context windows (reading capacity)
-- When size matters (multi-document tasks)
-- How to ask AI for tool recommendations
-- Personalized decision-making through dialogue
-
-**What's next**: In the upcoming chapters, you'll explore how to integrate these AI tools into real business workflows—automating research, streamlining analysis, and making faster, data-driven decisions.
-
-**But first**: Apply this lesson to a real task this week. Describe your situation, ask your AI which tool to use, and observe how personalized recommendations work in practice.
-
-The skill you've developed—consulting AI about tool selection—will serve you for years as new tools emerge and existing tools evolve.
