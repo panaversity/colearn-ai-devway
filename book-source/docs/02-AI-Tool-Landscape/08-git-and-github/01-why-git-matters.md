@@ -1,12 +1,10 @@
 ---
-title: "Lesson 1: Why Git Matters in AI-Driven Development"
+title: "Why Git Matters in AI-Driven Development"
 sidebar_position: 1
 description: "Understand the safety net that Git provides when working with AI tools - every change is reversible, every experiment is safe."
 ---
 
-# Lesson 1: Why Git Matters in AI-Driven Development
-
-## The Moment That Changes Everything
+# Why Git Matters in AI-Driven Development
 
 What if Claude Code refactored your entire codebase—and broke it? What if you asked an AI tool to generate a feature, it seemed perfect, and your team merged it without realizing it exposed a security vulnerability? What if you accidentally committed your API keys to GitHub?
 

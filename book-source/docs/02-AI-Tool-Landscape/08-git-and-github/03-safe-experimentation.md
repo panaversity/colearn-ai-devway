@@ -1,10 +1,10 @@
 ---
-title: "Lesson 3: Safe Experimentation - Branches, Checkpoints, and Rollback"
+title: "Safe Experimentation - Branches, Checkpoints, and Rollback"
 sidebar_position: 3
 description: "Master the art of fearless experimentation with AI tools using Git's checkpoint pattern, branches, and rollback capabilities."
 ---
 
-# Lesson 3: Safe Experimentation - Branches, Checkpoints, and Rollback
+# Safe Experimentation - Branches, Checkpoints, and Rollback
 
 ## The Power of Fearless Experimentation
 

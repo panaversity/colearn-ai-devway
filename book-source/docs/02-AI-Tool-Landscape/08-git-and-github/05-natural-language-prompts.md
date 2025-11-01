@@ -1,10 +1,10 @@
 ---
-title: "Lesson 5: Natural Language Prompts for Git Operations"
+title: "Natural Language Prompts for Git Operations"
 sidebar_position: 5
 description: "Learn how to use Claude Code and Gemini CLI to execute Git commands via natural language, turning Git into a conversational interface."
 ---
 
-# Lesson 5: Natural Language Prompts for Git Operations
+# Natural Language Prompts for Git Operations
 
 ## The Conversation That Changed Everything
 

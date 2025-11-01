@@ -1,10 +1,10 @@
 ---
-title: "Lesson 4: Pull Requests and Team Collaboration"
+title: "Pull Requests and Team Collaboration"
 sidebar_position: 4
 description: "Learn how to share AI-generated code with your team using pull requests, participate in code reviews, and merge changes safely after approval."
 ---
 
-# Lesson 4: Pull Requests and Team Collaboration
+# Pull Requests and Team Collaboration
 
 ## The Code Review That Saved Production
 

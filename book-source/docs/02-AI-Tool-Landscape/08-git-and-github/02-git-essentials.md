@@ -1,14 +1,14 @@
 ---
-title: "Lesson 2: Git Essentials - Commands and Setup"
+title: "Git Essentials - Commands and Setup"
 sidebar_position: 2
 description: "Install Git, configure it, and execute the basic workflow - your first commits start here."
 ---
 
-# Lesson 2: Git Essentials - Commands and Setup
+# Git Essentials - Commands and Setup
 
 ## Every Commit Is a Story
 
-In Lesson 1, you learned *why* version control matters: it's how collaborative teams track decisions, recover from mistakes, and build software together. You saw how Git solved real problems in the industry and understood its role in modern development workflows.
+In Lesson 1, you learned _why_ version control matters: it's how collaborative teams track decisions, recover from mistakes, and build software together. You saw how Git solved real problems in the industry and understood its role in modern development workflows.
 
 Now comes the practical part—the part where your hands touch the keyboard and Git becomes a tool you actually use, not just an idea you understand. This lesson teaches you the mechanics: how to install Git on your computer, set it up with your identity, and execute the workflows that will power your development journey.
 
@@ -48,6 +48,7 @@ git --version
 ```
 
 **Expected output** (version number may differ):
+
 ```
 git version 2.46.0.windows.1
 ```
@@ -75,6 +76,7 @@ git --version
 ```
 
 **Expected output**:
+
 ```
 git version 2.46.0
 ```
@@ -95,6 +97,7 @@ git --version
 ```
 
 **Expected output**:
+
 ```
 git version 2.46.0
 ```
@@ -105,7 +108,7 @@ git version 2.46.0
 
 Linux distributions ship with package managers that make installing Git trivial.
 
-#### Debian/Ubuntu (and Mint, Pop!_OS, etc.)
+#### Debian/Ubuntu (and Mint, Pop!\_OS, etc.)
 
 Open a terminal and run:
 
@@ -133,6 +136,7 @@ git --version
 ```
 
 **Expected output**:
+
 ```
 git version 2.46.0
 ```
@@ -155,6 +159,7 @@ git config --global user.email "your.email@example.com"
 Replace `"Your Name"` with your actual name (e.g., `"Jane Smith"`) and `"your.email@example.com"` with your real email (e.g., `"jane.smith@example.com"`).
 
 **Example:**
+
 ```bash
 git config --global user.name "Alice Johnson"
 git config --global user.email "alice.johnson@example.com"
@@ -180,6 +185,16 @@ user.email=alice.johnson@example.com
 
 Look for your name and email in the list. If you see them, you're configured correctly.
 
+#### Set default branch name to "main" (recommended)
+
+Modern repositories use "main" as the default branch name. Configure Git to use this when initializing new repos:
+
+```bash
+git config --global init.defaultBranch main
+```
+
+This ensures that `git init` creates a `main` branch instead of `master` on older setups.
+
 ---
 
 ### Troubleshooting Common Issues
@@ -200,6 +215,33 @@ If you see a permission error when running `sudo apt-get` or `sudo dnf`, ensure 
 
 This is normal. Click "Install" when prompted. This installs development tools required by Git. It takes a few minutes.
 
+If you need to trigger the prompt manually, run:
+
+```bash
+xcode-select --install
+```
+
+If you get an error that tools are already installed, you're good to go.
+
+---
+
+## Try With AI: Installation sanity check (5 minutes)
+
+Open your AI companion (Claude Code or Gemini CLI) and paste:
+
+"""
+I'm setting up Git on macOS (zsh). Help me verify:
+
+1. Is Git installed? (git --version)
+2. Is my identity configured? (git config --list | grep -E 'user.name|user.email')
+3. Is my default branch set to main? (git config --global init.defaultBranch)
+4. Is credential helper configured? (git config --global credential.helper)
+
+Before I run any command, explain what it does and what output to expect. If something's missing, give me the exact command to fix it and why it's safe.
+"""
+
+Run each suggested command, compare your output to the explanation, and ask follow-up questions until everything looks right.
+
 ---
 
 ## Part II: The Core Workflow - Show Then Explain
@@ -217,6 +259,7 @@ git init
 ```
 
 Expected output:
+
 ```
 Initialized empty Git repository in G:/my-calculator/.git/
 ```
@@ -258,6 +301,7 @@ git status
 ```
 
 Expected output:
+
 ```
 On branch main
 
@@ -285,6 +329,7 @@ git status
 ```
 
 Expected output:
+
 ```
 On branch main
 
@@ -304,6 +349,7 @@ git commit -m "Add basic calculator functions"
 ```
 
 Expected output:
+
 ```
 [main (root-commit) a1b2c3d] Add basic calculator functions
  1 file changed, 20 insertions(+)
@@ -319,6 +365,7 @@ git log --oneline
 ```
 
 Expected output:
+
 ```
 a1b2c3d Add basic calculator functions
 ```
@@ -338,6 +385,7 @@ When to use: Once per project, at the very beginning.
 #### `git status` — Check What Changed
 
 What it does: Shows you three things:
+
 - Files you've edited but not staged
 - Files you've staged but not committed
 - Files Git doesn't know about yet
@@ -359,6 +407,7 @@ The message matters: Write clear messages like "Add basic calculator functions" 
 #### `git log` — View History
 
 What it does: Shows all your commits in order, newest first. Each line has:
+
 - A commit ID (unique code like `a1b2c3d`)
 - Your commit message
 
@@ -421,6 +470,7 @@ Untracked files:
 ```
 
 **Reading this output**:
+
 - "Changes to be committed": These files are staged and will be saved when you commit.
 - "Changes not staged for commit": You edited these files, but they're not staged yet.
 - "Untracked files": Git has never seen these files before.
@@ -430,6 +480,7 @@ Untracked files:
 New developers often ask: "Why not just save changes instantly?"
 
 **Three stages give you control**. You can:
+
 - Edit multiple files but commit them separately
 - Review what you're saving before committing
 - Decide which changes go together logically
@@ -528,31 +579,35 @@ Date:   Mon Oct 21 09:00:22 2024 -0600
 
 **Breaking down each piece:**
 
-| Part | Example | Meaning |
-|------|---------|---------|
-| **Commit hash** | `3f8a9b2` | A unique identifier for this commit (like a fingerprint). The full version is longer; the short version is 7 characters |
-| **Branch marker** | `(HEAD -> main)` | `HEAD` means "you are here." It shows which commit you're currently on and which branch (`main`) |
-| **Author** | `Alex Chen <alex@example.com>` | Who made this commit |
-| **Date** | `Thu Oct 24 14:32:15 2024 -0600` | When the commit was made |
-| **Message** | `Add error handling for API timeout` | A description of what changed in this commit |
+| Part              | Example                              | Meaning                                                                                                                 |
+| ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Commit hash**   | `3f8a9b2`                            | A unique identifier for this commit (like a fingerprint). The full version is longer; the short version is 7 characters |
+| **Branch marker** | `(HEAD -> main)`                     | `HEAD` means "you are here." It shows which commit you're currently on and which branch (`main`)                        |
+| **Author**        | `Alex Chen <alex@example.com>`       | Who made this commit                                                                                                    |
+| **Date**          | `Thu Oct 24 14:32:15 2024 -0600`     | When the commit was made                                                                                                |
+| **Message**       | `Add error handling for API timeout` | A description of what changed in this commit                                                                            |
 
 ### Common Git Messages Explained
 
 When you work with Git, you'll see these messages frequently:
 
 **"nothing to commit, working tree clean"**
+
 - What it means: Everything is saved and committed. There are no changes Git is tracking
 - Your action: Nothing! Your work is safe in the repository
 
 **"Changes not staged for commit"**
+
 - What it means: You edited files, but you haven't used `git add` to prepare them for committing
 - Your action: Run `git add <filename>` to stage the file, then `git commit`
 
 **"Your branch is ahead of 'origin/main' by X commits"**
+
 - What it means: You have commits saved locally that haven't been uploaded to the remote server (GitHub, GitLab, etc.) yet
 - Your action: Run `git push` to upload your commits to the remote server
 
 **"Untracked files"**
+
 - What it means: Git sees new files in your folder, but you haven't told Git to start tracking them
 - Your action: Run `git add <filename>` to start tracking the file, or add it to `.gitignore` if you don't want to track it
 
@@ -560,22 +615,25 @@ When you work with Git, you'll see these messages frequently:
 
 ## Part V: Commit Messages with AI Attribution
 
-A commit message is a note you leave for your teammates—and for yourself in the future. It should explain *what* changed and *why*. When AI tools help you write code, attribution matters for transparency and auditability.
+A commit message is a note you leave for your teammates—and for yourself in the future. It should explain _what_ changed and _why_. When AI tools help you write code, attribution matters for transparency and auditability.
 
 ### Best Practices for Commit Messages
 
 Strong commit messages follow a simple pattern:
 
 **1. Use present tense, not past tense:**
+
 - Good: `Add error handling for API timeout`
 - Avoid: `Added error handling for API timeout`
 
 **2. Be descriptive and specific:**
+
 - Good: `Fix off-by-one error in loop counter`
 - Avoid: `Fix bug`
 
 **3. Start with a verb:**
 Common verbs include:
+
 - **Add** — Introduce new functionality or files
 - **Fix** — Correct a bug or issue
 - **Update** — Modify existing code or documentation
@@ -583,6 +641,7 @@ Common verbs include:
 - **Refactor** — Restructure code without changing behavior
 
 **4. Keep the first line concise:**
+
 - First line should be 50 characters or less
 - It's the subject line, like an email subject
 - If you need more detail, add a blank line and then write a longer description
@@ -635,21 +694,23 @@ When AI tools (Claude, ChatGPT, Gemini, Copilot, etc.) generate or significantly
 
 Here's a comparison to help you recognize strong patterns:
 
-| Good Message | Poor Message | Why Good Wins |
-|--------------|--------------|---------------|
-| Add subtract and multiply functions | stuff | Describes exactly what was added |
-| [AI] Claude - Fix off-by-one error in loop | fix bug | Attributes AI and specifies the fix |
-| Update README with setup instructions | updated stuff | Clear about what file and what changed |
-| Refactor authentication module for async/await | changes | Explains both what and why (async/await) |
-| Remove unused import statements | cleanup | Specific about what was removed |
-| [AI] Copilot - Add input validation for API payload | add validation | Attributes AI and describes the change |
+| Good Message                                        | Poor Message   | Why Good Wins                            |
+| --------------------------------------------------- | -------------- | ---------------------------------------- |
+| Add subtract and multiply functions                 | stuff          | Describes exactly what was added         |
+| [AI] Claude - Fix off-by-one error in loop          | fix bug        | Attributes AI and specifies the fix      |
+| Update README with setup instructions               | updated stuff  | Clear about what file and what changed   |
+| Refactor authentication module for async/await      | changes        | Explains both what and why (async/await) |
+| Remove unused import statements                     | cleanup        | Specific about what was removed          |
+| [AI] Copilot - Add input validation for API payload | add validation | Attributes AI and describes the change   |
 
 **Poor messages fail because they:**
+
 - Use vague words ("stuff," "changes," "fixes")
 - Don't explain what was actually changed
 - Don't make it easy for someone reviewing the code to understand the intent
 
 **Good messages succeed because they:**
+
 - Use clear action verbs
 - Say specifically what changed
 - Help future readers understand the context
@@ -693,15 +754,18 @@ Every person on your team can now see that Claude helped with the error handling
 ## Exercises
 
 ### Exercise 1: Install Git and Verify
+
 **Objective:** Ensure Git is properly installed on your system.
 
 **Steps:**
+
 1. Download Git from https://git-scm.com/ (Windows/Mac) or use your package manager (Linux)
 2. Follow the installation wizard, accepting default settings
 3. Open a terminal or command prompt
 4. Run: `git --version`
 
 **Success Criteria:**
+
 - A version number displays (e.g., "git version 2.42.0")
 - No "command not found" error
 
@@ -710,15 +774,18 @@ Every person on your team can now see that Claude helped with the error handling
 ---
 
 ### Exercise 2: Configure Your Git Identity
+
 **Objective:** Set up your global Git user information.
 
 **Steps:**
+
 1. Open terminal/command prompt
 2. Run: `git config --global user.name "Your Full Name"`
 3. Run: `git config --global user.email "your.email@example.com"`
 4. Verify: `git config --list | grep user` (Mac/Linux) or `git config --list | findstr user` (Windows)
 
 **Success Criteria:**
+
 - Your name and email appear in the output
 - No errors during configuration
 
@@ -727,15 +794,18 @@ Every person on your team can now see that Claude helped with the error handling
 ---
 
 ### Exercise 3: Initialize Your First Repository
+
 **Objective:** Create and initialize a Git repository.
 
 **Steps:**
+
 1. Create a folder: `mkdir my-first-repo`
 2. Navigate into it: `cd my-first-repo`
 3. Initialize: `git init`
 4. Check status: `git status`
 
 **Success Criteria:**
+
 - Output shows "On branch main" (or "master")
 - A hidden `.git` folder exists in your directory
 - No errors
@@ -745,10 +815,13 @@ Every person on your team can now see that Claude helped with the error handling
 ---
 
 ### Exercise 4: Make Your First Commit
+
 **Objective:** Create and commit a file to your repository.
 
 **Steps:**
+
 1. Create a Python file called `hello.py`:
+
    ```python
    # hello.py
    def greet(name):
@@ -766,6 +839,7 @@ Every person on your team can now see that Claude helped with the error handling
 6. Run: `git log` to view your commit
 
 **Success Criteria:**
+
 - `git log` displays your commit with message
 - `git status` shows "nothing to commit, working tree clean"
 
@@ -774,9 +848,11 @@ Every person on your team can now see that Claude helped with the error handling
 ---
 
 ### Exercise 5: Practice Multiple Commits
+
 **Objective:** Build commit muscle memory and practice good commit messages.
 
 **Steps:**
+
 1. Edit `hello.py` to add a second function:
    ```python
    def farewell(name):
@@ -796,6 +872,7 @@ Every person on your team can now see that Claude helped with the error handling
 5. View history: `git log --oneline`
 
 **Success Criteria:**
+
 - `git log --oneline` shows 3 commits
 - Each commit has a clear, descriptive message
 - You can explain what changed in each commit
