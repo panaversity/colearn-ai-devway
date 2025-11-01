@@ -201,9 +201,11 @@ Before diving deep, it helps to map the territory. We'll use three practical lev
 
 ### The Spectrum in Practice
 
-**AI-Assisted → AI-Driven → AI-Native**
-&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓
-**Helper**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Co-Creator**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Core System**
+```
+AI-Assisted  →  AI-Driven  →  AI-Native
+    ↓              ↓              ↓
+  Helper       Co-Creator      Core System
+```
 
 ---
 
