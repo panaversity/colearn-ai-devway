@@ -7,11 +7,19 @@ allowed-tools:
   - Grep
   - Bash
   - Task
-version: "1.0.0"
+version: "2.0.0"
 research-foundation:
   - "CEFR (Common European Framework of Reference): 40+ years of language learning research"
   - "Bloom's Taxonomy: 70+ years of cognitive complexity research (2001 revision)"
   - "DigComp 2.1: Latest digital competence framework (2022)"
+improvements-v2:
+  - "Added skill coherence validation (detect fragmentation, regressions, missing prerequisites)"
+  - "Added skill dependency mapping (prevent A2 skills without A1 prerequisites)"
+  - "Added naming consistency checks (use distinct verbs: assess vs. evaluate vs. prioritize)"
+  - "Added skill connectivity verification (ensure skills aren't isolated)"
+  - "Added proficiency progression validation (A1→A2→B1, never regress)"
+  - "Integrated Master Skill Registry concept (single source of truth)"
+  - "Added 5 validation tests for cross-chapter consistency"
 ---
 
 # Skills-Proficiency-Mapper Skill
@@ -459,6 +467,194 @@ Student demonstrates B1 proficiency through: [Task description]
 
 ---
 
+---
+
+## NEW (v2.0): Skill Coherence Validation Framework
+
+### Why Coherence Matters
+
+**Problem**: In a 55-chapter book with 200+ lessons, skills can become fragmented across chapters. Without validation:
+- Same skill named differently in different chapters (fragmentation)
+- Skills appear at A2 without A1 prerequisites (broken progressions)
+- Proficiency regresses (A2 → A1 later = incoherent)
+- Skills never deepen (A1 in Ch1, never again = isolated)
+- Dependencies aren't explicit (students don't understand why skill appears now)
+
+**Solution**: Five validation tests that catch coherence issues BEFORE they accumulate.
+
+### The Five Validation Tests
+
+#### Test 1: Uniqueness
+**Question**: Is this skill unique or am I duplicating an existing skill with a different name?
+
+**How to Check**:
+1. Open Master Skill Registry for your book
+2. Search for skills with similar concepts in the same domain
+3. Check if the concept is already defined
+
+**Red Flags**:
+- ❌ "Evaluating Career Relevance" vs "Assessing Personal Role Transition" — Same concept, different verbs
+- ❌ Skill appears in registry with different name in different chapters
+- ❌ Multiple skills with very similar proficiency paths
+
+**Fix**: Use canonical name from registry; extend existing skill if deepening it
+
+#### Test 2: Naming Convention & Semantic Clarity
+**Question**: Is the skill name clear and distinct from similar skills? Can different people read the name and understand the same thing?
+
+**How to Check**:
+1. Does the skill use one of these verbs consistently?
+   - **Recognizing** = Identifying patterns/signals (A1)
+   - **Understanding** = Grasping concepts/frameworks (A1-A2)
+   - **Assessing** = Determining current state/readiness (A2)
+   - **Evaluating** = Judging quality/fitness for purpose (A2)
+   - **Personalizing** = Adapting frameworks to individual context (A2)
+   - **Prioritizing** = Making strategic choices among options (A2)
+
+2. Is the skill name specific enough?
+   - ✓ "Understanding AI Stack Architecture" (specific)
+   - ❌ "Understanding X" (too generic)
+
+3. Can two people read the name and understand the same concept?
+   - ✓ Test: Write the name to another instructor; do they understand what students learn?
+
+**Red Flags**:
+- ❌ Same verb used 20+ times without semantic distinction
+- ❌ Skill name so vague it could mean different things to different people
+- ❌ Similar skills with different verbs that mean the same thing
+
+**Fix**: Create verb clarity guide; rename for specificity; ensure "Evaluating X" is truly evaluation (judging quality), not simple application
+
+#### Test 3: Proficiency Progression Validity
+**Question**: If the skill appears in multiple chapters, does proficiency increase appropriately (A1→A2→B1), never regress?
+
+**How to Check**:
+1. Search for all appearances of the skill across chapters
+2. Verify proficiency levels form a non-decreasing sequence
+
+**Red Flags**:
+- ❌ Ch2, L2 (A2) → Ch2, L3 (A1) = Regression
+- ❌ Ch1, L1 (A1) → Ch3, L2 (A1) → Ch2, L5 (A2) = Out of order
+- ❌ Skill appears at A2 but never appears at A1 (where was A1 foundation?)
+
+**Rule**: Proficiency should stay same or increase. Never regress.
+
+**Expected Patterns**:
+- ✓ Ch1, L1 (A1) → Ch3, L2 (A1 or A2) = Good
+- ✓ Ch2, L3 (A1) → Ch4, L5 (A2) → Part 2, Ch6, L2 (B1) = Good
+- ❌ Ch2, L3 (A2) → Ch2, L4 (A1) = Bad (regress)
+
+**Fix**: Reorder lessons or correct proficiency assignment
+
+#### Test 4: Prerequisite Satisfaction
+**Question**: Have all prerequisite skills been taught BEFORE this skill?
+
+**How to Check**:
+1. Find skill in Master Skill Registry
+2. Look at Dependencies field
+3. For each dependency:
+   - Is it taught in an earlier chapter/lesson?
+   - Can students access prerequisite before dependent skill?
+
+**Red Flags**:
+- ❌ A2 skill with no A1 prerequisite taught anywhere
+- ❌ Skill appears in Ch3 but its prerequisite isn't taught until Ch4
+- ❌ Skill lists prerequisite but prerequisite isn't actually in lessons
+
+**Rule**: All prerequisites must be taught before skill introduces them.
+
+**Example - Correct**:
+```
+Ch3, L2: "Understanding Competitive Layer Strategy" (A1)
+  ↓ prerequisite for
+Ch3, L3: "Recognizing Economic Scalability Patterns" (A2)
+  ↓ prerequisite for
+Ch3, L5: "Understanding Vertical Market Strategy" (A1)
+```
+Each skill's prerequisites are taught earlier. ✓
+
+**Example - Incorrect**:
+```
+Ch3, L5: "Evaluating Market Risk & Timing" (A2)
+Prerequisites (from registry):
+  - "Recognizing Market Dynamics" (A1) — NOT TAUGHT ANYWHERE
+```
+Missing A1 prerequisite. ❌
+
+**Fix**: Either add missing A1 prerequisite or document explicit prerequisite in YAML
+
+#### Test 5: Skill Connectivity & Progression Track
+**Question**: Does this skill connect to other skills, or is it isolated? Does it fit into a progression track?
+
+**How to Check**:
+1. Open Master Skill Registry
+2. Look for the skill's progression track (Development, Business, Career, Systems)
+3. Verify:
+   - Skill appears in multiple chapters (not just one)
+   - Later chapters reference/build on this skill
+   - Skill supports development of other skills
+
+**Red Flags**:
+- ❌ Skill appears only in one lesson, never mentioned again
+- ❌ Skill is A2 but no B1 or deeper version planned
+- ❌ No other skills reference or build on this skill
+
+**Acceptable Exceptions**:
+- ✓ Context-setting skills (introduce topic, set stage for later) — appear once is OK
+- ✓ Scaffold skills (temporary, support concept, not long-term skill) — appear once is OK
+- ❌ Important domain skills (core to methodology) — should progress across chapters
+
+**Example - Well Connected**:
+```
+Progression Track 2: Business Models & Strategy
+
+"Recognizing AI Opportunity Timing" (A1) in Ch1, L1
+  ↓ deepens in
+"Understanding Competitive Layer Strategy" (A1) in Ch3, L2
+  ↓ builds to
+"Evaluating Market Risk & Timing" (A2) in Ch3, L5
+  ↓ applies to
+"Understanding Vertical Market Strategy" (A1) in Ch3, L5
+```
+Clear progression; each builds on previous; connected. ✓
+
+**Example - Isolated Skill**:
+```
+"Recognizing CS Education Gaps" (A1) in Ch1, L8
+[never appears again]
+[no other skills reference it]
+[doesn't build to B1 or deeper version]
+```
+Isolated; fine for context-setting, but important concepts should progress. ⚠️
+
+**Fix**: Either integrate into progression track or acknowledge as context-setting
+
+### Coherence Validation Workflow
+
+**When to Run**: Before finalizing any chapter's skills metadata
+
+**Process**:
+1. Extract all skills from chapter
+2. For each skill, run all 5 tests
+3. Document results in coherence report
+4. Fix issues before marking chapter complete
+5. Update Master Skill Registry
+
+**Output**: Coherence validation checklist showing:
+- [ ] Test 1: Uniqueness ✓/❌
+- [ ] Test 2: Naming convention ✓/❌
+- [ ] Test 3: Proficiency progression ✓/❌
+- [ ] Test 4: Prerequisites ✓/❌
+- [ ] Test 5: Connectivity ✓/❌
+
+**Automated Checks** (can be built into tools):
+- Compare skill names against registry (Test 1)
+- Verify proficiency levels in registry never regress (Test 3)
+- Check prerequisites exist and are taught earlier (Test 4)
+- Count skill appearances across chapters (Test 5)
+
+---
+
 ## When to Activate This Skill
 
 **Primary triggers** (use this skill when you need):
@@ -467,6 +663,9 @@ Student demonstrates B1 proficiency through: [Task description]
 - Design assessments for specific proficiency levels
 - Create rubrics for proficiency-based grading
 - Manage cognitive load across chapter/course
+- **Validate skill coherence across chapters (NEW v2.0)**
+- **Check for skill fragmentation and missing prerequisites (NEW v2.0)**
+- **Ensure skills don't regress in proficiency (NEW v2.0)**
 - Align to international competence standards
 
 **Not appropriate for** (skills better suited elsewhere):
@@ -520,7 +719,8 @@ cognitive_load_check: "Total new concepts = 4 (within A2 limit of 7) ✓"
 
 ---
 
-**Version**: 1.0.0
+**Version**: 2.0.0
 **Last Updated**: November 1, 2025
 **Research Foundation**: 40+ years CEFR, 70+ years Bloom's Taxonomy, 2022 DigComp 2.1
-**Status**: Ready for integration with chapter-planner and lesson-writer agents
+**New in v2.0**: Skill Coherence Validation Framework with 5 validation tests (Uniqueness, Naming, Progression, Prerequisites, Connectivity)
+**Status**: Enhanced for book-scale coherence validation; ready for Part 2+ chapters and automated validation workflows

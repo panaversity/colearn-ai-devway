@@ -105,10 +105,13 @@ Also, determine AI tool onboarding status for lesson closures:
    - What proficiency levels are appropriate (A1/A2/B1/B2/C1)?
    - How many skills per lesson? (Optimal: 2-3 skills per lesson to manage cognitive load)
 
-2. **Validate proficiency progression** (using CEFR research):
+2. **Validate proficiency progression** (using CEFR research + coherence framework):
    - Does the chapter follow A1→A2→B1 progression across lessons?
-   - Are there prerequisites from earlier chapters (check skills-proficiency-mapper reference)?
+   - Are there prerequisites from earlier chapters (check Master Skill Registry)?
    - Does proficiency increase match learning objectives (apply Bloom's taxonomy alignment)?
+   - **NEW**: Check 5 coherence tests (Uniqueness, Naming, Progression, Prerequisites, Connectivity) — see skills-proficiency-mapper v2.0
+   - **NEW**: Does skill naming use distinct verbs (Recognize vs. Understand vs. Assess vs. Evaluate vs. Personalize)?
+   - **NEW**: Do skills connect to prior/future chapters (not isolated) or are they intentional context-setting only?
 
 3. **Apply cognitive load theory**:
    - A1 lessons: Max 5 new concepts
@@ -125,11 +128,18 @@ Also, determine AI tool onboarding status for lesson closures:
      - Measurable at this level (what student demonstrates)
    - This metadata will be added to lesson YAML frontmatter during implementation
 
-**Reference**: `.claude/skills/skills-proficiency-mapper/` for:
-- CEFR 40-year research foundation
-- Bloom's taxonomy cognitive complexity mapping
-- DigComp 2.1 digital competence framework
-- Skill proficiency templates and assessment rubrics
+**Reference**:
+- `.claude/skills/skills-proficiency-mapper/` for:
+  - CEFR 40-year research foundation
+  - Bloom's taxonomy cognitive complexity mapping
+  - DigComp 2.1 digital competence framework
+  - Skill proficiency templates and assessment rubrics
+  - **NEW**: 5 coherence validation tests (v2.0) — detect fragmentation, regressions, missing prerequisites
+- `specs/[book]/[part]-skills-registry.md` for:
+  - Master reference of all skills taught in the part
+  - Skill definitions, CEFR progressions, dependencies
+  - Skill connectivity across chapters
+  - Validation checklist for new skills
 
 ### Phase 2: Concept Breakdown (Scaffolding)
 
