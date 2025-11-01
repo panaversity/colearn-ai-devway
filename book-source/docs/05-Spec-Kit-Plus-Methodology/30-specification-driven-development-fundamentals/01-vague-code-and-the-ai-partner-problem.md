@@ -5,7 +5,7 @@ lesson: 1
 duration: "1-1.5 hours"
 ---
 
-# Lesson 1: Vague Code and the AI Partner Problem
+# Vague Code and the AI Partner Problem
 
 ## What This Lesson Will Show You
 

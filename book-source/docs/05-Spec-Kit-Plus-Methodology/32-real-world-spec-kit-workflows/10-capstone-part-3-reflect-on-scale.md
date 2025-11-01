@@ -1,7 +1,7 @@
 ---
 title: "Capstone Part 3: Reflect on Building at Scale"
-chapter: 27
-lesson: 9
+chapter: 32
+lesson: 10
 lesson_type: "capstone_part_3"
 duration: "2 hours"
 ---

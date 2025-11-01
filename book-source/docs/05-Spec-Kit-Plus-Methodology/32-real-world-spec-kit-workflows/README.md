@@ -8,14 +8,15 @@ This chapter teaches how specification-driven development enables teams to scale
 
 ## Chapter Overview
 
-**Duration**: ~15 hours total (6 lessons + 3-part capstone)
+**Duration**: ~18-20 hours total (7 lessons + 3-part capstone)
 
-**Target Audience**: Students who have completed Chapter 25-26 and understand SDD basics. Preparing for Parts 6-13 where specifications are central to agents, APIs, deployment, and operational systems.
+**Target Audience**: Students who have completed Chapters 30-31 and understand SDD basics. Preparing for Parts 6-13 where specifications are central to agents, APIs, deployment, and operational systems.
 
 **Learning Arc**:
 1. Lessons 1-5: Understand team scaling through specs (horizontal exploration)
-2. Lesson 6: Personal commitment and integration
-3. Capstone (Parts 1-3): Hands-on experience with specification-driven team development
+2. Lesson 6: Learn how agents stay current with evolving APIs (architecture)
+3. Lesson 7: Personal commitment and integration
+4. Capstone (Parts 1-3): Hands-on experience with specification-driven team development
 
 ---
 
@@ -99,7 +100,29 @@ Extracts patterns: Specs are products. Specs enable ecosystems. Specs replace me
 
 ---
 
-### Lesson 6: Write Your Professional Commitment to Specifications
+### Lesson 6: How Agents Stay Current — Context Architecture for Living Specs
+**Duration**: 3-3.5 hours | **Type**: Strategic architecture design
+
+Student learns the often-overlooked problem: **APIs evolve faster than agent knowledge cutoffs.**
+
+Problem: You spec "use latest Stripe API" but Claude's knowledge is September 2024 and Stripe released new API in October.
+
+Student explores three strategies for keeping agents current:
+1. **Context7**: Live documentation via MCP servers
+2. **Tessel Registry**: Spec-driven library discovery
+3. **Hybrid approaches**: RAG, embedded docs, agent memory, version pinning
+
+Works through decision framework: How often does API change? How critical is correctness? What's your infrastructure?
+
+Applies to capstone: "My capstone will use [Context7/Tessel/Embedded] because..."
+
+**Key Learning**: Choosing how agents access current knowledge is a SPECIFICATION decision. Living specifications require architectural decisions.
+
+**Outcomes**: Context architecture decision, written commitment to approach, capstone strategy incorporating knowledge architecture
+
+---
+
+### Lesson 7: Write Your Professional Commitment to Specifications
 **Duration**: 1.5 hours | **Type**: Reflection and synthesis
 
 Student synthesizes everything and writes a personal professional commitment (500-750 words):

@@ -1,7 +1,7 @@
 ---
 title: "Capstone Part 1: Decompose Your Spec Into Independent Features"
-chapter: 27
-lesson: 7
+chapter: 32
+lesson: 8
 lesson_type: "capstone_part_1"
 duration: "2.5 hours"
 ---

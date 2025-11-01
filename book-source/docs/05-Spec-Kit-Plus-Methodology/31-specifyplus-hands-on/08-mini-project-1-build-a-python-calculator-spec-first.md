@@ -5,7 +5,7 @@ lesson: "Mini-Project 1"
 duration: "3-4 hours"
 ---
 
-# Mini-Project 1: Build a Python Calculator Spec-First
+# Build a Python Calculator Spec-First
 
 ## What You're About to Do
 

@@ -5,7 +5,7 @@ lesson: 3
 duration: "2 hours"
 ---
 
-# Lesson 3: Trace SDD Through Your Company
+# Trace SDD Through Your Company
 
 ## What You're About to Discover
 

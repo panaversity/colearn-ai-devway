@@ -5,7 +5,7 @@ lesson: 4
 duration: "2 hours"
 ---
 
-# Lesson 4: See How Specs Flow Through Everything
+# See How Specs Flow Through Everything
 
 ## What You're About to Discover
 

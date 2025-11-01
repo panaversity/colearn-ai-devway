@@ -5,7 +5,7 @@ lesson: 7
 duration: "3 hours"
 ---
 
-# Lesson 7: Build Your Grading System Spec End-to-End
+# Build Your Grading System Spec End-to-End
 
 ## What You're About to Do
 

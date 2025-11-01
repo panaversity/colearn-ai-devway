@@ -5,7 +5,7 @@ lesson: "Mini-Project 2"
 duration: "3-4 hours"
 ---
 
-# Mini-Project 2: Write a Production Grading System Spec
+# Write a Production Grading System Spec
 
 ## What You're About to Do
 

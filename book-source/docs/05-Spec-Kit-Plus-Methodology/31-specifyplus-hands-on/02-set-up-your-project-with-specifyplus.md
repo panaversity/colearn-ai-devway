@@ -5,7 +5,7 @@ lesson: 2
 duration: "1.5 hours"
 ---
 
-# Lesson 2: Set Up Your Project With SpecifyPlus
+# Set Up Your Project With SpecifyPlus
 
 ## What You're About to Discover
 

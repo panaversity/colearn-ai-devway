@@ -5,7 +5,7 @@ lesson: 3
 duration: "2.5-3 hours"
 ---
 
-# Lesson 3: Build Your First Spec Together With Your Companion
+# Build Your First Spec Together With Your Companion
 
 ## From Understanding to Doing
 

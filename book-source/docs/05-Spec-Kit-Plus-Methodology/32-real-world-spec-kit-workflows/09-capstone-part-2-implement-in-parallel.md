@@ -1,7 +1,7 @@
 ---
 title: "Capstone Part 2: Implement in Parallel With Two Companions"
-chapter: 27
-lesson: 8
+chapter: 32
+lesson: 9
 lesson_type: "capstone_part_2"
 duration: "3 hours"
 ---

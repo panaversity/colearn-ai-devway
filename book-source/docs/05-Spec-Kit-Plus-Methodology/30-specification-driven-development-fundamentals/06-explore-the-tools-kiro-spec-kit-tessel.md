@@ -5,7 +5,7 @@ lesson: 6
 duration: "3-3.5 hours"
 ---
 
-# Lesson 6: Explore the Tools: Which SDD Framework Fits YOUR Work?
+# Explore the Tools: Which SDD Framework Fits YOUR Work?
 
 ## Three Philosophies, One Goal
 

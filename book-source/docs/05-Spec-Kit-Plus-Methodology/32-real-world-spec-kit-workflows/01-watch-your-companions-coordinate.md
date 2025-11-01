@@ -5,7 +5,7 @@ lesson: 1
 duration: "2 hours"
 ---
 
-# Lesson 1: Watch Your Companions Coordinate (Without Talking)
+# Watch Your Companions Coordinate (Without Talking)
 
 ## What You're About to Witness
 

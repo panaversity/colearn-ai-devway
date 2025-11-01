@@ -5,7 +5,7 @@ lesson: 5
 duration: "2.5-3 hours"
 ---
 
-# Lesson 5: Ask: Why Do Specs Matter NOW? The AI Moment
+# Ask: Why Do Specs Matter NOW? The AI Moment
 
 ## The Question
 

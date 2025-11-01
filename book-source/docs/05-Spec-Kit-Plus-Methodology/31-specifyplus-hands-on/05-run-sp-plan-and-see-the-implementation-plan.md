@@ -5,7 +5,7 @@ lesson: 5
 duration: "1.5 hours"
 ---
 
-# Lesson 5: Run /sp.plan and See the Implementation Plan
+# Run /sp.plan and See the Implementation Plan
 
 ## What You're About to Discover
 

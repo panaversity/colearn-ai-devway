@@ -5,7 +5,7 @@ lesson: 6
 duration: "1.5 hours"
 ---
 
-# Lesson 6: Decompose Your Spec Into Atomic Tasks
+# Decompose Your Spec Into Atomic Tasks
 
 ## What You're About to Discover
 

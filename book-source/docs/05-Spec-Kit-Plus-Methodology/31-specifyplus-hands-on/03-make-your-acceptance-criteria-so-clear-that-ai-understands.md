@@ -5,7 +5,7 @@ lesson: 3
 duration: "2 hours"
 ---
 
-# Lesson 3: Make Your Acceptance Criteria So Clear That AI Understands
+# Make Your Acceptance Criteria So Clear That AI Understands
 
 ## What You're About to Discover
 

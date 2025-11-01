@@ -1,11 +1,11 @@
 ---
 title: "Write Your Professional Commitment to Specifications"
-chapter: 27
-lesson: 6
+chapter: 32
+lesson: 7
 duration: "1.5 hours"
 ---
 
-# Lesson 6: Write Your Professional Commitment to Specifications
+# Write Your Professional Commitment to Specifications
 
 ## What You're About to Do
 

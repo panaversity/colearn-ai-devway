@@ -5,7 +5,7 @@ lesson: 8
 duration: "2.5-3 hours"
 ---
 
-# Lesson 8: Your Specification-Driven Development Commitment
+# Your Specification-Driven Development Commitment
 
 ## From Learning to Commitment
 

@@ -5,7 +5,7 @@ lesson: 4
 duration: "2-2.5 hours"
 ---
 
-# Lesson 4: Your Team Needs Shared Rules: Memory Banks and Constitutions
+# Your Team Needs Shared Rules: Memory Banks and Constitutions
 
 ## The Problem You Haven't Faced Yet
 

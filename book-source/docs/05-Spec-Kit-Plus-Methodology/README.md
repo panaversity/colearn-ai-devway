@@ -66,9 +66,9 @@ Learn *how* to write specifications and use Spec-Kit Plus tools. You'll practice
 ---
 
 ### Chapter 32: Real-World Spec-Kit Workflows & Capstone (SCALE)
-**Duration**: 12-15 hours | **6 Lessons + 1 Capstone Project**
+**Duration**: 18-20 hours | **7 Lessons + 1 Capstone Project**
 
-Master *how to scale* SDD from solo work to team coordination. Learn team workflows, feature decomposition, and implement a capstone project that simulates team parallelization through multi-agent specification coordination.
+Master *how to scale* SDD from solo work to team coordination. Learn team workflows, feature decomposition, understand how agents stay current with evolving APIs, and implement a capstone project that simulates team parallelization through multi-agent specification coordination.
 
 **Topics**:
 - SDD at Scale — From Solo to Teams (1-person to 100-person scaling)
@@ -76,6 +76,7 @@ Master *how to scale* SDD from solo work to team coordination. Learn team workfl
 - Team Workflows & Spec-Driven Practices (Code review gates, templates)
 - Scaling to 10+ Person Teams (Governance and service contracts)
 - Real-World Integration — SDD in Production (APIs, databases, agents, deployment)
+- **How Agents Stay Current — Context Architecture** (NEW: Keeping specs and agents in sync)
 - SDD Philosophy & Professional Practice (Career implications and synthesis)
 
 **Capstone Project**:
@@ -98,8 +99,8 @@ Master *how to scale* SDD from solo work to team coordination. Learn team workfl
 |---------|-------|-------|-------|-----------|
 | 30 | Philosophy & Discovery | 14-18h | 2-2.5w | Intermediate |
 | 31 | Hands-On Practice | 19-26h | 3-4w | Intermediate-Advanced |
-| 32 | Scaling & Capstone | 12-15h | 2w | Advanced |
-| **TOTAL** | **Professional Workflow** | **45-59h** | **7-8.5w** | **Advanced** |
+| 32 | Scaling, Architecture & Capstone | 18-20h | 2.5-3w | Advanced |
+| **TOTAL** | **Professional Workflow** | **51-64h** | **8-9.5w** | **Advanced** |
 
 **Recommended pace**: 6-8 hours per week, allowing time for mini-projects, reflection, and capstone implementation.
 

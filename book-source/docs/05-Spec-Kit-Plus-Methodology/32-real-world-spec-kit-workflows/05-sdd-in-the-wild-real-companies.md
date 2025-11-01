@@ -5,7 +5,7 @@ lesson: 5
 duration: "2 hours"
 ---
 
-# Lesson 5: SDD In the Wild: Real Companies
+# SDD In the Wild: Real Companies
 
 ## What You're About to Learn
 

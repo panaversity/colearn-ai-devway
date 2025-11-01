@@ -5,7 +5,7 @@ lesson: 4
 duration: "1.5 hours"
 ---
 
-# Lesson 4: Run /sp.specify With Your Companion
+# Run /sp.specify With Your Companion
 
 ## What You're About to Discover
 

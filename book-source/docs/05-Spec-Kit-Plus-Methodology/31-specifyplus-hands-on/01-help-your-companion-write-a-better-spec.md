@@ -5,7 +5,7 @@ lesson: 1
 duration: "2 hours"
 ---
 
-# Lesson 1: Help Your Companion Write a Better Spec
+# Help Your Companion Write a Better Spec
 
 ## What You're About to Do
 

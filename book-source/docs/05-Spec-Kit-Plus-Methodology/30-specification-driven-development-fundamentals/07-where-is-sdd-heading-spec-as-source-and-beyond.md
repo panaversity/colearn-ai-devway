@@ -5,7 +5,7 @@ lesson: 7
 duration: "3.5-4 hours"
 ---
 
-# Lesson 7: Where Is SDD Heading? Spec-as-Source and Beyond
+# Where Is SDD Heading? Spec-as-Source and Beyond
 
 ## The Question About Tomorrow
 

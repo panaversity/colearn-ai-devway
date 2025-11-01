@@ -5,7 +5,7 @@ lesson: 2
 duration: "2 hours"
 ---
 
-# Lesson 2: Design Team Workflows With Specifications
+# Design Team Workflows With Specifications
 
 ## What You're About to Design
 

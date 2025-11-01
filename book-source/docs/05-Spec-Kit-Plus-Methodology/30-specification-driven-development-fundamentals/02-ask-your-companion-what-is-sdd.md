@@ -5,7 +5,7 @@ lesson: 2
 duration: "2-2.5 hours"
 ---
 
-# Lesson 2: Ask Your Companion: What Is Specification-Driven Development?
+# Ask Your Companion: What Is Specification-Driven Development?
 
 ## You've Experienced the Problem. Now Understand the Solution.
 
